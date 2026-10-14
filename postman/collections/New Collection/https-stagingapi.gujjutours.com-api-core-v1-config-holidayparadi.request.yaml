@@ -1,0 +1,6 @@
+$kind: http-request
+name: https://stagingapi.gujjutours.com/api/core/v1/config/holidayparadise.com
+description: ""
+url: https://stagingapi.gujjutours.com/api/core/v1/config/holidayparadise.com
+method: GET
+order: 1789629389510

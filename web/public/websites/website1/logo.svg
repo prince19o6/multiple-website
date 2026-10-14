@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="10" width="40" height="40" rx="10" fill="url(#g1)" />
+  <circle cx="26" cy="30" r="12" stroke="#ffffff" stroke-width="2.5" />
+  <path d="M16 30h20M26 18c-3 3.5-4.5 7.5-4.5 12s1.5 8.5 4.5 12c3-3.5 4.5-7.5 4.5-12s-1.5-8.5-4.5-12z" stroke="#ffffff" stroke-width="2" />
+  <text x="56" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#1e293b" letter-spacing="-0.5">Travel<tspan fill="#2563eb">Co</tspan></text>
+  <text x="57" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#64748b" letter-spacing="2">WORLD TOURS</text>
+</svg>

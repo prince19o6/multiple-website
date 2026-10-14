@@ -1,0 +1,3848 @@
+[
+  {
+    "id": 201,
+    "tourNumericId": 201,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Phuket & Phi Phi Island Maya Bay Catamaran",
+    "title": "Phuket & Phi Phi Island Maya Bay Catamaran",
+    "slug": "phuket-phi-phi-maya-bay-catamaran",
+    "category": "Beach",
+    "destination": "Phuket, Thailand",
+    "location": "Andaman Sea & Phi Phi Islands",
+    "country": "Thailand",
+    "description": "Sail crystal-clear Andaman waters aboard a luxury catamaran to Maya Bay, snorkel vibrant reefs at Pileh Lagoon, and relax on white sands.",
+    "shortDescription": "Maya Bay turquoise waters, Pileh Lagoon snorkeling, and catamaran luxury.",
+    "fullDescription": "Embark on an unforgettable island-hopping voyage across the Phi Phi archipelago. Explore the world-famous Maya Bay made legendary by cinema, swim in the emerald waters of Pileh Lagoon flanked by soaring limestone karsts, snorkel among colorful clownfish, and enjoy beachfront Thai dining at Bamboo Island.",
+    "price": 899,
+    "originalPrice": 1150,
+    "discountedPrice": 849,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 142,
+    "reviewCount": 142,
+    "image": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "10-18 travelers",
+    "bestTime": "November to April",
+    "language": "English, Thai",
+    "highlights": [
+      "Exclusive catamaran cruise to Maya Bay & Viking Cave",
+      "Swimming in emerald waters of Pileh Lagoon",
+      "Coral reef snorkeling with marine biology guide",
+      "Sunset seafood barbecue on Bamboo Island",
+      "Beachfront resort stay in Patong or Karon"
+    ],
+    "included": [
+      "4 Nights at 4-star beachfront resort in Phuket",
+      "Full-day luxury catamaran cruise with national park fees",
+      "Daily breakfast buffet and 2 gourmet lunches",
+      "Snorkeling equipment and life jackets",
+      "Private airport transfers"
+    ],
+    "excluded": [
+      "International flights",
+      "Alcoholic beverages",
+      "Travel insurance",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-10",
+      "2027-01-12",
+      "2027-02-20"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Phuket & Sunset Welcome",
+        "description": "Arrive at Phuket International Airport. Transfer to your seaside resort. Evening welcome dinner overlooking the Andaman Sea."
+      },
+      {
+        "day": 2,
+        "title": "Phi Phi Islands Catamaran Cruise",
+        "description": "Full-day sailing to Maya Bay, Viking Cave, and Pileh Lagoon. Snorkel over coral gardens and swim in turquoise lagoons."
+      },
+      {
+        "day": 3,
+        "title": "Bamboo Island & Snorkeling Safari",
+        "description": "Visit uninhabited Bamboo Island for pristine powder-white sands and coral viewing. Return to Phuket for an open evening."
+      },
+      {
+        "day": 4,
+        "title": "Old Phuket Town Cultural Stroll & Beach Leisure",
+        "description": "Explore colorful Sino-Portuguese shophouses in Old Phuket Town, followed by a free afternoon on Kata Beach."
+      },
+      {
+        "day": 5,
+        "title": "Farewell Thailand",
+        "description": "Breakfast with ocean views, leisure time for shopping or spa treatments, and airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Liam Campbell",
+        "rating": 5,
+        "text": "The catamaran tour was world-class. Maya Bay was beyond gorgeous!",
+        "date": "2026-07-15"
+      },
+      {
+        "author": "Sarah Jenkins",
+        "rating": 5,
+        "text": "Flawless organization, great food, and stunning turquoise waters.",
+        "date": "2026-08-02"
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "tourNumericId": 202,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Bali Nusa Penida & Diamond Beach Discovery",
+    "title": "Bali Nusa Penida & Diamond Beach Discovery",
+    "slug": "bali-nusa-penida-diamond-beach",
+    "category": "Beach",
+    "destination": "Nusa Penida, Bali, Indonesia",
+    "location": "Nusa Penida Island, Badung Strait",
+    "country": "Indonesia",
+    "description": "Marvel at Kelingking T-Rex cliff, climb down the cliffside staircase to Diamond Beach, and snorkel with giant manta rays.",
+    "shortDescription": "Dramatic limestone cliffs, Diamond Beach stairway, and manta rays.",
+    "fullDescription": "Venture across the Badung Strait to the island of Nusa Penida. Stand atop Kelingking Secret Point overlooking the dramatic T-Rex coastal formation, marvel at natural rock archways at Broken Beach, and descend the cliff-hewn stone staircase to the shimmering white sands of Diamond Beach.",
+    "price": 749,
+    "originalPrice": 950,
+    "discountedPrice": 699,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 98,
+    "reviewCount": 98,
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "April to October",
+    "language": "English, Indonesian",
+    "highlights": [
+      "Iconic Kelingking T-Rex cliff panoramic overlook",
+      "Diamond Beach cliffside stone stairway & turquoise cove",
+      "Manta Point boat safari with snorkeling",
+      "Angel's Billabong natural infinity pool",
+      "Beachfront cliff villa stay with infinity pool"
+    ],
+    "included": [
+      "3 Nights luxury boutique villa stay in Nusa Penida & Sanur",
+      "Fast boat transfers roundtrip from Sanur harbor",
+      "Private AC 4WD island transport with English guide",
+      "All island entrance permits and snorkeling gear"
+    ],
+    "excluded": [
+      "Flights to Denpasar",
+      "Personal tips",
+      "Optional treehouse photo passes"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Speedboat to Nusa Penida & West Coast Exploration",
+        "description": "Morning boat from Sanur. Tour Kelingking T-Rex cliff and Angel's Billabong natural tidal pool."
+      },
+      {
+        "day": 2,
+        "title": "East Coast & Diamond Beach Splendor",
+        "description": "Early morning visit to Diamond Beach and Atuh Beach. Photograph the Molenteng Treehouse."
+      },
+      {
+        "day": 3,
+        "title": "Manta Ray Snorkeling & Crystal Bay Relaxation",
+        "description": "Boat ride to Manta Point to snorkel alongside majestic manta rays, followed by sunbathing at Crystal Bay."
+      },
+      {
+        "day": 4,
+        "title": "Return to Bali Mainland & Departure",
+        "description": "Morning breakfast at the villa, fast boat return to Sanur, and private transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Elena Rostova",
+        "rating": 5,
+        "text": "Diamond Beach took my breath away. Best view in Indonesia!",
+        "date": "2026-06-19"
+      },
+      {
+        "author": "Mark Davis",
+        "rating": 4,
+        "text": "The staircase is steep but so worth it. The villa was incredible.",
+        "date": "2026-07-28"
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "tourNumericId": 203,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Boracay White Beach & Crystal Cove Island Cruise",
+    "title": "Boracay White Beach & Crystal Cove Island Cruise",
+    "slug": "boracay-white-beach-crystal-cove",
+    "category": "Beach",
+    "destination": "Boracay, Philippines",
+    "location": "Western Visayas, Sibuyan Sea",
+    "country": "Philippines",
+    "description": "Walk the powder-soft White Beach, cruise aboard a traditional Paraw sailboat at sunset, and explore sea caves at Crystal Cove.",
+    "shortDescription": "Powder-soft white sands, Paraw sailing, and crystal-clear snorkeling.",
+    "fullDescription": "Experience the legendary beaches of Boracay. Walk barefoot on the flour-soft sand of Station 1, glide across turquoise waters on a double-outrigger Paraw sailboat during golden hour, and explore the marine caves of Crystal Cove Island.",
+    "price": 799,
+    "originalPrice": 990,
+    "discountedPrice": 749,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 86,
+    "reviewCount": 86,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "December to May",
+    "language": "English, Tagalog",
+    "highlights": [
+      "Station 1 powder-soft White Beach barefoot strolls",
+      "Sunset Paraw sailing cruise with rum punch",
+      "Crystal Cove cave exploration & cliff diving",
+      "Puka Shell Beach northern coastal excursion",
+      "Fresh mango smoothie & seafood beach dining"
+    ],
+    "included": [
+      "4 Nights beachfront resort accommodation",
+      "Roundtrip land and sea transfers from Caticlan Airport",
+      "Island-hopping boat tour with lunch",
+      "Paraw sunset sailing experience"
+    ],
+    "excluded": [
+      "Airfare to Caticlan",
+      "Scuba dive rentals",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-22",
+      "2027-01-19"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Boracay",
+        "description": "Meet at Caticlan Airport. Boat transfer to Boracay and check-in to your beachfront resort."
+      },
+      {
+        "day": 2,
+        "title": "Island Hopping & Crystal Cove",
+        "description": "Cruise to Crocodile Island for reef snorkeling, explore caves on Crystal Cove Island, and beach picnic."
+      },
+      {
+        "day": 3,
+        "title": "Puka Beach & Sunset Paraw Sail",
+        "description": "Visit peaceful Puka Shell Beach in the morning. Late afternoon Paraw sailing as the sun melts into the horizon."
+      },
+      {
+        "day": 4,
+        "title": "Beach Leisure & Water Sports",
+        "description": "Free day for stand-up paddleboarding, beach massages, and seaside nightlife."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Morning swim, souvenir shopping on D'Mall, and boat transfer to Caticlan."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jessica Miller",
+        "rating": 5,
+        "text": "The sand really is like powdered sugar. Paraw sailing at sunset was magical.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Tom Wright",
+        "rating": 4,
+        "text": "Very relaxing trip, crystal clear water everywhere.",
+        "date": "2026-06-03"
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "tourNumericId": 204,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Da Nang My Khe Beach & Marble Mountains",
+    "title": "Da Nang My Khe Beach & Marble Mountains",
+    "slug": "da-nang-my-khe-beach-getaway",
+    "category": "Beach",
+    "destination": "Da Nang, Vietnam",
+    "location": "Central Coast, East Sea",
+    "country": "Vietnam",
+    "description": "Relax on palm-lined My Khe Beach, explore mystical Buddhist cave grottos in Marble Mountains, and marvel at the Dragon Bridge.",
+    "shortDescription": "Golden beaches, Marble Mountains shrines, and coastal Vietnamese cuisine.",
+    "fullDescription": "Combine coastal relaxation with cultural discovery in Da Nang. Spend days basking on My Khe Beach's warm waters, climb the spiritual peaks of Marble Mountains to discover hidden Buddhist temples inside limestone grottos, and dine on fresh seafood along the beachfront promenade.",
+    "price": 649,
+    "originalPrice": 820,
+    "discountedPrice": 599,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.7,
+    "reviews": 73,
+    "reviewCount": 73,
+    "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-15 travelers",
+    "bestTime": "February to August",
+    "language": "English, Vietnamese",
+    "highlights": [
+      "Golden sands and warm surf of My Khe Beach",
+      "Marble Mountains subterranean caves and pagoda shrines",
+      "Son Tra Peninsula & Lady Buddha 67m statue",
+      "Fire-breathing Dragon Bridge weekend spectacle",
+      "Central Vietnamese culinary tasting tour"
+    ],
+    "included": [
+      "3 Nights at 4-star seaside hotel facing My Khe Beach",
+      "Marble Mountains guided excursion with elevator pass",
+      "Daily breakfast and 2 traditional Vietnamese dinners",
+      "Private airport transfers"
+    ],
+    "excluded": [
+      "Flights to Da Nang",
+      "Personal laundry",
+      "Beverages"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2026-12-15",
+      "2027-02-14"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Da Nang",
+        "description": "Transfer from Da Nang Airport to your beachfront hotel. Afternoon relaxing on My Khe Beach."
+      },
+      {
+        "day": 2,
+        "title": "Marble Mountains & Son Tra Peninsula",
+        "description": "Morning hike up Marble Mountains to explore Huyen Khong cave shrine. Afternoon drive to Lady Buddha statue on Monkey Mountain."
+      },
+      {
+        "day": 3,
+        "title": "Coastal Relaxation & Dragon Bridge Evening",
+        "description": "Full day at leisure on the beach. Evening food tour and viewing the Dragon Bridge fire show."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning stroll along Han River promenade, souvenir market visit, and airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Duc Nguyen",
+        "rating": 5,
+        "text": "Great value and wonderful hotel right on the beach.",
+        "date": "2026-06-11"
+      },
+      {
+        "author": "Claire Peterson",
+        "rating": 4,
+        "text": "The caves at Marble Mountains were super impressive.",
+        "date": "2026-07-04"
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "tourNumericId": 205,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Maldives Vaadhoo Bioluminescent Sand & Sandbank Picnic",
+    "title": "Maldives Vaadhoo Bioluminescent Sand & Sandbank Picnic",
+    "slug": "maldives-bioluminescent-sandbank-cruise",
+    "category": "Beach",
+    "destination": "Vaadhoo, Maldives",
+    "location": "Raa Atoll, Indian Ocean",
+    "country": "Maldives",
+    "description": "Witness the magical glowing sea of stars at night on Vaadhoo Island, snorkel vibrant coral atolls, and feast on a private sandbank picnic.",
+    "shortDescription": "Glowing bioluminescent beaches, private sandbanks, and coral reefs.",
+    "fullDescription": "Immerse yourself in tropical luxury in the Maldives. Snorkel crystal-clear lagoons teeming with sea turtles and baby reef sharks, enjoy a secluded picnic on an isolated sandbank, and as twilight falls, witness the shoreline glow with magical blue bioluminescent phytoplankton.",
+    "price": 1899,
+    "originalPrice": 2400,
+    "discountedPrice": 1749,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 110,
+    "reviewCount": 110,
+    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "November to April",
+    "language": "English, Dhivehi",
+    "highlights": [
+      "Natural bioluminescent 'Sea of Stars' evening walk",
+      "Private desert sandbank champagne & seafood lunch",
+      "House reef snorkeling with sea turtles and rays",
+      "Overwater villa or beachfront bungalow stay",
+      "Traditional sunset Maldivian dolphin cruise"
+    ],
+    "included": [
+      "4 Nights in premium water villa or beach bungalow",
+      "Roundtrip speedboat or seaplane transfers from Malé",
+      "All-inclusive dining with gourmet international cuisine",
+      "Guided reef snorkeling safari and sunset dolphin cruise"
+    ],
+    "excluded": [
+      "International flights to Malé",
+      "Spa treatments",
+      "Scuba dive certification"
+    ],
+    "availableDates": [
+      "2026-11-25",
+      "2026-12-20",
+      "2027-01-15",
+      "2027-02-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Malé & Speedboat Transfer",
+        "description": "Arrive at Velana International Airport. Speedboat ride across the turquoise atoll to your luxury resort."
+      },
+      {
+        "day": 2,
+        "title": "House Reef Snorkeling & Lagoon Kayak",
+        "description": "Snorkel straight from your villa deck into coral gardens. Afternoon paddleboarding across calm waters."
+      },
+      {
+        "day": 3,
+        "title": "Desert Sandbank Picnic & Dolphin Cruise",
+        "description": "Private boat to an uninhabited sandbank for a gourmet lunch. Sunset cruise watching spinner dolphins."
+      },
+      {
+        "day": 4,
+        "title": "Vaadhoo Island Glowing Beach Excursion",
+        "description": "Night excursion to Vaadhoo Island to witness the glowing blue phytoplankton washing against the sand."
+      },
+      {
+        "day": 5,
+        "title": "Farewell Maldives",
+        "description": "Morning lagoon swim, breakfast over the water, and speedboat transfer back to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Ananya Roy",
+        "rating": 5,
+        "text": "The glowing beach was pure fairytale! Words cannot describe it.",
+        "date": "2026-04-10"
+      },
+      {
+        "author": "Marcus Vance",
+        "rating": 5,
+        "text": "Water villa was unbelievable. Worth every single penny.",
+        "date": "2026-05-22"
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "tourNumericId": 206,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Langkawi Tanjung Rhu & Geoforest Mangrove Coast",
+    "title": "Langkawi Tanjung Rhu & Geoforest Mangrove Coast",
+    "slug": "langkawi-tanjung-rhu-beach-escape",
+    "category": "Beach",
+    "destination": "Langkawi, Malaysia",
+    "location": "Andaman Sea, Kedah",
+    "country": "Malaysia",
+    "description": "Discover the secluded curved cove of Tanjung Rhu, kayak through ancient Kilim Karst mangroves, and ride the skycab over rainforest canopies.",
+    "shortDescription": "Secluded Tanjung Rhu cove, Kilim Karst mangroves, and duty-free island charm.",
+    "fullDescription": "Escape to Langkawi's tranquil northern shores. Bask on the quiet powdery sands of Tanjung Rhu framed by limestone sea stacks, cruise through the UNESCO-listed Kilim Karst Geoforest Park mangroves spotting Brahminy kites, and take in 360-degree views from the Langkawi Sky Bridge.",
+    "price": 720,
+    "originalPrice": 900,
+    "discountedPrice": 679,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 62,
+    "reviewCount": 62,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-14 travelers",
+    "bestTime": "November to April",
+    "language": "English, Malay",
+    "highlights": [
+      "Pristine white sand crescent of Tanjung Rhu Beach",
+      "Kilim Geoforest boat cruise with bat caves and eagle watching",
+      "Langkawi SkyCab cable car and curved suspension Sky Bridge",
+      "Sunset beach cocktails overlooking the Andaman Sea",
+      "Traditional Malay night market street food tour"
+    ],
+    "included": [
+      "3 Nights luxury beachfront resort stay in Langkawi",
+      "Kilim Karst Geoforest mangrove boat tour with lunch",
+      "SkyCab and Sky Bridge express entry passes",
+      "Private airport transfers"
+    ],
+    "excluded": [
+      "Flights to Langkawi",
+      "Alcoholic drinks",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-22",
+      "2026-12-19",
+      "2027-01-28"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Langkawi",
+        "description": "Arrive at Langkawi Airport and transfer to Tanjung Rhu resort. Afternoon relaxing beneath casuarina trees."
+      },
+      {
+        "day": 2,
+        "title": "Kilim Karst Mangrove Safari",
+        "description": "Boat through ancient mangrove channels, visit Crocodile Cave, and witness wild sea eagles feeding."
+      },
+      {
+        "day": 3,
+        "title": "SkyCab & Oriental Village",
+        "description": "Ride one of the steepest cable cars in the world to Mount Machinchang and walk the suspended Sky Bridge."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning beach walk, duty-free shopping in Kuah Town, and airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Gavin Brooks",
+        "rating": 5,
+        "text": "Tanjung Rhu is so much quieter and more beautiful than Cenang. Loved it!",
+        "date": "2026-03-29"
+      },
+      {
+        "author": "Nora Lim",
+        "rating": 4,
+        "text": "Mangrove boat ride was educational and very scenic.",
+        "date": "2026-04-18"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "tourNumericId": 207,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Krabi Railay Beach & 4-Island Speedboat Sunset",
+    "title": "Krabi Railay Beach & 4-Island Speedboat Sunset",
+    "slug": "krabi-railay-4-island-speedboat",
+    "category": "Beach",
+    "destination": "Krabi, Thailand",
+    "location": "Phang Nga Bay Coast",
+    "country": "Thailand",
+    "description": "Accessible only by boat, Railay Beach offers world-famous limestone cliff vistas, Phra Nang Princess Cave, and thrilling 4-island island hopping.",
+    "shortDescription": "Dramatic sea cliffs, Phra Nang Cave beach, and 4-island speedboat hopping.",
+    "fullDescription": "Discover Krabi's majestic peninsula of Railay. Flanked by towering sheer limestone cliffs that draw rock climbers from across the globe, relax on Phra Nang Beach, cruise on a speedboat to Chicken Island and Poda Island, and snorkel among bioluminescent waters after dusk.",
+    "price": 680,
+    "originalPrice": 850,
+    "discountedPrice": 629,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 94,
+    "reviewCount": 94,
+    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "10-18 travelers",
+    "bestTime": "November to April",
+    "language": "English, Thai",
+    "highlights": [
+      "Iconic Railay West and Phra Nang Beach coves",
+      "4-Island speedboat tour (Poda, Chicken, Tup, and Mor)",
+      "Walking on sandbar bridge connecting Tup and Mor Islands",
+      "Night snorkel in glowing bioluminescent plankton",
+      "Limestone cliff rock climbing taster session"
+    ],
+    "included": [
+      "3 Nights beachfront resort stay in Railay / Ao Nang",
+      "Full-day 4-Island speedboat tour with buffet lunch",
+      "Longtail boat transfers to/from Railay pier",
+      "Snorkel equipment and national park entry passes"
+    ],
+    "excluded": [
+      "Flights to Krabi",
+      "Rock climbing guide fees",
+      "Alcohol"
+    ],
+    "availableDates": [
+      "2026-11-28",
+      "2026-12-28",
+      "2027-02-05"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Krabi & Railay Pier Transfer",
+        "description": "Arrive in Krabi. Traditional longtail boat ride past sheer cliffs to Railay beach resort."
+      },
+      {
+        "day": 2,
+        "title": "4-Island Speedboat Hopping & Sunset",
+        "description": "Visit Chicken Island, snorkel at Poda Island, and walk the sand spit at Tup Island before sunset barbecue."
+      },
+      {
+        "day": 3,
+        "title": "Phra Nang Cave Beach & Rock Climbing Intro",
+        "description": "Explore the sacred Princess Cave and limestone overhangs. Optional rock climbing or kayaking."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning dip in warm emerald waters, boat return to Ao Nam Mao pier, and airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Simon Holt",
+        "rating": 5,
+        "text": "Railay is like a fantasy film set. Stunning cliffs and warm ocean.",
+        "date": "2026-02-14"
+      },
+      {
+        "author": "Hannah Lee",
+        "rating": 5,
+        "text": "Night snorkeling with glowing plankton was magical!",
+        "date": "2026-03-01"
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "tourNumericId": 208,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Phu Quoc Starfish Beach & Sunset Cable Car Island",
+    "title": "Phu Quoc Starfish Beach & Sunset Cable Car Island",
+    "slug": "phu-quoc-island-starfish-beach",
+    "category": "Beach",
+    "destination": "Phu Quoc, Vietnam",
+    "location": "Gulf of Thailand, Kien Giang",
+    "country": "Vietnam",
+    "description": "Explore tranquil Rạch Vẹm Starfish Beach, ride the world's longest over-sea cable car to Hon Thom Island, and enjoy vibrant night markets.",
+    "shortDescription": "Red starfish in crystal shallows, over-sea cable car, and sunset bays.",
+    "fullDescription": "Escape to Vietnam's pearl island in the Gulf of Thailand. Walk shallow turquoise waters observing red starfish at Rach Vem Beach, soar across scenic islands on the 7.8km Hon Thom cable car, and taste freshly caught seafood at Dinh Cau night market.",
+    "price": 610,
+    "originalPrice": 780,
+    "discountedPrice": 569,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.7,
+    "reviews": 65,
+    "reviewCount": 65,
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "November to April",
+    "language": "English, Vietnamese",
+    "highlights": [
+      "Rach Vem Starfish Beach with calm crystal shallows",
+      "Hon Thom 7.8km over-sea cable car journey",
+      "Sao Beach white sands and coconut palm swings",
+      "Sunset cocktails at Sunset Sanato beach sculptures",
+      "Phu Quoc pepper farm and fish sauce artisanal heritage"
+    ],
+    "included": [
+      "3 Nights luxury 4-star resort in Duong Dong or Ong Lang",
+      "Hon Thom cable car and water park return tickets",
+      "Guided southern and northern island day excursions",
+      "Airport transfers in private AC vehicle"
+    ],
+    "excluded": [
+      "Flights to Phu Quoc",
+      "Personal purchases",
+      "Meals not specified"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-12",
+      "2027-01-16"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Phu Quoc & Sunset Sanato",
+        "description": "Check in to resort. Sunset drinks by the whimsical beach sculptures of Sunset Sanato."
+      },
+      {
+        "day": 2,
+        "title": "Starfish Beach & Northern Rainforest",
+        "description": "Drive through national park to Rach Vem floating village to see starfish in clear shallows."
+      },
+      {
+        "day": 3,
+        "title": "Hon Thom Cable Car & Sao Beach",
+        "description": "Ride the cable car over fishing fleets to Hon Thom Island. Afternoon relaxation on Sao Beach."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Visit local pearl farm, taste Phu Quoc pepper, and transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kasia Novak",
+        "rating": 5,
+        "text": "The cable car views are out of this world! Very clean beaches.",
+        "date": "2026-01-20"
+      },
+      {
+        "author": "Brian Kelly",
+        "rating": 4,
+        "text": "Starfish beach was lovely, delicious seafood everywhere.",
+        "date": "2026-02-17"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "tourNumericId": 209,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Mirissa Whale Coast & Coconut Tree Hill Beach",
+    "title": "Mirissa Whale Coast & Coconut Tree Hill Beach",
+    "slug": "mirissa-coconut-tree-hill-beach",
+    "category": "Beach",
+    "destination": "Mirissa, Sri Lanka",
+    "location": "Southern Province Coast, Indian Ocean",
+    "country": "Sri Lanka",
+    "description": "Photograph the iconic Coconut Tree Hill headland, cruise into the Indian Ocean to spot blue whales, and relax in bohemian beach shacks.",
+    "shortDescription": "Blue whale watching, Coconut Tree Hill headland, and southern Sri Lankan beaches.",
+    "fullDescription": "Experience Sri Lanka's vibrant southern beach culture. Gaze out from the palm-crowned dome of Coconut Tree Hill, embark on early morning catamaran cruises to see majestic blue whales and spinner dolphins, and unwind with fresh coconut water on Secret Beach.",
+    "price": 699,
+    "originalPrice": 880,
+    "discountedPrice": 649,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 81,
+    "reviewCount": 81,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "November to April",
+    "language": "English, Sinhala",
+    "highlights": [
+      "Iconic sunrise photo shoot on Coconut Tree Hill",
+      "Ethical boat safari to observe wild Blue Whales",
+      "Hidden turquoise cove at Secret Beach",
+      "Historic UNESCO Galle Dutch Fort afternoon walk",
+      "Beachfront candlelit fresh seafood dinner"
+    ],
+    "included": [
+      "4 Nights boutique beachfront hotel stay in Mirissa",
+      "Blue whale watching catamaran cruise with naturalist",
+      "Guided day trip to Galle Fort and turtle conservation center",
+      "Daily Sri Lankan and western breakfasts"
+    ],
+    "excluded": [
+      "Flights to Colombo",
+      "Tips for boat crew",
+      "Travel insurance"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival & Coastal Drive to Mirissa",
+        "description": "Scenic southern expressway drive from Colombo to Mirissa. Evening relaxation on Mirissa beach."
+      },
+      {
+        "day": 2,
+        "title": "Blue Whale Safari & Coconut Tree Hill",
+        "description": "Early morning ocean cruise to view blue whales. Late afternoon sunset atop Coconut Tree Hill."
+      },
+      {
+        "day": 3,
+        "title": "Galle Dutch Fort Heritage Excursion",
+        "description": "Explore the cobblestone ramparts, lighthouses, and colonial cafes of 17th-century Galle Fort."
+      },
+      {
+        "day": 4,
+        "title": "Secret Beach & Surf Lessons",
+        "description": "Tuck into the secluded cove of Secret Beach for swimming or beginner surf lessons."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Breakfast overlooking the waves, coastal drive back to Colombo airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Oliver Stone",
+        "rating": 5,
+        "text": "Saw three blue whales! Absolutely thrilling experience.",
+        "date": "2026-02-09"
+      },
+      {
+        "author": "Emily Watson",
+        "rating": 5,
+        "text": "Coconut Tree Hill at sunrise was pure postcard perfection.",
+        "date": "2026-03-12"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "tourNumericId": 210,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Okinawa Ishigaki Emerald Lagoon & Coral Reefs",
+    "title": "Okinawa Ishigaki Emerald Lagoon & Coral Reefs",
+    "slug": "okinawa-ishigaki-emerald-lagoon",
+    "category": "Beach",
+    "destination": "Ishigaki, Okinawa, Japan",
+    "location": "Yaeyama Islands, East China Sea",
+    "country": "Japan",
+    "description": "Discover Japan's subtropical paradise in the Yaeyama Islands with Kabira Bay emerald waters, manta ray dives, and starry night skies.",
+    "shortDescription": "Kabira Bay emerald waters, manta ray reefs, and Ryukyu subtropical culture.",
+    "fullDescription": "Experience Japan's southern tropical jewel on Ishigaki Island. Gaze upon the breathtaking emerald hues of Kabira Bay from glass-bottom boats, snorkel with giant manta rays at Manta Scramble, taste tender Ishigaki Wagyu beef, and star-gaze under dark-sky reserve night skies.",
+    "price": 1199,
+    "originalPrice": 1450,
+    "discountedPrice": 1099,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 58,
+    "reviewCount": 58,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "April to October",
+    "language": "English, Japanese",
+    "highlights": [
+      "Kabira Bay glass-bottom boat tour over giant black pearl beds",
+      "Snorkeling with wild manta rays at Shiraho coral reef",
+      "Gourmet Ishigaki Wagyu beef and Yaeyama soba dining",
+      "Tamatorizaki Viewpoint panoramic cape overlook",
+      "International Dark Sky Reserve stargazing night walk"
+    ],
+    "included": [
+      "3 Nights luxury beachfront resort stay in Ishigaki",
+      "Kabira Bay glass boat and snorkeling boat excursion",
+      "Private car transport across the island",
+      "Daily Japanese breakfast and 1 Wagyu tasting dinner"
+    ],
+    "excluded": [
+      "Flights to Ishigaki",
+      "Scuba dive rentals",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2027-04-15",
+      "2027-05-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Ishigaki",
+        "description": "Arrive at Painushima Ishigaki Airport. Transfer to your oceanfront resort. Sunset walk along Fusaki Beach."
+      },
+      {
+        "day": 2,
+        "title": "Kabira Bay & Manta Ray Snorkeling",
+        "description": "Glass boat cruise over Kabira Bay's emerald waters, followed by snorkeling at Manta Scramble reef."
+      },
+      {
+        "day": 3,
+        "title": "Cape Tamatorizaki & Stargazing",
+        "description": "Scenic drive along the northern coast to Tamatorizaki Viewpoint. Evening dark sky stargazing session."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning market shopping for Yaeyama textiles and sea salt, transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kenji Sato",
+        "rating": 5,
+        "text": "Kabira Bay is one of the most beautiful bodies of water on earth.",
+        "date": "2026-05-30"
+      },
+      {
+        "author": "Laura Bennett",
+        "rating": 5,
+        "text": "Incredible hospitality and the Wagyu beef dinner was perfection.",
+        "date": "2026-06-25"
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "tourNumericId": 211,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Mount Batur Sunrise Volcano Trek & Hot Springs",
+    "title": "Mount Batur Sunrise Volcano Trek & Hot Springs",
+    "slug": "mount-batur-sunrise-volcano-trek",
+    "category": "Adventure",
+    "destination": "Kintamani, Bali, Indonesia",
+    "location": "Mount Batur Caldera",
+    "country": "Indonesia",
+    "description": "Hike under the starlit sky to the summit of active Mount Batur for sunrise above the clouds, followed by a soak in natural volcanic hot springs.",
+    "shortDescription": "Volcano sunrise summit hike, caldera steam vents, and hot spring soaks.",
+    "fullDescription": "Trek to the rim of active volcano Mount Batur in Bali's central highlands. Climb by torchlight to 1,717 meters above sea level to watch the sunrise ignite the sky over Mount Agung and Lake Batur, enjoy breakfast cooked in volcanic steam, and soak in geothermal hot springs.",
+    "price": 450,
+    "originalPrice": 580,
+    "discountedPrice": 399,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.9,
+    "reviews": 135,
+    "reviewCount": 135,
+    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "May to October",
+    "language": "English, Indonesian",
+    "highlights": [
+      "1,717m Mount Batur summit sunrise above caldera clouds",
+      "Breakfast cooked using active volcanic steam vents",
+      "Lake Batur natural geothermal hot spring baths",
+      "Black lava field exploration by 4WD jeep",
+      "Traditional Ubud highland eco-lodge stay"
+    ],
+    "included": [
+      "2 Nights eco-lodge in Ubud/Kintamani",
+      "Licensed mountain trekking guide with headlamps and walking sticks",
+      "Summit breakfast and hot spring entry fees",
+      "Private AC transfers across Bali"
+    ],
+    "excluded": [
+      "Flights to Bali",
+      "Hiking boots",
+      "Personal snacks"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-01-14"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ubud Arrival & Caldera Briefing",
+        "description": "Check in to Ubud eco-lodge. Gear check and evening rest before the early dawn trek."
+      },
+      {
+        "day": 2,
+        "title": "Summit Trek & Hot Spring Soak",
+        "description": "2:30 AM departure. Hike to the crater rim for sunrise at 6:00 AM. Soak in lakeside hot springs afterward."
+      },
+      {
+        "day": 3,
+        "title": "Black Lava Fields & Return",
+        "description": "Morning drive across ancient black lava fields before transferring to Denpasar."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Daniel Scott",
+        "rating": 5,
+        "text": "The sunrise view over the clouds and lake was unforgettable!",
+        "date": "2026-07-10"
+      },
+      {
+        "author": "Maya Chen",
+        "rating": 5,
+        "text": "Soaking in the hot springs after the hike was heavenly.",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "tourNumericId": 212,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Ha Long Bay & Lan Ha Sea Kayaking Expedition",
+    "title": "Ha Long Bay & Lan Ha Sea Kayaking Expedition",
+    "slug": "ha-long-bay-lan-ha-kayak-expedition",
+    "category": "Adventure",
+    "destination": "Ha Long Bay, Vietnam",
+    "location": "Gulf of Tonkin, Quang Ninh",
+    "country": "Vietnam",
+    "description": "Paddle sea kayaks through emerald lagoons, hidden tidal tunnels, and karst sea arches aboard an intimate luxury cruise in Lan Ha Bay.",
+    "shortDescription": "Karst sea caves, hidden tidal lagoons, and luxury wooden junk cruising.",
+    "fullDescription": "Venture deep into the UNESCO seascape of Ha Long and Lan Ha Bays. Kayak through Bright & Dark Cave into secluded tidal amphitheaters, jump into warm emerald waters from your boutique ship, and practice morning Tai Chi surrounded by ancient limestone pillars.",
+    "price": 780,
+    "originalPrice": 950,
+    "discountedPrice": 729,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 115,
+    "reviewCount": 115,
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "10-20 travelers",
+    "bestTime": "October to April",
+    "language": "English, Vietnamese",
+    "highlights": [
+      "Sea kayaking through Dark & Bright sea-cave tunnels",
+      "Swimming in quiet Ba Trai Dao secluded coves",
+      "Overnight aboard a luxury balcony-cabin boutique cruise",
+      "Sunrise Tai Chi on the observation deck",
+      "Vietnamese cooking demonstration and squid fishing"
+    ],
+    "included": [
+      "2 Nights aboard boutique luxury ship with private balcony",
+      "All meals (fresh seafood and Vietnamese delicacies)",
+      "Kayak equipment and cave entrance tickets",
+      "Limousine bus transfers from Hanoi Old Quarter"
+    ],
+    "excluded": [
+      "Flights to Hanoi",
+      "Beverages and bar tabs",
+      "Spa services"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-15",
+      "2027-01-20"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Hanoi to Lan Ha Bay Cruise Boarding",
+        "description": "Transfer from Hanoi to Tuan Chau marina. Board ship, enjoy welcome drink, and cruise into limestone mazes."
+      },
+      {
+        "day": 2,
+        "title": "Full-Day Kayaking & Hidden Lagoons",
+        "description": "Paddle kayaks through submerged limestone archways into untouched lagoons. Swim at secluded beaches."
+      },
+      {
+        "day": 3,
+        "title": "Tai Chi & Return to Hanoi",
+        "description": "Morning Tai Chi on sundeck, visit floating fishing village, and transfer back to Hanoi."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Thomas Wright",
+        "rating": 5,
+        "text": "Kayaking through the caves into secret lagoons was pure magic.",
+        "date": "2026-05-18"
+      },
+      {
+        "author": "Fiona Gallagher",
+        "rating": 5,
+        "text": "The boat was luxury and food was top quality.",
+        "date": "2026-06-22"
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "tourNumericId": 213,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Annapurna Base Camp Sanctuary Himalayan Trek",
+    "title": "Annapurna Base Camp Sanctuary Himalayan Trek",
+    "slug": "annapurna-base-camp-himalayan-trek",
+    "category": "Adventure",
+    "destination": "Pokhara, Nepal",
+    "location": "Annapurna Conservation Area, Himalayas",
+    "country": "Nepal",
+    "description": "Trek through rhododendron forests, Gurung stone villages, and glacial valleys into the 4,130m amphitheater of Annapurna Base Camp.",
+    "shortDescription": "4,130m Himalayan sanctuary, Machapuchare vistas, and teahouse hospitality.",
+    "fullDescription": "A world-renowned trek into the heart of the Annapurna mountain range. Ascend through lush bamboo and rhododendron woodlands, cross suspension bridges over rushing glacial rivers, and step into the high-altitude natural amphitheater surrounded by 360-degree views of Annapurna I, Machapuchare (Fishtail), and Hiunchuli.",
+    "price": 1399,
+    "originalPrice": 1750,
+    "discountedPrice": 1299,
+    "currency": "$",
+    "duration": "10 Days / 9 Nights",
+    "durationDays": 10,
+    "durationNights": 9,
+    "difficulty": "Challenging",
+    "rating": 4.9,
+    "reviews": 148,
+    "reviewCount": 148,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "March to May, September to November",
+    "language": "English, Nepali",
+    "highlights": [
+      "Standing at 4,130m Annapurna Base Camp sunrise amphitheater",
+      "Views of Machapuchare, Annapurna South, and Hiunchuli",
+      "Traditional Gurung culture in Ghandruk stone village",
+      "Soaking in natural riverside hot springs at Jhinu Danda",
+      "Lakeside Pokhara relaxation after completing the trek"
+    ],
+    "included": [
+      "9 Nights mountain teahouse lodges and Pokhara hotel",
+      "Licensed trekking guide and luggage porters",
+      "ACAP permit and TIMS trekking registration card",
+      "All meals during trekking days (breakfast, lunch, dinner)"
+    ],
+    "excluded": [
+      "International flights to Kathmandu",
+      "Trekking gear/boots",
+      "Travel & rescue insurance"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2027-03-15",
+      "2027-04-10"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Pokhara to Nayapul & Tikhedhunga",
+        "description": "Drive from Pokhara to Nayapul. Trek along river valleys to Tikhedhunga village."
+      },
+      {
+        "day": 2,
+        "title": "Ulleri Stone Stairs to Ghorepani",
+        "description": "Climb the famous Ulleri stone staircase through oak and rhododendron forest to Ghorepani."
+      },
+      {
+        "day": 3,
+        "title": "Poon Hill Sunrise to Tadapani",
+        "description": "Pre-dawn hike to Poon Hill for sunrise over Dhaulagiri and Annapurna ranges. Trek to Tadapani."
+      },
+      {
+        "day": 4,
+        "title": "Tadapani to Chhomrong",
+        "description": "Descend into valley and climb to Chhomrong, the gateway village to the Sanctuary."
+      },
+      {
+        "day": 5,
+        "title": "Chhomrong to Dovan",
+        "description": "Trek through bamboo groves alongside Modi Khola river to Dovan."
+      },
+      {
+        "day": 6,
+        "title": "Dovan to Deurali & Machapuchare Base Camp",
+        "description": "Enter the alpine valley approaching Machapuchare Base Camp (3,700m)."
+      },
+      {
+        "day": 7,
+        "title": "MBC to Annapurna Base Camp (4,130m)",
+        "description": "Gentle 2-hour ascent into the spectacular Annapurna Sanctuary amphitheater. Sunset over the peaks."
+      },
+      {
+        "day": 8,
+        "title": "Sunrise at ABC & Trek down to Bamboo",
+        "description": "Golden sunrise hitting the face of Annapurna I. Descend to Bamboo village."
+      },
+      {
+        "day": 9,
+        "title": "Bamboo to Jhinu Danda Hot Springs",
+        "description": "Trek to Jhinu Danda and soak tired legs in riverside thermal springs."
+      },
+      {
+        "day": 10,
+        "title": "Jhinu Danda to Siwai & Pokhara",
+        "description": "Final walk to roadhead and private drive back to Pokhara for celebratory dinner."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Arthur Pendelton",
+        "rating": 5,
+        "text": "Standing in ABC surrounded by 8,000m peaks was life-changing.",
+        "date": "2026-04-20"
+      },
+      {
+        "author": "Sonia Patel",
+        "rating": 5,
+        "text": "Our guide was fantastic and the mountain views were unforgettable.",
+        "date": "2026-05-02"
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "tourNumericId": 214,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Chiang Mai Rainforest Canopy Zipline & Whitewater Rafting",
+    "title": "Chiang Mai Rainforest Canopy Zipline & Whitewater Rafting",
+    "slug": "chiang-mai-rainforest-zipline-rafting",
+    "category": "Adventure",
+    "destination": "Chiang Mai, Thailand",
+    "location": "Mae Taeng River & Doi Saket",
+    "country": "Thailand",
+    "description": "Soar through ancient rainforest canopies on 32 ziplines and tackle Class III-IV rapids along the roaring Mae Taeng River.",
+    "shortDescription": "32 canopy ziplines, Class III-IV whitewater rafting, and rainforest trails.",
+    "fullDescription": "An adrenaline-charged eco-adventure in Northern Thailand's mountains. Fly through thousand-year-old teak forests on Southeast Asia's longest zipline system, navigate thrilling Grade 3-4 rapids on the Mae Taeng River, and trek to remote hill tribe villages.",
+    "price": 520,
+    "originalPrice": 650,
+    "discountedPrice": 479,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 79,
+    "reviewCount": 79,
+    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "July to February",
+    "language": "English, Thai",
+    "highlights": [
+      "32 zipline platforms with 900m longest cable run",
+      "Whitewater rafting on 10km stretch of Mae Taeng River",
+      "Abseiling and suspension sky bridges high in the canopy",
+      "Boutique eco-resort nestled in northern mountains",
+      "Traditional northern Thai Khao Soi lunch"
+    ],
+    "included": [
+      "2 Nights boutique hotel accommodation in Chiang Mai",
+      "Full safety equipment, harnesses, and international cert guides",
+      "Whitewater rafting and zipline fees with insurance",
+      "All meals on activity days and hotel transfers"
+    ],
+    "excluded": [
+      "Flights to Chiang Mai",
+      "Personal action camera rentals",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-16",
+      "2026-12-14",
+      "2027-01-18"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Chiang Mai",
+        "description": "Arrive in Chiang Mai. Check into hotel and explore the vibrant Night Bazaar."
+      },
+      {
+        "day": 2,
+        "title": "Canopy Zipline & Whitewater Rafting",
+        "description": "Morning zipline course through the tree canopy. Afternoon rafting on turbulent Mae Taeng rapids."
+      },
+      {
+        "day": 3,
+        "title": "Sticky Waterfalls & Departure",
+        "description": "Hike up the natural limestone grips of Bua Tong Sticky Waterfalls before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Chris Evans",
+        "rating": 5,
+        "text": "Huge adrenaline rush! Rafting was so exciting and guides were great.",
+        "date": "2026-06-15"
+      },
+      {
+        "author": "Rachel Green",
+        "rating": 4,
+        "text": "Loved the ziplining over the jungle canopy.",
+        "date": "2026-07-08"
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "tourNumericId": 215,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Mount Fuji Subashiri Trail Ascent & Fuji Five Lakes",
+    "title": "Mount Fuji Subashiri Trail Ascent & Fuji Five Lakes",
+    "slug": "mount-fuji-trail-fuji-five-lakes",
+    "category": "Adventure",
+    "destination": "Yamanashi, Japan",
+    "location": "Mount Fuji, Chubu Region",
+    "country": "Japan",
+    "description": "Climb through forested slopes and volcanic ash to the 3,776m crater of Mount Fuji for the sacred Goraiko sunrise.",
+    "shortDescription": "3,776m volcano summit, sacred Goraiko sunrise, and mountain hut stay.",
+    "fullDescription": "Undertake the iconic pilgrimage to the summit of Japan's highest peak, Mount Fuji. Climb the scenic Subashiri Trail from lush forest to moon-like volcanic scree, spend the night at an authentic mountain hut at the 8th station, and greet the sunrise above a sea of clouds before sliding down the famous sand-run slope.",
+    "price": 890,
+    "originalPrice": 1100,
+    "discountedPrice": 820,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Challenging",
+    "rating": 4.9,
+    "reviews": 104,
+    "reviewCount": 104,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "July to early September",
+    "language": "English, Japanese",
+    "highlights": [
+      "Summiting Japan's highest point at 3,776 meters",
+      "Witnessing Goraiko (the sacred sunrise above the clouds)",
+      "Overnight stay at mountain lodge at the 8th station",
+      "Sunabashiri volcanic sand sliding descent",
+      "Relaxing in Lake Kawaguchiko Onsen post-climb"
+    ],
+    "included": [
+      "1 Night mountain hut on Mount Fuji & 1 night Kawaguchiko Onsen ryokan",
+      "Licensed English-speaking mountain climbing guide",
+      "Dinner and breakfast at the mountain hut",
+      "Highway bus from Shinjuku Tokyo"
+    ],
+    "excluded": [
+      "Flights to Tokyo",
+      "Rental climbing gear",
+      "Coin shower fees at mountain hut"
+    ],
+    "availableDates": [
+      "2027-07-10",
+      "2027-07-25",
+      "2027-08-12",
+      "2027-08-28"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Tokyo to Subashiri 5th Station & Hike to 8th Station",
+        "description": "Bus to 5th station. Hike 5-6 hours through woodlands up to 8th station mountain hut. Dinner and rest."
+      },
+      {
+        "day": 2,
+        "title": "Summit Sunrise & Descent to Onsen",
+        "description": "2:00 AM summit push. Watch sunrise from the crater rim. Descend via Sunabashiri sand run to Lake Kawaguchiko Onsen."
+      },
+      {
+        "day": 3,
+        "title": "Fuji Five Lakes & Return to Tokyo",
+        "description": "Soak in hot springs overlooking Mount Fuji, visit Chureito Pagoda, and return to Tokyo."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Hiroshi Tanaka",
+        "rating": 5,
+        "text": "Goraiko sunrise from the top of Japan is something I will cherish forever.",
+        "date": "2026-07-28"
+      },
+      {
+        "author": "Jessica White",
+        "rating": 5,
+        "text": "Tough climb but the guide was encouraging and onsen at the end was heaven.",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "tourNumericId": 216,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Phong Nha Caves Underground River & Dark Cave Expedition",
+    "title": "Phong Nha Caves Underground River & Dark Cave Expedition",
+    "slug": "phong-nha-caves-underground-expedition",
+    "category": "Adventure",
+    "destination": "Quang Binh, Vietnam",
+    "location": "Phong Nha-Ke Bang National Park",
+    "country": "Vietnam",
+    "description": "Spelunk through prehistoric limestone caverns, swim through mud baths in Dark Cave, and boat along underground rivers in Paradise Cave.",
+    "shortDescription": "Giant limestone caverns, underground rivers, and mud baths.",
+    "fullDescription": "Journey into the subterranean heart of Phong Nha-Ke Bang National Park, home to the oldest karst mountains in Asia. Marvel at towering stalactites inside Paradise Cave, zipline across Chay River, and wade through buoyant natural mud chambers inside Dark Cave.",
+    "price": 580,
+    "originalPrice": 720,
+    "discountedPrice": 529,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 67,
+    "reviewCount": 67,
+    "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-14 travelers",
+    "bestTime": "February to August",
+    "language": "English, Vietnamese",
+    "highlights": [
+      "Exploring 31km Paradise Cave (Thien Duong) cathedral chambers",
+      "Zipline into Dark Cave (Hang Toi) and natural mud bath immersion",
+      "Kayaking down turquoise Chay River",
+      "Boat tour into Phong Nha water cave stalactite corridors",
+      "Stay in boutique riverside eco-bungalows"
+    ],
+    "included": [
+      "2 Nights riverside resort in Phong Nha village",
+      "All national park fees, cave entry, ziplining, and mud cave passes",
+      "English-speaking caving guide with helmets and headlamps",
+      "Transfers from Dong Hoi railway station / airport"
+    ],
+    "excluded": [
+      "Flights to Dong Hoi",
+      "Personal swim gear",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-16",
+      "2027-02-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Phong Nha & River Cruise",
+        "description": "Arrive in Phong Nha. Dragon boat cruise along Son River into the water chambers of Phong Nha Cave."
+      },
+      {
+        "day": 2,
+        "title": "Paradise Cave & Dark Cave Adventure",
+        "description": "Marvel at cathedral halls of Paradise Cave. Afternoon zipline, swim, and mud bath inside Dark Cave."
+      },
+      {
+        "day": 3,
+        "title": "Botanical Garden Jungle Trek & Departure",
+        "description": "Morning hike to Gio Waterfall in the national park before transfer to Dong Hoi."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Alex Turner",
+        "rating": 5,
+        "text": "The mud bath in total cave darkness was surreal and hilarious!",
+        "date": "2026-04-12"
+      },
+      {
+        "author": "Megan Fox",
+        "rating": 4,
+        "text": "Paradise cave stalactites are colossal. A must-see in Vietnam.",
+        "date": "2026-05-09"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "tourNumericId": 217,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Cebu Kawasan Falls Canyoneering & Oslob Coastal Ride",
+    "title": "Cebu Kawasan Falls Canyoneering & Oslob Coastal Ride",
+    "slug": "cebu-kawasan-falls-canyoneering",
+    "category": "Adventure",
+    "destination": "Cebu, Philippines",
+    "location": "Badian & Moalboal, Central Visayas",
+    "country": "Philippines",
+    "description": "Leap off 10-meter cliffs, slide down natural rock waterslides into electric-blue pools at Kawasan Falls, and swim with sardines in Moalboal.",
+    "shortDescription": "Cliff jumps into electric-blue pools, natural waterslides, and sardine run.",
+    "fullDescription": "An electrifying aquatic adventure in southern Cebu. Trek through lush river canyons in Badian, jumping from limestone ledges into turquoise pools and cascading down natural waterfalls. Continue to Moalboal to snorkel alongside millions of swirling sardines just meters from the shore.",
+    "price": 499,
+    "originalPrice": 620,
+    "discountedPrice": 449,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.9,
+    "reviews": 122,
+    "reviewCount": 122,
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "December to May",
+    "language": "English, Tagalog",
+    "highlights": [
+      "Full canyoneering downstream to multi-tiered Kawasan Falls",
+      "Cliff jumps from 3m, 7m, and 10m heights into azure pools",
+      "Moalboal world-famous sardine run and sea turtle snorkel",
+      "Osmena Peak panoramic jagged hill summit hike",
+      "Seaside resort stay in Moalboal"
+    ],
+    "included": [
+      "2 Nights coastal resort in Moalboal",
+      "Full canyoneering gear (helmets, life jackets, and certified guides)",
+      "Snorkel equipment for Moalboal sardine run",
+      "Private AC van transfers from Cebu City / Mactan Airport"
+    ],
+    "excluded": [
+      "Flights to Cebu",
+      "Personal waterproof footwear",
+      "Souvenir photos"
+    ],
+    "availableDates": [
+      "2026-11-22",
+      "2026-12-20",
+      "2027-01-24"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cebu City to Moalboal & Sardine Snorkel",
+        "description": "Drive south to Moalboal. Snorkel right off Panagsama Beach amidst millions of shimmering sardines."
+      },
+      {
+        "day": 2,
+        "title": "Kawasan Falls Canyoneering",
+        "description": "Gear up in Badian. Jump, swim, and scramble down river canyons to the main Kawasan waterfall basin."
+      },
+      {
+        "day": 3,
+        "title": "Osmena Peak Sunrise & Return",
+        "description": "Hike to the jagged jagged peaks of Osmena for sunrise over the ocean before transfer to Cebu."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jason Brooks",
+        "rating": 5,
+        "text": "The cliff jumping was insane! The water really is that electric blue.",
+        "date": "2026-03-15"
+      },
+      {
+        "author": "Chloe Martin",
+        "rating": 5,
+        "text": "Guides were super safe and supportive. Sardine run was magical.",
+        "date": "2026-04-02"
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "tourNumericId": 218,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Mount Kinabalu Via Ferrata Summit Adventure",
+    "title": "Mount Kinabalu Via Ferrata Summit Adventure",
+    "slug": "mount-kinabalu-via-ferrata-climb",
+    "category": "Adventure",
+    "destination": "Sabah, Borneo, Malaysia",
+    "location": "Kinabalu National Park",
+    "country": "Malaysia",
+    "description": "Scale the 4,095m granite dome of Mount Kinabalu and navigate the world's highest Via Ferrata iron road route across sheer cliff faces.",
+    "shortDescription": "4,095m peak, world's highest Via Ferrata, and sunrise over Borneo.",
+    "fullDescription": "Conquer Malaysia's rooftop in the ancient rainforests of Borneo. Hike through subalpine meadows up Mount Kinabalu to Low's Peak for an awe-inspiring sunrise, then harness into 'Low's Peak Circuit' - verified as the highest Via Ferrata on earth, clipping along cables over sheer vertical drops.",
+    "price": 1150,
+    "originalPrice": 1400,
+    "discountedPrice": 1049,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Challenging",
+    "rating": 4.9,
+    "reviews": 76,
+    "reviewCount": 76,
+    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "March to September",
+    "language": "English, Malay",
+    "highlights": [
+      "Summiting 4,095m Low's Peak at sunrise",
+      "Low's Peak Circuit or Walk the Torq Via Ferrata descent",
+      "Crossing suspension monkey bridge at 3,600 meters",
+      "Panalaban alpine mountain lodge stay",
+      "Kinabalu UNESCO National Park botanical walk"
+    ],
+    "included": [
+      "1 Night Kinabalu Park HQ lodge & 1 night Panalaban mountain hut",
+      "Mount Kinabalu climbing permit and Via Ferrata accreditation",
+      "Mountain guide, Via Ferrata trainer, and climbing insurance",
+      "Return transfers from Kota Kinabalu"
+    ],
+    "excluded": [
+      "Flights to Kota Kinabalu",
+      "Porter fees for personal luggage",
+      "Climbing gloves"
+    ],
+    "availableDates": [
+      "2027-03-10",
+      "2027-04-14",
+      "2027-05-18"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kota Kinabalu to Timpohon Gate & Panalaban",
+        "description": "Hike 6km up mountain trails through changing vegetation zones to Panalaban base. Mandatory Via Ferrata briefing."
+      },
+      {
+        "day": 2,
+        "title": "Low's Peak Summit & Via Ferrata",
+        "description": "2:30 AM summit climb to 4,095m for sunrise. Traverse the sheer granite face on the Via Ferrata. Descend to base."
+      },
+      {
+        "day": 3,
+        "title": "Return to Kota Kinabalu",
+        "description": "Awarding of climbing certificates at park headquarters and transfer back to city."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Derrick Vance",
+        "rating": 5,
+        "text": "Walking across the hanging bridge at 3,600m is the ultimate adrenaline rush!",
+        "date": "2026-05-11"
+      },
+      {
+        "author": "Samantha Cox",
+        "rating": 5,
+        "text": "Hardest physical thing I've done but the summit view made me cry.",
+        "date": "2026-06-03"
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "tourNumericId": 219,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Ella Rock & Nine Arches Bridge Highland Trek",
+    "title": "Ella Rock & Nine Arches Bridge Highland Trek",
+    "slug": "ella-rock-highland-trek-sri-lanka",
+    "category": "Adventure",
+    "destination": "Ella, Sri Lanka",
+    "location": "Central Highlands, Badulla District",
+    "country": "Sri Lanka",
+    "description": "Trek through emerald tea plantations, follow railway sleepers to the colonial Nine Arches Viaduct, and summit cliff-top Ella Rock.",
+    "shortDescription": "Ella Rock panoramic cliffs, tea estate trails, and Nine Arches viaduct.",
+    "fullDescription": "Experience the cool mist and drama of Sri Lanka's central highlands. Hike across tea estates, cross the dramatic colonial Nine Arches railway viaduct as steam locomotives pass, scale the steep path to the summit of Ella Rock for sweeping views through Ella Gap, and swim in Ravana Falls.",
+    "price": 520,
+    "originalPrice": 650,
+    "discountedPrice": 479,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 83,
+    "reviewCount": 83,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "December to April",
+    "language": "English, Sinhala",
+    "highlights": [
+      "Early morning trek to the summit of Ella Rock overlooking Ella Gap",
+      "Photographing trains crossing the colonial Nine Arches Bridge",
+      "Little Adam's Peak sunset stroll through tea bushes",
+      "Dip in cascading waters of Ravana Waterfall",
+      "Famous scenic blue train ride from Kandy to Ella"
+    ],
+    "included": [
+      "2 Nights boutique hill resort in Ella",
+      "Scenic train tickets (reserved seating)",
+      "Local hiking guide for Ella Rock and tea plantations",
+      "Daily breakfast and transfers"
+    ],
+    "excluded": [
+      "Flights to Colombo",
+      "Tips",
+      "Personal gear"
+    ],
+    "availableDates": [
+      "2026-11-25",
+      "2026-12-22",
+      "2027-01-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Scenic Train to Ella & Little Adam's Peak",
+        "description": "Ride the iconic mountain train into Ella. Late afternoon walk up Little Adam's Peak for sunset."
+      },
+      {
+        "day": 2,
+        "title": "Ella Rock Summit & Nine Arches Bridge",
+        "description": "Morning hike to the cliff edge of Ella Rock. Afternoon walk along tracks to the Nine Arches Viaduct."
+      },
+      {
+        "day": 3,
+        "title": "Ravana Falls & Departure",
+        "description": "Visit the roaring cascades of Ravana Falls before onward transfer to coastal beaches or airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Patrick Murphy",
+        "rating": 5,
+        "text": "The views from Ella Rock are breathtaking. The train ride is a must-do.",
+        "date": "2026-02-27"
+      },
+      {
+        "author": "Alice Chen",
+        "rating": 4,
+        "text": "Such a green and peaceful part of Sri Lanka.",
+        "date": "2026-03-19"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "tourNumericId": 220,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Jeju Island Hallasan Volcano & Lava Tube Caving",
+    "title": "Jeju Island Hallasan Volcano & Lava Tube Caving",
+    "slug": "jeju-island-hallasan-volcano-trek",
+    "category": "Adventure",
+    "destination": "Jeju Island, South Korea",
+    "location": "Hallasan National Park",
+    "country": "South Korea",
+    "description": "Summit South Korea's highest peak at 1,950m with its volcanic crater lake, and walk inside the UNESCO Manjanggul lava tube cave system.",
+    "shortDescription": "Hallasan crater lake summit, Manjanggul lava tubes, and coastal cliffs.",
+    "fullDescription": "Explore the volcanic marvels of South Korea's premier holiday island. Ascend through dense dwarf pine forests to the crater rim of shield volcano Hallasan (1,950m) gazing down into Baengnokdam crater lake, explore subterranean passages inside Manjanggul Lava Tube, and hike the sunrise peak of Seongsan Ilchulbong.",
+    "price": 760,
+    "originalPrice": 920,
+    "discountedPrice": 699,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Challenging",
+    "rating": 4.8,
+    "reviews": 71,
+    "reviewCount": 71,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-14 travelers",
+    "bestTime": "April to June, September to November",
+    "language": "English, Korean",
+    "highlights": [
+      "Summiting Mount Hallasan (1,950m) & viewing Baengnokdam crater lake",
+      "Walking inside UNESCO Manjanggul Lava Tube cavern",
+      "Sunrise hike up Seongsan Ilchulbong tuff cone crater",
+      "Observing legendary Haenyeo female free-divers",
+      "Tasting Jeju Black Pork barbecue dinner"
+    ],
+    "included": [
+      "3 Nights 4-star hotel in Jeju City / Seogwipo",
+      "Park entrance permits and certified mountain guide",
+      "Private AC transport across the island",
+      "Daily breakfast and 2 special Korean dinners"
+    ],
+    "excluded": [
+      "Flights to Jeju",
+      "Hiking poles/crampons (if winter)",
+      "Personal drinks"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2027-04-10",
+      "2027-05-15"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Jeju & Manjanggul Lava Cave",
+        "description": "Arrive in Jeju. Explore the subterranean columns of Manjanggul Lava Tube."
+      },
+      {
+        "day": 2,
+        "title": "Mount Hallasan Summit Climb",
+        "description": "Full-day trek via Seongpanak Trail to the 1,950m peak. Gaze into the crater lake and descend via Gwaneumsa Trail."
+      },
+      {
+        "day": 3,
+        "title": "Seongsan Ilchulbong & Haenyeo Divers",
+        "description": "Morning hike up the volcanic tuff cone of Seongsan. Watch elderly Haenyeo divers catch seafood without oxygen tanks."
+      },
+      {
+        "day": 4,
+        "title": "Jusangjeolli Cliffs & Departure",
+        "description": "Walk the hexagonal basalt sea pillars of Jusangjeolli before transfer to Jeju Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Min-Jun Kim",
+        "rating": 5,
+        "text": "Hallasan crater view was clear and spectacular! Best trek in Korea.",
+        "date": "2026-05-14"
+      },
+      {
+        "author": "Greg Sanders",
+        "rating": 4,
+        "text": "Long hike up Hallasan but extremely well-maintained trails.",
+        "date": "2026-06-02"
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "tourNumericId": 221,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Kyoto Imperial Temples, Gion Geisha Walk & Tea Ritual",
+    "title": "Kyoto Imperial Temples, Gion Geisha Walk & Tea Ritual",
+    "slug": "kyoto-imperial-temples-gion-walk",
+    "category": "Cultural",
+    "destination": "Kyoto, Japan",
+    "location": "Kansai Region, Honshu",
+    "country": "Japan",
+    "description": "Walk thousands of vermilion torii gates at Fushimi Inari, wander lantern-lit Gion alleyways, and take part in a private Zen tea ceremony.",
+    "shortDescription": "Fushimi Inari torii gates, Gion lantern alleys, and Zen tea ceremony.",
+    "fullDescription": "Step into Japan's ancient imperial capital. Wind through the endless vermilion arches of Fushimi Inari Taisha, gaze upon the shimmering gold leaf of Kinkaku-ji, partake in an authentic matcha tea ceremony led by a tea master, and stroll the historic wooden machiya lanes of Gion in search of geishas.",
+    "price": 980,
+    "originalPrice": 1200,
+    "discountedPrice": 899,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 165,
+    "reviewCount": 165,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "March to May, October to November",
+    "language": "English, Japanese",
+    "highlights": [
+      "Fushimi Inari 10,000 vermilion Torii gates early morning walk",
+      "Kinkaku-ji Golden Pavilion shimmering across mirror pond",
+      "Authentic private matcha tea ceremony in a historic temple",
+      "Evening twilight walking tour of Gion's preservation district",
+      "Arashiyama bamboo grove & Tenryu-ji Zen rock garden"
+    ],
+    "included": [
+      "3 Nights boutique hotel or traditional Ryokan in central Kyoto",
+      "Expert licensed cultural guide throughout excursions",
+      "All temple entry tickets and private tea ceremony fee",
+      "Kyoto City transit passes"
+    ],
+    "excluded": [
+      "Shinkansen bullet train from Tokyo",
+      "Kimono rental (optional)",
+      "Personal meals not listed"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-05",
+      "2027-03-25",
+      "2027-04-08"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Kyoto & Gion Twilight Walk",
+        "description": "Arrive at Kyoto Station. Check in to hotel. Evening walking tour through Gion and Pontocho alleyways."
+      },
+      {
+        "day": 2,
+        "title": "Fushimi Inari & Golden Pavilion",
+        "description": "Early morning at Fushimi Inari shrines before crowds arrive. Afternoon visit to Kinkaku-ji and Ryoan-ji rock garden."
+      },
+      {
+        "day": 3,
+        "title": "Arashiyama Bamboo & Zen Tea Ritual",
+        "description": "Walk the soaring green Arashiyama bamboo path. Private tea ritual conducted by a 5th-generation tea master."
+      },
+      {
+        "day": 4,
+        "title": "Kiyomizu-dera & Departure",
+        "description": "Stand on the wooden terrace of cliffside Kiyomizu-dera temple overlooking Kyoto before departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rebecca Hall",
+        "rating": 5,
+        "text": "Fushimi Inari at dawn was surreal. The guide had incredible historical knowledge.",
+        "date": "2026-04-14"
+      },
+      {
+        "author": "Kenjiro Mori",
+        "rating": 5,
+        "text": "Deeply respectful and authentic cultural experience.",
+        "date": "2026-05-01"
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "tourNumericId": 222,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Angkor Wat & Bayon Sunrise Ancient Khmer Temples",
+    "title": "Angkor Wat & Bayon Sunrise Ancient Khmer Temples",
+    "slug": "angkor-wat-bayon-khmer-temples",
+    "category": "Cultural",
+    "destination": "Siem Reap, Cambodia",
+    "location": "Angkor Archaeological Park",
+    "country": "Cambodia",
+    "description": "Watch the sun crest the lotus towers of Angkor Wat, admire 216 giant smiling stone faces at Bayon, and see Ta Prohm enveloped by jungle roots.",
+    "shortDescription": "Angkor Wat sunrise, Bayon stone faces, and Ta Prohm jungle temple.",
+    "fullDescription": "Immerse yourself in the world's largest religious monument. Watch the sunrise illuminate the reflection pools of 12th-century Angkor Wat, decipher ancient bas-relief carvings, explore the enigmatic stone faces of Bayon, and walk through Ta Prohm where colossal strangler fig roots engulf ancient ruins.",
+    "price": 599,
+    "originalPrice": 750,
+    "discountedPrice": 549,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 182,
+    "reviewCount": 182,
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "November to March",
+    "language": "English, Khmer",
+    "highlights": [
+      "Iconic sunrise over the five lotus towers of Angkor Wat",
+      "Bayon Temple featuring 216 enigmatic smiling faces",
+      "Ta Prohm 'Tomb Raider' temple entwined with ancient banyan roots",
+      "Sunset view over the jungle plains from Phnom Bakheng hill",
+      "Traditional Apsara dance performance & Khmer buffet dinner"
+    ],
+    "included": [
+      "3 Nights luxury 4-star resort with swimming pool in Siem Reap",
+      "3-Day official Angkor Park archaeological pass",
+      "Private AC transport and Tuk-Tuk sunrise shuttle",
+      "Licensed official Khmer Egyptologist/Historian guide"
+    ],
+    "excluded": [
+      "Flights to Siem Reap",
+      "Cambodian visa",
+      "Alcoholic beverages"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-01-14",
+      "2027-02-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Siem Reap & Sunset Cruise",
+        "description": "Arrive in Siem Reap. Check into resort. Evening sunset cruise on Tonle Sap floating village."
+      },
+      {
+        "day": 2,
+        "title": "Angkor Wat Sunrise & Angkor Thom",
+        "description": "5:00 AM sunrise over Angkor Wat. Tour Bayon smiling stone faces, Baphuon, and the Elephant Terrace."
+      },
+      {
+        "day": 3,
+        "title": "Ta Prohm Jungle Temple & Banteay Srei",
+        "description": "Explore root-covered Ta Prohm. Afternoon excursion to the intricate pink sandstone carvings of Banteay Srei."
+      },
+      {
+        "day": 4,
+        "title": "Artisans Angkor & Departure",
+        "description": "Visit traditional silk and stone craft workshops before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Michael Chang",
+        "rating": 5,
+        "text": "The sunrise at Angkor Wat gave me goosebumps. Guide was exceptional.",
+        "date": "2026-03-05"
+      },
+      {
+        "author": "Emma Watson",
+        "rating": 5,
+        "text": "Ta Prohm feels like an Indiana Jones set. Absolutely magical.",
+        "date": "2026-04-11"
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "tourNumericId": 223,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Bangkok Grand Palace, Wat Pho & Floating Markets",
+    "title": "Bangkok Grand Palace, Wat Pho & Floating Markets",
+    "slug": "bangkok-grand-palace-floating-markets",
+    "category": "Cultural",
+    "destination": "Bangkok, Thailand",
+    "location": "Chao Phraya River & Rattanakosin",
+    "country": "Thailand",
+    "description": "Marvel at the golden spires of the Grand Palace, see the 46m Reclining Buddha at Wat Pho, and cruise Damnoen Saduak floating market by longtail boat.",
+    "shortDescription": "Grand Palace golden spires, Reclining Buddha, and floating markets.",
+    "fullDescription": "Dive into the kaleidoscopic royal and spiritual heritage of Bangkok. Marvel at the sacred Emerald Buddha inside the Grand Palace, visit the serene 46-meter golden Reclining Buddha at Wat Pho, glide along Chao Phraya River canals in a wooden longtail boat, and shop tropical fruits directly from wooden canoes at vibrant floating markets.",
+    "price": 520,
+    "originalPrice": 650,
+    "discountedPrice": 479,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 130,
+    "reviewCount": 130,
+    "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "November to February",
+    "language": "English, Thai",
+    "highlights": [
+      "Grand Palace royal residence and sacred Temple of the Emerald Buddha",
+      "Wat Pho massive 46-meter gold-leaf Reclining Buddha",
+      "Chao Phraya express boat and Thonburi canal longtail ride",
+      "Damnoen Saduak floating market & Maeklong Railway market",
+      "Chinatown Yaowarat evening street food tasting walk"
+    ],
+    "included": [
+      "3 Nights luxury 4-star riverside hotel in Bangkok",
+      "All monument entry tickets and longtail boat charter",
+      "Private AC transport with professional English guide",
+      "Daily breakfast and Chinatown street food tasting tour"
+    ],
+    "excluded": [
+      "Flights to Bangkok",
+      "Personal shopping",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-10",
+      "2027-01-18"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Bangkok & River Cruise",
+        "description": "Arrive at Suvarnabhumi Airport. Transfer to riverside hotel. Evening dinner cruise along the Chao Phraya."
+      },
+      {
+        "day": 2,
+        "title": "Grand Palace, Wat Pho & Wat Arun",
+        "description": "Tour the dazzling Grand Palace, see the Reclining Buddha, and cross the river to Wat Arun's porcelain spire."
+      },
+      {
+        "day": 3,
+        "title": "Railway Market & Floating Market",
+        "description": "Watch trains pass through Maeklong market stalls. Take a paddle boat through Damnoen Saduak floating market."
+      },
+      {
+        "day": 4,
+        "title": "Chinatown & Departure",
+        "description": "Morning walk through vibrant flower markets and Chinatown before transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Carlos Mendez",
+        "rating": 5,
+        "text": "The Grand Palace details are mind-boggling. Incredible tour!",
+        "date": "2026-03-18"
+      },
+      {
+        "author": "Sophie Turner",
+        "rating": 4,
+        "text": "Loved the floating market and food tour in Chinatown.",
+        "date": "2026-04-09"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "tourNumericId": 224,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Hoi An Ancient Lantern Town & Thu Bon River Heritage",
+    "title": "Hoi An Ancient Lantern Town & Thu Bon River Heritage",
+    "slug": "hoi-an-ancient-lantern-heritage",
+    "category": "Cultural",
+    "destination": "Hoi An, Vietnam",
+    "location": "Quang Nam Province, Central Vietnam",
+    "country": "Vietnam",
+    "description": "Stroll lantern-lit yellow alleyways in UNESCO Hoi An, cross the 400-year-old Japanese Covered Bridge, and craft your own traditional silk lantern.",
+    "shortDescription": "Yellow merchant houses, Japanese bridge, and silk lantern workshops.",
+    "fullDescription": "Step into an evocative 16th-century trading port. Wander past yellow-walled merchant houses, Chinese assembly halls, and the Japanese Covered Bridge. Learn traditional lantern making from master artisans, cruise along the Thu Bon River, and take a cooking class in Tra Que herb village.",
+    "price": 490,
+    "originalPrice": 620,
+    "discountedPrice": 449,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 140,
+    "reviewCount": 140,
+    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "February to July",
+    "language": "English, Vietnamese",
+    "highlights": [
+      "UNESCO Ancient Town walking tour and Japanese Bridge",
+      "Hands-on silk lantern making workshop with local artisan",
+      "Tra Que organic herb village farming and cooking class",
+      "Evening boat ride releasing floating paper candle lanterns",
+      "Scenic bicycle ride through emerald rice paddies"
+    ],
+    "included": [
+      "3 Nights boutique resort with swimming pool in Hoi An",
+      "Ancient Town entry ticket and lantern workshop materials",
+      "Cooking class with multi-course lunch",
+      "Airport transfers from Da Nang"
+    ],
+    "excluded": [
+      "Flights to Da Nang",
+      "Tailor-made clothing orders",
+      "Personal tips"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival & Night Lantern Stroll",
+        "description": "Transfer from Da Nang to Hoi An. Evening walk through car-free streets glowing with thousands of silk lanterns."
+      },
+      {
+        "day": 2,
+        "title": "Ancient Town Heritage & Lantern Crafting",
+        "description": "Visit Tan Ky merchant house, Fujian Assembly Hall, and Japanese Bridge. Make your own souvenir silk lantern."
+      },
+      {
+        "day": 3,
+        "title": "Tra Que Cooking Class & Basket Boat",
+        "description": "Bicycle to organic herb gardens, cook traditional Cao Lau noodles, and ride in circular bamboo basket boats."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning leisure for custom tailoring fittings or beach visit, followed by airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Audrey Hepburn",
+        "rating": 5,
+        "text": "Hoi An is the most charming town in all of Asia. Lanterns at night are magical.",
+        "date": "2026-05-19"
+      },
+      {
+        "author": "Liam Jones",
+        "rating": 5,
+        "text": "Cooking class was fantastic! My lantern is now in my living room.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "tourNumericId": 225,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Luang Prabang Alms Giving & Kuang Si Waterfalls",
+    "title": "Luang Prabang Alms Giving & Kuang Si Waterfalls",
+    "slug": "luang-prabang-alms-giving-waterfalls",
+    "category": "Cultural",
+    "destination": "Luang Prabang, Laos",
+    "location": "Mekong River Valley",
+    "country": "Laos",
+    "description": "Participate in silent dawn Tak Bat alms giving with saffron-robed monks, explore Wat Xieng Thong, and swim in tiered turquoise Kuang Si Falls.",
+    "shortDescription": "Tak Bat morning alms, Wat Xieng Thong temple, and Kuang Si tiered falls.",
+    "fullDescription": "Experience the spiritual tranquility of UNESCO-listed Luang Prabang nestled between the Mekong and Nam Khan rivers. Awaken at sunrise to witness saffron-robed monks collecting morning alms, admire the glittering mosaics of Wat Xieng Thong, and swim in the cool tiered limestone pools of Kuang Si Waterfall.",
+    "price": 620,
+    "originalPrice": 780,
+    "discountedPrice": 569,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 68,
+    "reviewCount": 68,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "November to March",
+    "language": "English, Lao",
+    "highlights": [
+      "Dawn Tak Bat alms-giving ritual with Buddhist monks",
+      "Wat Xieng Thong 'Tree of Life' glass mosaic murals",
+      "Swimming in tiered turquoise pools of Kuang Si Waterfall",
+      "Sunset longtail boat cruise on the Mekong River",
+      "Night market handicrafts and French-Lao fusion dining"
+    ],
+    "included": [
+      "3 Nights French colonial boutique hotel in Luang Prabang",
+      "Kuang Si waterfall entry and bear sanctuary visit",
+      "Mekong sunset cruise with refreshments",
+      "Private airport transfers"
+    ],
+    "excluded": [
+      "Flights to Luang Prabang",
+      "Lao visa fees",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-25",
+      "2026-12-22",
+      "2027-01-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Luang Prabang & Mount Phousi",
+        "description": "Check into colonial hotel. Climb Mount Phousi for panoramic sunset over the Mekong River and mountains."
+      },
+      {
+        "day": 2,
+        "title": "Morning Alms & Temple Heritage",
+        "description": "Witness Tak Bat procession at sunrise. Tour Wat Xieng Thong, the Royal Palace, and Wat Mai."
+      },
+      {
+        "day": 3,
+        "title": "Kuang Si Waterfalls & Mekong Sunset",
+        "description": "Excursion to Kuang Si tiered waterfalls for swimming. Late afternoon longtail boat cruise on the Mekong."
+      },
+      {
+        "day": 4,
+        "title": "Morning Market & Departure",
+        "description": "Stroll vibrant morning food market tasting sticky rice and Lao coffee before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Hannah Abbott",
+        "rating": 5,
+        "text": "The peace and serenity of this town is unmatched in Southeast Asia.",
+        "date": "2026-02-17"
+      },
+      {
+        "author": "Eric Clapton",
+        "rating": 4,
+        "text": "Kuang Si falls are spectacular in person. Great guide.",
+        "date": "2026-03-24"
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "tourNumericId": 226,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Seoul Gyeongbokgung Palace & Hanok Village Tour",
+    "title": "Seoul Gyeongbokgung Palace & Hanok Village Tour",
+    "slug": "seoul-gyeongbokgung-hanok-culture",
+    "category": "Cultural",
+    "destination": "Seoul, South Korea",
+    "location": "Jongno-gu, Central Seoul",
+    "country": "South Korea",
+    "description": "Don traditional Hanbok royal robes at Gyeongbokgung Palace, wander Bukchon Hanok wooden alleys, and explore Insadong antique teahouses.",
+    "shortDescription": "Royal Joseon palaces, traditional Hanok villages, and street food.",
+    "fullDescription": "Uncover six centuries of Korean royal heritage and dynamic modernity in Seoul. Don an ornate silk Hanbok to watch the Changing of the Royal Guard at Gyeongbokgung Palace, stroll between traditional tiled rooflines in Bukchon Hanok Village, and taste piping-hot bibimbap and bindaetteok in historic Gwangjang Market.",
+    "price": 780,
+    "originalPrice": 980,
+    "discountedPrice": 720,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 112,
+    "reviewCount": 112,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "April to May, September to November",
+    "language": "English, Korean",
+    "highlights": [
+      "Gyeongbokgung Palace Royal Guard Changing Ceremony",
+      "Traditional silk Hanbok rental and photoshoot pass",
+      "Bukchon Hanok Village historic residential alleys",
+      "Gwangjang Market traditional street food tasting feast",
+      "N Seoul Tower evening panoramic cable car and city lights"
+    ],
+    "included": [
+      "3 Nights 4-star hotel in Myeongdong or Insadong",
+      "Hanbok rental and palace admission tickets",
+      "Expert cultural guide and T-money transit card",
+      "Gwangjang food tasting dinner"
+    ],
+    "excluded": [
+      "Flights to Seoul Incheon",
+      "Personal shopping",
+      "Optional DMZ tour"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-03-20",
+      "2027-04-15"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Seoul & Myeongdong",
+        "description": "Transfer from Incheon Airport. Evening walk through buzzing Myeongdong cosmetic and street food district."
+      },
+      {
+        "day": 2,
+        "title": "Royal Palaces in Hanbok & Hanok Village",
+        "description": "Dress in Hanbok for Gyeongbokgung Palace. Walk through Bukchon Hanok Village and Insadong artisan street."
+      },
+      {
+        "day": 3,
+        "title": "Gwangjang Market & N Seoul Tower",
+        "description": "Sample street delicacies at Gwangjang Market. Cable car up to N Seoul Tower for sunset city panorama."
+      },
+      {
+        "day": 4,
+        "title": "Dongdaemun Design Plaza & Departure",
+        "description": "Visit futuristic DDP and Namdaemun market before AREX train transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jenny Park",
+        "rating": 5,
+        "text": "Wearing Hanbok in the palace made me feel like royalty! Loved Seoul.",
+        "date": "2026-05-10"
+      },
+      {
+        "author": "Dave Miller",
+        "rating": 4,
+        "text": "Great guide, delicious food, very organized.",
+        "date": "2026-06-01"
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "tourNumericId": 227,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Bagan Hot Air Balloon & Ancient Pagoda Plains",
+    "title": "Bagan Hot Air Balloon & Ancient Pagoda Plains",
+    "slug": "bagan-ancient-pagoda-plains-tour",
+    "category": "Cultural",
+    "destination": "Bagan, Myanmar",
+    "location": "Mandalay Region, Irrawaddy River",
+    "country": "Myanmar",
+    "description": "Soar in a hot air balloon over 2,000 ancient Buddhist temples emerging from dawn mist across the sacred plains of Bagan.",
+    "shortDescription": "Hot air balloon flight, 2,000 ancient pagodas, and horse-cart trails.",
+    "fullDescription": "Gaze upon one of humanity's most awe-inspiring archaeological landscapes. Ascend into morning skies aboard a hot air balloon as mist rises over thousands of 11th-century brick pagodas, explore gilded Ananda Temple on e-bikes, and watch the sun melt over the Irrawaddy River.",
+    "price": 950,
+    "originalPrice": 1200,
+    "discountedPrice": 880,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 52,
+    "reviewCount": 52,
+    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "October to March",
+    "language": "English, Burmese",
+    "highlights": [
+      "Sunrise hot air balloon flight over 2,000 ancient temples",
+      "Gilded Ananda Temple & massive Dhammayangyi brick stupa",
+      "Quiet e-bike exploration through secluded temple paths",
+      "Traditional lacquerware artisan workshop demonstration",
+      "Sunset private boat cruise on the Irrawaddy River"
+    ],
+    "included": [
+      "3 Nights luxury heritage hotel in Old Bagan",
+      "Hot air balloon flight ticket with champagne toast",
+      "Archaeological zone entry pass",
+      "E-bike rentals and private guide throughout"
+    ],
+    "excluded": [
+      "Flights to Yangon/Bagan",
+      "Myanmar visa",
+      "Personal tipping"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Bagan & Sunset Stupa",
+        "description": "Fly into Nyaung U. Transfer to hotel in Old Bagan. Evening sunset over the temple plains from a viewing mound."
+      },
+      {
+        "day": 2,
+        "title": "Balloons Over Bagan & Ananda Temple",
+        "description": "Sunrise hot air balloon flight over thousands of pagodas. Tour Ananda and Shwezigon pagodas in the afternoon."
+      },
+      {
+        "day": 3,
+        "title": "E-Biking Ancient Trails & Lacquerware",
+        "description": "Quiet morning e-bike ride through hidden temples. Visit family-run lacquerware workshop and sunset river cruise."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning stroll through Nyaung U market before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "William Scott",
+        "rating": 5,
+        "text": "The balloon ride over Bagan is the greatest sight in all of travel.",
+        "date": "2026-02-14"
+      },
+      {
+        "author": "Clara Oswald",
+        "rating": 5,
+        "text": "Mystical, quiet, and profoundly moving.",
+        "date": "2026-03-01"
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "tourNumericId": 228,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Kandy Sacred Temple of the Tooth & Royal Botanical Gardens",
+    "title": "Kandy Sacred Temple of the Tooth & Royal Botanical Gardens",
+    "slug": "kandy-temple-tooth-heritage-sri-lanka",
+    "category": "Cultural",
+    "destination": "Kandy, Sri Lanka",
+    "location": "Central Province, Lake Kandy",
+    "country": "Sri Lanka",
+    "description": "Witness the sacred puja ritual at Sri Dalada Maligawa (Temple of the Tooth Relic), stroll Peradeniya botanical gardens, and watch fire dances.",
+    "shortDescription": "Temple of the Tooth Relic, Royal Botanical Gardens, and cultural drumming.",
+    "fullDescription": "Experience the spiritual heart of Buddhist Sri Lanka in the royal lakeside city of Kandy. Attend a reverent puja drumming ceremony at the sacred Temple of the Tooth Relic, wander under giant avenues of royal palms at Peradeniya Botanical Gardens, and watch energetic Kandyan dancers and fire-walkers.",
+    "price": 540,
+    "originalPrice": 680,
+    "discountedPrice": 499,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 74,
+    "reviewCount": 74,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "December to April",
+    "language": "English, Sinhala",
+    "highlights": [
+      "Attending sacred evening Puja ritual at Temple of the Tooth Relic",
+      "Peradeniya Royal Botanical Gardens giant Javan fig tree & orchid house",
+      "Traditional Kandyan cultural dance and fire-walking performance",
+      "Scenic walk around misty Kandy Lake",
+      "Ceylon tea factory tour and master tea tasting"
+    ],
+    "included": [
+      "2 Nights heritage hotel overlooking Kandy Lake or hills",
+      "Temple entry passes and VIP seats for Kandyan dance show",
+      "Peradeniya Botanical Gardens ticket",
+      "Private AC vehicle from Colombo"
+    ],
+    "excluded": [
+      "Flights to Sri Lanka",
+      "Temple flower offerings",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-16",
+      "2027-01-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Colombo to Kandy & Temple of the Tooth",
+        "description": "Scenic drive into central hills. Check into hotel. Evening visit to Temple of the Tooth for the sacred Puja."
+      },
+      {
+        "day": 2,
+        "title": "Royal Botanical Gardens & Kandyan Dance",
+        "description": "Morning walk among 4,000 plant species at Peradeniya. Evening traditional Kandyan drum and fire-walk performance."
+      },
+      {
+        "day": 3,
+        "title": "Tea Factory & Return to Colombo",
+        "description": "Tour working tea plantation, taste Ceylon tea grades, and return to Colombo."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Deepak Sharma",
+        "rating": 5,
+        "text": "The drumming and spirituality inside the Temple of the Tooth was mesmerizing.",
+        "date": "2026-03-22"
+      },
+      {
+        "author": "Carol Evans",
+        "rating": 4,
+        "text": "The botanical gardens were stunning, especially the orchid house.",
+        "date": "2026-04-15"
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "tourNumericId": 229,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Malacca UNESCO Heritage Dutch Square & Jonker Street",
+    "title": "Malacca UNESCO Heritage Dutch Square & Jonker Street",
+    "slug": "malacca-unesco-heritage-jonker-street",
+    "category": "Cultural",
+    "destination": "Melaka, Malaysia",
+    "location": "Strait of Malacca, Melaka State",
+    "country": "Malaysia",
+    "description": "Explore crimson Dutch Stadthuys colonial square, climb St. Paul's Hill church ruins, and savor Nyonya cuisine along vibrant Jonker Street.",
+    "shortDescription": "Dutch crimson square, Peranakan heritage shophouses, and Jonker Walk night market.",
+    "fullDescription": "Discover five centuries of colonial maritime history in the UNESCO city of Melaka. Admire the terracotta-red Stadthuys in Dutch Square, walk among weathered Portuguese tombstones atop St. Paul's Hill, admire ornate Peranakan Baba-Nyonya shophouse mansions, and cruise down the Melaka River beneath colorful street murals.",
+    "price": 460,
+    "originalPrice": 580,
+    "discountedPrice": 419,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.7,
+    "reviews": 63,
+    "reviewCount": 63,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "Year-round",
+    "language": "English, Malay",
+    "highlights": [
+      "Dutch Square (The Stadthuys) 17th-century terracotta architecture",
+      "St. Paul's Hill and fortress gate of A Famosa",
+      "Baba & Nyonya Peranakan Heritage Museum guided tour",
+      "Jonker Street night market street food & antique stalls",
+      "Melaka River evening heritage boat cruise"
+    ],
+    "included": [
+      "2 Nights boutique heritage hotel in Melaka historical quarter",
+      "All museum admissions and river cruise ticket",
+      "Authentic multi-course Nyonya Peranakan lunch",
+      "Roundtrip transfers from Kuala Lumpur"
+    ],
+    "excluded": [
+      "Flights to Kuala Lumpur",
+      "Personal shopping",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-12",
+      "2027-01-16"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kuala Lumpur to Melaka & River Cruise",
+        "description": "Transfer from KL to Melaka. Check in and take evening boat cruise past illuminated historic bridges."
+      },
+      {
+        "day": 2,
+        "title": "Colonial Trail & Jonker Street",
+        "description": "Visit Dutch Square, A Famosa, St. Paul's Church, and Baba Nyonya Museum. Evening exploring Jonker Street night market."
+      },
+      {
+        "day": 3,
+        "title": "Cheng Hoon Teng Temple & Return",
+        "description": "Tour Malaysia's oldest traditional Chinese temple before return drive to Kuala Lumpur."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Suresh Pillai",
+        "rating": 5,
+        "text": "Fascinating blend of Portuguese, Dutch, British and Chinese culture. Delicious food!",
+        "date": "2026-03-10"
+      },
+      {
+        "author": "Emily Rose",
+        "rating": 4,
+        "text": "The river cruise and Nyonya laksa were highlights.",
+        "date": "2026-04-05"
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "tourNumericId": 230,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Ubud Monkey Forest, Tirta Empul Water Temple & Rice Terraces",
+    "title": "Ubud Monkey Forest, Tirta Empul Water Temple & Rice Terraces",
+    "slug": "ubud-monkey-forest-tirta-empul-bali",
+    "category": "Cultural",
+    "destination": "Ubud, Bali, Indonesia",
+    "location": "Gianyar Regency, Bali Highlands",
+    "country": "Indonesia",
+    "description": "Participate in holy spring water cleansing at Tirta Empul, walk emerald Tegallalang rice terraces, and encounter playful macaques in Ubud.",
+    "shortDescription": "Holy water purification ritual, Tegallalang rice terraces, and Sacred Monkey Forest.",
+    "fullDescription": "Experience Bali's artistic and spiritual soul in Ubud. Partake in the sacred Melukat water purification ritual beneath holy springs at Tirta Empul, walk among green sculptured steps of Tegallalang rice terraces, wander mossy ancient temples guarded by grey macaques in the Sacred Monkey Forest, and watch the hypnotic fire-lit Kecak dance at sunset.",
+    "price": 580,
+    "originalPrice": 720,
+    "discountedPrice": 529,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 172,
+    "reviewCount": 172,
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "April to October",
+    "language": "English, Indonesian",
+    "highlights": [
+      "Sacred holy water cleansing ritual at Tirta Empul Temple",
+      "Tegallalang emerald rice terraces walk and giant jungle swing",
+      "Sacred Monkey Forest sanctuary under ancient banyan trees",
+      "Traditional Kecak fire dance performance at Uluwatu or Ubud",
+      "Balinese herbal wellness massage session in river valley"
+    ],
+    "included": [
+      "3 Nights luxury jungle resort in Ubud valley with infinity pool",
+      "Temple entry passes and ceremonial sarong rental",
+      "Balinese cultural guide and private AC transport",
+      "Daily gourmet organic breakfasts and 1 traditional Balinese dinner"
+    ],
+    "excluded": [
+      "Flights to Bali",
+      "Giant swing photo tickets",
+      "Personal tips"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-15",
+      "2027-01-19"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Ubud & Monkey Forest",
+        "description": "Transfer from Denpasar to Ubud valley resort. Afternoon stroll through the Sacred Monkey Forest sanctuary."
+      },
+      {
+        "day": 2,
+        "title": "Tirta Empul Purification & Tegallalang",
+        "description": "Partake in traditional water blessing at Tirta Empul springs. Hike through Tegallalang rice terraces."
+      },
+      {
+        "day": 3,
+        "title": "Ubud Art Market & Kecak Fire Dance",
+        "description": "Morning visit to Ubud Palace and artisan handicraft markets. Evening dramatic Kecak fire dance."
+      },
+      {
+        "day": 4,
+        "title": "Spa & Departure",
+        "description": "Relaxing traditional Balinese massage before transfer to airport or southern beaches."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Julia Roberts",
+        "rating": 5,
+        "text": "The purification ceremony at Tirta Empul was deeply moving and unforgettable.",
+        "date": "2026-05-15"
+      },
+      {
+        "author": "Ben Affleck",
+        "rating": 5,
+        "text": "Ubud's resort in the jungle was peaceful and majestic.",
+        "date": "2026-06-20"
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "tourNumericId": 231,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Yala National Park Leopard Safari & Bundala Birding",
+    "title": "Yala National Park Leopard Safari & Bundala Birding",
+    "slug": "yala-national-park-leopard-safari",
+    "category": "Wildlife",
+    "destination": "Yala, Sri Lanka",
+    "location": "Southern Province, Indian Ocean Border",
+    "country": "Sri Lanka",
+    "description": "Track elusive Sri Lankan leopards and wild sloth bears across dry scrublands of Yala in an open-top 4x4 safari jeep with veteran trackers.",
+    "shortDescription": "Highest leopard density on earth, sloth bears, and Asian elephants.",
+    "fullDescription": "Venture into Yala National Park, celebrated for boasting the highest leopard density on the planet. Board custom open-sided 4WD safari jeeps at dawn to track Panthera pardus kotiya basking on granite boulders, observe herds of wild Asian elephants bathing in waterholes, and photograph sloth bears.",
+    "price": 890,
+    "originalPrice": 1100,
+    "discountedPrice": 820,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 118,
+    "reviewCount": 118,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "February to June",
+    "language": "English, Sinhala",
+    "highlights": [
+      "Two half-day 4x4 game drives in Yala Block 1 leopard territory",
+      "Tracking leopards, sloth bears, mugger crocodiles, and elephants",
+      "Bundala National Park wetland safari with thousands of migratory birds",
+      "Luxury glamping safari tent stay bordering the wild park",
+      "Bush dinner beneath African-style star-filled skies"
+    ],
+    "included": [
+      "3 Nights luxury safari tent lodge with private plunge pool",
+      "Two private 4x4 safari game drives with expert tracker and park fees",
+      "Bundala National Park lagoon safari",
+      "All meals and transfers from Colombo / Galle"
+    ],
+    "excluded": [
+      "Flights to Sri Lanka",
+      "Binocular rentals (available on-site)",
+      "Alcoholic drinks"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-16",
+      "2027-01-20"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Drive to Yala & Twilight Safari",
+        "description": "Scenic drive from Colombo to Yala. Check into luxury safari camp. Sunset drink by the watering hole."
+      },
+      {
+        "day": 2,
+        "title": "Full Dawn Leopard Game Drive",
+        "description": "5:30 AM game drive tracking leopards resting on rock outcrops. Afternoon at leisure by camp pool."
+      },
+      {
+        "day": 3,
+        "title": "Bundala Birds & Afternoon Safari",
+        "description": "Morning birding in Bundala wetlands. Late afternoon safari targeting sloth bears and herds of elephants."
+      },
+      {
+        "day": 4,
+        "title": "Departure",
+        "description": "Morning breakfast listening to jungle bird calls before transfer back to Colombo or southern beaches."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Nigel Adams",
+        "rating": 5,
+        "text": "Saw two different leopards including one resting on a tree branch. Unreal!",
+        "date": "2026-03-12"
+      },
+      {
+        "author": "Samantha Reed",
+        "rating": 5,
+        "text": "The luxury tent was so romantic and the safari guides were world-class.",
+        "date": "2026-04-04"
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "tourNumericId": 232,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Sepilok Orangutan Rehabilitation & Kinabatangan River Safari",
+    "title": "Sepilok Orangutan Rehabilitation & Kinabatangan River Safari",
+    "slug": "sepilok-orangutan-kinabatangan-river",
+    "category": "Wildlife",
+    "destination": "Borneo, Malaysia",
+    "location": "Sandakan, Sabah",
+    "country": "Malaysia",
+    "description": "Witness endangered orangutans swinging through Sepilok canopies, see Sun Bears, and cruise the Kinabatangan River for pygmy elephants.",
+    "shortDescription": "Orangutan rehabilitation, Bornean pygmy elephants, and river cruises.",
+    "fullDescription": "Venture deep into the pristine rainforests of Malaysian Borneo. Watch orphaned orangutans learn to climb at Sepilok Rehabilitation Centre, observe the world's smallest bears at the Sun Bear Conservation Centre, and take dawn and dusk river safaris along the Kinabatangan River searching for wild pygmy elephants and proboscis monkeys.",
+    "price": 920,
+    "originalPrice": 1150,
+    "discountedPrice": 859,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 89,
+    "reviewCount": 89,
+    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "March to October",
+    "language": "English, Malay",
+    "highlights": [
+      "Sepilok Orangutan Centre daily feeding and outdoor nursery walk",
+      "Bornean Sun Bear Conservation Centre observation",
+      "Three electric-boat river safaris on Kinabatangan River",
+      "Spotting wild Bornean pygmy elephants and pot-bellied proboscis monkeys",
+      "Stay in an authentic eco-lodge surrounded by primary rainforest"
+    ],
+    "included": [
+      "3 Nights jungle eco-lodge along the Kinabatangan River & Sandakan",
+      "All river boat safaris, night walks, and naturalist guides",
+      "Entry tickets to Sepilok and Sun Bear Centre",
+      "All meals and airport transfers from Sandakan"
+    ],
+    "excluded": [
+      "Flights to Sandakan",
+      "Camera conservation fees",
+      "Personal tips"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sandakan to Sepilok Orangutans",
+        "description": "Arrive in Sandakan. Visit Sepilok Orangutan Centre and Bornean Sun Bear Centre. Stay in rainforest lodge."
+      },
+      {
+        "day": 2,
+        "title": "Transfer to Kinabatangan & Afternoon Safari",
+        "description": "Overland drive to Kinabatangan River. Afternoon boat safari spotting proboscis monkeys and hornbills."
+      },
+      {
+        "day": 3,
+        "title": "Dawn & Night River Safaris",
+        "description": "Dawn boat cruise searching for pygmy elephants bathing. Night safari looking for sleeping birds and crocodiles."
+      },
+      {
+        "day": 4,
+        "title": "Gomantong Caves & Departure",
+        "description": "Visit Gomantong Caves known for swiftlet edible bird's nests before transfer to Sandakan Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "David Attenborough Fan",
+        "rating": 5,
+        "text": "Saw a herd of pygmy elephants drinking at the river bank. Truly magical!",
+        "date": "2026-05-20"
+      },
+      {
+        "author": "Karen Millen",
+        "rating": 5,
+        "text": "The orangutans are so human-like. Excellent conservation work.",
+        "date": "2026-06-15"
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "tourNumericId": 233,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Komodo Island National Park Dragon Safari & Pink Beach",
+    "title": "Komodo Island National Park Dragon Safari & Pink Beach",
+    "slug": "komodo-island-dragon-safari-pink-beach",
+    "category": "Wildlife",
+    "destination": "Komodo, Indonesia",
+    "location": "Komodo National Park, Flores Sea",
+    "country": "Indonesia",
+    "description": "Encounter prehistoric 3-meter Komodo Dragons on Rinca and Komodo Islands, snorkel vibrant Pink Beach, and cruise aboard a luxury phinisi schooner.",
+    "shortDescription": "Prehistoric Komodo dragons, Pink Beach sands, and manta ray snorkeling.",
+    "fullDescription": "Set sail across the Flores Sea into the prehistoric realm of Komodo National Park. Accompanied by experienced park rangers, trek alongside the largest living lizards on Earth reaching up to 3 meters in length, relax on the salmon-colored sands of world-famous Pink Beach, and swim with manta rays at Manta Point.",
+    "price": 1180,
+    "originalPrice": 1450,
+    "discountedPrice": 1080,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.9,
+    "reviews": 130,
+    "reviewCount": 130,
+    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "April to November",
+    "language": "English, Indonesian",
+    "highlights": [
+      "Ranger-led walking safari alongside wild Komodo Dragons",
+      "Padar Island iconic triple-bay viewpoint sunrise hike",
+      "Snorkeling off the rare salmon-red sands of Pink Beach",
+      "Swimming with giant manta rays at Manta Point",
+      "Flying fox bat colony sunset exodus on Kalong Island"
+    ],
+    "included": [
+      "2 Nights liveaboard luxury wooden Phinisi schooner + 1 night Labuan Bajo hotel",
+      "All meals, chef on board, and tropical fruits",
+      "National park entrance permits and ranger fees",
+      "Airport transfers in Labuan Bajo"
+    ],
+    "excluded": [
+      "Flights to Labuan Bajo",
+      "Drone permits (if applicable)",
+      "Tips for boat crew"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-10",
+      "2027-04-12",
+      "2027-05-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Labuan Bajo Boarding & Kalong Island",
+        "description": "Board luxury Phinisi boat in Labuan Bajo. Cruise to Kelor Island for snorkeling. Sunset watch thousands of bats fly from Kalong Island."
+      },
+      {
+        "day": 2,
+        "title": "Padar Sunrise & Komodo Dragon Trek",
+        "description": "Hike Padar Island at sunrise. Sail to Komodo Island for guided dragon trekking. Afternoon at Pink Beach."
+      },
+      {
+        "day": 3,
+        "title": "Manta Point & Taka Makassar Sandbar",
+        "description": "Snorkel with manta rays at Manta Point and visit tiny white sand island Taka Makassar. Return to hotel."
+      },
+      {
+        "day": 4,
+        "title": "Batu Cermin Cave & Departure",
+        "description": "Visit Mirror Stone Cave before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Steve Irwin Fan",
+        "rating": 5,
+        "text": "Seeing a 3-meter dragon flick its yellow tongue right in front of us was incredible!",
+        "date": "2026-06-18"
+      },
+      {
+        "author": "Melissa Tan",
+        "rating": 5,
+        "text": "Padar island sunrise was the most beautiful view I have ever seen.",
+        "date": "2026-07-02"
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "tourNumericId": 234,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Chitwan National Park Greater One-Horned Rhino Safari",
+    "title": "Chitwan National Park Greater One-Horned Rhino Safari",
+    "slug": "chitwan-national-park-rhino-safari",
+    "category": "Wildlife",
+    "destination": "Chitwan, Nepal",
+    "location": "Terai Lowlands, Rapti River",
+    "country": "Nepal",
+    "description": "Explore subtropical jungles in search of armored Greater One-Horned Rhinos, Royal Bengal tigers, and gharial crocodiles on jeep and canoe safaris.",
+    "shortDescription": "One-horned rhinos, Bengal tigers, and dugout canoe river safaris.",
+    "fullDescription": "Venture to the subtropical lowlands of Nepal in UNESCO Chitwan National Park. Board open safari jeeps to spot prehistoric one-horned rhinoceroses grazing in elephant grass, glide silently down the Rapti River in hand-carved wooden canoes past basking mugger and gharial crocodiles, and learn Tharu tribal jungle traditions.",
+    "price": 590,
+    "originalPrice": 750,
+    "discountedPrice": 539,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 78,
+    "reviewCount": 78,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to March",
+    "language": "English, Nepali",
+    "highlights": [
+      "Close-up encounters with wild Greater One-Horned Rhinoceroses",
+      "Hand-carved dugout canoe safari on the Rapti River",
+      "Guided deep-jungle jeep safari and walking tracking excursion",
+      "Rare Gharial crocodile conservation breeding center visit",
+      "Tharu indigenous cultural stick dance performance"
+    ],
+    "included": [
+      "3 Nights riverside jungle lodge with garden views",
+      "All national park permits, jeep safaris, and canoe excursions",
+      "All meals during stay (breakfast, lunch, and dinner)",
+      "Transfers from Kathmandu or Pokhara"
+    ],
+    "excluded": [
+      "Flights to Nepal",
+      "Bar tabs and drinks",
+      "Personal gratuities"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-12",
+      "2027-01-18"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kathmandu to Chitwan & Sunset River Walk",
+        "description": "Scenic drive down from Himalayas to subtropical Chitwan. Check in to jungle lodge. Sunset drink watching rhinos on opposite riverbank."
+      },
+      {
+        "day": 2,
+        "title": "Dugout Canoe Safari & Jungle Walk",
+        "description": "Glide past gharial crocodiles in morning fog. Guided jungle walk tracking birdlife and rhinos."
+      },
+      {
+        "day": 3,
+        "title": "Full 4x4 Jeep Safari Deep in Park",
+        "description": "Half-day open jeep safari through sal forests in search of Royal Bengal tigers and leopards."
+      },
+      {
+        "day": 4,
+        "title": "Elephant Breeding Center & Return",
+        "description": "Morning visit to breeding center before overland transfer back to Kathmandu or Pokhara."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Prakash Joshi",
+        "rating": 5,
+        "text": "Saw four rhinos up close! The canoe ride in morning mist was magical.",
+        "date": "2026-02-19"
+      },
+      {
+        "author": "Fiona Gallagher",
+        "rating": 4,
+        "text": "Very relaxing and authentic jungle experience. Food was delicious.",
+        "date": "2026-03-08"
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "tourNumericId": 235,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Jigokudani Snow Monkey Park & Nagano Hot Springs",
+    "title": "Jigokudani Snow Monkey Park & Nagano Hot Springs",
+    "slug": "jigokudani-snow-monkey-park-nagano",
+    "category": "Wildlife",
+    "destination": "Nagano, Japan",
+    "location": "Yamanouchi, Japanese Alps",
+    "country": "Japan",
+    "description": "Witness Japanese Macaques (Snow Monkeys) soaking contentedly in steaming outdoor thermal baths amidst deep winter snow in Nagano.",
+    "shortDescription": "Wild snow monkeys in geothermal onsens, alpine trails, and ryokans.",
+    "fullDescription": "Venture into the snow-blanketed mountains of Nagano to Jigokudani Monkey Park. Watch wild Japanese Macaques descend from steep forested cliffs to bathe and groom peacefully in natural hot spring pools, stay in an authentic historic onsen ryokan, and visit the 1,400-year-old Zenko-ji temple.",
+    "price": 780,
+    "originalPrice": 950,
+    "discountedPrice": 720,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 95,
+    "reviewCount": 95,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "December to March",
+    "language": "English, Japanese",
+    "highlights": [
+      "Observing wild Snow Monkeys bathing in natural hot springs",
+      "Scenic winter forest hike through Yokobue pine woods",
+      "Traditional Japanese Ryokan stay with private outdoor onsen",
+      "Multi-course Kaiseki dinner with local Shinshu beef and sake",
+      "Historic Zenko-ji 7th-century Buddhist temple tour"
+    ],
+    "included": [
+      "2 Nights traditional Japanese Onsen Ryokan in Shibu Onsen",
+      "Monkey park admission ticket and guided walking excursion",
+      "Two traditional multi-course Kaiseki dinners and breakfasts",
+      "Shinkansen bullet train ticket from Tokyo to Nagano"
+    ],
+    "excluded": [
+      "Flights to Tokyo",
+      "Snow boot rentals (if needed)",
+      "Personal drinks"
+    ],
+    "availableDates": [
+      "2026-12-10",
+      "2027-01-14",
+      "2027-02-12"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Tokyo to Nagano & Historic Shibu Onsen",
+        "description": "Bullet train to Nagano. Visit Zenko-ji temple. Check into 200-year-old ryokan in Shibu Onsen and wear yukata robes."
+      },
+      {
+        "day": 2,
+        "title": "Jigokudani Snow Monkey Park",
+        "description": "Walk through pine forest to the geothermal springs. Watch troops of macaques soaking in hot water pools."
+      },
+      {
+        "day": 3,
+        "title": "Sake Tasting & Return to Tokyo",
+        "description": "Visit local sake brewery in Obuse town before Shinkansen ride back to Tokyo."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Nicholas Cage Fan",
+        "rating": 5,
+        "text": "The monkeys with snow on their heads in the steamy baths look hilarious and adorable!",
+        "date": "2026-01-25"
+      },
+      {
+        "author": "Emily Watson",
+        "rating": 5,
+        "text": "The ryokan and thermal baths were the highlight of my trip to Japan.",
+        "date": "2026-02-11"
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "tourNumericId": 236,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Khao Yai National Park Wild Elephants & Gibbons Jungle Trail",
+    "title": "Khao Yai National Park Wild Elephants & Gibbons Jungle Trail",
+    "slug": "khao-yai-wild-elephant-safari",
+    "category": "Wildlife",
+    "destination": "Khao Yai, Thailand",
+    "location": "Dong Phayayen-Khao Yai Forest",
+    "country": "Thailand",
+    "description": "Track wild Asian elephants, white-handed gibbons, and giant hornbills through Thailand's premier UNESCO tropical national park.",
+    "shortDescription": "Wild Asian elephants, white-handed gibbons, and Haew Suwat waterfall.",
+    "fullDescription": "Venture just three hours north of Bangkok into the lush mountain wilderness of Khao Yai. Trek accompanied by park rangers listening for the haunting songs of white-handed gibbons, spot Great Hornbills in the canopy, swim at Haew Suwat waterfall (featured in 'The Beach'), and embark on evening night safaris to watch wild Asian elephants gather at salt licks.",
+    "price": 540,
+    "originalPrice": 680,
+    "discountedPrice": 489,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 63,
+    "reviewCount": 63,
+    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "November to April",
+    "language": "English, Thai",
+    "highlights": [
+      "Night safari spotlighting wild Asian elephants and civet cats",
+      "Morning jungle trail tracking white-handed gibbons and macaques",
+      "Spectacular Haew Narok and Haew Suwat waterfalls",
+      "Bat cave exodus viewing millions of wrinkle-lipped bats at dusk",
+      "Eco-resort stay surrounded by nature"
+    ],
+    "included": [
+      "2 Nights boutique eco-resort near national park gates",
+      "All national park fees, ranger guides, and leech socks",
+      "Night safari spotlighting truck drive",
+      "Roundtrip transfers from Bangkok"
+    ],
+    "excluded": [
+      "Flights to Bangkok",
+      "Personal trekking gear",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bangkok to Khao Yai & Bat Cave Exodus",
+        "description": "Drive from Bangkok. Check in to eco-resort. Evening visit to limestone cave to watch millions of bats fly out in ribbons."
+      },
+      {
+        "day": 2,
+        "title": "Jungle Trek & Night Elephant Safari",
+        "description": "Full-day trek past waterfalls listening for gibbon calls. Night truck drive spotlighting elephants at mineral salt licks."
+      },
+      {
+        "day": 3,
+        "title": "Haew Narok Waterfall & Return",
+        "description": "Hike to the mighty three-tiered Haew Narok waterfall before return transfer to Bangkok."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Danielle Cooper",
+        "rating": 5,
+        "text": "We saw a family of wild elephants on the night safari! Incredible experience.",
+        "date": "2026-03-14"
+      },
+      {
+        "author": "Markus Bauer",
+        "rating": 4,
+        "text": "Very close to Bangkok but feels like deep untouched jungle.",
+        "date": "2026-04-02"
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "tourNumericId": 237,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Taman Negara Ancient Rainforest Night Jungle Walk",
+    "title": "Taman Negara Ancient Rainforest Night Jungle Walk",
+    "slug": "taman-negara-ancient-rainforest-safari",
+    "category": "Wildlife",
+    "destination": "Pahang, Malaysia",
+    "location": "Taman Negara National Park",
+    "country": "Malaysia",
+    "description": "Explore 130-million-year-old virgin rainforest, walk the world's longest canopy walkway, and take night safaris to spot glowing insects and tapirs.",
+    "shortDescription": "130-million-year-old rainforest, 530m canopy walkway, and night walks.",
+    "fullDescription": "Step into one of the oldest prehistoric rainforests on Earth, dating back over 130 million years. Walk 40 meters above ground on a 530-meter canopy walkway, cruise down the Tembeling River by longboat, learn blowpipe hunting skills from indigenous Batek tribesmen, and venture into darkness on night walks to spot tapirs, flying lemurs, and bioluminescent fungi.",
+    "price": 560,
+    "originalPrice": 700,
+    "discountedPrice": 499,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 59,
+    "reviewCount": 59,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "March to October",
+    "language": "English, Malay",
+    "highlights": [
+      "World's longest canopy walkway (530m) suspended 40m high",
+      "Night jungle walk spotting glowing fungi, spiders, and tapirs",
+      "Wooden longboat cruise through river rapids to Lata Berkoh pool",
+      "Indigenous Orang Asli (Batek tribe) cultural encounter",
+      "Charming wooden chalet stay inside the national park boundary"
+    ],
+    "included": [
+      "2 Nights Mutiara Taman Negara resort chalets",
+      "All park permits, canopy walkway fees, and river boat charters",
+      "Licensed nature guide throughout all jungle activities",
+      "Transfers from Kuala Lumpur"
+    ],
+    "excluded": [
+      "Flights to KL",
+      "Camera permits",
+      "Personal drinks"
+    ],
+    "availableDates": [
+      "2026-11-24",
+      "2026-12-21",
+      "2027-01-25"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kuala Lumpur to Kuala Tembeling Boat Ride",
+        "description": "Drive from KL and board wooden riverboat to Taman Negara resort. Night jungle walk with flashlights."
+      },
+      {
+        "day": 2,
+        "title": "Canopy Walkway & Lata Berkoh Rapids",
+        "description": "Walk the suspension canopy bridge. Afternoon boat ride to natural river swimming pools at Lata Berkoh."
+      },
+      {
+        "day": 3,
+        "title": "Orang Asli Village & Return",
+        "description": "Visit native Batek settlement to learn blowpipe and firemaking skills before transfer to KL."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Timothy Bell",
+        "rating": 5,
+        "text": "Walking across the canopy bridge over massive trees was exhilarating.",
+        "date": "2026-04-18"
+      },
+      {
+        "author": "Siti Nurhaliza Fan",
+        "rating": 4,
+        "text": "Very knowledgeable nature guide. True virgin jungle.",
+        "date": "2026-05-09"
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "tourNumericId": 238,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Raja Ampat Manta Ray Sanctuary & Coral Atoll Snorkel",
+    "title": "Raja Ampat Manta Ray Sanctuary & Coral Atoll Snorkel",
+    "slug": "raja-ampat-manta-ray-sanctuary",
+    "category": "Wildlife",
+    "destination": "Raja Ampat, Indonesia",
+    "location": "West Papua, Coral Triangle",
+    "country": "Indonesia",
+    "description": "Dive and snorkel the epicenter of global marine biodiversity with 1,500 species of fish, reef sharks, manta ray cleaning stations, and karst islets.",
+    "shortDescription": "World's richest coral biodiversity, manta ray cleaning stations, and karst islands.",
+    "fullDescription": "Venture to the remote crown jewel of the Coral Triangle in West Papua. Snorkel over coral reefs containing over 75% of the world's coral species, glide alongside majestic oceanic manta rays at Manta Ridge, climb the limestone peaks of Pianemo for the famous emerald karst lagoon panorama, and spot Red Birds of Paradise at dawn.",
+    "price": 1950,
+    "originalPrice": 2450,
+    "discountedPrice": 1799,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Moderate",
+    "rating": 5,
+    "reviews": 47,
+    "reviewCount": 47,
+    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "October to April",
+    "language": "English, Indonesian",
+    "highlights": [
+      "Snorkeling world's richest coral reefs at Cape Kri and Arborek",
+      "Pianemo iconic limestone karst islets panoramic viewpoint",
+      "Swimming with giant oceanic manta rays at cleaning stations",
+      "Dawn trek to witness courtship display of Red Bird of Paradise",
+      "Overwater eco-bungalow stay surrounded by pristine lagoons"
+    ],
+    "included": [
+      "5 Nights overwater eco-resort in Raja Ampat",
+      "Speedboat excursions throughout Damper Strait & Pianemo",
+      "Full marine biology snorkel guide and equipment",
+      "All meals and speedboat transfers from Sorong Harbor"
+    ],
+    "excluded": [
+      "Flights to Sorong (SOQ)",
+      "Raja Ampat Marine Park PIN permit",
+      "Alcohol"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-10",
+      "2027-01-12",
+      "2027-02-15"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Sorong to Raja Ampat Resort",
+        "description": "Fast boat from Sorong across Dampier Strait. Check in to overwater bungalow over coral reef."
+      },
+      {
+        "day": 2,
+        "title": "Cape Kri & Arborek Jetty Snorkel",
+        "description": "Snorkel Cape Kri which holds the world record for fish species in a single dive. Visit Arborek village."
+      },
+      {
+        "day": 3,
+        "title": "Pianemo Karst Viewpoint & Star Lagoon",
+        "description": "Climb the wooden stairs to view Pianemo's cluster of emerald karst islands. Snorkel hidden blue lagoons."
+      },
+      {
+        "day": 4,
+        "title": "Manta Sandy & Coral Gardens",
+        "description": "Visit Manta Sandy cleaning station to watch giant rays hover over coral heads. Sunset at Friwen Beach."
+      },
+      {
+        "day": 5,
+        "title": "Bird of Paradise Dawn Trek",
+        "description": "Early morning hike into the jungle canopy to watch the Red Bird of Paradise courtship dance."
+      },
+      {
+        "day": 6,
+        "title": "Return to Sorong",
+        "description": "Morning swim with baby blacktip reef sharks, speedboat transfer back to Sorong."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jacques Cousteau Admirer",
+        "rating": 5,
+        "text": "The underwater world here makes everywhere else look like a swimming pool.",
+        "date": "2026-03-01"
+      },
+      {
+        "author": "Sarah Connor",
+        "rating": 5,
+        "text": "Pianemo viewpoint and the manta rays made this the trip of a lifetime.",
+        "date": "2026-04-10"
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "tourNumericId": 239,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Bako National Park Proboscis Monkeys & Mangrove Wilderness",
+    "title": "Bako National Park Proboscis Monkeys & Mangrove Wilderness",
+    "slug": "bako-national-park-proboscis-monkey",
+    "category": "Wildlife",
+    "destination": "Sarawak, Borneo, Malaysia",
+    "location": "Kuching Peninsula, South China Sea",
+    "country": "Malaysia",
+    "description": "Hike coastal sea-stack cliffs to spot peculiar big-nosed Proboscis monkeys, bearded pigs, pitcher plants, and flying lemurs in Sarawak.",
+    "shortDescription": "Endemic proboscis monkeys, carnivorous pitcher plants, and sea stacks.",
+    "fullDescription": "Explore Sarawak's oldest national park, home to almost every ecosystem found in Borneo. Travel by wooden boat to rugged sea cliffs, hike jungle trails to spot rare endemic proboscis monkeys munching mangrove leaves, observe wild bearded pigs foraging on beaches, and discover insect-eating pitcher plants.",
+    "price": 490,
+    "originalPrice": 620,
+    "discountedPrice": 440,
+    "currency": "$",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 62,
+    "reviewCount": 62,
+    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "March to October",
+    "language": "English, Malay",
+    "highlights": [
+      "Close encounters with wild Proboscis Monkeys in mangrove canopy",
+      "Boat ride around dramatic Sea Stack stone monoliths",
+      "Carnivorous pitcher plant nature trail",
+      "Bornean bearded pigs roaming along Telok Pandan beach",
+      "Night walk spotting green pit vipers and flying lemurs"
+    ],
+    "included": [
+      "1 Night park lodge inside Bako & 1 night riverside hotel in Kuching",
+      "Boat charter to and from national park",
+      "Park entrance permits and certified Sarawak nature guide",
+      "Transfers from Kuching International Airport"
+    ],
+    "excluded": [
+      "Flights to Kuching",
+      "Personal trekking gear",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-26",
+      "2026-12-23",
+      "2027-01-28"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kuching to Bako National Park",
+        "description": "Boat ride to Bako. Afternoon trek along Telok Paku trail observing wild proboscis monkeys. Night walk."
+      },
+      {
+        "day": 2,
+        "title": "Sea Stacks & Lintang Plateau",
+        "description": "Hike through scrub forest to view pitcher plants. Boat trip past the famous Sea Stack. Return to Kuching."
+      },
+      {
+        "day": 3,
+        "title": "Kuching Waterfront & Departure",
+        "description": "Stroll along historic Kuching waterfront before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Liam O'Connor",
+        "rating": 5,
+        "text": "We saw proboscis monkeys within 20 minutes of arriving! Amazing place.",
+        "date": "2026-04-22"
+      },
+      {
+        "author": "Tina Chen",
+        "rating": 4,
+        "text": "Beautiful coastal scenery and wild animals right outside the cabins.",
+        "date": "2026-05-18"
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "tourNumericId": 240,
+    "website": "website2",
+    "websiteId": "website2",
+    "name": "Minneriya Elephant Gathering & Wilpattu Wildlife Safari",
+    "title": "Minneriya Elephant Gathering & Wilpattu Wildlife Safari",
+    "slug": "minneriya-elephant-gathering-safari",
+    "category": "Wildlife",
+    "destination": "Habarana, Sri Lanka",
+    "location": "Cultural Triangle & North Central Province",
+    "country": "Sri Lanka",
+    "description": "Witness 'The Gathering' - up to 300 wild Asian elephants congregating at Minneriya reservoir, and track leopards in Wilpattu's lakes.",
+    "shortDescription": "300 wild elephants at Minneriya tank, Wilpattu leopard tracking, and lake safaris.",
+    "fullDescription": "Experience one of the greatest wildlife spectacles in Asia. Witness hundreds of wild Asian elephants gather on the lush grassy banks of the ancient Minneriya reservoir, tracking matriarchs and newborn calves. Then journey to Wilpattu National Park to track leopards and sloth bears around natural rainwater lakes.",
+    "price": 740,
+    "originalPrice": 920,
+    "discountedPrice": 689,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 79,
+    "reviewCount": 79,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "June to October",
+    "language": "English, Sinhala",
+    "highlights": [
+      "The Great Elephant Gathering at Minneriya National Park reservoir",
+      "Full-day 4WD leopard and bear safari in Wilpattu National Park",
+      "Over 300 wild elephants grazing, bathing, and socializing",
+      "Luxury eco-resort with treehouses in Habarana",
+      "Scenic Sigiriya Rock view from hotel infinity pool"
+    ],
+    "included": [
+      "3 Nights luxury eco-resort in Habarana / Sigiriya",
+      "Minneriya 4x4 open safari jeep and Wilpattu full-day safari with picnic",
+      "All park entry fees, wildlife trackers, and government taxes",
+      "Roundtrip transfers from Colombo Airport"
+    ],
+    "excluded": [
+      "Flights to Colombo",
+      "Sigiriya climb ticket (optional add-on)",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Colombo to Habarana",
+        "description": "Scenic drive into the dry zone. Check in to jungle eco-resort. Evening walk by the lake."
+      },
+      {
+        "day": 2,
+        "title": "The Great Elephant Gathering at Minneriya",
+        "description": "Afternoon 4WD safari into Minneriya to witness hundreds of elephants gathering on the lake plains."
+      },
+      {
+        "day": 3,
+        "title": "Wilpattu National Park Safari",
+        "description": "Full-day jeep safari through Wilpattu tracking leopards around the natural 'willus' lakes."
+      },
+      {
+        "day": 4,
+        "title": "Return to Colombo",
+        "description": "Breakfast with view of Sigiriya fortress before transfer back to Colombo."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jonathan Ross",
+        "rating": 5,
+        "text": "Counting over 150 elephants in a single view was unbelievable. Best safari in Asia.",
+        "date": "2026-06-25"
+      },
+      {
+        "author": "Elena Rostova",
+        "rating": 5,
+        "text": "Saw a leopard drinking at the waterhole in Wilpattu. Highly recommend!",
+        "date": "2026-07-14"
+      }
+    ]
+  }
+]

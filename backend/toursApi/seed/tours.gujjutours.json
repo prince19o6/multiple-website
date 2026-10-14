@@ -1,0 +1,3607 @@
+[
+  {
+    "id": 101,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Diu Island Portuguese Heritage & Nagoa Beach",
+    "title": "Diu Island Portuguese Heritage & Nagoa Beach",
+    "slug": "diu-island-beach-getaway",
+    "category": "Beach",
+    "destination": "Diu, India",
+    "location": "Diu Island, Arabian Sea Coast",
+    "country": "India",
+    "description": "Bask along horse-shoe shaped Nagoa Beach, tour the imposing 16th-century sea-facing Portuguese Fortress, and savor relaxed coastal charm.",
+    "shortDescription": "Portuguese sea-forts, pristine Hoka palms, and golden sands on Diu Island.",
+    "fullDescription": "Escape to Diu, a tranquil coastal enclave steeped in Portuguese history. Walk the battlements of Diu Fort commanding sweeping Arabian Sea views, relax under rare Hoka palm trees on Nagoa Beach, explore the baroque St. Paul Church, and enjoy evening strolls along Ghoghla Beach.",
+    "price": 14999,
+    "originalPrice": 18500,
+    "discountedPrice": 14999,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 64,
+    "reviewCount": 64,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-15 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Horse-shoe shaped Nagoa Beach with water sports",
+      "16th-century sea-facing Portuguese Diu Fortress",
+      "St. Paul Church baroque architecture",
+      "Sunset promenade along Ghoghla Beach",
+      "Naida Caves natural rock formations"
+    ],
+    "included": [
+      "3 Nights deluxe beachfront resort stay",
+      "Daily breakfast and Gujarati/Continental dinners",
+      "AC private transportation for all excursions",
+      "Sightseeing guide and monument entry passes"
+    ],
+    "excluded": [
+      "Jet ski and parasailing equipment rentals",
+      "Personal laundry and telephone charges",
+      "Airfare or train fares to Veraval/Diu"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-01-14",
+      "2027-02-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Diu & Nagoa Beach Sunset",
+        "description": "Arrive at Diu airport or railway station. Check into your seaside resort. Afternoon at leisure on Nagoa Beach beneath branching Hoka trees, followed by sunset cocktails."
+      },
+      {
+        "day": 2,
+        "title": "Diu Fort, St. Paul Church & Naida Caves",
+        "description": "Morning guided walk across Diu Fort with sea cannons. Tour the ornate 1601 St. Paul Church, then photograph the sunlight shafts piercing subterranean Naida Caves."
+      },
+      {
+        "day": 3,
+        "title": "Water Sports at Ghoghla Beach & INS Khukri Memorial",
+        "description": "Indulge in speed-boating and banana rides at Blue Flag Ghoghla Beach. Evening visit to the cliff-top INS Khukri Memorial honoring naval heroes."
+      },
+      {
+        "day": 4,
+        "title": "Chakratirth Beach & Departure",
+        "description": "Visit serene Chakratirth Beach and local souvenir markets for shell crafts before transferring for your departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Chirag Patel",
+        "rating": 5,
+        "text": "Superb beach trip! The Diu Fort views were breathtaking and resort arrangements were flawless.",
+        "date": "2026-08-20"
+      },
+      {
+        "author": "Meera Shah",
+        "rating": 5,
+        "text": "Authentic Gujarati meals and very comfortable stay right next to Nagoa beach.",
+        "date": "2026-09-02"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Mandvi Windmill & Vijay Vilas Palace Coastal Escape",
+    "title": "Mandvi Windmill & Vijay Vilas Palace Coastal Escape",
+    "slug": "mandvi-beach-palace-retreat",
+    "category": "Beach",
+    "destination": "Mandvi, Kutch, India",
+    "location": "Gulf of Kutch, Gujarat",
+    "country": "India",
+    "description": "Experience regal coastal grandeur at Vijay Vilas Palace private beach and witness 400-year-old wooden shipbuilding on the Rukmavati riverbank.",
+    "shortDescription": "Regal private beaches, royal Rajput palaces, and camel rides by the Kutch seashore.",
+    "fullDescription": "Mandvi is the crowning jewel of Kutch’s coastline. Stay close to the majestic Vijay Vilas Palace where Bollywood classics were filmed, take evening camel rides across wind-sculpted sand dunes, and observe master carpenters handcrafting ocean dhows using centuries-old maritime techniques.",
+    "price": 11500,
+    "originalPrice": 13800,
+    "discountedPrice": 11500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.7,
+    "reviews": 49,
+    "reviewCount": 49,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1471922694855-fa59ac7c7bc8?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "November to February",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Private beach sanctuary at Vijay Vilas Palace",
+      "Traditional wooden dhow shipbuilding yard tour",
+      "Camel and ATV safari across Mandvi sand dunes",
+      "Sunset views from Asia’s first coastal Wind Farm Beach",
+      "Kutch Bandhani and Rogan art village visits"
+    ],
+    "included": [
+      "2 Nights luxury tented / resort accommodation in Mandvi",
+      "Daily breakfast and traditional Kutchi vegetarian dinners",
+      "All local transfers in AC Innova / tempo",
+      "Entry permit for Vijay Vilas Palace grounds"
+    ],
+    "excluded": [
+      "Camel and water sport activity fees",
+      "Personal shopping and tips"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhuj to Mandvi & Wind Farm Beach",
+        "description": "Pick up from Bhuj and scenic drive to Mandvi. Check-in and relax. Evening at Wind Farm Beach with spinning wind turbines against golden twilight."
+      },
+      {
+        "day": 2,
+        "title": "Vijay Vilas Palace & Heritage Shipyard",
+        "description": "Morning exploration of Vijay Vilas Palace dome terraces and private sands. Post-lunch visit to the Rukmavati river dhow boatbuilding docks."
+      },
+      {
+        "day": 3,
+        "title": "Rukmavati Bridge, Local Bazaars & Departure",
+        "description": "Visit local Bandhani tie-dye textile workshops, taste famous Mandvi Dabeli, and return transfer to Bhuj."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jignesh Vora",
+        "rating": 5,
+        "text": "Mandvi is a hidden gem. Vijay Vilas palace private beach was serene and clean.",
+        "date": "2026-07-14"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Shivrajpur Blue Flag Beach & Dwarka Coastal Pilgrimage",
+    "title": "Shivrajpur Blue Flag Beach & Dwarka Coastal Pilgrimage",
+    "slug": "shivrajpur-blue-flag-beach-dwarka",
+    "category": "Beach",
+    "destination": "Dwarka & Shivrajpur, Gujarat",
+    "location": "Saurashtra Coast, Gujarat",
+    "country": "India",
+    "description": "Combine deep spiritual serenity at the holy Dwarkadhish Temple with pristine azure water diving and dolphin watching at Blue Flag-certified Shivrajpur Beach.",
+    "shortDescription": "Certified Blue Flag azure waters, scuba reef dives, and coastal Dwarkadhish blessings.",
+    "fullDescription": "Shivrajpur Beach is one of India’s most pristine certified Blue Flag beaches with translucent turquoise water and white sands. After taking early darshan at the 2,500-year-old Dwarkadhish Temple, head to Shivrajpur for scuba diving, sea-glass hunting, and dolphin watching boat rides off the Arabian shore.",
+    "price": 16200,
+    "originalPrice": 19000,
+    "discountedPrice": 16200,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 82,
+    "reviewCount": 82,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1520483601560-389dff434fdf?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to April",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "International Blue Flag-certified clean swimming beach",
+      "Shallow coral reef scuba diving & snorkeling experience",
+      "Early morning VIP darshan at Dwarkadhish Temple",
+      "Sunset boat cruise to Bet Dwarka island",
+      "Coastal lighthouse panoramic viewpoint"
+    ],
+    "included": [
+      "3 Nights accommodation in Dwarka coastal hotel",
+      "Pure vegetarian buffet breakfast and dinner",
+      "AC private vehicle for temple and beach transfers",
+      "Certified dive master introduction & snorkel equipment"
+    ],
+    "excluded": [
+      "Temple puja special offerings",
+      "Scuba deep-water photo packages"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-05",
+      "2027-01-10",
+      "2027-02-14"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Dwarka & Gomti Ghat Aarti",
+        "description": "Arrive in holy Dwarka, check into hotel. Visit Gomti Ghat river confluence and attend evening grand aarti at Dwarkadhish Temple."
+      },
+      {
+        "day": 2,
+        "title": "Shivrajpur Beach Water Sports & Snorkeling",
+        "description": "Drive 12 km to Blue Flag Shivrajpur Beach. Enjoy shallow coral snorkeling, swimming in crystal water, and seaside cycling."
+      },
+      {
+        "day": 3,
+        "title": "Bet Dwarka, Nageshwar Jyotirlinga & Sunset Point",
+        "description": "Ferry across to Bet Dwarka, pay homage at Nageshwar Jyotirlinga and Rukmini Devi Temple. Evening sunset by the lighthouse cliff."
+      },
+      {
+        "day": 4,
+        "title": "Morning Darshan & Departure",
+        "description": "Morning prayers and market exploration for souvenir idols before your scheduled departure from Dwarka or Jamnagar."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kavita Dave",
+        "rating": 5,
+        "text": "Shivrajpur beach was as clear as the Maldives! Combined with temple darshan, this was ideal.",
+        "date": "2026-08-11"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Daman Seaside Relaxation & Fort St. Jerome",
+    "title": "Daman Seaside Relaxation & Fort St. Jerome",
+    "slug": "daman-seaside-fort-relaxation",
+    "category": "Beach",
+    "destination": "Daman, India",
+    "location": "Gulf of Khambhat, Daman",
+    "country": "India",
+    "description": "Unwind along Devka and Jampore black sand beaches, explore colonial ramparts at Moti Daman, and taste coastal seafood delicacies.",
+    "shortDescription": "Colonial fortresses, black sand beaches, and leisurely coastal promenades in Daman.",
+    "fullDescription": "Daman offers a quick seaside escape from southern Gujarat. Discover towering stone walls at Fort St. Jerome, walk beneath the leafy canopy of Moti Daman lighthouse, stroll the long tides of Jampore Beach, and recharge with refreshing coastal breeze.",
+    "price": 9999,
+    "originalPrice": 12000,
+    "discountedPrice": 9999,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.5,
+    "reviews": 38,
+    "reviewCount": 38,
+    "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to May",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Jampore Beach with gentle tides and parasailing",
+      "16th-century Moti Daman and Nani Daman twin forts",
+      "Church of Bom Jesus ornate gilded carvings",
+      "Devka Beach promenade illuminated evening fountains",
+      "Daman Ganga riverfront walkways"
+    ],
+    "included": [
+      "2 Nights sea-view hotel stay in Daman",
+      "Daily buffet breakfast and dinners",
+      "Private AC car from Vapi station round trip",
+      "Driver allowances and all toll taxes"
+    ],
+    "excluded": [
+      "Beach buggy rides and parasailing",
+      "Beverages and personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-06",
+      "2026-12-04",
+      "2027-01-08"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Daman & Devka Beach Leisure",
+        "description": "Pick up from Vapi railway station, drive to Daman. Check in and unwind. Spend your evening strolling the Devka Beach seaside park."
+      },
+      {
+        "day": 2,
+        "title": "Moti Daman Fort, Cathedral & Jampore Beach",
+        "description": "Tour Portuguese forts, colonial chapels, and lighthouse. Afternoon at Jampore Beach for parasailing and horse cart rides on the hard sands."
+      },
+      {
+        "day": 3,
+        "title": "Nani Daman & Return Transfer",
+        "description": "Visit Nani Daman fish market and river jetty before departure transfer to Vapi."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rahul Joshi",
+        "rating": 4,
+        "text": "Relaxing weekend trip close to Surat. Jampore beach was peaceful and clean.",
+        "date": "2026-06-18"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Gopnath Royal Beach & Alang Bay Coastal Voyage",
+    "title": "Gopnath Royal Beach & Alang Bay Coastal Voyage",
+    "slug": "gopnath-beach-bhavnagar-coast",
+    "category": "Beach",
+    "destination": "Bhavnagar Coast, Gujarat",
+    "location": "Gulf of Khambhat, Bhavnagar District",
+    "country": "India",
+    "description": "Discover the former summer retreat of the Maharaja of Bhavnagar, ancient sea cliff temples, limestone caverns, and maritime history.",
+    "shortDescription": "Regal seaside palace of Bhavnagar Maharajas and peaceful untouched coastal shores.",
+    "fullDescription": "Gopnath Beach offers untouched coastal serenity where the Bhavnagar royals once spent their summers. Walk through the summer palace, observe unique limestone cliffs, visit the ancient Gopnath Mahadev shrine on the water edge, and view Alang maritime bay.",
+    "price": 10800,
+    "originalPrice": 12900,
+    "discountedPrice": 10800,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.6,
+    "reviews": 29,
+    "reviewCount": 29,
+    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-10 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Historic Gopnath Palace heritage architecture",
+      "Gopnath Mahadev seaside temple with panoramic breakers",
+      "Quiet limestone sea-caves and secluded bays",
+      "Scenic drive along Bhavnagar coastal marshlands",
+      "Authentic Kathiyawadi feast by the sea"
+    ],
+    "included": [
+      "2 Nights heritage royal palace stay",
+      "All meals: Kathiyawadi breakfast, lunch, and dinner",
+      "AC private vehicle with experienced local driver",
+      "Guided cliffside walks and sanctuary entry"
+    ],
+    "excluded": [
+      "Special temple ritual fees",
+      "Personal laundry and gratuities"
+    ],
+    "availableDates": [
+      "2026-11-27",
+      "2026-12-25",
+      "2027-01-29"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhavnagar to Gopnath & Royal Palace Welcome",
+        "description": "Depart Bhavnagar for Gopnath. Check in at the vintage royal mansion with sweeping gulf views. Afternoon seaside leisure."
+      },
+      {
+        "day": 2,
+        "title": "Mahadev Shrine, Sea Cliffs & Coastal Trail",
+        "description": "Morning visit to the oceanfront Shiva temple. Hike along the dramatic coastal limestone cliffs and bird-rich salt flats."
+      },
+      {
+        "day": 3,
+        "title": "Sunrise Beach Walk & Return to Bhavnagar",
+        "description": "Capture sunrise over the Gulf of Khambhat and return to Bhavnagar."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Nilesh Trivedi",
+        "rating": 5,
+        "text": "Zero crowds, tranquil waves, and royal palace ambiance. Truly special.",
+        "date": "2026-05-19"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Goa Sun, Sand & Spice Plantation Escape",
+    "title": "Goa Sun, Sand & Spice Plantation Escape",
+    "slug": "goa-sun-sand-spice-getaway",
+    "category": "Beach",
+    "destination": "North & South Goa, India",
+    "location": "Konkan Coast, Goa",
+    "country": "India",
+    "description": "Experience golden palm-fringed sands at Calangute, Palolem and Baga, spice estate tours, and Portuguese heritage quarters of Fontainhas.",
+    "shortDescription": "Golden sands, Mandovi river luxury cruise, and Portuguese Latin Quarter walking tour.",
+    "fullDescription": "The ultimate Indian beach holiday, specially curated for Gujarati families and groups with vegetarian dining arrangements. Relax on iconic Goa beaches, sail down the Mandovi River, tour aromatic spice plantations in Ponda, and photograph pastel colonial mansions in Fontainhas.",
+    "price": 22500,
+    "originalPrice": 26000,
+    "discountedPrice": 22500,
+    "currency": "INR",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 110,
+    "reviewCount": 110,
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-20 travelers",
+    "bestTime": "October to April",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Calangute, Baga and Anjuna world-renowned beaches",
+      "Fontainhas Latin Quarter heritage walk",
+      "Mandovi River sunset cruise with folk performances",
+      "Organic spice farm tour with traditional lunch",
+      "Basilica of Bom Jesus UNESCO world heritage site"
+    ],
+    "included": [
+      "4 Nights 4-star beach resort accommodation",
+      "Daily breakfast and dinners (Pure Veg / Jain options)",
+      "AC coach for North and South Goa sightseeing",
+      "Mandovi River cruise tickets"
+    ],
+    "excluded": [
+      "Water sports rides at Baga beach",
+      "Flight tickets to/from Goa"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2026-12-08",
+      "2027-01-12",
+      "2027-02-09"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Goa & Baga Beach Twilight",
+        "description": "Arrive at Goa Dabolim/Mopa airport. Transfer to your beach resort. Evening relaxation on Baga beach."
+      },
+      {
+        "day": 2,
+        "title": "North Goa Forts & Beaches",
+        "description": "Visit Aguada Fort, Chapora Fort, and relax by the sandy shores of Calangute and Vagator."
+      },
+      {
+        "day": 3,
+        "title": "Old Goa Churches & Mandovi Cruise",
+        "description": "Explore the Basilica of Bom Jesus and Se Cathedral, followed by sunset musical cruise along Mandvi river."
+      },
+      {
+        "day": 4,
+        "title": "Spice Plantation & Latin Quarter Walk",
+        "description": "Tour aromatic cardamom and pepper gardens in Ponda. Afternoon stroll through the cobblestone streets of Fontainhas."
+      },
+      {
+        "day": 5,
+        "title": "South Goa Palolem Beach & Departure",
+        "description": "Visit scenic Palolem crescent bay before your scheduled departure transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Dharmesh Shah",
+        "rating": 5,
+        "text": "Great Gujarati food arrangements in Goa! The kids loved the cruise and resort pool.",
+        "date": "2026-08-30"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Kovalam & Varkala Cliff Beach Expedition",
+    "title": "Kovalam & Varkala Cliff Beach Expedition",
+    "slug": "kovalam-varkala-kerala-beaches",
+    "category": "Beach",
+    "destination": "Kerala, India",
+    "location": "Arabian Sea Coast, Southern Kerala",
+    "country": "India",
+    "description": "Gaze over majestic red laterite cliffs at Varkala, relax on crescent-shaped Lighthouse Beach in Kovalam, and experience soothing Ayurvedic wellness.",
+    "shortDescription": "Dramatic red sea-cliffs, crescent lighthouse bays, and Ayurvedic rejuvenation by the sea.",
+    "fullDescription": "Kerala’s coast provides unmatched natural drama. Stay perched atop the cliffs of Varkala overlooking natural mineral springs and crashing surf. Then travel to Kovalam’s three adjacent crescent beaches, climb the striped beacon lighthouse, and experience restorative Ayurvedic massage treatments.",
+    "price": 28900,
+    "originalPrice": 33500,
+    "discountedPrice": 28900,
+    "currency": "INR",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 73,
+    "reviewCount": 73,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "September to March",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Varkala red laterite cliffs and natural mineral spring beaches",
+      "Lighthouse Beach 142-step summit view in Kovalam",
+      "Authentic Kerala Ayurvedic herbal rejuvenation session",
+      "Sunset boating on Poovar golden sand island estuary",
+      "Padmanabhaswamy Temple darshan in Trivandrum"
+    ],
+    "included": [
+      "5 Nights sea-facing boutique resort accommodation",
+      "Daily breakfast and multi-course dinners",
+      "All intercity private AC transfers",
+      "Poovar backwater boat safari pass"
+    ],
+    "excluded": [
+      "Ayurvedic therapy packages beyond included session",
+      "Airfare to Trivandrum"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-16",
+      "2027-01-20",
+      "2027-02-17"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Trivandrum Arrival to Kovalam",
+        "description": "Arrive at Trivandrum airport/station. Short drive to Kovalam. Check in to coastal resort and enjoy Lighthouse Beach sunset."
+      },
+      {
+        "day": 2,
+        "title": "Kovalam Beaches & Ayurvedic Wellness",
+        "description": "Morning relaxation at Hawah and Samudra beaches. Afternoon 60-minute Ayurvedic herbal massage and wellness therapy."
+      },
+      {
+        "day": 3,
+        "title": "Poovar Island Backwater Boat Cruise",
+        "description": "Excursion to Poovar where backwaters meet the sea on a floating sand beach. Marvel at mangrove bird sanctuaries."
+      },
+      {
+        "day": 4,
+        "title": "Transfer to Varkala & Cliff Promenade",
+        "description": "Drive north to Varkala. Check in atop the north cliff. Evening stroll among cliff-side bohemian cafes and handicrafts."
+      },
+      {
+        "day": 5,
+        "title": "Papanasam Sacred Beach & Janardhana Swami Temple",
+        "description": "Visit the 2,000-year-old temple and bathe in sacred mineral waters believed to cleanse sorrows."
+      },
+      {
+        "day": 6,
+        "title": "Padmanabhaswamy Temple & Departure",
+        "description": "Visit the legendary Sree Padmanabhaswamy Temple in Trivandrum before boarding your return flight."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Hetal Sanghavi",
+        "rating": 5,
+        "text": "The Varkala cliff views were out of this world. Excellent driver and cozy hotels.",
+        "date": "2026-08-04"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Andaman Havelock Radhanagar Beach & Coral Reefs",
+    "title": "Andaman Havelock Radhanagar Beach & Coral Reefs",
+    "slug": "andaman-havelock-island-paradise",
+    "category": "Beach",
+    "destination": "Andaman Islands, India",
+    "location": "Havelock & Neil Islands, Bay of Bengal",
+    "country": "India",
+    "description": "Sink your toes into Radhanagar Beach, ranked among Asia’s finest shores, snorkel vibrant reefs at Elephant Beach, and explore historic Port Blair.",
+    "shortDescription": "Asia’s top-ranked Radhanagar Beach, crystal coral waters, and catamaran cruises in Andaman.",
+    "fullDescription": "The Andaman archipelago is India’s premier tropical wonderland. Cruise aboard high-speed catamarans to Havelock Island, walk beneath mahua trees lining powdery Radhanagar Beach, snorkel with sea turtles at Elephant Beach, and marvel at the natural rock bridge of Neil Island.",
+    "price": 38500,
+    "originalPrice": 44000,
+    "discountedPrice": 38500,
+    "currency": "INR",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 5,
+    "reviews": 95,
+    "reviewCount": 95,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to May",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Radhanagar Beach sunset rated among Asia’s best beaches",
+      "Elephant Beach speedboat ride & coral snorkeling",
+      "High-speed Makruzz catamaran island transfers",
+      "Cellular Jail historic Light & Sound show in Port Blair",
+      "Neil Island Natural Rock Bridge and Bharatpur Beach"
+    ],
+    "included": [
+      "5 Nights premium island resort stay (Port Blair & Havelock)",
+      "Daily breakfast and dinners (Jain / Veg special menus)",
+      "All inter-island catamaran ferry tickets",
+      "Port transfers, sightseeing, and harbor cruise"
+    ],
+    "excluded": [
+      "Scuba dive deep underwater photography",
+      "Flights to Veer Savarkar Airport Port Blair"
+    ],
+    "availableDates": [
+      "2026-11-22",
+      "2026-12-13",
+      "2027-01-17",
+      "2027-02-21"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Port Blair & Cellular Jail Memorial",
+        "description": "Fly into Port Blair. Visit historic Cellular Jail and attend the poignant evening Light & Sound presentation."
+      },
+      {
+        "day": 2,
+        "title": "Catamaran to Havelock & Radhanagar Sunset",
+        "description": "Board premium Makruzz ferry to Havelock Island. Afternoon leisure on world-renowned Radhanagar Beach."
+      },
+      {
+        "day": 3,
+        "title": "Elephant Beach Coral Snorkeling",
+        "description": "Speedboat cruise to Elephant Beach. Snorkel in crystal clear lagoons teeming with clownfish and sea anemones."
+      },
+      {
+        "day": 4,
+        "title": "Neil Island Natural Rock Formation",
+        "description": "Cruise to tranquil Neil Island. Explore Howrah Bridge natural coral formation and Laxmanpur Beach sunset."
+      },
+      {
+        "day": 5,
+        "title": "Return to Port Blair & Chidiya Tapu Sunset",
+        "description": "Ferry back to Port Blair. Evening drive through lush forests to Chidiya Tapu sunset point."
+      },
+      {
+        "day": 6,
+        "title": "Souvenir Shopping & Departure",
+        "description": "Browse Sagarika Government Emporium for pearl jewelry and shell crafts before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Bhavesh Mehta",
+        "rating": 5,
+        "text": "Unforgettable holiday! Havelock waters are unreal. The team took care of all ferry and meal logistics.",
+        "date": "2026-09-08"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Gokarna Pristine Beaches & Om Beach Trek",
+    "title": "Gokarna Pristine Beaches & Om Beach Trek",
+    "slug": "gokarna-beaches-om-beach-retreat",
+    "category": "Beach",
+    "destination": "Karnataka Coast, India",
+    "location": "Uttara Kannada, Karnataka",
+    "country": "India",
+    "description": "Hike across coastal hills connecting Kudle, Om, Half Moon and Paradise beaches, and visit the historic Mahabaleshwar Temple.",
+    "shortDescription": "Spiritual seaside sanctuary, the iconic Om Beach, and rugged headland trails.",
+    "fullDescription": "Gokarna seamlessly pairs sacred pilgrimage with bohemian coastal bliss. Trek from one secluded cove to the next along scenic ocean bluffs, swim in the calm curve of Om Beach, spot dolphins off the coastline, and seek blessings at the sacred Atmalinga shrine.",
+    "price": 15400,
+    "originalPrice": 17800,
+    "discountedPrice": 15400,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.7,
+    "reviews": 44,
+    "reviewCount": 44,
+    "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Kannada",
+    "highlights": [
+      "Five Beach Trail: Gokarna, Kudle, Om, Half Moon, Paradise",
+      "Ancient Mahabaleshwar Shiva Temple darshan",
+      "Boat cruise for dolphin spotting in the Arabian Sea",
+      "Sunset bonfires on Kudle Beach sands",
+      "Mirjan Fort historical excursion"
+    ],
+    "included": [
+      "3 Nights eco-resort accommodation near Kudle beach",
+      "Breakfast and dinners included daily",
+      "Certified trek leader for headland trail",
+      "Transfers from Madgaon or Kumta railway station"
+    ],
+    "excluded": [
+      "Optional cliff jumping and jet skiing",
+      "Train fares to Kumta/Gokarna"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-12",
+      "2027-01-16"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Gokarna & Kudle Beach Evening",
+        "description": "Arrive in Gokarna. Check into coastal resort. Relax on Kudle Beach watching fishermen haul twilight catches."
+      },
+      {
+        "day": 2,
+        "title": "Coastal Headland Trek to Om & Paradise Beaches",
+        "description": "Scenic headland trail connecting cliff edges from Kudle to sacred Om Beach and secluded Paradise cove."
+      },
+      {
+        "day": 3,
+        "title": "Mahabaleshwar Temple & Mirjan Fort",
+        "description": "Morning spiritual visit to the 4th-century Mahabaleshwar Temple. Afternoon trip to moss-covered 16th-century Mirjan Fort."
+      },
+      {
+        "day": 4,
+        "title": "Dolphin Cruise & Departure",
+        "description": "Early morning dolphin sighting boat trip followed by return transfer to railway station."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Pratik Soni",
+        "rating": 5,
+        "text": "The beach trek was simply fantastic! Clean shores and very peaceful vibe.",
+        "date": "2026-07-28"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Puri Golden Beach & Konark Sun Temple Coast",
+    "title": "Puri Golden Beach & Konark Sun Temple Coast",
+    "slug": "puri-beach-konark-marine-drive",
+    "category": "Beach",
+    "destination": "Odisha, India",
+    "location": "Bay of Bengal Coast, Puri",
+    "country": "India",
+    "description": "Experience holy coastal winds on Puri’s Blue Flag Golden Beach, drive along scenic Marine Drive to the Konark Sun Temple, and cruise Chilika Lake.",
+    "shortDescription": "Golden Beach sunrise, 13th-century Konark stone chariot, and Chilika dolphin cruise.",
+    "fullDescription": "Puri offers an enchanting blend of devotion and marine beauty. Walk along the eco-friendly Blue Flag Golden Beach, cruise down the Konark Marine Drive with casuarina trees on both sides, explore the UNESCO 13th-century Konark Sun Temple, and witness Irrawaddy dolphins on Asia’s largest brackish lagoon at Chilika Lake.",
+    "price": 17800,
+    "originalPrice": 21000,
+    "discountedPrice": 17800,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 58,
+    "reviewCount": 58,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Puri Blue Flag-certified Golden Beach promenade",
+      "VIP darshan facilitation at Shree Jagannath Temple",
+      "UNESCO World Heritage Konark Sun Temple stone carvings",
+      "Marine Drive scenic coastal highway drive",
+      "Chilika Lake boat safari for rare Irrawaddy dolphins"
+    ],
+    "included": [
+      "3 Nights sea-front hotel accommodation in Puri",
+      "All meals: breakfast, traditional Odia lunch, and dinner",
+      "Private AC vehicle for all transfers and tours",
+      "Chilika motorized boat safari ticket"
+    ],
+    "excluded": [
+      "Pandas special puja donations",
+      "Train or air tickets to Bhubaneswar"
+    ],
+    "availableDates": [
+      "2026-11-25",
+      "2026-12-20",
+      "2027-01-24"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhubaneswar to Puri & Golden Beach Sunset",
+        "description": "Pick up from Bhubaneswar. Drive to Puri. Check in and experience evening sea breeze at Blue Flag Golden Beach."
+      },
+      {
+        "day": 2,
+        "title": "Shree Jagannath Temple Darshan & Konark Drive",
+        "description": "Morning holy prayers at Jagannath Temple. Drive the breezy Marine Drive to the Konark Sun Temple chariot marvel."
+      },
+      {
+        "day": 3,
+        "title": "Chilika Lake (Satapada) Dolphin Excursion",
+        "description": "Scenic drive to Satapada on Chilika Lake. Boat cruise across the lagoon to view sea eagles and Irrawaddy dolphins."
+      },
+      {
+        "day": 4,
+        "title": "Pipili Applique Village & Departure",
+        "description": "Stop at Pipili heritage artisan craft village before dropping off at Bhubaneswar airport/station."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Manish Parekh",
+        "rating": 5,
+        "text": "Puri golden beach was exceptionally clean and Konark temple was mind blowing.",
+        "date": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Rann of Kutch ATV Desert Safari & White Desert Sunset",
+    "title": "Rann of Kutch ATV Desert Safari & White Desert Sunset",
+    "slug": "rann-of-kutch-desert-safari",
+    "category": "Adventure",
+    "destination": "Dhordo, Kutch, Gujarat",
+    "location": "Great Rann of Kutch Salt Desert",
+    "country": "India",
+    "description": "Race across endless white salt flats on quad bikes, soar high in a paramotor above the horizon, and watch the sun sink into glistening salt crystals.",
+    "shortDescription": "High-octane ATV quad biking, paramotor flights, and desert camping on the endless white salt desert.",
+    "fullDescription": "The Great Rann of Kutch transforms into a playground for thrills during winter. Zip across the barren white salt crust on all-terrain vehicles, fly tandem in paramotor gliders for panoramic aerial views, cycle through border desert outpost trails, and stargaze under crystal desert night skies.",
+    "price": 19500,
+    "originalPrice": 23000,
+    "discountedPrice": 19500,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.9,
+    "reviews": 120,
+    "reviewCount": 120,
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-18 travelers",
+    "bestTime": "November to February",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "High-power ATV quad bike rides across the salt flats",
+      "Tandem paramotor aerial flight over the White Rann",
+      "Camel cart desert safari to the zero point",
+      "Kalo Dungar Black Hill panoramic view and Magnetic Hill drive",
+      "Desert glamping with nighttime folk campfire music"
+    ],
+    "included": [
+      "3 Nights luxury tent accommodation at Tent City Dhordo",
+      "Full board meals: Gujarati and Kutchi buffet feasts",
+      "Desert border permit and police clearance",
+      "ATV quad ride session & camel safari vouchers"
+    ],
+    "excluded": [
+      "Paramotor video recording packages",
+      "Travel tickets to/from Bhuj"
+    ],
+    "availableDates": [
+      "2026-11-19",
+      "2026-12-17",
+      "2027-01-21",
+      "2027-02-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhuj to Dhordo & White Desert Twilight",
+        "description": "Pick up from Bhuj airport/station. Scenic drive across Kutch plains to Dhordo. Check into luxury tents. First walk onto the glowing salt flats at sunset."
+      },
+      {
+        "day": 2,
+        "title": "ATV Quad Safari & Paramotor Flight",
+        "description": "Early morning ATV desert run over marked salt terrains. Midday paramotor flight offering bird-eye desert vistas. Evening Kutchi folk celebration."
+      },
+      {
+        "day": 3,
+        "title": "Kalo Dungar Peak & India Bridge Outpost",
+        "description": "Drive up Kalo Dungar (Black Hill), highest point in Kutch. View the Indo-Pak border panorama and witness the famous jackal feeding ritual."
+      },
+      {
+        "day": 4,
+        "title": "Handicraft Villages & Departure to Bhuj",
+        "description": "Visit Nirona village for Rogan art and copper bells before drop-off at Bhuj."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Amit Shah",
+        "rating": 5,
+        "text": "Riding the ATV across the white desert is an experience you will never forget. 10/10 trip!",
+        "date": "2026-08-25"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Saputara Hill Trekking & Gira Waterfalls Trail",
+    "title": "Saputara Hill Trekking & Gira Waterfalls Trail",
+    "slug": "saputara-hills-waterfalls-trek",
+    "category": "Adventure",
+    "destination": "Dang, Gujarat",
+    "location": "Sahyadri Hills, South Gujarat",
+    "country": "India",
+    "description": "Hike through misty teak forests in Gujarat’s sole hill station, rappel down waterfalls, zip-line across valleys, and boat on Saputara Lake.",
+    "shortDescription": "Lush Sahyadri ridge trekking, thunderous Gira waterfalls, and valley zip-lining in Saputara.",
+    "fullDescription": "Perched in the lush Sahyadri ranges of Dang district, Saputara offers crisp mountain air and active wilderness. Trek along Governor Hill trails, conquer the Table Point ridge, zip-line across valley gaps, and witness the thunderous cascade of Gira Waterfalls into the Ambika River.",
+    "price": 8500,
+    "originalPrice": 10200,
+    "discountedPrice": 8500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.6,
+    "reviews": 55,
+    "reviewCount": 55,
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "July to February",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Governor Hill scenic ridge trek with valley viewpoints",
+      "Table Point sunset cliff walk and zip-line experience",
+      "Excursion to majestic Gira Waterfalls cascade",
+      "Pedal and motor boating on Saputara Lake",
+      "Tribal Dang cultural museum and archery trials"
+    ],
+    "included": [
+      "2 Nights hill-view resort stay in Saputara",
+      "All meals: hearty breakfast, trail lunch, and hot dinner",
+      "Certified adventure trek leader and first aid kit",
+      "Transfers from Bilimora / Surat"
+    ],
+    "excluded": [
+      "Ropeway cable car ride tickets",
+      "Personal snacks and gear purchases"
+    ],
+    "availableDates": [
+      "2026-11-08",
+      "2026-12-06",
+      "2027-01-10"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Saputara & Lake Boating",
+        "description": "Drive from Surat/Bilimora into the green hills of Dang. Check in, followed by boating on Saputara Lake and sunset from Sunset Point."
+      },
+      {
+        "day": 2,
+        "title": "Governor Hill Trek & Gira Waterfalls Trail",
+        "description": "Morning guided hike up Governor Hill ridge. Afternoon excursion to roar of Gira Waterfalls and Waghai botanical gardens."
+      },
+      {
+        "day": 3,
+        "title": "Table Top Adventure Activities & Return",
+        "description": "Ride the ropeway cable car, try zip-lining on Table Top point, and transfer back to Surat."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Sneha Panchal",
+        "rating": 5,
+        "text": "The waterfall was roaring and the morning trek was refreshing! Great escape from the city heat.",
+        "date": "2026-07-19"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Girnar Mountain 10,000 Steps Stairway Expedition",
+    "title": "Girnar Mountain 10,000 Steps Stairway Expedition",
+    "slug": "girnar-mountain-stairway-expedition",
+    "category": "Adventure",
+    "destination": "Junagadh, Gujarat",
+    "location": "Mount Girnar, Junagadh District",
+    "country": "India",
+    "description": "Conquer the sacred granite crags of Mount Girnar via its legendary 9,999-step stairway, or ride Asia’s longest passenger ropeway to Dattatreya Peak.",
+    "shortDescription": "Epic 10,000-step holy mountain climb, ropeway flight over volcanic ridges, and ancient cave temples.",
+    "fullDescription": "Mount Girnar is older than the Himalayas and soars 3,666 feet above the Saurashtra plains. Test your endurance on the iconic dawn stairway challenge passing centuries-old Jain marble temples, proceed to the razor-thin pinnacles of Guru Dattatreya, or take in staggering aerial views via the Girnar Ropeway.",
+    "price": 9800,
+    "originalPrice": 11500,
+    "discountedPrice": 9800,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Challenging",
+    "rating": 4.8,
+    "reviews": 67,
+    "reviewCount": 67,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Dawn endurance ascent up Mount Girnar 9,999 steps",
+      "Asia’s longest mountain passenger ropeway experience",
+      "Exquisite 12th-century Neminath Jain marble temples",
+      "Guru Dattatreya pinnacle shrine summit viewpoint",
+      "Uparkot Fort stepwells and Buddhist caves in Junagadh"
+    ],
+    "included": [
+      "2 Nights hotel stay in Junagadh near the mountain base",
+      "Nutritious trekking breakfasts, energy packs, and dinners",
+      "One-way or round-trip Girnar ropeway tickets",
+      "Local trekking companion and trail permits"
+    ],
+    "excluded": [
+      "Porter (Doli) charges for individuals",
+      "Personal trekking poles and footwear"
+    ],
+    "availableDates": [
+      "2026-11-13",
+      "2026-12-11",
+      "2027-01-15"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Junagadh & Uparkot Fort Exploration",
+        "description": "Arrive in Junagadh. Check in. Explore historic Uparkot Fort, Navghan Kuvo stepwell, and ancient Buddhist rock caves."
+      },
+      {
+        "day": 2,
+        "title": "Mount Girnar Climb & Summit Expedition",
+        "description": "Pre-dawn 3:30 AM start for the Girnar stairway challenge or morning ropeway ascent. Reach Ambaji peak and Dattatreya shrine."
+      },
+      {
+        "day": 3,
+        "title": "Mahabat Maqbara Architecture & Departure",
+        "description": "Visit the fairytale gothic-islamic Mahabat Maqbara mausoleum before departure to Rajkot/Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Paresh Thakkar",
+        "rating": 5,
+        "text": "Climbing Girnar was a life milestone. The sunrise from Ambaji peak was spiritual and exhilarating.",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Polo Forest Ancient Ruins & River Trekking",
+    "title": "Polo Forest Ancient Ruins & River Trekking",
+    "slug": "polo-forest-river-trek-camp",
+    "category": "Adventure",
+    "destination": "Sabarkantha, Gujarat",
+    "location": "Aravalli Range Foothills, Polo Forest",
+    "country": "India",
+    "description": "Trek along rocky riverbeds of the Harnav River, boulder climb across Aravalli hills, and explore 15th-century hidden Jain and Shiva temple ruins.",
+    "shortDescription": "Hidden ancient ruins engulfed by jungle, Harnav river walking, and night camping under the stars.",
+    "fullDescription": "Tucked away in the Aravalli foothills near Idar, Polo Forest is Gujarat’s best-kept wilderness secret. Hike through thick canopies of deciduous trees, discover moss-cloaked stone temples dating back to the 15th century, cross the Harnav Dam walkways, and camp beside bubbling forest streams.",
+    "price": 5999,
+    "originalPrice": 7500,
+    "discountedPrice": 5999,
+    "currency": "INR",
+    "duration": "2 Days / 1 Night",
+    "durationDays": 2,
+    "durationNights": 1,
+    "difficulty": "Moderate",
+    "rating": 4.7,
+    "reviews": 51,
+    "reviewCount": 51,
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-16 travelers",
+    "bestTime": "August to February",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Harnav River boulder walking and shallow stream crossings",
+      "15th-century carved Jain Temple ruins engulfed by banyan trees",
+      "Vanaj Dam overflow walkway and sunset vista",
+      "Eco-campsite bonfires with stargazing under dark skies",
+      "Idar rock climbing viewpoint excursion"
+    ],
+    "included": [
+      "1 Night eco-camp tent / cottage stay with bedding",
+      "Breakfast, trail lunch, and campfire buffet dinner",
+      "Certified outdoor wilderness trek guide",
+      "Forest department entry permits"
+    ],
+    "excluded": [
+      "Transport to Polo Forest base camp (available on request)",
+      "Personal adventure gear"
+    ],
+    "availableDates": [
+      "2026-11-07",
+      "2026-11-21",
+      "2026-12-05",
+      "2026-12-19"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Polo Forest, River Trek & Campsite",
+        "description": "Morning arrival from Ahmedabad. Set up at camp. River hike along Harnav stream to Lakhena Jain temple ruins. Evening campfire and stargazing."
+      },
+      {
+        "day": 2,
+        "title": "Vanaj Dam Sunrise & Idar Gadh Excursion",
+        "description": "Sunrise trek up Echo Point ridge. Visit the ancient Shiv Shakti temple and historic Idar rock fortress before returning to Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Brijesh Raval",
+        "rating": 5,
+        "text": "Perfect weekend adventure from Ahmedabad! The ruins felt like Tomb Raider in real life.",
+        "date": "2026-06-22"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Rishikesh White Water Rafting & Cliff Jump Expedition",
+    "title": "Rishikesh White Water Rafting & Cliff Jump Expedition",
+    "slug": "rishikesh-rafting-camping-expedition",
+    "category": "Adventure",
+    "destination": "Rishikesh, Uttarakhand, India",
+    "location": "Ganges River Valley, Garhwal Himalayas",
+    "country": "India",
+    "description": "Ride Class III and IV rapids from Marine Drive to NIM Beach, leap from 30-foot river cliffs, and camp in riverbank alpine tents.",
+    "shortDescription": "Conquer Class IV Ganges rapids, bungee jumping, and riverside alpine camping in Rishikesh.",
+    "fullDescription": "Rishikesh is the adventure capital of the Himalayas. Tackle legendary rapids including Roller Coaster, Golf Course, and Club House on a thrilling 24 km rafting expedition down the roaring Ganges. Test your nerve with bungee jumping at Mohan Chatti and sleep to the lullaby of river rapids.",
+    "price": 14200,
+    "originalPrice": 17000,
+    "discountedPrice": 14200,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Challenging",
+    "rating": 4.9,
+    "reviews": 135,
+    "reviewCount": 135,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "September to May",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "24 km Grade III+ river rafting on the white water Ganges",
+      "Cliff jumping from 30 feet into the calm eddies",
+      "Riverside luxury Swiss camping with swimming pool",
+      "Trek to secluded Neer Garh waterfall pools",
+      "Parmarth Niketan iconic evening Ganga Aarti"
+    ],
+    "included": [
+      "3 Nights river-facing Swiss camp / boutique resort stay",
+      "All meals: breakfast, trail lunch, and campfire barbecue dinners",
+      "International standard rafting gear, life jackets & helmet",
+      "Transfers from Dehradun airport / Haridwar station"
+    ],
+    "excluded": [
+      "Bungee jumping and giant swing fees at Jumpin Heights",
+      "Airfare to Dehradun"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2026-12-08",
+      "2027-01-12",
+      "2027-02-09"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Rishikesh & Camp Check-in",
+        "description": "Pick up from Haridwar/Dehradun. Transfer to riverside camp at Shivpuri. Evening relaxation by the campfire."
+      },
+      {
+        "day": 2,
+        "title": "24 km White Water Rafting & Cliff Jump",
+        "description": "Conquer rapids from Marine Drive through Roller Coaster and Golf Course. Cliff jump session and bodysurfing."
+      },
+      {
+        "day": 3,
+        "title": "Neer Garh Waterfall Hike & Ganga Aarti",
+        "description": "Hike up to multi-tiered Neer Garh waterfalls. Evening visit to Ram Jhula and spiritual Ganga Aarti at Parmarth Niketan."
+      },
+      {
+        "day": 4,
+        "title": "Beatles Ashram & Departure",
+        "description": "Explore the historic Beatles Ashram (Chaurasi Kutia) before drop-off at Haridwar/Dehradun."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Hardik Shah",
+        "rating": 5,
+        "text": "Rafting the Ganges was an adrenaline rush of a lifetime. Camping setup was top class!",
+        "date": "2026-08-16"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Leh-Ladakh High Passes Bike & Jeep Odyssey",
+    "title": "Leh-Ladakh High Passes Bike & Jeep Odyssey",
+    "slug": "ladakh-high-mountain-passes-odyssey",
+    "category": "Adventure",
+    "destination": "Ladakh, India",
+    "location": "Trans-Himalayas, Ladakh",
+    "country": "India",
+    "description": "Cross the world’s highest motorable pass Khardung La at 17,982 ft, ride double-humped camels in Nubra Valley, and camp beside Pangong Tso.",
+    "shortDescription": "Khardung La high-pass thrills, sand dune camel safaris, and electric-blue Pangong Lake camping.",
+    "fullDescription": "Ladakh is the ultimate adventure frontier. Drive over the world’s highest passes on Royal Enfield bikes or customized 4x4 SUVs, traverse the cold desert sand dunes of Hunder in Nubra Valley, marvel at Magnetic Hill defying gravity, and gaze upon the changing hues of sapphire Pangong Tso.",
+    "price": 45000,
+    "originalPrice": 52000,
+    "discountedPrice": 45000,
+    "currency": "INR",
+    "duration": "8 Days / 7 Nights",
+    "durationDays": 8,
+    "durationNights": 7,
+    "difficulty": "Challenging",
+    "rating": 5,
+    "reviews": 140,
+    "reviewCount": 140,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "May to September",
+    "language": "Hindi, English, Ladakhi",
+    "highlights": [
+      "Summiting Khardung La pass at 17,982 feet above sea level",
+      "Overnight glamping directly beside Pangong Lake shore",
+      "Double-humped Bactrian camel safari in Hunder Nubra dunes",
+      "Confluence of Indus and Zanskar rivers river viewpoint",
+      "Thiksey and Diskit Tibetan monasteries with giant Buddha"
+    ],
+    "included": [
+      "7 Nights accommodation (Leh hotels, Nubra luxury camps, Pangong tents)",
+      "All meals: buffet breakfast and dinners throughout",
+      "Inner Line Permits and environmental fee clearances",
+      "Dedicated backup vehicle with oxygen cylinder and mechanic"
+    ],
+    "excluded": [
+      "Flight tickets to Leh Kushok Bakula Rimpochee Airport",
+      "Bike fuel (for self-riding participants)"
+    ],
+    "availableDates": [
+      "2027-05-15",
+      "2027-06-12",
+      "2027-07-10",
+      "2027-08-14"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Leh & Complete Acclimatization",
+        "description": "Fly into Leh (11,500 ft). Transfer to hotel and rest completely for mandatory altitude acclimatization."
+      },
+      {
+        "day": 2,
+        "title": "Shanti Stupa, Leh Palace & Hall of Fame",
+        "description": "Light tour of Shanti Stupa, historic Leh Palace, and the Indian Army Hall of Fame museum."
+      },
+      {
+        "day": 3,
+        "title": "Magnetic Hill & Sangam River Confluence",
+        "description": "Experience gravity-defying Magnetic Hill, Gurdwara Pathar Sahib, and Indus-Zanskar confluence."
+      },
+      {
+        "day": 4,
+        "title": "Khardung La Pass to Nubra Valley",
+        "description": "Climb Khardung La (17,982 ft). Descend into Nubra Valley. Ride Bactrian camels on Hunder sand dunes."
+      },
+      {
+        "day": 5,
+        "title": "Diskit Monastery to Pangong Tso via Shyok",
+        "description": "Tour Diskit giant Maitreya Buddha. Drive the scenic Shyok river canyon route to the turquoise shores of Pangong Lake."
+      },
+      {
+        "day": 6,
+        "title": "Pangong Sunrise & Return over Chang La Pass",
+        "description": "Witness sunrise illuminating Pangong Lake. Return to Leh over 17,590 ft Chang La pass."
+      },
+      {
+        "day": 7,
+        "title": "Thiksey & Shey Monasteries Cultural Trail",
+        "description": "Visit iconic Thiksey Monastery resemblance to Potala Palace. Evening shopping for Tibetan carpets and apricot jams in Leh bazaar."
+      },
+      {
+        "day": 8,
+        "title": "Departure from Leh",
+        "description": "Airport transfer with memories of the land of high passes."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Manan Desai",
+        "rating": 5,
+        "text": "The best journey of my entire life. Antigravity handled the oxygen and permits seamlessly!",
+        "date": "2026-07-11"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Spiti Valley 4x4 Rugged High Altitude Safari",
+    "title": "Spiti Valley 4x4 Rugged High Altitude Safari",
+    "slug": "spiti-valley-rugged-4x4-safari",
+    "category": "Adventure",
+    "destination": "Spiti, Himachal Pradesh, India",
+    "location": "Lahaul and Spiti, Western Himalayas",
+    "country": "India",
+    "description": "Traverse treacherous Kunzum Pass, visit the highest post office in the world at Hikkim, and explore 1,000-year-old Key Monastery.",
+    "shortDescription": "Remote Himalayan moonscape, world’s highest post office at Hikkim, and ancient Key monastery.",
+    "fullDescription": "Spiti Valley is the rugged heart of the Middle Land. Drive through stark moonscapes in rugged 4x4 Mahindra Scorpios, post postcards from Hikkim at 14,567 ft, discover marine fossils at Langza, camp near the crescent jewel of Chandratal Lake, and traverse raw glacial river crossings.",
+    "price": 36500,
+    "originalPrice": 42000,
+    "discountedPrice": 36500,
+    "currency": "INR",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Challenging",
+    "rating": 4.9,
+    "reviews": 62,
+    "reviewCount": 62,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "June to October",
+    "language": "Hindi, English, Tibetan",
+    "highlights": [
+      "Chandratal (Moon Lake) high altitude camping at 14,100 ft",
+      "Hikkim: mailing a postcard from the world’s highest post office",
+      "Key Monastery fortress-like 11th century cliff shrine",
+      "Crossing challenging water crossings and Kunzum Pass",
+      "Langza village giant golden Buddha overlooking snow peaks"
+    ],
+    "included": [
+      "6 Nights hotel and Swiss tent accommodation",
+      "Breakfast and warm dinners prepared daily",
+      "4x4 SUV transportation with mountain driver expert",
+      "All inner line permits and toll fees"
+    ],
+    "excluded": [
+      "Travel to/from Manali or Chandigarh",
+      "Personal gear and emergency evacuation"
+    ],
+    "availableDates": [
+      "2027-06-05",
+      "2027-07-03",
+      "2027-08-07",
+      "2027-09-04"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Manali to Kaza via Atal Tunnel & Kunzum Pass",
+        "description": "Depart Manali early through Atal Tunnel. Cross rugged Gramphu and 14,931 ft Kunzum Pass to reach Kaza."
+      },
+      {
+        "day": 2,
+        "title": "Key Monastery & Kibber High Village",
+        "description": "Tour 1,000-year-old Key Monastery perched on a hill pyramid. Visit Kibber, once the highest inhabited village."
+      },
+      {
+        "day": 3,
+        "title": "Hikkim, Komic & Langza Fossil Trail",
+        "description": "Post letters at Hikkim world’s highest post office. Visit Komic monastery and search for prehistoric marine fossils in Langza."
+      },
+      {
+        "day": 4,
+        "title": "Pin Valley National Park & Mud Village",
+        "description": "Drive along the green oasis of Pin Valley. Explore Mud village and discover rare Himalayan flora and fauna."
+      },
+      {
+        "day": 5,
+        "title": "Kaza to Chandratal Lake Camping",
+        "description": "Drive to magical Chandratal (Moon Lake). Hike to the sapphire shore and camp under shooting stars."
+      },
+      {
+        "day": 6,
+        "title": "Chandratal to Manali via Rohtang Pass",
+        "description": "Navigate rough water crossings along Chandra river back to Manali. Check into Manali hotel and rest."
+      },
+      {
+        "day": 7,
+        "title": "Manali Departure",
+        "description": "Farewell breakfast and onward journey to Chandigarh or Delhi."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kunal Trivedi",
+        "rating": 5,
+        "text": "Raw, wild and totally unplugged from the world. Chandratal lake at night was unreal.",
+        "date": "2026-08-18"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Chadar Frozen Zanskar River Ice Trek",
+    "title": "Chadar Frozen Zanskar River Ice Trek",
+    "slug": "chadar-frozen-river-winter-trek",
+    "category": "Adventure",
+    "destination": "Zanskar, Ladakh, India",
+    "location": "Zanskar Gorge, Ladakh",
+    "country": "India",
+    "description": "Walk on sheets of glass-like ice over a roaring frozen river through sheer 1,000-foot rock canyons in sub-zero winter temperatures.",
+    "shortDescription": "The ultimate winter ice expedition walking directly on the frozen Zanskar river.",
+    "fullDescription": "The Chadar Trek is world-famous as one of the wildest winter expeditions on Earth. Trek in crampons over the frozen blanket (\"Chadar\") of the Zanskar River as it snakes between vertical mountain walls, sleep in heated cave camps, and marvel at the frozen waterfall of Nerak.",
+    "price": 62000,
+    "originalPrice": 70000,
+    "discountedPrice": 62000,
+    "currency": "INR",
+    "duration": "9 Days / 8 Nights",
+    "durationDays": 9,
+    "durationNights": 8,
+    "difficulty": "Challenging",
+    "rating": 5,
+    "reviews": 38,
+    "reviewCount": 38,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-10 travelers",
+    "bestTime": "January to February",
+    "language": "Hindi, English, Ladakhi",
+    "highlights": [
+      "Walking on the natural frozen river ice sheets of Zanskar",
+      "The majestic giant frozen waterfall of Nerak",
+      "Sub-zero winter camping in insulated Alpine 4-season tents",
+      "Passing through colossal vertical limestone canyon walls",
+      "Zanskari porter cultural survival traditions"
+    ],
+    "included": [
+      "3 Nights heated hotel stay in Leh + 5 Nights winter camping",
+      "All nutritious high-calorie hot meals on trek",
+      "Sub-zero sleeping bags, crampons, insulated mattresses",
+      "ALTOA wilderness permit, medical checkup, and wildlife fees"
+    ],
+    "excluded": [
+      "Air tickets to Leh in winter",
+      "Personal down jacket and thermal mountaineering gear"
+    ],
+    "availableDates": [
+      "2027-01-10",
+      "2027-01-20",
+      "2027-02-01"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Leh & Cold Climate Adjustment",
+        "description": "Fly into frozen Leh. Complete rest in heated hotel rooms to adjust to minus 10°C temperatures."
+      },
+      {
+        "day": 2,
+        "title": "Acclimatization Walk & Medical Checkup",
+        "description": "Light walking in Leh town and mandatory government medical fitness examination."
+      },
+      {
+        "day": 3,
+        "title": "Leh to Shingra Koma & First Step on Ice",
+        "description": "Drive along the Indus to Chilling and Shingra Koma. Learn the penguin walk technique on river ice."
+      },
+      {
+        "day": 4,
+        "title": "Trek to Tibb Cave",
+        "description": "Trek 14 km on frozen ice through soaring canyon walls. Camp near Tibb cave."
+      },
+      {
+        "day": 5,
+        "title": "Tibb Cave to Nerak Frozen Waterfall",
+        "description": "Reach the iconic giant frozen waterfall of Nerak. Celebrate this natural masterpiece."
+      },
+      {
+        "day": 6,
+        "title": "Nerak to Tibb Cave Return Trail",
+        "description": "Return trek observing how the changing ice patterns transform the river route."
+      },
+      {
+        "day": 7,
+        "title": "Tibb Cave to Shingra Koma & Drive to Leh",
+        "description": "Final ice hike to the roadhead and transfer back to warm hotel comfort in Leh."
+      },
+      {
+        "day": 8,
+        "title": "Buffer Day & Leh Winter Bazaar",
+        "description": "Rest and explore Leh winter culture, hot Thukpa soup, and souvenir shops."
+      },
+      {
+        "day": 9,
+        "title": "Departure from Leh",
+        "description": "Transfer to Leh airport with the certificate of Chadar completion."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Vikram Merchant",
+        "rating": 5,
+        "text": "Toughest thing I have ever done, but easily the most rewarding. Unmatched thrill!",
+        "date": "2026-03-02"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Dandeli White Water Rafting & Jungle Canopy Trail",
+    "title": "Dandeli White Water Rafting & Jungle Canopy Trail",
+    "slug": "dandeli-river-rafting-jungle-trail",
+    "category": "Adventure",
+    "destination": "Dandeli, Karnataka, India",
+    "location": "Western Ghats, Uttara Kannada",
+    "country": "India",
+    "description": "Raft the surging Kali River rapids, zip-line over the forest canopy, spot hornbills on jungle hikes, and kayak in serene river channels.",
+    "shortDescription": "White water Kali river rafting, canopy zip-lining, and hornbill birding in Dandeli forests.",
+    "fullDescription": "Dandeli is South India’s adventure capital nestled in dense Western Ghats rainforests. Navigate 12 km of exciting white water on the Kali River, test your balancing skills on river kayaking, zip-line high above jungle streams, and safari through Dandeli Tiger Reserve.",
+    "price": 11200,
+    "originalPrice": 13500,
+    "discountedPrice": 11200,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.7,
+    "reviews": 48,
+    "reviewCount": 48,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "October to May",
+    "language": "Hindi, English, Kannada",
+    "highlights": [
+      "12 km Kali River white water rafting on Grade II & III rapids",
+      "Jungle zip-line and Burma Bridge rope courses",
+      "Kayaking and natural river jacuzzi bath",
+      "Syntheri Rocks massive limestone monolith exploration",
+      "Dandeli wildlife jungle safari in open 4x4 jeeps"
+    ],
+    "included": [
+      "2 Nights riverside jungle resort accommodation",
+      "All meals: buffet breakfast, lunch, and dinner",
+      "White water rafting and kayaking equipment with life jackets",
+      "Transfers from Hubli / Alnavar railway station"
+    ],
+    "excluded": [
+      "Forest department jeep safari entry tickets",
+      "Personal travel insurance"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-12",
+      "2027-01-16"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Dandeli & Kali River Kayaking",
+        "description": "Arrive from Hubli. Check in to riverside jungle resort. Enjoy afternoon kayaking and natural river jacuzzi."
+      },
+      {
+        "day": 2,
+        "title": "White Water Rafting & Syntheri Rocks",
+        "description": "Exciting 12 km white water rafting run down the Kali River. Afternoon hike to the dramatic 300-foot Syntheri Rocks."
+      },
+      {
+        "day": 3,
+        "title": "Morning Birding & Departure",
+        "description": "Spot Malabar pied hornbills on early morning canopy walk before returning to Hubli."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rohan Shah",
+        "rating": 5,
+        "text": "Rafting was thrilling and the river jacuzzi bath was pure fun for our group.",
+        "date": "2026-06-08"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Sandhan Valley Descending Canyon & Rappelling Trek",
+    "title": "Sandhan Valley Descending Canyon & Rappelling Trek",
+    "slug": "sandhan-valley-canyon-rappelling",
+    "category": "Adventure",
+    "destination": "Maharashtra Western Ghats, India",
+    "location": "Bhandardara Region, Western Ghats",
+    "country": "India",
+    "description": "Descend through the \"Valley of Shadows\", a 200-foot-deep rock canyon, rappelling through three vertical rock pitches and natural water pools.",
+    "shortDescription": "The \"Valley of Shadows\" 200-foot canyon descent, three technical rappels, and starry gorge camping.",
+    "fullDescription": "Sandhan Valley is India’s greatest canyon trek. Carved between 200-foot vertical basalt walls where sunlight rarely reaches the floor, this technical descent involves wading through waist-deep pools, negotiating boulders the size of houses, rappelling three massive vertical rock faces, and camping in the canyon bed.",
+    "price": 7900,
+    "originalPrice": 9500,
+    "discountedPrice": 7900,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Challenging",
+    "rating": 4.8,
+    "reviews": 42,
+    "reviewCount": 42,
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-14 travelers",
+    "bestTime": "November to February",
+    "language": "Hindi, English, Marathi",
+    "highlights": [
+      "Trek through 200-foot deep canyon where sunlight never reaches",
+      "Three technical rock rappels with safety harnesses and certified guides",
+      "Wading through crystal cold mountain rock pools",
+      "Wilderness camping under millions of stars in the canyon floor",
+      "Scenic viewpoint of Ratangad and Alang-Madan-Kulang forts"
+    ],
+    "included": [
+      "All technical climbing gear, certified ropes, and harnesses",
+      "1 Night base village homestay + 1 Night canyon camping",
+      "Wholesome Maharashtrian meals on trek",
+      "Transfers from Kasara railway station"
+    ],
+    "excluded": [
+      "Personal trekking shoes and backpack",
+      "Train fares to Kasara"
+    ],
+    "availableDates": [
+      "2026-11-21",
+      "2026-12-19",
+      "2027-01-23"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Mumbai/Kasara to Samrad Base Village",
+        "description": "Meet at Kasara station, drive to Samrad village. Rest in village homestay and equipment briefing."
+      },
+      {
+        "day": 2,
+        "title": "Canyon Descent & Technical Rappelling",
+        "description": "Enter the canyon at dawn. Negotiate boulder fields, wade deep pools, and execute three technical rappels. Camp in the gorge."
+      },
+      {
+        "day": 3,
+        "title": "Dehne Village Exit & Return",
+        "description": "Trek out to Dehne village for a celebratory hot lunch, and transfer back to Kasara station."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Tanmay Oza",
+        "rating": 5,
+        "text": "Rappelling down into the dark canyon was thrilling! Top-notch safety equipment and instructors.",
+        "date": "2026-05-14"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Somnath & Dwarka Panch Tirth Sacred Gujarat Yatra",
+    "title": "Somnath & Dwarka Panch Tirth Sacred Gujarat Yatra",
+    "slug": "somnath-dwarka-sacred-pilgrimage",
+    "category": "Cultural",
+    "destination": "Saurashtra, Gujarat",
+    "location": "Saurashtra Circuit, Gujarat",
+    "country": "India",
+    "description": "Embark on Gujarat’s most revered pilgrimage circuit: First Jyotirlinga at Somnath, Dwarkadhish kingdom, Nageshwar, and Porbandar.",
+    "shortDescription": "First Jyotirlinga Somnath, holy Dwarkadhish darshan, and Mahatma Gandhi birth heritage.",
+    "fullDescription": "Experience the deep spiritual roots of Saurashtra. Witness the evening oceanfront sound-and-light show at Somnath Temple directly overlooking the Arabian Sea, seek blessings at the supreme Jagat Mandir in Dwarka, visit Nageshwar Jyotirlinga, and stop at Kirti Mandir in Porbandar where Mahatma Gandhi was born.",
+    "price": 18999,
+    "originalPrice": 22000,
+    "discountedPrice": 18999,
+    "currency": "INR",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 160,
+    "reviewCount": 160,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-20 travelers",
+    "bestTime": "Year-round (Best Oct-Mar)",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "First of the Twelve Jyotirlingas: Somnath Temple by the sea",
+      "Dwarkadhish Temple (Jagat Mandir) Mangla and Sandhya Aarti",
+      "Nageshwar Jyotirlinga and Rukmini Devi shrines",
+      "Porbandar Kirti Mandir: Mahatma Gandhi birthplace",
+      "Bhalka Tirth sacred spot where Lord Krishna departed"
+    ],
+    "included": [
+      "4 Nights deluxe hotel accommodation (2N Dwarka, 2N Somnath)",
+      "Pure vegetarian / Jain breakfast and dinners daily",
+      "AC dedicated private coach for entire circuit",
+      "Assistance with VIP temple queues where allowed"
+    ],
+    "excluded": [
+      "Individual puja samagri and dakshina",
+      "Camera tokens inside temple premises"
+    ],
+    "availableDates": [
+      "2026-11-11",
+      "2026-12-09",
+      "2027-01-13",
+      "2027-02-10"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Rajkot/Ahmedabad to Dwarka",
+        "description": "Pick up and scenic drive across Saurashtra to Dwarka. Check into hotel. Attend enchanting Sandhya Aarti at Dwarkadhish temple."
+      },
+      {
+        "day": 2,
+        "title": "Bet Dwarka, Nageshwar Jyotirlinga & Rukmini Temple",
+        "description": "Morning boat ferry to Bet Dwarka island. Darshan at Nageshwar Jyotirlinga, Gopi Talav, and the ornate Rukmini Devi temple."
+      },
+      {
+        "day": 3,
+        "title": "Dwarka to Somnath via Porbandar",
+        "description": "Travel along the coastal highway to Porbandar. Tour Mahatma Gandhi birthplace Kirti Mandir and Sudama Temple. Arrive in Somnath for evening sound & light show."
+      },
+      {
+        "day": 4,
+        "title": "Somnath Mahadev & Bhalka Tirth",
+        "description": "Early morning darshan at Somnath Jyotirlinga. Visit Triveni Sangam, Geeta Mandir, and holy Bhalka Tirth."
+      },
+      {
+        "day": 5,
+        "title": "Junagadh Heritage & Departure",
+        "description": "Visit Junagadh heritage monuments en route to Rajkot or Ahmedabad for scheduled departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rameshchandra Shah",
+        "rating": 5,
+        "text": "Our entire family was blessed on this yatra. Gujarati meals were pure and hotels were very clean.",
+        "date": "2026-08-29"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Ahmedabad UNESCO Heritage Old City & Stepwells",
+    "title": "Ahmedabad UNESCO Heritage Old City & Stepwells",
+    "slug": "ahmedabad-unesco-heritage-stepwells",
+    "category": "Cultural",
+    "destination": "Ahmedabad, Gujarat",
+    "location": "Old Walled City, Ahmedabad",
+    "country": "India",
+    "description": "Wander through narrow Pols of India’s first UNESCO World Heritage City, marvel at intricate Adalaj Stepwell, and visit Sabarmati Ashram.",
+    "shortDescription": "UNESCO heritage Pol walking tour, intricate Adalaj stepwell stone filigree, and Gandhi Ashram.",
+    "fullDescription": "Ahmedabad is India’s first designated UNESCO World Heritage City. Join the dawn Heritage Walk through the historic pols with ornate wooden bird feeders (chabutras) and secret underground rainwater tanks, marvel at the 5-story subterranean architecture of Adalaj Stepwell, and find serenity at Mahatma Gandhi’s Sabarmati Ashram.",
+    "price": 9500,
+    "originalPrice": 11000,
+    "discountedPrice": 9500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 78,
+    "reviewCount": 78,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Curated dawn Heritage Walk through 600-year-old Pols",
+      "Sidi Saiyyed Mosque world-famous Tree of Life stone lattice",
+      "Adalaj Stepwell five-story carved subterranean wonder",
+      "Sabarmati Ashram peaceful riverside Gandhi museum",
+      "Manek Chowk nighttime street food market culinary tour"
+    ],
+    "included": [
+      "2 Nights stay in restored heritage Haveli or 4-star hotel",
+      "Daily breakfast and traditional Gujarati Thali lunches",
+      "Certified UNESCO heritage storytelling guide",
+      "All local AC vehicle transfers"
+    ],
+    "excluded": [
+      "Personal food shopping at Manek Chowk",
+      "Tips for guide and driver"
+    ],
+    "availableDates": [
+      "2026-11-06",
+      "2026-12-04",
+      "2027-01-08"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Ahmedabad & Sabarmati Riverfront",
+        "description": "Arrive in Ahmedabad. Check in to heritage Haveli. Afternoon visit to Sabarmati Ashram and evening stroll on Riverfront."
+      },
+      {
+        "day": 2,
+        "title": "UNESCO Old City Walk & Adalaj Stepwell",
+        "description": "Dawn Heritage Walk from Kalupur Swaminarayan Temple to Jama Masjid. Afternoon drive to exquisite Adalaj Stepwell and Sarkhej Roza."
+      },
+      {
+        "day": 3,
+        "title": "Calico Textile Museum & Departure",
+        "description": "Tour famous textile museum or Law Garden handicraft bazaars before airport or railway station drop-off."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Darshana Merchant",
+        "rating": 5,
+        "text": "Staying in an authentic pol haveli was magical! The stepwell carvings are unbelievable.",
+        "date": "2026-07-22"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Rann Utsav Full Moon Tent City Cultural Gala",
+    "title": "Rann Utsav Full Moon Tent City Cultural Gala",
+    "slug": "rann-utsav-full-moon-cultural-gala",
+    "category": "Cultural",
+    "destination": "Kutch, Gujarat",
+    "location": "Dhordo & Bhuj, Kutch",
+    "country": "India",
+    "description": "Celebrate the world-famous Rann Utsav on full moon night amidst illuminated white salt sands, Kutchi folk dances, and artisan crafts.",
+    "shortDescription": "Full moon white desert luminescence, vibrant Kutchi Garba dances, and artisan master workshops.",
+    "fullDescription": "Rann Utsav is one of the world’s most magnificent cultural spectacles. Live in royal Swiss tents at Dhordo, walk out under the ethereal glow of the full moon reflecting off miles of white salt crust, listen to soul-stirring Sufi music, and watch master artisans demonstrate Rogan art, lacquer woodcraft, and Kutchi embroidery.",
+    "price": 24500,
+    "originalPrice": 28000,
+    "discountedPrice": 24500,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 5,
+    "reviews": 180,
+    "reviewCount": 180,
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-20 travelers",
+    "bestTime": "November to February (Full Moon Dates)",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Full Moon midnight walk across the glowing White Desert",
+      "Live Kutchi folk music and Garba performances every night",
+      "Nirona village masterclass in Rogan fabric painting",
+      "Aina Mahal and Prag Mahal historical palaces in Bhuj",
+      "Unlimited authentic Kutchi cuisine at Tent City dining halls"
+    ],
+    "included": [
+      "3 Nights accommodation in Premium AC Swiss Tents at Dhordo",
+      "All meals: morning tea, breakfast, lunch, high tea, and grand dinner",
+      "Transfers from Bhuj airport/station in AC luxury coach",
+      "Desert border permit and cultural show passes"
+    ],
+    "excluded": [
+      "Personal handicraft purchases",
+      "Paramotor and camel cart rides"
+    ],
+    "availableDates": [
+      "2026-11-23",
+      "2026-12-23",
+      "2027-01-22",
+      "2027-02-20"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhuj to Tent City Dhordo & White Rann Sunset",
+        "description": "Arrive in Bhuj and transfer to Tent City Dhordo with traditional Dhol welcome. Check in. Evening camel safari to the white desert at sunset."
+      },
+      {
+        "day": 2,
+        "title": "Full Moon Night Desert Magic & Cultural Gala",
+        "description": "Relax at Tent City activity club. Evening grand cultural gala followed by a late-night walk on the glowing moonlit white salt flats."
+      },
+      {
+        "day": 3,
+        "title": "Kalo Dungar & Craft Village Excursion",
+        "description": "Drive up Kalo Dungar peak for views of the salt desert edge. Afternoon visit to Gandhi Nu Gaam artisan village."
+      },
+      {
+        "day": 4,
+        "title": "Bhuj City Tour & Departure",
+        "description": "Tour Aina Mahal mirrored palace and Prag Mahal clock tower in Bhuj before airport drop-off."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kalpesh Zaveri",
+        "rating": 5,
+        "text": "The full moon night in the white desert is heavenly! Flawless arrangements by GujjuTours.",
+        "date": "2026-09-04"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Statue of Unity & Tribal Narmada Heritage Circuit",
+    "title": "Statue of Unity & Tribal Narmada Heritage Circuit",
+    "slug": "statue-of-unity-narmada-heritage",
+    "category": "Cultural",
+    "destination": "Kevadia, Gujarat",
+    "location": "Narmada Valley, Kevadia Colony",
+    "country": "India",
+    "description": "Stand at the feet of the world’s tallest statue (182m), take a high-speed elevator to the viewing gallery, cruise the Narmada, and explore Valley of Flowers.",
+    "shortDescription": "World’s tallest 182-meter statue, high-speed viewing gallery, and Narmada river cruise.",
+    "fullDescription": "The Statue of Unity honors Sardar Vallabhbhai Patel with monumental majesty. Take a high-speed elevator 153 meters into the statue chest viewing gallery, cruise the sparkling waters of the Narmada River, watch the evening projection mapping laser spectacle, and stroll through the Valley of Flowers and Cactus Garden.",
+    "price": 12800,
+    "originalPrice": 15000,
+    "discountedPrice": 12800,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 104,
+    "reviewCount": 104,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "182-meter Statue of Unity Viewing Gallery express access",
+      "Sardar Patel Museum & audio-visual exhibition hall",
+      "Nightly high-tech Laser Light & Sound projection show",
+      "Narmada River cruise around Sardar Sarovar Dam",
+      "Jungle Safari Park and Glow Garden night walk"
+    ],
+    "included": [
+      "2 Nights luxury tent / 4-star hotel stay in Kevadia",
+      "All meals: buffet breakfast, lunch, and dinner",
+      "Express Viewing Gallery tickets & laser show entry passes",
+      "Dedicated AC vehicle from Vadodara / Ahmedabad"
+    ],
+    "excluded": [
+      "Helicopter ride tickets over the statue",
+      "Personal souvenirs"
+    ],
+    "availableDates": [
+      "2026-11-13",
+      "2026-12-11",
+      "2027-01-15"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Kevadia & Valley of Flowers",
+        "description": "Drive from Vadodara/Ahmedabad to Kevadia. Check in. Visit Valley of Flowers, Butterfly Garden, and evening Glow Garden."
+      },
+      {
+        "day": 2,
+        "title": "Statue Viewing Gallery & Laser Show",
+        "description": "Ascend to the 153m Viewing Gallery for views of Sardar Sarovar Dam. Tour museum and witness evening laser projection show."
+      },
+      {
+        "day": 3,
+        "title": "Narmada River Cruise & Departure",
+        "description": "Morning scenic boat cruise on Narmada River. Visit Cactus Garden before return transfer to Vadodara."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jitendra Modi",
+        "rating": 5,
+        "text": "Massive engineering wonder! Seeing the laser show on the statue gave goosebumps.",
+        "date": "2026-08-05"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Palitana Shatrunjaya 863 Jain Temples Sacred Trail",
+    "title": "Palitana Shatrunjaya 863 Jain Temples Sacred Trail",
+    "slug": "palitana-shatrunjaya-jain-temples-trail",
+    "category": "Cultural",
+    "destination": "Bhavnagar, Gujarat",
+    "location": "Shatrunjaya Hill, Palitana",
+    "country": "India",
+    "description": "Ascend the sacred mountain of Shatrunjaya with 863 marble-carved Jain temples, holy shrines of Lord Rishabhdev, and serene white marble sanctums.",
+    "shortDescription": "The city of temples: 863 white marble shrines perched atop holy Shatrunjaya Hill.",
+    "fullDescription": "Palitana is the holiest pilgrimage site for the Jain community and the world’s only hill with over 800 carved temples. Climb 3,500 stone steps at sunrise to reach the sanctum of Adinath, marvel at exquisite marble lattice work that rivals the finest palaces, and absorb total tranquility in the holy hill complex.",
+    "price": 10500,
+    "originalPrice": 12500,
+    "discountedPrice": 10500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Moderate",
+    "rating": 4.9,
+    "reviews": 86,
+    "reviewCount": 86,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Dawn pilgrimage climb of 3,500 steps to Shatrunjaya summit",
+      "Adinath (Rishabhdev) main sanctum darshan and puja",
+      "Over 860 white marble carved temples across twin summits",
+      "Chaumukha four-faced temple architecture marvel",
+      "Strictly pure Jain satvik dining throughout the tour"
+    ],
+    "included": [
+      "2 Nights hotel accommodation in Palitana",
+      "Strict Jain Satvik breakfast, chauvihar dinner, and boiled water",
+      "AC private transportation from Bhavnagar / Ahmedabad",
+      "Pilgrimage coordination and assistance"
+    ],
+    "excluded": [
+      "Doli (chair sedan) charges for seniors",
+      "Special puja samagri"
+    ],
+    "availableDates": [
+      "2026-11-16",
+      "2026-12-14",
+      "2027-01-18"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhavnagar to Palitana & Evening Prarthana",
+        "description": "Pick up from Bhavnagar. Drive to holy Palitana. Evening visit to Taleti shrines and preparation for next morning climb."
+      },
+      {
+        "day": 2,
+        "title": "Shatrunjaya Hill Ascent & Sacred Darshan",
+        "description": "Pre-dawn climb up Shatrunjaya mountain. Seek blessings at Adinath temple and tour the marble temple complexes before descending by noon."
+      },
+      {
+        "day": 3,
+        "title": "Barton Museum & Return Transfer",
+        "description": "Visit local Jain art museums in Palitana before transferring back to Bhavnagar or Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kantilal Shah",
+        "rating": 5,
+        "text": "Shatrunjaya yatra was conducted with absolute devotion and care. Everything was well planned.",
+        "date": "2026-07-30"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Varanasi Ganga Aarti & Sarnath Spiritual Awakening",
+    "title": "Varanasi Ganga Aarti & Sarnath Spiritual Awakening",
+    "slug": "varanasi-ganga-aarti-sarnath-spiritual",
+    "category": "Cultural",
+    "destination": "Varanasi, Uttar Pradesh, India",
+    "location": "Holy Ganges Ghats, Varanasi",
+    "country": "India",
+    "description": "Witness the hypnotic evening Ganga Aarti at Dashashwamedh Ghat, take a sunrise rowboat past Manikarnika, and visit the Deer Park at Sarnath.",
+    "shortDescription": "Mesmerizing Dashashwamedh Ganga Aarti, dawn rowing past ancient ghats, and Sarnath Buddhist ruins.",
+    "fullDescription": "Varanasi is one of the world’s oldest continuously inhabited cities. Experience sunrise rowing on the holy Ganges as bells chime across sacred ghats, receive blessings at Kashi Vishwanath Corridor, witness the grand evening Aarti with blazing brass lamps, and explore Sarnath where Lord Buddha gave his first sermon.",
+    "price": 16500,
+    "originalPrice": 19500,
+    "discountedPrice": 16500,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 112,
+    "reviewCount": 112,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Dashashwamedh Ghat evening grand Maha Aarti from reserved boat",
+      "Dawn rowboat cruise past all 84 ghats on the sacred Ganges",
+      "VIP darshan facilitation at newly built Kashi Vishwanath Corridor",
+      "Sarnath Dhamek Stupa and Ashoka Lion Capital museum",
+      "Authentic Banarasi silk saree weaving atelier tour"
+    ],
+    "included": [
+      "3 Nights river-facing / boutique heritage hotel stay in Kashi",
+      "Daily breakfast and vegetarian dinners (Banarasi cuisine)",
+      "Private sunrise rowboat and reserved aarti boat seats",
+      "AC transfers from Varanasi Lal Bahadur Shastri Airport"
+    ],
+    "excluded": [
+      "Puja offerings and personal tipping",
+      "Airfare to Varanasi"
+    ],
+    "availableDates": [
+      "2026-11-17",
+      "2026-12-15",
+      "2027-01-19",
+      "2027-02-16"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Varanasi & Evening Ganga Aarti",
+        "description": "Arrive at Varanasi airport. Transfer to hotel. In the evening, witness the breathtaking Dashashwamedh Ghat Maha Aarti from a private boat."
+      },
+      {
+        "day": 2,
+        "title": "Sunrise Boat Ride & Kashi Vishwanath Darshan",
+        "description": "Dawn boat cruise along the bathing ghats. Visit the golden-spire Kashi Vishwanath Temple, Annapurna Temple, and Sankat Mochan."
+      },
+      {
+        "day": 3,
+        "title": "Sarnath Buddhist Circuit & Silk Weaving",
+        "description": "Excursion to Sarnath where Buddha preached his first sermon. Tour the Dhamek Stupa and local Banarasi brocade silk weavers."
+      },
+      {
+        "day": 4,
+        "title": "Morning Ghat Walk & Departure",
+        "description": "Explore the narrow alleys of old Varanasi for Kachori and Malaiyo dessert before departure transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Mukeshbhai Doshi",
+        "rating": 5,
+        "text": "Seeing the Ganga Aarti from our reserved boat was unforgettable. Very smooth VIP darshan.",
+        "date": "2026-08-17"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Royal Rajasthan Palaces of Jaipur, Udaipur & Jodhpur",
+    "title": "Royal Rajasthan Palaces of Jaipur, Udaipur & Jodhpur",
+    "slug": "royal-rajasthan-palaces-heritage-tour",
+    "category": "Cultural",
+    "destination": "Rajasthan, India",
+    "location": "Jaipur, Jodhpur & Udaipur, Rajasthan",
+    "country": "India",
+    "description": "Immerse yourself in royal Rajput glory: Amber Fort and Hawa Mahal in the Pink City, Mehrangarh Fort in the Blue City, and Lake Pichola in the City of Lakes.",
+    "shortDescription": "Regal Amber Fort, blue rooftops of Mehrangarh, and Lake Pichola boat palaces in Rajasthan.",
+    "fullDescription": "Rajasthan is India’s kingdom of pageantry and valor. Ride up the cobblestone ramparts of Amber Fort in Jaipur, gaze out from the towering battlements of Mehrangarh Fort in Jodhpur, take an evening royal boat cruise past Lake Palace in Udaipur, and savor authentic Rajasthani Dal Baati Churma.",
+    "price": 34900,
+    "originalPrice": 39500,
+    "discountedPrice": 34900,
+    "currency": "INR",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 145,
+    "reviewCount": 145,
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-18 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Amber Fort mirror palace (Sheesh Mahal) guided walk in Jaipur",
+      "Hawa Mahal and City Palace royal galleries",
+      "Mehrangarh Fort towering ramparts and Jaswant Thada in Jodhpur",
+      "Romantic sunset royal boat cruise on Lake Pichola in Udaipur",
+      "Ranakpur 1,444 uniquely carved marble pillar Jain temple"
+    ],
+    "included": [
+      "6 Nights 4-star royal heritage haveli hotels",
+      "Buffet breakfast and Rajasthani / Gujarati dinners daily",
+      "All intercity transfers in private AC Innova / tempo traveler",
+      "Lake Pichola boat cruise tickets"
+    ],
+    "excluded": [
+      "Monument camera tokens",
+      "Flights to Jaipur / from Udaipur"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-13",
+      "2027-01-17",
+      "2027-02-14"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Jaipur Pink City",
+        "description": "Arrive in Jaipur. Check into royal heritage hotel. Evening visit to Birla Temple and Chokhi Dhani cultural village."
+      },
+      {
+        "day": 2,
+        "title": "Amber Fort, City Palace & Hawa Mahal",
+        "description": "Tour grand Amber Fort, Jal Mahal photo stop, City Palace museum, and the stone astronomical instruments at Jantar Mantar."
+      },
+      {
+        "day": 3,
+        "title": "Jaipur to Jodhpur Blue City via Pushkar",
+        "description": "Drive to Jodhpur via holy Pushkar lake and Brahma Temple. Check in and witness Mehrangarh Fort illuminated at night."
+      },
+      {
+        "day": 4,
+        "title": "Mehrangarh Fort & Drive to Udaipur via Ranakpur",
+        "description": "Tour Mehrangarh Fort. Drive to Udaipur stopping at the magnificent Ranakpur Jain temple complex."
+      },
+      {
+        "day": 5,
+        "title": "Udaipur City Palace & Lake Pichola Cruise",
+        "description": "Tour City Palace complex, Jagdish Temple, Saheliyon Ki Bari, and enjoy sunset boat cruise on Lake Pichola."
+      },
+      {
+        "day": 6,
+        "title": "Kumbhalgarh Fort Great Wall Excursion",
+        "description": "Day trip to massive Kumbhalgarh Fort boasting the second longest wall in the world."
+      },
+      {
+        "day": 7,
+        "title": "Departure from Udaipur",
+        "description": "Shopping for miniature paintings and silver craft before transfer to Udaipur Maharana Pratap Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Geeta Vaghela",
+        "rating": 5,
+        "text": "Royalty at every step! The Udaipur lake boat ride was heavenly and food was outstanding.",
+        "date": "2026-08-22"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Madurai Meenakshi & Thanjavur Chola Temple Tour",
+    "title": "Madurai Meenakshi & Thanjavur Chola Temple Tour",
+    "slug": "madurai-thanjavur-chola-temples-tour",
+    "category": "Cultural",
+    "destination": "Tamil Nadu, India",
+    "location": "Madurai, Thanjavur & Trichy",
+    "country": "India",
+    "description": "Marvel at the towering multicolored gopurams of Meenakshi Amman Temple, the thousand-year-old Brihadisvara Temple, and Ranganathaswamy.",
+    "shortDescription": "Towering sculpted temple gopurams, thousand-year-old Chola granite monoliths, and sacred Cauvery traditions.",
+    "fullDescription": "Tamil Nadu’s temple architecture represents the pinnacle of Dravidian artistry. Gaze upon the 14 sculpted gopurams of Madurai Meenakshi Temple, witness the massive granite vimana of Thanjavur’s 1,000-year-old Brihadisvara UNESCO Temple, and explore Srirangam, the world’s largest functioning Hindu temple complex.",
+    "price": 21800,
+    "originalPrice": 25000,
+    "discountedPrice": 21800,
+    "currency": "INR",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 53,
+    "reviewCount": 53,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Tamil",
+    "highlights": [
+      "Madurai Meenakshi Amman Temple 1,000 pillar hall and night ceremony",
+      "UNESCO Brihadisvara Big Temple single-granite cupola in Thanjavur",
+      "Sri Ranganathaswamy Temple massive 21-gopuram temple city at Srirangam",
+      "Thirumalai Nayakkar Palace Italian-Dravidian vaulted courtyard",
+      "Thanjavur bronze casting and gold foil painting workshops"
+    ],
+    "included": [
+      "4 Nights deluxe hotel accommodation",
+      "Pure vegetarian buffet breakfast and dinners",
+      "Private AC coach for all intercity travel",
+      "Expert temple historian and heritage storyteller"
+    ],
+    "excluded": [
+      "Special darshan tickets",
+      "Flights to Madurai / from Trichy"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Madurai & Meenakshi Amman Night Ceremony",
+        "description": "Arrive in Madurai. Check in. Visit Thirumalai Nayakkar Palace and attend the sacred night procession at Meenakshi Temple."
+      },
+      {
+        "day": 2,
+        "title": "Meenakshi Temple Exploration & Drive to Thanjavur",
+        "description": "Morning guided walk through the Hall of Thousand Pillars. Scenic drive to the ancient Chola capital of Thanjavur."
+      },
+      {
+        "day": 3,
+        "title": "Brihadisvara Big Temple & Palace Museum",
+        "description": "Explore the 1,000-year-old Great Living Chola Temple at Thanjavur and Royal Palace bronze gallery."
+      },
+      {
+        "day": 4,
+        "title": "Trichy Rock Fort & Srirangam Temple Complex",
+        "description": "Drive to Trichy. Climb 437 steps to the summit Rock Fort Temple and tour the colossal 156-acre Srirangam temple."
+      },
+      {
+        "day": 5,
+        "title": "Cauvery River Walk & Departure",
+        "description": "Cauvery riverbank morning prayers before transfer to Trichy or Madurai airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Chandrakant Barot",
+        "rating": 5,
+        "text": "The Brihadisvara temple architecture left us speechless. Excellent tour guide!",
+        "date": "2026-07-06"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Amritsar Golden Temple & Wagah Border Patriotic Journey",
+    "title": "Amritsar Golden Temple & Wagah Border Patriotic Journey",
+    "slug": "amritsar-golden-temple-wagah-border",
+    "category": "Cultural",
+    "destination": "Amritsar, Punjab, India",
+    "location": "Amritsar, Punjab",
+    "country": "India",
+    "description": "Bow before the illuminated Golden Temple, volunteer at the world’s largest free community kitchen (Langar), and feel national pride at Wagah Border.",
+    "shortDescription": "Illuminated Harmandir Sahib, Langar community kitchen service, and electrifying Wagah Border ceremony.",
+    "fullDescription": "Amritsar radiates unmatched warmth and devotion. Walk barefoot around the sacred Sarovar reflecting the gilded Harmandir Sahib, participate in making Rotis at the monumental Langar kitchen feeding 100,000 people daily, pay solemn homage at Jallianwala Bagh, and witness the roaring Wagah Border retreat parade.",
+    "price": 11900,
+    "originalPrice": 14000,
+    "discountedPrice": 11900,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 98,
+    "reviewCount": 98,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-18 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Punjabi",
+    "highlights": [
+      "Harmandir Sahib (Golden Temple) day and night illuminated darshan",
+      "Palki Sahib sacred night palanquin closing ceremony",
+      "Volunteering sewa in the world’s largest Langar community kitchen",
+      "VIP seats at the thunderous Wagah Border Beating Retreat ceremony",
+      "Jallianwala Bagh national memorial and Partition Museum"
+    ],
+    "included": [
+      "2 Nights 4-star hotel stay within walking distance of Golden Temple",
+      "Buffet breakfast and Punjabi vegetarian dinners daily",
+      "Private AC vehicle for Wagah Border and city sightseeing",
+      "Heritage street food tasting voucher (Amritsari Kulcha & Lassi)"
+    ],
+    "excluded": [
+      "Flight or train tickets to Amritsar",
+      "Personal shopping for Phulkari dupattas"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-01-14"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Amritsar & Night Palki Ceremony",
+        "description": "Arrive at Amritsar airport. Check into hotel. Evening darshan at the Golden Temple and attend the ceremonial Palki procession."
+      },
+      {
+        "day": 2,
+        "title": "Langar Sewa, Jallianwala Bagh & Wagah Border",
+        "description": "Participate in Langar sewa. Visit Jallianwala Bagh. Afternoon drive to Wagah Border for the exhilarating flag-lowering retreat ceremony."
+      },
+      {
+        "day": 3,
+        "title": "Partition Museum & Local Food Trail",
+        "description": "Tour the poignant Partition Museum at Town Hall, taste legendary Amritsari Kulcha, and transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Harshil Parikh",
+        "rating": 5,
+        "text": "The peace inside Golden Temple at night cannot be described in words. Wagah ceremony was energetic!",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Hampi Vijayanagara Boulder Ruins & Heritage Trail",
+    "title": "Hampi Vijayanagara Boulder Ruins & Heritage Trail",
+    "slug": "hampi-vijayanagara-heritage-ruins-trail",
+    "category": "Cultural",
+    "destination": "Karnataka, India",
+    "location": "Tungabhadra Basin, Hampi",
+    "country": "India",
+    "description": "Step into a surreal boulder landscape among ruins of the 14th-century Vijayanagara Empire: stone chariot at Vittala Temple, Virupaksha, and Queen’s Bath.",
+    "shortDescription": "Monolithic stone chariot of Vittala, musical stone pillars, and UNESCO boulder empire in Hampi.",
+    "fullDescription": "Hampi is an open-air museum frozen in stone. Wander amidst colossal granite boulders framing grand palaces, discover the iconic monolithic Stone Chariot at Vittala Temple, listen to the acoustic mystery of musical pillars, take a round coracle boat ride on the Tungabhadra River, and climb Matanga Hill for a magical sunset.",
+    "price": 15200,
+    "originalPrice": 17500,
+    "discountedPrice": 15200,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.8,
+    "reviews": 69,
+    "reviewCount": 69,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "October to March",
+    "language": "Hindi, English, Kannada",
+    "highlights": [
+      "Vittala Temple stone chariot and 56 musical pillars",
+      "Virupaksha Temple 7th-century functioning riverside shrine",
+      "Traditional round woven coracle boat ride on Tungabhadra river",
+      "Matanga Hill panoramic sunset over endless boulder fields",
+      "Royal Enclosure, Lotus Mahal, and Elephant Stables"
+    ],
+    "included": [
+      "3 Nights boutique heritage resort stay near Hampi",
+      "Breakfast and dinners included daily",
+      "Certified archaeological guide for sacred and royal centers",
+      "Coracle boat ride & electric buggies inside monument zones"
+    ],
+    "excluded": [
+      "Train or flight tickets to Hospet / Hubli",
+      "Personal bicycle rentals"
+    ],
+    "availableDates": [
+      "2026-11-19",
+      "2026-12-17",
+      "2027-01-21"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Hospet/Hampi & Tungabhadra Sunset",
+        "description": "Arrive at Hospet station. Drive to Hampi resort. Afternoon visit to Hemakuta Hill sunset and Kadalekalu Ganesha monolithic statue."
+      },
+      {
+        "day": 2,
+        "title": "Sacred Center: Virupaksha & Vittala Stone Chariot",
+        "description": "Tour ancient Virupaksha Temple, coracle river ride to Kodandarama, and the world-famous Stone Chariot and musical pillars at Vittala."
+      },
+      {
+        "day": 3,
+        "title": "Royal Center: Lotus Mahal & Elephant Stables",
+        "description": "Explore the Zenana Enclosure, Lotus Mahal, Elephant Stables, underground Shiva shrine, and Hazara Rama Temple carvings."
+      },
+      {
+        "day": 4,
+        "title": "Matanga Hill Sunrise & Departure",
+        "description": "Dawn hike up Matanga Hill for breathtaking sunrise over ruins before departure transfer to Hospet."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Jaydeep Raval",
+        "rating": 5,
+        "text": "Hampi feels like another planet. The coracle boat ride and Vittala stone chariot were extraordinary.",
+        "date": "2026-06-25"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Sasan Gir Asiatic Lion Jungle Safari & Devalia Park",
+    "title": "Sasan Gir Asiatic Lion Jungle Safari & Devalia Park",
+    "slug": "sasan-gir-asiatic-lion-jungle-safari",
+    "category": "Wildlife",
+    "destination": "Gir National Park, Gujarat",
+    "location": "Sasan Gir, Junagadh District",
+    "country": "India",
+    "description": "Track the world’s only surviving wild Asiatic Lions in their natural dry deciduous teak kingdom on open-top 4x4 Gypsy jungle safaris.",
+    "shortDescription": "World’s only wild Asiatic lions, open 4x4 Gypsy jungle safaris, and Maldhari tribal settlements.",
+    "fullDescription": "Gir National Park is the proud sanctuary of the Asiatic Lion. Set out on morning and afternoon open-top 4x4 Gypsy drives deep into the rugged wilderness, watch for majestic lion prides resting under banyan trees, spot leopards, sambar deer, and mugger crocodiles along Kamleshwar Dam, and meet the forest-dwelling Maldhari pastoralists.",
+    "price": 17500,
+    "originalPrice": 20000,
+    "discountedPrice": 17500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 152,
+    "reviewCount": 152,
+    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to May",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Two confirmed open-top 4x4 Gypsy safaris in Core Gir Forest",
+      "Guaranteed lion sightings at Devalia Safari Park buffer zone",
+      "Kamleshwar Dam reservoir crocodile spotting",
+      "Authentic Kathiyawadi wilderness dinner by the mango orchards",
+      "Interaction with indigenous Siddi African-heritage dancers"
+    ],
+    "included": [
+      "2 Nights luxury forest resort stay amidst mango orchards",
+      "All meals: Kathiyawadi and North Indian buffet menus",
+      "Forest Department permits, Gypsy vehicle, driver, and forest tracker",
+      "Transfers from Rajkot / Junagadh"
+    ],
+    "excluded": [
+      "DSLR professional camera forest entry permits",
+      "Personal souvenirs"
+    ],
+    "availableDates": [
+      "2026-11-13",
+      "2026-12-11",
+      "2027-01-15",
+      "2027-02-12"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Sasan Gir & Devalia Safari Park",
+        "description": "Pick up from Rajkot/Junagadh. Check in to mango orchard resort. Afternoon safari in Devalia Interpretation Zone. Evening Siddi Dhamal dance show."
+      },
+      {
+        "day": 2,
+        "title": "Core Jungle Open Gypsy Safaris",
+        "description": "Dawn 6:00 AM Gypsy safari in deep Gir forest tracking lion roaring calls. Midday relaxation by resort pool. Second afternoon safari in a different forest zone."
+      },
+      {
+        "day": 3,
+        "title": "Crocodile Sanctuary & Return Transfer",
+        "description": "Visit crocodile breeding center and local mango pulp markets before departure transfer to Rajkot."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Ashwin Chokshi",
+        "rating": 5,
+        "text": "Saw a pride of two lionesses and cubs just 15 feet from our jeep! An unbelievable wildlife encounter.",
+        "date": "2026-08-27"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Velavadar Blackbuck National Park & Grasslands Safari",
+    "title": "Velavadar Blackbuck National Park & Grasslands Safari",
+    "slug": "velavadar-blackbuck-grasslands-safari",
+    "category": "Wildlife",
+    "destination": "Bhavnagar, Gujarat",
+    "location": "Bhal Grasslands, Velavadar",
+    "country": "India",
+    "description": "Safari across golden savanna grasslands to see leaping spiral-horned Blackbuck antelopes, endangered Indian Wolves, and striped hyenas.",
+    "shortDescription": "Golden savanna plains, thousands of spiral-horned blackbucks, and rare Indian wolf sightings.",
+    "fullDescription": "Velavadar is Gujarat’s premier African-style savanna sanctuary. Watch herds of graceful Blackbuck antelopes sprinting at speeds over 80 km/h, witness the world’s largest roost of Montagu’s and Pallid harriers returning at sunset, and track the elusive Indian wolf across the vast golden plains of the Bhal region.",
+    "price": 13200,
+    "originalPrice": 15500,
+    "discountedPrice": 13200,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 61,
+    "reviewCount": 61,
+    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-10 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Herds of 3,000+ leaping Indian Blackbucks with spiral horns",
+      "Endangered Indian Wolf and striped hyena tracking",
+      "World’s largest winter roosting site for harrier raptors",
+      "African savanna-like landscape photography at golden hour",
+      "Luxury safari lodge stay directly overlooking the plains"
+    ],
+    "included": [
+      "2 Nights luxury safari lodge stay",
+      "All meals: organic farm-to-table breakfast, lunch, and dinner",
+      "Two open 4x4 Gypsy grassland safaris with naturalist guide",
+      "Transfers from Bhavnagar airport / station"
+    ],
+    "excluded": [
+      "Commercial camera fees",
+      "Gratuities for driver and tracker"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bhavnagar to Velavadar & Sunset Harrier Roost",
+        "description": "Pick up from Bhavnagar. Drive 1 hour to Velavadar lodge. Afternoon safari to see hundreds of harrier birds diving into grassland roosts at dusk."
+      },
+      {
+        "day": 2,
+        "title": "Morning Blackbuck & Wolf Safari",
+        "description": "Dawn safari into the golden plains. Photograph male blackbucks sparring with spiral horns. Track Indian wolf packs in scrubland."
+      },
+      {
+        "day": 3,
+        "title": "Birding Walk & Return Transfer",
+        "description": "Morning walking trail with resident naturalist before checkout and transfer back to Bhavnagar or Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Mehul Suthar",
+        "rating": 5,
+        "text": "Feels like the Serengeti right here in Gujarat! Thousands of blackbucks running free.",
+        "date": "2026-07-16"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Little Rann of Kutch Indian Wild Ass Sanctuary Expedition",
+    "title": "Little Rann of Kutch Indian Wild Ass Sanctuary Expedition",
+    "slug": "little-rann-wild-ass-sanctuary-safari",
+    "category": "Wildlife",
+    "destination": "Little Rann, Gujarat",
+    "location": "Little Rann of Kutch, Surendranagar District",
+    "country": "India",
+    "description": "Safari across cracked mudflats to track the last surviving population of the magnificent chestnut Indian Wild Ass (Khur) and thousands of flamingos.",
+    "shortDescription": "The last wild sanctuary of the chestnut Indian Wild Ass, cracked mudflats, and greater flamingo colonies.",
+    "fullDescription": "The Little Rann of Kutch is a vast saline desert landscape unlike anywhere else on the planet. Embark on custom open 4x4 safaris across cracked earth plains to observe herds of the endangered Indian Wild Ass galloping up to 50 km/h, visit traditional salt-making Agariya communities, and see Greater Flamingos turning seasonal wetlands pink.",
+    "price": 12500,
+    "originalPrice": 15000,
+    "discountedPrice": 12500,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 74,
+    "reviewCount": 74,
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Herds of the rare chestnut Indian Wild Ass (Equus hemionus khur)",
+      "High-speed 4x4 driving on endless cracked salt mudflats",
+      "Colonies of migratory Greater and Lesser Flamingos on water edges",
+      "Visit to traditional Agariya salt pan harvesting families",
+      "Eco-cottage Kooba stay built with local mud and thatch"
+    ],
+    "included": [
+      "2 Nights eco-resort cottage stay in Dasada / Bajana",
+      "All meals: Kathiyawadi country cooking with fresh buttermilk",
+      "Two cross-desert open 4x4 safaris with driver and naturalist",
+      "Transfers from Ahmedabad"
+    ],
+    "excluded": [
+      "Forest camera permits",
+      "Personal tipping"
+    ],
+    "availableDates": [
+      "2026-11-14",
+      "2026-12-12",
+      "2027-01-16"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ahmedabad to Dasada & Wetland Safari",
+        "description": "Drive from Ahmedabad to Dasada (2 hours). Check in. Afternoon safari to the wetland borders of the Little Rann for pelicans and cranes."
+      },
+      {
+        "day": 2,
+        "title": "Deep Mudflat Wild Ass Safari & Salt Pans",
+        "description": "Dawn desert safari deep into cracked salt flats. Track wild ass herds running at full sprint. Meet Agariyas harvesting crystal salt."
+      },
+      {
+        "day": 3,
+        "title": "Village Weaver Trail & Return",
+        "description": "Visit local Rabari and Mir embroidery artisans before return transfer to Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Paresh Gandhi",
+        "rating": 5,
+        "text": "The wild asses running in the open cracked desert was breathtaking! Fantastic eco-resort hospitality.",
+        "date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Thol Lake & Khijadiya Bird Sanctuaries Wetland Tour",
+    "title": "Thol Lake & Khijadiya Bird Sanctuaries Wetland Tour",
+    "slug": "thol-khijadiya-wetlands-birdwatching",
+    "category": "Wildlife",
+    "destination": "Jamnagar & Thol, Gujarat",
+    "location": "Khijadiya Sanctuary & Thol Bird Sanctuary",
+    "country": "India",
+    "description": "Spot over 300 migratory waterbird species across Ramsar wetland sites: Dalmatian pelicans, flamingos, sarus cranes, and marsh harriers.",
+    "shortDescription": "Ramsar wetland bird sanctuaries, thousands of flamingos, and rare pelican colonies.",
+    "fullDescription": "Gujarat is India’s foremost avian paradise. Travel between Ramsar-designated Thol Bird Sanctuary near Ahmedabad and Khijadiya Sanctuary on the Gulf of Kutch, where freshwater marshes meet seawater mangroves. Accompanied by expert ornithologists, witness thousands of Sarus Cranes, Demoiselle Cranes, and Dalmatian Pelicans.",
+    "price": 9900,
+    "originalPrice": 11800,
+    "discountedPrice": 9900,
+    "currency": "INR",
+    "duration": "3 Days / 2 Nights",
+    "durationDays": 3,
+    "durationNights": 2,
+    "difficulty": "Easy",
+    "rating": 4.7,
+    "reviews": 45,
+    "reviewCount": 45,
+    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-10 travelers",
+    "bestTime": "November to February",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Over 300 bird species including Dalmatian Pelicans and Black-necked Storks",
+      "Khijadiya unique marine-freshwater dual ecosystem trails",
+      "Thol Lake tranquil morning water mirror reflections",
+      "High-power spotting scopes provided for bird viewing",
+      "Guided photography hides for close-up avian frames"
+    ],
+    "included": [
+      "2 Nights hotel stay in Jamnagar & Ahmedabad",
+      "All meals: breakfast, packed birding lunches, and dinners",
+      "Forest department walking permits and hide access",
+      "AC private vehicle transfers"
+    ],
+    "excluded": [
+      "Telephoto camera permits",
+      "Personal binoculars"
+    ],
+    "availableDates": [
+      "2026-11-21",
+      "2026-12-19",
+      "2027-01-23"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Ahmedabad to Thol Lake Sunrise",
+        "description": "Early morning start to Ramsar Thol Lake. Watch thousands of flamingos and cranes against the rising sun. Drive to Jamnagar."
+      },
+      {
+        "day": 2,
+        "title": "Khijadiya Bird Sanctuary Full Day Trails",
+        "description": "Full day birdwatching in freshwater and marine watchtowers of Khijadiya with expert naturalist."
+      },
+      {
+        "day": 3,
+        "title": "Lakhota Lake & Return Transfer",
+        "description": "Morning walk around Lakhota Palace Lake in Jamnagar before returning to Rajkot or Ahmedabad."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Samir Bhatt",
+        "rating": 5,
+        "text": "A photographer dream! Captured pelicans, flamingos, and harriers from close range.",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Jambughoda Wildlife Sanctuary & Leopard Trail",
+    "title": "Jambughoda Wildlife Sanctuary & Leopard Trail",
+    "slug": "jambughoda-wildlife-leopard-forest-trail",
+    "category": "Wildlife",
+    "destination": "Panchmahal, Gujarat",
+    "location": "Champaner Foothills, Jambughoda",
+    "country": "India",
+    "description": "Hike through dense teak and bamboo jungles in Jambughoda, track Indian leopards and sloth bears, and visit UNESCO Champaner-Pavagadh ruins.",
+    "shortDescription": "Teak forest trails, elusive Indian leopards, sloth bears, and UNESCO medieval fortresses.",
+    "fullDescription": "Located near the UNESCO World Heritage site of Champaner, Jambughoda is a lush forest reserve populated by Indian leopards, sloth bears, wild boars, and four-horned antelopes (Chousingha). Stay at a heritage jungle palace, trek along the Kada Dam reservoir trails, and discover ancient tribal shrines.",
+    "price": 6800,
+    "originalPrice": 8200,
+    "discountedPrice": 6800,
+    "currency": "INR",
+    "duration": "2 Days / 1 Night",
+    "durationDays": 2,
+    "durationNights": 1,
+    "difficulty": "Moderate",
+    "rating": 4.6,
+    "reviews": 36,
+    "reviewCount": 36,
+    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to March",
+    "language": "Gujarati, Hindi, English",
+    "highlights": [
+      "Leopard and sloth bear territory guided forest hikes",
+      "Kada Dam scenic reservoir nature camp and watchtower",
+      "Heritage stay at the Palace of the Maharana of Jambughoda",
+      "Excursion to UNESCO Champaner-Pavagadh mosque ruins",
+      "Pithora tribal wall painting demonstration"
+    ],
+    "included": [
+      "1 Night stay at Jambughoda Palace or eco-campsite",
+      "Traditional royal Gujarati breakfast, lunch, and dinner",
+      "Sanctuary permits and local forest tribal guide",
+      "Transfers from Vadodara"
+    ],
+    "excluded": [
+      "Champaner monument entry passes",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-11-07",
+      "2026-11-21",
+      "2026-12-05"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Vadodara to Jambughoda & Kada Dam Walk",
+        "description": "Short 1.5 hr drive from Vadodara. Check in. Afternoon guided trek around Kada Dam looking for sloth bear pugmarks and waterbirds."
+      },
+      {
+        "day": 2,
+        "title": "Morning Forest Hike & Champaner Heritage",
+        "description": "Dawn trek through Targol forest. Visit the grand Jami Masjid in UNESCO Champaner before returning to Vadodara."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Anand Kothari",
+        "rating": 5,
+        "text": "Quiet forest close to Vadodara. The palace hospitality was royal and peaceful.",
+        "date": "2026-05-28"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Ranthambore Royal Bengal Tiger Safari",
+    "title": "Ranthambore Royal Bengal Tiger Safari",
+    "slug": "ranthambore-bengal-tiger-reserve-safari",
+    "category": "Wildlife",
+    "destination": "Sawai Madhopur, Rajasthan, India",
+    "location": "Ranthambore National Park, Rajasthan",
+    "country": "India",
+    "description": "Track the majestic Royal Bengal Tiger in the shadow of the 10th-century Ranthambore Fort across ancient banyan trees and lake ruins.",
+    "shortDescription": "Royal Bengal tigers amidst ancient ruined fortresses, lake safaris, and open Gypsy tracking.",
+    "fullDescription": "Ranthambore is India’s most iconic tiger reserve. Board open 4x4 Gypsies to track Bengal tigers walking past ancient stone arches, crocodiles sunbathing on the banks of Padam Talao, sambar deer grazing in lotus ponds, and leopards lounging along ancient banyan canopies.",
+    "price": 23500,
+    "originalPrice": 27000,
+    "discountedPrice": 23500,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 5,
+    "reviews": 170,
+    "reviewCount": 170,
+    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to June",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Three confirmed open Gypsy safaris in premium zones (Zones 1-5)",
+      "High probability of sighting wild Bengal tigers at close range",
+      "UNESCO Ranthambore Fort clifftop exploration with Trinetra Ganesha darshan",
+      "Scenic lakes: Padam Talao, Rajbagh, and Malik Talao",
+      "Luxury jungle resort stay with Rajasthani live music evenings"
+    ],
+    "included": [
+      "3 Nights luxury wilderness resort stay",
+      "All meals: buffet breakfast, lunch, and dinner (Veg / Jain choices)",
+      "3 Gypsy jungle safari bookings, forest permits, tracker fees",
+      "Transfers from Sawai Madhopur station or Jaipur"
+    ],
+    "excluded": [
+      "Camera commercial permits",
+      "Flights to Jaipur"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-10",
+      "2027-01-14",
+      "2027-02-11"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Jaipur/Sawai Madhopur to Ranthambore",
+        "description": "Pick up and transfer to Ranthambore jungle resort. Check in. Afternoon tea and evening wildlife documentary screening."
+      },
+      {
+        "day": 2,
+        "title": "Morning and Afternoon Tiger Safaris",
+        "description": "Dawn 6:00 AM Gypsy safari in core tiger territory. Return for breakfast and pool leisure. 2:30 PM second safari around Padam lake ruins."
+      },
+      {
+        "day": 3,
+        "title": "Third Safari & Ranthambore Fort Hike",
+        "description": "Morning third safari drive. Afternoon trip to 10th-century Ranthambore Fort and Trinetra Ganesha Temple overlooking the forest."
+      },
+      {
+        "day": 4,
+        "title": "Departure to Jaipur",
+        "description": "Breakfast and return transfer to Sawai Madhopur station or Jaipur airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Dhaval Shah",
+        "rating": 5,
+        "text": "Saw tiger T-120 walking right past our gypsy in Zone 3! Unbelievable rush. GujjuTours zone booking was spot on.",
+        "date": "2026-08-19"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Jim Corbett Wilderness Safari & River Kosi Eco-Lodge",
+    "title": "Jim Corbett Wilderness Safari & River Kosi Eco-Lodge",
+    "slug": "jim-corbett-wilderness-safari-ecolodge",
+    "category": "Wildlife",
+    "destination": "Uttarakhand, India",
+    "location": "Kumaon Foothills, Jim Corbett National Park",
+    "country": "India",
+    "description": "Explore India’s oldest national park on the banks of River Ramganga: Bengal tigers, Asian wild elephant herds, and Gharial crocodiles.",
+    "shortDescription": "India’s oldest national park, wild Asian elephant herds, and luxury eco-lodges along the Kosi River.",
+    "fullDescription": "Established in 1936, Jim Corbett National Park is celebrated for its towering Sal forests, picturesque river valleys, and thriving predator population. Journey through Bijrani and Dhikala zones in 4x4 jeeps, watch Asian elephant herds bathing in the Ramganga, and unwind at a riverside eco-lodge along the clear waters of River Kosi.",
+    "price": 21000,
+    "originalPrice": 24500,
+    "discountedPrice": 21000,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 89,
+    "reviewCount": 89,
+    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "November to May",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Two open jeep safaris in premier Bijrani and Jhirna zones",
+      "Wild herds of Asian Elephants crossing the Ramganga River",
+      "Rare fish-eating Gharial crocodiles and river otters",
+      "Riverside cottage stay along the sparkling Kosi River",
+      "Corbett Waterfall nature trail and heritage museum"
+    ],
+    "included": [
+      "3 Nights riverfront luxury eco-lodge accommodation",
+      "All meals: buffet breakfast, lunch, and dinner",
+      "Jeep safari permits, guide charges, and entry taxes",
+      "Transfers from Kathgodam or Ramnagar railway station"
+    ],
+    "excluded": [
+      "Dhikala canter safari upgrades",
+      "Travel to Ramnagar / Delhi"
+    ],
+    "availableDates": [
+      "2026-11-18",
+      "2026-12-16",
+      "2027-01-20"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Delhi/Kathgodam to Corbett & River Kosi Leisure",
+        "description": "Pick up and scenic drive to Ramnagar. Check into Kosi riverside lodge. Afternoon relaxation beside the rushing river."
+      },
+      {
+        "day": 2,
+        "title": "Bijrani Zone Morning Jeep Safari",
+        "description": "Dawn 4x4 safari deep into Bijrani Sal forest tracking tigers and wild elephants. Afternoon nature walk with resident naturalist."
+      },
+      {
+        "day": 3,
+        "title": "Jhirna Zone Safari & Corbett Falls",
+        "description": "Second safari in Jhirna zone famous for sloth bears. Afternoon excursion to Corbett Falls and heritage museum."
+      },
+      {
+        "day": 4,
+        "title": "Garjiya Devi Temple & Departure",
+        "description": "Visit the river-island Garjiya Devi Temple before transfer to Ramnagar or Kathgodam station."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Nitin Solanki",
+        "rating": 5,
+        "text": "Saw a herd of 20 wild elephants crossing the river right in front of us! Magical park.",
+        "date": "2026-07-01"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Kaziranga One-Horned Rhino Jeep & Elephant Safari",
+    "title": "Kaziranga One-Horned Rhino Jeep & Elephant Safari",
+    "slug": "kaziranga-one-horned-rhino-safari",
+    "category": "Wildlife",
+    "destination": "Assam, India",
+    "location": "Brahmaputra Floodplains, Kaziranga",
+    "country": "India",
+    "description": "Encounter the prehistoric Great Indian One-Horned Rhinoceros on dawn elephant safaris through mist-shrouded tall elephant grass in Kaziranga.",
+    "shortDescription": "Prehistoric one-horned rhinos, dawn elephant-back mist safaris, and Brahmaputra river dolphins.",
+    "fullDescription": "Kaziranga National Park is a UNESCO World Heritage biodiversity hotspot harboring two-thirds of the world’s one-horned rhinos. Ride atop gentle elephants at sunrise through sea-like tall grasslands, board 4x4 jeeps across Central and Western ranges to spot wild water buffaloes, swamp deer, and Bengal floricans, and cruise the Brahmaputra.",
+    "price": 29800,
+    "originalPrice": 34000,
+    "discountedPrice": 29800,
+    "currency": "INR",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 92,
+    "reviewCount": 92,
+    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "November to April",
+    "language": "Hindi, English, Assamese",
+    "highlights": [
+      "Dawn elephant-back safari through golden morning mist",
+      "Over 2,400 wild Great Indian One-Horned Rhinoceroses",
+      "Two open 4x4 jeep safaris in Central (Kohora) and Western (Bagori) ranges",
+      "Wild water buffaloes, Asian elephants, and Barasingha swamp deer",
+      "Assam tea estate tour and Bihu folk dance evening"
+    ],
+    "included": [
+      "4 Nights boutique tea bungalow or wildlife resort stay",
+      "All meals: buffet breakfast, lunch, and multi-course dinners",
+      "1 Elephant safari + 2 Jeep safaris with forest naturalist",
+      "AC transfers from Guwahati Lokpriya Gopinath Bordoloi Airport"
+    ],
+    "excluded": [
+      "Camera commercial fees",
+      "Air tickets to Guwahati"
+    ],
+    "availableDates": [
+      "2026-11-16",
+      "2026-12-14",
+      "2027-01-18",
+      "2027-02-15"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Guwahati to Kaziranga National Park",
+        "description": "Arrive at Guwahati airport. Scenic 4.5 hr drive past tea gardens to Kaziranga. Check into jungle resort. Evening Assamese folk dance."
+      },
+      {
+        "day": 2,
+        "title": "Dawn Elephant Safari & Bagori Range Jeep Drive",
+        "description": "5:30 AM elephant safari in Western Range getting up close to rhinos. Afternoon open jeep safari in Bagori range watching water birds."
+      },
+      {
+        "day": 3,
+        "title": "Central Range Kohora & Orchid Park",
+        "description": "Morning jeep safari in Central Kohora range. Afternoon visit to Kaziranga Orchid and Biodiversity Park featuring 500+ indigenous species."
+      },
+      {
+        "day": 4,
+        "title": "Eastern Agaratoli Range & Tea Gardens",
+        "description": "Safari in Eastern range famous for pelicans, storks, and raptors. Tour organic CTC tea estate and tasting."
+      },
+      {
+        "day": 5,
+        "title": "Kamakhya Temple Darshan & Departure",
+        "description": "Drive back to Guwahati. Visit sacred Kamakhya Temple atop Nilachal Hill before airport drop-off."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Pravin Vora",
+        "rating": 5,
+        "text": "Riding through the morning mist and seeing rhinos grazing just yards away was a dream come true!",
+        "date": "2026-08-08"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Bandhavgarh Dense Tiger Territory Photographic Expedition",
+    "title": "Bandhavgarh Dense Tiger Territory Photographic Expedition",
+    "slug": "bandhavgarh-tiger-photographic-expedition",
+    "category": "Wildlife",
+    "destination": "Madhya Pradesh, India",
+    "location": "Vindhya Hills, Umaria District",
+    "country": "India",
+    "description": "Track the world’s highest density of Royal Bengal Tigers among ancient ruins, bamboo thickets, and towering Sal forests in Bandhavgarh.",
+    "shortDescription": "World’s highest tiger density, ancient Bandhavgarh fort cliff, and expert photo-safaris.",
+    "fullDescription": "Bandhavgarh boasts the highest concentration of wild tigers in India. Surrounded by steep cliffs of the Vindhya range with the legendary 2,000-year-old Bandhavgarh Fort and reclining Vishnu statue at its center, this reserve offers exceptional photographic opportunities of predator hunts in Tala and Magdhi zones.",
+    "price": 26500,
+    "originalPrice": 31000,
+    "discountedPrice": 26500,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 79,
+    "reviewCount": 79,
+    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-10 travelers",
+    "bestTime": "October to June",
+    "language": "Hindi, English, Gujarati",
+    "highlights": [
+      "Highest tiger density in India across legendary Tala and Magdhi zones",
+      "Three dedicated open 4x4 Gypsies with professional photo trackers",
+      "Shesh Shaiya: 10th-century 35-foot reclining Vishnu statue carved from rock",
+      "Ancient Bandhavgarh Fort cliff panorama",
+      "Luxury jungle lodge with naturalist briefing every evening"
+    ],
+    "included": [
+      "3 Nights luxury wilderness lodge stay",
+      "All meals: buffet breakfast, lunch, and dinner daily",
+      "3 Open Gypsy safaris with park entry permits and guide fees",
+      "Transfers from Jabalpur or Katni railway station"
+    ],
+    "excluded": [
+      "Professional video camera fees",
+      "Flights to Jabalpur"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-18",
+      "2027-01-22"
+    ],
+    "featured": false,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Jabalpur to Bandhavgarh & Lodge Check-in",
+        "description": "Pick up from Jabalpur. Scenic 3.5 hr drive to Bandhavgarh. Check in. Evening orientation on tiger territories and camera settings."
+      },
+      {
+        "day": 2,
+        "title": "Tala Core Zone Morning & Afternoon Safaris",
+        "description": "Morning safari in legendary Tala zone tracking the reigning tiger dynasty. Afternoon safari exploring meadows and waterholes."
+      },
+      {
+        "day": 3,
+        "title": "Magdhi Zone Safari & Shesh Shaiya Shrine",
+        "description": "Early morning safari in Magdhi zone. Visit the ancient rock-cut reclining Vishnu statue surrounded by forest streams."
+      },
+      {
+        "day": 4,
+        "title": "Bhedaghat Marble Rocks & Departure",
+        "description": "Drive to Jabalpur with a boat cruise through the gleaming Bhedaghat Marble Rocks on Narmada River before airport drop-off."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rajesh Shah",
+        "rating": 5,
+        "text": "Saw three different tigers in two days! Tala zone was mindblowing. High quality naturalist guide.",
+        "date": "2026-07-24"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "website": "website1",
+    "websiteId": "website1",
+    "name": "Periyar Wildlife Elephant Reserve & Spice Jungle Lake Cruise",
+    "title": "Periyar Wildlife Elephant Reserve & Spice Jungle Lake Cruise",
+    "slug": "periyar-wildlife-elephant-lake-cruise",
+    "category": "Wildlife",
+    "destination": "Thekkady, Kerala, India",
+    "location": "Cardamom Hills, Periyar Tiger Reserve",
+    "country": "India",
+    "description": "Cruise the mist-covered artificial lake in Periyar Tiger Reserve to view wild elephant herds swimming, gaur bisons, and fragrant spice plantations.",
+    "shortDescription": "Wild elephant herds along Periyar lake shores, bamboo rafting, and Cardamom Hills spice estates.",
+    "fullDescription": "Periyar Tiger Reserve in Thekkady is a pristine highland jungle set in Kerala’s Cardamom Hills. Cruise on the calm waters of Periyar Lake as wild elephant families come down to swim and graze along the banks, trek with armed tribal forest guards through thick evergreen canopies, and smell fresh vanilla, pepper, and cardamom on plantation estates.",
+    "price": 19800,
+    "originalPrice": 23000,
+    "discountedPrice": 19800,
+    "currency": "INR",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Easy",
+    "rating": 4.8,
+    "reviews": 88,
+    "reviewCount": 88,
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "September to April",
+    "language": "Hindi, English, Malayalam",
+    "highlights": [
+      "Morning boat safari on Periyar Lake watching wild elephants swim",
+      "Guided bamboo rafting and jungle walk through core forest",
+      "Close encounters with Indian Gaur (bison) and Nilgiri langurs",
+      "Organic spice garden walking tour tasting green cardamom and cinnamon",
+      "Kalaripayattu traditional martial arts show in Thekkady"
+    ],
+    "included": [
+      "3 Nights eco-resort accommodation in Thekkady",
+      "Daily breakfast and multi-course Kerala / Gujarati dinners",
+      "Periyar lake boat safari tickets and sanctuary entry passes",
+      "Transfers from Cochin International Airport"
+    ],
+    "excluded": [
+      "Optional elephant bathing activity",
+      "Flights to Cochin"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-13",
+      "2027-01-17"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cochin to Thekkady & Spice Garden Walk",
+        "description": "Pick up from Cochin. Scenic mountain drive past waterfalls to Thekkady. Check in. Afternoon guided spice plantation tour and Kalaripayattu martial arts show."
+      },
+      {
+        "day": 2,
+        "title": "Periyar Lake Boat Safari & Jungle Trek",
+        "description": "Morning boat safari on Periyar Lake observing herds of wild elephants and gaurs. Afternoon border hike with tribal tracker."
+      },
+      {
+        "day": 3,
+        "title": "Bamboo Rafting Wilderness Expedition",
+        "description": "Full day combination of jungle hike and tranquil bamboo rafting in deep Periyar waters."
+      },
+      {
+        "day": 4,
+        "title": "Chellarkovil Viewpoint & Departure to Cochin",
+        "description": "Visit Chellarkovil waterfalls and spice shopping before transfer back to Cochin airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Divya Desai",
+        "rating": 5,
+        "text": "The bamboo rafting was peaceful and seeing elephant calves drinking water was lovely.",
+        "date": "2026-07-29"
+      }
+    ]
+  }
+]

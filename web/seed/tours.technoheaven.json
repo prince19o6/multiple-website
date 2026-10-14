@@ -1,0 +1,4067 @@
+[
+  {
+    "id": 301,
+    "tourNumericId": 301,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Maldives Private Overwater Villa & Coral Atoll Safari",
+    "title": "Maldives Private Overwater Villa & Coral Atoll Safari",
+    "slug": "maldives-private-overwater-villa-atoll-safari",
+    "category": "Beach",
+    "destination": "North Malé Atoll, Maldives",
+    "location": "Indian Ocean Coral Atoll",
+    "country": "Maldives",
+    "description": "Stay in an ultra-luxurious overwater villa perched above a turquoise lagoon, snorkel pristine house reefs, and cruise at sunset with wild dolphins.",
+    "shortDescription": "Luxury overwater bungalow, turquoise lagoons, and dolphin sunset cruise.",
+    "fullDescription": "Indulge in the ultimate tropical sanctuary in the Maldives. Wake up to direct lagoon access from your private sun deck, indulge in a floating Champagne breakfast, snorkel alongside hawksbill turtles and eagle rays on protected house reefs, and cap your days with a private Dhoni sunset cruise.",
+    "price": 3499,
+    "originalPrice": 4200,
+    "discountedPrice": 3299,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.95,
+    "reviews": 184,
+    "reviewCount": 184,
+    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "2-8 travelers",
+    "bestTime": "November to April",
+    "language": "English, Dhivehi",
+    "highlights": [
+      "Overwater pool villa with direct ocean staircase",
+      "Private speedboat or seaplane scenic arrival transfer",
+      "Coral reef snorkeling safari with marine biologist",
+      "Sunset dolphin cruise with French Champagne and canapés",
+      "Floating breakfast in your private infinity pool"
+    ],
+    "included": [
+      "5 Nights luxury 5-star overwater pool villa",
+      "All-inclusive gourmet dining across 4 specialty restaurants",
+      "Roundtrip seaplane / luxury speedboat airport transfers",
+      "Complimentary non-motorized water sports & snorkel gear",
+      "One 60-minute couple's overwater spa massage"
+    ],
+    "excluded": [
+      "International airfare to Malé",
+      "Motorized water sports (jet ski)",
+      "Premium cellar vintage wines"
+    ],
+    "availableDates": [
+      "2026-11-01",
+      "2026-12-05",
+      "2027-01-15",
+      "2027-02-14"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Seaplane Arrival & Overwater Villa Check-in",
+        "description": "Scenic aerial flight over turquoise atolls. Welcome glass of bubbly and personal butler check-in to your private overwater suite."
+      },
+      {
+        "day": 2,
+        "title": "House Reef Snorkel & Floating Breakfast",
+        "description": "Floating breakfast in your pool. Guided marine biologist reef safari spotting clownfish, manta rays, and harmless blacktip reef sharks."
+      },
+      {
+        "day": 3,
+        "title": "Sandbank Picnic & Lagoon Water Sports",
+        "description": "Private boat excursion to an uninhabited sandbank with white canopy shade, chilled seafood lunch, and stand-up paddleboarding."
+      },
+      {
+        "day": 4,
+        "title": "Overwater Spa & Sunset Dolphin Cruise",
+        "description": "Relax with a signature massage over glass-bottom floors. In the late afternoon, embark on a traditional dhoni cruise tracking spinner dolphins."
+      },
+      {
+        "day": 5,
+        "title": "Underwater Dining & Starry Beachfront Cinema",
+        "description": "Optional gourmet underwater lunch surrounded by coral. Evening beach cinema under the tropical stars."
+      },
+      {
+        "day": 6,
+        "title": "Island Departure",
+        "description": "Breakfast with sweeping panoramic ocean views, leisure time in lagoon, and seaplane transfer to Velana International Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Charlotte Montgomery",
+        "rating": 5,
+        "text": "The Maldives overwater villa was pure paradise. Seeing dolphins at sunset was unforgettable.",
+        "date": "2026-08-10"
+      },
+      {
+        "author": "David Sterling",
+        "rating": 5,
+        "text": "Flawless service and unmatched coral reef clarity. Worth every single penny.",
+        "date": "2026-09-02"
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "tourNumericId": 302,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Santorini Caldera Private Catamaran & Oia Cliffside Retreat",
+    "title": "Santorini Caldera Private Catamaran & Oia Cliffside Retreat",
+    "slug": "santorini-caldera-catamaran-oia-retreat",
+    "category": "Beach",
+    "destination": "Santorini, Greece",
+    "location": "Cyclades Islands, Aegean Sea",
+    "country": "Greece",
+    "description": "Admire white-washed cubist architecture and blue domes in Oia, cruise the submerged volcanic caldera on a luxury catamaran, and relax on Red Beach.",
+    "shortDescription": "Iconic blue domes, private caldera sailing, and cliffside infinity pools.",
+    "fullDescription": "Experience the romance of Greece's most dramatic island. Perched high on the volcanic rim of Oia, stay in a whitewashed cave suite with infinity plunge pool overlooking the Aegean. Sail past volcanic hot springs and towering caldera cliffs on a private catamaran cruise with fresh Greek barbecue and Assyrtiko wine.",
+    "price": 2899,
+    "originalPrice": 3400,
+    "discountedPrice": 2699,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.9,
+    "reviews": 156,
+    "reviewCount": 156,
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-12 travelers",
+    "bestTime": "April to October",
+    "language": "English, Greek",
+    "highlights": [
+      "Cave suite in Oia with private caldera-facing infinity plunge pool",
+      "Private catamaran sunset cruise with volcano hot springs swim",
+      "Wine tasting at Santo Wines overlooking the Aegean",
+      "Exploration of Red Beach, White Beach, and Akrotiri archaeological site",
+      "Sunset dining reservations at high-demand Oia cliffside tavernas"
+    ],
+    "included": [
+      "4 Nights in 5-star Oia luxury cave suite",
+      "Full-day private catamaran sailing with seafood BBQ and wine",
+      "Private vehicle and driver for island touring",
+      "Daily gourmet Greek breakfast delivered to your private terrace"
+    ],
+    "excluded": [
+      "Flights to Santorini",
+      "Personal shopping",
+      "Gratuities for crew and guide"
+    ],
+    "availableDates": [
+      "2026-05-10",
+      "2026-06-15",
+      "2026-09-08",
+      "2026-10-02"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Santorini & Oia Check-in",
+        "description": "Private luxury transfer from Thira Airport to your cliffside suite in Oia. Enjoy an evening stroll among cobblestones and world-famous sunset vistas."
+      },
+      {
+        "day": 2,
+        "title": "Private Caldera Catamaran Cruise",
+        "description": "Board a sleek catamaran at Ammoudi Bay. Sail to the Nea Kameni volcanic hot springs, snorkel by Indian Rock, and anchor at White Beach for fresh grilled seafood."
+      },
+      {
+        "day": 3,
+        "title": "Volcanic Vineyards & Akrotiri Excavation",
+        "description": "Tour prehistoric Akrotiri, known as the Minoan Pompeii. Sample indigenous crisp Assyrtiko wines at cliffside estates."
+      },
+      {
+        "day": 4,
+        "title": "Perissa Black Sand Beach & Fira Walking Tour",
+        "description": "Relax at a luxury beach club on the volcanic black sands of Perissa, followed by an evening in vibrant Fira."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Terrace breakfast admiring the caldera panorama before your transfer to the airport or ferry port."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Lucas Vance",
+        "rating": 5,
+        "text": "The catamaran sailing and sunset in Oia took our breath away. Exemplary hospitality.",
+        "date": "2026-07-28"
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "tourNumericId": 303,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Bora Bora Polynesian Pearl Lagoon & Overwater Haven",
+    "title": "Bora Bora Polynesian Pearl Lagoon & Overwater Haven",
+    "slug": "bora-bora-pearl-lagoon-overwater-haven",
+    "category": "Beach",
+    "destination": "Bora Bora, French Polynesia",
+    "location": "Society Islands, South Pacific",
+    "country": "French Polynesia",
+    "description": "Awaken facing emerald Mount Otemanu, snorkel with stingrays and reef sharks in translucent lagoons, and canoe-deliver breakfast.",
+    "shortDescription": "Mount Otemanu views, stingray lagoon safari, and Tahitian luxury.",
+    "fullDescription": "Known as the Jewel of the South Pacific, Bora Bora offers an unmatched blend of volcanic majesty and serene neon-blue waters. Stay at a premier resort on a private motu, swim in coral gardens with graceful manta rays, and immerse yourself in rich Tahitian culture.",
+    "price": 4199,
+    "originalPrice": 4890,
+    "discountedPrice": 3999,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.98,
+    "reviews": 112,
+    "reviewCount": 112,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "2-6 travelers",
+    "bestTime": "May to October",
+    "language": "French, English, Tahitian",
+    "highlights": [
+      "Premium overwater villa with direct views of Mount Otemanu",
+      "Traditional outrigger canoe breakfast delivered to your bungalow deck",
+      "Lagoon safari swimming with gentle stingrays and blacktip sharks",
+      "Motu private picnic with traditional Polynesian ground-oven cuisine",
+      "Deep sea pearl farm tour and pearl harvesting"
+    ],
+    "included": [
+      "5 Nights 5-star luxury overwater villa",
+      "Inter-island boat transfers from Bora Bora Airport",
+      "Daily breakfast and candlelit beach dinners",
+      "Full-day guided private lagoon safari"
+    ],
+    "excluded": [
+      "International flights to Tahiti (Papeete)",
+      "Spa treatments",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-06-12",
+      "2026-07-20",
+      "2026-08-15",
+      "2026-09-22"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Tahiti to Bora Bora Motu Transfer",
+        "description": "Scenic domestic flight past coral rings. Private boat transfer across glowing blue waters to your motu resort."
+      },
+      {
+        "day": 2,
+        "title": "Shark & Ray Lagoon Safari",
+        "description": "Board a traditional Polynesian pirogue boat to shallow sandbanks where friendly stingrays and blacktip reef sharks swim peacefully."
+      },
+      {
+        "day": 3,
+        "title": "Outrigger Canoe Breakfast & Coral Gardens",
+        "description": "Canoe brings a fresh tropical breakfast to your sundeck. Afternoon snorkeling through the vibrant Anau coral gardens."
+      },
+      {
+        "day": 4,
+        "title": "Private Motu Feast & Polynesian Culture",
+        "description": "Savor grilled mahi-mahi and poisson cru on a secluded motu, with demonstrations of coconut husking and pareo tying."
+      },
+      {
+        "day": 5,
+        "title": "Day of Pure Relaxation & Sunset Cruise",
+        "description": "Lounge by the infinity pool or take glass-bottom kayaks across the reef. Sunset champagne cruise around the island."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Farewell Polynesian floral lei presentation and boat transfer back to Bora Bora Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Sophia Turner",
+        "rating": 5,
+        "text": "Unsurpassed luxury. Mount Otemanu right outside our bedroom window was pure heaven.",
+        "date": "2026-06-30"
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "tourNumericId": 304,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Amalfi Coast Positano & Capri Private Yacht Charter",
+    "title": "Amalfi Coast Positano & Capri Private Yacht Charter",
+    "slug": "amalfi-coast-positano-capri-yacht-charter",
+    "category": "Beach",
+    "destination": "Amalfi Coast, Italy",
+    "location": "Tyrrhenian Sea, Campania",
+    "country": "Italy",
+    "description": "Cruise past Positano's pastel cliff dwellings, swim into the glowing Blue Grotto of Capri, and dine on fresh Mediterranean fare in Ravello.",
+    "shortDescription": "Positano cliffside vistas, Capri Blue Grotto, and luxury Riva yacht.",
+    "fullDescription": "Celebrate the Dolce Vita lifestyle along Italy's most glamorous coast. From the cliff-clinging pastel villas of Positano to the historic aristocratic villas of Ravello, explore by private speed yacht. Sail around Capri's towering Faraglioni rock formations, anchor for cliff jumping in emerald coves, and taste handmade limoncello.",
+    "price": 3250,
+    "originalPrice": 3800,
+    "discountedPrice": 2999,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.88,
+    "reviews": 129,
+    "reviewCount": 129,
+    "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "May to October",
+    "language": "English, Italian",
+    "highlights": [
+      "Full-day private Riva yacht charter to Capri and Faraglioni Rocks",
+      "Private tender access inside the luminous Blue Grotto",
+      "Cliffside luxury hotel stay in Positano overlooking Spiaggia Grande",
+      "Exclusive lemon grove tour and handcrafted limoncello tasting in Amalfi",
+      "Terrace dining in Ravello at Villa Cimbrone"
+    ],
+    "included": [
+      "4 Nights in 5-star cliffside boutique hotel in Positano",
+      "Private motor yacht charter with skipper, fuel, and champagne bar",
+      "Private Mercedes-Benz chauffeur for all coastal road transfers",
+      "Daily artisan Italian breakfast"
+    ],
+    "excluded": [
+      "Flights to Naples",
+      "Capri Blue Grotto rowboat entry fee",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-05-20",
+      "2026-06-18",
+      "2026-07-25",
+      "2026-09-14"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Naples to Positano Coastal Drive",
+        "description": "Private luxury transfer along the iconic panoramic Amalfi cliff roads. Check into your Positano room with private sea balcony."
+      },
+      {
+        "day": 2,
+        "title": "Private Yacht Voyage to Capri",
+        "description": "Cruise from Positano dock across the Bay of Salerno. Anchor by the Faraglioni rocks, visit Capri town for designer shopping, and swim in turquoise coves."
+      },
+      {
+        "day": 3,
+        "title": "Amalfi Town & Ravello Gardens",
+        "description": "Explore the 9th-century Amalfi cathedral, followed by a visit to Ravello’s Villa Rufolo and Villa Cimbrone perched high above the sea."
+      },
+      {
+        "day": 4,
+        "title": "Beach Club Leisure & Wine Tasting",
+        "description": "Spend a relaxing morning at a secluded cove beach club reached only by boat. Evening sunset seafood dinner in Praiano."
+      },
+      {
+        "day": 5,
+        "title": "Arrivederci Positano",
+        "description": "Leisurely morning cappuccino overlooking the cliffs before transfer back to Naples."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Marcus Bennett",
+        "rating": 5,
+        "text": "Sailing through the Faraglioni rock arch on a private yacht was the highlight of our European vacation.",
+        "date": "2026-07-10"
+      }
+    ]
+  },
+  {
+    "id": 305,
+    "tourNumericId": 305,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Maui & Lanai Private Catamaran & Kaanapali Coastal Voyage",
+    "title": "Maui & Lanai Private Catamaran & Kaanapali Coastal Voyage",
+    "slug": "maui-lanai-catamaran-kaanapali-voyage",
+    "category": "Beach",
+    "destination": "Maui, Hawaii, USA",
+    "location": "Hawaiian Islands, Pacific Ocean",
+    "country": "USA",
+    "description": "Sail from West Maui across the Auau Channel to secluded sea cliffs in Lanai, snorkel Molokini Crater, and relax on golden Kaanapali Beach.",
+    "shortDescription": "Molokini crater coral, Lanai sea cliffs, and Hawaiian sunset sail.",
+    "fullDescription": "Experience the magic of the Valley Isle. Stay in luxury along the golden sands of Kaanapali, sail across the channel on a state-of-the-art catamaran to secluded coves on Lanai, and dive into the crystal crescent of Molokini Crater surrounded by hundreds of Hawaiian green sea turtles.",
+    "price": 2799,
+    "originalPrice": 3200,
+    "discountedPrice": 2599,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.87,
+    "reviews": 94,
+    "reviewCount": 94,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-14 travelers",
+    "bestTime": "December to April",
+    "language": "English, Hawaiian",
+    "highlights": [
+      "Private catamaran expedition across the Auau Channel to Lanai",
+      "Snorkeling inside the protected volcanic crater of Molokini",
+      "Encountering Hawaiian green sea turtles (honu) at Turtle Town",
+      "Beachfront resort stay in Kaanapali or Wailea",
+      "Traditional oceanfront luau celebration with Polynesian fire dancers"
+    ],
+    "included": [
+      "4 Nights in 5-star beachfront resort in Maui",
+      "2 Luxury catamaran sailing tours with meals and open bar",
+      "Rental SUV with unlimited mileage for island exploration",
+      "VIP tickets to premier beachfront Polynesian Luau"
+    ],
+    "excluded": [
+      "Airfare to Kahului Airport (OGG)",
+      "Helicopter add-ons",
+      "Personal purchases"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2026-12-15",
+      "2027-01-20",
+      "2027-02-18"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Aloha Maui Arrival",
+        "description": "Arrive at Kahului Airport. Pick up your SUV and drive the scenic coastal route to your luxury resort in Kaanapali. Sunset cocktails on the beach."
+      },
+      {
+        "day": 2,
+        "title": "Molokini Crater & Turtle Town Catamaran",
+        "description": "Early morning catamaran sail to Molokini’s marine sanctuary. Visibility often exceeds 150 feet. Swim with tropical reef fish and sea turtles."
+      },
+      {
+        "day": 3,
+        "title": "Lanai Coastal Sea Cliffs & Spinner Dolphins",
+        "description": "Sail across to the pristine island of Lanai. Marvel at rugged red cliffs and watch acrobatic spinner dolphins leaping in the wake."
+      },
+      {
+        "day": 4,
+        "title": "Road to Hana Scenic Drive or Beach Relaxation",
+        "description": "Optional scenic drive past waterfalls and rainforests to Hana, or leisure day lounging on Makena Beach followed by an oceanfront Luau feast."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Morning beach walk and Hawaiian coffee before airport return."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Emily Dawson",
+        "rating": 5,
+        "text": "Molokini snorkeling was surreal, and the Lanai catamaran sail was magnificent.",
+        "date": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "id": 306,
+    "tourNumericId": 306,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Seychelles La Digue Granite Boulders & Praslin Anse Lazio",
+    "title": "Seychelles La Digue Granite Boulders & Praslin Anse Lazio",
+    "slug": "seychelles-la-digue-granite-boulders-praslin",
+    "category": "Beach",
+    "destination": "Praslin & La Digue, Seychelles",
+    "location": "Indian Ocean Archipelago",
+    "country": "Seychelles",
+    "description": "Cycle past ancient granite boulders at Anse Source d'Argent, explore the primeval Coco de Mer palm forest in Vallée de Mai, and relax on Anse Lazio.",
+    "shortDescription": "Iconic granite beaches, Vallée de Mai coco de mer, and Creole island luxury.",
+    "fullDescription": "Step into an earthly Eden in the Seychelles archipelago. Marvel at the sculptured pink granite monoliths standing against turquoise waters at Anse Source d'Argent on bicycle-friendly La Digue, wander through the UNESCO-listed Vallée de Mai on Praslin, and relax in world-class eco-resorts.",
+    "price": 3650,
+    "originalPrice": 4200,
+    "discountedPrice": 3450,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.93,
+    "reviews": 88,
+    "reviewCount": 88,
+    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to May, October to November",
+    "language": "English, French, Creole",
+    "highlights": [
+      "Anse Source d'Argent iconic pink granite boulders exploration",
+      "UNESCO World Heritage Vallée de Mai ancient Coco de Mer palm reserve",
+      "Catamaran sailing to Curieuse Island and Aldabra giant tortoise encounters",
+      "Beachfront pool villa stay on Cote d'Or Beach in Praslin",
+      "Gourmet Creole beach seafood dining with feet in the sand"
+    ],
+    "included": [
+      "6 Nights 5-star beachfront luxury resort accommodation",
+      "Inter-island ferry transfers (Mahé - Praslin - La Digue)",
+      "Daily tropical breakfast and 3 curated gourmet Creole dinners",
+      "Private guided island excursions and national park permits"
+    ],
+    "excluded": [
+      "International flights to Mahé (SEZ)",
+      "Travel insurance",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-10-15",
+      "2026-11-20",
+      "2027-01-10",
+      "2027-03-05"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Mahé to Praslin Scenic Ferry or Flight",
+        "description": "Arrive at Mahé and transfer across turquoise waters to Praslin. Check into your beachfront pool villa."
+      },
+      {
+        "day": 2,
+        "title": "Vallée de Mai & Anse Lazio Beach",
+        "description": "Walk through the prehistoric palm forest home to the legendary Coco de Mer nut. Spend the afternoon swimming at breathtaking Anse Lazio."
+      },
+      {
+        "day": 3,
+        "title": "La Digue Bicycle Safari & Anse Source d'Argent",
+        "description": "Take a short ferry to La Digue. Rent retro bicycles to explore vanilla plantations and the photogenic granite boulders of Anse Source d'Argent."
+      },
+      {
+        "day": 4,
+        "title": "Curieuse Island Giant Tortoises & St. Pierre Snorkel",
+        "description": "Catamaran excursion to Curieuse Island to walk among free-roaming giant Aldabra tortoises. Snorkel vibrant coral around St. Pierre islet."
+      },
+      {
+        "day": 5,
+        "title": "Anse Georgette Secluded Cove & Sunset Cocktails",
+        "description": "Private access to the secluded powdery crescent of Anse Georgette. Relax with coconut water and chilled champagne."
+      },
+      {
+        "day": 6,
+        "title": "Praslin Coastal Cruise & Creole Feast",
+        "description": "Half-day coastal cruise with line fishing, followed by a beachfront Creole barbecue dinner featuring grilled red snapper."
+      },
+      {
+        "day": 7,
+        "title": "Departure",
+        "description": "Transfer back to Mahé International Airport for your flight home."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Nathaniel Price",
+        "rating": 5,
+        "text": "The granite boulders on La Digue look like something sculpted by gods. Truly sublime.",
+        "date": "2026-09-12"
+      }
+    ]
+  },
+  {
+    "id": 307,
+    "tourNumericId": 307,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "St. Barts & Anguilla Private Superyacht Archipelago Cruise",
+    "title": "St. Barts & Anguilla Private Superyacht Archipelago Cruise",
+    "slug": "st-barts-anguilla-superyacht-cruise",
+    "category": "Beach",
+    "destination": "St. Barthélemy & Anguilla",
+    "location": "Leeward Islands, Caribbean Sea",
+    "country": "Caribbean",
+    "description": "Cruise the French West Indies in style, anchor at Colombier Beach in St. Barts, and lounge on the powdery sands of Shoal Bay East in Anguilla.",
+    "shortDescription": "Glamorous St. Barts chic, private yacht anchorage, and Anguilla sands.",
+    "fullDescription": "Live the epitome of Caribbean chic and understated glamour. Board a luxury chartered yacht to sail between the fashionable French enclave of St. Barts and the pristine turquoise waters of Anguilla. Anchor in tranquil bays, dine at world-renowned beach clubs like Nikki Beach, and snorkel with sea turtles.",
+    "price": 4950,
+    "originalPrice": 5800,
+    "discountedPrice": 4700,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.96,
+    "reviews": 73,
+    "reviewCount": 73,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "2-8 travelers",
+    "bestTime": "December to April",
+    "language": "English, French",
+    "highlights": [
+      "Private luxury yacht charter sailing between St. Barts and Anguilla",
+      "Secluded anchorage at Colombier Beach (former Rockefeller estate)",
+      "VIP day bed reservations at Nikki Beach St. Barth in Saint-Jean Bay",
+      "Swimming in neon-cyan waters of Shoal Bay East Anguilla",
+      "Five-star beachfront villa accommodation with private infinity pool"
+    ],
+    "included": [
+      "4 Nights luxury villa / luxury yacht accommodation",
+      "Dedicated skipper, yacht crew, and private chef on board",
+      "All port clearance fees, marina berthing, and water toys (Seabob)",
+      "VIP airport concierge on St. Maarten / St. Barts"
+    ],
+    "excluded": [
+      "International flights",
+      "Vintage champagne and fine spirits",
+      "Crew gratuity"
+    ],
+    "availableDates": [
+      "2026-11-25",
+      "2026-12-28",
+      "2027-01-18",
+      "2027-02-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Gustavia Harbor Welcome & Saint-Jean Beach",
+        "description": "Arrive in St. Barts. Board your yacht in Gustavia harbor. Enjoy afternoon cocktails overlooking superyachts and sunset dinner."
+      },
+      {
+        "day": 2,
+        "title": "Colombier Beach Secluded Anchorage",
+        "description": "Sail to pristine Colombier Bay accessible only by boat or foot. Snorkel with spotted eagle rays and green turtles."
+      },
+      {
+        "day": 3,
+        "title": "Sail to Anguilla & Shoal Bay East",
+        "description": "Set sail across the channel to Anguilla. Anchor at Shoal Bay East, renowned for blindingly white sands and crystal azure shallows."
+      },
+      {
+        "day": 4,
+        "title": "Little Bay Cliffs & Sandy Ground Beach Party",
+        "description": "Cliff jump into Little Bay cove. Enjoy chilled Caribbean lobster and live reggae music at Sandy Ground."
+      },
+      {
+        "day": 5,
+        "title": "Return Sail & Departure",
+        "description": "Morning breakfast sail back to St. Barts or St. Maarten for your departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Harrison Forde",
+        "rating": 5,
+        "text": "The yacht charter and Seabob underwater scootering in Colombier Bay was out of this world.",
+        "date": "2026-07-22"
+      }
+    ]
+  },
+  {
+    "id": 308,
+    "tourNumericId": 308,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Fiji Yasawa Islands & Coral Coast Turquoise Escape",
+    "title": "Fiji Yasawa Islands & Coral Coast Turquoise Escape",
+    "slug": "fiji-yasawa-islands-coral-coast-escape",
+    "category": "Beach",
+    "destination": "Yasawa Islands, Fiji",
+    "location": "South Pacific Coral Reefs",
+    "country": "Fiji",
+    "description": "Immerse in Fijian Bula hospitality, explore the sacred Sawa-i-Lau limestone sea caves, and snorkel vibrant blue coral lagoons.",
+    "shortDescription": "Sawa-i-Lau sea caves, authentic Bula warmth, and private beach bure.",
+    "fullDescription": "Escape to the sun-drenched Yasawa archipelago in western Fiji. Stay in traditional luxury beachfront bures, swim through cathedral-like sea caves submerged in sapphire water, partake in authentic Kava welcoming ceremonies, and snorkel teeming marine reserves.",
+    "price": 2499,
+    "originalPrice": 2950,
+    "discountedPrice": 2299,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.89,
+    "reviews": 95,
+    "reviewCount": 95,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-12 travelers",
+    "bestTime": "May to October",
+    "language": "English, Fijian",
+    "highlights": [
+      "Traditional luxury beachfront bure with private outdoor stone shower",
+      "Mystical Sawa-i-Lau limestone sea cave swimming expedition",
+      "Snorkeling in the famous Blue Lagoon coral reefs",
+      "Authentic Fijian village visit and Sevusevu Kava ceremony",
+      "Lovo subterranean earth-oven feast accompanied by Fijian choral singing"
+    ],
+    "included": [
+      "5 Nights 5-star beachfront resort in the Yasawa Islands",
+      "Seaplane transfer from Nadi International Airport",
+      "Full board gourmet dining including traditional Lovo feasts",
+      "Guided cave excursions, kayak gear, and snorkel equipment"
+    ],
+    "excluded": [
+      "International flights to Nadi (NAN)",
+      "Scuba diving certification dives",
+      "Spa treatments"
+    ],
+    "availableDates": [
+      "2026-06-10",
+      "2026-07-15",
+      "2026-08-20",
+      "2026-09-18"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Nadi to Yasawa Seaplane Flight",
+        "description": "Breathtaking seaplane flight over coral reefs. Warm Fijian acoustic guitar and floral song welcome at your beach bure."
+      },
+      {
+        "day": 2,
+        "title": "Blue Lagoon Snorkeling & Reef Safari",
+        "description": "Boat excursion into the calm waters of the Blue Lagoon. Spot turquoise damselfish, clownfish, and sea anemones."
+      },
+      {
+        "day": 3,
+        "title": "Sacred Sawa-i-Lau Caves Expedition",
+        "description": "Cruise to northern Yasawa to enter the ancient limestone caves carved by sea waves. Swim beneath soaring natural domes."
+      },
+      {
+        "day": 4,
+        "title": "Fijian Village Culture & Lovo Banquet",
+        "description": "Participate in an authentic kava drinking ceremony with local village elders. Enjoy a traditional dinner cooked underground with hot river stones."
+      },
+      {
+        "day": 5,
+        "title": "Sunset Kayaking & Beach Leisure",
+        "description": "Paddle along calm lagoon coves or unwind in a hammock under swaying palm trees. Romantic beach campfire under starry skies."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Farewell Isa Lei song performance by resort staff before seaplane return to Nadi."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kirsten Bradley",
+        "rating": 5,
+        "text": "The warmth of the Fijian people and the beauty of the Yasawa caves is something I will treasure forever.",
+        "date": "2026-08-29"
+      }
+    ]
+  },
+  {
+    "id": 309,
+    "tourNumericId": 309,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Riviera Maya Private Cenotes & Tulum Beachfront Haven",
+    "title": "Riviera Maya Private Cenotes & Tulum Beachfront Haven",
+    "slug": "riviera-maya-cenotes-tulum-haven",
+    "category": "Beach",
+    "destination": "Tulum & Riviera Maya, Mexico",
+    "location": "Yucatán Peninsula, Caribbean Coast",
+    "country": "Mexico",
+    "description": "Lounge on bohemian white-sand Tulum beaches, snorkel secret crystalline limestone cenotes, and explore Mayan cliffside ruins.",
+    "shortDescription": "Tulum bohemian luxury, Mayan cliff temples, and mystical cenotes.",
+    "fullDescription": "Blend bohemian chic aesthetics with ancient Mesoamerican majesty along Mexico’s Caribbean coastline. Stay in an eco-luxury beachfront villa in Tulum, explore the clifftop Mayan fortress overlooking the sea, swim through sunlit limestone sinkholes (cenotes), and enjoy farm-to-table Mexican culinary artistry.",
+    "price": 2199,
+    "originalPrice": 2600,
+    "discountedPrice": 1999,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.86,
+    "reviews": 140,
+    "reviewCount": 140,
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-12 travelers",
+    "bestTime": "November to April",
+    "language": "English, Spanish",
+    "highlights": [
+      "Beachfront eco-luxury cabana stay on Tulum Beach Road",
+      "Private early-access visit to Tulum Mayan cliffside ruins before crowds",
+      "Exclusive swimming in private freshwater cenotes with stalactites",
+      "Catamaran sailing and snorkeling on the Mesoamerican Barrier Reef",
+      "Dinner tasting menu with artisanal mezcal pairings at Hartwood or Gitano"
+    ],
+    "included": [
+      "4 Nights in luxury beachfront boutique hotel in Tulum",
+      "Private Suburban transfers with chauffeur and cold drinks",
+      "All cenote access fees and private archeological guide",
+      "Daily artisan breakfast and one 5-course chef's dinner"
+    ],
+    "excluded": [
+      "Flights to Cancun (CUN) or Tulum (TQO)",
+      "Personal shopping",
+      "Mezcal bottles to go"
+    ],
+    "availableDates": [
+      "2026-11-12",
+      "2026-12-08",
+      "2027-01-14",
+      "2027-02-19"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cancun/Tulum Arrival & Beachfront Welcome",
+        "description": "Private luxury transfer to Tulum’s stylish hotel zone. Walk straight out onto powdery white sand. Welcome margarita and fresh ceviche."
+      },
+      {
+        "day": 2,
+        "title": "Tulum Mayan Ruins & Cenote Dos Ojos",
+        "description": "Beat the heat with a private morning exploration of the Mayan fortress above the waves. Cool off in the crystal subterranean waters of Cenote Dos Ojos."
+      },
+      {
+        "day": 3,
+        "title": "Sian Ka'an Biosphere Canal Floating",
+        "description": "Visit the UNESCO Sian Ka'an Biosphere reserve. Drift peacefully through ancient Mayan freshwater canals bordered by mangroves."
+      },
+      {
+        "day": 4,
+        "title": "Catamaran Sailing & Bohemian Jungle Night",
+        "description": "Private catamaran cruise along the coast with reef snorkeling. In the evening, explore Tulum’s vibrant jungle restaurants and candlelit bars."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Morning yoga on the beach and fresh tropical smoothie bowl before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Samantha Wright",
+        "rating": 5,
+        "text": "The cenote swimming was spiritual and Tulum’s beach vibe is unmatched.",
+        "date": "2026-07-09"
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "tourNumericId": 310,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Mykonos & Delos Private Motor Yacht & Super Paradise Retreat",
+    "title": "Mykonos & Delos Private Motor Yacht & Super Paradise Retreat",
+    "slug": "mykonos-delos-motor-yacht-super-paradise",
+    "category": "Beach",
+    "destination": "Mykonos & Delos, Greece",
+    "location": "Cyclades, Aegean Sea",
+    "country": "Greece",
+    "description": "Enjoy world-class beach clubs, private motor yacht sailing to the sacred ruins of Delos, and wind-blown Cycladic romance.",
+    "shortDescription": "Mykonos beach clubs, ancient Delos sanctuary, and private motor yacht.",
+    "fullDescription": "Combine glamorous Aegean beach life with ancient mythological history. Stay in a luxury hillside villa overlooking Psarou Beach, sail on a private motor yacht to the uninhabited sanctuary island of Delos—birthplace of Apollo—and party or relax at celebrated beach clubs like Scorpios and Nammos.",
+    "price": 3100,
+    "originalPrice": 3600,
+    "discountedPrice": 2899,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.85,
+    "reviews": 110,
+    "reviewCount": 110,
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "May to October",
+    "language": "English, Greek",
+    "highlights": [
+      "Private motor yacht charter to Delos UNESCO sacred ruins and Rhenia coves",
+      "VIP daybed reservation at Scorpios beach club for sunset ritual",
+      "Hillside Cycladic villa with infinity pool and Aegean sea views",
+      "Walking tour of Mykonos Old Town windmills and Little Venice",
+      "Gourmet seafood dining at sea-facing taverna in Ornos"
+    ],
+    "included": [
+      "4 Nights in 5-star Mykonos luxury boutique resort",
+      "Full-day private motor yacht charter with skipper, fuel, and lunch",
+      "Private driver and luxury van at disposal for beach transfers",
+      "Daily champagne breakfast"
+    ],
+    "excluded": [
+      "Airfare to Mykonos (JMK)",
+      "Delos museum entrance ticket",
+      "Beach club bottle service"
+    ],
+    "availableDates": [
+      "2026-06-01",
+      "2026-07-05",
+      "2026-08-10",
+      "2026-09-12"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Mykonos & Little Venice Sunset",
+        "description": "Private airport transfer to your resort. Wander through whitewashed alleys to the iconic windmills and toast the sunset in Little Venice."
+      },
+      {
+        "day": 2,
+        "title": "Private Yacht to Ancient Delos & Rhenia Island",
+        "description": "Sail to the sacred birthplace of Apollo and Artemis. Explore ancient mosaics and marble temples. Anchor at uninhabited Rhenia for turquoise swimming."
+      },
+      {
+        "day": 3,
+        "title": "South Coast Beaches & Psarou Beach Club",
+        "description": "Spend a glamorous beach day on Psarou Beach, with crystal waters, chilled rosé, and luxury yacht watching."
+      },
+      {
+        "day": 4,
+        "title": "Scorpios Sunset Ritual & Fine Dining",
+        "description": "Afternoon relaxation followed by the world-famous Scorpios sunset music ritual with ambient live rhythms and Mediterranean dining."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Terrace breakfast overlooking the Aegean before transfer to the airport or ferry."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Alexander Cruz",
+        "rating": 5,
+        "text": "The yacht charter to Rhenia was idyllic. Pure Aegean luxury.",
+        "date": "2026-08-04"
+      }
+    ]
+  },
+  {
+    "id": 311,
+    "tourNumericId": 311,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Swiss Alps Matterhorn Glacier Trek & Zermatt Heli-Tour",
+    "title": "Swiss Alps Matterhorn Glacier Trek & Zermatt Heli-Tour",
+    "slug": "swiss-alps-matterhorn-glacier-trek-zermatt-heli",
+    "category": "Adventure",
+    "destination": "Zermatt, Valais, Switzerland",
+    "location": "Swiss Pennine Alps",
+    "country": "Switzerland",
+    "description": "Take a scenic helicopter flight right next to the iconic Matterhorn, traverse Gorner Glacier with crampons, and stay in Alpine luxury.",
+    "shortDescription": "Matterhorn helicopter flight, glacier ice trekking, and Zermatt luxury chalets.",
+    "fullDescription": "Ascend into the towering wonderland of the Swiss high Alps. Based in the car-free alpine village of Zermatt, embark on an exhilarating helicopter flight around the pyramid face of the Matterhorn, gear up with an IFMGA mountain guide for a Gorner Glacier crampon trek, and relax in world-class thermal spas.",
+    "price": 3899,
+    "originalPrice": 4500,
+    "discountedPrice": 3699,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Moderate",
+    "rating": 4.97,
+    "reviews": 165,
+    "reviewCount": 165,
+    "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "June to September",
+    "language": "English, German, French",
+    "highlights": [
+      "Scenic Matterhorn Air Zermatt helicopter flight skimming sheer rock faces",
+      "Guided Gorner Glacier expedition with crampons, harness, and ice axes",
+      "Gornergrat cogwheel train ride with panoramic views of 29 peaks over 4,000m",
+      "5-Star Alpine wellness resort stay with Matterhorn-facing heated outdoor pool",
+      "Traditional Valais cheese fondue and Swiss wine tasting at mountain chalet"
+    ],
+    "included": [
+      "4 Nights luxury Alpine wellness resort in Zermatt",
+      "Air Zermatt Matterhorn helicopter flight experience",
+      "Certified IFMGA mountain guide and all glacier technical gear",
+      "Gornergrat railway and Matterhorn Glacier Paradise cable car passes",
+      "Daily Swiss breakfast buffet and 2 gourmet dinners"
+    ],
+    "excluded": [
+      "International flights to Zurich/Geneva",
+      "Swiss rail transfer tickets",
+      "Personal mountaineering clothing"
+    ],
+    "availableDates": [
+      "2026-06-20",
+      "2026-07-15",
+      "2026-08-10",
+      "2026-09-05"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Zermatt & Alpine Welcome",
+        "description": "Scenic train into car-free Zermatt. Electric taxi transfer to your luxury chalet. Welcome glass of Swiss wine overlooking the Matterhorn."
+      },
+      {
+        "day": 2,
+        "title": "Gornergrat Ascent & Riffelsee Reflection",
+        "description": "Take Europe's highest open-air cogwheel train to Gornergrat (3,089m). Hike down past Riffelsee to photograph the iconic Matterhorn reflection."
+      },
+      {
+        "day": 3,
+        "title": "Gorner Glacier Crampon Expedition",
+        "description": "Equip crampons and rope up with your guide to explore deep blue crevasses, ice caves, and glacial moulins across Gorner Glacier."
+      },
+      {
+        "day": 4,
+        "title": "Matterhorn Helicopter Flight & Thermal Spa",
+        "description": "Board an Air Zermatt helicopter for a jaw-dropping flight circling the Matterhorn summit. Afternoon spent unwinding in the mountain spa."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Breakfast with alpine views, stroll through historic wooden sun-baked barns in Hinterdorf, and train departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Dominic Taylor",
+        "rating": 5,
+        "text": "Walking on the glacier with the Matterhorn towering above us was the greatest adventure of my life.",
+        "date": "2026-07-29"
+      }
+    ]
+  },
+  {
+    "id": 312,
+    "tourNumericId": 312,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Queenstown Heli-Bungee, Jet Boating & Milford Sound Flight",
+    "title": "Queenstown Heli-Bungee, Jet Boating & Milford Sound Flight",
+    "slug": "queenstown-heli-bungee-jet-boat-milford-sound",
+    "category": "Adventure",
+    "destination": "Queenstown & Fiordland, New Zealand",
+    "location": "South Island, Southern Alps",
+    "country": "New Zealand",
+    "description": "Thrill to the adventure capital of the world: Shotover River jet boating, Nevis highwire bungee, and scenic flight into majestic Milford Sound.",
+    "shortDescription": "Shotover jet boating, Nevis bungee, and Milford Sound fiord flight.",
+    "fullDescription": "Immerse yourself in non-stop adrenaline against the cinematic backdrop of New Zealand’s Southern Alps. Skim past sheer canyon walls on the legendary Shotover Jet, take a scenic fixed-wing flight landing in Milford Sound for a fiord cruise under Stirling Falls, and test your courage on the Nevis highwire.",
+    "price": 3199,
+    "originalPrice": 3700,
+    "discountedPrice": 2999,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Challenging",
+    "rating": 4.94,
+    "reviews": 148,
+    "reviewCount": 148,
+    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "October to April",
+    "language": "English",
+    "highlights": [
+      "Scenic flight across Southern Alps glaciers into Milford Sound",
+      "Milford Sound boutique boat cruise right beneath thunderous waterfalls",
+      "High-speed 360-degree spins on the world-famous Shotover Jet",
+      "Nevis Bungee Jump (134m) or Nevis Catapult adventure",
+      "Skyline Gondola & Luge rides overlooking Lake Wakatipu and The Remarkables"
+    ],
+    "included": [
+      "4 Nights in 5-star Lake Wakatipu waterfront boutique hotel",
+      "Milford Sound Fly-Cruise-Fly experience with glacier flight",
+      "Shotover Jet canyon boat pass and safety gear",
+      "Nevis Highwire activity pass (Bungee or Swing)",
+      "Daily gourmet Kiwi breakfast and one vineyard lunch"
+    ],
+    "excluded": [
+      "International flights to Queenstown (ZQN)",
+      "Action photo/video packs",
+      "Personal travel insurance"
+    ],
+    "availableDates": [
+      "2026-11-05",
+      "2026-12-10",
+      "2027-01-18",
+      "2027-02-25"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Queenstown & Lake Wakatipu Sunset",
+        "description": "Arrive at Queenstown Airport. Transfer to your lakeside hotel. Skyline gondola ascent for panoramic sunset views over The Remarkables."
+      },
+      {
+        "day": 2,
+        "title": "Shotover Jet Canyons & Gibbston Valley Wine",
+        "description": "Experience adrenaline-fueled 360-degree spins through narrow rock canyons. Decompress in the afternoon tasting world-renowned Central Otago Pinot Noir."
+      },
+      {
+        "day": 3,
+        "title": "Milford Sound Scenic Glacier Flight & Cruise",
+        "description": "Fly over snowcapped alpine peaks into Fiordland National Park. Cruise deep into Milford Sound alongside seals and beneath towering Mitre Peak."
+      },
+      {
+        "day": 4,
+        "title": "Nevis Bungee or Canyon Swing",
+        "description": "Journey into the rugged Nevis gorge. Leap 134 meters from the suspended highwire pod over the river valley. Evening lakeside celebration."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Leisurely breakfast at Queenstown bay before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Ethan Walker",
+        "rating": 5,
+        "text": "Milford Sound flight was the most majestic scenery on Earth, and the Shotover Jet was heart-pumping fun!",
+        "date": "2026-08-16"
+      }
+    ]
+  },
+  {
+    "id": 313,
+    "tourNumericId": 313,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Costa Rica Arenal Volcano Canopy, Hanging Bridges & Whitewater",
+    "title": "Costa Rica Arenal Volcano Canopy, Hanging Bridges & Whitewater",
+    "slug": "costa-rica-arenal-canopy-hanging-bridges-whitewater",
+    "category": "Adventure",
+    "destination": "Arenal & Pacuare River, Costa Rica",
+    "location": "Alajuela & Cartago Rainforests",
+    "country": "Costa Rica",
+    "description": "Zipline through cloudforest canopies, conquer Class IV rapids on the Pacuare River, and soak in volcanic thermal springs with views of Arenal.",
+    "shortDescription": "Arenal volcano ziplines, Pacuare Class IV rafting, and geothermal hot springs.",
+    "fullDescription": "Immerse in Costa Rica's pure adventure playground (Pura Vida). Zipline above the tropical forest canopy facing the imposing cone of Arenal Volcano, trek across dizzying hanging bridges spotting toucans and howler monkeys, paddle thrilling Class III-IV rapids down the wild Pacuare River gorge, and relax in thermal springs.",
+    "price": 2399,
+    "originalPrice": 2800,
+    "discountedPrice": 2199,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Moderate",
+    "rating": 4.91,
+    "reviews": 132,
+    "reviewCount": 132,
+    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-12 travelers",
+    "bestTime": "December to April",
+    "language": "English, Spanish",
+    "highlights": [
+      "Extreme zipline canopy tour flying hundreds of feet above rainforest valleys",
+      "Full-day Class III-IV whitewater rafting down the world-famous Pacuare River",
+      "Mistico Arenal Hanging Bridges guided jungle wildlife trek",
+      "Tabacón Grand Thermal Resort private access with natural volcanic hot river",
+      "Stay in eco-luxury rainforest lodge with private plunge pool"
+    ],
+    "included": [
+      "5 Nights in luxury eco-resorts (Nayara Springs / Pacuare Lodge)",
+      "All adventure gear, safety helmets, harnesses, and river guides",
+      "Private Mercedes Sprinter transfers with cold bottled water",
+      "All meals during the Pacuare rafting expedition and daily organic breakfast"
+    ],
+    "excluded": [
+      "Flights to San José (SJO)",
+      "Gratuities for river and canopy guides",
+      "Personal items"
+    ],
+    "availableDates": [
+      "2026-11-15",
+      "2026-12-18",
+      "2027-01-22",
+      "2027-03-02"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "San José to Arenal Luxury Lodge",
+        "description": "Arrive in San José. Private scenic drive through rolling hills to Arenal. Check into your rainforest villa with views of the volcano."
+      },
+      {
+        "day": 2,
+        "title": "Arenal Canopy Zipline & Hanging Bridges",
+        "description": "Glide across 7 extreme zipline cables skimming the forest canopy. Afternoon walk across 16 hanging bridges spotting sloths and coatis."
+      },
+      {
+        "day": 3,
+        "title": "La Fortuna Waterfall & Tabacón Hot Springs",
+        "description": "Hike down 500 steps to the churning pool of La Fortuna Waterfall for a refreshing swim. Unwind in mineral-rich volcanic hot springs."
+      },
+      {
+        "day": 4,
+        "title": "Pacuare River Whitewater Rafting Expedition",
+        "description": "Transfer to the Pacuare River. Tackle roaring Class III and IV rapids through sheer rainforest canyons filled with cascading waterfalls."
+      },
+      {
+        "day": 5,
+        "title": "Pacuare Jungle Trek & River Relaxation",
+        "description": "Hike to indigenous Cabécar community trails or relax on your riverside deck listening to tropical birds."
+      },
+      {
+        "day": 6,
+        "title": "Return to San José & Departure",
+        "description": "Final rapid run down the river, warm lunch, and transfer back to Juan Santamaría Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Rachel Green",
+        "rating": 5,
+        "text": "Pacuare rafting was breathtaking and Tabacon hot springs was the most relaxing evening of our lives.",
+        "date": "2026-08-18"
+      }
+    ]
+  },
+  {
+    "id": 314,
+    "tourNumericId": 314,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Iceland Superjeep Aurora Hunt & Vatnajökull Crystal Ice Caves",
+    "title": "Iceland Superjeep Aurora Hunt & Vatnajökull Crystal Ice Caves",
+    "slug": "iceland-superjeep-aurora-vatnajokull-ice-caves",
+    "category": "Adventure",
+    "destination": "Vatnajökull & South Coast, Iceland",
+    "location": "South Iceland & Glacier National Park",
+    "country": "Iceland",
+    "description": "Ride monster-truck Superjeeps across black volcanic deserts, explore natural blue crystal ice caves inside Europe's largest glacier, and chase Northern Lights.",
+    "shortDescription": "Crystal blue ice caves, Superjeep glacier traverse, and Aurora Borealis.",
+    "fullDescription": "Venture deep into Iceland’s land of fire and ice. Climb aboard a custom-modified 4x4 Superjeep to conquer snow drifts and river crossings, step into the radiant sapphire depths of natural ice caves beneath Vatnajökull glacier, witness floating icebergs at Jökulsárlón Glacier Lagoon, and hunt the dancing Northern Lights.",
+    "price": 3499,
+    "originalPrice": 4100,
+    "discountedPrice": 3299,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Moderate",
+    "rating": 4.96,
+    "reviews": 172,
+    "reviewCount": 172,
+    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "November to March",
+    "language": "English, Icelandic",
+    "highlights": [
+      "Natural Vatnajökull Crystal Blue Ice Cave guided glacier expedition",
+      "Private Superjeep 4x4 glacier driving across volcanic pumice fields",
+      "Nightly Aurora Borealis hunting led by professional astrophotographer",
+      "Jökulsárlón Glacier Lagoon and Diamond Beach glistening black sands",
+      "Soaking in the geothermal waters of the Retreat at Blue Lagoon"
+    ],
+    "included": [
+      "5 Nights in luxury Nordic boutique hotels (including ION Adventure Hotel)",
+      "Dedicated 4x4 Superjeep and expert Icelandic glacier guide throughout",
+      "Glacier crampons, helmets, and ice safety equipment",
+      "Private access and spa treatments at the Retreat at Blue Lagoon",
+      "Daily Nordic breakfast and 3 chef-curated Icelandic dinners"
+    ],
+    "excluded": [
+      "International flights to Keflavík (KEF)",
+      "Cold-weather outer gear rentals",
+      "Alcoholic beverages"
+    ],
+    "availableDates": [
+      "2026-11-10",
+      "2026-12-05",
+      "2027-01-15",
+      "2027-02-12"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Keflavík Arrival & Blue Lagoon Geothermal Soak",
+        "description": "Arrive in Iceland. Luxury transfer to the Retreat at the Blue Lagoon. Soak in mineral-rich geothermal waters surrounded by moss-covered lava fields."
+      },
+      {
+        "day": 2,
+        "title": "Golden Circle & Thingvellir Rift Valley",
+        "description": "Drive the Golden Circle: see Gullfoss roaring waterfall, erupting Strokkur geyser, and walk between continental tectonic plates."
+      },
+      {
+        "day": 3,
+        "title": "South Coast Waterfalls & Black Sand Beach",
+        "description": "Walk behind Seljalandsfoss waterfall, marvel at Skógafoss, and stand on the black basalt sands of Reynisfjara beneath roaring Atlantic breakers."
+      },
+      {
+        "day": 4,
+        "title": "Vatnajökull Crystal Blue Ice Cave & Glacier Lagoon",
+        "description": "Board your Superjeep onto Vatnajökull glacier. Enter the sapphire interior of a natural ice cave. Visit Diamond Beach where icebergs wash ashore."
+      },
+      {
+        "day": 5,
+        "title": "Superjeep Highland Traverse & Northern Lights Hunt",
+        "description": "Cross rugged snowdrifts with your guide. Keep vigil away from light pollution to witness the emerald ribbons of the Northern Lights."
+      },
+      {
+        "day": 6,
+        "title": "Reykjavik Stroll & Departure",
+        "description": "Explore the colorful streets of downtown Reykjavik and Harpa Concert Hall before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Sebastian Meyer",
+        "rating": 5,
+        "text": "Standing inside the blue ice cave was like being inside a giant diamond. Superjeep guide was phenomenal.",
+        "date": "2026-08-20"
+      }
+    ]
+  },
+  {
+    "id": 315,
+    "tourNumericId": 315,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Patagonia Torres del Paine W-Trek & Grey Glacier Kayaking",
+    "title": "Patagonia Torres del Paine W-Trek & Grey Glacier Kayaking",
+    "slug": "patagonia-torres-del-paine-w-trek-grey-glacier",
+    "category": "Adventure",
+    "destination": "Torres del Paine, Patagonia, Chile",
+    "location": "Magallanes Region, Southern Andes",
+    "country": "Chile",
+    "description": "Trek beneath the granite horns of Los Cuernos, kayak alongside massive icebergs at Grey Glacier, and stay in luxury geodesic eco-domes.",
+    "shortDescription": "Torres del Paine granite towers, Grey Glacier kayak, and eco-dome luxury.",
+    "fullDescription": "Challenge yourself in the raw and untamed wilderness at the end of the world. Experience the highlights of the iconic W-Trek in Torres del Paine National Park with seasoned mountain guides. Kayak among floating azure icebergs at Glacier Grey, hike up French Valley, and view sunrise hitting the base of the iconic Torres towers.",
+    "price": 3650,
+    "originalPrice": 4250,
+    "discountedPrice": 3450,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Challenging",
+    "rating": 4.95,
+    "reviews": 124,
+    "reviewCount": 124,
+    "image": "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "November to March",
+    "language": "English, Spanish",
+    "highlights": [
+      "Base of the Towers (Las Torres) iconic sunrise trek",
+      "Kayaking in drysuits among floating icebergs at Glacier Grey",
+      "French Valley hike with hanging glaciers and rumbling avalanches",
+      "Luxury EcoCamp Patagonia geodesic dome stay with wood-burning stoves",
+      "Sighting wild guanacos, Andean condors, and Patagonian foxes"
+    ],
+    "included": [
+      "6 Nights in premium Suite Domes at EcoCamp Patagonia or Tierra Patagonia",
+      "Certified wilderness mountain guides and kayak masters",
+      "All park permits, catamaran crossings, and private ground transfers",
+      "All meals including hearty trail lunches and fine Chilean wines"
+    ],
+    "excluded": [
+      "Flights to Punta Arenas (PUQ) or Puerto Natales",
+      "Personal trekking gear",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-11-20",
+      "2026-12-15",
+      "2027-01-10",
+      "2027-02-14"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Punta Arenas to Torres del Paine",
+        "description": "Scenic drive across Patagonian pampa watching herds of wild guanacos. Check into your luxury eco-dome facing the granite peaks."
+      },
+      {
+        "day": 2,
+        "title": "Trek to the Base of the Towers",
+        "description": "Epic 22km trek through Ascencio Valley up to the glacial moraine lake directly beneath the sheer three granite spires of Las Torres."
+      },
+      {
+        "day": 3,
+        "title": "Lake Pehoe Catamaran & French Valley",
+        "description": "Sail across Lake Pehoe's turquoise waters. Hike deep into the French Valley flanked by the massive granite horns of Los Cuernos."
+      },
+      {
+        "day": 4,
+        "title": "Glacier Grey Trek & Iceberg Kayaking",
+        "description": "Suit up in specialized drysuits to paddle sea kayaks alongside colossal floating electric-blue icebergs at Grey Glacier."
+      },
+      {
+        "day": 5,
+        "title": "Laguna Azul & Wild Pampa Safari",
+        "description": "Explore the gentle trails around Laguna Azul where guanacos graze against the backdrop of the towers. Enjoy a traditional Patagonian lamb asado."
+      },
+      {
+        "day": 6,
+        "title": "Nordenskjöld Lake & Waterfall Trail",
+        "description": "Hike along Salto Grande waterfall connecting Lake Nordenskjöld and Lake Pehoe with condors circling overhead."
+      },
+      {
+        "day": 7,
+        "title": "Departure",
+        "description": "Farewell breakfast and private transfer back to Punta Arenas Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Carlos Gomez",
+        "rating": 5,
+        "text": "Kayaking by Grey Glacier was surreal. The guides and EcoCamp domes were extraordinary.",
+        "date": "2026-08-25"
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "tourNumericId": 316,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Grand Canyon VIP Helicopter Descent & Colorado River Whitewater",
+    "title": "Grand Canyon VIP Helicopter Descent & Colorado River Whitewater",
+    "slug": "grand-canyon-helicopter-descent-colorado-river",
+    "category": "Adventure",
+    "destination": "Grand Canyon, Arizona, USA",
+    "location": "Colorado Plateau, American Southwest",
+    "country": "USA",
+    "description": "Fly below the rim of the Grand Canyon on a private helicopter, touch down 4,000 feet deep on the canyon floor, and run the Colorado River rapids.",
+    "shortDescription": "Below-the-rim helicopter landing, Colorado River rafting, and canyon sunset.",
+    "fullDescription": "Experience one of the natural wonders of the world in exhilarating fashion. Take a private EC130 helicopter descending below the canyon rim to a secluded landing bluff along the Colorado River. Board motorized rafting pontoons to navigate churning whitewaters, and watch the sun paint red sandstone walls gold.",
+    "price": 1999,
+    "originalPrice": 2400,
+    "discountedPrice": 1799,
+    "currency": "$",
+    "duration": "4 Days / 3 Nights",
+    "durationDays": 4,
+    "durationNights": 3,
+    "difficulty": "Moderate",
+    "rating": 4.88,
+    "reviews": 155,
+    "reviewCount": 155,
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to October",
+    "language": "English",
+    "highlights": [
+      "Private luxury helicopter descent 4,000 feet down below the canyon rim",
+      "Champagne landing on private Hualapai tribal land by the riverbank",
+      "Thrilling Colorado River whitewater rafting through Travertine Canyon",
+      "Grand Canyon West Skywalk glass bridge cantilever experience",
+      "Luxury glamping stay at Under Canvas Grand Canyon with stargazing"
+    ],
+    "included": [
+      "3 Nights in luxury safari tents at Under Canvas Grand Canyon",
+      "Helicopter roundtrip flight with floor-to-ceiling panoramic glass",
+      "Full-day river rafting expedition with native Hualapai river guides",
+      "All meals including campfire cookouts and southwestern breakfasts"
+    ],
+    "excluded": [
+      "Flights to Las Vegas (LAS) or Phoenix (PHX)",
+      "Guide tips",
+      "Souvenirs"
+    ],
+    "availableDates": [
+      "2026-05-15",
+      "2026-06-20",
+      "2026-09-10",
+      "2026-10-08"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival & Under Canvas Camp Check-in",
+        "description": "Arrive from Las Vegas or Flagstaff. Check into your luxury safari tent with wood-burning stove and private deck. S'mores and stargazing by the fire pit."
+      },
+      {
+        "day": 2,
+        "title": "Helicopter Below-the-Rim & Skywalk",
+        "description": "Helicopter flies deep into the gorge below ancient rock layers. Land for a champagne toast on the canyon floor. Walk the horseshoe-shaped glass Skywalk."
+      },
+      {
+        "day": 3,
+        "title": "Colorado River Whitewater Rafting",
+        "description": "Full-day motorized whitewater run navigating rapids between towering canyon walls. Hike up to hidden Travertine Falls for a cool freshwater swim."
+      },
+      {
+        "day": 4,
+        "title": "South Rim Scenic Overlooks & Departure",
+        "description": "Sunrise view over Mather Point and Bright Angel trail before private transfer to airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Bradley Cooper",
+        "rating": 5,
+        "text": "Flying below the rim gave me goosebumps. Best way to see the Grand Canyon.",
+        "date": "2026-07-19"
+      }
+    ]
+  },
+  {
+    "id": 317,
+    "tourNumericId": 317,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Norwegian Fjords Trolltunga Expedition & Nærøyfjord Sea Kayaking",
+    "title": "Norwegian Fjords Trolltunga Expedition & Nærøyfjord Sea Kayaking",
+    "slug": "norwegian-fjords-trolltunga-naeroyfjord-kayaking",
+    "category": "Adventure",
+    "destination": "Hardangerfjord & Nærøyfjord, Norway",
+    "location": "Western Norway Fjords",
+    "country": "Norway",
+    "description": "Hike to the daring rock promontory of Trolltunga high above Lake Ringedalsvatnet, sea kayak the UNESCO Nærøyfjord, and stay in fjord-view lodges.",
+    "shortDescription": "Trolltunga rock cliff, UNESCO Nærøyfjord kayaking, and Flåm railway.",
+    "fullDescription": "Discover the dramatic kingdom of the Norse fjords. Trek with private mountain guides to the world-famous cliff ledge of Trolltunga (Troll's Tongue) jutting 700 meters above the lake, paddle sea kayaks between sheer mountain walls in UNESCO-protected Nærøyfjord, and ride the steep Flåm Railway.",
+    "price": 3299,
+    "originalPrice": 3800,
+    "discountedPrice": 3099,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Challenging",
+    "rating": 4.93,
+    "reviews": 104,
+    "reviewCount": 104,
+    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "June to September",
+    "language": "English, Norwegian",
+    "highlights": [
+      "Guided trek to the iconic Trolltunga cliff jutting over Lake Ringedalsvatnet",
+      "Sea kayaking the narrow waters of UNESCO World Heritage Nærøyfjord",
+      "Scenic Flåm Railway journey climbing through waterfalls and ravines",
+      "Stay at historic fjord-side boutique hotels in Hardanger",
+      "Traditional Norwegian cider tasting in the fruit orchards of Ulvik"
+    ],
+    "included": [
+      "5 Nights in luxury fjord lodges and waterfront boutique hotels",
+      "Professional mountain guides for Trolltunga and kayak masters for Nærøyfjord",
+      "Private Mercedes minivan transfers across western fjord routes",
+      "Flåm Railway tickets and fjord boat passes",
+      "Daily Nordic breakfasts and traditional 3-course dinners"
+    ],
+    "excluded": [
+      "Flights to Bergen (BGO)",
+      "Hiking boot rentals",
+      "Personal travel insurance"
+    ],
+    "availableDates": [
+      "2026-06-15",
+      "2026-07-12",
+      "2026-08-08",
+      "2026-09-02"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bergen to Hardangerfjord",
+        "description": "Arrive in Bergen. Private transfer past roaring Steinsdalsfossen waterfall to your hotel on the shores of Hardangerfjord."
+      },
+      {
+        "day": 2,
+        "title": "The Epic Trolltunga Hike",
+        "description": "Early start for the challenging 27km hike up to Trolltunga. Stand upon the dramatic stone ledge with vertigo-inducing panoramic lake views."
+      },
+      {
+        "day": 3,
+        "title": "Cider Orchards & Hardanger Relaxation",
+        "description": "Rest and recover with a peaceful stroll through blossoming apple orchards in Ulvik. Sample artisanal sparkling hard ciders."
+      },
+      {
+        "day": 4,
+        "title": "Nærøyfjord Sea Kayaking Expedition",
+        "description": "Glide across still fjord waters flanked by 1,000-meter cliffs and tumbling waterfalls in the narrowest fjord in Europe."
+      },
+      {
+        "day": 5,
+        "title": "Flåm Railway & Stegastein Viewpoint",
+        "description": "Ride the Flåm Railway up to Myrdal. Walk out onto the wooden Stegastein cantilever viewpoint hanging 650m over Aurlandsfjord."
+      },
+      {
+        "day": 6,
+        "title": "Bergen Bryggen Stroll & Departure",
+        "description": "Return to Bergen. Explore UNESCO Bryggen wooden wharf before flight departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Astrid Lindholm",
+        "rating": 5,
+        "text": "Standing on Trolltunga was exhilarating. Norway's nature is simply awe-inspiring.",
+        "date": "2026-08-11"
+      }
+    ]
+  },
+  {
+    "id": 318,
+    "tourNumericId": 318,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Dolomites Cortina Via Ferrata & Alta Via Alpine Hut Traverse",
+    "title": "Dolomites Cortina Via Ferrata & Alta Via Alpine Hut Traverse",
+    "slug": "dolomites-via-ferrata-alta-via-traverse",
+    "category": "Adventure",
+    "destination": "Cortina d'Ampezzo, Dolomites, Italy",
+    "location": "Italian Alps, South Tyrol",
+    "country": "Italy",
+    "description": "Climb protected iron-path Via Ferrata routes across jagged pale limestone spires, stay in scenic mountain rifugios, and gaze over Tre Cime di Lavaredo.",
+    "shortDescription": "Via Ferrata climbing, Tre Cime di Lavaredo, and high mountain rifugios.",
+    "fullDescription": "Experience the sheer vertical drama of the Italian Dolomites. Clip your carabiners onto World War I historic Via Ferrata cables with UIAGM alpine guides, trek across the Alta Via 1 alpine trails, admire the sheer three towers of Tre Cime di Lavaredo at sunset, and savor Michelin-caliber Ladin dining in Cortina.",
+    "price": 2999,
+    "originalPrice": 3500,
+    "discountedPrice": 2799,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Challenging",
+    "rating": 4.92,
+    "reviews": 118,
+    "reviewCount": 118,
+    "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "June to October",
+    "language": "English, Italian, German",
+    "highlights": [
+      "Climbing exhilarating Via Ferrata routes with certified UIAGM alpine guides",
+      "Sunrise circuit trek around Tre Cime di Lavaredo three iconic monoliths",
+      "Overnight stay in a high-elevation alpine rifugio with panoramic terrace",
+      "Lake Braies (Pragser Wildsee) emerald rowboat morning experience",
+      "5-Star Alpine spa resort stay in Cortina d'Ampezzo"
+    ],
+    "included": [
+      "4 Nights accommodation (3 nights 5-star hotel in Cortina + 1 night scenic mountain rifugio)",
+      "UIAGM alpine guide and all Via Ferrata equipment (harness, helmet, lanyard set)",
+      "All cable cars and mountain toll passes",
+      "Daily Italian breakfasts and 2 alpine dinners with South Tyrolean wines"
+    ],
+    "excluded": [
+      "Flights to Venice (VCE)",
+      "Hiking boots and apparel",
+      "Personal expenses"
+    ],
+    "availableDates": [
+      "2026-06-25",
+      "2026-07-20",
+      "2026-08-15",
+      "2026-09-10"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Venice to Cortina d'Ampezzo",
+        "description": "Private luxury transfer from Venice Marco Polo up into the heart of the Dolomites. Stroll Cortina's glamorous Corso Italia."
+      },
+      {
+        "day": 2,
+        "title": "Tre Cime di Lavaredo & Via Ferrata Innerkofler",
+        "description": "Trek the circuit of the three towers. Clip into iron cables through WWI rock tunnels leading to the summit of Monte Paterno."
+      },
+      {
+        "day": 3,
+        "title": "Cinque Torri Rock Climbing & High Rifugio",
+        "description": "Explore the surreal towers of Cinque Torri. Ascend to Rifugio Nuvolau perched on an eagle's aerie ridge for sunset and night under the stars."
+      },
+      {
+        "day": 4,
+        "title": "Lake Braies Rowboat & Cortina Spa",
+        "description": "Descend to Lake Braies. Row wooden boats across crystalline turquoise water surrounded by sheer mountain reflections. Unwind in the hotel spa."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Breakfast with views of Monte Cristallo before transfer back to Venice."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Matteo Rossi",
+        "rating": 5,
+        "text": "The Via Ferrata climbing was exciting yet felt completely safe with the guide. Unbelievable mountain vistas.",
+        "date": "2026-07-16"
+      }
+    ]
+  },
+  {
+    "id": 319,
+    "tourNumericId": 319,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Peru Classic Inca Trail VIP Expedition & Machu Picchu Sunrise",
+    "title": "Peru Classic Inca Trail VIP Expedition & Machu Picchu Sunrise",
+    "slug": "peru-inca-trail-vip-machu-picchu-sunrise",
+    "category": "Adventure",
+    "destination": "Cusco & Machu Picchu, Peru",
+    "location": "Peruvian Andes, Sacred Valley",
+    "country": "Peru",
+    "description": "Trek ancient stone-paved Inca trails over Dead Woman's Pass (4,215m), camp in luxury glamping tents with private massage, and enter Machu Picchu via the Sun Gate.",
+    "shortDescription": "Inca Trail stone paths, luxury glamping camps, and Machu Picchu Sun Gate.",
+    "fullDescription": "Follow the footsteps of Inca royalty along the legendary Inca Trail. Experience this challenging multi-day high-altitude trek with unmatched luxury: spacious walk-in sleeping tents, warm showers, private camp massage therapists, and gourmet Andean gastronomy, arriving at Inti Punku (Sun Gate) for sunrise over Machu Picchu.",
+    "price": 3350,
+    "originalPrice": 3900,
+    "discountedPrice": 3150,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Challenging",
+    "rating": 4.97,
+    "reviews": 180,
+    "reviewCount": 180,
+    "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to October",
+    "language": "English, Spanish, Quechua",
+    "highlights": [
+      "Classic 4-Day Inca Trail trek with official government trekking permits",
+      "VIP glamping with elevated cots, hot water bottles, and heated dining tent",
+      "Crossing the legendary Dead Woman's Pass (Warmiwañusqa, 4,215 meters)",
+      "Entering Machu Picchu at sunrise through the historic Sun Gate (Inti Punku)",
+      "Return journey on the ultra-luxury Hiram Bingham vintage Pullman train"
+    ],
+    "included": [
+      "3 Nights 5-star hotel (Cusco & Sacred Valley) + 3 nights VIP glamping camp",
+      "Official Inca Trail permit, certified Quechua master guides, and private porters",
+      "Private camp chef preparing fresh 3-course Andean meals and hot beverages",
+      "Belmond Hiram Bingham train tickets with 4-course dinner and pisco sours",
+      "Machu Picchu private circuit entrance ticket and bus transfers"
+    ],
+    "excluded": [
+      "Flights to Lima / Cusco (CUZ)",
+      "Trekking pole and sleeping bag rentals",
+      "Porter and guide tips"
+    ],
+    "availableDates": [
+      "2026-05-10",
+      "2026-06-12",
+      "2026-08-05",
+      "2026-09-15"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Cusco & Acclimatization",
+        "description": "Arrive in Cusco (3,400m). Transfer to Palacio Nazarenas. Gentle walking tour through San Blas artisan quarter and ancient Inca stone walls."
+      },
+      {
+        "day": 2,
+        "title": "Sacred Valley of the Incas",
+        "description": "Visit Pisac ruins and Ollantaytambo living Inca town. Acclimate comfortably in the lower elevation of the Sacred Valley."
+      },
+      {
+        "day": 3,
+        "title": "Inca Trail Day 1: Km 82 to Wayllabamba",
+        "description": "Pass checkpoint at Km 82. Trek alongside the Urubamba River with views of snowcapped Veronica Peak to your first luxury camp."
+      },
+      {
+        "day": 4,
+        "title": "Inca Trail Day 2: Dead Woman's Pass to Pacaymayo",
+        "description": "Ascend ancient stone stairways through cloud forests to the summit of Warmiwañusqa (4,215m). Descend to camp for hot tea and massage."
+      },
+      {
+        "day": 5,
+        "title": "Inca Trail Day 3: Runkurakay & Wiñay Wayna",
+        "description": "Explore magnificent ruins of Sayacmarca and Phuyupatamarca ('Town in the Clouds') surrounded by orchids."
+      },
+      {
+        "day": 6,
+        "title": "Inca Trail Day 4: Sun Gate to Machu Picchu",
+        "description": "Hike to the Sun Gate for the unforgettable first glimpse of Machu Picchu glowing in morning mist. Comprehensive private tour of the citadel."
+      },
+      {
+        "day": 7,
+        "title": "Hiram Bingham Train Return to Cusco",
+        "description": "Indulge on the Belmond Hiram Bingham train with live Peruvian music and gourmet dining on the scenic journey back to Cusco."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Gabriel Santos",
+        "rating": 5,
+        "text": "Entering Machu Picchu from the Sun Gate brought tears to my eyes. The VIP camping team was world-class.",
+        "date": "2026-08-01"
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "tourNumericId": 320,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "South Africa Great White Shark Cage Diving & Table Mountain Abseil",
+    "title": "South Africa Great White Shark Cage Diving & Table Mountain Abseil",
+    "slug": "south-africa-shark-cage-diving-table-mountain-abseil",
+    "category": "Adventure",
+    "destination": "Cape Town & Gansbaai, South Africa",
+    "location": "Western Cape, Atlantic & Indian Oceans",
+    "country": "South Africa",
+    "description": "Submerge in a shark cage to view great white sharks up close in Shark Alley, abseil 112 meters off Table Mountain, and surf Muizenberg.",
+    "shortDescription": "Great white shark cage diving, Table Mountain 112m abseil, and Cape Peninsula.",
+    "fullDescription": "Experience South Africa's pulse-pounding marine and mountain extremes. Stand atop the sheer flat summit of Table Mountain before stepping backwards over the edge on the world’s highest commercial abseil (112 meters). Journey to Gansbaai to enter a shark cage surrounded by apex marine predators, and explore Cape Point.",
+    "price": 2499,
+    "originalPrice": 2950,
+    "discountedPrice": 2299,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Challenging",
+    "rating": 4.89,
+    "reviews": 136,
+    "reviewCount": 136,
+    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-12 travelers",
+    "bestTime": "April to September",
+    "language": "English, Afrikaans",
+    "highlights": [
+      "Great White Shark cage diving expedition in Gansbaai with marine biologists",
+      "Table Mountain 112-meter commercial abseil into the sheer void",
+      "Helicopter flight along the Twelve Apostles and Camps Bay coast",
+      "Cape Point Nature Reserve coastal hike to the tip of Africa",
+      "Boulders Beach African penguin colony walking excursion"
+    ],
+    "included": [
+      "4 Nights in 5-star Victoria & Alfred Waterfront luxury hotel",
+      "Gansbaai shark cage charter with wetsuits, masks, and onboard lunch",
+      "Table Mountain abseil gear, cableway tickets, and safety crew",
+      "Private Mercedes chauffeur for Cape Peninsula touring",
+      "Daily gourmet breakfasts and Stellenbosch wine tasting"
+    ],
+    "excluded": [
+      "Flights to Cape Town (CPT)",
+      "Underwater GoPro rental",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-10-10",
+      "2026-11-15",
+      "2027-01-20",
+      "2027-02-28"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Cape Town & V&A Waterfront",
+        "description": "Arrive at Cape Town International Airport. Transfer to your luxury waterfront hotel. Harbor sunset cruise watching seals."
+      },
+      {
+        "day": 2,
+        "title": "Table Mountain Abseil & 12 Apostles Helicopter",
+        "description": "Ascend Table Mountain via cable car. Abseil 112 meters down the vertical face with the Atlantic ocean far below. Helicopter flip along the coast."
+      },
+      {
+        "day": 3,
+        "title": "Gansbaai Great White Shark Cage Diving",
+        "description": "Early morning transfer to Gansbaai. Board the research catamaran out to Shark Alley. Lower into the cage to come face-to-face with apex predators."
+      },
+      {
+        "day": 4,
+        "title": "Cape Point & Boulders Beach Penguins",
+        "description": "Drive Chapman’s Peak cliff road. Walk alongside African penguins on Boulders Beach and reach the southwestern tip of the continent at Cape Point."
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Morning coffee in colorful Bo-Kaap before private airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Liam O'Connor",
+        "rating": 5,
+        "text": "Stepping off the top of Table Mountain and looking down at Camps Bay was pure adrenaline!",
+        "date": "2026-08-06"
+      }
+    ]
+  },
+  {
+    "id": 321,
+    "tourNumericId": 321,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Kyoto Imperial Shinto Sanctuaries & Authentic Tea Master Ceremony",
+    "title": "Kyoto Imperial Shinto Sanctuaries & Authentic Tea Master Ceremony",
+    "slug": "kyoto-imperial-sanctuaries-tea-master-ceremony",
+    "category": "Cultural",
+    "destination": "Kyoto & Nara, Japan",
+    "location": "Kansai Region, Honshu",
+    "country": "Japan",
+    "description": "Walk beneath thousands of vermilion torii gates at Fushimi Inari, experience a private chanoyu tea ceremony with a grand master, and stay in a traditional luxury ryokan.",
+    "shortDescription": "Fushimi Inari torii gates, private tea master ceremony, and kaiseki ryokan.",
+    "fullDescription": "Immerse yourself in a thousand years of Japanese imperial history and Zen philosophy. Based in the ancient capital of Kyoto, wander through bamboo groves in Arashiyama, marvel at the Golden Pavilion (Kinkaku-ji), step into secluded Zen rock gardens, and enjoy an exclusive multi-course kaiseki dinner with private Geiko performance.",
+    "price": 3599,
+    "originalPrice": 4200,
+    "discountedPrice": 3399,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.96,
+    "reviews": 175,
+    "reviewCount": 175,
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "March to May, October to November",
+    "language": "English, Japanese",
+    "highlights": [
+      "Early morning private access to Fushimi Inari Taisha vermilion torii paths",
+      "Private Chanoyu matcha ceremony inside a 400-year-old temple tea pavilion",
+      "Traditional luxury Ryokan stay with private cypress onsen (hot spring) bath",
+      "Exclusive evening banquet with Geiko and Maiko in private Gion ochaya",
+      "Day excursion to Nara Todai-ji Great Buddha and sacred bowing deer"
+    ],
+    "included": [
+      "5 Nights accommodation (3 nights luxury boutique hotel + 2 nights historic ryokan)",
+      "Daily Japanese breakfast and two 10-course seasonal kaiseki dinners",
+      "Private licensed English-speaking scholar guide throughout",
+      "Shinkansen bullet train passes and private luxury car transfers"
+    ],
+    "excluded": [
+      "International flights to Osaka (KIX) or Tokyo",
+      "Personal kimono purchases",
+      "Alcoholic beverages"
+    ],
+    "availableDates": [
+      "2026-10-20",
+      "2026-11-15",
+      "2027-03-25",
+      "2027-04-10"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Kyoto & Gion Evening Stroll",
+        "description": "Bullet train into Kyoto Station. Transfer to your luxury hotel. Evening walk along the willow-lined Shirakawa Canal in Gion."
+      },
+      {
+        "day": 2,
+        "title": "Fushimi Inari & Golden Pavilion (Kinkaku-ji)",
+        "description": "Hike the forested paths of Fushimi Inari through 10,000 red gates. Continue to the shimmering gold-leaf reflection of Kinkaku-ji and Ryoan-ji rock garden."
+      },
+      {
+        "day": 3,
+        "title": "Arashiyama Bamboo Grove & Master Tea Ceremony",
+        "description": "Wander the towering green stalks of Sagano Bamboo Forest. Partake in a contemplative tea ceremony with a 15th-generation Urasenke master."
+      },
+      {
+        "day": 4,
+        "title": "Nara Great Buddha & Sacred Deer",
+        "description": "Visit Todai-ji to stand before the world's largest bronze Buddha statue. Feed rice crackers to free-roaming sacred sika deer in Nara Park."
+      },
+      {
+        "day": 5,
+        "title": "Historic Ryokan Stay & Geiko Evening",
+        "description": "Check into a centuries-old ryokan. Bathe in private cedar onsen baths. Enjoy a private Kaiseki banquet featuring dance by an authentic Maiko."
+      },
+      {
+        "day": 6,
+        "title": "Kiyomizu-dera & Departure",
+        "description": "Walk the wooden cantilevered stage of Kiyomizu-dera overlooking cherry or maple foliage before transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Kenji Takahashi",
+        "rating": 5,
+        "text": "The private tea ceremony and kaiseki dinner in Gion were deeply moving. Exceptional authenticity.",
+        "date": "2026-08-22"
+      }
+    ]
+  },
+  {
+    "id": 322,
+    "tourNumericId": 322,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Rome & Vatican Private Night Access & Colosseum Under-Tours",
+    "title": "Rome & Vatican Private Night Access & Colosseum Under-Tours",
+    "slug": "rome-vatican-night-access-colosseum-underground",
+    "category": "Cultural",
+    "destination": "Rome & Vatican City, Italy",
+    "location": "Lazio, Central Italy",
+    "country": "Italy",
+    "description": "Enter the Vatican Museums and Sistine Chapel after public closing hours, explore the Colosseum underground hypogeum, and dine in Renaissance palazzos.",
+    "shortDescription": "After-hours Sistine Chapel, Colosseum underground hypogeum, and Roman palazzos.",
+    "fullDescription": "Experience the Eternal City without the crowds. Enjoy exclusive after-hours access to the Vatican Museums, standing in peaceful silence beneath Michelangelo’s Sistine Chapel ceiling. Descend beneath the Colosseum into the gladiator dungeons (hypogeum), walk the Roman Forum with an art historian, and savor private rooftop Roman banquets.",
+    "price": 3299,
+    "originalPrice": 3850,
+    "discountedPrice": 3099,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.95,
+    "reviews": 160,
+    "reviewCount": 160,
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to June, September to November",
+    "language": "English, Italian",
+    "highlights": [
+      "VIP after-hours private tour of Vatican Museums & Sistine Chapel without crowds",
+      "Exclusive access to Colosseum underground hypogeum and arena floor",
+      "Private curator-led tour of the Borghese Gallery (Bernini & Caravaggio masterpieces)",
+      "Stay in a historic 5-star palazzo hotel near the Spanish Steps",
+      "Rooftop sunset dining overlooking St. Peter's Basilica dome"
+    ],
+    "included": [
+      "4 Nights in 5-star Roman luxury hotel (Hotel de Russie / Palazzo Manfredi)",
+      "All VIP after-hours permits, skip-the-line passes, and art historian guides",
+      "Private Mercedes-Benz sedan transfers throughout Rome",
+      "Daily gourmet Roman breakfast and 2 fine dining dinners"
+    ],
+    "excluded": [
+      "Flights to Rome Fiumicino (FCO)",
+      "Personal shopping",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-05-18",
+      "2026-06-14",
+      "2026-09-12",
+      "2026-10-16"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Rome & Piazza Navona Evening",
+        "description": "Arrive at Fiumicino. Private transfer to your palazzo suite. Evening walk past the illuminated Trevi Fountain and Piazza Navona."
+      },
+      {
+        "day": 2,
+        "title": "Colosseum Underground Hypogeum & Roman Forum",
+        "description": "Descend into the underground tunnels where gladiators and beasts waited. Step out onto the arena floor, followed by the ruins of the Roman Forum."
+      },
+      {
+        "day": 3,
+        "title": "Borghese Gallery & Trastevere Wine Cellar",
+        "description": "Private morning tour of Galleria Borghese admiring Bernini sculptures. In the evening, sample aged Barolo and Chianti in a historic Trastevere cellar."
+      },
+      {
+        "day": 4,
+        "title": "After-Hours Vatican Museums & Sistine Chapel",
+        "description": "Enter after the doors close to the public. Walk through the Gallery of Maps in hushed stillness and gaze upon Michelangelo’s Creation of Adam alone."
+      },
+      {
+        "day": 5,
+        "title": "Pantheon Stroll & Departure",
+        "description": "Morning visit to the magnificent dome of the Pantheon before airport transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Eleanor Roosevelt-Smith",
+        "rating": 5,
+        "text": "Having the Sistine Chapel virtually to ourselves with only ten people was the most moving cultural experience of my life.",
+        "date": "2026-08-15"
+      }
+    ]
+  },
+  {
+    "id": 323,
+    "tourNumericId": 323,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Egypt Cairo Great Pyramids VIP & Private Nile Dahabiya Sail",
+    "title": "Egypt Cairo Great Pyramids VIP & Private Nile Dahabiya Sail",
+    "slug": "egypt-cairo-pyramids-nile-dahabiya-sail",
+    "category": "Cultural",
+    "destination": "Cairo, Luxor & Aswan, Egypt",
+    "location": "Nile River Valley, Egypt",
+    "country": "Egypt",
+    "description": "Enter between the paws of the Great Sphinx, sail the Nile on a private luxury twin-masted Dahabiya yacht, and explore the Valley of the Kings.",
+    "shortDescription": "Private Sphinx paws entry, Nile Dahabiya sailboat, and King Tut tomb.",
+    "fullDescription": "Step back 5,000 years into the world of pharaohs, gods, and pyramids. Enjoy special government permits allowing you to walk directly between the paws of the Great Sphinx in Giza. Fly south to Luxor to sail the Nile aboard an intimate, wooden twin-masted Dahabiya sailboat with a resident Egyptologist, exploring Karnak and Valley of the Kings.",
+    "price": 3799,
+    "originalPrice": 4400,
+    "discountedPrice": 3599,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.97,
+    "reviews": 142,
+    "reviewCount": 142,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "October to April",
+    "language": "English, Arabic",
+    "highlights": [
+      "Special permit access inside the Great Pyramid of Giza and between Sphinx paws",
+      "Exclusive private Dahabiya sailing boat on the Nile between Luxor and Aswan",
+      "Valley of the Kings tombs including King Tutankhamun and Seti I",
+      "Grand Egyptian Museum (GEM) private curator tour",
+      "Sunrise hot air balloon flight over Luxor's West Bank temples"
+    ],
+    "included": [
+      "3 Nights 5-star historic hotel in Cairo (Mena House facing the Pyramids)",
+      "3 Nights luxury private Dahabiya Nile sailboat with full board",
+      "Domestic flights (Cairo - Luxor / Aswan - Cairo)",
+      "Dedicated Egyptologist guide throughout, private chauffeur, and all site entries"
+    ],
+    "excluded": [
+      "International flights to Cairo (CAI)",
+      "Tipping kitty for ship crew",
+      "Personal purchases"
+    ],
+    "availableDates": [
+      "2026-10-15",
+      "2026-11-12",
+      "2027-01-10",
+      "2027-02-18"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cairo Arrival & Marriott Mena House",
+        "description": "Arrive in Cairo. Transfer to historic Mena House hotel with direct garden views of the Great Pyramids. Welcome Egyptian banquet."
+      },
+      {
+        "day": 2,
+        "title": "Giza Pyramids, Sphinx Paws & Saqqara",
+        "description": "Private morning access between the paws of the Sphinx. Enter the Grand Gallery inside the Great Pyramid of Khufu. Visit Step Pyramid of Djoser at Saqqara."
+      },
+      {
+        "day": 3,
+        "title": "Grand Egyptian Museum & Flight to Luxor",
+        "description": "Marvel at the complete Tutankhamun golden treasure collection in the new Grand Egyptian Museum. Evening flight to Luxor."
+      },
+      {
+        "day": 4,
+        "title": "Luxor Balloon Flight & Valley of the Kings",
+        "description": "Sunrise hot air balloon flight over the Nile. Explore the subterranean painted royal tombs of King Tut and Ramses VI. Board your Dahabiya."
+      },
+      {
+        "day": 5,
+        "title": "Karnak Temple & Nile Sailing",
+        "description": "Walk through the awe-inspiring Great Hypostyle Hall of Karnak with 134 colossal columns. Raise the sails of your Dahabiya to cruise south."
+      },
+      {
+        "day": 6,
+        "title": "Edfu & Kom Ombo Temples",
+        "description": "Disembark at Edfu Temple dedicated to Horus and the dual crocodile temple at Kom Ombo. Dine on deck under the stars."
+      },
+      {
+        "day": 7,
+        "title": "Aswan Philae Temple & Return to Cairo",
+        "description": "Visit the island temple of Isis at Philae before domestic flight back to Cairo for departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "William Sterling",
+        "rating": 5,
+        "text": "Standing between the paws of the Sphinx in complete silence with our Egyptologist was an experience I will never forget.",
+        "date": "2026-08-28"
+      }
+    ]
+  },
+  {
+    "id": 324,
+    "tourNumericId": 324,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Andalusia Alhambra Palace Moorish Splendor & Seville Flamenco",
+    "title": "Andalusia Alhambra Palace Moorish Splendor & Seville Flamenco",
+    "slug": "andalusia-alhambra-moorish-splendor-seville-flamenco",
+    "category": "Cultural",
+    "destination": "Seville, Cordoba & Granada, Spain",
+    "location": "Andalusia, Southern Spain",
+    "country": "Spain",
+    "description": "Marvel at Islamic geometric carvings at the Alhambra and Cordoba's Mezquita, experience passionate flamenco in Seville, and stay in converted palacios.",
+    "shortDescription": "Alhambra Palace Nasrid courts, Cordoba Mezquita, and intimate Seville flamenco.",
+    "fullDescription": "Journey through the golden age of Al-Andalus. Admire the lace-like plasterwork, serene reflecting pools, and fragrant Generalife gardens of the Alhambra Palace in Granada. Walk beneath the red-and-white horseshoe arches of Cordoba’s Mezquita, and lose yourself in the passionate guitar chords of private Seville flamenco.",
+    "price": 2799,
+    "originalPrice": 3200,
+    "discountedPrice": 2599,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.91,
+    "reviews": 122,
+    "reviewCount": 122,
+    "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to June, September to October",
+    "language": "English, Spanish",
+    "highlights": [
+      "VIP private access to the Nasrid Palaces of the Alhambra without queues",
+      "Exclusive evening Flamenco performance in a private 17th-century Seville courtyard",
+      "Curator-led tour of the Great Mosque-Cathedral (Mezquita) of Cordoba",
+      "Stay in converted historic palacios with Andalusian tiled courtyards",
+      "Gourmet tapas and sherry pairing tour through Seville’s Santa Cruz quarter"
+    ],
+    "included": [
+      "5 Nights in luxury 5-star boutique palacios (Hotel Alfonso XIII / Parador de Granada)",
+      "AVE high-speed train tickets and private Mercedes transfers",
+      "Expert historian guide for all monuments and heritage quarters",
+      "Daily artisan Spanish breakfast and 2 Andalusian gastronomic dinners"
+    ],
+    "excluded": [
+      "Flights to Madrid/Seville",
+      "Personal wine purchases",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-05-10",
+      "2026-06-08",
+      "2026-09-15",
+      "2026-10-20"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Seville & Barrio Santa Cruz",
+        "description": "Arrive in Seville. Check into Hotel Alfonso XIII. Evening walk through the fragrant orange blossom alleys of Barrio Santa Cruz."
+      },
+      {
+        "day": 2,
+        "title": "Seville Alcázar & Cathedral",
+        "description": "Explore the Royal Alcázar’s Moorish architecture and Giralda tower. Evening private Flamenco tablao with live Spanish guitar."
+      },
+      {
+        "day": 3,
+        "title": "Cordoba Mezquita Horseshoe Arches",
+        "description": "High-speed train to Cordoba. Marvel at the 856 jasper and onyx pillars of the Mezquita. Walk the flower-lined Calleja de las Flores."
+      },
+      {
+        "day": 4,
+        "title": "Granada & Albayzín Moorish Quarter",
+        "description": "Travel to Granada. Explore the whitewashed Albayzín hillside quarter with stunning sunset views of the Alhambra from Mirador de San Nicolás."
+      },
+      {
+        "day": 5,
+        "title": "The Alhambra & Generalife Gardens",
+        "description": "In-depth private tour of the Court of the Lions, Hall of the Abencerrajes, and cypress gardens of the Generalife."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Morning churros con chocolate before train or flight transfer."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Isabella Martinez",
+        "rating": 5,
+        "text": "The Alhambra in Granada is poetry carved into stone. The flamenco performance brought us to tears.",
+        "date": "2026-07-30"
+      }
+    ]
+  },
+  {
+    "id": 325,
+    "tourNumericId": 325,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Athens Acropolis Private Tour & Delphi Mythological Expedition",
+    "title": "Athens Acropolis Private Tour & Delphi Mythological Expedition",
+    "slug": "athens-acropolis-delphi-mythological-expedition",
+    "category": "Cultural",
+    "destination": "Athens & Delphi, Greece",
+    "location": "Attica & Mount Parnassus, Greece",
+    "country": "Greece",
+    "description": "Ascend the sacred rock of the Acropolis to stand before the Parthenon, visit the ancient Oracle of Delphi on Mount Parnassus, and dine in Plaka.",
+    "shortDescription": "Acropolis Parthenon private access, Delphi Oracle, and rooftop Greek dining.",
+    "fullDescription": "Walk in the footsteps of Socrates, Pericles, and ancient philosophers. Experience the birth of democracy with private sunrise access to the Parthenon on the Acropolis rock before the heat and crowds. Journey to the dramatic slopes of Mount Parnassus to discover the ancient Oracle of Delphi, and savor authentic Greek gastronomy.",
+    "price": 2499,
+    "originalPrice": 2950,
+    "discountedPrice": 2299,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.88,
+    "reviews": 105,
+    "reviewCount": 105,
+    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to June, September to October",
+    "language": "English, Greek",
+    "highlights": [
+      "Exclusive early-access private tour of the Acropolis and Parthenon",
+      "Guided discovery of the Acropolis Museum’s glass-floor excavations",
+      "Day journey to the UNESCO sanctuary of Delphi on Mount Parnassus",
+      "5-Star hotel stay facing the illuminated Acropolis (Hotel Grande Bretagne)",
+      "Traditional mezze and Greek wine tasting in historic Plaka"
+    ],
+    "included": [
+      "4 Nights in 5-star Athens luxury hotel",
+      "Private archaeologist guide for all classical sites and museums",
+      "Private Mercedes-Benz sedan for city touring and Delphi excursion",
+      "Daily breakfast and rooftop dinners with direct Parthenon view"
+    ],
+    "excluded": [
+      "Flights to Athens (ATH)",
+      "Personal shopping in Monastiraki",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-05-12",
+      "2026-06-16",
+      "2026-09-08",
+      "2026-10-14"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Athens & Syntagma Square",
+        "description": "Arrive at Athens Airport. Transfer to Hotel Grande Bretagne. Watch the Changing of the Guard ceremony at Syntagma Square."
+      },
+      {
+        "day": 2,
+        "title": "Private Acropolis & Acropolis Museum",
+        "description": "Climb through the Propylaea before crowds arrive. Stand before the Parthenon and Erechtheion Caryatids. Explore the Acropolis Museum."
+      },
+      {
+        "day": 3,
+        "title": "Mythological Delphi & Mount Parnassus",
+        "description": "Drive through olive groves to Delphi. Visit the Temple of Apollo, ancient theatre, stadium, and the bronze Charioteer in the Delphi Museum."
+      },
+      {
+        "day": 4,
+        "title": "Ancient Agora & Plaka Stroll",
+        "description": "Walk the Temple of Hephaestus and the Stoa of Attalos where Socrates debated. Evening dinner on a Plaka rooftop with live acoustic bouzouki."
+      },
+      {
+        "day": 5,
+        "title": "Temple of Poseidon at Sounion & Departure",
+        "description": "Morning scenic coastal drive to Cape Sounion to view the seaside Temple of Poseidon before airport departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "George Pappas",
+        "rating": 5,
+        "text": "Having a licensed archaeologist bring ancient Athens and Delphi to life made this the trip of a lifetime.",
+        "date": "2026-07-22"
+      }
+    ]
+  },
+  {
+    "id": 326,
+    "tourNumericId": 326,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Morocco Marrakech Medina Artisans & High Atlas Berber Enclave",
+    "title": "Morocco Marrakech Medina Artisans & High Atlas Berber Enclave",
+    "slug": "morocco-marrakech-medina-high-atlas-berber",
+    "category": "Cultural",
+    "destination": "Marrakech & High Atlas Mountains, Morocco",
+    "location": "Marrakech-Safi, Morocco",
+    "country": "Morocco",
+    "description": "Navigate the sensory souks and spice markets of Marrakech, stay in an opulent riad, and journey into dramatic High Atlas Berber mountain villages.",
+    "shortDescription": "Marrakech souks, Majorelle Garden, and High Atlas Kasbah retreat.",
+    "fullDescription": "Immerse your senses in the vibrant colors, scents, and sounds of the Red City. Stay in an exquisite courtyard riad in the historic medina, explore Yves Saint Laurent’s cobalt-blue Majorelle Garden, watch snake charmers and storytellers in Jemaa el-Fnaa square, and retreat to a luxury Kasbah in the snow-dusted High Atlas Mountains.",
+    "price": 2650,
+    "originalPrice": 3100,
+    "discountedPrice": 2450,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.93,
+    "reviews": 138,
+    "reviewCount": 138,
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "October to April",
+    "language": "English, French, Arabic",
+    "highlights": [
+      "Stay in an authentic luxury Riad with interior fountain and plunge pool",
+      "Curator-led tour of Jardin Majorelle and Yves Saint Laurent Museum",
+      "Private walking exploration of hidden artisan workshops in the Medina souks",
+      "Overnight retreat at Kasbah Tamadot in the High Atlas Mountains",
+      "Traditional hammam ritual and Moroccan tagine cooking class with a chef"
+    ],
+    "included": [
+      "5 Nights accommodation (3 nights luxury Riad + 2 nights High Atlas Kasbah)",
+      "Private 4x4 vehicle with professional driver throughout",
+      "All monument entries, cooking masterclass, and traditional Hammam spa treatment",
+      "Daily Moroccan breakfasts and 3 curated dinners"
+    ],
+    "excluded": [
+      "International flights to Marrakech (RAK)",
+      "Carpet shipping costs",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-10-18",
+      "2026-11-20",
+      "2027-01-15",
+      "2027-02-22"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Marrakech Arrival & Riad Check-in",
+        "description": "Arrive in Marrakech. Transfer to your luxury riad in the heart of the medina. Sip mint tea and nibble almond pastries by the courtyard fountain."
+      },
+      {
+        "day": 2,
+        "title": "Palaces & Medina Artisan Souks",
+        "description": "Visit Bahia Palace with intricate cedar ceilings and the Saadian Tombs. Explore leather tanneries, weaver workshops, and spice souks with your guide."
+      },
+      {
+        "day": 3,
+        "title": "Jardin Majorelle & Jemaa el-Fnaa",
+        "description": "Stroll the electric-blue villa and giant cactus gardens of Majorelle. In the evening, watch musicians, acrobatics, and storytellers in bustling Jemaa el-Fnaa."
+      },
+      {
+        "day": 4,
+        "title": "High Atlas Mountains & Kasbah Tamadot",
+        "description": "Ascend into the High Atlas Mountains. Check into Kasbah Tamadot with panoramic views of Mount Toubkal. Enjoy an authentic Berber village walk."
+      },
+      {
+        "day": 5,
+        "title": "Berber Tea with Village Elders & Hammam Spa",
+        "description": "Share mint tea with a local Berber family. Afternoon luxury Hammam body scrub and eucalyptus steam bath."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Scenic mountain drive back to Marrakech Menara Airport for departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Chloe De Vries",
+        "rating": 5,
+        "text": "The riad was an oasis of tranquility and Kasbah Tamadot in the Atlas mountains was pure magic.",
+        "date": "2026-08-14"
+      }
+    ]
+  },
+  {
+    "id": 327,
+    "tourNumericId": 327,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Jordan Petra Wonder by Night & Wadi Rum Luxury Bedouin Stargazing",
+    "title": "Jordan Petra Wonder by Night & Wadi Rum Luxury Bedouin Stargazing",
+    "slug": "jordan-petra-by-night-wadi-rum-stargazing",
+    "category": "Cultural",
+    "destination": "Petra & Wadi Rum, Jordan",
+    "location": "Jordanian Desert & Red Sea Region",
+    "country": "Jordan",
+    "description": "Walk the narrow candlelit Siq canyon to the rose-red Treasury of Petra, camp in Martian bubble domes under desert stars, and float in the Dead Sea.",
+    "shortDescription": "Petra candlelit Siq, Wadi Rum Martian domes, and Dead Sea float.",
+    "fullDescription": "Discover the Nabataean kingdom etched into rose-red sandstone cliffs. Walk through the towering Siq to reveal the Treasury illuminated by 1,500 candles at night. Venture into the lunar landscapes of Wadi Rum on 4x4 safaris, sleep in luxury geodome bubble suites with open star views, and float weightlessly in the hypersaline Dead Sea.",
+    "price": 2999,
+    "originalPrice": 3500,
+    "discountedPrice": 2799,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Moderate",
+    "rating": 4.96,
+    "reviews": 147,
+    "reviewCount": 147,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "October to April",
+    "language": "English, Arabic",
+    "highlights": [
+      "Magical 'Petra by Night' candlelit journey through the Siq to Al-Khazneh",
+      "Full-day in-depth exploration of Petra Treasury, Royal Tombs, and the Monastery",
+      "Stay in luxury UFO/Martian geodome tent in Wadi Rum with stargazing roof",
+      "4x4 Bedouin desert jeep safari across Lawrence of Arabia red sand dunes",
+      "Weightless floating and mineral mud wrap at a 5-star Dead Sea resort"
+    ],
+    "included": [
+      "5 Nights accommodation (2 nights Petra, 1 night Wadi Rum bubble tent, 2 nights Dead Sea resort)",
+      "Private vehicle and chauffeur throughout Jordan",
+      "Petra admission passes, Petra by Night tickets, and Bedouin jeep safari",
+      "Daily breakfast and Bedouin Zarb subterranean dinner in the desert"
+    ],
+    "excluded": [
+      "International flights to Amman (AMM)",
+      "Jordan visa fee (covered by Jordan Pass)",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-10-12",
+      "2026-11-15",
+      "2027-01-18",
+      "2027-03-05"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Amman to Petra via King's Highway",
+        "description": "Arrive in Amman. Scenic drive along the historic King's Highway via Madaba mosaics and Mount Nebo to Petra. Check in at Mövenpick Resort Petra."
+      },
+      {
+        "day": 2,
+        "title": "Petra Wonder & Petra by Night",
+        "description": "Walk the Siq to the Treasury. Climb 800 steps to the colossal Monastery (Ad-Deir). In the evening, walk the candlelit Siq for Bedouin flute music."
+      },
+      {
+        "day": 3,
+        "title": "Wadi Rum Red Desert 4x4 Safari",
+        "description": "Drive south to Wadi Rum. Board an open 4WD truck across red sand dunes and rock bridges. Check into your luxury Martian bubble dome."
+      },
+      {
+        "day": 4,
+        "title": "Bedouin Sunrise & Dead Sea",
+        "description": "Desert sunrise tea. Drive north to the lowest point on Earth (Dead Sea, -430m). Check into luxury Kempinski Hotel Ishtar."
+      },
+      {
+        "day": 5,
+        "title": "Dead Sea Floating & Mud Spa",
+        "description": "Float effortlessly reading a book in the hypersaline waters. Coat your skin in natural therapeutic mineral black mud."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Breakfast with view of the calm waters before transfer to Queen Alia International Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Hanna Lindstrom",
+        "rating": 5,
+        "text": "Walking into Petra illuminated by 1,500 candles was pure sorcery. The bubble tent in Wadi Rum was unforgettable.",
+        "date": "2026-08-19"
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "tourNumericId": 328,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "France Loire Valley Royal Chateaux & Private Grand Crus",
+    "title": "France Loire Valley Royal Chateaux & Private Grand Crus",
+    "slug": "france-loire-valley-royal-chateaux-grand-crus",
+    "category": "Cultural",
+    "destination": "Loire Valley, France",
+    "location": "Centre-Val de Loire, France",
+    "country": "France",
+    "description": "Explore fairy-tale Renaissance châteaux including Chambord and Chenonceau, stay in an authentic historic château hotel, and taste prestigious Loire wines.",
+    "shortDescription": "Chambord and Chenonceau châteaux, private wine cellars, and French gastronomy.",
+    "fullDescription": "Experience French royal grandeur along the serene banks of the Loire River. Explore the double-helix staircase of Château de Chambord designed by Leonardo da Vinci, walk the arches of Château de Chenonceau spanning the River Cher, and descend into centuries-old limestone troglodyte cellars for private tastings of Sancerre and Vouvray.",
+    "price": 3150,
+    "originalPrice": 3650,
+    "discountedPrice": 2950,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.89,
+    "reviews": 98,
+    "reviewCount": 98,
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "May to October",
+    "language": "English, French",
+    "highlights": [
+      "Private access to Château de Chambord and Château de Chenonceau",
+      "Stay in an authentic 16th-century royal château hotel with manicured parkland",
+      "Private sommelier-led wine tasting in ancient limestone troglodyte cellars",
+      "Hot air balloon sunrise flight over the Loire river and renaissance turrets",
+      "Michelin-starred French gastronomic dining in Amboise"
+    ],
+    "included": [
+      "4 Nights in 5-star historic château hotel (Château d'Artigny / Les Sources de Cheverny)",
+      "Private Mercedes-Benz chauffeur and French heritage guide",
+      "All château entry tickets and private wine tasting cellar sessions",
+      "Daily French gourmet breakfasts and one 7-course Michelin-starred dinner"
+    ],
+    "excluded": [
+      "Flights to Paris (CDG/ORY)",
+      "Wine case shipping to home country",
+      "Personal shopping"
+    ],
+    "availableDates": [
+      "2026-05-20",
+      "2026-06-15",
+      "2026-09-10",
+      "2026-10-05"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Paris to Loire Valley & Château Check-in",
+        "description": "Private luxury transfer from Paris south into the Loire Valley. Check into your majestic château hotel. Welcome champagne in the salon."
+      },
+      {
+        "day": 2,
+        "title": "Château de Chambord & Da Vinci's Amboise",
+        "description": "Marvel at Chambord’s 426 rooms and da Vinci double-helix staircase. Visit Clos Lucé in Amboise where Leonardo spent his final years."
+      },
+      {
+        "day": 3,
+        "title": "Hot Air Balloon Flight & Château de Chenonceau",
+        "description": "Sunrise hot air balloon flight floating above mist-covered river curves and turrets. Private guided tour through the gallery of Chenonceau."
+      },
+      {
+        "day": 4,
+        "title": "Troglodyte Wine Cellars & Michelin Dinner",
+        "description": "Descend into historic tufa stone cellars in Vouvray to taste crisp Chenin Blanc and sparkling crémants. Evening 7-course Michelin celebration feast."
+      },
+      {
+        "day": 5,
+        "title": "Villandry Geometric Gardens & Return to Paris",
+        "description": "Admire the world-renowned Renaissance ornamental gardens of Château de Villandry before transfer back to Paris."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Marie-Claire Dubois",
+        "rating": 5,
+        "text": "Staying in a real French chateau and flying over Chenonceau at sunrise was pure romance.",
+        "date": "2026-07-25"
+      }
+    ]
+  },
+  {
+    "id": 329,
+    "tourNumericId": 329,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Istanbul Byzantine Hagia Sophia & Cappadocia Cave Heritage",
+    "title": "Istanbul Byzantine Hagia Sophia & Cappadocia Cave Heritage",
+    "slug": "istanbul-hagia-sophia-cappadocia-cave-heritage",
+    "category": "Cultural",
+    "destination": "Istanbul & Cappadocia, Turkey",
+    "location": "Bosphorus Strait & Central Anatolia",
+    "country": "Turkey",
+    "description": "Explore the gilded domes of Hagia Sophia and Topkapi Palace, cruise the Bosphorus Strait, and float in a hot air balloon over Cappadocia's fairy chimneys.",
+    "shortDescription": "Hagia Sophia domes, Bosphorus private yacht, and Cappadocia balloon flight.",
+    "fullDescription": "Stand at the crossroads of East and West where empires collided and thrived. In Istanbul, explore the colossal Byzantine domes of Hagia Sophia, the Blue Mosque, and the subterranean Basilica Cistern. Fly to Cappadocia to stay in a luxury cave suite carved directly into volcanic tuff and float at sunrise over fairy chimneys.",
+    "price": 2850,
+    "originalPrice": 3350,
+    "discountedPrice": 2650,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.94,
+    "reviews": 162,
+    "reviewCount": 162,
+    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "April to June, September to November",
+    "language": "English, Turkish",
+    "highlights": [
+      "Private scholar-led tour of Hagia Sophia, Blue Mosque, and Basilica Cistern",
+      "Private sunset yacht charter along the Bosphorus between Europe and Asia",
+      "Cappadocia sunrise hot air balloon flight over valleys and fairy chimneys",
+      "Stay in an authentic luxury cave hotel with private terrace (Museum Hotel)",
+      "Exploration of the ancient underground city of Kaymakli and Göreme Open Air Museum"
+    ],
+    "included": [
+      "5 Nights accommodation (3 nights 5-star Bosphorus hotel + 2 nights Cappadocia luxury cave suite)",
+      "Domestic flights (Istanbul - Nevşehir / Kayseri - Istanbul)",
+      "Hot air balloon flight tickets with champagne toast",
+      "Private Bosphorus yacht charter and certified Turkish art historian guide"
+    ],
+    "excluded": [
+      "International flights to Istanbul (IST)",
+      "Carpet and ceramic purchases",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-05-15",
+      "2026-06-20",
+      "2026-09-18",
+      "2026-10-22"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Istanbul Arrival & Bosphorus Check-in",
+        "description": "Arrive in Istanbul. Transfer to your luxury hotel overlooking the Bosphorus Strait. Watch passing ships bridging continents."
+      },
+      {
+        "day": 2,
+        "title": "Hagia Sophia, Blue Mosque & Grand Bazaar",
+        "description": "Explore the 1,500-year-old dome of Hagia Sophia, the 20,000 blue tiles of Sultanahmet, and wander 4,000 shops in the Grand Bazaar."
+      },
+      {
+        "day": 3,
+        "title": "Topkapi Palace Harem & Sunset Yacht Cruise",
+        "description": "Tour the imperial Ottoman Harem in Topkapi Palace. In the late afternoon, cruise the Bosphorus on a private yacht with champagne and mezze."
+      },
+      {
+        "day": 4,
+        "title": "Flight to Cappadocia & Underground City",
+        "description": "Fly to Cappadocia. Check into Museum Hotel cave suite. Explore the deep multistory rock-carved underground city of Kaymakli."
+      },
+      {
+        "day": 5,
+        "title": "Sunrise Hot Air Balloon Flight & Göreme",
+        "description": "Drift at sunrise among 100 colorful balloons over volcanic spires. Discover Byzantine frescoed rock churches in Göreme Open Air Museum."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Morning Turkish breakfast feast with fresh honeycomb before flight return to Istanbul."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Tariq Mansoor",
+        "rating": 5,
+        "text": "Cappadocia balloon flight at dawn was like entering a fairy-tale. Flawless arrangements.",
+        "date": "2026-08-08"
+      }
+    ]
+  },
+  {
+    "id": 330,
+    "tourNumericId": 330,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Scottish Highlands Royal Castles & Speyside Single Malt Trail",
+    "title": "Scottish Highlands Royal Castles & Speyside Single Malt Trail",
+    "slug": "scottish-highlands-castles-speyside-whisky-trail",
+    "category": "Cultural",
+    "destination": "Edinburgh & Scottish Highlands, Scotland",
+    "location": "Grampian Mountains & Speyside, UK",
+    "country": "Scotland",
+    "description": "Tour Edinburgh Castle and dramatic cliffside Eilean Donan, stay in a baronial estate, and taste rare vintage single malt scotch at legendary distilleries.",
+    "shortDescription": "Edinburgh Castle, Eilean Donan, and Macallan single malt tasting.",
+    "fullDescription": "Immerse yourself in the romantic heritage and untamed grandeur of the Scottish Highlands. Stroll Edinburgh's Royal Mile, visit the iconic sea-loch fortress of Eilean Donan, explore the brooding battlefield of Culloden, and gain exclusive private access to historic Speyside whisky distilleries including The Macallan.",
+    "price": 3399,
+    "originalPrice": 3950,
+    "discountedPrice": 3199,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.92,
+    "reviews": 114,
+    "reviewCount": 114,
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "May to October",
+    "language": "English",
+    "highlights": [
+      "Private after-hours tour of Edinburgh Castle and the Scottish Crown Jewels",
+      "VIP distillery tours and masterclass tastings at The Macallan and Glenfiddich",
+      "Iconic Eilean Donan Castle and Loch Ness scenic cruise",
+      "Stay in a 5-star baronial Highland estate with falconry and bagpipes",
+      "Drive through breathtaking Glencoe volcanic peaks and heather moors"
+    ],
+    "included": [
+      "5 Nights in luxury 5-star Scottish castles and baronial hotels",
+      "Private Mercedes V-Class with professional kilted Scottish driver-guide",
+      "All VIP castle access passes and rare whisky tasting flights",
+      "Full Scottish breakfasts and 3 Highland fine dining dinners"
+    ],
+    "excluded": [
+      "Flights to Edinburgh (EDI)",
+      "Collector whisky bottles",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-05-18",
+      "2026-06-22",
+      "2026-08-10",
+      "2026-09-14"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Edinburgh & Royal Mile",
+        "description": "Arrive in Edinburgh. Check into the Balmoral Hotel. Walk the historic Royal Mile to Holyroodhouse Palace."
+      },
+      {
+        "day": 2,
+        "title": "Edinburgh Castle & Stirling Castle",
+        "description": "Private tour of Edinburgh Castle. Journey to Stirling Castle guarding the Highlands, followed by a welcome dinner."
+      },
+      {
+        "day": 3,
+        "title": "Glencoe Dramatic Passes & Eilean Donan",
+        "description": "Drive through the awe-inspiring mountain gorge of Glencoe. Photograph Eilean Donan Castle perched on its tidal island."
+      },
+      {
+        "day": 4,
+        "title": "Speyside Whisky Trail & The Macallan Estate",
+        "description": "Travel to the River Spey. Exclusive private tour of The Macallan's state-of-the-art distillery and barrel warehouse tasting."
+      },
+      {
+        "day": 5,
+        "title": "Cairngorms National Park & Highland Estate",
+        "description": "Experience falconry demonstrations and clay pigeon shooting at a Highland baronial estate with bagpipe farewell."
+      },
+      {
+        "day": 6,
+        "title": "Return to Edinburgh & Departure",
+        "description": "Scenic drive back to Edinburgh Airport for departure flight."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Sir Arthur Campbell",
+        "rating": 5,
+        "text": "The Macallan tasting and staying in a real Highland castle was first-class in every respect.",
+        "date": "2026-07-18"
+      }
+    ]
+  },
+  {
+    "id": 331,
+    "tourNumericId": 331,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Serengeti Great Migration & Ngorongoro Crater VIP Safari",
+    "title": "Serengeti Great Migration & Ngorongoro Crater VIP Safari",
+    "slug": "serengeti-great-migration-ngorongoro-vip-safari",
+    "category": "Wildlife",
+    "destination": "Serengeti & Ngorongoro, Tanzania",
+    "location": "Northern Safari Circuit, East Africa",
+    "country": "Tanzania",
+    "description": "Witness millions of wildebeest and zebras crossing the Mara River, descend into the lost world of Ngorongoro Crater, and stay in luxury tented camps.",
+    "shortDescription": "Mara River wildebeest crossing, Ngorongoro black rhinos, and luxury safari tents.",
+    "fullDescription": "Experience the ultimate wildlife spectacle on planet Earth. Follow the Great Migration across the endless golden plains of the Serengeti, witness predator-prey drama at the Mara River crossings, descend into the collapsed volcanic caldera of Ngorongoro Crater teeming with black rhinos and lions, and retreat to ultra-luxury canvas camps.",
+    "price": 4999,
+    "originalPrice": 5800,
+    "discountedPrice": 4799,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.98,
+    "reviews": 195,
+    "reviewCount": 195,
+    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "July to October, December to March",
+    "language": "English, Swahili",
+    "highlights": [
+      "Witnessing the Great Migration Mara River crossing dramatic herds",
+      "Ngorongoro Crater full-day descent tracking rare black rhinos and lion prides",
+      "Sunrise hot air balloon safari floating over the Serengeti with champagne breakfast",
+      "Stay in award-winning Singita or Four Seasons luxury safari lodge",
+      "Spotting the complete African Big Five (Lion, Leopard, Elephant, Rhino, Buffalo)"
+    ],
+    "included": [
+      "6 Nights in luxury 5-star safari camps and crater rim lodges",
+      "All national park fees, conservation levies, and crater service permits",
+      "Private custom 4x4 Land Cruiser with pop-up roof and expert certified tracker",
+      "All gourmet meals, bush picnics, and fine South African wines",
+      "Bush flight between Arusha and Serengeti airstrips"
+    ],
+    "excluded": [
+      "International flights to Kilimanjaro (JRO)",
+      "Tanzania tourist visa",
+      "Guide and tracker gratuities"
+    ],
+    "availableDates": [
+      "2026-07-15",
+      "2026-08-20",
+      "2026-09-18",
+      "2027-01-20"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kilimanjaro to Ngorongoro Crater Rim",
+        "description": "Arrive at Kilimanjaro Airport. Scenic drive to the lush rim of Ngorongoro Crater. Check into lodge perched on the rim overlooking the caldera floor."
+      },
+      {
+        "day": 2,
+        "title": "Ngorongoro Crater Floor Safari",
+        "description": "Descend 600 meters into the crater. Spot endangered black rhinos, flamingo flocks on Lake Magadi, and resident lion prides. Bush picnic lunch."
+      },
+      {
+        "day": 3,
+        "title": "Bush Flight to Northern Serengeti",
+        "description": "Fly by bush plane directly onto a Serengeti airstrip. Afternoon game drive tracking leopards resting in acacia trees."
+      },
+      {
+        "day": 4,
+        "title": "The Great Migration & Mara River Crossings",
+        "description": "Full-day tracking the colossal herds of wildebeest and zebras as they navigate crocodile-filled waters of the Mara River."
+      },
+      {
+        "day": 5,
+        "title": "Serengeti Hot Air Balloon & Big Cat Safari",
+        "description": "Drift silently over the savannah at dawn. Enjoy a white-linen bush champagne breakfast. Afternoon tracking cheetahs on the hunt."
+      },
+      {
+        "day": 6,
+        "title": "Seronera Valley & Sunset Sundowner",
+        "description": "Game drive through Seronera Valley famed for high lion densities. Sunset cocktails around a roaring campfire under the Milky Way."
+      },
+      {
+        "day": 7,
+        "title": "Bush Flight to Arusha & Departure",
+        "description": "Morning sunrise game drive before scheduled bush flight back to Arusha/Kilimanjaro for your flight home."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Dr. Evelyn Reed",
+        "rating": 5,
+        "text": "Seeing thousands of wildebeest plunge into the Mara River right in front of our Land Cruiser was the most thrilling moment of my life.",
+        "date": "2026-08-27"
+      }
+    ]
+  },
+  {
+    "id": 332,
+    "tourNumericId": 332,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Rwanda Volcanoes National Park Mountain Gorilla Tracking",
+    "title": "Rwanda Volcanoes National Park Mountain Gorilla Tracking",
+    "slug": "rwanda-volcanoes-mountain-gorilla-tracking",
+    "category": "Wildlife",
+    "destination": "Volcanoes National Park, Rwanda",
+    "location": "Virunga Mountains, East-Central Africa",
+    "country": "Rwanda",
+    "description": "Trek through misty bamboo forests in the Virunga volcanoes to spend an unforgettable hour face-to-face with a family of wild mountain gorillas.",
+    "shortDescription": "Wild mountain gorilla encounters, Virunga volcanic peaks, and luxury eco-lodges.",
+    "fullDescription": "Experience one of the most intimate wildlife encounters on Earth. Hike through misty moss-draped bamboo forests on the slopes of the Virunga Volcanoes with expert park rangers to come within meters of a habituated wild mountain gorilla silverback and playful infants. Retreat to world-renowned eco-luxury lodges.",
+    "price": 5499,
+    "originalPrice": 6200,
+    "discountedPrice": 5199,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Moderate",
+    "rating": 4.99,
+    "reviews": 158,
+    "reviewCount": 158,
+    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "June to September, December to February",
+    "language": "English, French, Kinyarwanda",
+    "highlights": [
+      "Official Rwanda Mountain Gorilla trekking permit ($1,500 value included)",
+      "Spending one hour observing a wild habituated gorilla family and silverback",
+      "Golden monkey trekking in the high bamboo canopy of the Virunga volcanoes",
+      "Stay in 5-star eco-luxury lodge (Singita Kwitonda / Bisate Lodge)",
+      "Kigali Genocide Memorial emotional tour and vibrant craft markets"
+    ],
+    "included": [
+      "Official Mountain Gorilla Trekking Permit & Golden Monkey Permit",
+      "4 Nights luxury eco-lodge accommodation in Musanze and Kigali",
+      "Private 4x4 safari vehicle and professional driver-guide throughout",
+      "All meals, premium beverages, lodge spa treatments, and park ranger fees"
+    ],
+    "excluded": [
+      "International flights to Kigali (KGL)",
+      "Trekking gaiter and boot purchases",
+      "Porters tips"
+    ],
+    "availableDates": [
+      "2026-06-15",
+      "2026-07-20",
+      "2026-08-18",
+      "2027-01-14"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Kigali Arrival & City Tour",
+        "description": "Arrive at Kigali International Airport. Visit the Kigali Genocide Memorial. Transfer to The Retreat by Heaven for dinner."
+      },
+      {
+        "day": 2,
+        "title": "Scenic Drive to Volcanoes National Park",
+        "description": "Drive past rolling green terraced hills ('Land of a Thousand Hills') to Musanze. Check in at your luxury volcano-facing forest villa."
+      },
+      {
+        "day": 3,
+        "title": "The Mountain Gorilla Trek",
+        "description": "Early morning briefing at park headquarters. Trek through misty rainforest to find your assigned gorilla family. Spend an awe-inspiring hour watching them groom, feed, and play."
+      },
+      {
+        "day": 4,
+        "title": "Endangered Golden Monkey Tracking",
+        "description": "Trek to observe the endangered, hyper-active golden monkeys leaping through bamboo canopies. Afternoon visit to Gorilla Guardians cultural village."
+      },
+      {
+        "day": 5,
+        "title": "Return to Kigali & Departure",
+        "description": "Breakfast with views of Mount Bisoke before private transfer back to Kigali for evening flights."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Simon Alverez",
+        "rating": 5,
+        "text": "Looking into the eyes of a 400-pound silverback from ten feet away is life-changing. Words cannot describe it.",
+        "date": "2026-08-30"
+      }
+    ]
+  },
+  {
+    "id": 333,
+    "tourNumericId": 333,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Galapagos Islands Luxury Expedition Cruise & Giant Tortoise Trek",
+    "title": "Galapagos Islands Luxury Expedition Cruise & Giant Tortoise Trek",
+    "slug": "galapagos-luxury-expedition-cruise-giant-tortoises",
+    "category": "Wildlife",
+    "destination": "Galapagos Archipelago, Ecuador",
+    "location": "Pacific Ocean, Equator",
+    "country": "Ecuador",
+    "description": "Cruise Darwin's enchanted islands aboard a luxury mega-catamaran, snorkel with sea lions and marine iguanas, and walk with giant tortoises.",
+    "shortDescription": "Darwin's enchanted islands, giant tortoises, and playful sea lion snorkeling.",
+    "fullDescription": "Sail into the living laboratory of evolution. Aboard a boutique luxury expedition catamaran, explore the remote volcanic islands of the Galapagos. Snorkel with inquisitive sea lion pups, watch blue-footed boobies perform mating dances, see marine iguanas dive for algae, and walk among centenary giant tortoises.",
+    "price": 4650,
+    "originalPrice": 5300,
+    "discountedPrice": 4450,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.97,
+    "reviews": 140,
+    "reviewCount": 140,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "Year-round",
+    "language": "English, Spanish",
+    "highlights": [
+      "Luxury boutique expedition catamaran with ocean-view suites and sundeck Jacuzzi",
+      "Encountering wild giant Galapagos tortoises in the Santa Cruz highlands",
+      "Snorkeling with playful sea lion pups, penguins, and gentle green sea turtles",
+      "Observing blue-footed booby nesting colonies and prehistoric marine iguanas",
+      "Certified Level III Galapagos National Park naturalist guides leading all zodiac landings"
+    ],
+    "included": [
+      "6 Nights aboard luxury expedition catamaran with private ocean balconies",
+      "Galapagos National Park entrance fee and Transit Control Card (INGALA)",
+      "Roundtrip flights from Quito / Guayaquil to Baltra (GPS)",
+      "All meals, snacks, open bar, snorkel gear, and wetsuits provided"
+    ],
+    "excluded": [
+      "International flights to Quito / Guayaquil",
+      "Crew gratuities",
+      "Travel insurance"
+    ],
+    "availableDates": [
+      "2026-06-10",
+      "2026-07-15",
+      "2026-08-22",
+      "2026-11-12"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Quito to Baltra & Santa Cruz Highlands",
+        "description": "Flight to Baltra. Transfer to Santa Cruz highlands to walk among massive wild giant tortoises grazing in lush meadows. Board your luxury catamaran."
+      },
+      {
+        "day": 2,
+        "title": "Genovesa Island (Tower) - Bird Island",
+        "description": "Zodiac landing at Prince Philip's Steps. Observe thousands of red-footed and Nazca boobies, frigatebirds, and snorkel along dramatic submerged caldera walls."
+      },
+      {
+        "day": 3,
+        "title": "Bartolomé Island & Pinnacle Rock",
+        "description": "Climb the boardwalk to the summit of Bartolomé for the iconic volcanic panorama. Snorkel around Pinnacle Rock with Galapagos penguins."
+      },
+      {
+        "day": 4,
+        "title": "Fernandina & Isabela Islands",
+        "description": "Visit pristine Punta Espinosa on Fernandina: home to hundreds of sunbathing marine iguanas and flightless cormorants."
+      },
+      {
+        "day": 5,
+        "title": "Floreana Island Post Office Bay",
+        "description": "Drop postcards into the historic 18th-century whaler's wooden barrel. Snorkel at Devil's Crown submerged volcanic cone teeming with tropical reef fish."
+      },
+      {
+        "day": 6,
+        "title": "Española Island - Gardner Bay & Punta Suarez",
+        "description": "Walk on powder-white sands surrounded by basking sea lions. Witness the waved albatross nesting colony and blowhole geyser."
+      },
+      {
+        "day": 7,
+        "title": "San Cristóbal & Departure",
+        "description": "Visit the San Cristóbal Interpretation Center before flight back to mainland Ecuador."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Olivia Campbell",
+        "rating": 5,
+        "text": "Snorkeling with sea lion pups twirling around me was pure magic. The catamaran was 5-star perfection.",
+        "date": "2026-08-12"
+      }
+    ]
+  },
+  {
+    "id": 334,
+    "tourNumericId": 334,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Botswana Okavango Delta Mokoro Canoe & Chobe River Elephants",
+    "title": "Botswana Okavango Delta Mokoro Canoe & Chobe River Elephants",
+    "slug": "botswana-okavango-delta-mokoro-chobe-elephants",
+    "category": "Wildlife",
+    "destination": "Okavango Delta & Chobe, Botswana",
+    "location": "Kalahari Basin, Southern Africa",
+    "country": "Botswana",
+    "description": "Glide silently through water lily channels on traditional mokoro dugout canoes, watch hundreds of elephants swimming in Chobe River, and track wild dogs.",
+    "shortDescription": "Okavango mokoro dugout canoe, Chobe swimming elephants, and wild dogs.",
+    "fullDescription": "Explore the pristine, unfenced paradise of Botswana. Fly into remote concessions of the UNESCO-listed Okavango Delta where crystal channels swell with seasonal floodwaters. Glide past hippos and painted reed frogs in a traditional wooden mokoro canoe, and witness the largest concentration of African elephants on earth in Chobe.",
+    "price": 4799,
+    "originalPrice": 5500,
+    "discountedPrice": 4599,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Easy",
+    "rating": 4.96,
+    "reviews": 128,
+    "reviewCount": 128,
+    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "May to October",
+    "language": "English, Setswana",
+    "highlights": [
+      "Silently poling through water lily channels on a traditional wooden mokoro canoe",
+      "Private boat safari on the Chobe River witnessing hundreds of swimming elephants",
+      "Tracking endangered African wild dogs (painted wolves) on morning game drives",
+      "Stay in eco-luxury tented safari camps raised on wooden stilts over lagoons",
+      "Scenic light aircraft flights over the sparkling floodplains of the Okavango Delta"
+    ],
+    "included": [
+      "5 Nights in luxury 5-star tented safari camps (Sanctuary Baines' / Wilderness Safaris)",
+      "All inter-camp light aircraft flights from Maun to Kasane",
+      "All national park fees, concession fees, and private game activities",
+      "All gourmet meals, bush sundowners, and top-shelf beverages"
+    ],
+    "excluded": [
+      "International flights to Maun (MUB) / Kasane (BBK)",
+      "Tipping kitty",
+      "Travel insurance"
+    ],
+    "availableDates": [
+      "2026-06-18",
+      "2026-07-22",
+      "2026-08-15",
+      "2026-09-20"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Maun to Okavango Delta Bush Flight",
+        "description": "Scenic Cessna light aircraft flight over the labyrinth of waterways. Touch down at camp. Afternoon mokoro canoe excursion through lily-covered lagoons."
+      },
+      {
+        "day": 2,
+        "title": "Walking Safari & Delta Predator Tracking",
+        "description": "Morning guided walking safari learning bushcraft and animal tracks. Afternoon 4x4 game drive tracking lions, leopards, and lechwe antelopes."
+      },
+      {
+        "day": 3,
+        "title": "Deep Delta Game Drives & Starlit Dinner",
+        "description": "Full-day safari tracking rare wild dogs. Evening candlelit dinner served on a private wooden deck over water under the stars."
+      },
+      {
+        "day": 4,
+        "title": "Flight to Chobe River Front",
+        "description": "Fly to Chobe. Check into your river-facing luxury lodge. Afternoon boat safari approaching elephants bathing and splashing in the water."
+      },
+      {
+        "day": 5,
+        "title": "Chobe National Park Game Drive & River Cruise",
+        "description": "Dawn game drive through teak woodlands. Late afternoon river cruise watching massive herds of buffalo and hippos surfacing."
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Morning breakfast listening to fish eagles before transfer to Kasane Airport."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Patrick Doyle",
+        "rating": 5,
+        "text": "Gliding through the reeds in a mokoro with only the sound of water and birds is the purest peace I have ever felt.",
+        "date": "2026-08-05"
+      }
+    ]
+  },
+  {
+    "id": 335,
+    "tourNumericId": 335,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Alaska Kenai Fjords Whale Watching & Denali Grizzly Bear Safari",
+    "title": "Alaska Kenai Fjords Whale Watching & Denali Grizzly Bear Safari",
+    "slug": "alaska-kenai-fjords-whale-watching-denali-grizzly",
+    "category": "Wildlife",
+    "destination": "Denali & Kenai Fjords, Alaska, USA",
+    "location": "Kenai Peninsula & Interior Alaska",
+    "country": "USA",
+    "description": "Watch humpback whales bubble-net feeding, cruise past calving tidewater glaciers, and track massive grizzly bears beneath the peak of Denali.",
+    "shortDescription": "Kenai tidewater glaciers, humpback whale feeding, and Denali grizzly bears.",
+    "fullDescription": "Venture into the untamed American sub-arctic frontier. Board private expedition catamarans in Seward to watch humpback whales breach alongside calving glaciers in Kenai Fjords National Park. Ride the scenic glass-domed Wilderness Express train to Denali to track grizzly bears, moose, and wolves beneath North America's highest peak.",
+    "price": 3899,
+    "originalPrice": 4450,
+    "discountedPrice": 3699,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Moderate",
+    "rating": 4.93,
+    "reviews": 116,
+    "reviewCount": 116,
+    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "6-12 travelers",
+    "bestTime": "June to August",
+    "language": "English",
+    "highlights": [
+      "Kenai Fjords National Park full-day glacier and marine wildlife cruise",
+      "Witnessing humpback whales breaching and bubble-net feeding with orcas",
+      "Denali National Park deep wilderness safari tracking grizzly bears and caribou",
+      "Scenic luxury GoldStar dome-car train journey across the Alaskan backcountry",
+      "Stay in remote wilderness lodge with views of towering Mount Denali"
+    ],
+    "included": [
+      "6 Nights in luxury Alaskan wilderness lodges and boutique hotels",
+      "Alaska Railroad GoldStar glass-dome rail tickets with meals",
+      "Full-day Kenai Fjords catamaran cruise with wild salmon lunch",
+      "Denali backcountry wildlife safari tour and professional naturalist guide"
+    ],
+    "excluded": [
+      "Airfare to Anchorage (ANC)",
+      "Flightseeing with glacier landing (optional)",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-06-12",
+      "2026-07-10",
+      "2026-08-08",
+      "2026-08-25"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Anchorage & Coastal Trail",
+        "description": "Arrive at Ted Stevens Anchorage Airport. Check into your boutique hotel. Walk the Tony Knowles Coastal Trail watching for urban moose."
+      },
+      {
+        "day": 2,
+        "title": "Scenic Seward Highway to Kenai Peninsula",
+        "description": "Drive along Turnagain Arm watching for beluga whales. Check in at your luxury seaside lodge in Seward."
+      },
+      {
+        "day": 3,
+        "title": "Kenai Fjords Glacier & Whale Cruise",
+        "description": "Navigate deep into Kenai Fjords. Watch massive ice chunks crash into the sea from Aialik Glacier. Encounter orcas, humpback whales, sea otters, and puffins."
+      },
+      {
+        "day": 4,
+        "title": "GoldStar Dome Train to Denali",
+        "description": "Board the luxury glass-domed train. Glide past roaring rivers, alpine peaks, and Hurricane Gulch bridge to Denali National Park."
+      },
+      {
+        "day": 5,
+        "title": "Denali Tundra Wilderness Safari",
+        "description": "Deep journey along Denali Park Road. Scan alpine meadows for grizzly bears digging for roots, Dall sheep high on cliffs, and moose."
+      },
+      {
+        "day": 6,
+        "title": "Denali Sled Dog Kennels & Flightseeing",
+        "description": "Visit the historic park sled dog demonstration. Optional ski-plane glacier landing on the flanks of Denali."
+      },
+      {
+        "day": 7,
+        "title": "Return to Anchorage & Departure",
+        "description": "Scenic transfer back to Anchorage for departure flight."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Travis Vance",
+        "rating": 5,
+        "text": "A mother grizzly and two cubs walked right past our bus in Denali. Alaska is majestic beyond words.",
+        "date": "2026-08-16"
+      }
+    ]
+  },
+  {
+    "id": 336,
+    "tourNumericId": 336,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Arctic Svalbard Polar Bear Zodiac Expedition & Walrus Colonies",
+    "title": "Arctic Svalbard Polar Bear Zodiac Expedition & Walrus Colonies",
+    "slug": "arctic-svalbard-polar-bear-zodiac-expedition",
+    "category": "Wildlife",
+    "destination": "Svalbard Archipelago, High Arctic, Norway",
+    "location": "Arctic Ocean, 78°–81° North",
+    "country": "Norway",
+    "description": "Sail into the pack ice of the High Arctic aboard a polar-class expedition ship, track kings of the Arctic (polar bears), and see walrus haul-outs.",
+    "shortDescription": "High Arctic pack ice, wild polar bear tracking, and walrus colonies.",
+    "fullDescription": "Venture to the realm of the midnight sun and the ice kingdom. Just 600 miles from the North Pole, navigate the dramatic fjords and frozen pack ice of Svalbard. From ice-strengthened expedition vessels and sturdy Zodiac crafts, encounter majestic polar bears hunting seals on sea ice, massive walrus colonies, and Arctic foxes.",
+    "price": 5299,
+    "originalPrice": 5950,
+    "discountedPrice": 4999,
+    "currency": "$",
+    "duration": "8 Days / 7 Nights",
+    "durationDays": 8,
+    "durationNights": 7,
+    "difficulty": "Moderate",
+    "rating": 4.96,
+    "reviews": 82,
+    "reviewCount": 82,
+    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "8-16 travelers",
+    "bestTime": "June to August",
+    "language": "English, Norwegian",
+    "highlights": [
+      "Encountering wild polar bears on sea pack ice in their natural habitat",
+      "Zodiac safaris to walrus haul-outs and 14th of July Glacier ice cliffs",
+      "Sailing above 80° North latitude under 24 hours of Midnight Sun",
+      "Witnessing tens of thousands of Brünnich's guillemots and Arctic terns",
+      "Luxury ice-strengthened expedition vessel with sauna, lectures, and chef dining"
+    ],
+    "included": [
+      "7 Nights aboard luxury polar expedition ship in outside balcony suite",
+      "All Zodiac cruises, shore landings, and polar bear safety rifle escorts",
+      "Complimentary high-grade insulated polar expedition parka to keep",
+      "All meals, snacks, open bar, and informative lectures by polar scientists"
+    ],
+    "excluded": [
+      "Flights to Longyearbyen (LYR) via Oslo",
+      "Travel insurance with polar evacuation coverage",
+      "Gratuities"
+    ],
+    "availableDates": [
+      "2026-06-25",
+      "2026-07-15",
+      "2026-08-05",
+      "2026-08-20"
+    ],
+    "featured": true,
+    "popular": false,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Longyearbyen Embarkation",
+        "description": "Arrive in Longyearbyen, the northernmost town on Earth. Board your expedition vessel and sail out into Isfjorden under the midnight sun."
+      },
+      {
+        "day": 2,
+        "title": "Kongsfjorden & Ny-Ålesund Research Base",
+        "description": "Cruise through majestic Kongsfjorden with soaring glacier fronts. Visit the historic scientific research outpost of Ny-Ålesund."
+      },
+      {
+        "day": 3,
+        "title": "Northwest Spitsbergen & Walrus Haul-outs",
+        "description": "Zodiac landing at Moffen Island or Poolepynten to observe massive tusked walruses resting together on gravel banks."
+      },
+      {
+        "day": 4,
+        "title": "Cruising the Edge of the Polar Pack Ice",
+        "description": "Navigate ice-strengthened hull through sea ice sheets. Lookouts on the bridge scan for polar bears stalking ringed seals."
+      },
+      {
+        "day": 5,
+        "title": "Hinlopen Strait & Alkefjellet Bird Cliffs",
+        "description": "Marvel at Alkefjellet’s sheer basalt towers where 60,000 pairs of guillemots nest. Zodiac cruise among floating turquoise icebergs."
+      },
+      {
+        "day": 6,
+        "title": "Monacobreen Glacier & Iceberg Kayaking",
+        "description": "Sail up to the colossal 5-kilometer face of Monacobreen glacier. Listen to thunderous cracks of ice calving into the sea."
+      },
+      {
+        "day": 7,
+        "title": "Bellsund Fjord & Reindeer Tundra",
+        "description": "Walk on flowering Arctic tundra. Spot endemic Svalbard reindeer grazing and Arctic foxes hunting in their summer coats."
+      },
+      {
+        "day": 8,
+        "title": "Longyearbyen Disembarkation",
+        "description": "Disembark after breakfast. Time for tax-free shopping in Longyearbyen before flight to Oslo."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Capt. Erik Thorne",
+        "rating": 5,
+        "text": "Watching a polar bear mother guide her two cubs across pack ice 600 miles from the North Pole was deeply moving.",
+        "date": "2026-08-21"
+      }
+    ]
+  },
+  {
+    "id": 337,
+    "tourNumericId": 337,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Costa Rica Tortuguero Sea Turtle Nesting & Sloth Sanctuary",
+    "title": "Costa Rica Tortuguero Sea Turtle Nesting & Sloth Sanctuary",
+    "slug": "costa-rica-tortuguero-turtle-nesting-sloth-sanctuary",
+    "category": "Wildlife",
+    "destination": "Tortuguero National Park, Costa Rica",
+    "location": "Caribbean Coast & Rainforest Canals",
+    "country": "Costa Rica",
+    "description": "Witness endangered green sea turtles laying eggs on Caribbean beaches under starry skies, explore jungle waterways, and spot two-toed sloths.",
+    "shortDescription": "Green sea turtle nocturnal nesting, Amazon-like jungle canals, and sloths.",
+    "fullDescription": "Known as the Amazon of Central America, Tortuguero is a remote network of lush jungle canals accessible only by boat or small plane. Experience the awe-inspiring night-time nesting ritual of colossal green sea turtles on protected Caribbean sands, boat through mist-filled waterways spotting sloths, monkeys, and caimans.",
+    "price": 2199,
+    "originalPrice": 2600,
+    "discountedPrice": 1999,
+    "currency": "$",
+    "duration": "5 Days / 4 Nights",
+    "durationDays": 5,
+    "durationNights": 4,
+    "difficulty": "Easy",
+    "rating": 4.89,
+    "reviews": 108,
+    "reviewCount": 108,
+    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "July to October",
+    "language": "English, Spanish",
+    "highlights": [
+      "Nocturnal guided green sea turtle nesting expedition with conservation biologists",
+      "Quiet electric-boat safaris through narrow primary rainforest canals",
+      "Spotting three-toed and two-toed sloths, river otters, and spectacled caimans",
+      "Stay in eco-lodge nestled between Tortuguero lagoon and the Caribbean Sea",
+      "Private charter flight providing aerial views of Costa Rica's lush canopy"
+    ],
+    "included": [
+      "4 Nights in luxury eco-lodge in Tortuguero and San José",
+      "Official nocturnal turtle nesting permits and red-light certified naturalist guides",
+      "Scenic domestic charter flights (San José - Tortuguero - San José)",
+      "All meals featuring fresh tropical Caribbean gastronomy"
+    ],
+    "excluded": [
+      "International flights to San José (SJO)",
+      "Gratuities for guides and boat captain",
+      "Personal items"
+    ],
+    "availableDates": [
+      "2026-07-20",
+      "2026-08-15",
+      "2026-09-10",
+      "2026-10-05"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "San José to Tortuguero Scenic Flight",
+        "description": "Scenic flight over cloudforests landing on the coastal strip of Tortuguero. Boat transfer to your secluded riverside lodge."
+      },
+      {
+        "day": 2,
+        "title": "Jungle Canal Safari & Sloth Tracking",
+        "description": "Early morning boat safari through peaceful canals as howler monkeys roar. Spot sloths hanging in cecropia trees and toucans overhead."
+      },
+      {
+        "day": 3,
+        "title": "Nocturnal Sea Turtle Nesting Patrol",
+        "description": "Relax by the lodge pool during the day. In the dark of night, accompany certified biologists to observe a massive green sea turtle excavate her nest."
+      },
+      {
+        "day": 4,
+        "title": "Tortuguero Village & Kayak Expedition",
+        "description": "Visit the colorful Caribbean village of Tortuguero. Paddle peaceful kayaks through hidden creeks lined with lush orchids."
+      },
+      {
+        "day": 5,
+        "title": "Flight Back to San José & Departure",
+        "description": "Breakfast with tropical bird song before scenic return flight to San José for international connection."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Melanie Foster",
+        "rating": 5,
+        "text": "Watching a sea turtle lay her eggs under the stars was an unforgettable, spiritual moment.",
+        "date": "2026-08-18"
+      }
+    ]
+  },
+  {
+    "id": 338,
+    "tourNumericId": 338,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Madagascar Andasibe Indri Lemurs & Avenue of Baobabs",
+    "title": "Madagascar Andasibe Indri Lemurs & Avenue of Baobabs",
+    "slug": "madagascar-andasibe-indri-lemurs-avenue-baobabs",
+    "category": "Wildlife",
+    "destination": "Andasibe & Morondava, Madagascar",
+    "location": "Madagascar Island, Indian Ocean",
+    "country": "Madagascar",
+    "description": "Hear the haunting wail of the Indri lemur in misty Andasibe rainforests, photograph ancient giant Baobab trees at sunset, and see chameleons.",
+    "shortDescription": "Giant Indri lemurs, iconic Avenue of the Baobabs sunset, and chameleons.",
+    "fullDescription": "Venture to the eighth continent, where over 90% of wildlife exists nowhere else on Earth. Walk through the misty montane rainforest of Andasibe to encounter the Indri—the largest living lemur whose haunting calls echo for miles. Fly to Morondava to stand beneath the prehistoric sentinel trees of the world-famous Avenue of the Baobabs at sunset.",
+    "price": 3499,
+    "originalPrice": 4100,
+    "discountedPrice": 3299,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Moderate",
+    "rating": 4.94,
+    "reviews": 96,
+    "reviewCount": 96,
+    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "September to December, April to June",
+    "language": "English, French, Malagasy",
+    "highlights": [
+      "Tracking the critically endangered Indri lemur and diademed sifakas in Andasibe",
+      "Sunset and golden hour photography at the iconic Avenue of the Baobabs",
+      "Night forest walks spotting mouse lemurs, leaf-tailed geckos, and chameleons",
+      "Stay in eco-luxury forest lodges surrounded by primary rainforest",
+      "Private domestic flights connecting Antananarivo and Morondava"
+    ],
+    "included": [
+      "6 Nights in luxury eco-lodges and boutique hotels (Vakôna Forest Lodge / Palissandre)",
+      "Domestic flights within Madagascar (Antananarivo - Morondava - Antananarivo)",
+      "Dedicated 4x4 vehicle with professional driver-guide and national park trackers",
+      "All park admission permits, night walks, and daily breakfast"
+    ],
+    "excluded": [
+      "International flights to Antananarivo (TNR)",
+      "Madagascar tourist visa",
+      "Tips"
+    ],
+    "availableDates": [
+      "2026-09-15",
+      "2026-10-18",
+      "2026-11-12",
+      "2027-04-20"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrive in Antananarivo (Tana)",
+        "description": "Arrive at Ivato International Airport. Transfer to boutique hotel in historic Upper Town overlooking the capital city."
+      },
+      {
+        "day": 2,
+        "title": "Scenic Drive to Andasibe Rainforest",
+        "description": "Drive east past rice paddies and fruit stalls into the lush rainforest belt. Check in at Vakôna Forest Lodge. Nocturnal walk for chameleons."
+      },
+      {
+        "day": 3,
+        "title": "Analamazaotra Reserve Indri Trek",
+        "description": "Follow the haunting song of the Indri lemur through the canopy. Spot golden diademed sifakas leaping gracefully between branches."
+      },
+      {
+        "day": 4,
+        "title": "Lemur Island & Flight to Morondava",
+        "description": "Visit Lemur Island where friendly brown lemurs jump onto shoulders. Return to Tana for flight to Morondava on the Mozambique Channel coast."
+      },
+      {
+        "day": 5,
+        "title": "The Majestic Avenue of the Baobabs",
+        "description": "Drive to the Avenue of the Baobabs. Admire these 800-year-old colossal trees towering 30 meters high. Watch the sky ignite in orange and purple at sunset."
+      },
+      {
+        "day": 6,
+        "title": "Kirindy Forest Fosa Predator Safari",
+        "description": "Explore the dry deciduous Kirindy Forest tracking Madagascar's top predator, the fosa, and giant jumping rats."
+      },
+      {
+        "day": 7,
+        "title": "Return to Tana & Departure",
+        "description": "Flight back to Antananarivo for craft market shopping before evening international departure."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Claire Fontaine",
+        "rating": 5,
+        "text": "Hearing the Indri sing right above our heads sent chills down my spine. The Baobabs at sunset look like another planet.",
+        "date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 339,
+    "tourNumericId": 339,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Australia Great Barrier Reef Coral Spawning & Kangaroo Island Safari",
+    "title": "Australia Great Barrier Reef Coral Spawning & Kangaroo Island Safari",
+    "slug": "australia-great-barrier-reef-kangaroo-island",
+    "category": "Wildlife",
+    "destination": "Cairns & Kangaroo Island, Australia",
+    "location": "Queensland & South Australia",
+    "country": "Australia",
+    "description": "Dive the outer Great Barrier Reef on a private catamaran charter, walk among wild koalas, sea lions, and kangaroos on pristine Kangaroo Island.",
+    "shortDescription": "Outer Great Barrier Reef private catamaran, wild koalas, and sea lions.",
+    "fullDescription": "Experience Australia's most spectacular wildlife wonders. Board a luxury private catamaran from Port Douglas to the remote outer ribbon reefs of the Great Barrier Reef to snorkel vibrant coral gardens. Fly south to Kangaroo Island—Australia's Galapagos—to walk among wild Australian sea lions and observe wild koalas and echidnas.",
+    "price": 4399,
+    "originalPrice": 5100,
+    "discountedPrice": 4199,
+    "currency": "$",
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
+    "durationNights": 6,
+    "difficulty": "Easy",
+    "rating": 4.95,
+    "reviews": 135,
+    "reviewCount": 135,
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-10 travelers",
+    "bestTime": "September to April",
+    "language": "English",
+    "highlights": [
+      "Private catamaran expedition to pristine Outer Ribbon Reefs with marine biologist",
+      "Walking on Seal Bay beach among endangered wild Australian sea lions",
+      "Spotting wild koalas resting in eucalyptus trees and kangaroos at sunset",
+      "Stay in Southern Ocean Lodge luxury cliffside suite overlooking the roaring Southern Ocean",
+      "Scenic flights over Remarkable Rocks and Admirals Arch stalactites"
+    ],
+    "included": [
+      "6 Nights in luxury 5-star lodges (Silky Oaks Lodge / Southern Ocean Lodge)",
+      "Private Outer Reef sailing charter with marine biologist and chef lunch",
+      "Kangaroo Island 4WD wildlife safari with professional ecologist",
+      "All meals, premium Australian wines, and domestic connecting flights"
+    ],
+    "excluded": [
+      "International airfare to Australia",
+      "Scuba dive certification courses",
+      "Personal gear"
+    ],
+    "availableDates": [
+      "2026-10-15",
+      "2026-11-20",
+      "2027-01-12",
+      "2027-02-18"
+    ],
+    "featured": false,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cairns to Daintree Rainforest",
+        "description": "Arrive in Cairns. Scenic coastal drive north to Silky Oaks Lodge nestled in the ancient Daintree Rainforest."
+      },
+      {
+        "day": 2,
+        "title": "Outer Great Barrier Reef Private Sail",
+        "description": "Board luxury catamaran to Agincourt Ribbon Reefs. Snorkel crystal-clear coral walls with sea turtles, clownfish, and giant clams."
+      },
+      {
+        "day": 3,
+        "title": "Daintree River Crocodiles to Adelaide",
+        "description": "Spot saltwater crocodiles on a river cruise. Evening flight south to Adelaide and connecting transfer to Kangaroo Island."
+      },
+      {
+        "day": 4,
+        "title": "Seal Bay Wild Sea Lions & Koalas",
+        "description": "Walk on the white sands of Seal Bay alongside wild sea lions basking in the sun. Search Hanson Bay eucalyptus groves for sleeping wild koalas."
+      },
+      {
+        "day": 5,
+        "title": "Flinders Chase National Park & Remarkable Rocks",
+        "description": "Explore the giant sculpted granite boulders of Remarkable Rocks and Admirals Arch where New Zealand fur seals surf the waves."
+      },
+      {
+        "day": 6,
+        "title": "Kangaroo Island Wilderness & Wine Tasting",
+        "description": "Watch mobs of kangaroos grazing at twilight in open pastures. Savor boutique Kangaroo Island honey, gin, and South Australian Shiraz."
+      },
+      {
+        "day": 7,
+        "title": "Adelaide Departure",
+        "description": "Morning scenic flight back to Adelaide for onward travel."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Grace Holloway",
+        "rating": 5,
+        "text": "The Great Barrier Reef reef charter was out of this world, and seeing wild koalas and kangaroos on Kangaroo Island made our dream come true.",
+        "date": "2026-08-24"
+      }
+    ]
+  },
+  {
+    "id": 340,
+    "tourNumericId": 340,
+    "website": "website3",
+    "websiteId": "website3",
+    "name": "Brazil Pantanal Wild Jaguar Tracking & Giant River Otter Safari",
+    "title": "Brazil Pantanal Wild Jaguar Tracking & Giant River Otter Safari",
+    "slug": "brazil-pantanal-jaguar-tracking-otter-safari",
+    "category": "Wildlife",
+    "destination": "Pantanal, Mato Grosso, Brazil",
+    "location": "World's Largest Tropical Wetland",
+    "country": "Brazil",
+    "description": "Cruise the Cuiabá River on private motorboats to track wild jaguars hunting caimans, see giant river otters, and spot hyacinth macaws.",
+    "shortDescription": "Wild jaguar riverboat tracking, giant river otters, and hyacinth macaws.",
+    "fullDescription": "Venture deep into the Pantanal—the world's largest tropical wetland with the highest concentration of wildlife in the Americas. Based in specialized river lodges along the Cuiabá River, take nimble aluminum speedboats into narrow tributaries where wild jaguars patrol riverbanks hunting capybaras and caimans with unmatched regularity.",
+    "price": 3950,
+    "originalPrice": 4600,
+    "discountedPrice": 3750,
+    "currency": "$",
+    "duration": "6 Days / 5 Nights",
+    "durationDays": 6,
+    "durationNights": 5,
+    "difficulty": "Moderate",
+    "rating": 4.97,
+    "reviews": 112,
+    "reviewCount": 112,
+    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "groupSize": "4-8 travelers",
+    "bestTime": "June to October",
+    "language": "English, Portuguese",
+    "highlights": [
+      "High-probability wild jaguar tracking boat safaris along the Cuiabá River",
+      "Observing giant river otter family groups feeding and playing in the shallows",
+      "Photographing vibrant cobalt-blue Hyacinth Macaws nesting in palm trees",
+      "Night spotlighting safaris spotting ocelots, tapirs, and hundreds of caimans",
+      "Stay in floating or riverside safari lodges in the heart of Jaguarland"
+    ],
+    "included": [
+      "5 Nights in luxury Pantanal safari lodges and floating hotel houseboats",
+      "Private specialized boat with driver and bilingual wildlife biologist tracker",
+      "All transfers from Cuiabá (CGB) via the Transpantaneira Highway in 4x4",
+      "All meals, snacks, water, and park conservation entry fees"
+    ],
+    "excluded": [
+      "International flights to Brazil / Cuiabá (CGB)",
+      "Personal camera gear",
+      "Tips for boat captain and tracker"
+    ],
+    "availableDates": [
+      "2026-06-20",
+      "2026-07-18",
+      "2026-08-14",
+      "2026-09-22"
+    ],
+    "featured": true,
+    "popular": true,
+    "status": "Active",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Cuiabá to Transpantaneira Highway",
+        "description": "Arrive at Cuiabá Airport. 4x4 drive along the dirt Transpantaneira Highway crossing wooden bridges teeming with thousands of caimans and jabiru storks."
+      },
+      {
+        "day": 2,
+        "title": "Journey to Porto Jofre Jaguar Zone",
+        "description": "Travel deep into the Meeting of the Waters State Park. Board your riverboat lodge. Afternoon cruise spotting capybaras and kingfishers."
+      },
+      {
+        "day": 3,
+        "title": "Cuiabá River Wild Jaguar Tracking",
+        "description": "Full-day boat safari scanning sandbanks and river bends. Watch powerful wild jaguars stalking caimans on riverbanks."
+      },
+      {
+        "day": 4,
+        "title": "Giant River Otters & Piquiri River",
+        "description": "Follow loud vocalizations to family groups of giant river otters. Second full day of jaguar tracking in narrow lagoons."
+      },
+      {
+        "day": 5,
+        "title": "Hyacinth Macaws & Night Spotlight Safari",
+        "description": "Photograph the world’s largest flying parrots (Hyacinth Macaws). Evening night spotlighting safari for tapirs, anteaters, and nightjars."
+      },
+      {
+        "day": 6,
+        "title": "Return to Cuiabá & Departure",
+        "description": "Morning boat trip before transfer back along the Transpantaneira to Cuiabá for departure flights."
+      }
+    ],
+    "guestReviews": [
+      {
+        "author": "Dr. Rodrigo Silva",
+        "rating": 5,
+        "text": "We saw six different jaguars in three days, including a male taking down a caiman on the riverbank! Unsurpassed wildlife spectacle.",
+        "date": "2026-08-25"
+      }
+    ]
+  }
+]

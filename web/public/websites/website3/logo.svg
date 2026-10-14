@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" fill="none">
+  <defs>
+    <linearGradient id="hpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="10" width="40" height="40" rx="10" fill="url(#hpGrad)" />
+  <!-- Sun & Palm silhouette -->
+  <circle cx="26" cy="24" r="7" fill="#fbbf24" />
+  <path d="M26 38 C26 32 24 28 20 25 C23 25 25 27 26 30 C27 27 29 25 32 25 C28 28 26 32 26 38 Z" fill="#ffffff" />
+  <path d="M16 42 Q 26 38 36 42" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <text x="56" y="32" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#0f172a" letter-spacing="0.5">Holiday Paradise</text>
+  <text x="58" y="47" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#0f766e" letter-spacing="2.5">LUXURY GETAWAYS</text>
+</svg>

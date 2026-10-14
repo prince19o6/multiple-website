@@ -1,0 +1,24 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Build & Compilation Artifacts
+bin/
+obj/
+*.user
+.vs/
+.vscode/
+
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+
+# Next.js & Expo
+.next/
+.next_*/
+.expo/
+dist/
+build/
+*.tsbuildinfo
