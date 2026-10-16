@@ -93,7 +93,7 @@ export default function EnvErrorPage() {
 
         <div className="mt-8 pt-4 border-t border-slate-800 text-center">
           <p className="text-[11px] text-slate-400">
-            Once configured, opening <code className="text-slate-300 font-mono">http://localhost:3000</code> or your PC's LAN IP will launch your chosen site directly with no chooser.
+            Once configured, opening <code className="text-slate-300 font-mono">http://localhost:3000</code> or your PC&apos;s LAN IP will launch your chosen site directly with no chooser.
           </p>
         </div>
       </div>
