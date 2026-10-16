@@ -22,6 +22,18 @@ public class BookingService : IBookingService
         return await _repository.GetAllAsync();
     }
 
+    public async Task<IEnumerable<Booking>> QueryBookingsAsync(
+        string? email = null,
+        string? userId = null,
+        IEnumerable<string>? ids = null,
+        string? status = null,
+        string? search = null,
+        int? skip = null,
+        int? limit = null)
+    {
+        return await _repository.QueryAsync(email, userId, ids, status, search, skip, limit);
+    }
+
     public async Task<Booking?> GetBookingByIdAsync(string id)
     {
         return await _repository.GetByIdAsync(id);

@@ -45,26 +45,7 @@ public class BookingsController : ControllerBase
                 });
             }
 
-            var allBookings = (await _bookingService.GetAllBookingsAsync()).ToList();
-            var query = allBookings.AsEnumerable();
-
-            if (!string.IsNullOrWhiteSpace(status) && !status.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                query = query.Where(b => string.Equals(b.Status, status, StringComparison.OrdinalIgnoreCase));
-            }
-
-            if (!string.IsNullOrWhiteSpace(search))
-            {
-                var term = search.Trim();
-                query = query.Where(b =>
-                    (!string.IsNullOrEmpty(b.GuestName) && b.GuestName.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
-                    (!string.IsNullOrEmpty(b.Email) && b.Email.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
-                    (!string.IsNullOrEmpty(b.TourName) && b.TourName.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
-                    (!string.IsNullOrEmpty(b.Reference) && b.Reference.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
-                    (!string.IsNullOrEmpty(b.Id) && b.Id.Contains(term, StringComparison.OrdinalIgnoreCase)));
-            }
-
-            var adminList = query.OrderByDescending(b => b.CreatedAt ?? b.StartDate).ToList();
+            var adminList = (await _bookingService.QueryBookingsAsync(status: status, search: search)).ToList();
 
             return Ok(new
             {
@@ -92,28 +73,13 @@ public class BookingsController : ControllerBase
 
         try
         {
-            var bookings = await _bookingService.GetAllBookingsAsync();
-            var filtered = bookings.Where(b =>
-            {
-                if (idSet.Count > 0 && !string.IsNullOrWhiteSpace(b.Id) && idSet.Contains(b.Id))
-                {
-                    return true;
-                }
-
-                if (!string.IsNullOrWhiteSpace(targetEmail) && string.Equals(b.Email, targetEmail, StringComparison.OrdinalIgnoreCase))
-                {
-                    return true;
-                }
-
-                if (!string.IsNullOrWhiteSpace(authUserId) && string.Equals(b.UserId, authUserId, StringComparison.OrdinalIgnoreCase))
-                {
-                    return true;
-                }
-
-                return false;
-            })
-            .OrderByDescending(b => b.CreatedAt ?? b.StartDate)
-            .ToList();
+            var filtered = (await _bookingService.QueryBookingsAsync(
+                email: targetEmail,
+                userId: authUserId,
+                ids: idSet.Count > 0 ? idSet : null,
+                status: status,
+                search: search
+            )).ToList();
 
             return Ok(new { success = true, data = filtered, count = filtered.Count });
         }

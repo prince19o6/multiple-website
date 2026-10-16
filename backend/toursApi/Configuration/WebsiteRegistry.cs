@@ -21,8 +21,12 @@ public class WebsiteConfig
     public string SecondaryColor { get; set; } = "#1e40af";
 }
 
-public static class WebsiteRegistry
-{
+    private static string GetEnvOrFallback(string envKey, string fallback)
+    {
+        var val = Environment.GetEnvironmentVariable(envKey);
+        return !string.IsNullOrWhiteSpace(val) ? val.Trim() : fallback;
+    }
+
     // The authoritative registry of the three isolated websites.
     // Each website has its OWN separate database name, JWT parameters, CORS origins, and email sender.
     public static readonly Dictionary<string, WebsiteConfig> SitesById = new(StringComparer.OrdinalIgnoreCase)
@@ -45,7 +49,7 @@ public static class WebsiteRegistry
             },
             JwtIssuer = "ToursApi-GujjuTours",
             JwtAudience = "ToursApp-GujjuTours",
-            JwtSigningKey = "GujjuTours_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!",
+            JwtSigningKey = GetEnvOrFallback("JWT_SIGNING_KEY_GUJJUTOURS", "GujjuTours_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!"),
             CorsOrigins = new List<string>
             {
                 "https://www.gujjutours.com",
@@ -79,7 +83,7 @@ public static class WebsiteRegistry
             },
             JwtIssuer = "ToursApi-TripGoAsia",
             JwtAudience = "ToursApp-TripGoAsia",
-            JwtSigningKey = "TripGoAsia_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!",
+            JwtSigningKey = GetEnvOrFallback("JWT_SIGNING_KEY_TRIPGOASIA", "TripGoAsia_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!"),
             CorsOrigins = new List<string>
             {
                 "https://www.tripgoasia.com",
@@ -114,7 +118,7 @@ public static class WebsiteRegistry
             },
             JwtIssuer = "ToursApi-Technoheaven",
             JwtAudience = "ToursApp-Technoheaven",
-            JwtSigningKey = "Technoheaven_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!",
+            JwtSigningKey = GetEnvOrFallback("JWT_SIGNING_KEY_TECHNOHEAVEN", "Technoheaven_Secret_Jwt_Signing_Key_2026_Secure_Minimum_256_Bits!"),
             CorsOrigins = new List<string>
             {
                 "https://stagingb2b.technoheaven.com",

@@ -1293,6 +1293,16 @@ export async function forgotPassword(email: string): Promise<{ success: boolean;
 }
 
 /**
+ * Submit password reset token and new password.
+ */
+export async function resetPassword(token: string, newPassword: string): Promise<{ success: boolean; message: string }> {
+  return request<{ success: boolean; message: string }>('/api/auth/reset-password', {
+    method: 'POST',
+    body: JSON.stringify({ token, newPassword }),
+  });
+}
+
+/**
  * Log out active user and clear tokens.
  */
 export async function logout(): Promise<void> {
