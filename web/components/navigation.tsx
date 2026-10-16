@@ -47,9 +47,9 @@ export default function Navigation({ config }: NavigationProps) {
   const defaultNavItems: NavItem[] = [
     { label: "Home", href: "/", show: true },
     { label: "Tours", href: "/explore", show: true },
-    { label: "Destinations", href: "/explore", show: true },
-    { label: "Gallery", href: "/#gallery", show: true },
-    { label: "Explore", href: "/explore", show: true },
+    { label: "My Bookings", href: "/bookings", show: true },
+    { label: "About", href: "/about", show: true },
+    { label: "Contact", href: "/contact", show: true },
   ];
 
   const navItems: NavItem[] =
@@ -61,7 +61,7 @@ export default function Navigation({ config }: NavigationProps) {
             href: link.href.startsWith("/") ? link.href : `/${link.href}`,
             show: true,
           })),
-          { label: "Explore", href: "/explore", show: true },
+          { label: "My Bookings", href: "/bookings", show: true },
         ]
       : defaultNavItems;
 

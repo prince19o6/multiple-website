@@ -21,11 +21,16 @@ export default function Footer({ config }: FooterProps) {
 
   // Derive links dynamically from API config
   const navLinks = config?.headerLinks
-    ? config.headerLinks.map((l) => ({ label: l.label, href: l.href }))
+    ? [
+        ...config.headerLinks.map((l) => ({ label: l.label, href: l.href })),
+        { label: "My Bookings", href: "/bookings" },
+      ]
     : [
         { label: "Home", href: "/" },
         { label: "Tours", href: "/explore" },
-        { label: "Destinations", href: "/explore" },
+        { label: "My Bookings", href: "/bookings" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
       ];
 
   return (

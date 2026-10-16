@@ -72,6 +72,9 @@ export interface Booking {
   paymentReference?: string;
   paidAt?: string;
   createdAt?: string;
+  tourImage?: string;
+  location?: string;
+  currency?: string;
 }
 
 export interface CreateBookingPayload {
