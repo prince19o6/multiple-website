@@ -325,7 +325,7 @@ export default function TourDetailScreen() {
               {tour.included?.length ? (
                 <>
                   <Text style={[styles.sectionHeading, { color: colors.heading, marginTop: SPACING.lg }]}>
-                    What's Included
+                    {"What's Included"}
                   </Text>
                   <View style={styles.includedGrid}>
                     {tour.included.map((inc, i) => (
@@ -374,7 +374,7 @@ export default function TourDetailScreen() {
                         <Text style={styles.starText}>{rev.rating}</Text>
                       </View>
                     </View>
-                    <Text style={[styles.reviewComment, { color: colors.text }]}>"{rev.text}"</Text>
+                    <Text style={[styles.reviewComment, { color: colors.text }]}>{`"${rev.text}"`}</Text>
                   </View>
                 ))
               ) : (

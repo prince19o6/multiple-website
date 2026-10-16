@@ -65,7 +65,7 @@ export default function SearchResultsScreen() {
             Search Results
           </Text>
           <Text style={{ color: colors.mutedText, marginTop: 4 }}>
-            Showing results for "{searchTerm || 'All tours'}"
+            {`Showing results for "${searchTerm || 'All tours'}"`}
           </Text>
         </View>
       </View>

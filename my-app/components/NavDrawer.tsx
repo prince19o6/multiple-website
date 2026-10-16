@@ -146,7 +146,7 @@ export default function NavDrawer({
         }
       );
     }
-  }, [isOpen, drawerWidth, modalVisible, translateX, backdropOpacity]);
+  }, [isOpen, drawerWidth, modalVisible]);
 
   // Close smoothly with animation
   const handleClose = useCallback(() => {
@@ -166,7 +166,7 @@ export default function NavDrawer({
         }
       }
     );
-  }, [drawerWidth, onClose, translateX, backdropOpacity]);
+  }, [drawerWidth, onClose]);
 
   // Pan gesture: swipe to close towards the right
   const panGesture = Gesture.Pan()

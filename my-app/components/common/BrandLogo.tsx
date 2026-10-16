@@ -60,9 +60,6 @@ export default function BrandLogo({
   const isDark = useIsDark();
   const headingFontFamily = getHeadingFontFamily(config);
 
-  const [hasError, setHasError] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-
   const useDarkVariant = forceDark ? true : forceLight ? false : isDark;
 
   // 1. Pick candidate logo URL
@@ -82,15 +79,22 @@ export default function BrandLogo({
     resolvedUrl = `${staticBase.replace(/\/+$/, '')}/${resolvedUrl.replace(/^\/+/, '')}`;
   }
 
-  // 3. Prefetch on mount or when URL changes
-  useEffect(() => {
+  const [prevUrl, setPrevUrl] = useState<string | null>(resolvedUrl);
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  if (prevUrl !== resolvedUrl) {
+    setPrevUrl(resolvedUrl);
     setHasError(false);
     setIsLoading(true);
+  }
 
+  // 3. Prefetch on mount or when URL changes
+  useEffect(() => {
     if (resolvedUrl) {
       Image.prefetch(resolvedUrl).catch(() => {});
     }
-  }, [resolvedUrl, useDarkVariant]);
+  }, [resolvedUrl]);
 
   // 4. Compute width & height
   let h = 38;

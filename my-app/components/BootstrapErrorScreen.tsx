@@ -39,7 +39,7 @@ export default function BootstrapErrorScreen({
 
         <Text style={styles.title}>Unable to Load Website</Text>
         <Text style={styles.subtitle}>
-          We couldn't connect to the backend server to load the site configuration and theme.
+          {"We couldn't connect to the backend server to load the site configuration and theme."}
         </Text>
 
         <View style={styles.infoCard}>

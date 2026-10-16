@@ -44,7 +44,7 @@ export default function TestimonialsSection({ config }: SectionProps) {
               },
             ]}
           >
-            <Text style={[styles.quote, { color: colors.text }]}>"{t.text}"</Text>
+            <Text style={[styles.quote, { color: colors.text }]}>{`"${t.text}"`}</Text>
             <View style={styles.authorRow}>
               <Text style={[styles.authorName, { color: colors.heading }]}>
                 {t.name}

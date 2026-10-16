@@ -8,7 +8,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { SPACING, RADIUS, FONT_SIZE } from '@/constants/theme';
+import { SPACING, FONT_SIZE } from '@/constants/theme';
 
 import BrandLogo from './common/BrandLogo';
 
@@ -18,7 +18,7 @@ export default function OfflineBanner() {
       <BrandLogo size="xs" width={75} forceDark={true} style={{ marginRight: 8 }} />
       <Ionicons name="cloud-offline-outline" size={16} color="#ffffff" style={styles.icon} />
       <Text style={styles.text}>
-        You're offline. Displaying saved & cached tour content.
+        {"You're offline. Displaying saved & cached tour content."}
       </Text>
     </View>
   );

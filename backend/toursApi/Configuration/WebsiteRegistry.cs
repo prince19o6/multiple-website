@@ -21,6 +21,8 @@ public class WebsiteConfig
     public string SecondaryColor { get; set; } = "#1e40af";
 }
 
+public static class WebsiteRegistry
+{
     private static string GetEnvOrFallback(string envKey, string fallback)
     {
         var val = Environment.GetEnvironmentVariable(envKey);

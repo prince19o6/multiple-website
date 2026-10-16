@@ -4,7 +4,7 @@
  * Polished placeholder skeletons shown while content is loading.
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Animated, Platform } from 'react-native';
 import { RADIUS, SPACING } from '@/constants/theme';
 import { useColors } from '@/store/ThemeContext';
@@ -21,7 +21,7 @@ export function SkeletonItem({
   style?: any;
 }) {
   const colors = useColors();
-  const opacity = useRef(new Animated.Value(0.3)).current;
+  const [opacity] = useState(() => new Animated.Value(0.3));
 
   useEffect(() => {
     const pulse = Animated.loop(

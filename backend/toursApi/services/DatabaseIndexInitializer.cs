@@ -57,6 +57,28 @@ public static class DatabaseIndexInitializer
                 new CreateIndexOptions { Name = "idx_tours_status" }
             ));
 
+            await tours.Indexes.CreateOneAsync(new CreateIndexModel<Tour>(
+                Builders<Tour>.IndexKeys.Ascending(t => t.TourNumericId),
+                new CreateIndexOptions { Name = "idx_tours_numeric_id" }
+            ));
+
+            await tours.Indexes.CreateOneAsync(new CreateIndexModel<Tour>(
+                Builders<Tour>.IndexKeys.Ascending(t => t.Destination),
+                new CreateIndexOptions { Name = "idx_tours_destination" }
+            ));
+
+            try
+            {
+                await tours.Indexes.CreateOneAsync(new CreateIndexModel<Tour>(
+                    Builders<Tour>.IndexKeys.Text(t => t.Name).Text(t => t.Description),
+                    new CreateIndexOptions { Name = "idx_tours_text_search" }
+                ));
+            }
+            catch
+            {
+                // In case a text index already exists with different weights/options
+            }
+
             // 2. Bookings indexes
             // Unique reference index within this database
             await bookings.Indexes.CreateOneAsync(new CreateIndexModel<Booking>(
@@ -72,6 +94,16 @@ public static class DatabaseIndexInitializer
             await bookings.Indexes.CreateOneAsync(new CreateIndexModel<Booking>(
                 Builders<Booking>.IndexKeys.Ascending(b => b.UserId),
                 new CreateIndexOptions { Name = "idx_bookings_userId" }
+            ));
+
+            await bookings.Indexes.CreateOneAsync(new CreateIndexModel<Booking>(
+                Builders<Booking>.IndexKeys.Ascending(b => b.Status),
+                new CreateIndexOptions { Name = "idx_bookings_status" }
+            ));
+
+            await bookings.Indexes.CreateOneAsync(new CreateIndexModel<Booking>(
+                Builders<Booking>.IndexKeys.Descending(b => b.CreatedAt),
+                new CreateIndexOptions { Name = "idx_bookings_createdAt_desc" }
             ));
 
             // 3. Users indexes

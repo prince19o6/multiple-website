@@ -188,7 +188,7 @@ export default function LoginScreen() {
 
         {/* Switch to Register */}
         <View style={styles.footerRow}>
-          <Text style={{ color: colors.mutedText }}>Don't have an account? </Text>
+          <Text style={{ color: colors.mutedText }}>{"Don't have an account? "}</Text>
           <TouchableOpacity onPress={() => router.push('/(auth)/register')}>
             <Text style={{ color: colors.primary, fontWeight: '700' }}>Register</Text>
           </TouchableOpacity>
