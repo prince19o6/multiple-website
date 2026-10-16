@@ -66,8 +66,9 @@ export default function ProfileTabScreen() {
             <Text style={[styles.userEmail, { color: colors.mutedText }]}>
               {user?.email || 'Sign in to sync your bookings across devices'}
             </Text>
-            {user?.role === 'admin' && (
+            {(user?.role?.toLowerCase() === 'admin' || user?.role?.toLowerCase() === 'superadmin') && (
               <View style={[styles.adminPill, { backgroundColor: `${colors.primary}20` }]}>
+                <Ionicons name="shield-checkmark" size={12} color={colors.primary} style={{ marginRight: 4 }} />
                 <Text style={[styles.adminPillText, { color: colors.primary }]}>Administrator</Text>
               </View>
             )}
@@ -165,8 +166,8 @@ export default function ProfileTabScreen() {
           )}
         </View>
 
-        {/* ─── Admin Dashboard Entry (if admin) ─── */}
-        {(user?.role === 'admin' || !isAuthenticated) && (
+        {/* ─── Admin Dashboard Entry (if admin or guest exploring) ─── */}
+        {(user?.role?.toLowerCase() === 'admin' || user?.role?.toLowerCase() === 'superadmin' || !isAuthenticated) && (
           <View style={styles.section}>
             <Text style={[styles.sectionHeading, { color: colors.mutedText }]}>ADMINISTRATION</Text>
             <TouchableOpacity

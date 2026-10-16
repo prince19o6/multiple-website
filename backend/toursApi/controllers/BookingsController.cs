@@ -373,7 +373,7 @@ public class BookingsController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Update(string id, [FromBody] BookingUpdateDto dto)
     {
         var tokenWebsiteId = User?.FindFirst("websiteId")?.Value;
@@ -407,7 +407,7 @@ public class BookingsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Delete(string id)
     {
         var tokenWebsiteId = User?.FindFirst("websiteId")?.Value;

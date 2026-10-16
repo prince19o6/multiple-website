@@ -74,7 +74,7 @@ public class DestinationsController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Create([FromBody] Destination destination)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
@@ -95,7 +95,7 @@ public class DestinationsController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Update(string id, [FromBody] Destination updated)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
@@ -116,7 +116,7 @@ public class DestinationsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Delete(string id)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))

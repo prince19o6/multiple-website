@@ -9,7 +9,7 @@ namespace ToursApi.Controllers;
 
 [ApiController]
 [Route("api/users")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
 public class UsersController : ControllerBase
 {
     private readonly IUserRepository _userRepository;

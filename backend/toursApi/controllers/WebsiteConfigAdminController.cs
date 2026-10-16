@@ -12,7 +12,7 @@ namespace ToursApi.Controllers;
 
 [ApiController]
 [Route("api/admin/website-config")]
-[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
 public class WebsiteConfigAdminController : ControllerBase
 {
     private readonly IWebsiteConfigRepository _repo;

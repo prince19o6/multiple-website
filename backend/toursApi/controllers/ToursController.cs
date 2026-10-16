@@ -169,7 +169,7 @@ public class ToursController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Create([FromBody] Tour tour)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
@@ -201,7 +201,7 @@ public class ToursController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Update(string id, [FromBody] Tour updated)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
@@ -236,7 +236,7 @@ public class ToursController : ControllerBase
     }
 
     [HttpPatch("{id}/toggle")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Toggle(string id, [FromBody] TourToggleDto dto)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
@@ -278,7 +278,7 @@ public class ToursController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,admin,SuperAdmin,superadmin")]
     public async Task<IActionResult> Delete(string id)
     {
         if (!ValidateTenantAccess(out var forbiddenResult))
