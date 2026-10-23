@@ -48,7 +48,6 @@ import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { getHeadingFontFamily } from '@/lib/sectionHelpers';
 import { ENV } from '@/config/env';
 import BrandLogo from '@/components/common/BrandLogo';
-import AppHeader from '@/components/common/AppHeader';
 import { storeGetObject, storeSetObject } from '@/src/lib/storage';
 
 interface GuestProfile {
@@ -330,23 +329,6 @@ export default function ProfileTabScreen() {
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      <AppHeader
-        title="Traveler Profile"
-        showLogo={true}
-        logoSize="sm"
-        rightActions={
-          <TouchableOpacity
-            style={styles.headerEditBtn}
-            onPress={handleOpenEditModal}
-            activeOpacity={0.75}
-            accessibilityRole="button"
-            accessibilityLabel="Edit profile"
-          >
-            <Ionicons name="pencil" size={18} color={colors.heading} />
-          </TouchableOpacity>
-        }
-      />
-
       <ScrollView
         style={styles.scroll}
         contentContainerStyle={styles.scrollContent}
@@ -373,9 +355,26 @@ export default function ProfileTabScreen() {
           </TouchableOpacity>
 
           <View style={styles.userInfo}>
-            <Text style={[styles.userName, { color: colors.heading, fontFamily: headingFontFamily }]}>
-              {activeName}
-            </Text>
+            <View style={styles.userNameRow}>
+              <Text style={[styles.userName, { color: colors.heading, fontFamily: headingFontFamily }]}>
+                {activeName}
+              </Text>
+              <TouchableOpacity
+                onPress={handleOpenEditModal}
+                activeOpacity={0.7}
+                style={[
+                  styles.nameEditBtn,
+                  {
+                    backgroundColor: `${colors.primary}18`,
+                    borderColor: `${colors.primary}30`,
+                  },
+                ]}
+                accessibilityRole="button"
+                accessibilityLabel="Edit profile details"
+              >
+                <Ionicons name="pencil" size={13} color={colors.primary} />
+              </TouchableOpacity>
+            </View>
             <Text style={[styles.userEmail, { color: colors.mutedText }]}>
               {activeEmail || (isAuthenticated ? 'No email linked' : 'Tap Edit to link email & phone')}
             </Text>
@@ -2017,10 +2016,17 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
   },
-  headerEditBtn: {
-    width: 38,
-    height: 38,
-    borderRadius: 19,
+  userNameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 2,
+  },
+  nameEditBtn: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -2067,7 +2073,6 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: FONT_SIZE.md + 1,
     fontWeight: '800',
-    marginBottom: 2,
   },
   userEmail: {
     fontSize: 12,
