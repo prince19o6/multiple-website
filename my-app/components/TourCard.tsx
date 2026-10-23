@@ -16,6 +16,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { useColors, useIsDark } from '@/store/ThemeContext';
+import { useCurrency } from '@/context/CurrencyContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH, DARK_BLURHASH } from '@/lib/imageUtils';
 
@@ -46,6 +47,7 @@ export default function TourCard({
 }: TourCardProps) {
   const colors = useColors();
   const isDark = useIsDark();
+  const { formatPrice } = useCurrency();
   const [imgError, setImgError] = useState(false);
 
   const resolvedUrl = resolveImageUrl(image) || PLACEHOLDER_IMAGE;
@@ -60,11 +62,7 @@ export default function TourCard({
   };
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.88}
-      onPress={onPress ?? onBook}
-      accessibilityLabel={`Tour ${name}, price $${price}, rating ${rating.toFixed(1)} stars`}
-      accessibilityHint="Navigates to tour booking and details"
+    <View
       style={[
         styles.card,
         {
@@ -73,81 +71,95 @@ export default function TourCard({
         },
       ]}
     >
-      {/* ─── Image Container with Theme-Aware Placeholder ─── */}
-      <View style={[styles.imageContainer, { backgroundColor: isDark ? '#1e293b' : colors.surface }]}>
-        {imgError ? (
-          <View style={[styles.fallbackContainer, { backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : `${colors.primary}12` }]}>
-            <Ionicons name="image-outline" size={36} color={colors.mutedText} />
-            <Text style={[styles.fallbackText, { color: colors.mutedText }]}>Image Unavailable</Text>
-          </View>
-        ) : (
-          <Image
-            source={{ uri: resolvedUrl }}
-            style={styles.image}
-            contentFit="cover"
-            transition={300}
-            cachePolicy="memory-disk"
-            recyclingKey={resolvedUrl}
-            placeholder={{ blurhash: isDark ? DARK_BLURHASH : DEFAULT_BLURHASH }}
-            onError={handleImageError}
-          />
-        )}
+      <TouchableOpacity
+        activeOpacity={0.88}
+        onPress={onPress ?? onBook}
+        accessibilityLabel={`Tour ${name}, price ${formatPrice(price)}, rating ${rating.toFixed(1)} stars`}
+        accessibilityHint="Navigates to tour booking and details"
+        accessibilityRole="button"
+      >
+        {/* ─── Image Container with Theme-Aware Placeholder ─── */}
+        <View style={[styles.imageContainer, { backgroundColor: isDark ? '#1e293b' : colors.surface }]}>
+          {imgError ? (
+            <View style={[styles.fallbackContainer, { backgroundColor: isDark ? 'rgba(255,255,255,0.05)' : `${colors.primary}12` }]}>
+              <Ionicons name="image-outline" size={36} color={colors.mutedText} />
+              <Text style={[styles.fallbackText, { color: colors.mutedText }]}>Image Unavailable</Text>
+            </View>
+          ) : (
+            <Image
+              source={{ uri: resolvedUrl }}
+              style={styles.image}
+              contentFit="cover"
+              transition={300}
+              cachePolicy="memory-disk"
+              recyclingKey={resolvedUrl}
+              placeholder={{ blurhash: isDark ? DARK_BLURHASH : DEFAULT_BLURHASH }}
+              onError={handleImageError}
+            />
+          )}
 
-        <View style={[styles.ratingBadge, { backgroundColor: colors.primary }]}>
-          <Ionicons name="star" size={13} color="#ffffff" />
-          <Text style={styles.ratingText}>{rating.toFixed(1)}</Text>
-        </View>
-      </View>
-
-      {/* ─── Content ─── */}
-      <View style={styles.content}>
-        <Text
-          numberOfLines={2}
-          style={[styles.title, { color: colors.heading }]}
-        >
-          {name}
-        </Text>
-
-        {/* Quick info pills */}
-        <View style={styles.metaRow}>
-          <View style={[styles.pill, { backgroundColor: `${colors.mutedText}16` }]}>
-            <Ionicons name="calendar-outline" size={13} color={colors.mutedText} />
-            <Text style={[styles.pillText, { color: colors.mutedText }]}>{duration}</Text>
-          </View>
-          <View style={[styles.pill, { backgroundColor: `${colors.mutedText}16` }]}>
-            <Ionicons name="flash-outline" size={13} color={colors.mutedText} />
-            <Text style={[styles.pillText, { color: colors.mutedText }]}>{difficulty}</Text>
+          <View style={[styles.ratingBadge, { backgroundColor: colors.primary }]}>
+            <Ionicons name="star" size={13} color="#ffffff" />
+            <Text style={styles.ratingText}>{rating.toFixed(1)}</Text>
           </View>
         </View>
 
-        <Text
-          numberOfLines={2}
-          style={[styles.description, { color: colors.mutedText }]}
-        >
-          {description}
-        </Text>
-
-        {/* Footer */}
-        <View style={styles.footer}>
-          <View>
-            <Text style={[styles.pricePrefix, { color: colors.mutedText }]}>Starting from</Text>
-            <Text style={[styles.price, { color: colors.primary }]}>
-              ${price}
-            </Text>
-          </View>
-
-          <TouchableOpacity
-            style={[styles.bookButton, { backgroundColor: colors.primary }]}
-            onPress={onBook}
-            activeOpacity={0.85}
-            accessibilityRole="button"
-            accessibilityLabel={`Book ${name}`}
+        {/* ─── Upper Content ─── */}
+        <View style={styles.topContent}>
+          <Text
+            numberOfLines={2}
+            style={[styles.title, { color: colors.heading }]}
           >
-            <Text style={styles.bookButtonText}>Book Now</Text>
-          </TouchableOpacity>
+            {name}
+          </Text>
+
+          {/* Quick info pills */}
+          <View style={styles.metaRow}>
+            <View style={[styles.pill, { backgroundColor: `${colors.mutedText}16` }]}>
+              <Ionicons name="calendar-outline" size={13} color={colors.mutedText} />
+              <Text style={[styles.pillText, { color: colors.mutedText }]}>{duration}</Text>
+            </View>
+            <View style={[styles.pill, { backgroundColor: `${colors.mutedText}16` }]}>
+              <Ionicons name="flash-outline" size={13} color={colors.mutedText} />
+              <Text style={[styles.pillText, { color: colors.mutedText }]}>{difficulty}</Text>
+            </View>
+          </View>
+
+          <Text
+            numberOfLines={2}
+            style={[styles.description, { color: colors.mutedText }]}
+          >
+            {description}
+          </Text>
         </View>
+      </TouchableOpacity>
+
+      {/* ─── Footer with Sibling Touchables ─── */}
+      <View style={styles.footer}>
+        <TouchableOpacity
+          onPress={onPress ?? onBook}
+          activeOpacity={0.88}
+          style={styles.priceContainer}
+          accessibilityRole="button"
+          accessibilityLabel={`Price ${formatPrice(price)}`}
+        >
+          <Text style={[styles.pricePrefix, { color: colors.mutedText }]}>Starting from</Text>
+          <Text style={[styles.price, { color: colors.primary }]}>
+            {formatPrice(price)}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.bookButton, { backgroundColor: colors.primary }]}
+          onPress={onBook}
+          activeOpacity={0.85}
+          accessibilityRole="button"
+          accessibilityLabel={`Book ${name}`}
+        >
+          <Text style={styles.bookButtonText}>Book Now</Text>
+        </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
@@ -198,8 +210,9 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE.xs,
     fontWeight: '700',
   },
-  content: {
-    padding: SPACING.md,
+  topContent: {
+    paddingHorizontal: SPACING.md,
+    paddingTop: SPACING.md,
   },
   title: {
     fontSize: FONT_SIZE.lg,
@@ -226,13 +239,18 @@ const styles = StyleSheet.create({
   description: {
     fontSize: FONT_SIZE.sm,
     lineHeight: 19,
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
   },
   footer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingHorizontal: SPACING.md,
+    paddingBottom: SPACING.md,
     paddingTop: SPACING.xs,
+  },
+  priceContainer: {
+    flex: 1,
   },
   pricePrefix: {
     fontSize: 10,

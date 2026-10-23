@@ -17,6 +17,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { useColors } from '@/store/ThemeContext';
+import { useCurrency } from '@/context/CurrencyContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH } from '@/lib/imageUtils';
 
@@ -64,6 +65,7 @@ export default function LuxuryTourCard({
   headingFontFamily = 'Playfair Display',
 }: LuxuryTourCardProps) {
   const globalColors = useColors();
+  const { formatPrice } = useCurrency();
   const [imgError, setImgError] = useState(false);
 
   const badgeEnabled = tourCardConfig.badge?.enabled !== false;
@@ -91,11 +93,7 @@ export default function LuxuryTourCard({
   };
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.92}
-      onPress={onPress ?? onBook}
-      accessibilityLabel={`Luxury tour ${name}, package from ${currency}${price}`}
-      accessibilityHint="Tap to view package details"
+    <View
       style={[
         styles.card,
         {
@@ -104,94 +102,110 @@ export default function LuxuryTourCard({
         },
       ]}
     >
-      {/* ─── Top Image Container ─── */}
-      <View style={[styles.imageContainer, { backgroundColor: surface }]}>
-        {imgError ? (
-          <View style={[styles.fallbackContainer, { backgroundColor: `${accent}15` }]}>
-            <Ionicons name="sparkles-outline" size={36} color={accent} />
-            <Text style={[styles.fallbackText, { color: muted }]}>Curated Imagery Unavailable</Text>
-          </View>
-        ) : (
-          <Image
-            source={{ uri: resolvedUrl }}
-            style={styles.image}
-            contentFit="cover"
-            transition={300}
-            cachePolicy="memory-disk"
-            recyclingKey={resolvedUrl}
-            placeholder={{ blurhash: DEFAULT_BLURHASH }}
-            onError={handleImageError}
-          />
-        )}
-        {badgeEnabled && (
-          <View style={[styles.goldBadge, { backgroundColor: accent }]}>
-            <Text style={styles.goldBadgeText}>{badgeText}</Text>
-          </View>
-        )}
-      </View>
-
-      {/* ─── Editorial Content ─── */}
-      <View style={styles.content}>
-        {/* Meta Header */}
-        <View style={styles.metaRow}>
-          {location ? (
-            <View style={styles.locationContainer}>
-              <Ionicons name="location-outline" size={13} color={muted} />
-              <Text style={[styles.locationText, { color: muted }]}>{location}</Text>
+      <TouchableOpacity
+        activeOpacity={0.92}
+        onPress={onPress ?? onBook}
+        accessibilityLabel={`Luxury tour ${name}, package from ${formatPrice(price)}`}
+        accessibilityHint="Tap to view package details"
+        accessibilityRole="button"
+      >
+        {/* ─── Top Image Container ─── */}
+        <View style={[styles.imageContainer, { backgroundColor: surface }]}>
+          {imgError ? (
+            <View style={[styles.fallbackContainer, { backgroundColor: `${accent}15` }]}>
+              <Ionicons name="sparkles-outline" size={36} color={accent} />
+              <Text style={[styles.fallbackText, { color: muted }]}>Curated Imagery Unavailable</Text>
             </View>
           ) : (
-            <View />
+            <Image
+              source={{ uri: resolvedUrl }}
+              style={styles.image}
+              contentFit="cover"
+              transition={300}
+              cachePolicy="memory-disk"
+              recyclingKey={resolvedUrl}
+              placeholder={{ blurhash: DEFAULT_BLURHASH }}
+              onError={handleImageError}
+            />
           )}
-          <View style={styles.ratingRow}>
-            <Ionicons name="star" size={13} color={accent} />
-            <Text style={[styles.ratingText, { color: accent }]}>{rating.toFixed(1)}</Text>
-          </View>
+          {badgeEnabled && (
+            <View style={[styles.goldBadge, { backgroundColor: accent }]}>
+              <Text style={styles.goldBadgeText}>{badgeText}</Text>
+            </View>
+          )}
         </View>
 
-        {/* Title in Serif Font */}
-        <Text
-          numberOfLines={2}
-          style={[
-            styles.title,
-            {
-              color: heading,
-              fontFamily: headingFontFamily,
-            },
-          ]}
-        >
-          {name}
-        </Text>
-
-        <Text
-          numberOfLines={2}
-          style={[styles.description, { color: muted }]}
-        >
-          {description}
-        </Text>
-
-        <View style={[styles.divider, { borderBottomColor: border }]}>
-          <Text style={[styles.durationText, { color: muted }]}>⏱ {duration}</Text>
-        </View>
-
-        {/* Footer */}
-        <View style={styles.footer}>
-          <View>
-            <Text style={[styles.pricePrefix, { color: muted }]}>{pricePrefix}</Text>
-            <Text style={[styles.price, { color: heading }]}>
-              {currency}{price}
-            </Text>
+        {/* ─── Editorial Content Top ─── */}
+        <View style={styles.topContent}>
+          {/* Meta Header */}
+          <View style={styles.metaRow}>
+            {location ? (
+              <View style={styles.locationContainer}>
+                <Ionicons name="location-outline" size={13} color={muted} />
+                <Text style={[styles.locationText, { color: muted }]}>{location}</Text>
+              </View>
+            ) : (
+              <View />
+            )}
+            <View style={styles.ratingRow}>
+              <Ionicons name="star" size={13} color={accent} />
+              <Text style={[styles.ratingText, { color: accent }]}>{rating.toFixed(1)}</Text>
+            </View>
           </View>
 
-          <TouchableOpacity
-            style={[styles.reserveButton, { backgroundColor: primary }]}
-            onPress={onBook}
-            activeOpacity={0.85}
+          {/* Title in Serif Font */}
+          <Text
+            numberOfLines={2}
+            style={[
+              styles.title,
+              {
+                color: heading,
+                fontFamily: headingFontFamily,
+              },
+            ]}
           >
-            <Text style={styles.reserveButtonText}>{bookText}</Text>
-          </TouchableOpacity>
+            {name}
+          </Text>
+
+          <Text
+            numberOfLines={2}
+            style={[styles.description, { color: muted }]}
+          >
+            {description}
+          </Text>
+
+          <View style={[styles.divider, { borderBottomColor: border }]}>
+            <Text style={[styles.durationText, { color: muted }]}>⏱ {duration}</Text>
+          </View>
         </View>
+      </TouchableOpacity>
+
+      {/* ─── Footer with Sibling Touchables ─── */}
+      <View style={styles.footer}>
+        <TouchableOpacity
+          onPress={onPress ?? onBook}
+          activeOpacity={0.92}
+          style={styles.priceContainer}
+          accessibilityRole="button"
+          accessibilityLabel={`Price ${formatPrice(price)}`}
+        >
+          <Text style={[styles.pricePrefix, { color: muted }]}>{pricePrefix}</Text>
+          <Text style={[styles.price, { color: heading }]}>
+            {formatPrice(price)}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.reserveButton, { backgroundColor: primary }]}
+          onPress={onBook}
+          activeOpacity={0.85}
+          accessibilityRole="button"
+          accessibilityLabel={`Reserve ${name}`}
+        >
+          <Text style={styles.reserveButtonText}>{bookText}</Text>
+        </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
@@ -241,8 +255,9 @@ const styles = StyleSheet.create({
     letterSpacing: 1.2,
     textTransform: 'uppercase',
   },
-  content: {
-    padding: SPACING.md + 2,
+  topContent: {
+    paddingHorizontal: SPACING.md + 2,
+    paddingTop: SPACING.md + 2,
   },
   metaRow: {
     flexDirection: 'row',
@@ -283,7 +298,7 @@ const styles = StyleSheet.create({
   divider: {
     borderBottomWidth: StyleSheet.hairlineWidth,
     paddingBottom: SPACING.sm,
-    marginBottom: SPACING.md,
+    marginBottom: SPACING.sm,
   },
   durationText: {
     fontSize: 11,
@@ -293,6 +308,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingHorizontal: SPACING.md + 2,
+    paddingBottom: SPACING.md + 2,
+  },
+  priceContainer: {
+    flex: 1,
   },
   pricePrefix: {
     fontSize: 9,

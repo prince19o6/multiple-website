@@ -40,7 +40,7 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
   };
 
   return (
-    <TouchableOpacity
+    <View
       style={[
         styles.card,
         {
@@ -49,67 +49,82 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
         },
         style,
       ]}
-      onPress={handleCardPress}
-      activeOpacity={0.9}
-      accessibilityRole="button"
-      accessibilityLabel="Open Travel Wrapped 2026 and VIP Loyalty Hub"
     >
-      {/* Top Banner Row */}
-      <View style={styles.topRow}>
-        <View style={styles.badgePill}>
-          <Ionicons name="sparkles" size={13} color="#FFD700" />
-          <Text style={styles.badgeText}>{wrapped.year} TRAVEL WRAPPED</Text>
-        </View>
-
-        {loyalty && (
-          <View style={styles.loyaltyPill}>
-            <Text style={styles.loyaltyText}>
-              {loyalty.tierBadgeEmoji} {loyalty.currentTier}
-            </Text>
+      <TouchableOpacity
+        onPress={handleCardPress}
+        activeOpacity={0.9}
+        accessibilityRole="button"
+        accessibilityLabel="Open Travel Wrapped 2026 and VIP Loyalty Hub"
+      >
+        {/* Top Banner Row */}
+        <View style={styles.topRow}>
+          <View style={styles.badgePill}>
+            <Ionicons name="sparkles" size={13} color="#FFD700" />
+            <Text style={styles.badgeText}>{wrapped.year} TRAVEL WRAPPED</Text>
           </View>
-        )}
-      </View>
 
-      {/* Main Title & Archetype */}
-      <Text style={styles.title}>Your 2026 Expedition Odyssey</Text>
-      <Text style={styles.archetypeText}>
-        {wrapped.travelerArchetype} • {wrapped.travelerName}
-      </Text>
-
-      {/* 3 Highlights Row */}
-      <View style={styles.statsRow}>
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>{wrapped.totalKmTraveled.toLocaleString()} km</Text>
-          <Text style={styles.statLabel}>Traversed</Text>
+          {loyalty && (
+            <View style={styles.loyaltyPill}>
+              <Text style={styles.loyaltyText}>
+                {loyalty.tierBadgeEmoji} {loyalty.currentTier}
+              </Text>
+            </View>
+          )}
         </View>
 
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>{wrapped.toursCompleted}</Text>
-          <Text style={styles.statLabel}>Expeditions</Text>
-        </View>
+        {/* Main Title & Archetype */}
+        <Text style={styles.title}>Your 2026 Expedition Odyssey</Text>
+        <Text style={styles.archetypeText}>
+          {wrapped.travelerArchetype} • {wrapped.travelerName}
+        </Text>
 
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>
-            {currencySymbol}
-            {totalSaved.toLocaleString()}
-          </Text>
-          <Text style={styles.statLabel}>Saved & Reclaimed</Text>
+        {/* 3 Highlights Row */}
+        <View style={styles.statsRow}>
+          <View style={styles.statBox}>
+            <Text style={styles.statNumber}>{wrapped.totalKmTraveled.toLocaleString()} km</Text>
+            <Text style={styles.statLabel}>Traversed</Text>
+          </View>
+
+          <View style={styles.statBox}>
+            <Text style={styles.statNumber}>{wrapped.toursCompleted}</Text>
+            <Text style={styles.statLabel}>Expeditions</Text>
+          </View>
+
+          <View style={styles.statBox}>
+            <Text style={styles.statNumber}>
+              {currencySymbol}
+              {totalSaved.toLocaleString()}
+            </Text>
+            <Text style={styles.statLabel}>Saved & Reclaimed</Text>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
       {/* Footer CTA */}
       <View style={styles.footerRow}>
-        <TouchableOpacity style={styles.playReelBtn} onPress={handlePlayReel} activeOpacity={0.85}>
+        <TouchableOpacity
+          style={styles.playReelBtn}
+          onPress={handlePlayReel}
+          activeOpacity={0.85}
+          accessibilityRole="button"
+          accessibilityLabel="Play Story Reel"
+        >
           <Ionicons name="play-circle" size={18} color="#0B3B60" />
           <Text style={styles.playReelText}>Play Story Reel</Text>
         </TouchableOpacity>
 
-        <View style={styles.viewMoreRow}>
+        <TouchableOpacity
+          style={styles.viewMoreRow}
+          onPress={handleCardPress}
+          activeOpacity={0.85}
+          accessibilityRole="button"
+          accessibilityLabel="View VIP Club and Diploma"
+        >
           <Text style={styles.viewMoreText}>VIP Club & Diploma</Text>
           <Ionicons name="chevron-forward" size={16} color="#FFD700" />
-        </View>
+        </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 

@@ -16,6 +16,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { useColors } from '@/store/ThemeContext';
+import { useCurrency } from '@/context/CurrencyContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH } from '@/lib/imageUtils';
 
@@ -58,6 +59,7 @@ export default function AdventureTourCard({
   theme = {},
 }: AdventureTourCardProps) {
   const globalColors = useColors();
+  const { formatPrice } = useCurrency();
   const [imgError, setImgError] = useState(false);
 
   const badgeEnabled = tourCardConfig.badge?.enabled !== false;
@@ -81,88 +83,107 @@ export default function AdventureTourCard({
   };
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.9}
-      onPress={onPress ?? onBook}
-      accessibilityLabel={`Adventure tour ${name}, price ${currency}${price}, rating ${rating.toFixed(1)} stars`}
-      accessibilityHint="Tap to join or view adventure"
-      style={[styles.card, { backgroundColor: globalColors.surface }]}
-    >
-      {/* Background Image or Fallback */}
-      {imgError ? (
-        <View style={[styles.bgImage, styles.fallbackContainer, { backgroundColor: `${primary}20` }]}>
-          <Ionicons name="compass-outline" size={48} color={accent} />
-          <Text style={[styles.fallbackText, { color: '#ffffff' }]}>Image Unavailable</Text>
-        </View>
-      ) : (
-        <Image
-          source={{ uri: resolvedUrl }}
-          style={styles.bgImage}
-          contentFit="cover"
-          transition={300}
-          cachePolicy="memory-disk"
-          recyclingKey={resolvedUrl}
-          placeholder={{ blurhash: DEFAULT_BLURHASH }}
-          onError={handleImageError}
-        />
-      )}
-
-      {/* Dark overlay for contrast */}
-      <View style={styles.darkOverlay} />
-
-      {/* Top row: badge + rating */}
-      <View style={styles.topRow}>
-        {badgeEnabled ? (
-          <View style={[styles.badge, { backgroundColor: accent }]}>
-            <Text style={styles.badgeText}>🔥 {badgeText}</Text>
+    <View style={[styles.card, { backgroundColor: globalColors.surface }]}>
+      {/* Background Image & Overlay Touchable */}
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={onPress ?? onBook}
+        accessibilityLabel={`Adventure tour ${name}, price ${currency}${price}, rating ${rating.toFixed(1)} stars`}
+        accessibilityHint="Tap to join or view adventure"
+        accessibilityRole="button"
+        style={StyleSheet.absoluteFill}
+      >
+        {/* Background Image or Fallback */}
+        {imgError ? (
+          <View style={[styles.bgImage, styles.fallbackContainer, { backgroundColor: `${primary}20` }]}>
+            <Ionicons name="compass-outline" size={48} color={accent} />
+            <Text style={[styles.fallbackText, { color: '#ffffff' }]}>Image Unavailable</Text>
           </View>
         ) : (
-          <View />
+          <Image
+            source={{ uri: resolvedUrl }}
+            style={styles.bgImage}
+            contentFit="cover"
+            transition={300}
+            cachePolicy="memory-disk"
+            recyclingKey={resolvedUrl}
+            placeholder={{ blurhash: DEFAULT_BLURHASH }}
+            onError={handleImageError}
+          />
         )}
-        <View style={styles.ratingBadge}>
-          <Ionicons name="star" size={13} color="#f59e0b" />
-          <Text style={styles.ratingText}>{rating.toFixed(1)}</Text>
-        </View>
-      </View>
 
-      {/* Bottom info */}
+        {/* Dark overlay for contrast */}
+        <View style={styles.darkOverlay} />
+
+        {/* Top row: badge + rating */}
+        <View style={styles.topRow}>
+          {badgeEnabled ? (
+            <View style={[styles.badge, { backgroundColor: accent }]}>
+              <Text style={styles.badgeText}>🔥 {badgeText}</Text>
+            </View>
+          ) : (
+            <View />
+          )}
+          <View style={styles.ratingBadge}>
+            <Ionicons name="star" size={13} color="#f59e0b" />
+            <Text style={styles.ratingText}>{rating.toFixed(1)}</Text>
+          </View>
+        </View>
+      </TouchableOpacity>
+
+      {/* Bottom info container */}
       <View style={styles.bottomContent}>
-        <View style={styles.tagsRow}>
-          <View style={[styles.difficultyPill, { backgroundColor: difficultyColor }]}>
-            <Text style={styles.difficultyText}>{difficulty}</Text>
+        <TouchableOpacity
+          activeOpacity={0.9}
+          onPress={onPress ?? onBook}
+          accessibilityRole="button"
+          accessibilityLabel={`Details for ${name}`}
+        >
+          <View style={styles.tagsRow}>
+            <View style={[styles.difficultyPill, { backgroundColor: difficultyColor }]}>
+              <Text style={styles.difficultyText}>{difficulty}</Text>
+            </View>
+            <View style={styles.durationPill}>
+              <Ionicons name="calendar" size={12} color="#ffffffcc" />
+              <Text style={styles.durationText}>{duration}</Text>
+            </View>
           </View>
-          <View style={styles.durationPill}>
-            <Ionicons name="calendar" size={12} color="#ffffffcc" />
-            <Text style={styles.durationText}>{duration}</Text>
-          </View>
-        </View>
 
-        <Text numberOfLines={2} style={styles.title}>
-          {name}
-        </Text>
+          <Text numberOfLines={2} style={styles.title}>
+            {name}
+          </Text>
 
-        <Text numberOfLines={2} style={styles.description}>
-          {description}
-        </Text>
+          <Text numberOfLines={2} style={styles.description}>
+            {description}
+          </Text>
+        </TouchableOpacity>
 
         <View style={styles.footerRow}>
-          <View>
+          <TouchableOpacity
+            activeOpacity={0.9}
+            onPress={onPress ?? onBook}
+            style={styles.priceContainer}
+            accessibilityRole="button"
+            accessibilityLabel={`Price ${formatPrice(price)}`}
+          >
             <Text style={styles.pricePrefixText}>{pricePrefix}</Text>
             <Text style={styles.priceValueText}>
-              {currency}{price}
+              {formatPrice(price)}
             </Text>
-          </View>
+          </TouchableOpacity>
 
           <TouchableOpacity
             activeOpacity={0.85}
             onPress={onBook}
             style={[styles.actionButton, { backgroundColor: accent }]}
+            accessibilityRole="button"
+            accessibilityLabel={bookText}
           >
             <Text style={styles.actionButtonText}>{bookText}</Text>
           </TouchableOpacity>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 }
 
@@ -291,6 +312,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  priceContainer: {
+    flex: 1,
   },
   pricePrefixText: {
     color: '#ffffff99',
