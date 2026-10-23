@@ -29,7 +29,7 @@ export const BargainHeroCard: React.FC<BargainHeroCardProps> = ({ style }) => {
 
   const handleQuickFlashcard = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
-    const defaultPhrase: BargainPhraseItem = bargainData?.keyPhrases[0] || {
+    const defaultPhrase: BargainPhraseItem = bargainData?.keyPhrases?.[0] || {
       id: 'can_you_discount',
       phraseId: 'can_you_discount',
       englishMeaning: 'Can you discount a little bit?',

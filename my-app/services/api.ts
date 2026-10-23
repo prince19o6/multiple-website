@@ -439,28 +439,31 @@ export async function request<T>(
   // through the local backend proxy to avoid guaranteed browser CORS preflight blocking.
   if (
     Platform.OS === 'web' &&
-    typeof window !== 'undefined' &&
-    (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    typeof window !== 'undefined'
   ) {
-    if (base.includes('stagingapi.')) {
-      base = (ENV.backendFallbackUrl || 'http://localhost:5000').replace(/\/+$/, '');
+    const webHost = window.location.hostname;
+    const isLocalOrLan =
+      webHost === 'localhost' ||
+      webHost === '127.0.0.1' ||
+      /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(webHost);
+
+    if (isLocalOrLan && base.includes('stagingapi.')) {
+      base = (ENV.backendFallbackUrl || `http://${webHost}:5000`).replace(/\/+$/, '');
     }
   }
 
   // Staging API gateways (stagingapi.*) exclusively host /api/core/v1/config.
-  // Application endpoints (/api/tours, /api/destinations, /api/bookings, /api/auth, /api/users)
+  // All application endpoints (/api/tours, /api/destinations, /api/bookings, /api/auth, /api/users,
+  // and all hub modules: /api/baggage, /api/transit, /api/pharmacy, /api/expedition-summary, etc.)
   // are hosted on the application backend. When base points to stagingapi and a backend fallback
-  // is available (such as http://10.187.131.80:5000 on mobile LAN or http://localhost:5000 on web),
-  // route these endpoints directly to the backend to avoid guaranteed 404 errors.
-  const isCatalogOrAppEndpoint =
-    endpoint.includes('/api/tours') ||
-    endpoint.includes('/api/destinations') ||
-    endpoint.includes('/api/bookings') ||
-    endpoint.includes('/api/auth') ||
-    endpoint.includes('/api/users');
-
-  if (base.includes('stagingapi.') && isCatalogOrAppEndpoint) {
-    base = (ENV.backendFallbackUrl || 'http://localhost:5000').replace(/\/+$/, '');
+  // is available, route these endpoints directly to the backend to avoid guaranteed 404 errors.
+  const isConfigEndpoint = endpoint.includes('/api/core/v1/config');
+  if (base.includes('stagingapi.') && !isConfigEndpoint) {
+    const defaultLocalFallback =
+      Platform.OS === 'web' && typeof window !== 'undefined' && window.location?.hostname
+        ? `http://${window.location.hostname}:5000`
+        : 'http://localhost:5000';
+    base = (ENV.backendFallbackUrl || defaultLocalFallback).replace(/\/+$/, '');
   }
 
   const url = endpoint.startsWith('http://') || endpoint.startsWith('https://')

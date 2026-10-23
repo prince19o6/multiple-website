@@ -110,7 +110,7 @@ export const ForexRadarHeroCard: React.FC<ForexRadarHeroCardProps> = ({ style })
         <View style={styles.shieldNoticeRow}>
           <Ionicons name="shield-checkmark" size={15} color="#059669" />
           <Text style={styles.shieldNoticeText} numberOfLines={1}>
-            ATM Rule: Always choose &ldquo;Without Conversion&rdquo; to save 8-11%
+            ATM Rule: Always choose “Without Conversion” to save 8-11%
           </Text>
           <Ionicons name="chevron-forward" size={14} color={colors.mutedText} />
         </View>

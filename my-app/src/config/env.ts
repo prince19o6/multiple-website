@@ -334,20 +334,29 @@ function resolveBackendUrl(
     }
 
     if (Platform.OS === 'web') {
+      if (typeof window !== 'undefined' && window.location?.hostname) {
+        return `http://${window.location.hostname}:5000`;
+      }
       return 'http://localhost:5000';
     }
 
-    // On physical mobile device over LAN: resolve Metro host IP if available
-    const hostUri = Constants.expoConfig?.hostUri;
-    if (hostUri) {
-      const rawHost = hostUri.split(':')[0];
+    // On physical mobile device over LAN: resolve Metro host IP dynamically from Expo packager
+    const hostUri =
+      Constants.expoConfig?.hostUri ||
+      (Constants as any).manifest2?.extra?.expoGo?.packagerOpts?.host ||
+      (Constants as any).manifest?.debuggerHost ||
+      (Constants as any).linkingUri;
+
+    if (hostUri && typeof hostUri === 'string') {
+      const cleaned = hostUri.replace(/^[a-zA-Z]+:\/\//, '');
+      const rawHost = cleaned.split('/')[0].split(':')[0];
       const isIPv4 = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/.test(rawHost);
       if (isIPv4 && rawHost !== '127.0.0.1') {
         return `http://${rawHost}:5000`;
       }
     }
 
-    return 'http://localhost:5000';
+    return Platform.OS === 'android' ? 'http://10.0.2.2:5000' : 'http://localhost:5000';
   }
 
   // Standard Staging / Production mode:

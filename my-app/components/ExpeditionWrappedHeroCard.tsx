@@ -81,19 +81,19 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
         {/* 3 Highlights Row */}
         <View style={styles.statsRow}>
           <View style={styles.statBox}>
-            <Text style={styles.statNumber}>{wrapped.totalKmTraveled.toLocaleString()} km</Text>
+            <Text style={styles.statNumber}>{(wrapped.totalKmTraveled || 0).toLocaleString()} km</Text>
             <Text style={styles.statLabel}>Traversed</Text>
           </View>
 
           <View style={styles.statBox}>
-            <Text style={styles.statNumber}>{wrapped.toursCompleted}</Text>
+            <Text style={styles.statNumber}>{wrapped.toursCompleted || 0}</Text>
             <Text style={styles.statLabel}>Expeditions</Text>
           </View>
 
           <View style={styles.statBox}>
             <Text style={styles.statNumber}>
               {currencySymbol}
-              {totalSaved.toLocaleString()}
+              {(totalSaved || 0).toLocaleString()}
             </Text>
             <Text style={styles.statLabel}>Saved & Reclaimed</Text>
           </View>
