@@ -355,31 +355,30 @@ export default function ProfileTabScreen() {
           </TouchableOpacity>
 
           <View style={styles.userInfo}>
-            <View style={styles.userNameRow}>
-              <Text style={[styles.userName, { color: colors.heading, fontFamily: headingFontFamily }]}>
+            <TouchableOpacity
+              style={styles.userNameRow}
+              onPress={handleOpenEditModal}
+              activeOpacity={0.7}
+              hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              accessibilityRole="button"
+              accessibilityLabel="Edit profile details"
+            >
+              <Text
+                style={[styles.userName, { color: colors.heading, fontFamily: headingFontFamily }]}
+                numberOfLines={1}
+              >
                 {activeName}
               </Text>
-              <TouchableOpacity
-                onPress={handleOpenEditModal}
-                activeOpacity={0.7}
-                style={[
-                  styles.nameEditBtn,
-                  {
-                    backgroundColor: `${colors.primary}18`,
-                    borderColor: `${colors.primary}30`,
-                  },
-                ]}
-                accessibilityRole="button"
-                accessibilityLabel="Edit profile details"
-              >
-                <Ionicons name="pencil" size={13} color={colors.primary} />
-              </TouchableOpacity>
-            </View>
-            <Text style={[styles.userEmail, { color: colors.mutedText }]}>
-              {activeEmail || (isAuthenticated ? 'No email linked' : 'Tap Edit to link email & phone')}
+              <View style={[styles.nameEditBadge, { backgroundColor: `${colors.primary}18` }]}>
+                <Ionicons name="pencil" size={12} color={colors.primary} />
+              </View>
+            </TouchableOpacity>
+
+            <Text style={[styles.userEmail, { color: colors.mutedText }]} numberOfLines={1}>
+              {activeEmail || (isAuthenticated ? 'No email linked' : 'Tap to link email & phone')}
             </Text>
             {activePhone ? (
-              <Text style={[styles.userPhone, { color: colors.mutedText }]}>
+              <Text style={[styles.userPhone, { color: colors.mutedText }]} numberOfLines={1}>
                 📞 {activePhone}
               </Text>
             ) : null}
@@ -407,7 +406,7 @@ export default function ProfileTabScreen() {
             </View>
           </View>
 
-          {!isAuthenticated && (
+          {!isAuthenticated ? (
             <TouchableOpacity
               style={[styles.signInBtn, { backgroundColor: colors.primary }]}
               onPress={() => router.push('/(auth)/login')}
@@ -416,6 +415,22 @@ export default function ProfileTabScreen() {
               accessibilityLabel="Sign in"
             >
               <Text style={styles.signInBtnText}>Sign In</Text>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity
+              style={[
+                styles.cardEditActionBtn,
+                {
+                  backgroundColor: `${colors.primary}12`,
+                  borderColor: `${colors.primary}25`,
+                },
+              ]}
+              onPress={handleOpenEditModal}
+              activeOpacity={0.75}
+              accessibilityRole="button"
+              accessibilityLabel="Edit profile"
+            >
+              <Ionicons name="pencil" size={15} color={colors.primary} />
             </TouchableOpacity>
           )}
         </View>
@@ -2019,16 +2034,26 @@ const styles = StyleSheet.create({
   userNameRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 6,
     marginBottom: 2,
+    alignSelf: 'flex-start',
+    maxWidth: '100%',
   },
-  nameEditBtn: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
+  nameEditBadge: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cardEditActionBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    marginLeft: SPACING.xs,
   },
   scroll: {
     flex: 1,
@@ -2069,10 +2094,12 @@ const styles = StyleSheet.create({
   userInfo: {
     flex: 1,
     marginLeft: SPACING.md,
+    marginRight: SPACING.xs,
   },
   userName: {
     fontSize: FONT_SIZE.md + 1,
     fontWeight: '800',
+    flexShrink: 1,
   },
   userEmail: {
     fontSize: 12,
