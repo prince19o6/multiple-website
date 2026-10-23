@@ -22,6 +22,7 @@ import {
   Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useColors } from '@/store/ThemeContext';
@@ -37,6 +38,7 @@ export interface BottomTabBarProps {
   };
   descriptors: Record<string, any>;
   navigation?: any;
+  navigateToTab?: (routeKeyOrName: string) => void;
   insets?: any;
   [key: string]: any;
 }
@@ -53,7 +55,9 @@ export default function CustomTabBar({
   state,
   descriptors,
   navigation,
+  navigateToTab,
 }: BottomTabBarProps) {
+  const router = useRouter();
   const insets = useSafeAreaInsets();
   const colors = useColors();
   const { wishlistCount } = useWishlist();
@@ -134,22 +138,37 @@ export default function CustomTabBar({
               // Ignore haptic errors on unsupported simulators
             }
 
-            const event = navigation.emit({
-              type: 'tabPress',
-              target: route.key,
-              canPreventDefault: true,
-            });
+            let defaultPrevented = false;
+            if (navigation?.emit) {
+              const event = navigation.emit({
+                type: 'tabPress',
+                target: route.key,
+                canPreventDefault: true,
+              });
+              defaultPrevented = !!event?.defaultPrevented;
+            }
 
-            if (!isFocused && !event.defaultPrevented) {
-              navigation.navigate(route.name, route.params);
+            if (!isFocused && !defaultPrevented) {
+              if (navigation?.navigate) {
+                navigation.navigate(route.name, route.params);
+              } else if (typeof navigateToTab === 'function') {
+                navigateToTab(route.name);
+              } else {
+                const targetPath = route.name === 'index' ? '/(tabs)' : `/(tabs)/${route.name}`;
+                router.push(targetPath as any);
+              }
             }
           };
 
           const onLongPress = () => {
-            navigation.emit({
-              type: 'tabLongPress',
-              target: route.key,
-            });
+            try {
+              navigation?.emit?.({
+                type: 'tabLongPress',
+                target: route.key,
+              });
+            } catch {
+              // Ignore
+            }
           };
 
           const activeIconName = isFocused ? config.iconFilled : config.iconOutline;
