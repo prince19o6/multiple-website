@@ -14,7 +14,7 @@ import AppHeader from '@/components/common/AppHeader';
 export default function TabsLayout() {
   return (
     <Tabs
-      tabBar={(props) => <CustomTabBar {...props} />}
+      tabBar={(props) => <CustomTabBar {...(props as any)} />}
       screenOptions={{
         headerShown: true,
         header: (props) => (

@@ -27,9 +27,19 @@ import * as Haptics from 'expo-haptics';
 import { useColors } from '@/store/ThemeContext';
 import { useWishlist } from '@/context/WishlistContext';
 import { useBooking } from '@/context/BookingContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 
-import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
+export interface BottomTabBarProps {
+  state: {
+    routes: any[];
+    index: number;
+  };
+  descriptors: Record<string, any>;
+  navigation?: any;
+  insets?: any;
+  [key: string]: any;
+}
 
 interface TabConfig {
   name: string;
@@ -48,37 +58,38 @@ export default function CustomTabBar({
   const colors = useColors();
   const { wishlistCount } = useWishlist();
   const { upcomingCount } = useBooking();
+  const { t } = useLanguage();
 
   const tabConfigs: Record<string, TabConfig> = {
     index: {
       name: 'index',
-      label: 'Home',
+      label: t('nav_home', 'Home'),
       iconOutline: 'home-outline',
       iconFilled: 'home',
     },
     explore: {
       name: 'explore',
-      label: 'Explore',
+      label: t('nav_explore', 'Explore'),
       iconOutline: 'compass-outline',
       iconFilled: 'compass',
     },
     bookings: {
       name: 'bookings',
-      label: 'Bookings',
+      label: t('nav_bookings', 'Bookings'),
       iconOutline: 'calendar-outline',
       iconFilled: 'calendar',
       badgeCount: upcomingCount > 0 ? upcomingCount : undefined,
     },
     wishlist: {
       name: 'wishlist',
-      label: 'Wishlist',
+      label: t('nav_wishlist', 'Wishlist'),
       iconOutline: 'heart-outline',
       iconFilled: 'heart',
       badgeCount: wishlistCount > 0 ? wishlistCount : undefined,
     },
     profile: {
       name: 'profile',
-      label: 'Profile',
+      label: t('nav_profile', 'Profile'),
       iconOutline: 'person-outline',
       iconFilled: 'person',
     },
@@ -97,14 +108,14 @@ export default function CustomTabBar({
     >
       <View style={styles.tabRow}>
         {state.routes
-          .filter((route) => {
+          .filter((route: any) => {
             if (route.name === 'wishlist') return false;
             const descriptor = descriptors[route.key];
             const href = (descriptor?.options as { href?: string | null } | undefined)?.href;
             if (href === null) return false;
             return true;
           })
-          .map((route) => {
+          .map((route: any) => {
             const descriptor = descriptors[route.key];
             const options = descriptor?.options || {};
             const isFocused = state.routes[state.index]?.key === route.key;
