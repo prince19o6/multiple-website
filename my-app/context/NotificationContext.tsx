@@ -15,15 +15,16 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
-import * as Notifications from 'expo-notifications';
 import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
 import { useSite } from '@/store/SiteConfigContext';
 import { storeGetObject, storeSetObject } from '@/src/lib/storage';
 
-// Configure notification behavior for incoming alerts in foreground
+// Safe dynamic loader for expo-notifications to prevent Expo Go Android crashes
+let Notifications: any = null;
 try {
-  Notifications.setNotificationHandler({
+  Notifications = require('expo-notifications');
+  Notifications?.setNotificationHandler?.({
     handleNotification: async () => ({
       shouldShowBanner: true,
       shouldShowList: true,
@@ -32,7 +33,7 @@ try {
     }),
   });
 } catch {
-  // Safe fallback if notifications are unavailable
+  // Safe fallback if native notification modules are absent (e.g. in Expo Go)
 }
 
 export type NotificationType = 'departure' | 'booking' | 'promo' | 'system';
@@ -186,15 +187,15 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
   const [notifications, setNotifications] = useState<AppNotification[]>([]);
   const [isCenterVisible, setIsCenterVisible] = useState(false);
 
-  const notificationListenerRef = useRef<Notifications.Subscription | null>(null);
-  const responseListenerRef = useRef<Notifications.Subscription | null>(null);
+  const notificationListenerRef = useRef<any>(null);
+  const responseListenerRef = useRef<any>(null);
 
   // Setup Android channel on mount
   useEffect(() => {
-    if (Platform.OS === 'android') {
+    if (Platform.OS === 'android' && Notifications?.setNotificationChannelAsync) {
       Notifications.setNotificationChannelAsync('default', {
         name: 'default',
-        importance: Notifications.AndroidImportance.MAX,
+        importance: Notifications?.AndroidImportance?.MAX ?? 5,
         vibrationPattern: [0, 250, 250, 250],
         lightColor: '#FF231F7C',
       }).catch(() => {});
@@ -210,11 +211,15 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
         return;
       }
       try {
-        const { status } = await Notifications.getPermissionsAsync();
-        if (active) {
-          if (status === 'granted') setPermissionStatus('granted');
-          else if (status === 'denied') setPermissionStatus('denied');
-          else setPermissionStatus('undetermined');
+        if (Notifications?.getPermissionsAsync) {
+          const { status } = await Notifications.getPermissionsAsync();
+          if (active) {
+            if (status === 'granted') setPermissionStatus('granted');
+            else if (status === 'denied') setPermissionStatus('denied');
+            else setPermissionStatus('undetermined');
+          }
+        } else {
+          if (active) setPermissionStatus('undetermined');
         }
       } catch {
         if (active) setPermissionStatus('undetermined');
@@ -266,25 +271,27 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
 
     // Listener for when a user interacts with / taps on a notification
     try {
-      responseListenerRef.current = Notifications.addNotificationResponseReceivedListener((response) => {
-        try {
-          const data = response.notification.request.content.data as { url?: string } | undefined;
-          if (data?.url) {
-            router.push(data.url as never);
+      if (Notifications?.addNotificationResponseReceivedListener) {
+        responseListenerRef.current = Notifications.addNotificationResponseReceivedListener((response: any) => {
+          try {
+            const data = response?.notification?.request?.content?.data as { url?: string } | undefined;
+            if (data?.url) {
+              router.push(data.url as never);
+            }
+          } catch {
+            // Fallback
           }
-        } catch {
-          // Fallback
-        }
-      });
+        });
+      }
     } catch {
       // Listener registration unsupported in this environment
     }
 
     return () => {
-      if (responseListenerRef.current) {
+      if (responseListenerRef.current?.remove) {
         responseListenerRef.current.remove();
       }
-      if (notificationListenerRef.current) {
+      if (notificationListenerRef.current?.remove) {
         notificationListenerRef.current.remove();
       }
     };
@@ -292,7 +299,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
 
   const requestPermissions = useCallback(async (): Promise<boolean> => {
     try {
-      if (Platform.OS === 'web') {
+      if (Platform.OS === 'web' || !Notifications?.requestPermissionsAsync) {
         setPermissionStatus('granted');
         return true;
       }
@@ -372,7 +379,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
       await addNotificationToInbox(newNotif);
 
       // Trigger system notification if on native platform
-      if (Platform.OS !== 'web') {
+      if (Platform.OS !== 'web' && Notifications?.scheduleNotificationAsync) {
         try {
           await Notifications.scheduleNotificationAsync({
             content: {
@@ -417,7 +424,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
 
       await addNotificationToInbox(newNotif);
 
-      if (Platform.OS !== 'web') {
+      if (Platform.OS !== 'web' && Notifications?.scheduleNotificationAsync) {
         try {
           await Notifications.scheduleNotificationAsync({
             content: {
@@ -427,7 +434,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
               sound: 'default',
             },
             trigger: {
-              type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+              type: Notifications?.SchedulableTriggerInputTypes?.TIME_INTERVAL ?? 'timeInterval',
               seconds: 5, // Triggers prompt test preview for confirmation
             },
           });

@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const targetFile = path.resolve(__dirname, '../node_modules/expo-notifications/build/TopicSubscriptionModule.android.js');
+const targets = [
+  path.resolve(__dirname, '../node_modules/expo-notifications/build/TopicSubscriptionModule.android.js'),
+  path.resolve(__dirname, '../node_modules/expo-notifications/src/TopicSubscriptionModule.android.ts'),
+];
 
 const safeStub = `const module = {
   addListener: () => {},
@@ -12,7 +15,9 @@ const safeStub = `const module = {
 export default module;
 `;
 
-if (fs.existsSync(targetFile)) {
-  fs.writeFileSync(targetFile, safeStub, 'utf8');
-  console.log('[patch-notifications] Successfully stubbed TopicSubscriptionModule.android.js for Expo Go');
+for (const target of targets) {
+  if (fs.existsSync(target)) {
+    fs.writeFileSync(target, safeStub, 'utf8');
+    console.log(`[patch-notifications] Successfully stubbed ${path.basename(path.dirname(target))}/${path.basename(target)}`);
+  }
 }
