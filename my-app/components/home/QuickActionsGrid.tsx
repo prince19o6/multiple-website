@@ -11,8 +11,6 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useColors } from '@/store/ThemeContext';
-import { useWishlist } from '@/context/WishlistContext';
-import { useBooking } from '@/context/BookingContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 
 export interface QuickActionsGridProps {
@@ -24,14 +22,12 @@ interface QuickAction {
   label: string;
   icon: keyof typeof Ionicons.glyphMap;
   onPress: () => void;
-  badge?: number;
+  badge?: string | number;
 }
 
 export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
   const router = useRouter();
   const colors = useColors();
-  const { wishlistCount } = useWishlist();
-  const { upcomingCount } = useBooking();
 
   const handleAction = (cb: () => void) => {
     try {
@@ -44,30 +40,29 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
 
   const actions: QuickAction[] = [
     {
-      id: 'explore',
-      label: 'Explore',
-      icon: 'compass-outline',
-      onPress: () => router.push('/(tabs)/explore'),
-    },
-    {
-      id: 'bookings',
-      label: 'Bookings',
-      icon: 'calendar-outline',
-      onPress: () => router.push('/(tabs)/bookings'),
-      badge: upcomingCount > 0 ? upcomingCount : undefined,
-    },
-    {
-      id: 'wishlist',
-      label: 'Wishlist',
-      icon: 'heart-outline',
-      onPress: () => router.push('/(tabs)/wishlist' as any),
-      badge: wishlistCount > 0 ? wishlistCount : undefined,
-    },
-    {
       id: 'offers',
       label: 'Deals',
       icon: 'pricetag-outline',
       onPress: () => router.push('/special-offers' as any),
+    },
+    {
+      id: 'transfers',
+      label: 'Transfers',
+      icon: 'car-sport-outline',
+      onPress: () => router.push('/airport-transfer' as any),
+    },
+    {
+      id: 'esim',
+      label: 'eSIM',
+      icon: 'cellular-outline',
+      onPress: () => router.push('/esim-roaming' as any),
+      badge: '5G',
+    },
+    {
+      id: 'forex',
+      label: 'Forex',
+      icon: 'trending-up-outline',
+      onPress: () => router.push('/forex-radar' as any),
     },
     {
       id: 'more',
@@ -103,11 +98,9 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
                   size={20}
                   color={isMore ? colors.primary : colors.heading}
                 />
-                {act.badge !== undefined && act.badge > 0 ? (
+                {act.badge ? (
                   <View style={[styles.badge, { backgroundColor: colors.accent || '#f59e0b' }]}>
-                    <Text style={styles.badgeText}>
-                      {act.badge > 99 ? '99+' : act.badge}
-                    </Text>
+                    <Text style={styles.badgeText}>{act.badge}</Text>
                   </View>
                 ) : null}
               </View>
@@ -166,11 +159,11 @@ const styles = StyleSheet.create({
     borderRadius: RADIUS.full,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 2,
+    paddingHorizontal: 4,
   },
   badgeText: {
     color: '#ffffff',
-    fontSize: 9,
+    fontSize: 8,
     fontWeight: '800',
   },
   label: {
