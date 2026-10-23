@@ -281,6 +281,9 @@ export default function RootLayout() {
             <Stack.Screen name="forex-radar" options={{ headerShown: false }} />
             <Stack.Screen name="bargain-assistant" options={{ headerShown: false }} />
             <Stack.Screen name="travel-wrapped" options={{ headerShown: false }} />
+            <Stack.Screen name="featured-tours" options={{ headerShown: false }} />
+            <Stack.Screen name="destinations" options={{ headerShown: false }} />
+            <Stack.Screen name="special-offers" options={{ headerShown: false }} />
 
             {/* Admin Portal */}
             <Stack.Screen name="(admin)" options={{ headerShown: false }} />

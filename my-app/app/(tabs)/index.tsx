@@ -1,19 +1,19 @@
 /**
  * app/(tabs)/index.tsx
  *
- * Home screen for the native mobile app.
- * Features:
- *   - Native app header (brand name/logo, search, site switcher, avatar)
- *   - Offline network banner
- *   - Pull-to-refresh connected to React Query invalidation
- *   - Separated states:
- *       • Loading: SkeletonLoader
- *       • Error: Real error card with actual message and Retry button (never masks error as empty list)
- *       • Truly empty: EmptyState
- *   - Horizontal Category chips
- *   - Featured Tours carousel with compact TourCardHorizontal
- *   - Popular Destinations horizontal cards
- *   - Curated Tours list rendered with brand-specific TourCard variants
+ * Home screen for the native mobile application.
+ * Architected with a dynamic Section Registry pattern for maximum scanability:
+ *   - Fixed top hero card & compact search trigger
+ *   - 5-item Quick Actions grid with "All Tools" bottom sheet trigger (TravelHubModal)
+ *   - Virtualized vertical FlatList rendering sections according to tenant configuration
+ *   - Categories horizontal filter
+ *   - Featured Expeditions horizontal list (max 5 cards + "See all" -> /featured-tours)
+ *   - Popular Destinations horizontal list (max 6 cards + "See all" -> /destinations)
+ *   - Curated Seasonal Deals promo card ("View more" -> /special-offers)
+ *   - Personalized block (Trip Countdown & Recently Viewed — 100% hidden when empty)
+ *   - "More for You" collapsible accordion (Culinary, Culture, Concierge) with session persistence
+ *   - Full TravelHubModal containing all 18+ specialized utilities
+ *   - Isolated skeletons, empty states, and per-section error boundaries with Retry
  */
 
 import React, { useState, useCallback, useMemo } from 'react';
@@ -21,63 +21,59 @@ import {
   View,
   Text,
   StyleSheet,
-  ScrollView,
+  FlatList,
   TouchableOpacity,
+  ScrollView,
   RefreshControl,
+  LayoutAnimation,
+  Platform,
+  UIManager,
 } from 'react-native';
 import { Image as ExpoImage } from 'expo-image';
 import { useRouter } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useQueryClient } from '@tanstack/react-query';
 import { Ionicons } from '@expo/vector-icons';
 import { useSite, useSiteConfig } from '@/store/SiteConfigContext';
 import { useColors } from '@/store/ThemeContext';
-import { useAuth } from '@/context/AuthContext';
 import { useTours } from '@/hooks/useTours';
 import { useDestinations } from '@/hooks/useDestinations';
+import { useBooking } from '@/context/BookingContext';
+import { useCurrency } from '@/context/CurrencyContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { queryKeys } from '@/store/queryClient';
 import { getSiteEntry } from '@/constants/siteRegistry';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { getHeadingFontFamily } from '@/lib/sectionHelpers';
 import { DEFAULT_BLURHASH, resolveImageUrl } from '@/lib/imageUtils';
-import SkeletonLoader from '@/components/SkeletonLoader';
-import { MemoizedTourCardHorizontal as TourCardHorizontal } from '@/components/TourCardHorizontal';
-import { MemoizedTourCard as TourCard } from '@/components/TourCard';
-import { MemoizedAdventureTourCard as AdventureTourCard } from '@/components/AdventureTourCard';
-import { MemoizedLuxuryTourCard as LuxuryTourCard } from '@/components/LuxuryTourCard';
-import EmptyState from '@/components/EmptyState';
-import UpcomingTripCountdown from '@/components/UpcomingTripCountdown';
-import { WeatherWidget } from '@/components/WeatherWidget';
-import { CulinaryHighlightCard } from '@/components/CulinaryHighlightCard';
-import { DayOfCockpitCard } from '@/components/DayOfCockpitCard';
-import { GroupTripCard } from '@/components/GroupTripCard';
-import { JournalHeroCard } from '@/components/JournalHeroCard';
-import { AirportTransferCard } from '@/components/AirportTransferCard';
-import { PhrasebookCard } from '@/components/PhrasebookCard';
-import { TaxRefundHeroCard } from '@/components/TaxRefundHeroCard';
-import { EsimHeroCard } from '@/components/EsimHeroCard';
-import { InsuranceHeroCard } from '@/components/InsuranceHeroCard';
-import { VisaHeroCard } from '@/components/VisaHeroCard';
-import { EcoHeroCard } from '@/components/EcoHeroCard';
-import { CultureHeroCard } from '@/components/CultureHeroCard';
-import { PowerHeroCard } from '@/components/PowerHeroCard';
-import { BaggageHeroCard } from '@/components/BaggageHeroCard';
-import { TransitHeroCard } from '@/components/TransitHeroCard';
-import { PharmacyHeroCard } from '@/components/PharmacyHeroCard';
-import { TippingHeroCard } from '@/components/TippingHeroCard';
-import { DriveSafetyHeroCard } from '@/components/DriveSafetyHeroCard';
-import { ForexRadarHeroCard } from '@/components/ForexRadarHeroCard';
-import { BargainHeroCard } from '@/components/BargainHeroCard';
-import { ExpeditionWrappedHeroCard } from '@/components/ExpeditionWrappedHeroCard';
-import { useBooking } from '@/context/BookingContext';
-import { useCurrency } from '@/context/CurrencyContext';
-import { useLanguage } from '@/context/LanguageContext';
-import type { Tour } from '@/types';
 import { tourHref } from '@/lib/navigation';
+import type { Tour } from '@/types';
+import type { DestinationItem } from '@/hooks/useDestinations';
+
+// Registry & Home Components
+import { resolveHomeSections, type HomeSection } from '@/constants/homeSections';
+import { SectionHeader } from '@/components/home/SectionHeader';
+import { HorizontalList } from '@/components/home/HorizontalList';
+import { QuickActionsGrid } from '@/components/home/QuickActionsGrid';
+import { TravelHubModal } from '@/components/home/TravelHubModal';
+import { CollapsibleSection } from '@/components/home/CollapsibleSection';
+import { ViewMoreButton } from '@/components/home/ViewMoreButton';
+import { SpecialOffersSection } from '@/components/home/SpecialOffersSection';
+import { RecentlyViewedSection } from '@/components/home/RecentlyViewedSection';
+import { SectionSkeleton } from '@/components/home/SectionSkeleton';
+
+// Card variants & Existing components
+import { MemoizedTourCardHorizontal as TourCardHorizontal } from '@/components/TourCardHorizontal';
+import UpcomingTripCountdown from '@/components/UpcomingTripCountdown';
+import { CulinaryHighlightCard } from '@/components/CulinaryHighlightCard';
+import { CultureHeroCard } from '@/components/CultureHeroCard';
+import { useConcierge } from '@/context/ConciergeContext';
+
+if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 export default function HomeScreen() {
   const router = useRouter();
-  const insets = useSafeAreaInsets();
   const config = useSiteConfig();
   const colors = useColors();
   const queryClient = useQueryClient();
@@ -85,14 +81,37 @@ export default function HomeScreen() {
   const currentSite = getSiteEntry(siteId);
   const { t } = useLanguage();
   const headingFontFamily = getHeadingFontFamily(config);
+  const { openConcierge } = useConcierge();
 
-  const { tours, isLoading: toursLoading, isError: toursIsError, error: toursError, refetch: refetchTours } = useTours();
-  const { destinations, isLoading: destsLoading, refetch: refetchDests } = useDestinations();
+  const { currencySymbol } = useCurrency();
+  const currency = currencySymbol || siteCurrency?.symbol || '$';
+
+  // Live queries
+  const {
+    tours,
+    isLoading: toursLoading,
+    isError: toursIsError,
+    error: toursError,
+    refetch: refetchTours,
+  } = useTours();
+
+  const {
+    destinations,
+    isLoading: destsLoading,
+    isError: destsIsError,
+    error: destsError,
+    refetch: refetchDests,
+  } = useDestinations();
+
   const { bookings, refreshBookings } = useBooking();
 
+  // Local UI states
   const [refreshing, setRefreshing] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [travelHubVisible, setTravelHubVisible] = useState(false);
+  const [moreForYouExpanded, setMoreForYouExpanded] = useState(false);
 
+  // Pull-to-refresh
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
@@ -107,349 +126,275 @@ export default function HomeScreen() {
     }
   }, [siteId, hostname, queryClient, refetchTours, refetchDests, refreshBookings]);
 
-  const { currencySymbol } = useCurrency();
-  const currency = currencySymbol || siteCurrency?.symbol || '$';
+  // Categories definition
+  const categories = useMemo(
+    () => [
+      { id: 'all', label: 'All', icon: 'compass-outline' as const },
+      { id: 'adventure', label: 'Adventure', icon: 'trail-sign-outline' as const },
+      { id: 'beach', label: 'Beach', icon: 'water-outline' as const },
+      { id: 'cultural', label: 'Cultural', icon: 'business-outline' as const },
+      { id: 'wildlife', label: 'Wildlife', icon: 'leaf-outline' as const },
+      { id: 'luxury', label: 'Luxury', icon: 'diamond-outline' as const },
+    ],
+    []
+  );
 
-  const categories = [
-    { id: 'all', label: 'All', icon: 'compass' },
-    { id: 'adventure', label: 'Adventure', icon: 'trail-sign' },
-    { id: 'beach', label: 'Beach', icon: 'water' },
-    { id: 'cultural', label: 'Cultural', icon: 'business' },
-    { id: 'wildlife', label: 'Wildlife', icon: 'leaf' },
-    { id: 'luxury', label: 'Luxury', icon: 'diamond' },
-  ];
+  // Resolved dynamic section order
+  const sections = useMemo(() => {
+    return resolveHomeSections(config);
+  }, [config]);
 
-  const filteredTours = useMemo(() => {
-    return tours.filter((t) => {
+  // Filtered featured tours (capped to section maxItems)
+  const featuredToursList = useMemo(() => {
+    if (!tours || tours.length === 0) return [];
+    const filtered = tours.filter((t) => {
       if (selectedCategory === 'All') return true;
       const cat = (t.category || '').toLowerCase();
       const target = selectedCategory.toLowerCase();
-      return (
-        cat === target ||
-        (target === 'cultural' && (cat === 'culture' || cat === 'cultural')) ||
-        (target === 'culture' && (cat === 'cultural' || cat === 'culture')) ||
-        t.difficulty?.toLowerCase().includes(target) ||
-        t.description?.toLowerCase().includes(target)
-      );
+      return cat === target || t.description?.toLowerCase().includes(target);
     });
+    return filtered.slice(0, 5);
   }, [tours, selectedCategory]);
 
-  const renderBrandTourCard = (tour: Tour) => {
-    const href = tourHref(tour);
-    if (siteId === 'tripgoasia' || siteId === 'website2') {
-      return (
-        <AdventureTourCard
-          key={String(tour.id)}
-          name={tour.name}
-          description={tour.description}
-          price={tour.price}
-          rating={tour.rating}
-          image={tour.image}
-          duration={tour.duration}
-          difficulty={tour.difficulty}
-          onBook={() => router.push(href as any)}
-          onPress={() => router.push(href as any)}
-        />
-      );
-    }
+  // Capped destinations list
+  const destinationsList = useMemo(() => {
+    return (destinations || []).slice(0, 6);
+  }, [destinations]);
 
-    if (siteId === 'technoheaven' || siteId === 'website3') {
-      return (
-        <LuxuryTourCard
-          key={String(tour.id)}
-          name={tour.name}
-          description={tour.description}
-          price={tour.price}
-          rating={tour.rating}
-          image={tour.image}
-          duration={tour.duration}
-          location={tour.location}
-          onBook={() => router.push(href as any)}
-          onPress={() => router.push(href as any)}
-          headingFontFamily={headingFontFamily}
-        />
-      );
-    }
-
-    return (
-      <TourCard
-        key={String(tour.id)}
-        id={tour.id}
-        name={tour.name}
-        description={tour.description}
-        price={tour.price}
-        rating={tour.rating}
-        image={tour.image}
-        duration={tour.duration}
-        difficulty={tour.difficulty}
-        onBook={() => router.push(href as any)}
-        onPress={() => router.push(href as any)}
-      />
-    );
+  // Toggle "More for you" section
+  const handleToggleMoreForYou = () => {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    setMoreForYouExpanded((prev) => !prev);
   };
 
-  return (
-    <View style={[styles.root, { backgroundColor: colors.background }]}>
-      {/* ─── Scrollable Native Content ─── */}
-      <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-        refreshControl={
-          <RefreshControl
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-            tintColor={colors.primary}
-            colors={[colors.primary]}
-          />
-        }
+  // ─── Header Component (Welcome Card + Quick Actions) ───
+  const renderHeader = () => (
+    <View style={styles.headerWrap}>
+      {/* Welcome Search Card */}
+      <View
+        style={[
+          styles.heroCard,
+          {
+            backgroundColor: colors.surface,
+            borderColor: colors.border,
+          },
+        ]}
       >
-        {/* Welcome Search Trigger Card */}
-        <View
+        <View style={[styles.pillBadge, { backgroundColor: `${colors.primary}18` }]}>
+          <Ionicons name="sparkles" size={13} color={colors.primary} />
+          <Text style={[styles.pillBadgeText, { color: colors.primary }]}>
+            {currentSite?.themeName || 'Curated Expeditions'}
+          </Text>
+        </View>
+
+        <Text
           style={[
-            styles.heroCard,
+            styles.heroHeading,
+            { color: colors.heading, fontFamily: headingFontFamily },
+          ]}
+        >
+          {t('home_welcome', 'Where will you journey next?')}
+        </Text>
+
+        <Text style={[styles.heroSub, { color: colors.mutedText }]}>
+          {t(
+            'home_tagline',
+            'Discover verified tours, boutique stays, and authentic global adventures customized for you.'
+          )}
+        </Text>
+
+        {/* Compact Search Bar Trigger */}
+        <TouchableOpacity
+          style={[
+            styles.searchBarTrigger,
             {
-              backgroundColor: colors.surface,
+              backgroundColor: colors.background,
               borderColor: colors.border,
             },
           ]}
+          onPress={() => router.push('/(tabs)/explore')}
+          activeOpacity={0.85}
+          accessibilityRole="search"
+          accessibilityLabel="Search destination, tour or style"
         >
-          <View style={[styles.pillBadge, { backgroundColor: `${colors.primary}18` }]}>
-            <Ionicons name="sparkles" size={13} color={colors.primary} />
-            <Text style={[styles.pillBadgeText, { color: colors.primary }]}>
-              {currentSite?.themeName || 'Curated Expeditions'}
-            </Text>
-          </View>
-
-          <Text style={[styles.heroHeading, { color: colors.heading, fontFamily: headingFontFamily }]}>
-            {t('home_welcome', 'Where will you journey next?')}
+          <Ionicons name="search" size={18} color={colors.primary} style={{ marginRight: 8 }} />
+          <Text style={[styles.searchBarPlaceholder, { color: colors.mutedText }]}>
+            {t('action_search', 'Search by destination, tour or style...')}
           </Text>
+        </TouchableOpacity>
+      </View>
 
-          <Text style={[styles.heroSub, { color: colors.mutedText }]}>
-            {t('home_tagline', 'Discover verified tours, boutique stays, and authentic global adventures customized for you.')}
-          </Text>
+      {/* Quick Actions Row with 5th "All Tools" Hub Tile */}
+      <QuickActionsGrid onOpenTravelHub={() => setTravelHubVisible(true)} />
+    </View>
+  );
 
-          {/* Quick Search Bar trigger */}
-          <TouchableOpacity
-            style={[
-              styles.searchBarTrigger,
-              {
-                backgroundColor: colors.background,
-                borderColor: colors.border,
-              },
-            ]}
-            onPress={() => router.push('/(tabs)/explore')}
-            activeOpacity={0.85}
-          >
-            <Ionicons name="search" size={18} color={colors.primary} style={{ marginRight: 8 }} />
-            <Text style={[styles.searchBarPlaceholder, { color: colors.mutedText }]}>
-              {t('action_search', 'Search by destination, tour or style...')}
-            </Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* ─── Upcoming Trip Countdown Card (if confirmed reservation exists) ─── */}
-        <UpcomingTripCountdown bookings={bookings} />
-
-        {/* ─── Flight & Airport Chauffeur Transfer Card ─── */}
-        <AirportTransferCard style={{ marginBottom: 14 }} />
-
-        {/* ─── In-Destination Offline Pocket Phrasebook & Translator ─── */}
-        <PhrasebookCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Duty-Free Shopping & VAT/GST Tax Refund Pass ─── */}
-        <TaxRefundHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Travel eSIM & 5G Cellular Roaming Hub ─── */}
-        <EsimHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Travel Insurance Policy & Cashless Medical Concierge ─── */}
-        <InsuranceHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── International Visa Requirements & Border Clearance ─── */}
-        <VisaHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Sustainable Eco-Travel & Carbon Offset Hub ─── */}
-        <EcoHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Cultural Decorum & Sacred Temple Dress Codes ─── */}
-        <CultureHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── International Power Sockets & Voltage Guide ─── */}
-        <PowerHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Airline Baggage Allowance & Sizer ─── */}
-        <BaggageHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Rapid Transit Navigator & Taxi Scam Shield ─── */}
-        <TransitHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Travel Pharmacy & Medicine Translator ─── */}
-        <PharmacyHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Tipping & Gratuity Etiquette Calculator ─── */}
-        <TippingHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Road Rules & Motorbike Rental Safety Navigator ─── */}
-        <DriveSafetyHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Currency Exchange Radar & ATM DCC Shield ─── */}
-        <ForexRadarHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Local Market Bargaining Counter-Offer & Negotiation Phrases ─── */}
-        <BargainHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Post-Trip Expedition Summary, Travel Wrapped & VIP Loyalty Club (Phase 40) ─── */}
-        <ExpeditionWrappedHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Day-Of Live Expedition Cockpit Card ─── */}
-        <DayOfCockpitCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Expedition Party & Collaborative Planning Card ─── */}
-        <GroupTripCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Expedition Memory Scrapbook & Travel Journal Card ─── */}
-        <JournalHeroCard style={{ marginBottom: 14 }} />
-
-        {/* ─── Live Destination Weather & Climate Card ─── */}
-        <WeatherWidget style={{ marginBottom: 14 }} />
-
-        {/* ─── Horizontal Category Chips ─── */}
-        <View style={styles.sectionHeader}>
-          <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-            {t('home_categories', 'Travel Categories')}
-          </Text>
-        </View>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.chipsContainer}
-        >
-          {categories.map((cat) => {
-            const isSelected = selectedCategory === cat.label;
-            return (
-              <TouchableOpacity
-                key={cat.id}
-                style={[
-                  styles.categoryChip,
-                  {
-                    backgroundColor: isSelected ? colors.primary : colors.surface,
-                    borderColor: isSelected ? colors.primary : colors.border,
-                  },
-                ]}
-                onPress={() => setSelectedCategory(cat.label)}
-                activeOpacity={0.7}
-              >
-                <Ionicons
-                  name={cat.icon as any}
-                  size={14}
-                  color={isSelected ? '#ffffff' : colors.primary}
-                  style={{ marginRight: 5 }}
-                />
-                <Text
-                  style={[
-                    styles.chipText,
-                    {
-                      color: isSelected ? '#ffffff' : colors.heading,
-                      fontWeight: isSelected ? '700' : '500',
-                    },
-                  ]}
-                >
-                  {cat.label}
-                </Text>
-              </TouchableOpacity>
-            );
-          })}
-        </ScrollView>
-
-        {/* ─── Loading Skeletons ─── */}
-        {toursLoading && (
-          <View style={{ marginVertical: SPACING.md }}>
-            <SkeletonLoader variant="tourCard" count={2} />
-          </View>
-        )}
-
-        {/* ─── Error State with Retry ─── */}
-        {toursIsError && !toursLoading && (
-          <View style={[styles.errorCard, { backgroundColor: `${colors.accent}12`, borderColor: colors.accent }]}>
-            <Ionicons name="alert-circle-outline" size={32} color={colors.accent || '#ef4444'} />
-            <Text style={[styles.errorTitle, { color: colors.heading }]}>Unable to load live tours</Text>
-            <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
-              {toursError?.message || 'Network connection issue or backend server unreachable.'}
-            </Text>
-            <TouchableOpacity
-              style={[styles.retryBtn, { backgroundColor: colors.primary }]}
-              onPress={() => refetchTours()}
-              activeOpacity={0.8}
-            >
-              <Ionicons name="refresh" size={16} color="#ffffff" style={{ marginRight: 6 }} />
-              <Text style={styles.retryBtnText}>Retry Fetch</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-
-        {/* ─── Featured Tours Horizontal Carousel (only when successful) ─── */}
-        {!toursLoading && !toursIsError && tours.length > 0 && (
-          <View style={styles.carouselSection}>
-            <View style={styles.sectionHeader}>
-              <View>
-                <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-                  Featured Expeditions
-                </Text>
-                <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
-                  Most popular trips selected for {currentSite?.name || 'you'}
-                </Text>
-              </View>
-              <TouchableOpacity onPress={() => router.push('/(tabs)/explore')} activeOpacity={0.7}>
-                <Text style={[styles.seeAllText, { color: colors.primary }]}>See All</Text>
-              </TouchableOpacity>
-            </View>
-
+  // ─── Section Renderer ───
+  const renderSection = ({ item }: { item: HomeSection }) => {
+    switch (item.id) {
+      case 'categories':
+        return (
+          <View style={styles.sectionWrap}>
+            <SectionHeader
+              title={item.title}
+              subtitle={item.subtitle}
+              headingFontFamily={headingFontFamily}
+              onSeeAll={() => router.push('/(tabs)/explore')}
+              seeAllText="All Filters"
+            />
             <ScrollView
               horizontal
               showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.horizontalScroll}
+              contentContainerStyle={styles.chipsScroll}
             >
-              {tours.map((t) => (
-                <TourCardHorizontal
-                  key={String(t.id)}
-                  tour={t}
-                  onPress={() => router.push(tourHref(t) as any)}
-                  currency={currency}
-                />
-              ))}
+              {categories.map((cat) => {
+                const isSelected = selectedCategory === cat.label;
+                return (
+                  <TouchableOpacity
+                    key={cat.id}
+                    style={[
+                      styles.categoryChip,
+                      {
+                        backgroundColor: isSelected ? colors.primary : colors.surface,
+                        borderColor: isSelected ? colors.primary : colors.border,
+                      },
+                    ]}
+                    onPress={() => setSelectedCategory(cat.label)}
+                    activeOpacity={0.7}
+                    accessibilityRole="button"
+                    accessibilityState={{ selected: isSelected }}
+                  >
+                    <Ionicons
+                      name={cat.icon}
+                      size={14}
+                      color={isSelected ? '#ffffff' : colors.primary}
+                      style={{ marginRight: 6 }}
+                    />
+                    <Text
+                      style={[
+                        styles.chipText,
+                        {
+                          color: isSelected ? '#ffffff' : colors.heading,
+                          fontWeight: isSelected ? '700' : '500',
+                        },
+                      ]}
+                    >
+                      {cat.label}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
             </ScrollView>
           </View>
-        )}
+        );
 
-        {/* ─── Popular Destinations Horizontal ─── */}
-        {!destsLoading && destinations.length > 0 && (
-          <View style={styles.carouselSection}>
-            <View style={styles.sectionHeader}>
-              <View>
-                <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-                  Trending Destinations
-                </Text>
-                <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
-                  Explore trips by location
-                </Text>
-              </View>
-            </View>
-
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.horizontalScroll}
+      case 'featuredTours':
+        if (toursLoading) {
+          return <SectionSkeleton />;
+        }
+        if (toursIsError) {
+          return (
+            <View
+              style={[
+                styles.errorCard,
+                { backgroundColor: `${colors.accent}12`, borderColor: colors.accent },
+              ]}
             >
-              {destinations.map((d, i) => (
+              <Ionicons name="alert-circle-outline" size={24} color={colors.accent || '#ef4444'} />
+              <Text style={[styles.errorTitle, { color: colors.heading }]}>
+                Unable to load featured trips
+              </Text>
+              <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
+                {toursError?.message || 'Check network connection'}
+              </Text>
+              <TouchableOpacity
+                style={[styles.retryBtn, { backgroundColor: colors.primary }]}
+                onPress={() => refetchTours()}
+              >
+                <Text style={styles.retryBtnText}>Retry</Text>
+              </TouchableOpacity>
+            </View>
+          );
+        }
+        if (featuredToursList.length === 0) return null;
+
+        return (
+          <View style={styles.sectionWrap}>
+            <SectionHeader
+              title={item.title}
+              subtitle={item.subtitle}
+              headingFontFamily={headingFontFamily}
+              onSeeAll={() => router.push('/featured-tours' as any)}
+              seeAllText="See all"
+            />
+            <HorizontalList<Tour>
+              data={featuredToursList}
+              itemWidth={260}
+              keyExtractor={(t) => String(t.id)}
+              renderItem={({ item: tour }) => (
+                <TourCardHorizontal
+                  tour={tour}
+                  onPress={() => router.push(tourHref(tour) as any)}
+                  currency={currency}
+                />
+              )}
+            />
+          </View>
+        );
+
+      case 'destinations':
+        if (destsLoading) {
+          return <SectionSkeleton />;
+        }
+        if (destsIsError) {
+          return (
+            <View
+              style={[
+                styles.errorCard,
+                { backgroundColor: `${colors.accent}12`, borderColor: colors.accent },
+              ]}
+            >
+              <Ionicons name="alert-circle-outline" size={24} color={colors.accent || '#ef4444'} />
+              <Text style={[styles.errorTitle, { color: colors.heading }]}>
+                Unable to load destinations
+              </Text>
+              <TouchableOpacity
+                style={[styles.retryBtn, { backgroundColor: colors.primary }]}
+                onPress={() => refetchDests()}
+              >
+                <Text style={styles.retryBtnText}>Retry</Text>
+              </TouchableOpacity>
+            </View>
+          );
+        }
+        if (destinationsList.length === 0) return null;
+
+        return (
+          <View style={styles.sectionWrap}>
+            <SectionHeader
+              title={item.title}
+              subtitle={item.subtitle}
+              headingFontFamily={headingFontFamily}
+              onSeeAll={() => router.push('/destinations' as any)}
+              seeAllText="See all"
+            />
+            <HorizontalList<DestinationItem>
+              data={destinationsList}
+              itemWidth={150}
+              keyExtractor={(d, idx) => d.id || `dest_${idx}`}
+              renderItem={({ item: dest }) => (
                 <TouchableOpacity
-                  key={d.id || `dest_${i}`}
-                  style={[styles.destCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
-                  onPress={() => router.push(`/(tabs)/explore`)}
+                  style={[
+                    styles.destCard,
+                    { backgroundColor: colors.surface, borderColor: colors.border },
+                  ]}
+                  onPress={() => router.push('/(tabs)/explore')}
                   activeOpacity={0.85}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${dest.name}, ${dest.tours} tours`}
                 >
                   <ExpoImage
-                    source={{ uri: resolveImageUrl(d.image) || undefined }}
+                    source={{ uri: resolveImageUrl(dest.image) || undefined }}
                     style={styles.destImage}
                     contentFit="cover"
                     transition={250}
@@ -458,58 +403,170 @@ export default function HomeScreen() {
                   />
                   <View style={styles.destOverlay} />
                   <View style={styles.destTextContainer}>
-                    <Text style={styles.destName} numberOfLines={1}>{d.name}</Text>
-                    <Text style={styles.destCount}>{d.tours} {d.tours === 1 ? 'Tour' : 'Tours'}</Text>
+                    <Text style={styles.destName} numberOfLines={1}>
+                      {dest.name}
+                    </Text>
+                    <Text style={styles.destCount}>
+                      {dest.tours} {dest.tours === 1 ? 'Tour' : 'Tours'}
+                    </Text>
                   </View>
                 </TouchableOpacity>
-              ))}
-            </ScrollView>
+              )}
+            />
           </View>
-        )}
+        );
 
-        {/* ─── Regional Culinary Trail & Authentic Dining Card ─── */}
-        <CulinaryHighlightCard />
-
-        {/* ─── All Tours List (only rendered when NOT loading and NOT in error) ─── */}
-        {!toursLoading && !toursIsError && (
-          <View style={styles.allToursSection}>
-            <View style={styles.sectionHeader}>
-              <View>
-                <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-                  {selectedCategory === 'All'
-                    ? t('home_featured_tours', 'All Curated Experiences')
-                    : `${selectedCategory} Experiences`}
-                </Text>
-                <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
-                  {filteredTours.length} {filteredTours.length === 1 ? 'tour available' : 'tours available'}
-                </Text>
-              </View>
-            </View>
-
-            {tours.length === 0 ? (
-              <EmptyState
-                icon="compass-outline"
-                title="No tours available"
-                description="There are currently no active tours listed for this website."
-                actionLabel="Refresh Tours"
-                onAction={() => refetchTours()}
-              />
-            ) : filteredTours.length === 0 ? (
-              <EmptyState
-                icon="search-outline"
-                title={`No tours in "${selectedCategory}"`}
-                description={`No experiences matching category "${selectedCategory}". Clear the filter to see all tours.`}
-                actionLabel="Clear Filter"
-                onAction={() => setSelectedCategory('All')}
-              />
-            ) : (
-              <View style={styles.toursList}>
-                {filteredTours.map((t) => renderBrandTourCard(t))}
-              </View>
-            )}
+      case 'offers':
+        return (
+          <View style={styles.sectionWrap}>
+            <SectionHeader
+              title={item.title}
+              subtitle={item.subtitle}
+              headingFontFamily={headingFontFamily}
+              onSeeAll={() => router.push('/special-offers' as any)}
+              seeAllText="All Deals"
+            />
+            <SpecialOffersSection
+              headingFontFamily={headingFontFamily}
+              onViewMore={() => router.push('/special-offers' as any)}
+            />
           </View>
-        )}
-      </ScrollView>
+        );
+
+      case 'personalized':
+        return (
+          <View style={styles.sectionWrap}>
+            {/* Countdown (renders only if an active booking exists) */}
+            <UpcomingTripCountdown bookings={bookings} />
+
+            {/* Recently Viewed (renders only if viewing history exists) */}
+            <RecentlyViewedSection headingFontFamily={headingFontFamily} />
+          </View>
+        );
+
+      case 'moreForYou':
+        return (
+          <View style={styles.moreForYouContainer}>
+            <SectionHeader
+              title={item.title}
+              subtitle={item.subtitle}
+              headingFontFamily={headingFontFamily}
+            />
+
+            {/* Collapsed by default: expands in-place */}
+            {moreForYouExpanded ? (
+              <View style={styles.accordionList}>
+                {/* 1. Regional Culinary Trail Highlight */}
+                <CollapsibleSection
+                  title="Regional Culinary Trails"
+                  subtitle="Masterclass tastings, night markets & dining passes"
+                  icon="restaurant-outline"
+                  defaultExpanded={true}
+                  headingFontFamily={headingFontFamily}
+                >
+                  <CulinaryHighlightCard />
+                </CollapsibleSection>
+
+                {/* 2. Cultural Decorum & Temple Dress Codes */}
+                <CollapsibleSection
+                  title="Cultural Decorum & Dress Codes"
+                  subtitle="Sacred site modesty guidelines & polite local greetings"
+                  icon="sparkles-outline"
+                  defaultExpanded={false}
+                  headingFontFamily={headingFontFamily}
+                >
+                  <CultureHeroCard />
+                </CollapsibleSection>
+
+                {/* 3. Verified Traveler Reviews & Trust */}
+                <CollapsibleSection
+                  title="Verified Traveler Reviews"
+                  subtitle="Genuine reviews from 12,000+ satisfied explorers"
+                  icon="star-outline"
+                  defaultExpanded={false}
+                  headingFontFamily={headingFontFamily}
+                >
+                  <View style={styles.reviewBanner}>
+                    <Ionicons name="shield-checkmark" size={24} color={colors.primary} />
+                    <View style={{ flex: 1, marginLeft: 10 }}>
+                      <Text style={[styles.reviewScore, { color: colors.heading }]}>
+                        4.9 / 5.0 Average Rating
+                      </Text>
+                      <Text style={[styles.reviewSub, { color: colors.mutedText }]}>
+                        Based on verified post-trip guest submissions across all active itineraries.
+                      </Text>
+                    </View>
+                  </View>
+                </CollapsibleSection>
+
+                {/* 4. Travel Concierge & Live Support */}
+                <CollapsibleSection
+                  title="Travel Concierge & Support"
+                  subtitle="Instant AI itinerary assistance & emergency help"
+                  icon="headset-outline"
+                  defaultExpanded={false}
+                  headingFontFamily={headingFontFamily}
+                >
+                  <View style={styles.supportBox}>
+                    <Text style={[styles.supportTitle, { color: colors.heading }]}>
+                      Need tailored advice or custom booking arrangements?
+                    </Text>
+                    <TouchableOpacity
+                      style={[styles.conciergeBtn, { backgroundColor: colors.primary }]}
+                      onPress={() => openConcierge()}
+                      activeOpacity={0.8}
+                    >
+                      <Ionicons name="chatbubbles" size={16} color="#ffffff" style={{ marginRight: 6 }} />
+                      <Text style={styles.conciergeBtnText}>Talk to Concierge</Text>
+                    </TouchableOpacity>
+                  </View>
+                </CollapsibleSection>
+              </View>
+            ) : null}
+
+            {/* View More / Show Less Toggle Button */}
+            <ViewMoreButton
+              isExpanded={moreForYouExpanded}
+              onPress={handleToggleMoreForYou}
+              moreText="View more travel guides"
+              lessText="Show fewer guides"
+            />
+          </View>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <View style={[styles.root, { backgroundColor: colors.background }]}>
+      {/* ─── Virtualized Home Feed ─── */}
+      <FlatList
+        data={sections}
+        keyExtractor={(item) => item.id}
+        renderItem={renderSection}
+        ListHeaderComponent={renderHeader}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.listContent}
+        initialNumToRender={4}
+        maxToRenderPerBatch={3}
+        windowSize={5}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={colors.primary}
+            colors={[colors.primary]}
+          />
+        }
+      />
+
+      {/* ─── Travel Hub Bottom Sheet Modal (Contains all 18 utility cards) ─── */}
+      <TravelHubModal
+        visible={travelHubVisible}
+        onClose={() => setTravelHubVisible(false)}
+      />
     </View>
   );
 }
@@ -518,87 +575,12 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
   },
-  headerContainer: {
-    borderBottomWidth: 1,
-    zIndex: 100,
-    elevation: 8,
-    ...SHADOW.sm,
+  listContent: {
+    paddingBottom: SPACING.xxl + 20,
   },
-  headerRow: {
-    height: 56,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+  headerWrap: {
     paddingHorizontal: SPACING.md,
-  },
-  brandRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-    marginRight: SPACING.sm,
-  },
-  brandLogoWrap: {
-    marginRight: SPACING.sm,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  brandBadge: {
-    width: 38,
-    height: 38,
-    borderRadius: RADIUS.md,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: SPACING.sm,
-  },
-  brandEmoji: {
-    fontSize: 18,
-  },
-  brandTextCol: {
-    flex: 1,
-  },
-  brandTitle: {
-    fontSize: FONT_SIZE.md,
-    fontWeight: '800',
-    letterSpacing: -0.3,
-  },
-  brandTagline: {
-    fontSize: 10,
-    fontWeight: '500',
-    marginTop: 1,
-  },
-  actionRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  iconButton: {
-    width: 38,
-    height: 38,
-    borderRadius: RADIUS.full,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  avatarButton: {
-    marginLeft: 2,
-  },
-  avatarImage: {
-    width: 36,
-    height: 36,
-    borderRadius: RADIUS.full,
-  },
-  avatarPlaceholder: {
-    width: 36,
-    height: 36,
-    borderRadius: RADIUS.full,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  scroll: {
-    flex: 1,
-  },
-  scrollContent: {
-    padding: SPACING.md,
-    paddingBottom: SPACING.xxl,
+    paddingTop: SPACING.sm,
   },
   heroCard: {
     padding: SPACING.lg,
@@ -638,7 +620,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: SPACING.md,
-    paddingVertical: SPACING.sm + 4,
+    height: 44,
     borderRadius: RADIUS.lg,
     borderWidth: 1,
   },
@@ -646,29 +628,14 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE.sm,
     flex: 1,
   },
-  sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-    marginBottom: SPACING.sm + 2,
-    marginTop: SPACING.sm,
+  sectionWrap: {
+    marginBottom: SPACING.sm,
   },
-  sectionTitle: {
-    fontSize: FONT_SIZE.lg,
-    fontWeight: '800',
-  },
-  sectionSubtitle: {
-    fontSize: 11,
-    marginTop: 1,
-  },
-  seeAllText: {
-    fontSize: FONT_SIZE.xs + 1,
-    fontWeight: '700',
-  },
-  chipsContainer: {
+  chipsScroll: {
+    paddingHorizontal: SPACING.md,
     gap: 8,
     paddingVertical: 4,
-    marginBottom: SPACING.md,
+    marginBottom: 6,
   },
   categoryChip: {
     flexDirection: 'row',
@@ -681,19 +648,11 @@ const styles = StyleSheet.create({
   chipText: {
     fontSize: FONT_SIZE.xs,
   },
-  carouselSection: {
-    marginBottom: SPACING.lg,
-  },
-  horizontalScroll: {
-    paddingVertical: 4,
-    paddingRight: SPACING.md,
-  },
   destCard: {
-    width: 140,
-    height: 180,
+    width: 150,
+    height: 190,
     borderRadius: RADIUS.lg,
     overflow: 'hidden',
-    marginRight: SPACING.md,
     position: 'relative',
     borderWidth: 1,
   },
@@ -717,72 +676,78 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   destCount: {
-    color: 'rgba(255,255,255,0.85)',
+    color: 'rgba(255, 255, 255, 0.85)',
     fontSize: 11,
     marginTop: 1,
   },
-  allToursSection: {
+  moreForYouContainer: {
     marginTop: SPACING.sm,
   },
-  toursList: {
-    gap: SPACING.md,
+  accordionList: {
+    paddingHorizontal: SPACING.md,
   },
-  errorCard: {
-    padding: SPACING.lg,
-    borderRadius: RADIUS.xl,
-    borderWidth: 1,
-    alignItems: 'center',
-    marginVertical: SPACING.md,
-  },
-  errorTitle: {
-    fontSize: FONT_SIZE.md,
-    fontWeight: '700',
-    marginTop: SPACING.xs,
-  },
-  errorDesc: {
-    fontSize: FONT_SIZE.xs,
-    textAlign: 'center',
-    marginVertical: SPACING.sm,
-    lineHeight: 18,
-  },
-  retryBtn: {
+  reviewBanner: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: SPACING.lg,
+    paddingVertical: SPACING.sm,
+  },
+  reviewScore: {
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '800',
+  },
+  reviewSub: {
+    fontSize: 11,
+    lineHeight: 15,
+    marginTop: 2,
+  },
+  supportBox: {
+    paddingVertical: SPACING.xs,
+    gap: SPACING.sm,
+  },
+  supportTitle: {
+    fontSize: FONT_SIZE.xs + 1,
+    lineHeight: 18,
+  },
+  conciergeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    paddingHorizontal: 16,
     paddingVertical: 8,
+    borderRadius: RADIUS.full,
+  },
+  conciergeBtnText: {
+    color: '#ffffff',
+    fontSize: FONT_SIZE.xs,
+    fontWeight: '700',
+  },
+  errorCard: {
+    marginHorizontal: SPACING.md,
+    padding: SPACING.md,
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    alignItems: 'center',
+    marginVertical: SPACING.sm,
+  },
+  errorTitle: {
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+    marginTop: 4,
+  },
+  errorDesc: {
+    fontSize: 11,
+    textAlign: 'center',
+    marginVertical: 4,
+  },
+  retryBtn: {
+    paddingHorizontal: 14,
+    paddingVertical: 5,
     borderRadius: RADIUS.full,
     marginTop: 4,
   },
   retryBtnText: {
     color: '#ffffff',
-    fontSize: FONT_SIZE.xs,
-    fontWeight: '700',
-  },
-  emptyCard: {
-    padding: SPACING.xl,
-    borderRadius: RADIUS.xl,
-    borderWidth: 1,
-    alignItems: 'center',
-  },
-  emptyTitle: {
-    fontSize: FONT_SIZE.md,
-    fontWeight: '700',
-    marginTop: SPACING.sm,
-  },
-  emptyDesc: {
-    fontSize: FONT_SIZE.xs,
-    textAlign: 'center',
-    marginTop: 4,
-    marginBottom: SPACING.md,
-  },
-  resetBtn: {
-    paddingHorizontal: SPACING.lg,
-    paddingVertical: 8,
-    borderRadius: RADIUS.full,
-  },
-  resetBtnText: {
-    color: '#ffffff',
-    fontSize: FONT_SIZE.xs,
+    fontSize: 11,
     fontWeight: '700',
   },
 });
