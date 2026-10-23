@@ -49,7 +49,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="wishlist"
         options={{
-          href: null,
+          headerShown: false,
           title: 'Wishlist',
           headerTitle: 'Wishlist',
         }}

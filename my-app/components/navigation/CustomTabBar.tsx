@@ -113,7 +113,6 @@ export default function CustomTabBar({
       <View style={styles.tabRow}>
         {state.routes
           .filter((route: any) => {
-            if (route.name === 'wishlist') return false;
             const descriptor = descriptors[route.key];
             const href = (descriptor?.options as { href?: string | null } | undefined)?.href;
             if (href === null) return false;
