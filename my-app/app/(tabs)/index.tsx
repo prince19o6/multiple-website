@@ -57,6 +57,7 @@ import { QuickActionsGrid } from '@/components/home/QuickActionsGrid';
 import { TravelHubModal } from '@/components/home/TravelHubModal';
 import { CollapsibleSection } from '@/components/home/CollapsibleSection';
 import { ViewMoreButton } from '@/components/home/ViewMoreButton';
+import { TravelGuidesCards } from '@/components/home/TravelGuidesCards';
 import { SpecialOffersSection } from '@/components/home/SpecialOffersSection';
 import { RecentlyViewedSection } from '@/components/home/RecentlyViewedSection';
 import { SectionSkeleton } from '@/components/home/SectionSkeleton';
@@ -453,7 +454,10 @@ export default function HomeScreen() {
               headingFontFamily={headingFontFamily}
             />
 
-            {/* Collapsed by default: expands in-place */}
+            {/* Curated horizontal travel guides (Culinary, Culture, Transit, Audio, Phrasebook, Pharmacy, Weather, Tipping) */}
+            <TravelGuidesCards headingFontFamily={headingFontFamily} />
+
+            {/* Collapsed deep-dive interactive widgets: expands in-place */}
             {moreForYouExpanded ? (
               <View style={styles.accordionList}>
                 {/* 1. Regional Culinary Trail Highlight */}
@@ -524,12 +528,12 @@ export default function HomeScreen() {
               </View>
             ) : null}
 
-            {/* View More / Show Less Toggle Button */}
+            {/* View More / Show Less Toggle Button for Deep-Dive Tools */}
             <ViewMoreButton
               isExpanded={moreForYouExpanded}
               onPress={handleToggleMoreForYou}
-              moreText="View more travel guides"
-              lessText="Show fewer guides"
+              moreText="View deep-dive guide tools"
+              lessText="Show fewer tools"
             />
           </View>
         );

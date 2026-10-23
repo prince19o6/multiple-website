@@ -90,11 +90,11 @@ export const DEFAULT_HOME_SECTIONS: HomeSection[] = [
   },
   {
     id: 'moreForYou',
-    title: 'More for You',
-    subtitle: 'Culinary trails, local etiquette, reviews and travel concierge',
+    title: 'Travel Guides & Local Lore',
+    subtitle: 'Culinary trails, temple decorum, transit maps and audio stories',
     maxItems: 4,
     viewMoreTarget: undefined,
-    collapsedByDefault: true, // Collapsed by default for clean scanability
+    collapsedByDefault: false,
     visibleWhenEmpty: true,
     category: 'more',
   },
