@@ -62,7 +62,7 @@ export const DEFAULT_HOME_SECTIONS: HomeSection[] = [
     id: 'destinations',
     title: 'Trending Destinations',
     subtitle: 'Explore authentic locations curated for you',
-    maxItems: 6,
+    maxItems: 10,
     viewMoreTarget: '/destinations',
     collapsedByDefault: false,
     visibleWhenEmpty: false,

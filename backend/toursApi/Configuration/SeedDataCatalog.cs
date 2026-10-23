@@ -9,23 +9,44 @@ public static class SeedDataCatalog
 {
     public static List<Destination> Website1Destinations() => new()
     {
-        new Destination { Website = "website1", Name = "Paris, France", Image = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=500&fit=crop", Tours = 1, SortOrder = 0 },
-        new Destination { Website = "website1", Name = "Tokyo, Japan", Image = "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&h=500&fit=crop", Tours = 1, SortOrder = 1 },
-        new Destination { Website = "website1", Name = "New York, USA", Image = "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=500&fit=crop", Tours = 1, SortOrder = 2 },
+        new Destination { Website = "website1", Name = "Paris, France", Image = "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=500&fit=crop", Tours = 12, SortOrder = 0 },
+        new Destination { Website = "website1", Name = "Tokyo, Japan", Image = "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&h=500&fit=crop", Tours = 8, SortOrder = 1 },
+        new Destination { Website = "website1", Name = "New York, USA", Image = "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=500&fit=crop", Tours = 9, SortOrder = 2 },
+        new Destination { Website = "website1", Name = "Dubai, UAE", Image = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=500&fit=crop", Tours = 14, SortOrder = 3 },
+        new Destination { Website = "website1", Name = "London, UK", Image = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=500&fit=crop", Tours = 11, SortOrder = 4 },
+        new Destination { Website = "website1", Name = "Rome, Italy", Image = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&h=500&fit=crop", Tours = 7, SortOrder = 5 },
+        new Destination { Website = "website1", Name = "Singapore", Image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=500&fit=crop", Tours = 10, SortOrder = 6 },
+        new Destination { Website = "website1", Name = "Bangkok, Thailand", Image = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=500&fit=crop", Tours = 16, SortOrder = 7 },
+        new Destination { Website = "website1", Name = "Barcelona, Spain", Image = "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&h=500&fit=crop", Tours = 6, SortOrder = 8 },
+        new Destination { Website = "website1", Name = "Sydney, Australia", Image = "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&h=500&fit=crop", Tours = 8, SortOrder = 9 },
     };
 
     public static List<Destination> Website2Destinations() => new()
     {
-        new Destination { Website = "website2", Name = "Patagonia, Chile", Image = "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600&h=500&fit=crop", Tours = 1, SortOrder = 0 },
-        new Destination { Website = "website2", Name = "Amazon Rainforest, Brazil", Image = "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=500&fit=crop", Tours = 1, SortOrder = 1 },
-        new Destination { Website = "website2", Name = "Everest Region, Nepal", Image = "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&h=500&fit=crop", Tours = 1, SortOrder = 2 },
+        new Destination { Website = "website2", Name = "Patagonia, Chile", Image = "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=600&h=500&fit=crop", Tours = 7, SortOrder = 0 },
+        new Destination { Website = "website2", Name = "Amazon Rainforest, Brazil", Image = "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=500&fit=crop", Tours = 5, SortOrder = 1 },
+        new Destination { Website = "website2", Name = "Everest Region, Nepal", Image = "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&h=500&fit=crop", Tours = 9, SortOrder = 2 },
+        new Destination { Website = "website2", Name = "Queenstown, New Zealand", Image = "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&h=500&fit=crop", Tours = 8, SortOrder = 3 },
+        new Destination { Website = "website2", Name = "Banff Rockies, Canada", Image = "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=600&h=500&fit=crop", Tours = 6, SortOrder = 4 },
+        new Destination { Website = "website2", Name = "Kilimanjaro, Tanzania", Image = "https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=600&h=500&fit=crop", Tours = 4, SortOrder = 5 },
+        new Destination { Website = "website2", Name = "Swiss Alps, Switzerland", Image = "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=600&h=500&fit=crop", Tours = 8, SortOrder = 6 },
+        new Destination { Website = "website2", Name = "Galapagos, Ecuador", Image = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=500&fit=crop", Tours = 5, SortOrder = 7 },
+        new Destination { Website = "website2", Name = "Ha Long Bay, Vietnam", Image = "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=500&fit=crop", Tours = 7, SortOrder = 8 },
+        new Destination { Website = "website2", Name = "Iceland Fjords", Image = "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=600&h=500&fit=crop", Tours = 6, SortOrder = 9 },
     };
 
     public static List<Destination> Website3Destinations() => new()
     {
-        new Destination { Website = "website3", Name = "Maldives", Image = "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=500&fit=crop", Tours = 1, SortOrder = 0 },
-        new Destination { Website = "website3", Name = "Bali, Indonesia", Image = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=500&fit=crop", Tours = 1, SortOrder = 1 },
-        new Destination { Website = "website3", Name = "Santorini, Greece", Image = "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=500&fit=crop", Tours = 1, SortOrder = 2 },
+        new Destination { Website = "website3", Name = "Maldives", Image = "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=500&fit=crop", Tours = 10, SortOrder = 0 },
+        new Destination { Website = "website3", Name = "Bali, Indonesia", Image = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=500&fit=crop", Tours = 15, SortOrder = 1 },
+        new Destination { Website = "website3", Name = "Santorini, Greece", Image = "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=500&fit=crop", Tours = 8, SortOrder = 2 },
+        new Destination { Website = "website3", Name = "Amalfi Coast, Italy", Image = "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&h=500&fit=crop", Tours = 6, SortOrder = 3 },
+        new Destination { Website = "website3", Name = "Bora Bora", Image = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=500&fit=crop", Tours = 5, SortOrder = 4 },
+        new Destination { Website = "website3", Name = "Kyoto, Japan", Image = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=500&fit=crop", Tours = 7, SortOrder = 5 },
+        new Destination { Website = "website3", Name = "Seychelles", Image = "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&h=500&fit=crop", Tours = 6, SortOrder = 6 },
+        new Destination { Website = "website3", Name = "St. Moritz, Switzerland", Image = "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?w=600&h=500&fit=crop", Tours = 5, SortOrder = 7 },
+        new Destination { Website = "website3", Name = "Maui, Hawaii", Image = "https://images.unsplash.com/photo-1542259009477-d625272157b7?w=600&h=500&fit=crop", Tours = 8, SortOrder = 8 },
+        new Destination { Website = "website3", Name = "French Riviera, France", Image = "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=500&fit=crop", Tours = 6, SortOrder = 9 },
     };
 
     public static List<Tour> Website1Tours() => new()

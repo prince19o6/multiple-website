@@ -156,9 +156,9 @@ export default function HomeScreen() {
     return filtered.slice(0, 5);
   }, [tours, selectedCategory]);
 
-  // Capped destinations list
+  // Capped destinations list (up to 10 destinations)
   const destinationsList = useMemo(() => {
-    return (destinations || []).slice(0, 6);
+    return (destinations || []).slice(0, 10);
   }, [destinations]);
 
   // Toggle "More for you" section
