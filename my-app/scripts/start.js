@@ -440,6 +440,11 @@ function checkDependencies(projectRoot) {
     return;
   }
 
+  try {
+    require('./patch-notifications');
+  } catch {
+    // Ignore if not present
+  }
   console.log('  ✓ Dependencies are installed and verified.');
 }
 

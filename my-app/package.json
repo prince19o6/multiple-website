@@ -46,6 +46,7 @@
     "typescript": "~6.0.3"
   },
   "scripts": {
+    "postinstall": "node scripts/patch-notifications.js",
     "start": "node scripts/start.js",
     "start:gujjutours": "node scripts/start.js --site=gujjutours",
     "start:tripgoasia": "node scripts/start.js --site=tripgoasia",
