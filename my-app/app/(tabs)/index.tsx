@@ -66,6 +66,9 @@ import { TransitHeroCard } from '@/components/TransitHeroCard';
 import { PharmacyHeroCard } from '@/components/PharmacyHeroCard';
 import { TippingHeroCard } from '@/components/TippingHeroCard';
 import { DriveSafetyHeroCard } from '@/components/DriveSafetyHeroCard';
+import { ForexRadarHeroCard } from '@/components/ForexRadarHeroCard';
+import { BargainHeroCard } from '@/components/BargainHeroCard';
+import { ExpeditionWrappedHeroCard } from '@/components/ExpeditionWrappedHeroCard';
 import { useBooking } from '@/context/BookingContext';
 import { useCurrency } from '@/context/CurrencyContext';
 import { useLanguage } from '@/context/LanguageContext';
@@ -289,6 +292,15 @@ export default function HomeScreen() {
 
         {/* ─── Road Rules & Motorbike Rental Safety Navigator ─── */}
         <DriveSafetyHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Currency Exchange Radar & ATM DCC Shield ─── */}
+        <ForexRadarHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Local Market Bargaining Counter-Offer & Negotiation Phrases ─── */}
+        <BargainHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Post-Trip Expedition Summary, Travel Wrapped & VIP Loyalty Club (Phase 40) ─── */}
+        <ExpeditionWrappedHeroCard style={{ marginBottom: 14 }} />
 
         {/* ─── Day-Of Live Expedition Cockpit Card ─── */}
         <DayOfCockpitCard style={{ marginBottom: 14 }} />

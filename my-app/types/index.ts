@@ -1799,6 +1799,218 @@ export interface DriveSafetyHubData {
   preRideChecklist: PreRideChecklistStep[];
 }
 
+export interface ForexCounterRate {
+  currencyCode: string;
+  currencyName: string;
+  flagEmoji: string;
+  bankAirportBuyRate: number;
+  cityCounterBuyRate: number;
+  cityCounterSellRate: number;
+  spreadPercent: string;
+  airportLossPercent: string;
+  noteConditionTips: string;
+}
+
+export interface AtmDccTip {
+  tipKey: string;
+  title: string;
+  severity: 'CRITICAL' | 'RECOMMENDED' | 'TIP';
+  actionPrompt: string;
+  explanation: string;
+  atmWithdrawalFeeNotice: string;
+}
+
+export interface ForexKioskItem {
+  kioskId: string;
+  brandName: string;
+  branchName: string;
+  city: string;
+  address: string;
+  operatingHours: string;
+  isAirportBasementKiosk: boolean;
+  googleMapsQuery: string;
+  rating: number;
+  highlightBadge: string;
+}
+
+export interface ForexRadarData {
+  destinationCountry: string;
+  destinationCurrencyCode: string;
+  destinationCurrencySymbol: string;
+  lastUpdated: string;
+  passportRuleNotice: string;
+  baseRates: ForexCounterRate[];
+  atmDccShield: AtmDccTip[];
+  verifiedKiosks: ForexKioskItem[];
+}
+
+// ==========================================
+// FEATURE 31: STREET MARKET FAIR PRICE RADAR & BARGAINING COACH
+// ==========================================
+export interface BargainCategoryItem {
+  id: string;
+  categoryId?: string;
+  categoryName: string;
+  icon: string;
+  typicalItems?: string;
+  benchmarkPriceRange?: string;
+  bargainMarginPercent?: number;
+  typicalDiscountPercent?: number;
+  bargainingFlexibility?: string;
+  strategyTip?: string;
+  buyingTips?: string[];
+}
+
+export interface BargainMarketItem {
+  id: string;
+  marketName: string;
+  localName?: string;
+  city: string;
+  marketType: string;
+  bargainingStrictness?: 'High' | 'Moderate' | 'Fixed' | string;
+  bargainingIntensity?: string;
+  expectedDiscount?: string;
+  hagglingSweetSpot?: string;
+  openingHours?: string;
+  bestOperatingHours?: string;
+  locationArea?: string;
+  paymentAdvice?: string;
+  insiderSecret?: string;
+  proTip?: string;
+  bestBuys?: string[];
+  bestFor?: string[];
+}
+
+export interface BargainPhraseItem {
+  id: string;
+  phraseId?: string;
+  englishMeaning?: string;
+  englishText?: string;
+  phonetic?: string;
+  phoneticPronunciation?: string;
+  localScript?: string;
+  literalMeaning?: string;
+  contextAdvice?: string;
+  contextUsage?: string;
+  icon?: string;
+}
+
+export interface BargainingRuleItem {
+  ruleNumber: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface BargainHubData {
+  city: string;
+  destinationCountry: string;
+  currencyCode: string;
+  currencySymbol: string;
+  cultureSummary: string;
+  rules: BargainingRuleItem[];
+  categories: BargainCategoryItem[];
+  famousMarkets: BargainMarketItem[];
+  markets?: BargainMarketItem[];
+  keyPhrases: BargainPhraseItem[];
+  phrases?: BargainPhraseItem[];
+}
+
+export interface BargainHistoryLog {
+  id: string;
+  itemName: string;
+  marketName: string;
+  initialPrice: number;
+  finalPrice: number;
+  savings: number;
+  currency: string;
+  timestamp: string;
+}
+
+// ==========================================
+// Phase 40: Expedition Summary & Loyalty DTOs
+// ==========================================
+
+export interface ExpeditionWrappedStats {
+  travelerName: string;
+  year: string;
+  totalKmTraveled: number;
+  countriesVisited: number;
+  citiesExplored: number;
+  toursCompleted: number;
+  carbonOffsetKg: number;
+  treesPlantedEquivalent: number;
+  totalBargainingSavings: number;
+  totalVatRefundClaimed: number;
+  audioStoriesListenedMinutes: number;
+  favoriteCategory: string;
+  topLandmarksVisited: string[];
+  unlockedBadges: string[];
+  travelerArchetype: string;
+  highlightQuote: string;
+}
+
+export interface LoyaltyTierData {
+  memberId: string;
+  memberName: string;
+  currentTier: string;
+  tierBadgeEmoji: string;
+  currentPoints: number;
+  pointsToNextTier: number;
+  nextTierName: string;
+  progressPercentage: number;
+  multiplierBadge: string;
+  perks: string[];
+}
+
+export interface LoyaltyRewardVoucher {
+  voucherId: string;
+  voucherCode: string;
+  title: string;
+  description: string;
+  discountLabel: string;
+  pointsCost: number;
+  isClaimed: boolean;
+  expiryDate: string;
+  category: string;
+}
+
+export interface ExpeditionCertificate {
+  certificateId: string;
+  recipientName: string;
+  title: string;
+  citation: string;
+  issueDate: string;
+  expeditionSignature: string;
+  goldSealText: string;
+}
+
+export interface ExpeditionSummaryHubData {
+  destinationHub: string;
+  currencySymbol: string;
+  wrapped: ExpeditionWrappedStats;
+  loyalty: LoyaltyTierData;
+  availableRewards: LoyaltyRewardVoucher[];
+  certificate: ExpeditionCertificate;
+}
+
+export interface ClaimRewardResult {
+  voucherCode: string;
+  title: string;
+  discountLabel: string;
+  expiryDate: string;
+  remainingPoints: number;
+  usageInstructions: string;
+}
+
+export interface ReviewBoostResult {
+  pointsAwarded: number;
+  newTotalPoints: number;
+  boostBadge: string;
+}
+
+
+
 
 
 

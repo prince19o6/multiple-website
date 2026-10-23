@@ -144,6 +144,22 @@ import type {
   RentalScamTip,
   PreRideChecklistStep,
   DriveSafetyHubData,
+  ForexCounterRate,
+  AtmDccTip,
+  ForexKioskItem,
+  ForexRadarData,
+  BargainCategoryItem,
+  BargainMarketItem,
+  BargainPhraseItem,
+  BargainingRuleItem,
+  BargainHubData,
+  ExpeditionWrappedStats,
+  LoyaltyTierData,
+  LoyaltyRewardVoucher,
+  ExpeditionCertificate,
+  ExpeditionSummaryHubData,
+  ClaimRewardResult,
+  ReviewBoostResult,
 } from '@/types';
 import type { SiteConfigResult } from '@/lib/siteConfig';
 
@@ -3150,6 +3166,118 @@ export async function fetchRoadRules(
     return null;
   }
 }
+
+export async function fetchForexRadar(
+  overrideSiteId?: string
+): Promise<ForexRadarData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ForexRadarData>>('/api/forex/radar', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ForexRadarData;
+  } catch (err) {
+    console.warn('[fetchForexRadar] Error fetching forex radar:', err);
+    return null;
+  }
+}
+
+export async function fetchVerifiedForexKiosks(
+  overrideSiteId?: string,
+  city?: string
+): Promise<ForexKioskItem[] | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const q = city ? `?city=${encodeURIComponent(city)}` : '';
+    const res = await request<RawBackendEnvelope<ForexKioskItem[]>>(`/api/forex/kiosks${q}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ForexKioskItem[];
+  } catch (err) {
+    console.warn('[fetchVerifiedForexKiosks] Error fetching kiosks:', err);
+    return null;
+  }
+}
+
+export async function fetchBargainHubData(
+  overrideSiteId?: string
+): Promise<BargainHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<BargainHubData>>('/api/bargain/data', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as BargainHubData;
+  } catch (err) {
+    console.warn('[fetchBargainHubData] Error fetching bargaining hub data:', err);
+    return null;
+  }
+}
+
+// ─── Phase 40: Expedition Summary, Travel Wrapped & Loyalty Rewards ───────────
+
+export async function fetchExpeditionSummaryHub(
+  overrideSiteId?: string
+): Promise<ExpeditionSummaryHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ExpeditionSummaryHubData>>('/api/expedition-summary/hub', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ExpeditionSummaryHubData;
+  } catch (err) {
+    console.warn('[fetchExpeditionSummaryHub] Error fetching expedition summary:', err);
+    return null;
+  }
+}
+
+export async function claimLoyaltyReward(
+  voucherCode: string,
+  pointsCost: number,
+  overrideSiteId?: string
+): Promise<ClaimRewardResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ClaimRewardResult>>('/api/expedition-summary/claim-reward', {
+      method: 'POST',
+      siteId,
+      body: JSON.stringify({ voucherCode, pointsCost }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    return (res?.data ?? res) as ClaimRewardResult;
+  } catch (err) {
+    console.warn('[claimLoyaltyReward] Error claiming loyalty reward:', err);
+    throw err;
+  }
+}
+
+export async function submitReviewBoost(
+  tourId: string,
+  rating: number,
+  reviewText: string,
+  favoriteMoment: string,
+  overrideSiteId?: string
+): Promise<ReviewBoostResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<ReviewBoostResult>('/api/expedition-summary/review-boost', {
+      method: 'POST',
+      siteId,
+      body: JSON.stringify({ tourId, rating, reviewText, favoriteMoment }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    return res;
+  } catch (err) {
+    console.warn('[submitReviewBoost] Error submitting review boost:', err);
+    throw err;
+  }
+}
+
+
 
 
 

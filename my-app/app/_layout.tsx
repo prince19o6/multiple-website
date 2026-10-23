@@ -76,6 +76,9 @@ import { TransitProvider } from '@/context/TransitContext';
 import { PharmacyProvider } from '@/context/PharmacyContext';
 import { TippingProvider } from '@/context/TippingContext';
 import { DriveSafetyProvider } from '@/context/DriveSafetyContext';
+import { ForexRadarProvider } from '@/context/ForexRadarContext';
+import { BargainProvider } from '@/context/BargainContext';
+import { ExpeditionSummaryProvider } from '@/context/ExpeditionSummaryContext';
 
 // Suppress known development-only hydration/recovery overlays, font timeouts, and HMR reconnect warnings
 LogBox.ignoreLogs([
@@ -154,13 +157,19 @@ function RootProviders({ children }: { children: React.ReactNode }) {
                                                               <PharmacyProvider>
                                                                 <TippingProvider>
                                                                   <DriveSafetyProvider>
-                                                                    <OfflineBanner />
-                                                                    <DevBanner />
-                                                                    <NotificationCenterModal />
-                                                                    <LanguageModal />
-                                                                    <ConciergeChatModal />
-                                                                    <AudioMiniPlayer />
-                                                                    {children}
+                                                                    <ForexRadarProvider>
+                                                                      <BargainProvider>
+                                                                        <ExpeditionSummaryProvider>
+                                                                          <OfflineBanner />
+                                                                          <DevBanner />
+                                                                          <NotificationCenterModal />
+                                                                          <LanguageModal />
+                                                                          <ConciergeChatModal />
+                                                                          <AudioMiniPlayer />
+                                                                          {children}
+                                                                        </ExpeditionSummaryProvider>
+                                                                      </BargainProvider>
+                                                                    </ForexRadarProvider>
                                                                   </DriveSafetyProvider>
                                                                 </TippingProvider>
                                                               </PharmacyProvider>
@@ -269,6 +278,9 @@ export default function RootLayout() {
             <Stack.Screen name="pharmacy-guide" options={{ headerShown: false }} />
             <Stack.Screen name="tipping-guide" options={{ headerShown: false }} />
             <Stack.Screen name="drive-safety" options={{ headerShown: false }} />
+            <Stack.Screen name="forex-radar" options={{ headerShown: false }} />
+            <Stack.Screen name="bargain-assistant" options={{ headerShown: false }} />
+            <Stack.Screen name="travel-wrapped" options={{ headerShown: false }} />
 
             {/* Admin Portal */}
             <Stack.Screen name="(admin)" options={{ headerShown: false }} />

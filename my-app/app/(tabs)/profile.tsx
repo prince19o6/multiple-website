@@ -1059,6 +1059,102 @@ export default function ProfileTabScreen() {
 
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
+            {/* Currency Exchange & ATM DCC Shield Hub */}
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                try {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                } catch {
+                  // Haptics fallback
+                }
+                router.push('/forex-radar' as never);
+              }}
+              activeOpacity={0.7}
+              accessibilityRole="button"
+              accessibilityLabel="Open Currency Exchange Radar and ATM DCC Shield Hub"
+            >
+              <View style={[styles.menuIconBox, { backgroundColor: '#05966918' }]}>
+                <Ionicons name="cash-outline" size={18} color="#059669" />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.menuItemText, { color: colors.heading }]}>
+                  Currency Exchange & ATM DCC Shield
+                </Text>
+                <Text style={{ fontSize: 11, color: colors.mutedText, marginTop: 1 }}>
+                  SuperRich live rates, airport spread comparison & ATM fee dynamic conversion shield
+                </Text>
+              </View>
+              <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+            </TouchableOpacity>
+
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+            {/* Local Market Bargaining Counter-Offer & Negotiation Phrases */}
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                try {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                } catch {
+                  // Haptics fallback
+                }
+                router.push('/bargain-assistant' as never);
+              }}
+              activeOpacity={0.7}
+              accessibilityRole="button"
+              accessibilityLabel="Open Local Market Bargaining Counter-Offer and Negotiation Phrases Assistant"
+            >
+              <View style={[styles.menuIconBox, { backgroundColor: '#EA580C18' }]}>
+                <Ionicons name="pricetags-outline" size={18} color="#EA580C" />
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.menuItemText, { color: colors.heading }]}>
+                  Market Bargaining & Counter-Offer Assistant
+                </Text>
+                <Text style={{ fontSize: 11, color: colors.mutedText, marginTop: 1 }}>
+                  Souvenir pricing benchmarks, 3-round counter offers & speech-ready polite phrases
+                </Text>
+              </View>
+              <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+            </TouchableOpacity>
+
+            <View style={[styles.divider, { backgroundColor: colors.border }]} />
+
+            {/* Travel Wrapped & VIP Loyalty Rewards Hub (Phase 40) */}
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                try {
+                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                } catch {
+                  // Haptics fallback
+                }
+                router.push('/travel-wrapped' as never);
+              }}
+              activeOpacity={0.7}
+              accessibilityRole="button"
+              accessibilityLabel="Open Travel Wrapped 2026, VIP Loyalty Tier and Honors Diploma"
+            >
+              <View style={[styles.menuIconBox, { backgroundColor: '#F59E0B22' }]}>
+                <Ionicons name="sparkles" size={18} color="#D97706" />
+              </View>
+              <View style={{ flex: 1 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Text style={[styles.menuItemText, { color: colors.heading }]}>
+                    Travel Wrapped & VIP Loyalty Club
+                  </Text>
+                  <View style={{ backgroundColor: '#FEF3C7', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 6 }}>
+                    <Text style={{ fontSize: 9, fontWeight: '800', color: '#B45309' }}>2026</Text>
+                  </View>
+                </View>
+                <Text style={{ fontSize: 11, color: colors.mutedText, marginTop: 1 }}>
+                  Expedition story reel, carbon offset, loyalty vouchers & completion diploma
+                </Text>
+              </View>
+              <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+            </TouchableOpacity>
+
             {/* Travel Vault & Emergency SOS */}
             <TouchableOpacity
               style={styles.menuItem}
