@@ -15,7 +15,7 @@
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
-import { SafeNotifications as Notifications } from '@/src/lib/safeNotifications';
+import * as Notifications from 'expo-notifications';
 import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
 import { useSite } from '@/store/SiteConfigContext';
@@ -186,8 +186,8 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
   const [notifications, setNotifications] = useState<AppNotification[]>([]);
   const [isCenterVisible, setIsCenterVisible] = useState(false);
 
-  const notificationListenerRef = useRef<{ remove: () => void } | null>(null);
-  const responseListenerRef = useRef<{ remove: () => void } | null>(null);
+  const notificationListenerRef = useRef<Notifications.Subscription | null>(null);
+  const responseListenerRef = useRef<Notifications.Subscription | null>(null);
 
   // Setup Android channel on mount
   useEffect(() => {
