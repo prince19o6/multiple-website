@@ -57,6 +57,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     name: siteName,
     slug: appSlug,
     version: '1.0.0',
+    sdkVersion: '58.0.0',
     orientation: 'portrait',
     icon: './assets/icon.png',
     scheme: appScheme,
