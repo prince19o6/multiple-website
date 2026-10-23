@@ -38,7 +38,7 @@ export interface BottomTabBarProps {
   };
   descriptors: Record<string, any>;
   navigation?: any;
-  navigateToTab?: (routeKeyOrName: string) => void;
+  navigateToTab?: (routeKey: string) => void;
   insets?: any;
   [key: string]: any;
 }
@@ -149,10 +149,10 @@ export default function CustomTabBar({
             }
 
             if (!isFocused && !defaultPrevented) {
-              if (navigation?.navigate) {
+              if (typeof navigateToTab === 'function') {
+                navigateToTab(route.key);
+              } else if (navigation?.navigate) {
                 navigation.navigate(route.name, route.params);
-              } else if (typeof navigateToTab === 'function') {
-                navigateToTab(route.name);
               } else {
                 const targetPath = route.name === 'index' ? '/(tabs)' : `/(tabs)/${route.name}`;
                 router.push(targetPath as any);
