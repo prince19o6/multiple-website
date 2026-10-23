@@ -36,7 +36,115 @@ import {
 } from '@/src/config/sites';
 import { ENV } from '@/src/config/env';
 import { normalizeTour, normalizeDestination, normalizeBooking } from '@/lib/normalize';
-import type { Tour, DestinationItem, Booking, User, RegisterRequest, AuthResponse } from '@/types';
+import type {
+  Tour,
+  DestinationItem,
+  Booking,
+  User,
+  RegisterRequest,
+  AuthResponse,
+  TourSortOption,
+  GuestReview,
+  CouponValidationResult,
+  ConciergeSpecialist,
+  ConciergeInquiryPayload,
+  ConciergeInquiryResponse,
+  DestinationLandmark,
+  DestinationWaypointsResponse,
+  EmergencyDirectoryResponse,
+  DestinationCostGuide,
+  TripExpense,
+  AudioStory,
+  PassportProfile,
+  ExpeditionStamp,
+  MilestoneChallenge,
+  DestinationWeather,
+  CulinaryTrail,
+  DiningReservationRequest,
+  DiningReservationResponse,
+  DayOfDispatch,
+  GuideAnnouncement,
+  GroupTrip,
+  GroupPoll,
+  GroupGearItem,
+  CastVoteRequest,
+  CreateGearItemRequest,
+  TripScrapbook,
+  JournalEntry,
+  CreateJournalEntryRequest,
+  AirportTransfer,
+  UpdateTransferStatusRequest,
+  DestinationPhrasebook,
+  PhraseItem,
+  DestinationTaxRule,
+  CustomsAllowanceRule,
+  TaxRefundReceipt,
+  TaxRefundSummary,
+  CreateTaxReceiptRequest,
+  UpdateClaimStatusRequest,
+  EsimPackage,
+  ActiveEsimProfile,
+  AirportWifiGuide,
+  EsimHubData,
+  ActivateEsimRequest,
+  TopUpDataRequest,
+  TravelInsurancePolicy,
+  HospitalDirectoryItem,
+  SubmitClaimInquiryRequest,
+  ClaimInquiryResponse,
+  VisaRequirement,
+  DigitalArrivalCard,
+  EmbassyConsulate,
+  PassportValidityCheckRequest,
+  PassportValidityCheckResult,
+  VisaHubData,
+  CarbonEmissionBreakdown,
+  VerifiedClimateProject,
+  OffsetContribution,
+  EcoPledgeItem,
+  EcoHubData,
+  CalculateEmissionsRequest,
+  SubmitOffsetRequest,
+  SubmitOffsetResponse,
+  DressCodeRule,
+  CulturalEtiquetteItem,
+  MedicationCustomsRule,
+  CultureHubData,
+  CheckOutfitComplianceRequest,
+  CheckOutfitComplianceResult,
+  PlugType,
+  VoltageSpec,
+  ApplianceVoltageRule,
+  PowerBankKiosk,
+  PowerHubData,
+  CheckApplianceRequest,
+  CheckApplianceResult,
+  AirlineBaggagePolicy,
+  BaggageHubData,
+  CalculateBaggageFeeRequest,
+  CalculateBaggageFeeResult,
+  TransitPhrase,
+  TransitLine,
+  TransitRouteQuery,
+  TaxiFareEstimator,
+  TransitHubData,
+  CalculateTransitFareRequest,
+  CalculateTransitFareResult,
+  EstimateTaxiFareRequest,
+  EstimateTaxiFareResult,
+  TravelMedicine,
+  PharmacyDirectoryItem,
+  ControlledSubstanceWarning,
+  PharmacyHubData,
+  TippingServiceCategory,
+  TippingCountryGuide,
+  CalculateTipRequest,
+  CalculateTipResult,
+  RoadRuleItem,
+  RentalScamTip,
+  PreRideChecklistStep,
+  DriveSafetyHubData,
+} from '@/types';
 import type { SiteConfigResult } from '@/lib/siteConfig';
 
 // ─── Custom Typed Error ───────────────────────────────────────────────────────
@@ -168,21 +276,36 @@ export interface CreateBookingPayload {
   website?: string;
   websiteId?: string;
   tourId: number | string;
+  tourSlug?: string;
   tourName?: string;
   tourImage?: string;
   currency?: string;
   location?: string;
+  destination?: string;
+  unitPrice?: number;
+  originalPrice?: number;
+  duration?: string;
   totalPrice?: number;
   guestName?: string;
   name?: string;
   email: string;
   phone?: string;
   travelers?: number;
+  adults?: number;
+  children?: number;
   startDate?: string;
   endDate?: string;
   date?: string;
+  travelDate?: string;
   specialRequest?: string;
   userId?: string;
+  reference?: string;
+  idempotencyKey?: string;
+  source?: 'web' | 'app' | string;
+  promoCode?: string;
+  discountAmount?: number;
+  addOns?: string[];
+  addOnsTotal?: number;
 }
 
 export interface TourSearchParams {
@@ -190,6 +313,9 @@ export interface TourSearchParams {
   minPrice?: number;
   maxPrice?: number;
   difficulty?: string;
+  category?: string;
+  duration?: string;
+  sort?: TourSortOption | string;
 }
 
 export interface CategoryItem {
@@ -611,9 +737,9 @@ export async function getConfig(
       }
     }
     if (__DEV__) {
-      console.warn(`[DEBUG] [getConfig] Failed to fetch live config for "${targetHost}":`, err);
+      console.warn(`[DEBUG] [getConfig] Failed to fetch live config for "${targetHost}". Falling back to baseline configuration:`, err);
     }
-    throw err;
+    return getFallbackConfig(site);
   }
 }
 
@@ -644,17 +770,26 @@ export function getFallbackConfig(site: SiteDefinition): SiteConfigResult {
 /**
  * Fetch all tours for the active site with normalization.
  */
-export async function fetchTours(overrideSiteId?: string): Promise<ApiResponse<Tour[]>> {
+export async function fetchTours(
+  overrideSiteId?: string,
+  sort?: string,
+  category?: string
+): Promise<ApiResponse<Tour[]>> {
   const siteId = overrideSiteId || ENV.siteId;
   const site = isAllowedSiteId(siteId) ? getSiteById(siteId) : getActiveSite();
   const effectiveBase = (ENV.apiUrl.includes('stagingapi.') && ENV.backendFallbackUrl)
     ? ENV.backendFallbackUrl.replace(/\/+$/, '')
     : ENV.apiUrl.replace(/\/+$/, '');
-  const url = `${effectiveBase}/api/tours`;
+  const qParams = new URLSearchParams();
+  if (sort && sort !== 'featured') qParams.append('sort', sort);
+  if (category && category.toLowerCase() !== 'all') qParams.append('category', category);
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/tours?${qs}` : '/api/tours';
+  const url = `${effectiveBase}${endpoint}`;
   const headers = await buildHeaders(site);
 
   try {
-    const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>('/api/tours', { siteId });
+    const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
     const rawList = extractListFromEnvelope(json);
     const normalized = rawList.map((item: unknown) => normalizeTour(item, siteId));
 
@@ -735,6 +870,8 @@ export async function searchTours(
   if (params.minPrice !== undefined) qParams.append('minPrice', String(params.minPrice));
   if (params.maxPrice !== undefined) qParams.append('maxPrice', String(params.maxPrice));
   if (params.difficulty) qParams.append('difficulty', params.difficulty);
+  if (params.category && params.category.toLowerCase() !== 'all') qParams.append('category', params.category);
+  if (params.sort && params.sort !== 'featured') qParams.append('sort', params.sort);
 
   const qs = qParams.toString();
   const endpoint = qs ? `/api/tours/search?${qs}` : '/api/tours/search';
@@ -857,6 +994,57 @@ export async function fetchTourByNumber(tourNumber: string | number, overrideSit
 }
 
 /**
+ * Fetch similar tours recommendations for a tour ID or slug.
+ */
+export async function fetchSimilarTours(
+  tourIdOrSlug: string | number,
+  overrideSiteId?: string,
+  limit: number = 4
+): Promise<{ success: boolean; data: Tour[] }> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(
+      `/api/tours/${tourIdOrSlug}/similar?limit=${limit}`,
+      { siteId }
+    );
+    const rawList = Array.isArray(json)
+      ? json
+      : (json as RawBackendEnvelope<unknown[]>)?.data ??
+        (json as RawBackendEnvelope<unknown[]>)?.result ??
+        [];
+
+    const normalized = Array.isArray(rawList)
+      ? rawList.map((item) => normalizeTour(item, siteId))
+      : [];
+
+    return { success: true, data: normalized };
+  } catch (primaryErr) {
+    if (__DEV__) {
+      console.log(`[DEBUG] [fetchSimilarTours] Primary fetch failed for "${tourIdOrSlug}":`, primaryErr);
+    }
+    return { success: false, data: [] };
+  }
+}
+
+/**
+ * Submit a traveler review for a tour.
+ */
+export async function submitTourReview(
+  tourIdOrSlug: string | number,
+  review: { author: string; rating: number; text: string },
+  overrideSiteId?: string
+): Promise<{ success: boolean; data: GuestReview; message?: string }> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const res = await request<RawBackendEnvelope<GuestReview>>(`/api/tours/${tourIdOrSlug}/reviews`, {
+    method: 'POST',
+    body: JSON.stringify(review),
+    siteId,
+  });
+  const data = res?.data ?? (res as unknown as GuestReview);
+  return { success: true, data, message: res?.message };
+}
+
+/**
  * Create a new tour (admin).
  */
 export async function createTour(tourData: Partial<Tour>, overrideSiteId?: string): Promise<Tour> {
@@ -901,7 +1089,7 @@ export async function deleteTour(id: string | number, overrideSiteId?: string): 
 export async function createBooking(bookingData: CreateBookingPayload, overrideSiteId?: string): Promise<Booking> {
   const activeSite = overrideSiteId || bookingData.website || bookingData.websiteId || ENV.siteId;
 
-  const rawStart = bookingData.startDate || bookingData.date;
+  const rawStart = bookingData.travelDate || bookingData.startDate || bookingData.date;
   const startDateObj = rawStart && !isNaN(new Date(rawStart).getTime())
     ? new Date(rawStart)
     : new Date(Date.now() + 7 * 86400000);
@@ -919,41 +1107,71 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     ? Number(bookingData.tourId)
     : 1;
 
+  const idempotencyKey =
+    bookingData.idempotencyKey ||
+    `app_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+
+  const adults = typeof bookingData.adults === 'number' ? Math.max(1, bookingData.adults) : undefined;
+  const children = typeof bookingData.children === 'number' ? Math.max(0, bookingData.children) : undefined;
+  const totalTravelers = Math.max(1, (adults ?? 0) + (children ?? 0) || Number(bookingData.travelers) || 1);
+
   const payload = {
     website: activeSite,
     websiteId: activeSite,
     userId: bookingData.userId,
     tourId: numericTourId,
+    tourSlug: bookingData.tourSlug,
     tourName: bookingData.tourName || 'Guided Tour Expedition',
     tourImage: bookingData.tourImage,
     currency: bookingData.currency || '$',
     location: bookingData.location,
+    destination: bookingData.destination || bookingData.location,
+    unitPrice: bookingData.unitPrice,
+    originalPrice: bookingData.originalPrice,
+    duration: bookingData.duration,
     totalPrice: Number(bookingData.totalPrice) || 0,
     guestName: String(bookingData.guestName || bookingData.name || 'Guest Explorer').trim(),
     email: String(bookingData.email || '').trim(),
     phone: String(bookingData.phone || '').trim(),
-    travelers: Math.max(1, Number(bookingData.travelers) || 1),
+    travelers: totalTravelers,
+    adults: adults ?? totalTravelers,
+    children: children ?? 0,
     startDate: startDateObj.toISOString(),
     endDate: finalEndDateObj.toISOString(),
     date: startDateObj.toISOString().split('T')[0],
+    travelDate: startDateObj.toISOString(),
     specialRequest: bookingData.specialRequest || '',
+    idempotencyKey,
+    source: 'app',
+    promoCode: bookingData.promoCode,
+    discountAmount: bookingData.discountAmount,
+    addOns: bookingData.addOns,
+    addOnsTotal: bookingData.addOnsTotal,
   };
 
   if (__DEV__) {
-    console.log('[DEBUG] POST /api/bookings Request Payload:', payload);
+    console.log('[DEBUG] [BOOKINGS-CREATE] Request URL: /api/bookings');
+    console.log('[DEBUG] [BOOKINGS-CREATE] Request Payload (Snapshot Embedded):', JSON.stringify(payload));
   }
+
+  const reqHeaders: Record<string, string> = {
+    'X-Idempotency-Key': idempotencyKey,
+    'X-Client-Source': 'app',
+  };
 
   try {
     const json = await request<RawBackendEnvelope<unknown> | unknown>('/api/bookings', {
       method: 'POST',
+      headers: reqHeaders,
       body: JSON.stringify(payload),
       siteId: activeSite,
+      skipCache: true,
     });
 
     const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
     const normalized = normalizeBooking(raw);
     if (__DEV__) {
-      console.log('[DEBUG] POST /api/bookings Success Created ID:', normalized.id);
+      console.log('[DEBUG] POST /api/bookings Success Created ID:', normalized.id, 'Ref:', normalized.reference);
     }
     return normalized;
   } catch (primaryErr) {
@@ -963,8 +1181,10 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
         const fallbackEndpoint = `${fallbackBase}/api/bookings`;
         const json = await request<RawBackendEnvelope<unknown> | unknown>(fallbackEndpoint, {
           method: 'POST',
+          headers: reqHeaders,
           body: JSON.stringify(payload),
           siteId: activeSite,
+          skipCache: true,
         });
         const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
         return normalizeBooking(raw);
@@ -974,6 +1194,699 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     }
     throw primaryErr;
   }
+}
+
+/**
+ * Validate promotional discount coupon against server-side brand rules.
+ */
+export async function validateCoupon(
+  code: string,
+  subtotal: number,
+  tourId: number = 1,
+  travelers: number = 1,
+  overrideSiteId?: string
+): Promise<CouponValidationResult> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: CouponValidationResult }>('/api/bookings/validate-coupon', {
+    method: 'POST',
+    siteId: activeSite,
+    body: JSON.stringify({
+      code: code.trim(),
+      subtotal,
+      tourId,
+      travelers,
+      websiteId: activeSite,
+    }),
+  });
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: CouponValidationResult }).data) {
+    return (json as { data: CouponValidationResult }).data;
+  }
+
+  throw new Error('Invalid coupon response from server');
+}
+
+/**
+ * Fetch active specialist profile for 24/7 concierge assistance.
+ */
+export async function fetchConciergeSpecialist(overrideSiteId?: string): Promise<ConciergeSpecialist> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: ConciergeSpecialist }>('/api/concierge/specialist', {
+    method: 'GET',
+    siteId: activeSite,
+  });
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: ConciergeSpecialist }).data) {
+    return (json as { data: ConciergeSpecialist }).data;
+  }
+
+  throw new Error('Failed to load concierge specialist');
+}
+
+/**
+ * Submit an inquiry message to the concierge specialist.
+ */
+export async function submitConciergeInquiry(
+  payload: ConciergeInquiryPayload,
+  overrideSiteId?: string
+): Promise<ConciergeInquiryResponse> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<ConciergeInquiryResponse | { success: boolean; data: ConciergeInquiryResponse }>('/api/concierge/inquire', {
+    method: 'POST',
+    siteId: activeSite,
+    body: JSON.stringify({
+      ...payload,
+      source: 'app',
+    }),
+  });
+
+  if (json && typeof json === 'object') {
+    if ('data' in json && (json as { data: ConciergeInquiryResponse }).data) {
+      return (json as { data: ConciergeInquiryResponse }).data;
+    }
+    if ('reply' in json) {
+      return json as ConciergeInquiryResponse;
+    }
+  }
+
+  throw new Error('Invalid inquiry response from concierge service');
+}
+
+/**
+ * Fetch geo-tagged destination landmarks and waypoints for interactive map exploration.
+ */
+export async function fetchDestinationLandmarks(
+  overrideSiteId?: string,
+  params?: { category?: string; tourId?: number; search?: string; featuredOnly?: boolean }
+): Promise<DestinationWaypointsResponse> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const searchParams = new URLSearchParams();
+  if (params?.category) searchParams.append('category', params.category);
+  if (params?.tourId) searchParams.append('tourId', params.tourId.toString());
+  if (params?.search) searchParams.append('search', params.search);
+  if (params?.featuredOnly) searchParams.append('featuredOnly', 'true');
+
+  const queryString = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  const json = await request<{ success: boolean; data: DestinationWaypointsResponse }>(
+    `/api/destinations/landmarks${queryString}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DestinationWaypointsResponse }).data) {
+    return (json as { data: DestinationWaypointsResponse }).data;
+  }
+
+  throw new Error('Failed to load destination landmarks');
+}
+
+/**
+ * Fetch a single landmark by ID.
+ */
+export async function fetchLandmarkById(id: string, overrideSiteId?: string): Promise<DestinationLandmark> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: DestinationLandmark }>(
+    `/api/destinations/landmarks/${id}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DestinationLandmark }).data) {
+    return (json as { data: DestinationLandmark }).data;
+  }
+
+  throw new Error(`Failed to load landmark with ID: ${id}`);
+}
+
+/**
+ * Fetch 24/7 emergency hotlines, hospitals, and safety phrases for the active brand destination.
+ */
+export async function fetchEmergencyDirectory(overrideSiteId?: string): Promise<EmergencyDirectoryResponse> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: EmergencyDirectoryResponse }>(
+    '/api/emergency/contacts',
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: EmergencyDirectoryResponse }).data) {
+    return (json as { data: EmergencyDirectoryResponse }).data;
+  }
+
+  throw new Error('Failed to load emergency safety directory');
+}
+
+/**
+ * Fetch destination daily cost guidelines, category benchmarks & tipping advice.
+ */
+export async function fetchDestinationCostGuide(overrideSiteId?: string): Promise<DestinationCostGuide> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: DestinationCostGuide }>(
+    '/api/budget/guide',
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DestinationCostGuide }).data) {
+    return (json as { data: DestinationCostGuide }).data;
+  }
+
+  throw new Error('Failed to load destination cost guidelines');
+}
+
+/**
+ * Sync trip expenses to cloud MongoDB for persistent backup.
+ */
+export async function syncTripExpenses(
+  payload: { totalBudget: number; currency: string; expenses: TripExpense[] },
+  overrideSiteId?: string
+): Promise<{ success: boolean; message: string }> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; message: string }>(
+    '/api/budget/sync',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+    }
+  );
+
+  return json;
+}
+
+/**
+ * Fetch narrated expedition audio stories tailored to the active brand and optional category/tour.
+ */
+export async function fetchAudioStories(
+  params?: { category?: string; tourId?: string },
+  overrideSiteId?: string
+): Promise<AudioStory[]> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const queryParts: string[] = [];
+  if (params?.category) queryParts.push(`category=${encodeURIComponent(params.category)}`);
+  if (params?.tourId) queryParts.push(`tourId=${encodeURIComponent(params.tourId)}`);
+  const qs = queryParts.length > 0 ? `?${queryParts.join('&')}` : '';
+
+  const json = await request<{ success: boolean; data: AudioStory[] }>(
+    `/api/audioguide/stories${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && Array.isArray((json as { data: AudioStory[] }).data)) {
+    return (json as { data: AudioStory[] }).data;
+  }
+
+  return [];
+}
+
+/**
+ * Record audio story listen engagement.
+ */
+export async function recordAudioStoryListen(
+  storyId: string,
+  secondsListened: number = 0,
+  overrideSiteId?: string
+): Promise<{ success: boolean; message: string }> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; message: string }>(
+    `/api/audioguide/listen/${encodeURIComponent(storyId)}`,
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify({ storyId, secondsListened }),
+    }
+  );
+
+  return json;
+}
+
+/**
+ * Fetch digital expedition passport profile with collectible stamps, milestone challenges, and loyalty tier perks.
+ */
+export async function fetchPassportProfile(overrideSiteId?: string): Promise<PassportProfile> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: PassportProfile }>(
+    '/api/passport/profile',
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: PassportProfile }).data) {
+    return (json as { data: PassportProfile }).data;
+  }
+
+  throw new Error('Failed to load expedition passport profile');
+}
+
+/**
+ * Claim an expedition destination stamp.
+ */
+export async function claimExpeditionStamp(
+  stampId: string,
+  overrideSiteId?: string
+): Promise<{ success: boolean; message: string; stamp: ExpeditionStamp; xpAwarded: number }> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; message: string; stamp: ExpeditionStamp; xpAwarded: number }>(
+    '/api/passport/claim-stamp',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify({ stampId }),
+    }
+  );
+
+  return json;
+}
+
+/**
+ * Claim milestone challenge rewards and XP.
+ */
+export async function claimMilestoneChallenge(
+  challengeId: string,
+  overrideSiteId?: string
+): Promise<{ success: boolean; message: string; challenge: MilestoneChallenge; xpAwarded: number }> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; message: string; challenge: MilestoneChallenge; xpAwarded: number }>(
+    '/api/passport/claim-challenge',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify({ challengeId }),
+    }
+  );
+
+  return json;
+}
+
+/**
+ * Fetch live weather, microclimate forecast, and activity advisories for an expedition destination.
+ */
+export async function fetchDestinationWeather(
+  destinationId?: string,
+  overrideSiteId?: string
+): Promise<DestinationWeather> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const qs = destinationId ? `?destinationId=${encodeURIComponent(destinationId)}` : '';
+  const json = await request<{ success: boolean; data: DestinationWeather }>(
+    `/api/weather/current${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DestinationWeather }).data) {
+    return (json as { data: DestinationWeather }).data;
+  }
+
+  throw new Error('Failed to load destination weather');
+}
+
+/**
+ * Fetch all available expedition destinations' live weather for the brand.
+ */
+export async function fetchBrandDestinationsWeather(
+  overrideSiteId?: string
+): Promise<DestinationWeather[]> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: DestinationWeather[] }>(
+    '/api/weather/destinations',
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && Array.isArray((json as { data: DestinationWeather[] }).data)) {
+    return (json as { data: DestinationWeather[] }).data;
+  }
+
+  return [];
+}
+
+/**
+ * Fetch destination culinary trail, iconic dishes, dining spots, and etiquette.
+ */
+export async function fetchCulinaryTrail(
+  destinationId?: string,
+  overrideSiteId?: string
+): Promise<CulinaryTrail> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const qs = destinationId ? `?destinationId=${encodeURIComponent(destinationId)}` : '';
+  const json = await request<{ success: boolean; data: CulinaryTrail }>(
+    `/api/culinary/trail${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: CulinaryTrail }).data) {
+    return (json as { data: CulinaryTrail }).data;
+  }
+
+  throw new Error('Failed to load culinary trail');
+}
+
+/**
+ * Fetch all available destination culinary trails for the brand.
+ */
+export async function fetchBrandCulinaryTrails(
+  overrideSiteId?: string
+): Promise<CulinaryTrail[]> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: CulinaryTrail[] }>(
+    '/api/culinary/destinations',
+    {
+      method: 'GET',
+      siteId: activeSite,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && Array.isArray((json as { data: CulinaryTrail[] }).data)) {
+    return (json as { data: CulinaryTrail[] }).data;
+  }
+
+  return [];
+}
+
+/**
+ * Submit VIP dining table reservation or tasting banquet request via Concierge.
+ */
+export async function submitDiningReservation(
+  payload: DiningReservationRequest,
+  overrideSiteId?: string
+): Promise<DiningReservationResponse> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: DiningReservationResponse }>(
+    '/api/culinary/reserve',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DiningReservationResponse }).data) {
+    return (json as { data: DiningReservationResponse }).data;
+  }
+
+  throw new Error('Failed to submit dining reservation');
+}
+
+/**
+ * Fetch live Day-Of expedition dispatch data with crew, stops, timeline progress, and broadcasts.
+ */
+export async function fetchTodayDispatch(
+  tourId?: string,
+  bookingRef?: string,
+  overrideSiteId?: string
+): Promise<DayOfDispatch> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const params = new URLSearchParams();
+  if (tourId) params.append('tourId', tourId);
+  if (bookingRef) params.append('bookingRef', bookingRef);
+  const qs = params.toString() ? `?${params.toString()}` : '';
+
+  const json = await request<{ success: boolean; data: DayOfDispatch }>(
+    `/api/dispatch/today${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DayOfDispatch }).data) {
+    return (json as { data: DayOfDispatch }).data;
+  }
+
+  throw new Error('Failed to load expedition dispatch');
+}
+
+/**
+ * Post a tour guide broadcast note or urgent group announcement.
+ */
+export async function postGuideAnnouncement(
+  payload: { tourId?: string; title: string; message: string; priority?: string },
+  overrideSiteId?: string
+): Promise<GuideAnnouncement> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: GuideAnnouncement }>(
+    '/api/dispatch/announcement',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: GuideAnnouncement }).data) {
+    return (json as { data: GuideAnnouncement }).data;
+  }
+
+  throw new Error('Failed to publish guide announcement');
+}
+
+/**
+ * Fetch active collaborative group trip planning details.
+ */
+export async function fetchActiveGroupTrip(
+  overrideSiteId?: string
+): Promise<GroupTrip> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: GroupTrip }>(
+    '/api/groups/active',
+    {
+      method: 'GET',
+      siteId: activeSite,
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: GroupTrip }).data) {
+    return (json as { data: GroupTrip }).data;
+  }
+
+  throw new Error('Failed to load active group trip');
+}
+
+/**
+ * Cast a vote on a group poll option.
+ */
+export async function castGroupPollVote(
+  payload: CastVoteRequest,
+  overrideSiteId?: string
+): Promise<GroupPoll> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: GroupPoll }>(
+    '/api/groups/polls/vote',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: GroupPoll }).data) {
+    return (json as { data: GroupPoll }).data;
+  }
+
+  throw new Error('Failed to record group poll vote');
+}
+
+/**
+ * Add an assigned gear checklist item for the group.
+ */
+export async function createGroupGearItem(
+  payload: CreateGearItemRequest,
+  overrideSiteId?: string
+): Promise<GroupGearItem> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: GroupGearItem }>(
+    '/api/groups/gear',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: GroupGearItem }).data) {
+    return (json as { data: GroupGearItem }).data;
+  }
+
+  throw new Error('Failed to register group gear item');
+}
+
+/**
+ * Fetch trip scrapbook, memories, photos, and statistics.
+ */
+export async function fetchTripScrapbook(
+  tripId?: string,
+  overrideSiteId?: string
+): Promise<TripScrapbook> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const qs = tripId ? `?tripId=${encodeURIComponent(tripId)}` : '';
+  const json = await request<{ success: boolean; data: TripScrapbook }>(
+    `/api/journal/scrapbook${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: TripScrapbook }).data) {
+    return (json as { data: TripScrapbook }).data;
+  }
+
+  throw new Error('Failed to load trip scrapbook');
+}
+
+/**
+ * Add a new journal memory entry.
+ */
+export async function createJournalEntry(
+  payload: CreateJournalEntryRequest,
+  overrideSiteId?: string
+): Promise<JournalEntry> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const json = await request<{ success: boolean; data: JournalEntry }>(
+    '/api/journal/entry',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: JournalEntry }).data) {
+    return (json as { data: JournalEntry }).data;
+  }
+
+  throw new Error('Failed to create journal memory entry');
+}
+
+/**
+ * Fetch active airport transfer and flight details.
+ */
+export async function fetchActiveTransfer(
+  bookingRef?: string,
+  overrideSiteId?: string
+): Promise<AirportTransfer> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const qs = bookingRef ? `?bookingRef=${encodeURIComponent(bookingRef)}` : '';
+  const json = await request<{ success: boolean; data: AirportTransfer }>(
+    `/api/transfers/active${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: AirportTransfer }).data) {
+    return (json as { data: AirportTransfer }).data;
+  }
+
+  throw new Error('Failed to load active airport transfer');
+}
+
+/**
+ * Update airport transfer dispatch / chauffeur status.
+ */
+export async function updateTransferStatus(
+  payload: UpdateTransferStatusRequest,
+  overrideSiteId?: string
+): Promise<void> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  await request<{ success: boolean }>(
+    '/api/transfers/status',
+    {
+      method: 'POST',
+      siteId: activeSite,
+      body: JSON.stringify(payload),
+      skipCache: true,
+    }
+  );
+}
+
+/**
+ * Fetch destination offline phrasebook, phonetic translations, and cultural etiquette.
+ */
+export async function fetchDestinationPhrasebook(
+  category?: string,
+  search?: string,
+  overrideSiteId?: string
+): Promise<DestinationPhrasebook> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const params = new URLSearchParams();
+  if (category && category.toLowerCase() !== 'all') params.append('category', category);
+  if (search) params.append('search', search);
+  const qs = params.toString() ? `?${params.toString()}` : '';
+
+  const json = await request<{ success: boolean; data: DestinationPhrasebook }>(
+    `/api/phrasebook${qs}`,
+    {
+      method: 'GET',
+      siteId: activeSite,
+      skipCache: true,
+    }
+  );
+
+  if (json && typeof json === 'object' && 'data' in json && (json as { data: DestinationPhrasebook }).data) {
+    return (json as { data: DestinationPhrasebook }).data;
+  }
+
+  throw new Error('Failed to load destination phrasebook');
+}
+
+/**
+ * Lookup guest booking by Reference and Email without requiring account login.
+ */
+export async function lookupGuestBooking(
+  reference: string,
+  email: string,
+  overrideSiteId?: string
+): Promise<Booking> {
+  const activeSite = overrideSiteId || ENV.siteId;
+  const payload = {
+    reference: reference.trim().toUpperCase(),
+    email: email.trim().toLowerCase(),
+  };
+
+  if (__DEV__) {
+    console.log('[DEBUG] [BOOKING-LOOKUP] POST /api/bookings/lookup - Payload:', payload);
+  }
+
+  const json = await request<RawBackendEnvelope<unknown> | unknown>('/api/bookings/lookup', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    siteId: activeSite,
+    skipCache: true,
+  });
+
+  const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
+  return normalizeBooking(raw);
 }
 
 /**
@@ -1056,7 +1969,49 @@ export async function fetchBookings(
 }
 
 /**
- * Fetch a single booking by ID.
+ * Claim guest bookings made before registration/login.
+ * Links earlier bookings to the current user by email or saved references.
+ */
+export async function claimGuestBookingsApi(
+  references: string[],
+  email?: string,
+  overrideSiteId?: string
+): Promise<{ success: boolean; claimed: number; message?: string }> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const payload = {
+    email: email ? email.trim() : undefined,
+    references: references.filter(Boolean),
+  };
+
+  if (__DEV__) {
+    console.log('[DEBUG] [BOOKINGS-CLAIM] Claiming guest bookings with payload:', payload);
+  }
+
+  try {
+    const res = await request<RawBackendEnvelope<{ success: boolean; claimed: number; message?: string }>>(
+      '/api/bookings/claim',
+      {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        siteId,
+      }
+    );
+    const data = res?.data ?? res?.result ?? res;
+    return {
+      success: true,
+      claimed: (data as any)?.claimed ?? 0,
+      message: (data as any)?.message,
+    };
+  } catch (err: unknown) {
+    if (__DEV__) {
+      console.warn('[DEBUG] [BOOKINGS-CLAIM] Claim request failed:', err);
+    }
+    return { success: false, claimed: 0 };
+  }
+}
+
+/**
+ * Fetch a single booking by ID or Reference.
  */
 export async function fetchBooking(id: string, siteId?: string): Promise<Booking> {
   try {
@@ -1491,5 +2446,721 @@ export async function deleteBooking(id: string, overrideSiteId?: string): Promis
 
 export const fetchUsers = fetchAdminUsers;
 export const fetchAnalytics = fetchAdminAnalytics;
+
+// ─── Destination Tax-Free Shopping & Customs Refund API ───────────────────────
+
+export interface TaxClaimsResponse {
+  summary: TaxRefundSummary;
+  rule: DestinationTaxRule;
+  claims: TaxRefundReceipt[];
+}
+
+export async function fetchTaxRefundRules(overrideSiteId?: string): Promise<DestinationTaxRule | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<DestinationTaxRule>>('/api/tax-refund/rules', {
+      method: 'GET',
+      siteId,
+      skipCache: false,
+    });
+    return (res?.data ?? res) as DestinationTaxRule;
+  } catch (err) {
+    console.warn('[fetchTaxRefundRules] Error fetching tax rules:', err);
+    return null;
+  }
+}
+
+export async function fetchCustomsAllowances(overrideSiteId?: string): Promise<CustomsAllowanceRule | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CustomsAllowanceRule>>('/api/tax-refund/allowances', {
+      method: 'GET',
+      siteId,
+      skipCache: false,
+    });
+    return (res?.data ?? res) as CustomsAllowanceRule;
+  } catch (err) {
+    console.warn('[fetchCustomsAllowances] Error fetching allowances:', err);
+    return null;
+  }
+}
+
+export async function fetchTaxClaims(overrideSiteId?: string): Promise<TaxClaimsResponse | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<{ success: boolean; summary: TaxRefundSummary; rule: DestinationTaxRule; claims: TaxRefundReceipt[] }>(
+      '/api/tax-refund/claims',
+      {
+        method: 'GET',
+        siteId,
+        skipCache: true,
+      }
+    );
+    if (res && res.claims) {
+      return {
+        summary: res.summary,
+        rule: res.rule,
+        claims: res.claims,
+      };
+    }
+    return null;
+  } catch (err) {
+    console.warn('[fetchTaxClaims] Error fetching tax claims:', err);
+    return null;
+  }
+}
+
+export async function createTaxClaim(
+  payload: CreateTaxReceiptRequest,
+  overrideSiteId?: string
+): Promise<TaxRefundReceipt | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<TaxRefundReceipt>>('/api/tax-refund/claims', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TaxRefundReceipt;
+  } catch (err) {
+    console.warn('[createTaxClaim] Error creating claim:', err);
+    return null;
+  }
+}
+
+export async function updateTaxClaimStatus(
+  claimId: string,
+  payload: UpdateClaimStatusRequest,
+  overrideSiteId?: string
+): Promise<TaxRefundReceipt | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<TaxRefundReceipt>>(`/api/tax-refund/claims/${claimId}/status`, {
+      method: 'PUT',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TaxRefundReceipt;
+  } catch (err) {
+    console.warn('[updateTaxClaimStatus] Error updating claim status:', err);
+    return null;
+  }
+}
+
+export async function deleteTaxClaim(claimId: string, overrideSiteId?: string): Promise<boolean> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<{ success: boolean; deleted: boolean }>(`/api/tax-refund/claims/${claimId}`, {
+      method: 'DELETE',
+      siteId,
+      skipCache: true,
+    });
+    return !!res?.deleted;
+  } catch (err) {
+    console.warn('[deleteTaxClaim] Error deleting claim:', err);
+    return false;
+  }
+}
+
+// ─── Smart International eSIM Roaming & Cellular API ──────────────────────────
+
+export async function fetchEsimHubData(overrideSiteId?: string): Promise<EsimHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<EsimHubData>>('/api/esim/hub', {
+      method: 'GET',
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as EsimHubData;
+  } catch (err) {
+    console.warn('[fetchEsimHubData] Error loading eSIM hub data:', err);
+    return null;
+  }
+}
+
+export async function activateEsimPackage(
+  payload: ActivateEsimRequest,
+  overrideSiteId?: string
+): Promise<ActiveEsimProfile | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ActiveEsimProfile>>('/api/esim/activate', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ActiveEsimProfile;
+  } catch (err) {
+    console.warn('[activateEsimPackage] Error activating eSIM:', err);
+    return null;
+  }
+}
+
+export async function topUpEsimData(
+  payload: TopUpDataRequest,
+  overrideSiteId?: string
+): Promise<ActiveEsimProfile | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ActiveEsimProfile>>('/api/esim/topup', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ActiveEsimProfile;
+  } catch (err) {
+    console.warn('[topUpEsimData] Error topping up eSIM data:', err);
+    return null;
+  }
+}
+
+// ─── Travel Insurance & Cashless Hospital Network ────────────────────────────
+
+export async function fetchTravelInsurancePolicy(
+  overrideSiteId?: string
+): Promise<TravelInsurancePolicy | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<TravelInsurancePolicy>>('/api/insurance/policy', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TravelInsurancePolicy;
+  } catch (err) {
+    console.warn('[fetchTravelInsurancePolicy] Error loading insurance policy:', err);
+    return null;
+  }
+}
+
+export async function fetchInsuranceHospitals(
+  city?: string,
+  search?: string,
+  overrideSiteId?: string
+): Promise<HospitalDirectoryItem[]> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (city && city !== 'all') params.append('city', city);
+    if (search && search.trim()) params.append('search', search.trim());
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<HospitalDirectoryItem[]>>(`/api/insurance/hospitals${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? (Array.isArray(res) ? res : [])) as HospitalDirectoryItem[];
+  } catch (err) {
+    console.warn('[fetchInsuranceHospitals] Error loading hospitals:', err);
+    return [];
+  }
+}
+
+export async function submitClaimInquiry(
+  payload: SubmitClaimInquiryRequest,
+  overrideSiteId?: string
+): Promise<ClaimInquiryResponse | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<ClaimInquiryResponse>>('/api/insurance/claim-inquiry', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as ClaimInquiryResponse;
+  } catch (err) {
+    console.warn('[submitClaimInquiry] Error submitting claim inquiry:', err);
+    return null;
+  }
+}
+
+// ─── Visa Requirements, Passport Validity & Consular Directory ───────────────
+
+export async function fetchVisaHubData(
+  nationality?: string,
+  destination?: string,
+  overrideSiteId?: string
+): Promise<VisaHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (nationality) params.append('nationality', nationality);
+    if (destination) params.append('destination', destination);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<VisaHubData>>(`/api/visa/hub${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as VisaHubData;
+  } catch (err) {
+    console.warn('[fetchVisaHubData] Error loading visa hub data:', err);
+    return null;
+  }
+}
+
+export async function checkVisaRule(
+  nationality: string,
+  destination: string,
+  overrideSiteId?: string
+): Promise<VisaRequirement | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams({ nationality, destination });
+    const res = await request<RawBackendEnvelope<VisaRequirement>>(`/api/visa/check?${params.toString()}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as VisaRequirement;
+  } catch (err) {
+    console.warn('[checkVisaRule] Error checking visa rule:', err);
+    return null;
+  }
+}
+
+export async function checkPassportValidity(
+  payload: PassportValidityCheckRequest,
+  overrideSiteId?: string
+): Promise<PassportValidityCheckResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<PassportValidityCheckResult>>('/api/visa/check-validity', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as PassportValidityCheckResult;
+  } catch (err) {
+    console.warn('[checkPassportValidity] Error validating passport:', err);
+    return null;
+  }
+}
+
+export async function fetchDestinationEmbassies(
+  city?: string,
+  homeCountry?: string,
+  overrideSiteId?: string
+): Promise<EmbassyConsulate[]> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (city && city !== 'all') params.append('city', city);
+    if (homeCountry) params.append('homeCountry', homeCountry);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<EmbassyConsulate[]>>(`/api/visa/embassies${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? (Array.isArray(res) ? res : [])) as EmbassyConsulate[];
+  } catch (err) {
+    console.warn('[fetchDestinationEmbassies] Error loading embassies:', err);
+    return [];
+  }
+}
+
+// ─── Carbon Footprint, Eco Projects & Offset Certificates ───────────────────
+
+export async function fetchEcoHubData(
+  overrideSiteId?: string
+): Promise<EcoHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<EcoHubData>>('/api/eco/hub', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as EcoHubData;
+  } catch (err) {
+    console.warn('[fetchEcoHubData] Error loading eco hub data:', err);
+    return null;
+  }
+}
+
+export async function calculateCarbonEmissions(
+  payload: CalculateEmissionsRequest,
+  overrideSiteId?: string
+): Promise<CarbonEmissionBreakdown | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CarbonEmissionBreakdown>>('/api/eco/calculate', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CarbonEmissionBreakdown;
+  } catch (err) {
+    console.warn('[calculateCarbonEmissions] Error calculating emissions:', err);
+    return null;
+  }
+}
+
+export async function submitCarbonOffset(
+  payload: SubmitOffsetRequest,
+  overrideSiteId?: string
+): Promise<SubmitOffsetResponse | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<SubmitOffsetResponse>>('/api/eco/offset', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as SubmitOffsetResponse;
+  } catch (err) {
+    console.warn('[submitCarbonOffset] Error submitting offset contribution:', err);
+    return null;
+  }
+}
+
+export async function toggleEcoPledge(
+  pledgeId: string,
+  isPledged: boolean,
+  overrideSiteId?: string
+): Promise<boolean> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<{ success: boolean }>>('/api/eco/pledge', {
+      method: 'POST',
+      body: JSON.stringify({ pledgeId, isPledged }),
+      siteId,
+      skipCache: true,
+    });
+    return !!(res?.data?.success ?? (res as any)?.success);
+  } catch (err) {
+    console.warn('[toggleEcoPledge] Error toggling eco pledge:', err);
+    return false;
+  }
+}
+
+// ─── Destination Cultural Decorum, Temple Dress Code & Etiquette ───────────
+
+export async function fetchCultureHubData(
+  destination?: string,
+  overrideSiteId?: string
+): Promise<CultureHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (destination) params.append('destination', destination);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<CultureHubData>>(`/api/culture/hub${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CultureHubData;
+  } catch (err) {
+    console.warn('[fetchCultureHubData] Error loading culture hub data:', err);
+    return null;
+  }
+}
+
+export async function checkOutfitCompliance(
+  payload: CheckOutfitComplianceRequest,
+  overrideSiteId?: string
+): Promise<CheckOutfitComplianceResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CheckOutfitComplianceResult>>('/api/culture/check-outfit', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CheckOutfitComplianceResult;
+  } catch (err) {
+    console.warn('[checkOutfitCompliance] Error checking outfit compliance:', err);
+    return null;
+  }
+}
+
+export async function fetchEtiquetteItems(
+  category?: string,
+  overrideSiteId?: string
+): Promise<CulturalEtiquetteItem[]> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (category && category !== 'all') params.append('category', category);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<CulturalEtiquetteItem[]>>(`/api/culture/etiquette${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? (Array.isArray(res) ? res : [])) as CulturalEtiquetteItem[];
+  } catch (err) {
+    console.warn('[fetchEtiquetteItems] Error loading etiquette items:', err);
+    return [];
+  }
+}
+
+// ─── International Power Sockets, Voltage & Power Bank Rentals ─────────────
+
+export async function fetchPowerHubData(
+  destination?: string,
+  overrideSiteId?: string
+): Promise<PowerHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (destination) params.append('destination', destination);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<PowerHubData>>(`/api/power/hub${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as PowerHubData;
+  } catch (err) {
+    console.warn('[fetchPowerHubData] Error loading power hub data:', err);
+    return null;
+  }
+}
+
+export async function checkApplianceSafety(
+  payload: CheckApplianceRequest,
+  overrideSiteId?: string
+): Promise<CheckApplianceResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CheckApplianceResult>>('/api/power/check-appliance', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CheckApplianceResult;
+  } catch (err) {
+    console.warn('[checkApplianceSafety] Error checking appliance voltage safety:', err);
+    return null;
+  }
+}
+
+// ─── Airline Baggage Allowance & Excess Fee Calculator ──────────────────────
+
+export async function fetchBaggageHubData(
+  airlineCode?: string,
+  overrideSiteId?: string
+): Promise<BaggageHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const params = new URLSearchParams();
+    if (airlineCode) params.append('airlineCode', airlineCode);
+
+    const queryStr = params.toString() ? `?${params.toString()}` : '';
+    const res = await request<RawBackendEnvelope<BaggageHubData>>(`/api/baggage/hub${queryStr}`, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as BaggageHubData;
+  } catch (err) {
+    console.warn('[fetchBaggageHubData] Error loading baggage hub data:', err);
+    return null;
+  }
+}
+
+export async function calculateBaggageFee(
+  payload: CalculateBaggageFeeRequest,
+  overrideSiteId?: string
+): Promise<CalculateBaggageFeeResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CalculateBaggageFeeResult>>('/api/baggage/calculate-excess', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CalculateBaggageFeeResult;
+  } catch (err) {
+    console.warn('[calculateBaggageFee] Error calculating baggage excess fees:', err);
+    return null;
+  }
+}
+
+// ─── Rapid Transit Navigator & Taxi Meter Scam Shield ───────────────────────
+
+export async function fetchTransitHubData(
+  overrideSiteId?: string
+): Promise<TransitHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<TransitHubData>>('/api/transit/hub', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TransitHubData;
+  } catch (err) {
+    console.warn('[fetchTransitHubData] Error loading transit hub data:', err);
+    return null;
+  }
+}
+
+export async function calculateTransitFare(
+  payload: CalculateTransitFareRequest,
+  overrideSiteId?: string
+): Promise<CalculateTransitFareResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CalculateTransitFareResult>>('/api/transit/calculate-fare', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CalculateTransitFareResult;
+  } catch (err) {
+    console.warn('[calculateTransitFare] Error calculating transit fare:', err);
+    return null;
+  }
+}
+
+export async function estimateTaxiFare(
+  payload: EstimateTaxiFareRequest,
+  overrideSiteId?: string
+): Promise<EstimateTaxiFareResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<EstimateTaxiFareResult>>('/api/transit/estimate-taxi', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as EstimateTaxiFareResult;
+  } catch (err) {
+    console.warn('[estimateTaxiFare] Error estimating taxi meter fare:', err);
+    return null;
+  }
+}
+
+// ─── Travel Pharmacy & Medicine Translator ───────────────────────────────────
+
+export async function fetchPharmacyHubData(
+  overrideSiteId?: string
+): Promise<PharmacyHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<PharmacyHubData>>('/api/pharmacy/hub', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as PharmacyHubData;
+  } catch (err) {
+    console.warn('[fetchPharmacyHubData] Error loading pharmacy hub data:', err);
+    return null;
+  }
+}
+
+export async function searchPharmacyMedicines(
+  query: string,
+  overrideSiteId?: string
+): Promise<TravelMedicine[] | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const url = `/api/pharmacy/search?q=${encodeURIComponent(query)}`;
+    const res = await request<RawBackendEnvelope<TravelMedicine[]>>(url, {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TravelMedicine[];
+  } catch (err) {
+    console.warn('[searchPharmacyMedicines] Error searching travel medicines:', err);
+    return null;
+  }
+}
+
+// ─── Tipping & Gratuity Etiquette Calculator ──────────────────────────────────
+
+export async function fetchTippingGuide(
+  overrideSiteId?: string
+): Promise<TippingCountryGuide | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<TippingCountryGuide>>('/api/tipping/guide', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as TippingCountryGuide;
+  } catch (err) {
+    console.warn('[fetchTippingGuide] Error loading tipping guide:', err);
+    return null;
+  }
+}
+
+export async function calculateTipping(
+  payload: CalculateTipRequest,
+  overrideSiteId?: string
+): Promise<CalculateTipResult | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<CalculateTipResult>>('/api/tipping/calculate', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as CalculateTipResult;
+  } catch (err) {
+    console.warn('[calculateTipping] Error calculating tip:', err);
+    return null;
+  }
+}
+
+// ─── Drive Safety & Motorbike Rental Navigator ───────────────────────────────
+
+export async function fetchDriveSafetyHub(
+  overrideSiteId?: string
+): Promise<DriveSafetyHubData | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<DriveSafetyHubData>>('/api/drive-safety/hub', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as DriveSafetyHubData;
+  } catch (err) {
+    console.warn('[fetchDriveSafetyHub] Error fetching drive safety hub:', err);
+    return null;
+  }
+}
+
+export async function fetchRoadRules(
+  overrideSiteId?: string
+): Promise<RoadRuleItem[] | null> {
+  const siteId = overrideSiteId || ENV.siteId;
+  try {
+    const res = await request<RawBackendEnvelope<RoadRuleItem[]>>('/api/drive-safety/rules', {
+      siteId,
+      skipCache: true,
+    });
+    return (res?.data ?? res) as RoadRuleItem[];
+  } catch (err) {
+    console.warn('[fetchRoadRules] Error fetching road rules:', err);
+    return null;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 

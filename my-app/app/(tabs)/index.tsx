@@ -33,7 +33,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { useSite, useSiteConfig } from '@/store/SiteConfigContext';
 import { useColors } from '@/store/ThemeContext';
 import { useAuth } from '@/context/AuthContext';
-import { useNetworkStatus } from '@/hooks/useNetworkStatus';
 import { useTours } from '@/hooks/useTours';
 import { useDestinations } from '@/hooks/useDestinations';
 import { queryKeys } from '@/store/queryClient';
@@ -41,13 +40,35 @@ import { getSiteEntry } from '@/constants/siteRegistry';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { getHeadingFontFamily } from '@/lib/sectionHelpers';
 import { DEFAULT_BLURHASH, resolveImageUrl } from '@/lib/imageUtils';
-import OfflineBanner from '@/components/OfflineBanner';
 import SkeletonLoader from '@/components/SkeletonLoader';
 import { MemoizedTourCardHorizontal as TourCardHorizontal } from '@/components/TourCardHorizontal';
 import { MemoizedTourCard as TourCard } from '@/components/TourCard';
 import { MemoizedAdventureTourCard as AdventureTourCard } from '@/components/AdventureTourCard';
 import { MemoizedLuxuryTourCard as LuxuryTourCard } from '@/components/LuxuryTourCard';
 import EmptyState from '@/components/EmptyState';
+import UpcomingTripCountdown from '@/components/UpcomingTripCountdown';
+import { WeatherWidget } from '@/components/WeatherWidget';
+import { CulinaryHighlightCard } from '@/components/CulinaryHighlightCard';
+import { DayOfCockpitCard } from '@/components/DayOfCockpitCard';
+import { GroupTripCard } from '@/components/GroupTripCard';
+import { JournalHeroCard } from '@/components/JournalHeroCard';
+import { AirportTransferCard } from '@/components/AirportTransferCard';
+import { PhrasebookCard } from '@/components/PhrasebookCard';
+import { TaxRefundHeroCard } from '@/components/TaxRefundHeroCard';
+import { EsimHeroCard } from '@/components/EsimHeroCard';
+import { InsuranceHeroCard } from '@/components/InsuranceHeroCard';
+import { VisaHeroCard } from '@/components/VisaHeroCard';
+import { EcoHeroCard } from '@/components/EcoHeroCard';
+import { CultureHeroCard } from '@/components/CultureHeroCard';
+import { PowerHeroCard } from '@/components/PowerHeroCard';
+import { BaggageHeroCard } from '@/components/BaggageHeroCard';
+import { TransitHeroCard } from '@/components/TransitHeroCard';
+import { PharmacyHeroCard } from '@/components/PharmacyHeroCard';
+import { TippingHeroCard } from '@/components/TippingHeroCard';
+import { DriveSafetyHeroCard } from '@/components/DriveSafetyHeroCard';
+import { useBooking } from '@/context/BookingContext';
+import { useCurrency } from '@/context/CurrencyContext';
+import { useLanguage } from '@/context/LanguageContext';
 import type { Tour } from '@/types';
 import { tourHref } from '@/lib/navigation';
 
@@ -58,12 +79,13 @@ export default function HomeScreen() {
   const colors = useColors();
   const queryClient = useQueryClient();
   const { siteId, hostname, currency: siteCurrency } = useSite();
-  const { isOnline } = useNetworkStatus();
   const currentSite = getSiteEntry(siteId);
+  const { t } = useLanguage();
   const headingFontFamily = getHeadingFontFamily(config);
 
   const { tours, isLoading: toursLoading, isError: toursIsError, error: toursError, refetch: refetchTours } = useTours();
   const { destinations, isLoading: destsLoading, refetch: refetchDests } = useDestinations();
+  const { bookings, refreshBookings } = useBooking();
 
   const [refreshing, setRefreshing] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -76,13 +98,14 @@ export default function HomeScreen() {
         queryClient.invalidateQueries({ queryKey: queryKeys.destinations(siteId, hostname) }),
         queryClient.invalidateQueries({ queryKey: queryKeys.siteConfig(siteId, hostname) }),
       ]);
-      await Promise.all([refetchTours(), refetchDests()]);
+      await Promise.all([refetchTours(), refetchDests(), refreshBookings()]);
     } finally {
       setRefreshing(false);
     }
-  }, [siteId, hostname, queryClient, refetchTours, refetchDests]);
+  }, [siteId, hostname, queryClient, refetchTours, refetchDests, refreshBookings]);
 
-  const currency = siteCurrency?.symbol || '$';
+  const { currencySymbol } = useCurrency();
+  const currency = currencySymbol || siteCurrency?.symbol || '$';
 
   const categories = [
     { id: 'all', label: 'All', icon: 'compass' },
@@ -164,9 +187,6 @@ export default function HomeScreen() {
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      {/* Offline Banner */}
-      {!isOnline && <OfflineBanner />}
-
       {/* ─── Scrollable Native Content ─── */}
       <ScrollView
         style={styles.scroll}
@@ -199,11 +219,11 @@ export default function HomeScreen() {
           </View>
 
           <Text style={[styles.heroHeading, { color: colors.heading, fontFamily: headingFontFamily }]}>
-            Where will you journey next?
+            {t('home_welcome', 'Where will you journey next?')}
           </Text>
 
           <Text style={[styles.heroSub, { color: colors.mutedText }]}>
-            Discover verified tours, boutique stays, and authentic global adventures customized for you.
+            {t('home_tagline', 'Discover verified tours, boutique stays, and authentic global adventures customized for you.')}
           </Text>
 
           {/* Quick Search Bar trigger */}
@@ -220,15 +240,72 @@ export default function HomeScreen() {
           >
             <Ionicons name="search" size={18} color={colors.primary} style={{ marginRight: 8 }} />
             <Text style={[styles.searchBarPlaceholder, { color: colors.mutedText }]}>
-              Search by destination, tour or style...
+              {t('action_search', 'Search by destination, tour or style...')}
             </Text>
           </TouchableOpacity>
         </View>
 
+        {/* ─── Upcoming Trip Countdown Card (if confirmed reservation exists) ─── */}
+        <UpcomingTripCountdown bookings={bookings} />
+
+        {/* ─── Flight & Airport Chauffeur Transfer Card ─── */}
+        <AirportTransferCard style={{ marginBottom: 14 }} />
+
+        {/* ─── In-Destination Offline Pocket Phrasebook & Translator ─── */}
+        <PhrasebookCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Duty-Free Shopping & VAT/GST Tax Refund Pass ─── */}
+        <TaxRefundHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Travel eSIM & 5G Cellular Roaming Hub ─── */}
+        <EsimHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Travel Insurance Policy & Cashless Medical Concierge ─── */}
+        <InsuranceHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── International Visa Requirements & Border Clearance ─── */}
+        <VisaHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Sustainable Eco-Travel & Carbon Offset Hub ─── */}
+        <EcoHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Cultural Decorum & Sacred Temple Dress Codes ─── */}
+        <CultureHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── International Power Sockets & Voltage Guide ─── */}
+        <PowerHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Airline Baggage Allowance & Sizer ─── */}
+        <BaggageHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Rapid Transit Navigator & Taxi Scam Shield ─── */}
+        <TransitHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Travel Pharmacy & Medicine Translator ─── */}
+        <PharmacyHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Tipping & Gratuity Etiquette Calculator ─── */}
+        <TippingHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Road Rules & Motorbike Rental Safety Navigator ─── */}
+        <DriveSafetyHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Day-Of Live Expedition Cockpit Card ─── */}
+        <DayOfCockpitCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Expedition Party & Collaborative Planning Card ─── */}
+        <GroupTripCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Expedition Memory Scrapbook & Travel Journal Card ─── */}
+        <JournalHeroCard style={{ marginBottom: 14 }} />
+
+        {/* ─── Live Destination Weather & Climate Card ─── */}
+        <WeatherWidget style={{ marginBottom: 14 }} />
+
         {/* ─── Horizontal Category Chips ─── */}
         <View style={styles.sectionHeader}>
           <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-            Travel Categories
+            {t('home_categories', 'Travel Categories')}
           </Text>
         </View>
         <ScrollView
@@ -378,13 +455,18 @@ export default function HomeScreen() {
           </View>
         )}
 
+        {/* ─── Regional Culinary Trail & Authentic Dining Card ─── */}
+        <CulinaryHighlightCard />
+
         {/* ─── All Tours List (only rendered when NOT loading and NOT in error) ─── */}
         {!toursLoading && !toursIsError && (
           <View style={styles.allToursSection}>
             <View style={styles.sectionHeader}>
               <View>
                 <Text style={[styles.sectionTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-                  {selectedCategory === 'All' ? 'All Curated Experiences' : `${selectedCategory} Experiences`}
+                  {selectedCategory === 'All'
+                    ? t('home_featured_tours', 'All Curated Experiences')
+                    : `${selectedCategory} Experiences`}
                 </Text>
                 <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
                   {filteredTours.length} {filteredTours.length === 1 ? 'tour available' : 'tours available'}
