@@ -14,10 +14,10 @@
     "description": "Stay in an ultra-luxurious overwater villa perched above a turquoise lagoon, snorkel pristine house reefs, and cruise at sunset with wild dolphins.",
     "shortDescription": "Luxury overwater bungalow, turquoise lagoons, and dolphin sunset cruise.",
     "fullDescription": "Indulge in the ultimate tropical sanctuary in the Maldives. Wake up to direct lagoon access from your private sun deck, indulge in a floating Champagne breakfast, snorkel alongside hawksbill turtles and eagle rays on protected house reefs, and cap your days with a private Dhoni sunset cruise.",
-    "price": 3499,
-    "originalPrice": 4200,
+    "price": 40,
+    "originalPrice": 50,
     "discountedPrice": 3299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -25,11 +25,11 @@
     "rating": 4.95,
     "reviews": 184,
     "reviewCount": 184,
-    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
     ],
     "groupSize": "2-8 travelers",
     "bestTime": "November to April",
@@ -107,7 +107,21 @@
         "text": "Flawless service and unmatched coral reef clarity. Worth every single penny.",
         "date": "2026-09-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+    ],
+    "alt": "Endless desert dunes with 4x4 tracks during golden hour",
+    "photoCredit": {
+      "photographer": "Ferdinand Stöhr",
+      "profileUrl": "https://unsplash.com/@fellowferdi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 302,
@@ -124,10 +138,10 @@
     "description": "Admire white-washed cubist architecture and blue domes in Oia, cruise the submerged volcanic caldera on a luxury catamaran, and relax on Red Beach.",
     "shortDescription": "Iconic blue domes, private caldera sailing, and cliffside infinity pools.",
     "fullDescription": "Experience the romance of Greece's most dramatic island. Perched high on the volcanic rim of Oia, stay in a whitewashed cave suite with infinity plunge pool overlooking the Aegean. Sail past volcanic hot springs and towering caldera cliffs on a private catamaran cruise with fresh Greek barbecue and Assyrtiko wine.",
-    "price": 2899,
-    "originalPrice": 3400,
+    "price": 34,
+    "originalPrice": 43,
     "discountedPrice": 2699,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -135,10 +149,11 @@
     "rating": 4.9,
     "reviews": 156,
     "reviewCount": 156,
-    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-12 travelers",
     "bestTime": "April to October",
@@ -204,7 +219,21 @@
         "text": "The catamaran sailing and sunset in Oia took our breath away. Exemplary hospitality.",
         "date": "2026-07-28"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 303,
@@ -221,10 +250,10 @@
     "description": "Awaken facing emerald Mount Otemanu, snorkel with stingrays and reef sharks in translucent lagoons, and canoe-deliver breakfast.",
     "shortDescription": "Mount Otemanu views, stingray lagoon safari, and Tahitian luxury.",
     "fullDescription": "Known as the Jewel of the South Pacific, Bora Bora offers an unmatched blend of volcanic majesty and serene neon-blue waters. Stay at a premier resort on a private motu, swim in coral gardens with graceful manta rays, and immerse yourself in rich Tahitian culture.",
-    "price": 4199,
-    "originalPrice": 4890,
+    "price": 49,
+    "originalPrice": 61,
     "discountedPrice": 3999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -232,10 +261,11 @@
     "rating": 4.98,
     "reviews": 112,
     "reviewCount": 112,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "2-6 travelers",
     "bestTime": "May to October",
@@ -306,7 +336,21 @@
         "text": "Unsurpassed luxury. Mount Otemanu right outside our bedroom window was pure heaven.",
         "date": "2026-06-30"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 304,
@@ -323,10 +367,10 @@
     "description": "Cruise past Positano's pastel cliff dwellings, swim into the glowing Blue Grotto of Capri, and dine on fresh Mediterranean fare in Ravello.",
     "shortDescription": "Positano cliffside vistas, Capri Blue Grotto, and luxury Riva yacht.",
     "fullDescription": "Celebrate the Dolce Vita lifestyle along Italy's most glamorous coast. From the cliff-clinging pastel villas of Positano to the historic aristocratic villas of Ravello, explore by private speed yacht. Sail around Capri's towering Faraglioni rock formations, anchor for cliff jumping in emerald coves, and taste handmade limoncello.",
-    "price": 3250,
-    "originalPrice": 3800,
+    "price": 38,
+    "originalPrice": 48,
     "discountedPrice": 2999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -334,10 +378,11 @@
     "rating": 4.88,
     "reviews": 129,
     "reviewCount": 129,
-    "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "May to October",
@@ -403,7 +448,21 @@
         "text": "Sailing through the Faraglioni rock arch on a private yacht was the highlight of our European vacation.",
         "date": "2026-07-10"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 305,
@@ -420,10 +479,10 @@
     "description": "Sail from West Maui across the Auau Channel to secluded sea cliffs in Lanai, snorkel Molokini Crater, and relax on golden Kaanapali Beach.",
     "shortDescription": "Molokini crater coral, Lanai sea cliffs, and Hawaiian sunset sail.",
     "fullDescription": "Experience the magic of the Valley Isle. Stay in luxury along the golden sands of Kaanapali, sail across the channel on a state-of-the-art catamaran to secluded coves on Lanai, and dive into the crystal crescent of Molokini Crater surrounded by hundreds of Hawaiian green sea turtles.",
-    "price": 2799,
-    "originalPrice": 3200,
+    "price": 32,
+    "originalPrice": 40,
     "discountedPrice": 2599,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -431,10 +490,11 @@
     "rating": 4.87,
     "reviews": 94,
     "reviewCount": 94,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "December to April",
@@ -500,7 +560,21 @@
         "text": "Molokini snorkeling was surreal, and the Lanai catamaran sail was magnificent.",
         "date": "2026-08-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 306,
@@ -517,10 +591,10 @@
     "description": "Cycle past ancient granite boulders at Anse Source d'Argent, explore the primeval Coco de Mer palm forest in Vallée de Mai, and relax on Anse Lazio.",
     "shortDescription": "Iconic granite beaches, Vallée de Mai coco de mer, and Creole island luxury.",
     "fullDescription": "Step into an earthly Eden in the Seychelles archipelago. Marvel at the sculptured pink granite monoliths standing against turquoise waters at Anse Source d'Argent on bicycle-friendly La Digue, wander through the UNESCO-listed Vallée de Mai on Praslin, and relax in world-class eco-resorts.",
-    "price": 3650,
-    "originalPrice": 4200,
+    "price": 42,
+    "originalPrice": 53,
     "discountedPrice": 3450,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -528,10 +602,11 @@
     "rating": 4.93,
     "reviews": 88,
     "reviewCount": 88,
-    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to May, October to November",
@@ -607,7 +682,21 @@
         "text": "The granite boulders on La Digue look like something sculpted by gods. Truly sublime.",
         "date": "2026-09-12"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 307,
@@ -624,10 +713,10 @@
     "description": "Cruise the French West Indies in style, anchor at Colombier Beach in St. Barts, and lounge on the powdery sands of Shoal Bay East in Anguilla.",
     "shortDescription": "Glamorous St. Barts chic, private yacht anchorage, and Anguilla sands.",
     "fullDescription": "Live the epitome of Caribbean chic and understated glamour. Board a luxury chartered yacht to sail between the fashionable French enclave of St. Barts and the pristine turquoise waters of Anguilla. Anchor in tranquil bays, dine at world-renowned beach clubs like Nikki Beach, and snorkel with sea turtles.",
-    "price": 4950,
-    "originalPrice": 5800,
+    "price": 57,
+    "originalPrice": 71,
     "discountedPrice": 4700,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -635,10 +724,11 @@
     "rating": 4.96,
     "reviews": 73,
     "reviewCount": 73,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "2-8 travelers",
     "bestTime": "December to April",
@@ -704,7 +794,21 @@
         "text": "The yacht charter and Seabob underwater scootering in Colombier Bay was out of this world.",
         "date": "2026-07-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 308,
@@ -721,10 +825,10 @@
     "description": "Immerse in Fijian Bula hospitality, explore the sacred Sawa-i-Lau limestone sea caves, and snorkel vibrant blue coral lagoons.",
     "shortDescription": "Sawa-i-Lau sea caves, authentic Bula warmth, and private beach bure.",
     "fullDescription": "Escape to the sun-drenched Yasawa archipelago in western Fiji. Stay in traditional luxury beachfront bures, swim through cathedral-like sea caves submerged in sapphire water, partake in authentic Kava welcoming ceremonies, and snorkel teeming marine reserves.",
-    "price": 2499,
-    "originalPrice": 2950,
+    "price": 29,
+    "originalPrice": 36,
     "discountedPrice": 2299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -732,10 +836,11 @@
     "rating": 4.89,
     "reviews": 95,
     "reviewCount": 95,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "4-12 travelers",
     "bestTime": "May to October",
@@ -806,7 +911,21 @@
         "text": "The warmth of the Fijian people and the beauty of the Yasawa caves is something I will treasure forever.",
         "date": "2026-08-29"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 309,
@@ -823,10 +942,10 @@
     "description": "Lounge on bohemian white-sand Tulum beaches, snorkel secret crystalline limestone cenotes, and explore Mayan cliffside ruins.",
     "shortDescription": "Tulum bohemian luxury, Mayan cliff temples, and mystical cenotes.",
     "fullDescription": "Blend bohemian chic aesthetics with ancient Mesoamerican majesty along Mexico’s Caribbean coastline. Stay in an eco-luxury beachfront villa in Tulum, explore the clifftop Mayan fortress overlooking the sea, swim through sunlit limestone sinkholes (cenotes), and enjoy farm-to-table Mexican culinary artistry.",
-    "price": 2199,
-    "originalPrice": 2600,
+    "price": 25,
+    "originalPrice": 31,
     "discountedPrice": 1999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -834,10 +953,11 @@
     "rating": 4.86,
     "reviews": 140,
     "reviewCount": 140,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "4-12 travelers",
     "bestTime": "November to April",
@@ -903,7 +1023,21 @@
         "text": "The cenote swimming was spiritual and Tulum’s beach vibe is unmatched.",
         "date": "2026-07-09"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 310,
@@ -920,10 +1054,10 @@
     "description": "Enjoy world-class beach clubs, private motor yacht sailing to the sacred ruins of Delos, and wind-blown Cycladic romance.",
     "shortDescription": "Mykonos beach clubs, ancient Delos sanctuary, and private motor yacht.",
     "fullDescription": "Combine glamorous Aegean beach life with ancient mythological history. Stay in a luxury hillside villa overlooking Psarou Beach, sail on a private motor yacht to the uninhabited sanctuary island of Delos—birthplace of Apollo—and party or relax at celebrated beach clubs like Scorpios and Nammos.",
-    "price": 3100,
-    "originalPrice": 3600,
+    "price": 36,
+    "originalPrice": 45,
     "discountedPrice": 2899,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -931,10 +1065,11 @@
     "rating": 4.85,
     "reviews": 110,
     "reviewCount": 110,
-    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "May to October",
@@ -1000,7 +1135,21 @@
         "text": "The yacht charter to Rhenia was idyllic. Pure Aegean luxury.",
         "date": "2026-08-04"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 311,
@@ -1017,10 +1166,10 @@
     "description": "Take a scenic helicopter flight right next to the iconic Matterhorn, traverse Gorner Glacier with crampons, and stay in Alpine luxury.",
     "shortDescription": "Matterhorn helicopter flight, glacier ice trekking, and Zermatt luxury chalets.",
     "fullDescription": "Ascend into the towering wonderland of the Swiss high Alps. Based in the car-free alpine village of Zermatt, embark on an exhilarating helicopter flight around the pyramid face of the Matterhorn, gear up with an IFMGA mountain guide for a Gorner Glacier crampon trek, and relax in world-class thermal spas.",
-    "price": 3899,
-    "originalPrice": 4500,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 3699,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -1028,10 +1177,11 @@
     "rating": 4.97,
     "reviews": 165,
     "reviewCount": 165,
-    "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "June to September",
@@ -1098,7 +1248,21 @@
         "text": "Walking on the glacier with the Matterhorn towering above us was the greatest adventure of my life.",
         "date": "2026-07-29"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 312,
@@ -1115,10 +1279,10 @@
     "description": "Thrill to the adventure capital of the world: Shotover River jet boating, Nevis highwire bungee, and scenic flight into majestic Milford Sound.",
     "shortDescription": "Shotover jet boating, Nevis bungee, and Milford Sound fiord flight.",
     "fullDescription": "Immerse yourself in non-stop adrenaline against the cinematic backdrop of New Zealand’s Southern Alps. Skim past sheer canyon walls on the legendary Shotover Jet, take a scenic fixed-wing flight landing in Milford Sound for a fiord cruise under Stirling Falls, and test your courage on the Nevis highwire.",
-    "price": 3199,
-    "originalPrice": 3700,
+    "price": 37,
+    "originalPrice": 46,
     "discountedPrice": 2999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -1126,10 +1290,11 @@
     "rating": 4.94,
     "reviews": 148,
     "reviewCount": 148,
-    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to April",
@@ -1196,7 +1361,21 @@
         "text": "Milford Sound flight was the most majestic scenery on Earth, and the Shotover Jet was heart-pumping fun!",
         "date": "2026-08-16"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 313,
@@ -1213,10 +1392,10 @@
     "description": "Zipline through cloudforest canopies, conquer Class IV rapids on the Pacuare River, and soak in volcanic thermal springs with views of Arenal.",
     "shortDescription": "Arenal volcano ziplines, Pacuare Class IV rafting, and geothermal hot springs.",
     "fullDescription": "Immerse in Costa Rica's pure adventure playground (Pura Vida). Zipline above the tropical forest canopy facing the imposing cone of Arenal Volcano, trek across dizzying hanging bridges spotting toucans and howler monkeys, paddle thrilling Class III-IV rapids down the wild Pacuare River gorge, and relax in thermal springs.",
-    "price": 2399,
-    "originalPrice": 2800,
+    "price": 28,
+    "originalPrice": 35,
     "discountedPrice": 2199,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -1224,10 +1403,11 @@
     "rating": 4.91,
     "reviews": 132,
     "reviewCount": 132,
-    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-12 travelers",
     "bestTime": "December to April",
@@ -1298,7 +1478,21 @@
         "text": "Pacuare rafting was breathtaking and Tabacon hot springs was the most relaxing evening of our lives.",
         "date": "2026-08-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 314,
@@ -1315,10 +1509,10 @@
     "description": "Ride monster-truck Superjeeps across black volcanic deserts, explore natural blue crystal ice caves inside Europe's largest glacier, and chase Northern Lights.",
     "shortDescription": "Crystal blue ice caves, Superjeep glacier traverse, and Aurora Borealis.",
     "fullDescription": "Venture deep into Iceland’s land of fire and ice. Climb aboard a custom-modified 4x4 Superjeep to conquer snow drifts and river crossings, step into the radiant sapphire depths of natural ice caves beneath Vatnajökull glacier, witness floating icebergs at Jökulsárlón Glacier Lagoon, and hunt the dancing Northern Lights.",
-    "price": 3499,
-    "originalPrice": 4100,
+    "price": 40,
+    "originalPrice": 50,
     "discountedPrice": 3299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -1326,10 +1520,11 @@
     "rating": 4.96,
     "reviews": 172,
     "reviewCount": 172,
-    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "November to March",
@@ -1401,7 +1596,21 @@
         "text": "Standing inside the blue ice cave was like being inside a giant diamond. Superjeep guide was phenomenal.",
         "date": "2026-08-20"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 315,
@@ -1418,10 +1627,10 @@
     "description": "Trek beneath the granite horns of Los Cuernos, kayak alongside massive icebergs at Grey Glacier, and stay in luxury geodesic eco-domes.",
     "shortDescription": "Torres del Paine granite towers, Grey Glacier kayak, and eco-dome luxury.",
     "fullDescription": "Challenge yourself in the raw and untamed wilderness at the end of the world. Experience the highlights of the iconic W-Trek in Torres del Paine National Park with seasoned mountain guides. Kayak among floating azure icebergs at Glacier Grey, hike up French Valley, and view sunrise hitting the base of the iconic Torres towers.",
-    "price": 3650,
-    "originalPrice": 4250,
+    "price": 42,
+    "originalPrice": 53,
     "discountedPrice": 3450,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -1429,10 +1638,11 @@
     "rating": 4.95,
     "reviews": 124,
     "reviewCount": 124,
-    "image": "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "November to March",
@@ -1508,7 +1718,21 @@
         "text": "Kayaking by Grey Glacier was surreal. The guides and EcoCamp domes were extraordinary.",
         "date": "2026-08-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 316,
@@ -1525,10 +1749,10 @@
     "description": "Fly below the rim of the Grand Canyon on a private helicopter, touch down 4,000 feet deep on the canyon floor, and run the Colorado River rapids.",
     "shortDescription": "Below-the-rim helicopter landing, Colorado River rafting, and canyon sunset.",
     "fullDescription": "Experience one of the natural wonders of the world in exhilarating fashion. Take a private EC130 helicopter descending below the canyon rim to a secluded landing bluff along the Colorado River. Board motorized rafting pontoons to navigate churning whitewaters, and watch the sun paint red sandstone walls gold.",
-    "price": 1999,
-    "originalPrice": 2400,
+    "price": 23,
+    "originalPrice": 29,
     "discountedPrice": 1799,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -1536,10 +1760,11 @@
     "rating": 4.88,
     "reviews": 155,
     "reviewCount": 155,
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to October",
@@ -1600,7 +1825,21 @@
         "text": "Flying below the rim gave me goosebumps. Best way to see the Grand Canyon.",
         "date": "2026-07-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 317,
@@ -1617,10 +1856,10 @@
     "description": "Hike to the daring rock promontory of Trolltunga high above Lake Ringedalsvatnet, sea kayak the UNESCO Nærøyfjord, and stay in fjord-view lodges.",
     "shortDescription": "Trolltunga rock cliff, UNESCO Nærøyfjord kayaking, and Flåm railway.",
     "fullDescription": "Discover the dramatic kingdom of the Norse fjords. Trek with private mountain guides to the world-famous cliff ledge of Trolltunga (Troll's Tongue) jutting 700 meters above the lake, paddle sea kayaks between sheer mountain walls in UNESCO-protected Nærøyfjord, and ride the steep Flåm Railway.",
-    "price": 3299,
-    "originalPrice": 3800,
+    "price": 38,
+    "originalPrice": 48,
     "discountedPrice": 3099,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -1628,10 +1867,11 @@
     "rating": 4.93,
     "reviews": 104,
     "reviewCount": 104,
-    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "June to September",
@@ -1703,7 +1943,21 @@
         "text": "Standing on Trolltunga was exhilarating. Norway's nature is simply awe-inspiring.",
         "date": "2026-08-11"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 318,
@@ -1720,10 +1974,10 @@
     "description": "Climb protected iron-path Via Ferrata routes across jagged pale limestone spires, stay in scenic mountain rifugios, and gaze over Tre Cime di Lavaredo.",
     "shortDescription": "Via Ferrata climbing, Tre Cime di Lavaredo, and high mountain rifugios.",
     "fullDescription": "Experience the sheer vertical drama of the Italian Dolomites. Clip your carabiners onto World War I historic Via Ferrata cables with UIAGM alpine guides, trek across the Alta Via 1 alpine trails, admire the sheer three towers of Tre Cime di Lavaredo at sunset, and savor Michelin-caliber Ladin dining in Cortina.",
-    "price": 2999,
-    "originalPrice": 3500,
+    "price": 35,
+    "originalPrice": 44,
     "discountedPrice": 2799,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -1731,10 +1985,11 @@
     "rating": 4.92,
     "reviews": 118,
     "reviewCount": 118,
-    "image": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "June to October",
@@ -1800,7 +2055,21 @@
         "text": "The Via Ferrata climbing was exciting yet felt completely safe with the guide. Unbelievable mountain vistas.",
         "date": "2026-07-16"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+    ],
+    "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
+    "photoCredit": {
+      "photographer": "Sebastian Pociecha",
+      "profileUrl": "https://unsplash.com/@sebastianpociecha",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 319,
@@ -1817,10 +2086,10 @@
     "description": "Trek ancient stone-paved Inca trails over Dead Woman's Pass (4,215m), camp in luxury glamping tents with private massage, and enter Machu Picchu via the Sun Gate.",
     "shortDescription": "Inca Trail stone paths, luxury glamping camps, and Machu Picchu Sun Gate.",
     "fullDescription": "Follow the footsteps of Inca royalty along the legendary Inca Trail. Experience this challenging multi-day high-altitude trek with unmatched luxury: spacious walk-in sleeping tents, warm showers, private camp massage therapists, and gourmet Andean gastronomy, arriving at Inti Punku (Sun Gate) for sunrise over Machu Picchu.",
-    "price": 3350,
-    "originalPrice": 3900,
+    "price": 39,
+    "originalPrice": 49,
     "discountedPrice": 3150,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -1828,10 +2097,11 @@
     "rating": 4.97,
     "reviews": 180,
     "reviewCount": 180,
-    "image": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to October",
@@ -1908,7 +2178,21 @@
         "text": "Entering Machu Picchu from the Sun Gate brought tears to my eyes. The VIP camping team was world-class.",
         "date": "2026-08-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 320,
@@ -1925,10 +2209,10 @@
     "description": "Submerge in a shark cage to view great white sharks up close in Shark Alley, abseil 112 meters off Table Mountain, and surf Muizenberg.",
     "shortDescription": "Great white shark cage diving, Table Mountain 112m abseil, and Cape Peninsula.",
     "fullDescription": "Experience South Africa's pulse-pounding marine and mountain extremes. Stand atop the sheer flat summit of Table Mountain before stepping backwards over the edge on the world’s highest commercial abseil (112 meters). Journey to Gansbaai to enter a shark cage surrounded by apex marine predators, and explore Cape Point.",
-    "price": 2499,
-    "originalPrice": 2950,
+    "price": 29,
+    "originalPrice": 36,
     "discountedPrice": 2299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -1936,10 +2220,11 @@
     "rating": 4.89,
     "reviews": 136,
     "reviewCount": 136,
-    "image": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
     ],
     "groupSize": "4-12 travelers",
     "bestTime": "April to September",
@@ -2006,7 +2291,21 @@
         "text": "Stepping off the top of Table Mountain and looking down at Camps Bay was pure adrenaline!",
         "date": "2026-08-06"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+    ],
+    "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
+    "photoCredit": {
+      "photographer": "Bailey Zindel",
+      "profileUrl": "https://unsplash.com/@baileyzindel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 321,
@@ -2023,10 +2322,10 @@
     "description": "Walk beneath thousands of vermilion torii gates at Fushimi Inari, experience a private chanoyu tea ceremony with a grand master, and stay in a traditional luxury ryokan.",
     "shortDescription": "Fushimi Inari torii gates, private tea master ceremony, and kaiseki ryokan.",
     "fullDescription": "Immerse yourself in a thousand years of Japanese imperial history and Zen philosophy. Based in the ancient capital of Kyoto, wander through bamboo groves in Arashiyama, marvel at the Golden Pavilion (Kinkaku-ji), step into secluded Zen rock gardens, and enjoy an exclusive multi-course kaiseki dinner with private Geiko performance.",
-    "price": 3599,
-    "originalPrice": 4200,
+    "price": 42,
+    "originalPrice": 53,
     "discountedPrice": 3399,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2034,10 +2333,11 @@
     "rating": 4.96,
     "reviews": 175,
     "reviewCount": 175,
-    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "March to May, October to November",
@@ -2108,7 +2408,21 @@
         "text": "The private tea ceremony and kaiseki dinner in Gion were deeply moving. Exceptional authenticity.",
         "date": "2026-08-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+    ],
+    "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
+    "photoCredit": {
+      "photographer": "Bailey Zindel",
+      "profileUrl": "https://unsplash.com/@baileyzindel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 322,
@@ -2125,10 +2439,10 @@
     "description": "Enter the Vatican Museums and Sistine Chapel after public closing hours, explore the Colosseum underground hypogeum, and dine in Renaissance palazzos.",
     "shortDescription": "After-hours Sistine Chapel, Colosseum underground hypogeum, and Roman palazzos.",
     "fullDescription": "Experience the Eternal City without the crowds. Enjoy exclusive after-hours access to the Vatican Museums, standing in peaceful silence beneath Michelangelo’s Sistine Chapel ceiling. Descend beneath the Colosseum into the gladiator dungeons (hypogeum), walk the Roman Forum with an art historian, and savor private rooftop Roman banquets.",
-    "price": 3299,
-    "originalPrice": 3850,
+    "price": 38,
+    "originalPrice": 48,
     "discountedPrice": 3099,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -2136,10 +2450,11 @@
     "rating": 4.95,
     "reviews": 160,
     "reviewCount": 160,
-    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to June, September to November",
@@ -2205,7 +2520,21 @@
         "text": "Having the Sistine Chapel virtually to ourselves with only ten people was the most moving cultural experience of my life.",
         "date": "2026-08-15"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 323,
@@ -2222,10 +2551,10 @@
     "description": "Enter between the paws of the Great Sphinx, sail the Nile on a private luxury twin-masted Dahabiya yacht, and explore the Valley of the Kings.",
     "shortDescription": "Private Sphinx paws entry, Nile Dahabiya sailboat, and King Tut tomb.",
     "fullDescription": "Step back 5,000 years into the world of pharaohs, gods, and pyramids. Enjoy special government permits allowing you to walk directly between the paws of the Great Sphinx in Giza. Fly south to Luxor to sail the Nile aboard an intimate, wooden twin-masted Dahabiya sailboat with a resident Egyptologist, exploring Karnak and Valley of the Kings.",
-    "price": 3799,
-    "originalPrice": 4400,
+    "price": 44,
+    "originalPrice": 55,
     "discountedPrice": 3599,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -2233,10 +2562,11 @@
     "rating": 4.97,
     "reviews": 142,
     "reviewCount": 142,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "October to April",
@@ -2312,7 +2642,21 @@
         "text": "Standing between the paws of the Sphinx in complete silence with our Egyptologist was an experience I will never forget.",
         "date": "2026-08-28"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 324,
@@ -2329,10 +2673,10 @@
     "description": "Marvel at Islamic geometric carvings at the Alhambra and Cordoba's Mezquita, experience passionate flamenco in Seville, and stay in converted palacios.",
     "shortDescription": "Alhambra Palace Nasrid courts, Cordoba Mezquita, and intimate Seville flamenco.",
     "fullDescription": "Journey through the golden age of Al-Andalus. Admire the lace-like plasterwork, serene reflecting pools, and fragrant Generalife gardens of the Alhambra Palace in Granada. Walk beneath the red-and-white horseshoe arches of Cordoba’s Mezquita, and lose yourself in the passionate guitar chords of private Seville flamenco.",
-    "price": 2799,
-    "originalPrice": 3200,
+    "price": 32,
+    "originalPrice": 40,
     "discountedPrice": 2599,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2340,10 +2684,11 @@
     "rating": 4.91,
     "reviews": 122,
     "reviewCount": 122,
-    "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to June, September to October",
@@ -2414,7 +2759,21 @@
         "text": "The Alhambra in Granada is poetry carved into stone. The flamenco performance brought us to tears.",
         "date": "2026-07-30"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 325,
@@ -2431,10 +2790,10 @@
     "description": "Ascend the sacred rock of the Acropolis to stand before the Parthenon, visit the ancient Oracle of Delphi on Mount Parnassus, and dine in Plaka.",
     "shortDescription": "Acropolis Parthenon private access, Delphi Oracle, and rooftop Greek dining.",
     "fullDescription": "Walk in the footsteps of Socrates, Pericles, and ancient philosophers. Experience the birth of democracy with private sunrise access to the Parthenon on the Acropolis rock before the heat and crowds. Journey to the dramatic slopes of Mount Parnassus to discover the ancient Oracle of Delphi, and savor authentic Greek gastronomy.",
-    "price": 2499,
-    "originalPrice": 2950,
+    "price": 29,
+    "originalPrice": 36,
     "discountedPrice": 2299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -2442,10 +2801,11 @@
     "rating": 4.88,
     "reviews": 105,
     "reviewCount": 105,
-    "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to June, September to October",
@@ -2511,7 +2871,21 @@
         "text": "Having a licensed archaeologist bring ancient Athens and Delphi to life made this the trip of a lifetime.",
         "date": "2026-07-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 326,
@@ -2528,10 +2902,10 @@
     "description": "Navigate the sensory souks and spice markets of Marrakech, stay in an opulent riad, and journey into dramatic High Atlas Berber mountain villages.",
     "shortDescription": "Marrakech souks, Majorelle Garden, and High Atlas Kasbah retreat.",
     "fullDescription": "Immerse your senses in the vibrant colors, scents, and sounds of the Red City. Stay in an exquisite courtyard riad in the historic medina, explore Yves Saint Laurent’s cobalt-blue Majorelle Garden, watch snake charmers and storytellers in Jemaa el-Fnaa square, and retreat to a luxury Kasbah in the snow-dusted High Atlas Mountains.",
-    "price": 2650,
-    "originalPrice": 3100,
+    "price": 31,
+    "originalPrice": 39,
     "discountedPrice": 2450,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2539,10 +2913,11 @@
     "rating": 4.93,
     "reviews": 138,
     "reviewCount": 138,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "October to April",
@@ -2613,7 +2988,21 @@
         "text": "The riad was an oasis of tranquility and Kasbah Tamadot in the Atlas mountains was pure magic.",
         "date": "2026-08-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 327,
@@ -2630,10 +3019,10 @@
     "description": "Walk the narrow candlelit Siq canyon to the rose-red Treasury of Petra, camp in Martian bubble domes under desert stars, and float in the Dead Sea.",
     "shortDescription": "Petra candlelit Siq, Wadi Rum Martian domes, and Dead Sea float.",
     "fullDescription": "Discover the Nabataean kingdom etched into rose-red sandstone cliffs. Walk through the towering Siq to reveal the Treasury illuminated by 1,500 candles at night. Venture into the lunar landscapes of Wadi Rum on 4x4 safaris, sleep in luxury geodome bubble suites with open star views, and float weightlessly in the hypersaline Dead Sea.",
-    "price": 2999,
-    "originalPrice": 3500,
+    "price": 35,
+    "originalPrice": 44,
     "discountedPrice": 2799,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2641,10 +3030,11 @@
     "rating": 4.96,
     "reviews": 147,
     "reviewCount": 147,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "October to April",
@@ -2715,7 +3105,21 @@
         "text": "Walking into Petra illuminated by 1,500 candles was pure sorcery. The bubble tent in Wadi Rum was unforgettable.",
         "date": "2026-08-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 328,
@@ -2732,10 +3136,10 @@
     "description": "Explore fairy-tale Renaissance châteaux including Chambord and Chenonceau, stay in an authentic historic château hotel, and taste prestigious Loire wines.",
     "shortDescription": "Chambord and Chenonceau châteaux, private wine cellars, and French gastronomy.",
     "fullDescription": "Experience French royal grandeur along the serene banks of the Loire River. Explore the double-helix staircase of Château de Chambord designed by Leonardo da Vinci, walk the arches of Château de Chenonceau spanning the River Cher, and descend into centuries-old limestone troglodyte cellars for private tastings of Sancerre and Vouvray.",
-    "price": 3150,
-    "originalPrice": 3650,
+    "price": 36,
+    "originalPrice": 45,
     "discountedPrice": 2950,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -2743,10 +3147,11 @@
     "rating": 4.89,
     "reviews": 98,
     "reviewCount": 98,
-    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "May to October",
@@ -2812,7 +3217,21 @@
         "text": "Staying in a real French chateau and flying over Chenonceau at sunrise was pure romance.",
         "date": "2026-07-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+    ],
+    "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
+    "photoCredit": {
+      "photographer": "Sebastian Pociecha",
+      "profileUrl": "https://unsplash.com/@sebastianpociecha",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 329,
@@ -2829,10 +3248,10 @@
     "description": "Explore the gilded domes of Hagia Sophia and Topkapi Palace, cruise the Bosphorus Strait, and float in a hot air balloon over Cappadocia's fairy chimneys.",
     "shortDescription": "Hagia Sophia domes, Bosphorus private yacht, and Cappadocia balloon flight.",
     "fullDescription": "Stand at the crossroads of East and West where empires collided and thrived. In Istanbul, explore the colossal Byzantine domes of Hagia Sophia, the Blue Mosque, and the subterranean Basilica Cistern. Fly to Cappadocia to stay in a luxury cave suite carved directly into volcanic tuff and float at sunrise over fairy chimneys.",
-    "price": 2850,
-    "originalPrice": 3350,
+    "price": 33,
+    "originalPrice": 41,
     "discountedPrice": 2650,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2840,10 +3259,11 @@
     "rating": 4.94,
     "reviews": 162,
     "reviewCount": 162,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "April to June, September to November",
@@ -2914,7 +3334,21 @@
         "text": "Cappadocia balloon flight at dawn was like entering a fairy-tale. Flawless arrangements.",
         "date": "2026-08-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 330,
@@ -2931,10 +3365,10 @@
     "description": "Tour Edinburgh Castle and dramatic cliffside Eilean Donan, stay in a baronial estate, and taste rare vintage single malt scotch at legendary distilleries.",
     "shortDescription": "Edinburgh Castle, Eilean Donan, and Macallan single malt tasting.",
     "fullDescription": "Immerse yourself in the romantic heritage and untamed grandeur of the Scottish Highlands. Stroll Edinburgh's Royal Mile, visit the iconic sea-loch fortress of Eilean Donan, explore the brooding battlefield of Culloden, and gain exclusive private access to historic Speyside whisky distilleries including The Macallan.",
-    "price": 3399,
-    "originalPrice": 3950,
+    "price": 39,
+    "originalPrice": 49,
     "discountedPrice": 3199,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -2942,10 +3376,11 @@
     "rating": 4.92,
     "reviews": 114,
     "reviewCount": 114,
-    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "May to October",
@@ -3016,7 +3451,21 @@
         "text": "The Macallan tasting and staying in a real Highland castle was first-class in every respect.",
         "date": "2026-07-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 331,
@@ -3033,10 +3482,10 @@
     "description": "Witness millions of wildebeest and zebras crossing the Mara River, descend into the lost world of Ngorongoro Crater, and stay in luxury tented camps.",
     "shortDescription": "Mara River wildebeest crossing, Ngorongoro black rhinos, and luxury safari tents.",
     "fullDescription": "Experience the ultimate wildlife spectacle on planet Earth. Follow the Great Migration across the endless golden plains of the Serengeti, witness predator-prey drama at the Mara River crossings, descend into the collapsed volcanic caldera of Ngorongoro Crater teeming with black rhinos and lions, and retreat to ultra-luxury canvas camps.",
-    "price": 4999,
-    "originalPrice": 5800,
+    "price": 58,
+    "originalPrice": 73,
     "discountedPrice": 4799,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -3044,10 +3493,11 @@
     "rating": 4.98,
     "reviews": 195,
     "reviewCount": 195,
-    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "July to October, December to March",
@@ -3124,7 +3574,21 @@
         "text": "Seeing thousands of wildebeest plunge into the Mara River right in front of our Land Cruiser was the most thrilling moment of my life.",
         "date": "2026-08-27"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+    ],
+    "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
+    "photoCredit": {
+      "photographer": "David Rodrigo",
+      "profileUrl": "https://unsplash.com/@davidrodrigo",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 332,
@@ -3141,10 +3605,10 @@
     "description": "Trek through misty bamboo forests in the Virunga volcanoes to spend an unforgettable hour face-to-face with a family of wild mountain gorillas.",
     "shortDescription": "Wild mountain gorilla encounters, Virunga volcanic peaks, and luxury eco-lodges.",
     "fullDescription": "Experience one of the most intimate wildlife encounters on Earth. Hike through misty moss-draped bamboo forests on the slopes of the Virunga Volcanoes with expert park rangers to come within meters of a habituated wild mountain gorilla silverback and playful infants. Retreat to world-renowned eco-luxury lodges.",
-    "price": 5499,
-    "originalPrice": 6200,
+    "price": 64,
+    "originalPrice": 80,
     "discountedPrice": 5199,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -3152,10 +3616,11 @@
     "rating": 4.99,
     "reviews": 158,
     "reviewCount": 158,
-    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "June to September, December to February",
@@ -3221,7 +3686,21 @@
         "text": "Looking into the eyes of a 400-pound silverback from ten feet away is life-changing. Words cannot describe it.",
         "date": "2026-08-30"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+    ],
+    "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
+    "photoCredit": {
+      "photographer": "Sebastian Pociecha",
+      "profileUrl": "https://unsplash.com/@sebastianpociecha",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 333,
@@ -3238,10 +3717,10 @@
     "description": "Cruise Darwin's enchanted islands aboard a luxury mega-catamaran, snorkel with sea lions and marine iguanas, and walk with giant tortoises.",
     "shortDescription": "Darwin's enchanted islands, giant tortoises, and playful sea lion snorkeling.",
     "fullDescription": "Sail into the living laboratory of evolution. Aboard a boutique luxury expedition catamaran, explore the remote volcanic islands of the Galapagos. Snorkel with inquisitive sea lion pups, watch blue-footed boobies perform mating dances, see marine iguanas dive for algae, and walk among centenary giant tortoises.",
-    "price": 4650,
-    "originalPrice": 5300,
+    "price": 54,
+    "originalPrice": 68,
     "discountedPrice": 4450,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -3249,10 +3728,11 @@
     "rating": 4.97,
     "reviews": 140,
     "reviewCount": 140,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "Year-round",
@@ -3328,7 +3808,21 @@
         "text": "Snorkeling with sea lion pups twirling around me was pure magic. The catamaran was 5-star perfection.",
         "date": "2026-08-12"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 334,
@@ -3345,10 +3839,10 @@
     "description": "Glide silently through water lily channels on traditional mokoro dugout canoes, watch hundreds of elephants swimming in Chobe River, and track wild dogs.",
     "shortDescription": "Okavango mokoro dugout canoe, Chobe swimming elephants, and wild dogs.",
     "fullDescription": "Explore the pristine, unfenced paradise of Botswana. Fly into remote concessions of the UNESCO-listed Okavango Delta where crystal channels swell with seasonal floodwaters. Glide past hippos and painted reed frogs in a traditional wooden mokoro canoe, and witness the largest concentration of African elephants on earth in Chobe.",
-    "price": 4799,
-    "originalPrice": 5500,
+    "price": 55,
+    "originalPrice": 69,
     "discountedPrice": 4599,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -3356,10 +3850,11 @@
     "rating": 4.96,
     "reviews": 128,
     "reviewCount": 128,
-    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "May to October",
@@ -3430,7 +3925,21 @@
         "text": "Gliding through the reeds in a mokoro with only the sound of water and birds is the purest peace I have ever felt.",
         "date": "2026-08-05"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 335,
@@ -3447,10 +3956,10 @@
     "description": "Watch humpback whales bubble-net feeding, cruise past calving tidewater glaciers, and track massive grizzly bears beneath the peak of Denali.",
     "shortDescription": "Kenai tidewater glaciers, humpback whale feeding, and Denali grizzly bears.",
     "fullDescription": "Venture into the untamed American sub-arctic frontier. Board private expedition catamarans in Seward to watch humpback whales breach alongside calving glaciers in Kenai Fjords National Park. Ride the scenic glass-domed Wilderness Express train to Denali to track grizzly bears, moose, and wolves beneath North America's highest peak.",
-    "price": 3899,
-    "originalPrice": 4450,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 3699,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -3458,10 +3967,11 @@
     "rating": 4.93,
     "reviews": 116,
     "reviewCount": 116,
-    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "June to August",
@@ -3537,7 +4047,21 @@
         "text": "A mother grizzly and two cubs walked right past our bus in Denali. Alaska is majestic beyond words.",
         "date": "2026-08-16"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 336,
@@ -3554,10 +4078,10 @@
     "description": "Sail into the pack ice of the High Arctic aboard a polar-class expedition ship, track kings of the Arctic (polar bears), and see walrus haul-outs.",
     "shortDescription": "High Arctic pack ice, wild polar bear tracking, and walrus colonies.",
     "fullDescription": "Venture to the realm of the midnight sun and the ice kingdom. Just 600 miles from the North Pole, navigate the dramatic fjords and frozen pack ice of Svalbard. From ice-strengthened expedition vessels and sturdy Zodiac crafts, encounter majestic polar bears hunting seals on sea ice, massive walrus colonies, and Arctic foxes.",
-    "price": 5299,
-    "originalPrice": 5950,
+    "price": 61,
+    "originalPrice": 76,
     "discountedPrice": 4999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "8 Days / 7 Nights",
     "durationDays": 8,
     "durationNights": 7,
@@ -3565,10 +4089,11 @@
     "rating": 4.96,
     "reviews": 82,
     "reviewCount": 82,
-    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "June to August",
@@ -3649,7 +4174,21 @@
         "text": "Watching a polar bear mother guide her two cubs across pack ice 600 miles from the North Pole was deeply moving.",
         "date": "2026-08-21"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 337,
@@ -3666,10 +4205,10 @@
     "description": "Witness endangered green sea turtles laying eggs on Caribbean beaches under starry skies, explore jungle waterways, and spot two-toed sloths.",
     "shortDescription": "Green sea turtle nocturnal nesting, Amazon-like jungle canals, and sloths.",
     "fullDescription": "Known as the Amazon of Central America, Tortuguero is a remote network of lush jungle canals accessible only by boat or small plane. Experience the awe-inspiring night-time nesting ritual of colossal green sea turtles on protected Caribbean sands, boat through mist-filled waterways spotting sloths, monkeys, and caimans.",
-    "price": 2199,
-    "originalPrice": 2600,
+    "price": 25,
+    "originalPrice": 31,
     "discountedPrice": 1999,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -3677,10 +4216,11 @@
     "rating": 4.89,
     "reviews": 108,
     "reviewCount": 108,
-    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "July to October",
@@ -3746,7 +4286,21 @@
         "text": "Watching a sea turtle lay her eggs under the stars was an unforgettable, spiritual moment.",
         "date": "2026-08-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 338,
@@ -3763,10 +4317,10 @@
     "description": "Hear the haunting wail of the Indri lemur in misty Andasibe rainforests, photograph ancient giant Baobab trees at sunset, and see chameleons.",
     "shortDescription": "Giant Indri lemurs, iconic Avenue of the Baobabs sunset, and chameleons.",
     "fullDescription": "Venture to the eighth continent, where over 90% of wildlife exists nowhere else on Earth. Walk through the misty montane rainforest of Andasibe to encounter the Indri—the largest living lemur whose haunting calls echo for miles. Fly to Morondava to stand beneath the prehistoric sentinel trees of the world-famous Avenue of the Baobabs at sunset.",
-    "price": 3499,
-    "originalPrice": 4100,
+    "price": 40,
+    "originalPrice": 50,
     "discountedPrice": 3299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -3774,10 +4328,11 @@
     "rating": 4.94,
     "reviews": 96,
     "reviewCount": 96,
-    "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "September to December, April to June",
@@ -3853,7 +4408,21 @@
         "text": "Hearing the Indri sing right above our heads sent chills down my spine. The Baobabs at sunset look like another planet.",
         "date": "2026-08-10"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 339,
@@ -3870,10 +4439,10 @@
     "description": "Dive the outer Great Barrier Reef on a private catamaran charter, walk among wild koalas, sea lions, and kangaroos on pristine Kangaroo Island.",
     "shortDescription": "Outer Great Barrier Reef private catamaran, wild koalas, and sea lions.",
     "fullDescription": "Experience Australia's most spectacular wildlife wonders. Board a luxury private catamaran from Port Douglas to the remote outer ribbon reefs of the Great Barrier Reef to snorkel vibrant coral gardens. Fly south to Kangaroo Island—Australia's Galapagos—to walk among wild Australian sea lions and observe wild koalas and echidnas.",
-    "price": 4399,
-    "originalPrice": 5100,
+    "price": 51,
+    "originalPrice": 64,
     "discountedPrice": 4199,
-    "currency": "$",
+    "currency": "USD",
     "duration": "7 Days / 6 Nights",
     "durationDays": 7,
     "durationNights": 6,
@@ -3881,10 +4450,11 @@
     "rating": 4.95,
     "reviews": 135,
     "reviewCount": 135,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "September to April",
@@ -3960,7 +4530,21 @@
         "text": "The Great Barrier Reef reef charter was out of this world, and seeing wild koalas and kangaroos on Kangaroo Island made our dream come true.",
         "date": "2026-08-24"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 340,
@@ -3977,10 +4561,10 @@
     "description": "Cruise the Cuiabá River on private motorboats to track wild jaguars hunting caimans, see giant river otters, and spot hyacinth macaws.",
     "shortDescription": "Wild jaguar riverboat tracking, giant river otters, and hyacinth macaws.",
     "fullDescription": "Venture deep into the Pantanal—the world's largest tropical wetland with the highest concentration of wildlife in the Americas. Based in specialized river lodges along the Cuiabá River, take nimble aluminum speedboats into narrow tributaries where wild jaguars patrol riverbanks hunting capybaras and caimans with unmatched regularity.",
-    "price": 3950,
-    "originalPrice": 4600,
+    "price": 46,
+    "originalPrice": 58,
     "discountedPrice": 3750,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
@@ -3988,10 +4572,11 @@
     "rating": 4.97,
     "reviews": 112,
     "reviewCount": 112,
-    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
     ],
     "groupSize": "4-8 travelers",
     "bestTime": "June to October",
@@ -4062,6 +4647,20 @@
         "text": "We saw six different jaguars in three days, including a male taking down a caiman on the riverbank! Unsurpassed wildlife spectacle.",
         "date": "2026-08-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+    ],
+    "alt": "Endless desert dunes with 4x4 tracks during golden hour",
+    "photoCredit": {
+      "photographer": "Ferdinand Stöhr",
+      "profileUrl": "https://unsplash.com/@fellowferdi",
+      "source": "Unsplash"
+    }
   }
 ]

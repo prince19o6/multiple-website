@@ -18,21 +18,34 @@ export * from './siteConfig';
 export interface User {
   id: string;
   name: string;
+  fullName?: string;
   email: string;
   avatar?: string;
   phone?: string;
-  role?: 'user' | 'admin' | 'Admin' | 'SuperAdmin';
+  phoneCountryCode?: string;
+  role?: 'user' | 'admin' | 'Admin' | 'SuperAdmin' | 'Customer';
   websiteId?: string;
+  isEmailVerified?: boolean;
+  dietaryPreference?: 'None' | 'PureVeg' | 'Jain' | 'Swaminarayan' | 'Halal';
+  preferredCurrency?: string;
+  marketingOptIn?: boolean;
+  termsAcceptedAt?: string;
   createdAt?: string;
   isDisabled?: boolean;
   status?: string;
 }
 
 export interface RegisterRequest {
-  name: string;
+  name?: string;
+  fullName?: string;
   email: string;
   password: string;
+  confirmPassword?: string;
   phone?: string;
+  phoneCountryCode?: string;
+  dietaryPreference?: 'None' | 'PureVeg' | 'Jain' | 'Swaminarayan' | 'Halal';
+  marketingOptIn?: boolean;
+  termsAccepted?: boolean;
 }
 
 export interface RegisterFormData {
@@ -93,8 +106,10 @@ export interface Tour {
   description: string;
   price: number;
   originalPrice?: number;
+  currency?: string;
   rating: number;
   reviews: number;
+  reviewCount?: number;
   duration: string;
   durationDays?: number;
   difficulty: string;
@@ -112,6 +127,7 @@ export interface Tour {
   guestReviews: GuestReview[];
   category?: string;
   destination?: string;
+  country?: string;
   featured?: boolean;
   popular?: boolean;
 }
@@ -177,7 +193,43 @@ export interface TourSearchParams {
 
 // ─── Booking Models ───────────────────────────────────────────────────────────
 
-export type BookingStatus = 'upcoming' | 'completed' | 'cancelled' | 'pending' | 'confirmed';
+export type BookingStatus =
+  | 'pending'
+  | 'confirmed'
+  | 'rejected'
+  | 'cancelled'
+  | 'expired'
+  | 'completed'
+  | 'upcoming';
+
+export interface CancellationRequestDto {
+  requestedAt: string;
+  reason: string;
+  status: 'pending' | 'approved' | 'rejected' | string;
+  reviewedAt?: string;
+  reviewedBy?: string;
+  reviewNote?: string;
+}
+
+export interface BookingEmailOutboxItem {
+  id?: string;
+  to: string;
+  subject: string;
+  sentAt: string;
+  template: string;
+  status?: string;
+  error?: string;
+}
+
+export interface InboxCountsDto {
+  pending: number;
+  confirmed: number;
+  cancelled: number;
+  completed: number;
+  rejected: number;
+  expired: number;
+  cancellationRequests: number;
+}
 
 export interface ItineraryDaySummary {
   day: number;
@@ -237,6 +289,15 @@ export interface BookingStatusHistoryItem {
   changedBy?: string;
 }
 
+export interface BookingTraveler {
+  id?: string;
+  name: string;
+  type: 'Adult' | 'Child' | string;
+  age?: number;
+  gender?: 'Male' | 'Female' | 'Other' | string;
+  passportOrId?: string;
+}
+
 export interface Booking {
   id: string;
   _id?: string;
@@ -257,6 +318,7 @@ export interface Booking {
   adults?: number;
   children?: number;
   travelers: number;
+  travelersList?: BookingTraveler[];
   totalPrice: number;
   unitPrice?: number;
   originalPrice?: number;
@@ -282,6 +344,10 @@ export interface Booking {
   snapshot?: TourSnapshot;
   priceBreakdown?: BookingPriceBreakdown;
   statusHistory?: BookingStatusHistoryItem[];
+  cancellationRequest?: CancellationRequestDto;
+  emailsSent?: BookingEmailOutboxItem[];
+  rejectionReason?: string;
+  cancellationReason?: string;
 }
 
 export interface BookingPayload {
@@ -306,6 +372,7 @@ export interface BookingPayload {
   travelers: number;
   adults?: number;
   children?: number;
+  travelersList?: BookingTraveler[];
   specialRequest?: string;
   websiteId?: string;
   website?: string;
@@ -349,6 +416,18 @@ export interface TourFilters {
 export interface SectionData {
   tours?: Tour[];
   destinations?: DestinationItem[];
+  banners?: any[];
+  hotels?: any[];
+  cities?: any[];
+  hero?: any;
+  bookings?: any[];
+  reviews?: any[];
+  stats?: any[];
+  faqs?: any[];
+  currency?: string;
+  onOpenTravelHub?: () => void;
+  onOpenEnquiry?: (serviceName?: string) => void;
+  [key: string]: any;
 }
 
 export interface SectionProps {

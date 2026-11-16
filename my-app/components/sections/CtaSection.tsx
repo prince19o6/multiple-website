@@ -54,7 +54,7 @@ export default function CtaSection({ config, onNavigate }: SectionProps) {
               {description}
             </Text>
           ) : null}
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-press" accessibilityLabel="Press"
             activeOpacity={0.85}
             onPress={handlePress}
             style={[styles.luxuryBtn, { borderColor: colors.primary }]}
@@ -78,7 +78,7 @@ export default function CtaSection({ config, onNavigate }: SectionProps) {
             {description}
           </Text>
         ) : null}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-press" accessibilityLabel="Press"
           activeOpacity={0.88}
           onPress={handlePress}
           style={[styles.button, { backgroundColor: colors.primary }]}

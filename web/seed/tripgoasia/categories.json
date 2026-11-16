@@ -1,0 +1,767 @@
+[
+  {
+    "module": "hotels",
+    "slug": "hotel",
+    "name": {
+      "en": "Hotel",
+      "gu": "હોટેલ",
+      "ms": "Hotel"
+    },
+    "icon": "business-outline",
+    "order": 1,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "aparthotel",
+    "name": {
+      "en": "Aparthotel",
+      "gu": "Aparthotel",
+      "ms": "Aparthotel"
+    },
+    "icon": "business-outline",
+    "order": 2,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "apartment",
+    "name": {
+      "en": "Apartment",
+      "gu": "Apartment",
+      "ms": "Apartment"
+    },
+    "icon": "business-outline",
+    "order": 3,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "hostel",
+    "name": {
+      "en": "Hostel",
+      "gu": "Hostel",
+      "ms": "Hostel"
+    },
+    "icon": "business-outline",
+    "order": 4,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "villa",
+    "name": {
+      "en": "Villa",
+      "gu": "Villa",
+      "ms": "Villa"
+    },
+    "icon": "home-outline",
+    "order": 5,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "resort",
+    "name": {
+      "en": "Resort",
+      "gu": "રિસોર્ટ",
+      "ms": "Tempat Peranginan"
+    },
+    "icon": "leaf-outline",
+    "order": 6,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "boutique",
+    "name": {
+      "en": "Boutique",
+      "gu": "Boutique",
+      "ms": "Boutique"
+    },
+    "icon": "business-outline",
+    "order": 7,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "propertyType",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "hill-stations",
+    "name": {
+      "en": "Hill Stations",
+      "gu": "Hill Stations",
+      "ms": "Hill Stations"
+    },
+    "icon": "triangle-outline",
+    "order": 8,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "beach-stays",
+    "name": {
+      "en": "Beach Stays",
+      "gu": "Beach Stays",
+      "ms": "Beach Stays"
+    },
+    "icon": "water-outline",
+    "order": 9,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "pilgrimage",
+    "name": {
+      "en": "Pilgrimage",
+      "gu": "Pilgrimage",
+      "ms": "Pilgrimage"
+    },
+    "icon": "star-outline",
+    "order": 10,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "luxury-stays",
+    "name": {
+      "en": "Luxury Stays",
+      "gu": "Luxury Stays",
+      "ms": "Luxury Stays"
+    },
+    "icon": "star-outline",
+    "order": 11,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "budget-stays",
+    "name": {
+      "en": "Budget Stays",
+      "gu": "Budget Stays",
+      "ms": "Budget Stays"
+    },
+    "icon": "star-outline",
+    "order": 12,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "family-stays",
+    "name": {
+      "en": "Family Stays",
+      "gu": "Family Stays",
+      "ms": "Family Stays"
+    },
+    "icon": "star-outline",
+    "order": 13,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "hotels",
+    "slug": "iconic-stays",
+    "name": {
+      "en": "Iconic Stays",
+      "gu": "Iconic Stays",
+      "ms": "Iconic Stays"
+    },
+    "icon": "star-outline",
+    "order": 14,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "collection",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "desert-safari",
+    "name": {
+      "en": "Desert Safaris & Dune Bashing",
+      "gu": "Desert Safaris & Dune Bashing",
+      "ms": "Desert Safaris & Dune Bashing"
+    },
+    "icon": "flame-outline",
+    "order": 15,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "water-sports",
+    "name": {
+      "en": "Water Sports & Scuba Diving",
+      "gu": "Water Sports & Scuba Diving",
+      "ms": "Water Sports & Scuba Diving"
+    },
+    "icon": "water-outline",
+    "order": 16,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "city-tours",
+    "name": {
+      "en": "City Tours & Sightseeing",
+      "gu": "City Tours & Sightseeing",
+      "ms": "City Tours & Sightseeing"
+    },
+    "icon": "bus-outline",
+    "order": 17,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "theme-parks",
+    "name": {
+      "en": "Theme Parks & Attractions",
+      "gu": "Theme Parks & Attractions",
+      "ms": "Theme Parks & Attractions"
+    },
+    "icon": "ticket-outline",
+    "order": 18,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "boat-tours",
+    "name": {
+      "en": "Boat & Yacht Tours",
+      "gu": "Boat & Yacht Tours",
+      "ms": "Boat & Yacht Tours"
+    },
+    "icon": "boat-outline",
+    "order": 19,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "walking-tours",
+    "name": {
+      "en": "Walking & Heritage Trails",
+      "gu": "Walking & Heritage Trails",
+      "ms": "Walking & Heritage Trails"
+    },
+    "icon": "footsteps-outline",
+    "order": 20,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "wildlife-safari",
+    "name": {
+      "en": "Wildlife & Nature Safaris",
+      "gu": "Wildlife & Nature Safaris",
+      "ms": "Wildlife & Nature Safaris"
+    },
+    "icon": "paw-outline",
+    "order": 21,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "activities",
+    "slug": "cultural-experience",
+    "name": {
+      "en": "Cultural Shows & Folklore",
+      "gu": "Cultural Shows & Folklore",
+      "ms": "Cultural Shows & Folklore"
+    },
+    "icon": "sparkles-outline",
+    "order": 22,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "activityCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "scenic-escapes",
+    "name": {
+      "en": "Scenic Escapes Across India & Beyond",
+      "gu": "Scenic Escapes Across India & Beyond",
+      "ms": "Scenic Escapes Across India & Beyond"
+    },
+    "icon": "trail-sign-outline",
+    "order": 23,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "spiritual-escapes",
+    "name": {
+      "en": "Spiritual Escapes at Best Prices",
+      "gu": "Spiritual Escapes at Best Prices",
+      "ms": "Spiritual Escapes at Best Prices"
+    },
+    "icon": "flame-outline",
+    "order": 24,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "visa-free-escapes",
+    "name": {
+      "en": "Discover Visa-Free Escapes",
+      "gu": "Discover Visa-Free Escapes",
+      "ms": "Discover Visa-Free Escapes"
+    },
+    "icon": "airplane-outline",
+    "order": 25,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "honeymoon-getaways",
+    "name": {
+      "en": "Dream Honeymoon Getaways",
+      "gu": "Dream Honeymoon Getaways",
+      "ms": "Dream Honeymoon Getaways"
+    },
+    "icon": "heart-outline",
+    "order": 26,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "dubai-packages",
+    "name": {
+      "en": "Dubai Holiday Packages",
+      "gu": "Dubai Holiday Packages",
+      "ms": "Dubai Holiday Packages"
+    },
+    "icon": "business-outline",
+    "order": 27,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "jain-packages",
+    "name": {
+      "en": "Jain Friendly Tour Packages",
+      "gu": "Jain Friendly Tour Packages",
+      "ms": "Jain Friendly Tour Packages"
+    },
+    "icon": "restaurant-outline",
+    "order": 28,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "international-packages",
+    "name": {
+      "en": "International Escapes",
+      "gu": "International Escapes",
+      "ms": "International Escapes"
+    },
+    "icon": "globe-outline",
+    "order": 29,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "packages",
+    "slug": "domestic-holidays",
+    "name": {
+      "en": "Incredible India Domestic",
+      "gu": "Incredible India Domestic",
+      "ms": "Incredible India Domestic"
+    },
+    "icon": "map-outline",
+    "order": 30,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "packageCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "visas",
+    "slug": "tourist-visa",
+    "name": {
+      "en": "Tourist eVisa",
+      "gu": "Tourist eVisa",
+      "ms": "Tourist eVisa"
+    },
+    "icon": "document-text-outline",
+    "order": 31,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "visaCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "visas",
+    "slug": "express-visa",
+    "name": {
+      "en": "Urgent Express (24-48h)",
+      "gu": "Urgent Express (24-48h)",
+      "ms": "Urgent Express (24-48h)"
+    },
+    "icon": "flash-outline",
+    "order": 32,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "visaCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "visas",
+    "slug": "business-visa",
+    "name": {
+      "en": "Business & Commercial Visa",
+      "gu": "Business & Commercial Visa",
+      "ms": "Business & Commercial Visa"
+    },
+    "icon": "briefcase-outline",
+    "order": 33,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "visaCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "visas",
+    "slug": "transit-visa",
+    "name": {
+      "en": "Transit & Stopover Visa",
+      "gu": "Transit & Stopover Visa",
+      "ms": "Transit & Stopover Visa"
+    },
+    "icon": "airplane-outline",
+    "order": 34,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "visaCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "visas",
+    "slug": "multiple-entry",
+    "name": {
+      "en": "Multiple Entry Visa",
+      "gu": "Multiple Entry Visa",
+      "ms": "Multiple Entry Visa"
+    },
+    "icon": "repeat-outline",
+    "order": 35,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "visaCategory",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "indian",
+    "name": {
+      "en": "Indian Cuisine",
+      "gu": "Indian Cuisine",
+      "ms": "Indian Cuisine"
+    },
+    "icon": "restaurant-outline",
+    "order": 36,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "gujarati-thali",
+    "name": {
+      "en": "Gujarati Thali",
+      "gu": "Gujarati Thali",
+      "ms": "Gujarati Thali"
+    },
+    "icon": "nutrition-outline",
+    "order": 37,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "jain",
+    "name": {
+      "en": "Jain Friendly",
+      "gu": "Jain Friendly",
+      "ms": "Jain Friendly"
+    },
+    "icon": "leaf-outline",
+    "order": 38,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "vegetarian",
+    "name": {
+      "en": "100% Pure Veg",
+      "gu": "100% Pure Veg",
+      "ms": "100% Pure Veg"
+    },
+    "icon": "flower-outline",
+    "order": 39,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "asian",
+    "name": {
+      "en": "Pan-Asian & Oriental",
+      "gu": "Pan-Asian & Oriental",
+      "ms": "Pan-Asian & Oriental"
+    },
+    "icon": "globe-outline",
+    "order": 40,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "seafood",
+    "name": {
+      "en": "Fresh Seafood",
+      "gu": "Fresh Seafood",
+      "ms": "Fresh Seafood"
+    },
+    "icon": "water-outline",
+    "order": 41,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "fine-dining",
+    "name": {
+      "en": "Fine Dining & Bistro",
+      "gu": "Fine Dining & Bistro",
+      "ms": "Fine Dining & Bistro"
+    },
+    "icon": "wine-outline",
+    "order": 42,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "cafe",
+    "name": {
+      "en": "Artisan Cafe & Bakery",
+      "gu": "Artisan Cafe & Bakery",
+      "ms": "Artisan Cafe & Bakery"
+    },
+    "icon": "cafe-outline",
+    "order": 43,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "restaurants",
+    "slug": "street-food",
+    "name": {
+      "en": "Street Food & Chaat",
+      "gu": "Street Food & Chaat",
+      "ms": "Street Food & Chaat"
+    },
+    "icon": "fast-food-outline",
+    "order": 44,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "restaurantCuisine",
+      "isDemo": true
+    }
+  },
+  {
+    "module": "buildpackage",
+    "slug": "custom-package-builder",
+    "name": {
+      "en": "Custom Package Builder",
+      "gu": "કસ્ટમ પેકેજ બિલ્ડર",
+      "ms": "Pembina Pakej Tersuai"
+    },
+    "icon": "construct-outline",
+    "order": 45,
+    "enabled": true,
+    "parentSlug": null,
+    "metadata": {
+      "type": "buildPackage",
+      "isDemo": true
+    }
+  }
+]

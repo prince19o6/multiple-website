@@ -22,15 +22,25 @@ export default function Footer() {
 
   const websiteId = config?.id || 'website1';
   const theme = config?.theme || {};
-  const footerConfig = config?.footer || {};
-  const contact = config?.contact || {};
+  const footerConfig = (config as any)?.footer || {};
+  const contact = config?.contact || (config as any)?.content?.contact || {};
 
   const name = config?.name || 'Tours App';
   const description =
     footerConfig.description ||
     config?.tagline ||
+    (config as any)?.seo?.defaultDescription ||
     'Making your travel dreams a reality with unforgettable curated experiences.';
-  const copyright = footerConfig.copyright || `© ${new Date().getFullYear()} ${name}. All rights reserved.`;
+  const copyright =
+    footerConfig.copyright ||
+    (config as any)?.content?.footerCopyright ||
+    `© ${new Date().getFullYear()} ${name}. All rights reserved.`;
+
+  const footerVariant =
+    config?.layout?.footerVariant ||
+    footerConfig.variant ||
+    footerConfig.style ||
+    'default';
 
   const openLink = (url: string) => {
     Linking.canOpenURL(url).then((supported) => {
@@ -38,9 +48,9 @@ export default function Footer() {
     });
   };
 
-  // Flavor 2: Adventure World
-  if (websiteId === 'website2') {
-    const accent = theme.accent || '#f97316';
+  // Flavor 2: Columns / Adventure
+  if (footerVariant === 'columns' || (footerVariant as string) === 'adventure' || websiteId === 'website2') {
+    const accent = theme.accent || colors.accent || '#f97316';
     return (
       <View style={[styles.container, { backgroundColor: '#0a0a0a' }]}>
         <View style={styles.content}>
@@ -49,19 +59,19 @@ export default function Footer() {
 
           {/* Quick Action Pills */}
           <View style={styles.linksRow}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-all-expeditions" accessibilityLabel="All Expeditions"
               style={[styles.adventurePill, { borderColor: accent }]}
               onPress={() => router.push('/explore')}
             >
               <Text style={[styles.adventurePillText, { color: accent }]}>All Expeditions</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-get-in-touch" accessibilityLabel="Get in Touch"
               style={[styles.adventurePill, { borderColor: '#404040' }]}
               onPress={() => router.push('/contact')}
             >
               <Text style={[styles.adventurePillText, { color: '#ffffff' }]}>Get in Touch</Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-admin" accessibilityLabel="Admin"
               style={[styles.adventurePill, { borderColor: '#404040' }]}
               onPress={() => router.push('/(admin)')}
             >
@@ -89,7 +99,7 @@ export default function Footer() {
   }
 
   // Flavor 3: Luxury Holiday Paradise
-  if (websiteId === 'website3') {
+  if (footerVariant === 'luxury' || websiteId === 'website3') {
     const accent = theme.accent || '#d4af37';
     const bg = theme.secondary || '#1c1311';
     return (
@@ -100,15 +110,15 @@ export default function Footer() {
           <Text style={[styles.brandDesc, { color: '#d4c4bc' }]}>{description}</Text>
 
           <View style={styles.linksRow}>
-            <TouchableOpacity onPress={() => router.push('/explore')}>
+            <TouchableOpacity testID="btn-curated-packages" accessibilityLabel="CURATED PACKAGES" onPress={() => router.push('/explore')}>
               <Text style={[styles.luxuryLink, { color: '#ffffff' }]}>CURATED PACKAGES</Text>
             </TouchableOpacity>
             <Text style={{ color: accent }}>•</Text>
-            <TouchableOpacity onPress={() => router.push('/about')}>
+            <TouchableOpacity testID="btn-about" accessibilityLabel="ABOUT" onPress={() => router.push('/about')}>
               <Text style={[styles.luxuryLink, { color: '#ffffff' }]}>ABOUT</Text>
             </TouchableOpacity>
             <Text style={{ color: accent }}>•</Text>
-            <TouchableOpacity onPress={() => router.push('/contact')}>
+            <TouchableOpacity testID="btn-concierge" accessibilityLabel="CONCIERGE" onPress={() => router.push('/contact')}>
               <Text style={[styles.luxuryLink, { color: '#ffffff' }]}>CONCIERGE</Text>
             </TouchableOpacity>
           </View>
@@ -130,16 +140,16 @@ export default function Footer() {
 
         {/* Quick Nav Links */}
         <View style={styles.navGrid}>
-          <TouchableOpacity onPress={() => router.push('/explore')} style={styles.navGridItem}>
+          <TouchableOpacity testID="btn-featured-tours" accessibilityLabel="Featured Tours" onPress={() => router.push('/explore')} style={styles.navGridItem}>
             <Text style={styles.navGridText}>Featured Tours</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => router.push('/about')} style={styles.navGridItem}>
+          <TouchableOpacity testID="btn-our-story" accessibilityLabel="Our Story" onPress={() => router.push('/about')} style={styles.navGridItem}>
             <Text style={styles.navGridText}>Our Story</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => router.push('/contact')} style={styles.navGridItem}>
+          <TouchableOpacity testID="btn-customer-support" accessibilityLabel="Customer Support" onPress={() => router.push('/contact')} style={styles.navGridItem}>
             <Text style={styles.navGridText}>Customer Support</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => router.push('/(admin)')} style={styles.navGridItem}>
+          <TouchableOpacity testID="btn-admin-portal" accessibilityLabel="Admin Portal" onPress={() => router.push('/(admin)')} style={styles.navGridItem}>
             <Text style={styles.navGridText}>Admin Portal</Text>
           </TouchableOpacity>
         </View>

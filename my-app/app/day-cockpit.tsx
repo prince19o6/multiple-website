@@ -41,11 +41,22 @@ export default function DayCockpitScreen() {
 
   const [expandedStopId, setExpandedStopId] = useState<string | null>(null);
 
+  const handleBack = () => {
+    try {
+      Haptics.selectionAsync();
+    } catch {}
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/(tabs)/bookings');
+    }
+  };
+
   if (!dispatch) {
     return (
       <SafeAreaView style={[styles.safeArea, { backgroundColor: colors.background }]} edges={['top', 'left', 'right']}>
         <View style={[styles.navHeader, { borderBottomColor: colors.border }]}>
-          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <TouchableOpacity testID="btn-navigate" style={styles.backBtn} onPress={handleBack} accessibilityLabel="Go back" accessibilityRole="button">
             <Ionicons name="arrow-back" size={24} color={colors.text} />
           </TouchableOpacity>
           <Text style={[styles.headerTitle, { color: colors.heading }]}>Expedition Cockpit</Text>
@@ -57,11 +68,17 @@ export default function DayCockpitScreen() {
           <Text style={[styles.emptySubtitle, { color: colors.mutedText }]}>
             Your upcoming expeditions will activate here on the day of departure.
           </Text>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-check-dispatch-server" accessibilityLabel="Check Dispatch Server"
             style={[styles.refreshRetryBtn, { backgroundColor: colors.primary }]}
             onPress={refreshDispatch}
           >
             <Text style={styles.refreshRetryText}>Check Dispatch Server</Text>
+          </TouchableOpacity>
+          <TouchableOpacity testID="btn-return-to-reservation" accessibilityLabel="Return to Reservation"
+            style={[styles.refreshRetryBtn, { backgroundColor: `${colors.primary}18`, marginTop: 10 }]}
+            onPress={handleBack}
+          >
+            <Text style={[styles.refreshRetryText, { color: colors.primary }]}>Return to Reservation</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -100,20 +117,15 @@ export default function DayCockpitScreen() {
     setExpandedStopId((prev) => (prev === stopId ? null : stopId));
   };
 
-  const brandAccent =
-    siteId === 'gujjutours'
-      ? '#ea580c'
-      : siteId === 'technoheaven'
-      ? '#d97706'
-      : '#0284c7';
+  const brandAccent = colors.accent || colors.primary || '#ea580c';
 
   return (
     <SafeAreaView style={[styles.safeArea, { backgroundColor: colors.background }]} edges={['top', 'left', 'right']}>
       {/* Top Navigation Bar */}
       <View style={[styles.navHeader, { borderBottomColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           style={styles.backBtn}
-          onPress={() => router.back()}
+          onPress={handleBack}
           accessibilityRole="button"
           accessibilityLabel="Go back"
         >
@@ -132,7 +144,7 @@ export default function DayCockpitScreen() {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-qr-code"
           style={[styles.boardingPassBtn, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={openBoardingPassModal}
           accessibilityRole="button"
@@ -207,7 +219,7 @@ export default function DayCockpitScreen() {
             </View>
 
             <View style={styles.contactButtonsRow}>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-call"
                 style={[styles.iconActionBtn, { backgroundColor: colors.primary + '15' }]}
                 onPress={() => handleCall(dispatch.assignedCrew.guidePhone)}
                 accessibilityRole="button"
@@ -216,7 +228,7 @@ export default function DayCockpitScreen() {
                 <Ionicons name="call" size={18} color={colors.primary} />
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-logo-whatsapp"
                 style={[styles.iconActionBtn, { backgroundColor: '#25D36620' }]}
                 onPress={() =>
                   handleWhatsApp(dispatch.assignedCrew.guidePhone, dispatch.assignedCrew.leadGuideName)
@@ -299,7 +311,7 @@ export default function DayCockpitScreen() {
                   {currentStop.meetingPointNotes}
                 </Text>
               </View>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-navigate"
                 style={[styles.mapDirectionsBtn, { backgroundColor: colors.primary }]}
                 onPress={() => handleOpenMaps(currentStop)}
                 accessibilityRole="button"
@@ -313,7 +325,7 @@ export default function DayCockpitScreen() {
             {/* In-Situ Quick Action Triggers */}
             <View style={styles.inSituRow}>
               {currentStop.audioStoryTitle ? (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-headset" accessibilityLabel="headset"
                   style={[styles.inSituActionBtn, { backgroundColor: '#8b5cf615', borderColor: '#8b5cf640' }]}
                   onPress={() => router.push('/audio-guide')}
                   accessibilityRole="button"
@@ -325,7 +337,7 @@ export default function DayCockpitScreen() {
                 </TouchableOpacity>
               ) : null}
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-restaurant" accessibilityLabel="restaurant"
                 style={[styles.inSituActionBtn, { backgroundColor: '#f9731615', borderColor: '#f9731640' }]}
                 onPress={() => router.push('/culinary-guide')}
                 accessibilityRole="button"
@@ -336,7 +348,7 @@ export default function DayCockpitScreen() {
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-day-cockpit-351" accessibilityLabel="day-cockpit action"
                 style={[
                   styles.inSituActionBtn,
                   {
@@ -374,7 +386,7 @@ export default function DayCockpitScreen() {
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-camera"
                 style={[styles.inSituActionBtn, { backgroundColor: '#ec489918' }]}
                 onPress={() => router.push('/travel-journal')}
                 accessibilityRole="button"
@@ -405,7 +417,7 @@ export default function DayCockpitScreen() {
                 <View key={stop.stopId} style={styles.timelineItem}>
                   {/* Left Column: Number Badge & Line */}
                   <View style={styles.timelineLeftCol}>
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-checkmark" accessibilityLabel="checkmark"
                       style={[
                         styles.orderBadge,
                         {
@@ -439,7 +451,7 @@ export default function DayCockpitScreen() {
                   </View>
 
                   {/* Right Column: Stop Content Card */}
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-day-cockpit-454" accessibilityLabel="day-cockpit action"
                     style={[
                       styles.stopContentCard,
                       {
@@ -489,7 +501,7 @@ export default function DayCockpitScreen() {
                         ) : null}
 
                         <View style={styles.expandedActionsRow}>
-                          <TouchableOpacity
+                          <TouchableOpacity testID="btn-navigate-outline" accessibilityLabel="navigate outline"
                             style={[styles.smallActionBtn, { borderColor: colors.primary }]}
                             onPress={() => handleOpenMaps(stop)}
                             accessibilityRole="button"
@@ -500,7 +512,7 @@ export default function DayCockpitScreen() {
                             </Text>
                           </TouchableOpacity>
 
-                          <TouchableOpacity
+                          <TouchableOpacity testID="btn-day-cockpit-515" accessibilityLabel="day-cockpit action"
                             style={[
                               styles.smallActionBtn,
                               {
@@ -570,7 +582,7 @@ export default function DayCockpitScreen() {
         ) : null}
 
         {/* Quick In-Destination Local Phrases Banner */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-chatbubbles"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -605,7 +617,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Tax-Free Shopping & Customs Refund Pass Banner */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-receipt"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -640,7 +652,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Travel eSIM & Cellular Data Pass Banner */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-cellular"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -675,7 +687,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Medical Care & Cashless Hospitals Banner */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-shield-checkmark"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -710,7 +722,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick International Visa & Digital Arrival Pass Reminder */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-airplane"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -745,7 +757,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Sustainable Eco-Travel & Green Expedition Banner */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-leaf"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -780,7 +792,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Cultural Decorum & Temple Attire Reminder */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-sparkles"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -815,7 +827,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Power Sockets, Voltage & Battery Kiosks */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-hardware-chip-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -850,7 +862,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Quick Airline Baggage & Carry-On Sizer */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-airplane-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -885,7 +897,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Rapid Transit Navigator & Taxi Scam Shield */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-train-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -920,7 +932,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Travel Pharmacy & Prescription Medicine Translator */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-medkit-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -955,7 +967,7 @@ export default function DayCockpitScreen() {
         </TouchableOpacity>
 
         {/* Tipping & Gratuity Etiquette Calculator */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-cash-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -999,7 +1011,7 @@ export default function DayCockpitScreen() {
 
 
         {/* Driving & Motorbike Safety Navigator */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-car-sport-outline"
           style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
           onPress={() => {
             try {
@@ -1033,6 +1045,76 @@ export default function DayCockpitScreen() {
           <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
         </TouchableOpacity>
 
+        {/* Currency Exchange & ATM DCC Shield Hub */}
+        <TouchableOpacity testID="btn-cash-outline"
+          style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
+          onPress={() => {
+            try {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            } catch {}
+            router.push('/forex-radar' as never);
+          }}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel="Open Currency Exchange Radar and ATM DCC Shield Hub"
+        >
+          <View style={styles.phrasebookLeft}>
+            <View style={[styles.phrasebookIconBox, { backgroundColor: '#ecfdf5' }]}>
+              <Ionicons name="cash-outline" size={22} color="#059669" />
+            </View>
+            <View style={{ flex: 1 }}>
+              <View style={styles.phrasebookTitleRow}>
+                <Text style={[styles.phrasebookTitle, { color: colors.heading }]}>
+                  Forex Radar & ATM Shield
+                </Text>
+                <View style={[styles.phrasebookOfflineBadge, { backgroundColor: '#ecfdf5', borderColor: '#a7f3d0' }]}>
+                  <Ionicons name="shield-checkmark" size={10} color="#059669" />
+                  <Text style={[styles.phrasebookOfflineText, { color: '#059669' }]}>DCC DEFENSE</Text>
+                </View>
+              </View>
+              <Text style={[styles.phrasebookDesc, { color: colors.mutedText }]}>
+                Compare SuperRich vs airport counter rates & decline ATM conversion to save 8-11%.
+              </Text>
+            </View>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+        </TouchableOpacity>
+
+        {/* Market Bargain & Negotiation Assistant Hub */}
+        <TouchableOpacity testID="btn-pricetag-outline"
+          style={[styles.phrasebookBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}
+          onPress={() => {
+            try {
+              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            } catch {}
+            router.push('/bargain-assistant' as never);
+          }}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel="Open Market Bargain and Fair Price Assistant"
+        >
+          <View style={styles.phrasebookLeft}>
+            <View style={[styles.phrasebookIconBox, { backgroundColor: '#fffbeb' }]}>
+              <Ionicons name="pricetag-outline" size={22} color="#d97706" />
+            </View>
+            <View style={{ flex: 1 }}>
+              <View style={styles.phrasebookTitleRow}>
+                <Text style={[styles.phrasebookTitle, { color: colors.heading }]}>
+                  Bargain & Fair Price Radar
+                </Text>
+                <View style={[styles.phrasebookOfflineBadge, { backgroundColor: '#fffbeb', borderColor: '#fde68a' }]}>
+                  <Ionicons name="chatbubbles-outline" size={10} color="#d97706" />
+                  <Text style={[styles.phrasebookOfflineText, { color: '#d97706' }]}>CULTURE GUIDE</Text>
+                </View>
+              </View>
+              <Text style={[styles.phrasebookDesc, { color: colors.mutedText }]}>
+                Night market price benchmarks, polite counter-offer calculator & vendor audio flashcards.
+              </Text>
+            </View>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+        </TouchableOpacity>
+
         {/* 24/7 Operations Emergency Hotline */}
         <View style={[styles.emergencyCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.emergencyLeft}>
@@ -1047,7 +1129,7 @@ export default function DayCockpitScreen() {
             </View>
           </View>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-call"
             style={[styles.callHotlineBtn, { backgroundColor: '#10b981' }]}
             onPress={() => handleCall(dispatch.emergencyHotline)}
             accessibilityRole="button"

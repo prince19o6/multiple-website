@@ -1,0 +1,3885 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-10-30T08:55:24.711Z",
+  "environmentMatrix": {
+    "websites": [
+      "gujjutours",
+      "tripgoasia",
+      "technoheaven"
+    ],
+    "platforms": [
+      "Android",
+      "iOS",
+      "Web",
+      "Backend"
+    ],
+    "mobileEnvironments": [
+      "development",
+      "preview",
+      "production"
+    ]
+  },
+  "totals": {
+    "totalItems": 378,
+    "screensCount": 55,
+    "componentsCount": 164,
+    "backendEndpointsCount": 144,
+    "webRoutesCount": 15,
+    "pressablesTotal": 909,
+    "pressablesWithTestId": 1,
+    "pressablesMissingTestId": 908,
+    "pressablesWithA11y": 156,
+    "pressablesMissingA11y": 753,
+    "deadButtonsCount": 6
+  },
+  "deadButtons": [
+    {
+      "file": "my-app/app/(admin)/bookings.tsx",
+      "line": 392,
+      "tagType": "TouchableOpacity",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": "key={tab.id} style={[ styles.tabBtn, isActive && styles.tabBtnActive, tab.highlight && !isActive && "
+    },
+    {
+      "file": "my-app/app/(tabs)/explore.tsx",
+      "line": 629,
+      "tagType": "TouchableOpacity",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": "style={[ styles.filterButton, { backgroundColor: activeFiltersCount"
+    },
+    {
+      "file": "my-app/app/search-results.tsx",
+      "line": 338,
+      "tagType": "TouchableOpacity",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": "style={[ styles.filterTrigger, { backgroundColor: activeFiltersCount"
+    },
+    {
+      "file": "my-app/components/home/TravelHubModal.tsx",
+      "line": 254,
+      "tagType": "TouchableWithoutFeedback",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": ""
+    },
+    {
+      "file": "my-app/components/SiteSwitcherModal.tsx",
+      "line": 61,
+      "tagType": "TouchableOpacity",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": "activeOpacity={1} style={[styles.modalCard, { backgroundColor: colors.surface }]}"
+    },
+    {
+      "file": "my-app/components/TipCalculatorModal.tsx",
+      "line": 212,
+      "tagType": "TouchableOpacity",
+      "hasTestId": false,
+      "hasA11y": false,
+      "hasOnPress": false,
+      "isEmptyHandler": false,
+      "isDead": true,
+      "snippet": "style={[styles.stepBtn, splitCount"
+    }
+  ],
+  "items": [
+    {
+      "id": "SCR-0001",
+      "type": "Screen / Route",
+      "name": "/(admin)/analytics",
+      "path": "my-app/app/(admin)/analytics.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0002",
+      "type": "Screen / Route",
+      "name": "/(admin)/bookings",
+      "path": "my-app/app/(admin)/bookings.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0003",
+      "type": "Screen / Route",
+      "name": "/(admin)/index",
+      "path": "my-app/app/(admin)/index.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0004",
+      "type": "Screen / Route",
+      "name": "/(admin)/login",
+      "path": "my-app/app/(admin)/login.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0005",
+      "type": "Screen / Route",
+      "name": "/(admin)/tours",
+      "path": "my-app/app/(admin)/tours.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0006",
+      "type": "Screen / Route",
+      "name": "/(admin)/users",
+      "path": "my-app/app/(admin)/users.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0007",
+      "type": "Screen / Route",
+      "name": "/(auth)/login",
+      "path": "my-app/app/(auth)/login.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0008",
+      "type": "Screen / Route",
+      "name": "/(auth)/onboarding",
+      "path": "my-app/app/(auth)/onboarding.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0009",
+      "type": "Screen / Route",
+      "name": "/(auth)/register",
+      "path": "my-app/app/(auth)/register.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0010",
+      "type": "Screen / Route",
+      "name": "/(auth)/reset-password",
+      "path": "my-app/app/(auth)/reset-password.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0011",
+      "type": "Screen / Route",
+      "name": "/(tabs)/bookings",
+      "path": "my-app/app/(tabs)/bookings.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0012",
+      "type": "Screen / Route",
+      "name": "/(tabs)/explore",
+      "path": "my-app/app/(tabs)/explore.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0013",
+      "type": "Screen / Route",
+      "name": "/(tabs)/index",
+      "path": "my-app/app/(tabs)/index.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0014",
+      "type": "Screen / Route",
+      "name": "/(tabs)/profile",
+      "path": "my-app/app/(tabs)/profile.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0015",
+      "type": "Screen / Route",
+      "name": "/(tabs)/wishlist",
+      "path": "my-app/app/(tabs)/wishlist.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0016",
+      "type": "Screen / Route",
+      "name": "/+not-found",
+      "path": "my-app/app/+not-found.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0017",
+      "type": "Screen / Route",
+      "name": "/about",
+      "path": "my-app/app/about.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0018",
+      "type": "Screen / Route",
+      "name": "/airport-transfer",
+      "path": "my-app/app/airport-transfer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0019",
+      "type": "Screen / Route",
+      "name": "/audio-guide",
+      "path": "my-app/app/audio-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0020",
+      "type": "Screen / Route",
+      "name": "/baggage-calculator",
+      "path": "my-app/app/baggage-calculator.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0021",
+      "type": "Screen / Route",
+      "name": "/bargain-assistant",
+      "path": "my-app/app/bargain-assistant.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0022",
+      "type": "Screen / Route",
+      "name": "/booking/[id]",
+      "path": "my-app/app/booking/[id].tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0023",
+      "type": "Screen / Route",
+      "name": "/category/[slug]",
+      "path": "my-app/app/category/[slug].tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0024",
+      "type": "Screen / Route",
+      "name": "/contact",
+      "path": "my-app/app/contact.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0025",
+      "type": "Screen / Route",
+      "name": "/culinary-guide",
+      "path": "my-app/app/culinary-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0026",
+      "type": "Screen / Route",
+      "name": "/culture-etiquette",
+      "path": "my-app/app/culture-etiquette.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0027",
+      "type": "Screen / Route",
+      "name": "/day-cockpit",
+      "path": "my-app/app/day-cockpit.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0028",
+      "type": "Screen / Route",
+      "name": "/destinations",
+      "path": "my-app/app/destinations.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0029",
+      "type": "Screen / Route",
+      "name": "/drive-safety",
+      "path": "my-app/app/drive-safety.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0030",
+      "type": "Screen / Route",
+      "name": "/eco-travel",
+      "path": "my-app/app/eco-travel.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0031",
+      "type": "Screen / Route",
+      "name": "/esim-roaming",
+      "path": "my-app/app/esim-roaming.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0032",
+      "type": "Screen / Route",
+      "name": "/featured-tours",
+      "path": "my-app/app/featured-tours.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0033",
+      "type": "Screen / Route",
+      "name": "/forex-radar",
+      "path": "my-app/app/forex-radar.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0034",
+      "type": "Screen / Route",
+      "name": "/group-planning",
+      "path": "my-app/app/group-planning.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0035",
+      "type": "Screen / Route",
+      "name": "/index",
+      "path": "my-app/app/index.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0036",
+      "type": "Screen / Route",
+      "name": "/insurance",
+      "path": "my-app/app/insurance.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0037",
+      "type": "Screen / Route",
+      "name": "/map-explorer",
+      "path": "my-app/app/map-explorer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0038",
+      "type": "Screen / Route",
+      "name": "/not-allowed",
+      "path": "my-app/app/not-allowed.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0039",
+      "type": "Screen / Route",
+      "name": "/passport",
+      "path": "my-app/app/passport.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0040",
+      "type": "Screen / Route",
+      "name": "/pharmacy-guide",
+      "path": "my-app/app/pharmacy-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0041",
+      "type": "Screen / Route",
+      "name": "/phrasebook",
+      "path": "my-app/app/phrasebook.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0042",
+      "type": "Screen / Route",
+      "name": "/power-guide",
+      "path": "my-app/app/power-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0043",
+      "type": "Screen / Route",
+      "name": "/search-results",
+      "path": "my-app/app/search-results.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0044",
+      "type": "Screen / Route",
+      "name": "/site-switcher",
+      "path": "my-app/app/site-switcher.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0045",
+      "type": "Screen / Route",
+      "name": "/special-offers",
+      "path": "my-app/app/special-offers.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0046",
+      "type": "Screen / Route",
+      "name": "/tax-refund",
+      "path": "my-app/app/tax-refund.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0047",
+      "type": "Screen / Route",
+      "name": "/tipping-guide",
+      "path": "my-app/app/tipping-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0048",
+      "type": "Screen / Route",
+      "name": "/tour/[id]",
+      "path": "my-app/app/tour/[id].tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0049",
+      "type": "Screen / Route",
+      "name": "/transit-guide",
+      "path": "my-app/app/transit-guide.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0050",
+      "type": "Screen / Route",
+      "name": "/travel-journal",
+      "path": "my-app/app/travel-journal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0051",
+      "type": "Screen / Route",
+      "name": "/travel-vault",
+      "path": "my-app/app/travel-vault.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0052",
+      "type": "Screen / Route",
+      "name": "/travel-wrapped",
+      "path": "my-app/app/travel-wrapped.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0053",
+      "type": "Screen / Route",
+      "name": "/trip-budget",
+      "path": "my-app/app/trip-budget.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0054",
+      "type": "Screen / Route",
+      "name": "/visa-hub",
+      "path": "my-app/app/visa-hub.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "SCR-0055",
+      "type": "Screen / Route",
+      "name": "/weather-forecast",
+      "path": "my-app/app/weather-forecast.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Component + RNTL + Maestro E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0056",
+      "type": "App Component",
+      "name": "AddExpenseModal",
+      "path": "my-app/components/AddExpenseModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0057",
+      "type": "App Component",
+      "name": "AddTaxReceiptModal",
+      "path": "my-app/components/AddTaxReceiptModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0058",
+      "type": "App Component",
+      "name": "AdventureTourCard",
+      "path": "my-app/components/AdventureTourCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0059",
+      "type": "App Component",
+      "name": "AirportKioskGuideModal",
+      "path": "my-app/components/AirportKioskGuideModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0060",
+      "type": "App Component",
+      "name": "AirportTransferCard",
+      "path": "my-app/components/AirportTransferCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0061",
+      "type": "App Component",
+      "name": "AirportWifiModal",
+      "path": "my-app/components/AirportWifiModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0062",
+      "type": "App Component",
+      "name": "ApplianceSafetyModal",
+      "path": "my-app/components/ApplianceSafetyModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0063",
+      "type": "App Component",
+      "name": "ArrivalCardGuideModal",
+      "path": "my-app/components/ArrivalCardGuideModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0064",
+      "type": "App Component",
+      "name": "AtmDccShieldCard",
+      "path": "my-app/components/AtmDccShieldCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0065",
+      "type": "App Component",
+      "name": "AudioMiniPlayer",
+      "path": "my-app/components/AudioMiniPlayer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0066",
+      "type": "App Component",
+      "name": "AudioPlayerModal",
+      "path": "my-app/components/AudioPlayerModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0067",
+      "type": "App Component",
+      "name": "BaggageAllowanceCard",
+      "path": "my-app/components/BaggageAllowanceCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0068",
+      "type": "App Component",
+      "name": "BaggageCalculatorModal",
+      "path": "my-app/components/BaggageCalculatorModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0069",
+      "type": "App Component",
+      "name": "BaggageHeroCard",
+      "path": "my-app/components/BaggageHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0070",
+      "type": "App Component",
+      "name": "BargainHeroCard",
+      "path": "my-app/components/BargainHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0071",
+      "type": "App Component",
+      "name": "BargainSavingsLogModal",
+      "path": "my-app/components/BargainSavingsLogModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0072",
+      "type": "App Component",
+      "name": "BootstrapErrorScreen",
+      "path": "my-app/components/BootstrapErrorScreen.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0073",
+      "type": "App Component",
+      "name": "CarbonCalculatorModal",
+      "path": "my-app/components/CarbonCalculatorModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0074",
+      "type": "App Component",
+      "name": "CarbonGaugeCard",
+      "path": "my-app/components/CarbonGaugeCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0075",
+      "type": "App Component",
+      "name": "ChauffeurPlacardModal",
+      "path": "my-app/components/ChauffeurPlacardModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0076",
+      "type": "App Component",
+      "name": "ClaimAssistanceModal",
+      "path": "my-app/components/ClaimAssistanceModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0077",
+      "type": "App Component",
+      "name": "AppHeader",
+      "path": "my-app/components/common/AppHeader.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0078",
+      "type": "App Component",
+      "name": "BrandLogo",
+      "path": "my-app/components/common/BrandLogo.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0079",
+      "type": "App Component",
+      "name": "MobileEnquirySheet",
+      "path": "my-app/components/common/MobileEnquirySheet.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0080",
+      "type": "App Component",
+      "name": "MobileFloatingWhatsApp",
+      "path": "my-app/components/common/MobileFloatingWhatsApp.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0081",
+      "type": "App Component",
+      "name": "ConciergeChatModal",
+      "path": "my-app/components/ConciergeChatModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0082",
+      "type": "App Component",
+      "name": "ConciergeFloatingPill",
+      "path": "my-app/components/ConciergeFloatingPill.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0083",
+      "type": "App Component",
+      "name": "ConsularEmergencyCard",
+      "path": "my-app/components/ConsularEmergencyCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0084",
+      "type": "App Component",
+      "name": "CounterOfferCalculatorCard",
+      "path": "my-app/components/CounterOfferCalculatorCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0085",
+      "type": "App Component",
+      "name": "CouponSelectionModal",
+      "path": "my-app/components/CouponSelectionModal.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0086",
+      "type": "App Component",
+      "name": "CulinaryHighlightCard",
+      "path": "my-app/components/CulinaryHighlightCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0087",
+      "type": "App Component",
+      "name": "CulturalEtiquetteCard",
+      "path": "my-app/components/CulturalEtiquetteCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0088",
+      "type": "App Component",
+      "name": "CultureHeroCard",
+      "path": "my-app/components/CultureHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0089",
+      "type": "App Component",
+      "name": "CurrencyModal",
+      "path": "my-app/components/CurrencyModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0090",
+      "type": "App Component",
+      "name": "CustomsAllowanceSheet",
+      "path": "my-app/components/CustomsAllowanceSheet.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0091",
+      "type": "App Component",
+      "name": "DayOfCockpitCard",
+      "path": "my-app/components/DayOfCockpitCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0092",
+      "type": "App Component",
+      "name": "DevBanner",
+      "path": "my-app/components/DevBanner.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0093",
+      "type": "App Component",
+      "name": "DigitalBoardingPassModal",
+      "path": "my-app/components/DigitalBoardingPassModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0094",
+      "type": "App Component",
+      "name": "DressCodeCheckerModal",
+      "path": "my-app/components/DressCodeCheckerModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0095",
+      "type": "App Component",
+      "name": "DriveRuleCard",
+      "path": "my-app/components/DriveRuleCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0096",
+      "type": "App Component",
+      "name": "DriveSafetyHeroCard",
+      "path": "my-app/components/DriveSafetyHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0097",
+      "type": "App Component",
+      "name": "DynamicFontLoader",
+      "path": "my-app/components/DynamicFontLoader.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0098",
+      "type": "App Component",
+      "name": "DynamicLogo",
+      "path": "my-app/components/DynamicLogo.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0099",
+      "type": "App Component",
+      "name": "DynamicRenderer",
+      "path": "my-app/components/DynamicRenderer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0100",
+      "type": "App Component",
+      "name": "EcoCertificateModal",
+      "path": "my-app/components/EcoCertificateModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0101",
+      "type": "App Component",
+      "name": "EcoHeroCard",
+      "path": "my-app/components/EcoHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0102",
+      "type": "App Component",
+      "name": "EmergencySosModal",
+      "path": "my-app/components/EmergencySosModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0103",
+      "type": "App Component",
+      "name": "EmptyState",
+      "path": "my-app/components/EmptyState.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0104",
+      "type": "App Component",
+      "name": "EnvErrorScreen",
+      "path": "my-app/components/EnvErrorScreen.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0105",
+      "type": "App Component",
+      "name": "ErrorScreen",
+      "path": "my-app/components/ErrorScreen.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0106",
+      "type": "App Component",
+      "name": "EsimActiveCard",
+      "path": "my-app/components/EsimActiveCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0107",
+      "type": "App Component",
+      "name": "EsimHeroCard",
+      "path": "my-app/components/EsimHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0108",
+      "type": "App Component",
+      "name": "EsimPackageCard",
+      "path": "my-app/components/EsimPackageCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0109",
+      "type": "App Component",
+      "name": "EsimQrModal",
+      "path": "my-app/components/EsimQrModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0110",
+      "type": "App Component",
+      "name": "EsimTopUpModal",
+      "path": "my-app/components/EsimTopUpModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0111",
+      "type": "App Component",
+      "name": "ExpeditionCertificateModal",
+      "path": "my-app/components/ExpeditionCertificateModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0112",
+      "type": "App Component",
+      "name": "ExpeditionHeroCard",
+      "path": "my-app/components/ExpeditionHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0113",
+      "type": "App Component",
+      "name": "ExpeditionMapView",
+      "path": "my-app/components/ExpeditionMapView.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0114",
+      "type": "App Component",
+      "name": "ExpeditionWrappedHeroCard",
+      "path": "my-app/components/ExpeditionWrappedHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0115",
+      "type": "App Component",
+      "name": "FilterModal",
+      "path": "my-app/components/FilterModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0116",
+      "type": "App Component",
+      "name": "FlightStatusCard",
+      "path": "my-app/components/FlightStatusCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0117",
+      "type": "App Component",
+      "name": "Footer",
+      "path": "my-app/components/Footer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0118",
+      "type": "App Component",
+      "name": "ForexCalculatorModal",
+      "path": "my-app/components/ForexCalculatorModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0119",
+      "type": "App Component",
+      "name": "ForexKioskCard",
+      "path": "my-app/components/ForexKioskCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0120",
+      "type": "App Component",
+      "name": "ForexRadarHeroCard",
+      "path": "my-app/components/ForexRadarHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0121",
+      "type": "App Component",
+      "name": "ForexRateTableCard",
+      "path": "my-app/components/ForexRateTableCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0122",
+      "type": "App Component",
+      "name": "GalleryLightbox",
+      "path": "my-app/components/GalleryLightbox.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0123",
+      "type": "App Component",
+      "name": "GroupPollCard",
+      "path": "my-app/components/GroupPollCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0124",
+      "type": "App Component",
+      "name": "GroupTripCard",
+      "path": "my-app/components/GroupTripCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0125",
+      "type": "App Component",
+      "name": "AboutUsHomeSection",
+      "path": "my-app/components/home/AboutUsHomeSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0126",
+      "type": "App Component",
+      "name": "CollapsibleSection",
+      "path": "my-app/components/home/CollapsibleSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0127",
+      "type": "App Component",
+      "name": "GujjuFlightHeroSearch",
+      "path": "my-app/components/home/GujjuFlightHeroSearch.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0128",
+      "type": "App Component",
+      "name": "HorizontalList",
+      "path": "my-app/components/home/HorizontalList.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0129",
+      "type": "App Component",
+      "name": "MobileCityStaysSection",
+      "path": "my-app/components/home/MobileCityStaysSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0130",
+      "type": "App Component",
+      "name": "MobileCuratedPackagesSection",
+      "path": "my-app/components/home/MobileCuratedPackagesSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0131",
+      "type": "App Component",
+      "name": "MobilePerfectStaysSection",
+      "path": "my-app/components/home/MobilePerfectStaysSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0132",
+      "type": "App Component",
+      "name": "MobilePromoCarousel",
+      "path": "my-app/components/home/MobilePromoCarousel.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0133",
+      "type": "App Component",
+      "name": "MobileSearchWidget",
+      "path": "my-app/components/home/MobileSearchWidget.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0134",
+      "type": "App Component",
+      "name": "QuickActionsGrid",
+      "path": "my-app/components/home/QuickActionsGrid.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0135",
+      "type": "App Component",
+      "name": "RecentlyViewedSection",
+      "path": "my-app/components/home/RecentlyViewedSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0136",
+      "type": "App Component",
+      "name": "SectionHeader",
+      "path": "my-app/components/home/SectionHeader.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0137",
+      "type": "App Component",
+      "name": "SectionSkeleton",
+      "path": "my-app/components/home/SectionSkeleton.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0138",
+      "type": "App Component",
+      "name": "ServiceTabsGrid",
+      "path": "my-app/components/home/ServiceTabsGrid.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0139",
+      "type": "App Component",
+      "name": "SpecialOffersSection",
+      "path": "my-app/components/home/SpecialOffersSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0140",
+      "type": "App Component",
+      "name": "TravelGuidesCards",
+      "path": "my-app/components/home/TravelGuidesCards.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0141",
+      "type": "App Component",
+      "name": "TravelHubModal",
+      "path": "my-app/components/home/TravelHubModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0142",
+      "type": "App Component",
+      "name": "ViewMoreButton",
+      "path": "my-app/components/home/ViewMoreButton.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0143",
+      "type": "App Component",
+      "name": "HospitalNetworkCard",
+      "path": "my-app/components/HospitalNetworkCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0144",
+      "type": "App Component",
+      "name": "InsuranceHeroCard",
+      "path": "my-app/components/InsuranceHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0145",
+      "type": "App Component",
+      "name": "JournalEntryCard",
+      "path": "my-app/components/JournalEntryCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0146",
+      "type": "App Component",
+      "name": "JournalHeroCard",
+      "path": "my-app/components/JournalHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0147",
+      "type": "App Component",
+      "name": "LandmarkCard",
+      "path": "my-app/components/LandmarkCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0148",
+      "type": "App Component",
+      "name": "LandmarkDetailsSheet",
+      "path": "my-app/components/LandmarkDetailsSheet.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0149",
+      "type": "App Component",
+      "name": "LanguageModal",
+      "path": "my-app/components/LanguageModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0150",
+      "type": "App Component",
+      "name": "LoyaltyTierProgressCard",
+      "path": "my-app/components/LoyaltyTierProgressCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0151",
+      "type": "App Component",
+      "name": "LuxuryTourCard",
+      "path": "my-app/components/LuxuryTourCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0152",
+      "type": "App Component",
+      "name": "MarketDirectoryCard",
+      "path": "my-app/components/MarketDirectoryCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0153",
+      "type": "App Component",
+      "name": "MedicationCustomsSheet",
+      "path": "my-app/components/MedicationCustomsSheet.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0154",
+      "type": "App Component",
+      "name": "MedicineCard",
+      "path": "my-app/components/MedicineCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0155",
+      "type": "App Component",
+      "name": "Navbar",
+      "path": "my-app/components/Navbar.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0156",
+      "type": "App Component",
+      "name": "NavDrawer",
+      "path": "my-app/components/NavDrawer.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0157",
+      "type": "App Component",
+      "name": "CustomTabBar",
+      "path": "my-app/components/navigation/CustomTabBar.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0158",
+      "type": "App Component",
+      "name": "NavItem",
+      "path": "my-app/components/NavItem.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0159",
+      "type": "App Component",
+      "name": "NotificationCenterModal",
+      "path": "my-app/components/NotificationCenterModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0160",
+      "type": "App Component",
+      "name": "OfflineBanner",
+      "path": "my-app/components/OfflineBanner.tsx",
+      "dependsOnApi": "Yes",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0161",
+      "type": "App Component",
+      "name": "OffsetProjectCard",
+      "path": "my-app/components/OffsetProjectCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0162",
+      "type": "App Component",
+      "name": "PassportValidityCheckerModal",
+      "path": "my-app/components/PassportValidityCheckerModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0163",
+      "type": "App Component",
+      "name": "PharmacyDirectoryCard",
+      "path": "my-app/components/PharmacyDirectoryCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0164",
+      "type": "App Component",
+      "name": "PharmacyHeroCard",
+      "path": "my-app/components/PharmacyHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0165",
+      "type": "App Component",
+      "name": "PhrasebookCard",
+      "path": "my-app/components/PhrasebookCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0166",
+      "type": "App Component",
+      "name": "PhraseCard",
+      "path": "my-app/components/PhraseCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0167",
+      "type": "App Component",
+      "name": "PolicyCard",
+      "path": "my-app/components/PolicyCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0168",
+      "type": "App Component",
+      "name": "PowerBankKioskCard",
+      "path": "my-app/components/PowerBankKioskCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0169",
+      "type": "App Component",
+      "name": "PowerHeroCard",
+      "path": "my-app/components/PowerHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0170",
+      "type": "App Component",
+      "name": "PowerSocketVisualizerCard",
+      "path": "my-app/components/PowerSocketVisualizerCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0171",
+      "type": "App Component",
+      "name": "PreRideInspectionModal",
+      "path": "my-app/components/PreRideInspectionModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0172",
+      "type": "App Component",
+      "name": "AppearanceSection",
+      "path": "my-app/components/profile/AppearanceSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0173",
+      "type": "App Component",
+      "name": "ProhibitedItemsSheet",
+      "path": "my-app/components/ProhibitedItemsSheet.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0174",
+      "type": "App Component",
+      "name": "RentalScamChecklistCard",
+      "path": "my-app/components/RentalScamChecklistCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0175",
+      "type": "App Component",
+      "name": "ReviewBoostModal",
+      "path": "my-app/components/ReviewBoostModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0176",
+      "type": "App Component",
+      "name": "ReviewModal",
+      "path": "my-app/components/ReviewModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0177",
+      "type": "App Component",
+      "name": "RewardVoucherCard",
+      "path": "my-app/components/RewardVoucherCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0178",
+      "type": "App Component",
+      "name": "SacredSiteDressCard",
+      "path": "my-app/components/SacredSiteDressCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0179",
+      "type": "App Component",
+      "name": "ScreenTorchModal",
+      "path": "my-app/components/ScreenTorchModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0180",
+      "type": "App Component",
+      "name": "ActivitiesSection",
+      "path": "my-app/components/sections/ActivitiesSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0181",
+      "type": "App Component",
+      "name": "CtaSection",
+      "path": "my-app/components/sections/CtaSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0182",
+      "type": "App Component",
+      "name": "DestinationsSection",
+      "path": "my-app/components/sections/DestinationsSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0183",
+      "type": "App Component",
+      "name": "DifficultySection",
+      "path": "my-app/components/sections/DifficultySection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0184",
+      "type": "App Component",
+      "name": "FeaturedToursSection",
+      "path": "my-app/components/sections/FeaturedToursSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0185",
+      "type": "App Component",
+      "name": "HeroSection",
+      "path": "my-app/components/sections/HeroSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0186",
+      "type": "App Component",
+      "name": "OffersSection",
+      "path": "my-app/components/sections/OffersSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0187",
+      "type": "App Component",
+      "name": "PackagesSection",
+      "path": "my-app/components/sections/PackagesSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0188",
+      "type": "App Component",
+      "name": "StatsSection",
+      "path": "my-app/components/sections/StatsSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0189",
+      "type": "App Component",
+      "name": "TestimonialsSection",
+      "path": "my-app/components/sections/TestimonialsSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0190",
+      "type": "App Component",
+      "name": "WhyChooseUsSection",
+      "path": "my-app/components/sections/WhyChooseUsSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0191",
+      "type": "App Component",
+      "name": "SetBudgetModal",
+      "path": "my-app/components/SetBudgetModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0192",
+      "type": "App Component",
+      "name": "ShowPharmacistModal",
+      "path": "my-app/components/ShowPharmacistModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0193",
+      "type": "App Component",
+      "name": "ShowToLocalModal",
+      "path": "my-app/components/ShowToLocalModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0194",
+      "type": "App Component",
+      "name": "SimilarToursSection",
+      "path": "my-app/components/SimilarToursSection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0195",
+      "type": "App Component",
+      "name": "SiteSwitcherFab",
+      "path": "my-app/components/SiteSwitcherFab.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0196",
+      "type": "App Component",
+      "name": "SiteSwitcherModal",
+      "path": "my-app/components/SiteSwitcherModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0197",
+      "type": "App Component",
+      "name": "SkeletonLoader",
+      "path": "my-app/components/SkeletonLoader.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0198",
+      "type": "App Component",
+      "name": "StampModal",
+      "path": "my-app/components/StampModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0199",
+      "type": "App Component",
+      "name": "StoryReelCard",
+      "path": "my-app/components/StoryReelCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0200",
+      "type": "App Component",
+      "name": "TableReservationModal",
+      "path": "my-app/components/TableReservationModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0201",
+      "type": "App Component",
+      "name": "TaxiMeterShieldModal",
+      "path": "my-app/components/TaxiMeterShieldModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0202",
+      "type": "App Component",
+      "name": "TaxReceiptCard",
+      "path": "my-app/components/TaxReceiptCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0203",
+      "type": "App Component",
+      "name": "TaxRefundHeroCard",
+      "path": "my-app/components/TaxRefundHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0204",
+      "type": "App Component",
+      "name": "TipCalculatorModal",
+      "path": "my-app/components/TipCalculatorModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0205",
+      "type": "App Component",
+      "name": "TippingCategoryCard",
+      "path": "my-app/components/TippingCategoryCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0206",
+      "type": "App Component",
+      "name": "TippingHeroCard",
+      "path": "my-app/components/TippingHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0207",
+      "type": "App Component",
+      "name": "TourCard",
+      "path": "my-app/components/TourCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0208",
+      "type": "App Component",
+      "name": "TourCardHorizontal",
+      "path": "my-app/components/TourCardHorizontal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0209",
+      "type": "App Component",
+      "name": "TourItinerarySection",
+      "path": "my-app/components/TourItinerarySection.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0210",
+      "type": "App Component",
+      "name": "TransitHeroCard",
+      "path": "my-app/components/TransitHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0211",
+      "type": "App Component",
+      "name": "TransitLineCard",
+      "path": "my-app/components/TransitLineCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0212",
+      "type": "App Component",
+      "name": "TransitRouteCard",
+      "path": "my-app/components/TransitRouteCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0213",
+      "type": "App Component",
+      "name": "TravelWrappedStoryCard",
+      "path": "my-app/components/TravelWrappedStoryCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0214",
+      "type": "App Component",
+      "name": "UpcomingTripCountdown",
+      "path": "my-app/components/UpcomingTripCountdown.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0215",
+      "type": "App Component",
+      "name": "VaultAddDocumentModal",
+      "path": "my-app/components/VaultAddDocumentModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0216",
+      "type": "App Component",
+      "name": "VendorFlashcardModal",
+      "path": "my-app/components/VendorFlashcardModal.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0217",
+      "type": "App Component",
+      "name": "VisaHeroCard",
+      "path": "my-app/components/VisaHeroCard.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0218",
+      "type": "App Component",
+      "name": "VisaStatusBadge",
+      "path": "my-app/components/VisaStatusBadge.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "CMP-0219",
+      "type": "App Component",
+      "name": "WeatherWidget",
+      "path": "my-app/components/WeatherWidget.tsx",
+      "dependsOnApi": "No",
+      "platforms": "Android, iOS",
+      "testTypePlanned": "Unit + Snapshot + State Matrix (Loading/Empty/Error/Populated)",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0220",
+      "type": "Backend Endpoint",
+      "name": "GET /api/admin/stats",
+      "path": "backend/toursApi/controllers/AdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0221",
+      "type": "Backend Endpoint",
+      "name": "GET /api/admin/analytics",
+      "path": "backend/toursApi/controllers/AdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0222",
+      "type": "Backend Endpoint",
+      "name": "POST /api/admin/seed-admin",
+      "path": "backend/toursApi/controllers/AdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0223",
+      "type": "Backend Endpoint",
+      "name": "POST /api/admin/create-admin",
+      "path": "backend/toursApi/controllers/AdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0224",
+      "type": "Backend Endpoint",
+      "name": "POST /api/admin/migrate-from-tours70",
+      "path": "backend/toursApi/controllers/AdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0225",
+      "type": "Backend Endpoint",
+      "name": "GET /api/audioguide/stories",
+      "path": "backend/toursApi/controllers/AudioGuideController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0226",
+      "type": "Backend Endpoint",
+      "name": "POST /api/audioguide/listen/{id}",
+      "path": "backend/toursApi/controllers/AudioGuideController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0227",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/register",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0228",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/login",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0229",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/refresh",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0230",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/logout",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0231",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/forgot-password",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0232",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/reset-password",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0233",
+      "type": "Backend Endpoint",
+      "name": "GET /api/auth/me",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0234",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/dev-reset-lockout",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0235",
+      "type": "Backend Endpoint",
+      "name": "POST /api/auth/dev-reset-ratelimit",
+      "path": "backend/toursApi/controllers/AuthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0236",
+      "type": "Backend Endpoint",
+      "name": "GET /api/baggage/hub",
+      "path": "backend/toursApi/controllers/BaggageController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0237",
+      "type": "Backend Endpoint",
+      "name": "POST /api/baggage/calculate-excess",
+      "path": "backend/toursApi/controllers/BaggageController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0238",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bargain/hub",
+      "path": "backend/toursApi/controllers/BargainController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0239",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings/inbox/counts",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0240",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0241",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings/{id}",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0242",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0243",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/confirm",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0244",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/reject",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0245",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/cancel",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0246",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/bulk-confirm",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0247",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/bulk-reject",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0248",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/resend-email",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0249",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/request-cancellation",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0250",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/review-cancellation",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0251",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings/action-token/verify",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0252",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/action-token/execute",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0253",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings/{id}/outbox",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0254",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/lookup",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0255",
+      "type": "Backend Endpoint",
+      "name": "GET /api/bookings/lookup",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0256",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/validate-coupon",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0257",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/claim",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0258",
+      "type": "Backend Endpoint",
+      "name": "POST /api/bookings/{id}/pay",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0259",
+      "type": "Backend Endpoint",
+      "name": "DELETE /api/bookings/{id}",
+      "path": "backend/toursApi/controllers/BookingsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0260",
+      "type": "Backend Endpoint",
+      "name": "GET /api/budget/guide",
+      "path": "backend/toursApi/controllers/BudgetController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0261",
+      "type": "Backend Endpoint",
+      "name": "POST /api/budget/sync",
+      "path": "backend/toursApi/controllers/BudgetController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0262",
+      "type": "Backend Endpoint",
+      "name": "GET /api/concierge/specialist",
+      "path": "backend/toursApi/controllers/ConciergeController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0263",
+      "type": "Backend Endpoint",
+      "name": "POST /api/concierge/inquire",
+      "path": "backend/toursApi/controllers/ConciergeController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0264",
+      "type": "Backend Endpoint",
+      "name": "GET /api/core/v1/config",
+      "path": "backend/toursApi/controllers/ConfigController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0265",
+      "type": "Backend Endpoint",
+      "name": "GET /api/core/v1/config/{hostname}",
+      "path": "backend/toursApi/controllers/ConfigController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0266",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/core/v1/config",
+      "path": "backend/toursApi/controllers/ConfigController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0267",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/core/v1/config/{hostname}",
+      "path": "backend/toursApi/controllers/ConfigController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0268",
+      "type": "Backend Endpoint",
+      "name": "GET /api/culinary/trail",
+      "path": "backend/toursApi/controllers/CulinaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0269",
+      "type": "Backend Endpoint",
+      "name": "GET /api/culinary/destinations",
+      "path": "backend/toursApi/controllers/CulinaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0270",
+      "type": "Backend Endpoint",
+      "name": "POST /api/culinary/reserve",
+      "path": "backend/toursApi/controllers/CulinaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0271",
+      "type": "Backend Endpoint",
+      "name": "GET /api/culture/hub",
+      "path": "backend/toursApi/controllers/CultureController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0272",
+      "type": "Backend Endpoint",
+      "name": "POST /api/culture/check-outfit",
+      "path": "backend/toursApi/controllers/CultureController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0273",
+      "type": "Backend Endpoint",
+      "name": "GET /api/culture/etiquette",
+      "path": "backend/toursApi/controllers/CultureController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0274",
+      "type": "Backend Endpoint",
+      "name": "GET /api/dispatch/today",
+      "path": "backend/toursApi/controllers/DayOfDispatchController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0275",
+      "type": "Backend Endpoint",
+      "name": "POST /api/dispatch/announcement",
+      "path": "backend/toursApi/controllers/DayOfDispatchController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0276",
+      "type": "Backend Endpoint",
+      "name": "GET /api/health/db",
+      "path": "backend/toursApi/controllers/DbHealthController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0277",
+      "type": "Backend Endpoint",
+      "name": "GET /api/destinations",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0278",
+      "type": "Backend Endpoint",
+      "name": "GET /api/destinations/landmarks",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0279",
+      "type": "Backend Endpoint",
+      "name": "GET /api/destinations/landmarks/{id}",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0280",
+      "type": "Backend Endpoint",
+      "name": "POST /api/destinations",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0281",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/destinations/{id}",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0282",
+      "type": "Backend Endpoint",
+      "name": "DELETE /api/destinations/{id}",
+      "path": "backend/toursApi/controllers/DestinationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0283",
+      "type": "Backend Endpoint",
+      "name": "GET /api/drive-safety/hub",
+      "path": "backend/toursApi/controllers/DriveSafetyController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0284",
+      "type": "Backend Endpoint",
+      "name": "GET /api/drive-safety/rules",
+      "path": "backend/toursApi/controllers/DriveSafetyController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0285",
+      "type": "Backend Endpoint",
+      "name": "GET /api/eco/hub",
+      "path": "backend/toursApi/controllers/EcoController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0286",
+      "type": "Backend Endpoint",
+      "name": "POST /api/eco/calculate",
+      "path": "backend/toursApi/controllers/EcoController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0287",
+      "type": "Backend Endpoint",
+      "name": "POST /api/eco/offset",
+      "path": "backend/toursApi/controllers/EcoController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0288",
+      "type": "Backend Endpoint",
+      "name": "POST /api/eco/pledge",
+      "path": "backend/toursApi/controllers/EcoController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0289",
+      "type": "Backend Endpoint",
+      "name": "GET /api/emergency/contacts",
+      "path": "backend/toursApi/controllers/EmergencyController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0290",
+      "type": "Backend Endpoint",
+      "name": "GET /api/esim/hub",
+      "path": "backend/toursApi/controllers/EsimController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0291",
+      "type": "Backend Endpoint",
+      "name": "POST /api/esim/activate",
+      "path": "backend/toursApi/controllers/EsimController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0292",
+      "type": "Backend Endpoint",
+      "name": "POST /api/esim/topup",
+      "path": "backend/toursApi/controllers/EsimController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0293",
+      "type": "Backend Endpoint",
+      "name": "GET /api/expedition-summary/hub",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0294",
+      "type": "Backend Endpoint",
+      "name": "GET /api/expedition-summary/wrapped",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0295",
+      "type": "Backend Endpoint",
+      "name": "GET /api/expedition-summary/loyalty",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0296",
+      "type": "Backend Endpoint",
+      "name": "POST /api/expedition-summary/claim-reward",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0297",
+      "type": "Backend Endpoint",
+      "name": "POST /api/expedition-summary/review-boost",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0298",
+      "type": "Backend Endpoint",
+      "name": "GET /api/expedition-summary/certificate",
+      "path": "backend/toursApi/controllers/ExpeditionSummaryController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0299",
+      "type": "Backend Endpoint",
+      "name": "GET /api/transfers/active",
+      "path": "backend/toursApi/controllers/FlightTransferController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0300",
+      "type": "Backend Endpoint",
+      "name": "POST /api/transfers/status",
+      "path": "backend/toursApi/controllers/FlightTransferController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0301",
+      "type": "Backend Endpoint",
+      "name": "GET /api/forex/radar",
+      "path": "backend/toursApi/controllers/ForexRadarController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0302",
+      "type": "Backend Endpoint",
+      "name": "GET /api/forex/kiosks",
+      "path": "backend/toursApi/controllers/ForexRadarController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0303",
+      "type": "Backend Endpoint",
+      "name": "GET /api/groups/active",
+      "path": "backend/toursApi/controllers/GroupTripController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0304",
+      "type": "Backend Endpoint",
+      "name": "POST /api/groups/polls/vote",
+      "path": "backend/toursApi/controllers/GroupTripController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0305",
+      "type": "Backend Endpoint",
+      "name": "POST /api/groups/gear",
+      "path": "backend/toursApi/controllers/GroupTripController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0306",
+      "type": "Backend Endpoint",
+      "name": "GET /api/insurance/policy",
+      "path": "backend/toursApi/controllers/InsuranceController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0307",
+      "type": "Backend Endpoint",
+      "name": "GET /api/insurance/hospitals",
+      "path": "backend/toursApi/controllers/InsuranceController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0308",
+      "type": "Backend Endpoint",
+      "name": "POST /api/insurance/claim-inquiry",
+      "path": "backend/toursApi/controllers/InsuranceController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0309",
+      "type": "Backend Endpoint",
+      "name": "GET /api/journal/scrapbook",
+      "path": "backend/toursApi/controllers/JournalController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0310",
+      "type": "Backend Endpoint",
+      "name": "POST /api/journal/entry",
+      "path": "backend/toursApi/controllers/JournalController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0311",
+      "type": "Backend Endpoint",
+      "name": "GET /api/notifications",
+      "path": "backend/toursApi/controllers/NotificationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0312",
+      "type": "Backend Endpoint",
+      "name": "GET /api/notifications/unread-count",
+      "path": "backend/toursApi/controllers/NotificationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0313",
+      "type": "Backend Endpoint",
+      "name": "PATCH /api/notifications/{id}/read",
+      "path": "backend/toursApi/controllers/NotificationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0314",
+      "type": "Backend Endpoint",
+      "name": "POST /api/notifications/read-all",
+      "path": "backend/toursApi/controllers/NotificationsController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0315",
+      "type": "Backend Endpoint",
+      "name": "GET /api/passport/profile",
+      "path": "backend/toursApi/controllers/PassportController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0316",
+      "type": "Backend Endpoint",
+      "name": "POST /api/passport/claim-stamp",
+      "path": "backend/toursApi/controllers/PassportController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0317",
+      "type": "Backend Endpoint",
+      "name": "POST /api/passport/claim-challenge",
+      "path": "backend/toursApi/controllers/PassportController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0318",
+      "type": "Backend Endpoint",
+      "name": "GET /api/pharmacy/hub",
+      "path": "backend/toursApi/controllers/PharmacyController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0319",
+      "type": "Backend Endpoint",
+      "name": "GET /api/pharmacy/search",
+      "path": "backend/toursApi/controllers/PharmacyController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0320",
+      "type": "Backend Endpoint",
+      "name": "GET /api/phrasebook",
+      "path": "backend/toursApi/controllers/PhrasebookController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0321",
+      "type": "Backend Endpoint",
+      "name": "GET /api/power/hub",
+      "path": "backend/toursApi/controllers/PowerController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0322",
+      "type": "Backend Endpoint",
+      "name": "POST /api/power/check-appliance",
+      "path": "backend/toursApi/controllers/PowerController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0323",
+      "type": "Backend Endpoint",
+      "name": "POST /api/seed",
+      "path": "backend/toursApi/controllers/SeedController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0324",
+      "type": "Backend Endpoint",
+      "name": "GET /api/seedcontroller.tools/status",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0325",
+      "type": "Backend Endpoint",
+      "name": "GET /api/seedcontroller.tools/bookings",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0326",
+      "type": "Backend Endpoint",
+      "name": "POST /api/seedcontroller.tools/tours",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0327",
+      "type": "Backend Endpoint",
+      "name": "GET /api/seedcontroller.tools/category-counts",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0328",
+      "type": "Backend Endpoint",
+      "name": "POST /api/seedcontroller.tools/admin",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0329",
+      "type": "Backend Endpoint",
+      "name": "POST /api/seedcontroller.tools/destinations",
+      "path": "backend/toursApi/controllers/SeedController.Tools.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0330",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tax-refund/rules",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0331",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tax-refund/allowances",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0332",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tax-refund/claims",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0333",
+      "type": "Backend Endpoint",
+      "name": "POST /api/tax-refund/claims",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0334",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/tax-refund/claims/{claimId}/status",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0335",
+      "type": "Backend Endpoint",
+      "name": "DELETE /api/tax-refund/claims/{claimId}",
+      "path": "backend/toursApi/controllers/TaxRefundController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0336",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tipping/guide",
+      "path": "backend/toursApi/controllers/TippingController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0337",
+      "type": "Backend Endpoint",
+      "name": "POST /api/tipping/calculate",
+      "path": "backend/toursApi/controllers/TippingController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0338",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0339",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours/search",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0340",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours/{id}",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0341",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours/by-slug/{slug}",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0342",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours/by-number/{id:int}",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0343",
+      "type": "Backend Endpoint",
+      "name": "GET /api/tours/{id}/similar",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0344",
+      "type": "Backend Endpoint",
+      "name": "POST /api/tours/{id}/reviews",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0345",
+      "type": "Backend Endpoint",
+      "name": "POST /api/tours",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0346",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/tours/{id}",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0347",
+      "type": "Backend Endpoint",
+      "name": "PATCH /api/tours/{id}/toggle",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0348",
+      "type": "Backend Endpoint",
+      "name": "DELETE /api/tours/{id}",
+      "path": "backend/toursApi/controllers/ToursController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0349",
+      "type": "Backend Endpoint",
+      "name": "GET /api/transit/hub",
+      "path": "backend/toursApi/controllers/TransitController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0350",
+      "type": "Backend Endpoint",
+      "name": "POST /api/transit/calculate-fare",
+      "path": "backend/toursApi/controllers/TransitController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0351",
+      "type": "Backend Endpoint",
+      "name": "POST /api/transit/estimate-taxi",
+      "path": "backend/toursApi/controllers/TransitController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0352",
+      "type": "Backend Endpoint",
+      "name": "GET /api/users",
+      "path": "backend/toursApi/controllers/UsersController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0353",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/users/{id}/role",
+      "path": "backend/toursApi/controllers/UsersController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0354",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/users/{id}/status",
+      "path": "backend/toursApi/controllers/UsersController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0355",
+      "type": "Backend Endpoint",
+      "name": "DELETE /api/users/{id}",
+      "path": "backend/toursApi/controllers/UsersController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0356",
+      "type": "Backend Endpoint",
+      "name": "GET /api/visa/hub",
+      "path": "backend/toursApi/controllers/VisaController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0357",
+      "type": "Backend Endpoint",
+      "name": "GET /api/visa/check",
+      "path": "backend/toursApi/controllers/VisaController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0358",
+      "type": "Backend Endpoint",
+      "name": "POST /api/visa/check-validity",
+      "path": "backend/toursApi/controllers/VisaController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0359",
+      "type": "Backend Endpoint",
+      "name": "GET /api/visa/embassies",
+      "path": "backend/toursApi/controllers/VisaController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0360",
+      "type": "Backend Endpoint",
+      "name": "GET /api/weather/current",
+      "path": "backend/toursApi/controllers/WeatherController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0361",
+      "type": "Backend Endpoint",
+      "name": "GET /api/weather/destinations",
+      "path": "backend/toursApi/controllers/WeatherController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0362",
+      "type": "Backend Endpoint",
+      "name": "GET /api/admin/website-config/{hostname}",
+      "path": "backend/toursApi/controllers/WebsiteConfigAdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "API-0363",
+      "type": "Backend Endpoint",
+      "name": "PUT /api/admin/website-config/{hostname}",
+      "path": "backend/toursApi/controllers/WebsiteConfigAdminController.cs",
+      "dependsOnApi": "Yes",
+      "platforms": "Backend",
+      "testTypePlanned": "xUnit + WebApplicationFactory + Isolation",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0364",
+      "type": "Web Route",
+      "name": "/",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0365",
+      "type": "Web Route",
+      "name": "/en",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0366",
+      "type": "Web Route",
+      "name": "/en/hotels",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0367",
+      "type": "Web Route",
+      "name": "/en/tours",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0368",
+      "type": "Web Route",
+      "name": "/en/flights",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0369",
+      "type": "Web Route",
+      "name": "/en/holidays",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0370",
+      "type": "Web Route",
+      "name": "/en/transfers",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0371",
+      "type": "Web Route",
+      "name": "/en/visas",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0372",
+      "type": "Web Route",
+      "name": "/en/restaurants",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0373",
+      "type": "Web Route",
+      "name": "/en/buildpackage",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0374",
+      "type": "Web Route",
+      "name": "/en/about-us",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0375",
+      "type": "Web Route",
+      "name": "/en/contact-us",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0376",
+      "type": "Web Route",
+      "name": "/en/faq",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0377",
+      "type": "Web Route",
+      "name": "/admin",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    },
+    {
+      "id": "WEB-0378",
+      "type": "Web Route",
+      "name": "/admin/bookings",
+      "path": "web/app",
+      "dependsOnApi": "Yes",
+      "platforms": "Web",
+      "testTypePlanned": "Vitest + Playwright E2E",
+      "status": "Pending Test"
+    }
+  ]
+}

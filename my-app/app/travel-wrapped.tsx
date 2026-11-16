@@ -94,7 +94,7 @@ export default function TravelWrappedScreen() {
           { backgroundColor: colors.surface, borderBottomColor: colors.border },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           style={[styles.backBtn, { backgroundColor: colors.background }]}
           onPress={() => {
             Haptics.selectionAsync().catch(() => {});
@@ -115,7 +115,7 @@ export default function TravelWrappedScreen() {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-ribbon"
           style={[styles.certTriggerBtn, { backgroundColor: '#FEF3C7', borderColor: '#FDE68A' }]}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
@@ -133,7 +133,7 @@ export default function TravelWrappedScreen() {
         <View style={styles.successBanner}>
           <Ionicons name="checkmark-circle" size={16} color="#059669" />
           <Text style={styles.successBannerText}>{actionSuccessMessage}</Text>
-          <TouchableOpacity onPress={clearActionSuccessMessage}>
+          <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={clearActionSuccessMessage}>
             <Ionicons name="close" size={16} color="#059669" />
           </TouchableOpacity>
         </View>
@@ -146,7 +146,7 @@ export default function TravelWrappedScreen() {
           { backgroundColor: colors.surface, borderBottomColor: colors.border },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-travel-wrapped-149" accessibilityLabel="travel-wrapped action"
           style={[
             styles.tabItem,
             activeTab === 'wrapped' && [styles.activeTabItem, { borderColor: colors.primary }],
@@ -169,7 +169,7 @@ export default function TravelWrappedScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-travel-wrapped-172" accessibilityLabel="travel-wrapped action"
           style={[
             styles.tabItem,
             activeTab === 'loyalty' && [styles.activeTabItem, { borderColor: colors.primary }],
@@ -192,7 +192,7 @@ export default function TravelWrappedScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-travel-wrapped-195" accessibilityLabel="travel-wrapped action"
           style={[
             styles.tabItem,
             activeTab === 'diploma' && [styles.activeTabItem, { borderColor: colors.primary }],
@@ -398,7 +398,7 @@ export default function TravelWrappedScreen() {
                 "{certificate.citation}"
               </Text>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-expand-outline" accessibilityLabel="expand outline"
                 style={styles.openDiplomaBtn}
                 onPress={openCertificateModal}
                 activeOpacity={0.85}

@@ -13,6 +13,11 @@
  * - stagingApiUrl: Brand fallback API URL
  * - defaultAccentColor: Primary brand color
  * - currency: Currency code ($ / INR)
+ * - apiUrlEnvVar: Environment variable name holding backend API URL (e.g. "GUJJUTOURS_API_URL")
+ * - apiKeyEnvVar: Environment variable name holding server API Key (e.g. "GUJJUTOURS_API_KEY")
+ *
+ * NOTE: Actual server secret keys and credentials resolution are strictly isolated
+ * inside server-only modules (@/lib/serverSiteSecrets.ts) to guarantee zero key leakage in client bundles.
  */
 
 export type SiteId = "gujjutours" | "tripgoasia" | "technoheaven";
@@ -28,6 +33,8 @@ export interface SiteDefinition {
   readonly defaultAccentColor: string;
   readonly defaultCurrency: string;
   readonly defaultCurrencySymbol: string;
+  readonly apiUrlEnvVar: string;
+  readonly apiKeyEnvVar: string;
 }
 
 export const SITE_REGISTRY: Record<SiteId, SiteDefinition> = {
@@ -52,6 +59,8 @@ export const SITE_REGISTRY: Record<SiteId, SiteDefinition> = {
     defaultAccentColor: "#2882c5",
     defaultCurrency: "INR",
     defaultCurrencySymbol: "₹",
+    apiUrlEnvVar: "GUJJUTOURS_API_URL",
+    apiKeyEnvVar: "GUJJUTOURS_API_KEY",
   },
   tripgoasia: {
     siteId: "tripgoasia",
@@ -73,6 +82,8 @@ export const SITE_REGISTRY: Record<SiteId, SiteDefinition> = {
     defaultAccentColor: "#FF932C",
     defaultCurrency: "USD",
     defaultCurrencySymbol: "$",
+    apiUrlEnvVar: "TRIPGOASIA_API_URL",
+    apiKeyEnvVar: "TRIPGOASIA_API_KEY",
   },
   technoheaven: {
     siteId: "technoheaven",
@@ -95,6 +106,8 @@ export const SITE_REGISTRY: Record<SiteId, SiteDefinition> = {
     defaultAccentColor: "#66cce2",
     defaultCurrency: "USD",
     defaultCurrencySymbol: "$",
+    apiUrlEnvVar: "TECHNOHEAVEN_API_URL",
+    apiKeyEnvVar: "TECHNOHEAVEN_API_KEY",
   },
 };
 
@@ -121,12 +134,6 @@ export function normalizeHost(raw?: string | null): string {
 
 /**
  * Resolves a SiteDefinition from an incoming request's Host / x-forwarded-host header.
- *
- * Rules:
- * 1. Matches development hostnames (e.g. "tripgoasia.localhost")
- * 2. Matches production hostnames (e.g. "www.tripgoasia.com" or "tripgoasia.com")
- * 3. Strips optional leading "www." for flexible matching
- * 4. Matches direct siteId or legacySlug (e.g. "tripgoasia", "website2")
  */
 export function resolveSiteFromHost(hostHeader?: string | null): SiteDefinition | null {
   const host = normalizeHost(hostHeader);
@@ -204,3 +211,13 @@ export function isValidSiteId(siteId: string): siteId is SiteId {
 
 export const DEFAULT_DEV_SITE_ID: SiteId = "gujjutours";
 
+/**
+ * Retrieves the actively configured SITE_ID from process.env, falling back to DEFAULT_DEV_SITE_ID.
+ */
+export function getActiveSiteId(): SiteId {
+  const envSiteId = process.env.SITE_ID?.trim().toLowerCase();
+  if (envSiteId && isValidSiteId(envSiteId)) {
+    return envSiteId;
+  }
+  return DEFAULT_DEV_SITE_ID;
+}

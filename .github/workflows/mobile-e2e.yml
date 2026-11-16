@@ -1,0 +1,57 @@
+name: Mobile E2E Smoke Tests (Maestro)
+
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: "Target Website Tenant"
+        required: true
+        default: "gujjutours"
+        type: choice
+        options:
+          - gujjutours
+          - tripgoasia
+          - technoheaven
+  schedule:
+    # Run weekly on Sundays at midnight UTC
+    - cron: '0 0 * * 0'
+
+jobs:
+  maestro-e2e:
+    name: Maestro E2E Suite on Android
+    runs-on: macos-14 # Uses free M1 runner minutes on GitHub Actions
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Maestro CLI
+        run: |
+          curl -fsSL "https://get.maestro.mobile.dev" | bash
+          echo "$HOME/.maestro/bin" >> $GITHUB_PATH
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Run AVD Emulator and Execute Maestro Flows
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          target: google_apis
+          arch: x86_64
+          script: |
+            echo "Device ready. Executing Maestro Flows..."
+            maestro test .maestro/browse-and-search.yaml
+            maestro test .maestro/tour-details-and-wishlist.yaml
+            maestro test .maestro/account-deletion.yaml
+

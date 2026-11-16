@@ -1,0 +1,21 @@
+[
+  {
+    "bannerMasterId": 1,
+    "name": "B2B Agent Gateway",
+    "patternDetails": { "patternName": "b2b-agent-portal" },
+    "serviceType": { "id": 1, "name": "Hotels", "code": "HOTEL" },
+    "productDetails": [
+      {
+        "id": 1001,
+        "name": "Technoheaven B2B Global Travel Marketplace",
+        "defaultName": "Techno B2B",
+        "imagePath": "cemalimage.2_54ymrda8upw.webp",
+        "price": 0,
+        "supplierCurrencyCode": "USD",
+        "Address": "Dubai & Global B2B Network",
+        "city": { "cityName": "Dubai" },
+        "country": { "countryName": "United Arab Emirates" }
+      }
+    ]
+  }
+]

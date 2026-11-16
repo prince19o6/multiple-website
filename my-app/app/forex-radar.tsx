@@ -59,7 +59,7 @@ export default function ForexRadarScreen() {
 
       {/* Screen Header */}
       <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           onPress={handleBack}
           style={[styles.backBtn, { backgroundColor: colors.background }]}
           accessibilityRole="button"
@@ -77,7 +77,7 @@ export default function ForexRadarScreen() {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-sync-outline"
           onPress={onRefresh}
           style={[styles.refreshBtn, { backgroundColor: colors.background }]}
           accessibilityRole="button"
@@ -89,7 +89,7 @@ export default function ForexRadarScreen() {
 
       {/* Tabs / Segments */}
       <View style={[styles.tabBar, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-trending-up-outline" accessibilityLabel="trending up outline"
           style={[
             styles.tabItem,
             activeTab === 'rates' && [styles.activeTabItem, { borderBottomColor: colors.primary }],
@@ -112,7 +112,7 @@ export default function ForexRadarScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-shield-checkmark-outline" accessibilityLabel="shield checkmark outline"
           style={[
             styles.tabItem,
             activeTab === 'atm' && [styles.activeTabItem, { borderBottomColor: colors.primary }],
@@ -135,7 +135,7 @@ export default function ForexRadarScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-business-outline" accessibilityLabel="business outline"
           style={[
             styles.tabItem,
             activeTab === 'kiosks' && [styles.activeTabItem, { borderBottomColor: colors.primary }],
@@ -171,7 +171,7 @@ export default function ForexRadarScreen() {
         <View style={styles.errorContainer}>
           <Ionicons name="alert-circle-outline" size={44} color="#dc2626" />
           <Text style={[styles.errorText, { color: colors.heading }]}>{error}</Text>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-retry-connection" accessibilityLabel="Retry Connection"
             style={[styles.retryBtn, { backgroundColor: colors.primary }]}
             onPress={onRefresh}
           >
@@ -233,7 +233,7 @@ export default function ForexRadarScreen() {
                   {cities.map((city) => {
                     const isSelected = city === selectedCity;
                     return (
-                      <TouchableOpacity
+                      <TouchableOpacity testID="btn-forex-radar-236" accessibilityLabel="forex-radar action"
                         key={city}
                         style={[
                           styles.cityChip,
@@ -283,7 +283,7 @@ export default function ForexRadarScreen() {
 
       {/* Floating Bottom Action Bar */}
       <View style={[styles.bottomBar, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-calculator-outline"
           style={[styles.floatingCalcBtn, { backgroundColor: colors.primary }]}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});

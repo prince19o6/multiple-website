@@ -80,7 +80,7 @@ export function LoyaltyTierProgressCard({ loyalty, onOpenReview }: LoyaltyTierPr
       </View>
 
       {/* Review Booster Action */}
-      <TouchableOpacity style={styles.boosterButton} onPress={onOpenReview} activeOpacity={0.85}>
+      <TouchableOpacity testID="btn-gift-outline" accessibilityLabel="gift outline" style={styles.boosterButton} onPress={onOpenReview} activeOpacity={0.85}>
         <Ionicons name="gift-outline" size={18} color="#FFFFFF" />
         <Text style={styles.boosterText}>Write Trip Reflection for +250 Bonus Pts</Text>
       </TouchableOpacity>

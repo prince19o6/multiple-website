@@ -94,14 +94,7 @@ export default function NavDrawer({
   // Check admin session when opening drawer
   useEffect(() => {
     if (isOpen) {
-      const tenantSiteId =
-        siteId === 'website2'
-          ? 'tripgoasia'
-          : siteId === 'website3'
-          ? 'technoheaven'
-          : siteId === 'website1'
-          ? 'gujjutours'
-          : siteId || 'gujjutours';
+      const tenantSiteId = siteId || 'gujjutours';
       storeGet('admin.token', tenantSiteId)
         .then((token) => {
           if (token && token !== 'demo-admin-token-12345') {
@@ -209,8 +202,8 @@ export default function NavDrawer({
   const navigateTo = (path: string) => {
     handleClose();
     setTimeout(() => {
-      if (path === '/') {
-        router.replace('/(app)');
+      if (path === '/' || path === '/(app)') {
+        router.replace('/(tabs)');
       } else {
         router.push(path as any);
       }
@@ -223,13 +216,9 @@ export default function NavDrawer({
     await selectSite(targetId);
   };
 
-  // Dynamic Explore label based on brand
-  const exploreLabel =
-    siteId === 'website2'
-      ? 'Adventures'
-      : siteId === 'website3'
-      ? 'Holiday Packages'
-      : 'Explore Tours';
+  // Dynamic Explore label based on brand navigation
+  const exploreTab = config?.navigation?.app?.tabs?.find((t: any) => t.id === 'explore');
+  const exploreLabel = exploreTab?.label || (config as any)?.exploreLabel || 'Explore Tours';
 
   // Navigation Links definition
   const adminIcon: keyof typeof Ionicons.glyphMap = isAdminLoggedIn
@@ -249,8 +238,8 @@ export default function NavDrawer({
       path: '/',
       isActive:
         activePath === '/' ||
-        activePath === '/(app)' ||
-        activePath === '/(app)/index',
+        activePath === '/(tabs)' ||
+        activePath === '/(tabs)/index',
     },
     {
       label: exploreLabel,
@@ -258,8 +247,8 @@ export default function NavDrawer({
       path: '/explore',
       isActive:
         activePath === '/explore' ||
-        activePath.startsWith('/explore') ||
-        activePath.startsWith('/(app)/explore'),
+        activePath === '/(tabs)/explore' ||
+        activePath.startsWith('/explore'),
     },
     {
       label: 'About Us',
@@ -366,7 +355,7 @@ export default function NavDrawer({
               </View>
 
               {/* Close Button (min 44x44 touch target) */}
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-close"
                 style={[
                   styles.closeButton,
                   { backgroundColor: `${colors.mutedText}14` },
@@ -409,7 +398,7 @@ export default function NavDrawer({
                   const isActiveSite = siteId === site.id;
 
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-navdrawer-401"
                       key={site.id}
                       style={[
                         styles.siteCard,

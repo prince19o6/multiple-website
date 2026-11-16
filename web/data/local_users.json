@@ -1,0 +1,26 @@
+[
+  {
+    "id": "usr_p33_demo_init",
+    "email": "p33@gmail.com",
+    "fullName": "Prince Patel",
+    "phone": "9875095616",
+    "phoneCountryCode": "+91",
+    "passwordHash": "cb5430a6c078e8a31242bcfb46a42a76b444efdb2234eb7ab797bf2c2525d6d44644e9184d9eae9c0486f5097d5806c3071cefd015d7e8e1411c142a43915f69",
+    "salt": "a1b2c3d4e5f67890",
+    "role": "Customer",
+    "siteId": "gujjutours",
+    "createdAt": "2026-11-12T00:00:00.000Z",
+    "updatedAt": "2026-11-12T00:00:00.000Z"
+  },
+  {
+    "id": "usr_1794486386502_i5uph",
+    "email": "admin@gujjutours.com",
+    "fullName": "admin",
+    "passwordHash": "29f29dd6e6a1f604850241608642d3f180a7ae8b96364935ee32e89ef79337a3f8d2bca9d9107ce079915daf24b01d90e7d67c279255c7a38cdb92a111936b03",
+    "salt": "13bf4ef31f7d9207b20ee6523be63aa3",
+    "role": "Admin",
+    "siteId": "gujjutours",
+    "createdAt": "2026-11-12T12:26:26.502Z",
+    "updatedAt": "2026-11-12T12:26:26.502Z"
+  }
+]

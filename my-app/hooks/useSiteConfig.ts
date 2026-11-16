@@ -1,23 +1,35 @@
 /**
  * hooks/useSiteConfig.ts
  *
- * TanStack Query hooks and context accessor for the active site configuration.
+ * TanStack Query hooks and context accessors for active site configuration.
  * Always scoped to the active website hostname and tenant ID.
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { fetchConfig } from '@/services/api';
 import { queryKeys } from '@/store/queryClient';
-import { useSiteConfig as useSiteConfigFromContext, useSite } from '@/store/SiteConfigContext';
+import {
+  useSiteConfig as useSiteConfigFromContext,
+  useSite,
+  useFeature,
+  useSiteNavigation,
+  useSiteContent,
+  useSiteSeo,
+  useSiteApp,
+} from '@/store/SiteConfigContext';
 import { ENV } from '@/src/config/env';
 import type { SiteConfigResult } from '@/lib/siteConfig';
 import { getActiveSite } from '@/src/config/sites';
 
-/**
- * Returns the currently loaded site configuration from SiteConfigContext.
- */
 export const useSiteConfig = useSiteConfigFromContext;
-export { useSite };
+export {
+  useSite,
+  useFeature,
+  useSiteNavigation,
+  useSiteContent,
+  useSiteSeo,
+  useSiteApp,
+};
 
 /**
  * TanStack query hook that fetches site config for a given site ID and hostname.

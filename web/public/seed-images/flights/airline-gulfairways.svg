@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad-gulfairways" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="36" fill="url(#grad-gulfairways)" />
+  <circle cx="100" cy="90" r="45" fill="rgba(255,255,255,0.15)" />
+  <path d="M 60 95 C 80 65, 120 65, 140 95 C 120 85, 80 85, 60 95 Z" fill="#ffffff" />
+  <polygon points="100,65 110,85 90,85" fill="#ffffff" />
+  <text x="100" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+    GULF AIRWAY
+  </text>
+  <text x="100" y="168" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.8)" text-anchor="middle" letter-spacing="2">
+    REGIONAL
+  </text>
+</svg>
+

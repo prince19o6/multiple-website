@@ -1,0 +1,33 @@
+[
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a403" },
+    "userCode": "TG-10001",
+    "websiteId": "tripgoasia",
+    "fullName": "TripGo Traveler",
+    "email": "traveler@tripgoasia.com",
+    "phoneCountryCode": "+60",
+    "phone": "123456789",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Customer",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  },
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a404" },
+    "userCode": "TG-10002",
+    "websiteId": "tripgoasia",
+    "fullName": "TripGo Admin",
+    "email": "admin@tripgoasia.com",
+    "phoneCountryCode": "+60",
+    "phone": "123456788",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Admin",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  }
+]
+

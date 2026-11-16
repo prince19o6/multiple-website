@@ -36,7 +36,7 @@ export function SpecialOffersSection({
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-press"
         style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}
         onPress={handlePress}
         activeOpacity={0.85}

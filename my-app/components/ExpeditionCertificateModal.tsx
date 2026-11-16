@@ -40,7 +40,7 @@ export function ExpeditionCertificateModal({
           {/* Close Header */}
           <View style={styles.header}>
             <Text style={styles.headerTitle}>Official Expedition Diploma</Text>
-            <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={onClose} style={styles.closeBtn}>
               <Ionicons name="close" size={22} color="#1E293B" />
             </TouchableOpacity>
           </View>
@@ -91,7 +91,7 @@ export function ExpeditionCertificateModal({
 
             {/* Action Buttons */}
             <View style={styles.actionContainer}>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-download-outline" accessibilityLabel="download outline"
                 style={styles.downloadButton}
                 onPress={handleShareOrDownload}
                 activeOpacity={0.85}

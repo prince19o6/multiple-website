@@ -73,7 +73,7 @@ export function ReviewBoostModal({ visible, onClose, onSubmit }: ReviewBoostModa
                 Post-Trip Expedition Review
               </Text>
             </View>
-            <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={onClose} style={styles.closeBtn}>
               <Ionicons name="close" size={20} color={colors.mutedText} />
             </TouchableOpacity>
           </View>
@@ -83,7 +83,7 @@ export function ReviewBoostModal({ visible, onClose, onSubmit }: ReviewBoostModa
             <Text style={[styles.label, { color: colors.mutedText }]}>YOUR OVERALL EXPEDITION RATING</Text>
             <View style={styles.starsRow}>
               {[1, 2, 3, 4, 5].map((star) => (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-reviewboostmodal-86" accessibilityLabel="reviewboostmodal action"
                   key={star}
                   onPress={() => setRating(star)}
                   style={styles.starTouchable}
@@ -135,7 +135,7 @@ export function ReviewBoostModal({ visible, onClose, onSubmit }: ReviewBoostModa
             />
 
             {/* Submit Button */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-rocket-outline" accessibilityLabel="rocket outline"
               style={styles.submitBtn}
               onPress={handleSubmit}
               disabled={submitting}

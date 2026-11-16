@@ -14,10 +14,10 @@
     "description": "Sail crystal-clear Andaman waters aboard a luxury catamaran to Maya Bay, snorkel vibrant reefs at Pileh Lagoon, and relax on white sands.",
     "shortDescription": "Maya Bay turquoise waters, Pileh Lagoon snorkeling, and catamaran luxury.",
     "fullDescription": "Embark on an unforgettable island-hopping voyage across the Phi Phi archipelago. Explore the world-famous Maya Bay made legendary by cinema, swim in the emerald waters of Pileh Lagoon flanked by soaring limestone karsts, snorkel among colorful clownfish, and enjoy beachfront Thai dining at Bamboo Island.",
-    "price": 899,
-    "originalPrice": 1150,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 849,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -25,11 +25,11 @@
     "rating": 4.9,
     "reviews": 142,
     "reviewCount": 142,
-    "image": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "10-18 travelers",
     "bestTime": "November to April",
@@ -103,7 +103,21 @@
         "text": "Flawless organization, great food, and stunning turquoise waters.",
         "date": "2026-08-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 202,
@@ -120,10 +134,10 @@
     "description": "Marvel at Kelingking T-Rex cliff, climb down the cliffside staircase to Diamond Beach, and snorkel with giant manta rays.",
     "shortDescription": "Dramatic limestone cliffs, Diamond Beach stairway, and manta rays.",
     "fullDescription": "Venture across the Badung Strait to the island of Nusa Penida. Stand atop Kelingking Secret Point overlooking the dramatic T-Rex coastal formation, marvel at natural rock archways at Broken Beach, and descend the cliff-hewn stone staircase to the shimmering white sands of Diamond Beach.",
-    "price": 749,
-    "originalPrice": 950,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 699,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -131,10 +145,11 @@
     "rating": 4.8,
     "reviews": 98,
     "reviewCount": 98,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "April to October",
@@ -200,7 +215,21 @@
         "text": "The staircase is steep but so worth it. The villa was incredible.",
         "date": "2026-07-28"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 203,
@@ -217,10 +246,10 @@
     "description": "Walk the powder-soft White Beach, cruise aboard a traditional Paraw sailboat at sunset, and explore sea caves at Crystal Cove.",
     "shortDescription": "Powder-soft white sands, Paraw sailing, and crystal-clear snorkeling.",
     "fullDescription": "Experience the legendary beaches of Boracay. Walk barefoot on the flour-soft sand of Station 1, glide across turquoise waters on a double-outrigger Paraw sailboat during golden hour, and explore the marine caves of Crystal Cove Island.",
-    "price": 799,
-    "originalPrice": 990,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 749,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -228,10 +257,11 @@
     "rating": 4.8,
     "reviews": 86,
     "reviewCount": 86,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "December to May",
@@ -302,7 +332,21 @@
         "text": "Very relaxing trip, crystal clear water everywhere.",
         "date": "2026-06-03"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 204,
@@ -319,10 +363,10 @@
     "description": "Relax on palm-lined My Khe Beach, explore mystical Buddhist cave grottos in Marble Mountains, and marvel at the Dragon Bridge.",
     "shortDescription": "Golden beaches, Marble Mountains shrines, and coastal Vietnamese cuisine.",
     "fullDescription": "Combine coastal relaxation with cultural discovery in Da Nang. Spend days basking on My Khe Beach's warm waters, climb the spiritual peaks of Marble Mountains to discover hidden Buddhist temples inside limestone grottos, and dine on fresh seafood along the beachfront promenade.",
-    "price": 649,
-    "originalPrice": 820,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 599,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -330,10 +374,11 @@
     "rating": 4.7,
     "reviews": 73,
     "reviewCount": 73,
-    "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
     ],
     "groupSize": "8-15 travelers",
     "bestTime": "February to August",
@@ -399,7 +444,21 @@
         "text": "The caves at Marble Mountains were super impressive.",
         "date": "2026-07-04"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+    ],
+    "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
+    "photoCredit": {
+      "photographer": "Sebastian Pociecha",
+      "profileUrl": "https://unsplash.com/@sebastianpociecha",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 205,
@@ -416,10 +475,10 @@
     "description": "Witness the magical glowing sea of stars at night on Vaadhoo Island, snorkel vibrant coral atolls, and feast on a private sandbank picnic.",
     "shortDescription": "Glowing bioluminescent beaches, private sandbanks, and coral reefs.",
     "fullDescription": "Immerse yourself in tropical luxury in the Maldives. Snorkel crystal-clear lagoons teeming with sea turtles and baby reef sharks, enjoy a secluded picnic on an isolated sandbank, and as twilight falls, witness the shoreline glow with magical blue bioluminescent phytoplankton.",
-    "price": 1899,
-    "originalPrice": 2400,
+    "price": 22,
+    "originalPrice": 28,
     "discountedPrice": 1749,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -427,10 +486,11 @@
     "rating": 4.9,
     "reviews": 110,
     "reviewCount": 110,
-    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "November to April",
@@ -502,7 +562,21 @@
         "text": "Water villa was unbelievable. Worth every single penny.",
         "date": "2026-05-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 206,
@@ -519,10 +593,10 @@
     "description": "Discover the secluded curved cove of Tanjung Rhu, kayak through ancient Kilim Karst mangroves, and ride the skycab over rainforest canopies.",
     "shortDescription": "Secluded Tanjung Rhu cove, Kilim Karst mangroves, and duty-free island charm.",
     "fullDescription": "Escape to Langkawi's tranquil northern shores. Bask on the quiet powdery sands of Tanjung Rhu framed by limestone sea stacks, cruise through the UNESCO-listed Kilim Karst Geoforest Park mangroves spotting Brahminy kites, and take in 360-degree views from the Langkawi Sky Bridge.",
-    "price": 720,
-    "originalPrice": 900,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 679,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -530,9 +604,11 @@
     "rating": 4.8,
     "reviews": 62,
     "reviewCount": 62,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-14 travelers",
     "bestTime": "November to April",
@@ -598,7 +674,21 @@
         "text": "Mangrove boat ride was educational and very scenic.",
         "date": "2026-04-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 207,
@@ -615,10 +705,10 @@
     "description": "Accessible only by boat, Railay Beach offers world-famous limestone cliff vistas, Phra Nang Princess Cave, and thrilling 4-island island hopping.",
     "shortDescription": "Dramatic sea cliffs, Phra Nang Cave beach, and 4-island speedboat hopping.",
     "fullDescription": "Discover Krabi's majestic peninsula of Railay. Flanked by towering sheer limestone cliffs that draw rock climbers from across the globe, relax on Phra Nang Beach, cruise on a speedboat to Chicken Island and Poda Island, and snorkel among bioluminescent waters after dusk.",
-    "price": 680,
-    "originalPrice": 850,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 629,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -626,9 +716,11 @@
     "rating": 4.8,
     "reviews": 94,
     "reviewCount": 94,
-    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "10-18 travelers",
     "bestTime": "November to April",
@@ -694,7 +786,21 @@
         "text": "Night snorkeling with glowing plankton was magical!",
         "date": "2026-03-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 208,
@@ -711,10 +817,10 @@
     "description": "Explore tranquil Rạch Vẹm Starfish Beach, ride the world's longest over-sea cable car to Hon Thom Island, and enjoy vibrant night markets.",
     "shortDescription": "Red starfish in crystal shallows, over-sea cable car, and sunset bays.",
     "fullDescription": "Escape to Vietnam's pearl island in the Gulf of Thailand. Walk shallow turquoise waters observing red starfish at Rach Vem Beach, soar across scenic islands on the 7.8km Hon Thom cable car, and taste freshly caught seafood at Dinh Cau night market.",
-    "price": 610,
-    "originalPrice": 780,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 569,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -722,9 +828,11 @@
     "rating": 4.7,
     "reviews": 65,
     "reviewCount": 65,
-    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "November to April",
@@ -790,7 +898,21 @@
         "text": "Starfish beach was lovely, delicious seafood everywhere.",
         "date": "2026-02-17"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 209,
@@ -807,10 +929,10 @@
     "description": "Photograph the iconic Coconut Tree Hill headland, cruise into the Indian Ocean to spot blue whales, and relax in bohemian beach shacks.",
     "shortDescription": "Blue whale watching, Coconut Tree Hill headland, and southern Sri Lankan beaches.",
     "fullDescription": "Experience Sri Lanka's vibrant southern beach culture. Gaze out from the palm-crowned dome of Coconut Tree Hill, embark on early morning catamaran cruises to see majestic blue whales and spinner dolphins, and unwind with fresh coconut water on Secret Beach.",
-    "price": 699,
-    "originalPrice": 880,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 649,
-    "currency": "$",
+    "currency": "USD",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "durationNights": 4,
@@ -818,9 +940,11 @@
     "rating": 4.8,
     "reviews": 81,
     "reviewCount": 81,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "November to April",
@@ -891,7 +1015,21 @@
         "text": "Coconut Tree Hill at sunrise was pure postcard perfection.",
         "date": "2026-03-12"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 210,
@@ -908,10 +1046,10 @@
     "description": "Discover Japan's subtropical paradise in the Yaeyama Islands with Kabira Bay emerald waters, manta ray dives, and starry night skies.",
     "shortDescription": "Kabira Bay emerald waters, manta ray reefs, and Ryukyu subtropical culture.",
     "fullDescription": "Experience Japan's southern tropical jewel on Ishigaki Island. Gaze upon the breathtaking emerald hues of Kabira Bay from glass-bottom boats, snorkel with giant manta rays at Manta Scramble, taste tender Ishigaki Wagyu beef, and star-gaze under dark-sky reserve night skies.",
-    "price": 1199,
-    "originalPrice": 1450,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 1099,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -919,9 +1057,11 @@
     "rating": 4.9,
     "reviews": 58,
     "reviewCount": 58,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "April to October",
@@ -987,7 +1127,21 @@
         "text": "Incredible hospitality and the Wagyu beef dinner was perfection.",
         "date": "2026-06-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 211,
@@ -1004,10 +1158,10 @@
     "description": "Hike under the starlit sky to the summit of active Mount Batur for sunrise above the clouds, followed by a soak in natural volcanic hot springs.",
     "shortDescription": "Volcano sunrise summit hike, caldera steam vents, and hot spring soaks.",
     "fullDescription": "Trek to the rim of active volcano Mount Batur in Bali's central highlands. Climb by torchlight to 1,717 meters above sea level to watch the sunrise ignite the sky over Mount Agung and Lake Batur, enjoy breakfast cooked in volcanic steam, and soak in geothermal hot springs.",
-    "price": 450,
-    "originalPrice": 580,
+    "price": 95,
+    "originalPrice": 119,
     "discountedPrice": 399,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1015,9 +1169,11 @@
     "rating": 4.9,
     "reviews": 135,
     "reviewCount": 135,
-    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "May to October",
@@ -1078,7 +1234,21 @@
         "text": "Soaking in the hot springs after the hike was heavenly.",
         "date": "2026-08-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 212,
@@ -1095,10 +1265,10 @@
     "description": "Paddle sea kayaks through emerald lagoons, hidden tidal tunnels, and karst sea arches aboard an intimate luxury cruise in Lan Ha Bay.",
     "shortDescription": "Karst sea caves, hidden tidal lagoons, and luxury wooden junk cruising.",
     "fullDescription": "Venture deep into the UNESCO seascape of Ha Long and Lan Ha Bays. Kayak through Bright & Dark Cave into secluded tidal amphitheaters, jump into warm emerald waters from your boutique ship, and practice morning Tai Chi surrounded by ancient limestone pillars.",
-    "price": 780,
-    "originalPrice": 950,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 729,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1106,9 +1276,11 @@
     "rating": 4.8,
     "reviews": 115,
     "reviewCount": 115,
-    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "10-20 travelers",
     "bestTime": "October to April",
@@ -1169,7 +1341,21 @@
         "text": "The boat was luxury and food was top quality.",
         "date": "2026-06-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 213,
@@ -1186,10 +1372,10 @@
     "description": "Trek through rhododendron forests, Gurung stone villages, and glacial valleys into the 4,130m amphitheater of Annapurna Base Camp.",
     "shortDescription": "4,130m Himalayan sanctuary, Machapuchare vistas, and teahouse hospitality.",
     "fullDescription": "A world-renowned trek into the heart of the Annapurna mountain range. Ascend through lush bamboo and rhododendron woodlands, cross suspension bridges over rushing glacial rivers, and step into the high-altitude natural amphitheater surrounded by 360-degree views of Annapurna I, Machapuchare (Fishtail), and Hiunchuli.",
-    "price": 1399,
-    "originalPrice": 1750,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 1299,
-    "currency": "$",
+    "currency": "USD",
     "duration": "10 Days / 9 Nights",
     "durationDays": 10,
     "durationNights": 9,
@@ -1197,9 +1383,11 @@
     "rating": 4.9,
     "reviews": 148,
     "reviewCount": 148,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "March to May, September to November",
@@ -1295,7 +1483,21 @@
         "text": "Our guide was fantastic and the mountain views were unforgettable.",
         "date": "2026-05-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+    ],
+    "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
+    "photoCredit": {
+      "photographer": "Sebastian Pociecha",
+      "profileUrl": "https://unsplash.com/@sebastianpociecha",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 214,
@@ -1312,10 +1514,10 @@
     "description": "Soar through ancient rainforest canopies on 32 ziplines and tackle Class III-IV rapids along the roaring Mae Taeng River.",
     "shortDescription": "32 canopy ziplines, Class III-IV whitewater rafting, and rainforest trails.",
     "fullDescription": "An adrenaline-charged eco-adventure in Northern Thailand's mountains. Fly through thousand-year-old teak forests on Southeast Asia's longest zipline system, navigate thrilling Grade 3-4 rapids on the Mae Taeng River, and trek to remote hill tribe villages.",
-    "price": 520,
-    "originalPrice": 650,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 479,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1323,9 +1525,11 @@
     "rating": 4.8,
     "reviews": 79,
     "reviewCount": 79,
-    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "July to February",
@@ -1386,7 +1590,21 @@
         "text": "Loved the ziplining over the jungle canopy.",
         "date": "2026-07-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 215,
@@ -1403,10 +1621,10 @@
     "description": "Climb through forested slopes and volcanic ash to the 3,776m crater of Mount Fuji for the sacred Goraiko sunrise.",
     "shortDescription": "3,776m volcano summit, sacred Goraiko sunrise, and mountain hut stay.",
     "fullDescription": "Undertake the iconic pilgrimage to the summit of Japan's highest peak, Mount Fuji. Climb the scenic Subashiri Trail from lush forest to moon-like volcanic scree, spend the night at an authentic mountain hut at the 8th station, and greet the sunrise above a sea of clouds before sliding down the famous sand-run slope.",
-    "price": 890,
-    "originalPrice": 1100,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 820,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1414,9 +1632,11 @@
     "rating": 4.9,
     "reviews": 104,
     "reviewCount": 104,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "July to early September",
@@ -1478,7 +1698,21 @@
         "text": "Tough climb but the guide was encouraging and onsen at the end was heaven.",
         "date": "2026-08-15"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 216,
@@ -1495,10 +1729,10 @@
     "description": "Spelunk through prehistoric limestone caverns, swim through mud baths in Dark Cave, and boat along underground rivers in Paradise Cave.",
     "shortDescription": "Giant limestone caverns, underground rivers, and mud baths.",
     "fullDescription": "Journey into the subterranean heart of Phong Nha-Ke Bang National Park, home to the oldest karst mountains in Asia. Marvel at towering stalactites inside Paradise Cave, zipline across Chay River, and wade through buoyant natural mud chambers inside Dark Cave.",
-    "price": 580,
-    "originalPrice": 720,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 529,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1506,9 +1740,11 @@
     "rating": 4.8,
     "reviews": 67,
     "reviewCount": 67,
-    "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-14 travelers",
     "bestTime": "February to August",
@@ -1569,7 +1805,21 @@
         "text": "Paradise cave stalactites are colossal. A must-see in Vietnam.",
         "date": "2026-05-09"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 217,
@@ -1586,10 +1836,10 @@
     "description": "Leap off 10-meter cliffs, slide down natural rock waterslides into electric-blue pools at Kawasan Falls, and swim with sardines in Moalboal.",
     "shortDescription": "Cliff jumps into electric-blue pools, natural waterslides, and sardine run.",
     "fullDescription": "An electrifying aquatic adventure in southern Cebu. Trek through lush river canyons in Badian, jumping from limestone ledges into turquoise pools and cascading down natural waterfalls. Continue to Moalboal to snorkel alongside millions of swirling sardines just meters from the shore.",
-    "price": 499,
-    "originalPrice": 620,
+    "price": 95,
+    "originalPrice": 119,
     "discountedPrice": 449,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1597,9 +1847,11 @@
     "rating": 4.9,
     "reviews": 122,
     "reviewCount": 122,
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "December to May",
@@ -1660,7 +1912,21 @@
         "text": "Guides were super safe and supportive. Sardine run was magical.",
         "date": "2026-04-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 218,
@@ -1677,10 +1943,10 @@
     "description": "Scale the 4,095m granite dome of Mount Kinabalu and navigate the world's highest Via Ferrata iron road route across sheer cliff faces.",
     "shortDescription": "4,095m peak, world's highest Via Ferrata, and sunrise over Borneo.",
     "fullDescription": "Conquer Malaysia's rooftop in the ancient rainforests of Borneo. Hike through subalpine meadows up Mount Kinabalu to Low's Peak for an awe-inspiring sunrise, then harness into 'Low's Peak Circuit' - verified as the highest Via Ferrata on earth, clipping along cables over sheer vertical drops.",
-    "price": 1150,
-    "originalPrice": 1400,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 1049,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1688,9 +1954,11 @@
     "rating": 4.9,
     "reviews": 76,
     "reviewCount": 76,
-    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "March to September",
@@ -1751,7 +2019,21 @@
         "text": "Hardest physical thing I've done but the summit view made me cry.",
         "date": "2026-06-03"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 219,
@@ -1768,10 +2050,10 @@
     "description": "Trek through emerald tea plantations, follow railway sleepers to the colonial Nine Arches Viaduct, and summit cliff-top Ella Rock.",
     "shortDescription": "Ella Rock panoramic cliffs, tea estate trails, and Nine Arches viaduct.",
     "fullDescription": "Experience the cool mist and drama of Sri Lanka's central highlands. Hike across tea estates, cross the dramatic colonial Nine Arches railway viaduct as steam locomotives pass, scale the steep path to the summit of Ella Rock for sweeping views through Ella Gap, and swim in Ravana Falls.",
-    "price": 520,
-    "originalPrice": 650,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 479,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -1779,9 +2061,11 @@
     "rating": 4.8,
     "reviews": 83,
     "reviewCount": 83,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "December to April",
@@ -1842,7 +2126,21 @@
         "text": "Such a green and peaceful part of Sri Lanka.",
         "date": "2026-03-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 220,
@@ -1859,10 +2157,10 @@
     "description": "Summit South Korea's highest peak at 1,950m with its volcanic crater lake, and walk inside the UNESCO Manjanggul lava tube cave system.",
     "shortDescription": "Hallasan crater lake summit, Manjanggul lava tubes, and coastal cliffs.",
     "fullDescription": "Explore the volcanic marvels of South Korea's premier holiday island. Ascend through dense dwarf pine forests to the crater rim of shield volcano Hallasan (1,950m) gazing down into Baengnokdam crater lake, explore subterranean passages inside Manjanggul Lava Tube, and hike the sunrise peak of Seongsan Ilchulbong.",
-    "price": 760,
-    "originalPrice": 920,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 699,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -1870,9 +2168,11 @@
     "rating": 4.8,
     "reviews": 71,
     "reviewCount": 71,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-14 travelers",
     "bestTime": "April to June, September to November",
@@ -1938,7 +2238,21 @@
         "text": "Long hike up Hallasan but extremely well-maintained trails.",
         "date": "2026-06-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 221,
@@ -1955,10 +2269,10 @@
     "description": "Walk thousands of vermilion torii gates at Fushimi Inari, wander lantern-lit Gion alleyways, and take part in a private Zen tea ceremony.",
     "shortDescription": "Fushimi Inari torii gates, Gion lantern alleys, and Zen tea ceremony.",
     "fullDescription": "Step into Japan's ancient imperial capital. Wind through the endless vermilion arches of Fushimi Inari Taisha, gaze upon the shimmering gold leaf of Kinkaku-ji, partake in an authentic matcha tea ceremony led by a tea master, and stroll the historic wooden machiya lanes of Gion in search of geishas.",
-    "price": 980,
-    "originalPrice": 1200,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 899,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -1966,9 +2280,11 @@
     "rating": 4.9,
     "reviews": 165,
     "reviewCount": 165,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "March to May, October to November",
@@ -2035,7 +2351,21 @@
         "text": "Deeply respectful and authentic cultural experience.",
         "date": "2026-05-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+    ],
+    "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
+    "photoCredit": {
+      "photographer": "Bailey Zindel",
+      "profileUrl": "https://unsplash.com/@baileyzindel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 222,
@@ -2052,10 +2382,10 @@
     "description": "Watch the sun crest the lotus towers of Angkor Wat, admire 216 giant smiling stone faces at Bayon, and see Ta Prohm enveloped by jungle roots.",
     "shortDescription": "Angkor Wat sunrise, Bayon stone faces, and Ta Prohm jungle temple.",
     "fullDescription": "Immerse yourself in the world's largest religious monument. Watch the sunrise illuminate the reflection pools of 12th-century Angkor Wat, decipher ancient bas-relief carvings, explore the enigmatic stone faces of Bayon, and walk through Ta Prohm where colossal strangler fig roots engulf ancient ruins.",
-    "price": 599,
-    "originalPrice": 750,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 549,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2063,9 +2393,11 @@
     "rating": 4.9,
     "reviews": 182,
     "reviewCount": 182,
-    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "November to March",
@@ -2132,7 +2464,21 @@
         "text": "Ta Prohm feels like an Indiana Jones set. Absolutely magical.",
         "date": "2026-04-11"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 223,
@@ -2149,10 +2495,10 @@
     "description": "Marvel at the golden spires of the Grand Palace, see the 46m Reclining Buddha at Wat Pho, and cruise Damnoen Saduak floating market by longtail boat.",
     "shortDescription": "Grand Palace golden spires, Reclining Buddha, and floating markets.",
     "fullDescription": "Dive into the kaleidoscopic royal and spiritual heritage of Bangkok. Marvel at the sacred Emerald Buddha inside the Grand Palace, visit the serene 46-meter golden Reclining Buddha at Wat Pho, glide along Chao Phraya River canals in a wooden longtail boat, and shop tropical fruits directly from wooden canoes at vibrant floating markets.",
-    "price": 520,
-    "originalPrice": 650,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 479,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2160,9 +2506,11 @@
     "rating": 4.8,
     "reviews": 130,
     "reviewCount": 130,
-    "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "November to February",
@@ -2228,7 +2576,21 @@
         "text": "Loved the floating market and food tour in Chinatown.",
         "date": "2026-04-09"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 224,
@@ -2245,10 +2607,10 @@
     "description": "Stroll lantern-lit yellow alleyways in UNESCO Hoi An, cross the 400-year-old Japanese Covered Bridge, and craft your own traditional silk lantern.",
     "shortDescription": "Yellow merchant houses, Japanese bridge, and silk lantern workshops.",
     "fullDescription": "Step into an evocative 16th-century trading port. Wander past yellow-walled merchant houses, Chinese assembly halls, and the Japanese Covered Bridge. Learn traditional lantern making from master artisans, cruise along the Thu Bon River, and take a cooking class in Tra Que herb village.",
-    "price": 490,
-    "originalPrice": 620,
+    "price": 95,
+    "originalPrice": 119,
     "discountedPrice": 449,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2256,9 +2618,11 @@
     "rating": 4.9,
     "reviews": 140,
     "reviewCount": 140,
-    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "February to July",
@@ -2324,7 +2688,21 @@
         "text": "Cooking class was fantastic! My lantern is now in my living room.",
         "date": "2026-06-12"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 225,
@@ -2341,10 +2719,10 @@
     "description": "Participate in silent dawn Tak Bat alms giving with saffron-robed monks, explore Wat Xieng Thong, and swim in tiered turquoise Kuang Si Falls.",
     "shortDescription": "Tak Bat morning alms, Wat Xieng Thong temple, and Kuang Si tiered falls.",
     "fullDescription": "Experience the spiritual tranquility of UNESCO-listed Luang Prabang nestled between the Mekong and Nam Khan rivers. Awaken at sunrise to witness saffron-robed monks collecting morning alms, admire the glittering mosaics of Wat Xieng Thong, and swim in the cool tiered limestone pools of Kuang Si Waterfall.",
-    "price": 620,
-    "originalPrice": 780,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 569,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2352,9 +2730,11 @@
     "rating": 4.8,
     "reviews": 68,
     "reviewCount": 68,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "November to March",
@@ -2420,7 +2800,21 @@
         "text": "Kuang Si falls are spectacular in person. Great guide.",
         "date": "2026-03-24"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 226,
@@ -2437,10 +2831,10 @@
     "description": "Don traditional Hanbok royal robes at Gyeongbokgung Palace, wander Bukchon Hanok wooden alleys, and explore Insadong antique teahouses.",
     "shortDescription": "Royal Joseon palaces, traditional Hanok villages, and street food.",
     "fullDescription": "Uncover six centuries of Korean royal heritage and dynamic modernity in Seoul. Don an ornate silk Hanbok to watch the Changing of the Royal Guard at Gyeongbokgung Palace, stroll between traditional tiled rooflines in Bukchon Hanok Village, and taste piping-hot bibimbap and bindaetteok in historic Gwangjang Market.",
-    "price": 780,
-    "originalPrice": 980,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 720,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2448,9 +2842,11 @@
     "rating": 4.8,
     "reviews": 112,
     "reviewCount": 112,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "April to May, September to November",
@@ -2517,7 +2913,21 @@
         "text": "Great guide, delicious food, very organized.",
         "date": "2026-06-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 227,
@@ -2534,10 +2944,10 @@
     "description": "Soar in a hot air balloon over 2,000 ancient Buddhist temples emerging from dawn mist across the sacred plains of Bagan.",
     "shortDescription": "Hot air balloon flight, 2,000 ancient pagodas, and horse-cart trails.",
     "fullDescription": "Gaze upon one of humanity's most awe-inspiring archaeological landscapes. Ascend into morning skies aboard a hot air balloon as mist rises over thousands of 11th-century brick pagodas, explore gilded Ananda Temple on e-bikes, and watch the sun melt over the Irrawaddy River.",
-    "price": 950,
-    "originalPrice": 1200,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 880,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2545,9 +2955,11 @@
     "rating": 4.9,
     "reviews": 52,
     "reviewCount": 52,
-    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "October to March",
@@ -2613,7 +3025,21 @@
         "text": "Mystical, quiet, and profoundly moving.",
         "date": "2026-03-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 228,
@@ -2630,10 +3056,10 @@
     "description": "Witness the sacred puja ritual at Sri Dalada Maligawa (Temple of the Tooth Relic), stroll Peradeniya botanical gardens, and watch fire dances.",
     "shortDescription": "Temple of the Tooth Relic, Royal Botanical Gardens, and cultural drumming.",
     "fullDescription": "Experience the spiritual heart of Buddhist Sri Lanka in the royal lakeside city of Kandy. Attend a reverent puja drumming ceremony at the sacred Temple of the Tooth Relic, wander under giant avenues of royal palms at Peradeniya Botanical Gardens, and watch energetic Kandyan dancers and fire-walkers.",
-    "price": 540,
-    "originalPrice": 680,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 499,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -2641,9 +3067,11 @@
     "rating": 4.8,
     "reviews": 74,
     "reviewCount": 74,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "December to April",
@@ -2704,7 +3132,21 @@
         "text": "The botanical gardens were stunning, especially the orchid house.",
         "date": "2026-04-15"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 229,
@@ -2721,10 +3163,10 @@
     "description": "Explore crimson Dutch Stadthuys colonial square, climb St. Paul's Hill church ruins, and savor Nyonya cuisine along vibrant Jonker Street.",
     "shortDescription": "Dutch crimson square, Peranakan heritage shophouses, and Jonker Walk night market.",
     "fullDescription": "Discover five centuries of colonial maritime history in the UNESCO city of Melaka. Admire the terracotta-red Stadthuys in Dutch Square, walk among weathered Portuguese tombstones atop St. Paul's Hill, admire ornate Peranakan Baba-Nyonya shophouse mansions, and cruise down the Melaka River beneath colorful street murals.",
-    "price": 460,
-    "originalPrice": 580,
+    "price": 95,
+    "originalPrice": 119,
     "discountedPrice": 419,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -2732,9 +3174,11 @@
     "rating": 4.7,
     "reviews": 63,
     "reviewCount": 63,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "Year-round",
@@ -2795,7 +3239,21 @@
         "text": "The river cruise and Nyonya laksa were highlights.",
         "date": "2026-04-05"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 230,
@@ -2812,10 +3270,10 @@
     "description": "Participate in holy spring water cleansing at Tirta Empul, walk emerald Tegallalang rice terraces, and encounter playful macaques in Ubud.",
     "shortDescription": "Holy water purification ritual, Tegallalang rice terraces, and Sacred Monkey Forest.",
     "fullDescription": "Experience Bali's artistic and spiritual soul in Ubud. Partake in the sacred Melukat water purification ritual beneath holy springs at Tirta Empul, walk among green sculptured steps of Tegallalang rice terraces, wander mossy ancient temples guarded by grey macaques in the Sacred Monkey Forest, and watch the hypnotic fire-lit Kecak dance at sunset.",
-    "price": 580,
-    "originalPrice": 720,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 529,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2823,9 +3281,11 @@
     "rating": 4.9,
     "reviews": 172,
     "reviewCount": 172,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "April to October",
@@ -2891,7 +3351,21 @@
         "text": "Ubud's resort in the jungle was peaceful and majestic.",
         "date": "2026-06-20"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 231,
@@ -2908,10 +3382,10 @@
     "description": "Track elusive Sri Lankan leopards and wild sloth bears across dry scrublands of Yala in an open-top 4x4 safari jeep with veteran trackers.",
     "shortDescription": "Highest leopard density on earth, sloth bears, and Asian elephants.",
     "fullDescription": "Venture into Yala National Park, celebrated for boasting the highest leopard density on the planet. Board custom open-sided 4WD safari jeeps at dawn to track Panthera pardus kotiya basking on granite boulders, observe herds of wild Asian elephants bathing in waterholes, and photograph sloth bears.",
-    "price": 890,
-    "originalPrice": 1100,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 820,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -2919,9 +3393,11 @@
     "rating": 4.9,
     "reviews": 118,
     "reviewCount": 118,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "February to June",
@@ -2987,7 +3463,21 @@
         "text": "The luxury tent was so romantic and the safari guides were world-class.",
         "date": "2026-04-04"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+    ],
+    "alt": "Golden red desert sand dunes under dramatic sunset sky",
+    "photoCredit": {
+      "photographer": "Sajjad Zabihi",
+      "profileUrl": "https://unsplash.com/@sajjadzabihi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 232,
@@ -3004,10 +3494,10 @@
     "description": "Witness endangered orangutans swinging through Sepilok canopies, see Sun Bears, and cruise the Kinabatangan River for pygmy elephants.",
     "shortDescription": "Orangutan rehabilitation, Bornean pygmy elephants, and river cruises.",
     "fullDescription": "Venture deep into the pristine rainforests of Malaysian Borneo. Watch orphaned orangutans learn to climb at Sepilok Rehabilitation Centre, observe the world's smallest bears at the Sun Bear Conservation Centre, and take dawn and dusk river safaris along the Kinabatangan River searching for wild pygmy elephants and proboscis monkeys.",
-    "price": 920,
-    "originalPrice": 1150,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 859,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -3015,9 +3505,11 @@
     "rating": 4.9,
     "reviews": 89,
     "reviewCount": 89,
-    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "March to October",
@@ -3083,7 +3575,21 @@
         "text": "The orangutans are so human-like. Excellent conservation work.",
         "date": "2026-06-15"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 233,
@@ -3100,10 +3606,10 @@
     "description": "Encounter prehistoric 3-meter Komodo Dragons on Rinca and Komodo Islands, snorkel vibrant Pink Beach, and cruise aboard a luxury phinisi schooner.",
     "shortDescription": "Prehistoric Komodo dragons, Pink Beach sands, and manta ray snorkeling.",
     "fullDescription": "Set sail across the Flores Sea into the prehistoric realm of Komodo National Park. Accompanied by experienced park rangers, trek alongside the largest living lizards on Earth reaching up to 3 meters in length, relax on the salmon-colored sands of world-famous Pink Beach, and swim with manta rays at Manta Point.",
-    "price": 1180,
-    "originalPrice": 1450,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 1080,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -3111,9 +3617,11 @@
     "rating": 4.9,
     "reviews": 130,
     "reviewCount": 130,
-    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "April to November",
@@ -3180,7 +3688,21 @@
         "text": "Padar island sunrise was the most beautiful view I have ever seen.",
         "date": "2026-07-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+    ],
+    "alt": "Endless desert dunes with 4x4 tracks during golden hour",
+    "photoCredit": {
+      "photographer": "Ferdinand Stöhr",
+      "profileUrl": "https://unsplash.com/@fellowferdi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 234,
@@ -3197,10 +3719,10 @@
     "description": "Explore subtropical jungles in search of armored Greater One-Horned Rhinos, Royal Bengal tigers, and gharial crocodiles on jeep and canoe safaris.",
     "shortDescription": "One-horned rhinos, Bengal tigers, and dugout canoe river safaris.",
     "fullDescription": "Venture to the subtropical lowlands of Nepal in UNESCO Chitwan National Park. Board open safari jeeps to spot prehistoric one-horned rhinoceroses grazing in elephant grass, glide silently down the Rapti River in hand-carved wooden canoes past basking mugger and gharial crocodiles, and learn Tharu tribal jungle traditions.",
-    "price": 590,
-    "originalPrice": 750,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 539,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -3208,9 +3730,11 @@
     "rating": 4.8,
     "reviews": 78,
     "reviewCount": 78,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to March",
@@ -3276,7 +3800,21 @@
         "text": "Very relaxing and authentic jungle experience. Food was delicious.",
         "date": "2026-03-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+    ],
+    "alt": "Golden red desert sand dunes under dramatic sunset sky",
+    "photoCredit": {
+      "photographer": "Sajjad Zabihi",
+      "profileUrl": "https://unsplash.com/@sajjadzabihi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 235,
@@ -3293,10 +3831,10 @@
     "description": "Witness Japanese Macaques (Snow Monkeys) soaking contentedly in steaming outdoor thermal baths amidst deep winter snow in Nagano.",
     "shortDescription": "Wild snow monkeys in geothermal onsens, alpine trails, and ryokans.",
     "fullDescription": "Venture into the snow-blanketed mountains of Nagano to Jigokudani Monkey Park. Watch wild Japanese Macaques descend from steep forested cliffs to bathe and groom peacefully in natural hot spring pools, stay in an authentic historic onsen ryokan, and visit the 1,400-year-old Zenko-ji temple.",
-    "price": 780,
-    "originalPrice": 950,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 720,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -3304,9 +3842,11 @@
     "rating": 4.9,
     "reviews": 95,
     "reviewCount": 95,
-    "image": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "December to March",
@@ -3367,7 +3907,21 @@
         "text": "The ryokan and thermal baths were the highlight of my trip to Japan.",
         "date": "2026-02-11"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 236,
@@ -3384,10 +3938,10 @@
     "description": "Track wild Asian elephants, white-handed gibbons, and giant hornbills through Thailand's premier UNESCO tropical national park.",
     "shortDescription": "Wild Asian elephants, white-handed gibbons, and Haew Suwat waterfall.",
     "fullDescription": "Venture just three hours north of Bangkok into the lush mountain wilderness of Khao Yai. Trek accompanied by park rangers listening for the haunting songs of white-handed gibbons, spot Great Hornbills in the canopy, swim at Haew Suwat waterfall (featured in 'The Beach'), and embark on evening night safaris to watch wild Asian elephants gather at salt licks.",
-    "price": 540,
-    "originalPrice": 680,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 489,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -3395,9 +3949,11 @@
     "rating": 4.8,
     "reviews": 63,
     "reviewCount": 63,
-    "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "November to April",
@@ -3458,7 +4014,21 @@
         "text": "Very close to Bangkok but feels like deep untouched jungle.",
         "date": "2026-04-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 237,
@@ -3475,10 +4045,10 @@
     "description": "Explore 130-million-year-old virgin rainforest, walk the world's longest canopy walkway, and take night safaris to spot glowing insects and tapirs.",
     "shortDescription": "130-million-year-old rainforest, 530m canopy walkway, and night walks.",
     "fullDescription": "Step into one of the oldest prehistoric rainforests on Earth, dating back over 130 million years. Walk 40 meters above ground on a 530-meter canopy walkway, cruise down the Tembeling River by longboat, learn blowpipe hunting skills from indigenous Batek tribesmen, and venture into darkness on night walks to spot tapirs, flying lemurs, and bioluminescent fungi.",
-    "price": 560,
-    "originalPrice": 700,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 499,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -3486,9 +4056,11 @@
     "rating": 4.8,
     "reviews": 59,
     "reviewCount": 59,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "March to October",
@@ -3549,7 +4121,21 @@
         "text": "Very knowledgeable nature guide. True virgin jungle.",
         "date": "2026-05-09"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 238,
@@ -3566,20 +4152,22 @@
     "description": "Dive and snorkel the epicenter of global marine biodiversity with 1,500 species of fish, reef sharks, manta ray cleaning stations, and karst islets.",
     "shortDescription": "World's richest coral biodiversity, manta ray cleaning stations, and karst islands.",
     "fullDescription": "Venture to the remote crown jewel of the Coral Triangle in West Papua. Snorkel over coral reefs containing over 75% of the world's coral species, glide alongside majestic oceanic manta rays at Manta Ridge, climb the limestone peaks of Pianemo for the famous emerald karst lagoon panorama, and spot Red Birds of Paradise at dawn.",
-    "price": 1950,
-    "originalPrice": 2450,
+    "price": 23,
+    "originalPrice": 29,
     "discountedPrice": 1799,
-    "currency": "$",
+    "currency": "USD",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
     "difficulty": "Moderate",
-    "rating": 5,
+    "rating": 4.6,
     "reviews": 47,
     "reviewCount": 47,
-    "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "4-10 travelers",
     "bestTime": "October to April",
@@ -3656,7 +4244,21 @@
         "text": "Pianemo viewpoint and the manta rays made this the trip of a lifetime.",
         "date": "2026-04-10"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 239,
@@ -3673,10 +4275,10 @@
     "description": "Hike coastal sea-stack cliffs to spot peculiar big-nosed Proboscis monkeys, bearded pigs, pitcher plants, and flying lemurs in Sarawak.",
     "shortDescription": "Endemic proboscis monkeys, carnivorous pitcher plants, and sea stacks.",
     "fullDescription": "Explore Sarawak's oldest national park, home to almost every ecosystem found in Borneo. Travel by wooden boat to rugged sea cliffs, hike jungle trails to spot rare endemic proboscis monkeys munching mangrove leaves, observe wild bearded pigs foraging on beaches, and discover insect-eating pitcher plants.",
-    "price": 490,
-    "originalPrice": 620,
+    "price": 95,
+    "originalPrice": 119,
     "discountedPrice": 440,
-    "currency": "$",
+    "currency": "USD",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "durationNights": 2,
@@ -3684,9 +4286,11 @@
     "rating": 4.8,
     "reviews": 62,
     "reviewCount": 62,
-    "image": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "March to October",
@@ -3747,7 +4351,21 @@
         "text": "Beautiful coastal scenery and wild animals right outside the cabins.",
         "date": "2026-05-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 240,
@@ -3764,10 +4382,10 @@
     "description": "Witness 'The Gathering' - up to 300 wild Asian elephants congregating at Minneriya reservoir, and track leopards in Wilpattu's lakes.",
     "shortDescription": "300 wild elephants at Minneriya tank, Wilpattu leopard tracking, and lake safaris.",
     "fullDescription": "Experience one of the greatest wildlife spectacles in Asia. Witness hundreds of wild Asian elephants gather on the lush grassy banks of the ancient Minneriya reservoir, tracking matriarchs and newborn calves. Then journey to Wilpattu National Park to track leopards and sloth bears around natural rainwater lakes.",
-    "price": 740,
-    "originalPrice": 920,
+    "price": 45,
+    "originalPrice": 56,
     "discountedPrice": 689,
-    "currency": "$",
+    "currency": "USD",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
@@ -3775,9 +4393,11 @@
     "rating": 4.8,
     "reviews": 79,
     "reviewCount": 79,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "June to October",
@@ -3843,6 +4463,20 @@
         "text": "Saw a leopard drinking at the waterhole in Wilpattu. Highly recommend!",
         "date": "2026-07-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+    ],
+    "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
+    "photoCredit": {
+      "photographer": "David Rodrigo",
+      "profileUrl": "https://unsplash.com/@davidrodrigo",
+      "source": "Unsplash"
+    }
   }
 ]

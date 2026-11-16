@@ -38,9 +38,9 @@ export default function PackagesSection({ config, onNavigate }: SectionProps) {
       </View>
 
       <View style={styles.grid}>
-        {packagesConfig.items.map((item: any) => (
-          <TouchableOpacity
-            key={item.id}
+        {packagesConfig.items.map((item: any, idx: number) => (
+          <TouchableOpacity testID="btn-packagessection-42" accessibilityLabel="packagessection action"
+            key={`pkg_${item.id || idx}_${idx}`}
             activeOpacity={0.88}
             onPress={() => onNavigate?.('/explore')}
             style={[

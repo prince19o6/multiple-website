@@ -32,12 +32,7 @@ export default function AdminLoginScreen() {
   const { siteId } = useSelectedSite();
   const currentSite = getSiteEntry(siteId);
 
-  const defaultEmail =
-    siteId === 'website2'
-      ? 'admin@tripgoasia.com'
-      : siteId === 'website3'
-      ? 'admin@technoheaven.com'
-      : 'admin@gujjutours.com';
+  const defaultEmail = `admin@${currentSite?.hostname || 'example.com'}`;
 
   const [email, setEmail] = useState(defaultEmail);
   const [password, setPassword] = useState('Admin@12345');
@@ -130,7 +125,7 @@ export default function AdminLoginScreen() {
               placeholder="Enter password"
               secureTextEntry={!showPassword}
             />
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-login-128" accessibilityLabel="login action"
               style={styles.eyeBtn}
               onPress={() => setShowPassword(!showPassword)}
             >
@@ -149,7 +144,7 @@ export default function AdminLoginScreen() {
             </Text>
           </View>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-access-admin-panel" accessibilityLabel="Access Admin Panel"
             style={styles.loginBtn}
             onPress={handleLogin}
             disabled={loading}

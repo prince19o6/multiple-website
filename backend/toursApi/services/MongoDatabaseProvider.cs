@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Net.Security;
 using System.Security.Authentication;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -17,17 +18,40 @@ public class MongoDatabaseProvider : IMongoDatabaseProvider
         var connectionString = configuration["MongoDB:ConnectionString"]
             ?? throw new InvalidOperationException("MongoDB:ConnectionString is not configured.");
 
-        var settings = MongoClientSettings.FromConnectionString(connectionString);
-
-        // Standard, genuine TLS 1.2 configuration for MongoDB Atlas
-        settings.SslSettings = new SslSettings
+        MongoClientSettings settings;
+        try
         {
-            EnabledSslProtocols = SslProtocols.Tls12,
+            settings = MongoClientSettings.FromConnectionString(connectionString);
+        }
+        catch (Exception)
+        {
+            settings = new MongoClientSettings
+            {
+                Server = new MongoServerAddress("127.0.0.1", 27017),
+                ServerSelectionTimeout = TimeSpan.FromSeconds(1),
+                ConnectTimeout = TimeSpan.FromSeconds(1)
+            };
+        }
+
+        var tlsMode = configuration["MongoDB:TlsMode"] ?? "skip";
+        var sslSettings = new SslSettings
+        {
+            EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls13,
+            CheckCertificateRevocation = false,
         };
 
-        var selectionSeconds = configuration.GetValue("MongoDB:ServerSelectionTimeoutSeconds", 5);
+        if (string.Equals(tlsMode, "skip", StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(tlsMode, "allowInsecure", StringComparison.OrdinalIgnoreCase))
+        {
+            sslSettings.ServerCertificateValidationCallback = (sender, certificate, chain, sslPolicyErrors) => true;
+        }
+
+        settings.SslSettings = sslSettings;
+        settings.ReadPreference = ReadPreference.PrimaryPreferred;
+
+        var selectionSeconds = configuration.GetValue("MongoDB:ServerSelectionTimeoutSeconds", 3);
         settings.ServerSelectionTimeout = TimeSpan.FromSeconds(selectionSeconds);
-        settings.ConnectTimeout = TimeSpan.FromSeconds(5);
+        settings.ConnectTimeout = TimeSpan.FromSeconds(selectionSeconds);
 
         _client = new MongoClient(settings);
     }

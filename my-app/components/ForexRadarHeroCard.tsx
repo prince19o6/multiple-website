@@ -42,7 +42,7 @@ export const ForexRadarHeroCard: React.FC<ForexRadarHeroCardProps> = ({ style })
     >
       {/* Top Header Row */}
       <View style={styles.headerRow}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-cash-outline"
           style={styles.titleGroup}
           onPress={handleOpenHub}
           activeOpacity={0.8}
@@ -65,7 +65,7 @@ export const ForexRadarHeroCard: React.FC<ForexRadarHeroCardProps> = ({ style })
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-calculator-outline"
           style={[styles.calcIconButton, { backgroundColor: colors.background, borderColor: colors.border }]}
           onPress={handleOpenCalc}
           accessibilityRole="button"
@@ -76,7 +76,7 @@ export const ForexRadarHeroCard: React.FC<ForexRadarHeroCardProps> = ({ style })
       </View>
 
       {/* Main Body Touchable Zone */}
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-openhub"
         onPress={handleOpenHub}
         activeOpacity={0.85}
         accessibilityRole="button"

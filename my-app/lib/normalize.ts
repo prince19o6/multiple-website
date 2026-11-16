@@ -16,7 +16,20 @@
 
 import { ENV } from '@/src/config/env';
 import { PLACEHOLDER_IMAGE } from './imageUtils';
-import type { Tour, DestinationItem, Booking, ItineraryDay, GuestReview, BookingStatus } from '@/types';
+import type {
+  Tour,
+  DestinationItem,
+  Booking,
+  BookingTraveler,
+  ItineraryDay,
+  GuestReview,
+  BookingStatus,
+  TourSnapshot,
+  BookingPriceBreakdown,
+  BookingStatusHistoryItem,
+  CancellationRequestDto,
+  BookingEmailOutboxItem,
+} from '@/types';
 export { tourHref } from './navigation';
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -282,6 +295,7 @@ export function normalizeTour(raw: unknown, fallbackSiteId: string = 'website1')
     duration,
     difficulty,
     location,
+    country: typeof raw.country === 'string' ? raw.country : typeof raw.Country === 'string' ? raw.Country : undefined,
     groupSize: String(raw.groupSize ?? raw.GroupSize ?? '8-12 people'),
     bestTime: String(raw.bestTime ?? raw.BestTime ?? 'Year-round'),
     language: String(raw.language ?? raw.Language ?? 'English'),
@@ -332,10 +346,12 @@ export function normalizeBooking(raw: unknown, index: number = 0): Booking {
   if (!isRecord(raw)) {
     return {
       id: `bkg_${index}`,
+      reference: `BK-${index}`,
       tourId: 1,
       tourName: 'Curated Expedition',
       tourImage: PLACEHOLDER_IMAGE,
       location: 'Global',
+      destination: 'Global',
       guestName: 'Guest',
       email: '',
       phone: '',
@@ -353,14 +369,24 @@ export function normalizeBooking(raw: unknown, index: number = 0): Booking {
   const rawTourImage = raw.tourImage ?? raw.TourImage ?? raw.image ?? PLACEHOLDER_IMAGE;
   const imageStr = typeof rawTourImage === 'string' ? rawTourImage : PLACEHOLDER_IMAGE;
 
-  // Tolerant status normalization: 'pending', 'confirmed', 'booked' all map to 'upcoming'
-  const rawStatus = String(raw.status ?? raw.Status ?? 'upcoming').toLowerCase();
+  // Canonical status normalization: 'pending', 'confirmed', 'rejected', 'cancelled', 'expired', 'completed'
+  const rawStatus = String(raw.status ?? raw.Status ?? 'pending').toLowerCase();
   const validStatus: BookingStatus =
-    rawStatus === 'completed'
-      ? 'completed'
+    rawStatus === 'confirmed'
+      ? 'confirmed'
+      : rawStatus === 'pending'
+      ? 'pending'
+      : rawStatus === 'rejected'
+      ? 'rejected'
       : rawStatus === 'cancelled'
       ? 'cancelled'
-      : 'upcoming';
+      : rawStatus === 'expired'
+      ? 'expired'
+      : rawStatus === 'completed'
+      ? 'completed'
+      : rawStatus === 'upcoming'
+      ? 'confirmed'
+      : 'pending';
 
   const rawStartDate = raw.startDate ?? raw.StartDate ?? raw.date ?? raw.Date;
   let formattedDate = new Date().toISOString().split('T')[0];
@@ -374,26 +400,195 @@ export function normalizeBooking(raw: unknown, index: number = 0): Booking {
     formattedEndDate = rawEndDate.includes('T') ? rawEndDate.split('T')[0] : rawEndDate.trim();
   }
 
+  const rawRef = raw.reference ?? raw.Reference ?? raw.bookingReference ?? raw.id ?? raw._id;
+  const reference = typeof rawRef === 'string' && rawRef.trim() ? rawRef.trim() : `BK-${index}`;
+
+  const rawSlug = raw.tourSlug ?? raw.TourSlug ?? raw.slug ?? raw.Slug;
+  const tourSlug = typeof rawSlug === 'string' && rawSlug.trim() ? rawSlug.trim() : undefined;
+
+  const rawDest = raw.destination ?? raw.Destination ?? raw.location ?? raw.Location;
+  const destination = typeof rawDest === 'string' && rawDest.trim() ? rawDest.trim() : 'Global';
+
+  const rawUnitPrice = raw.unitPrice ?? raw.UnitPrice;
+  const unitPrice = typeof rawUnitPrice === 'number' && !isNaN(rawUnitPrice) ? rawUnitPrice : undefined;
+
+  const rawOrigPrice = raw.originalPrice ?? raw.OriginalPrice;
+  const originalPrice = typeof rawOrigPrice === 'number' && !isNaN(rawOrigPrice) ? rawOrigPrice : undefined;
+
+  const rawDuration = raw.duration ?? raw.Duration;
+  const duration = typeof rawDuration === 'string' && rawDuration.trim() ? rawDuration.trim() : undefined;
+
+  const rawPaymentStatus = raw.paymentStatus ?? raw.PaymentStatus;
+  const paymentStatus = typeof rawPaymentStatus === 'string' ? rawPaymentStatus.trim() : undefined;
+
+  const rawPaymentMethod = raw.paymentMethod ?? raw.PaymentMethod;
+  const paymentMethod = typeof rawPaymentMethod === 'string' ? rawPaymentMethod.trim() : undefined;
+
+  const rawPaymentRef = raw.paymentReference ?? raw.PaymentReference;
+  const paymentReference = typeof rawPaymentRef === 'string' ? rawPaymentRef.trim() : undefined;
+
+  const rawPaidAt = raw.paidAt ?? raw.PaidAt;
+  const paidAt = typeof rawPaidAt === 'string' ? rawPaidAt.trim() : undefined;
+
+  // Snapshot Normalization (Mongo Atlas Immutable Snapshot)
+  const rawSnap = isRecord(raw.snapshot) ? raw.snapshot : isRecord(raw.Snapshot) ? raw.Snapshot : undefined;
+  let snapshot: TourSnapshot | undefined = undefined;
+  if (rawSnap) {
+    const rawItin = Array.isArray(rawSnap.itinerarySummary) ? rawSnap.itinerarySummary : [];
+    const itinerarySummary = rawItin.map((item: any, idx: number) => ({
+      day: Number(item?.day ?? idx + 1),
+      title: String(item?.title ?? `Day ${idx + 1}`),
+      description: String(item?.description ?? ''),
+    }));
+
+    snapshot = {
+      tourId: Number(rawSnap.tourId ?? rawSnap.TourId ?? 1),
+      slug: String(rawSnap.slug ?? rawSnap.Slug ?? ''),
+      title: String(rawSnap.title ?? rawSnap.Title ?? ''),
+      coverImage: resolveImageUrl(String(rawSnap.coverImage ?? rawSnap.CoverImage ?? '')),
+      destination: String(rawSnap.destination ?? rawSnap.Destination ?? 'Global'),
+      category: String(rawSnap.category ?? rawSnap.Category ?? 'Adventure'),
+      duration: String(rawSnap.duration ?? rawSnap.Duration ?? 'Full Day'),
+      pricePerPerson: Number(rawSnap.pricePerPerson ?? rawSnap.PricePerPerson ?? 0),
+      currency: String(rawSnap.currency ?? rawSnap.Currency ?? '$'),
+      itinerarySummary,
+      includedSummary: Array.isArray(rawSnap.includedSummary) ? rawSnap.includedSummary.map(String) : [],
+      excludedSummary: Array.isArray(rawSnap.excludedSummary) ? rawSnap.excludedSummary.map(String) : [],
+    };
+  }
+
+  // Price Breakdown
+  const rawBreakdown = isRecord(raw.priceBreakdown) ? raw.priceBreakdown : isRecord(raw.PriceBreakdown) ? raw.PriceBreakdown : undefined;
+  let priceBreakdown: BookingPriceBreakdown | undefined = undefined;
+  if (rawBreakdown) {
+    priceBreakdown = {
+      subtotal: Number(rawBreakdown.subtotal ?? rawBreakdown.Subtotal ?? 0),
+      discount: Number(rawBreakdown.discount ?? rawBreakdown.Discount ?? 0),
+      taxes: Number(rawBreakdown.taxes ?? rawBreakdown.Taxes ?? 0),
+      total: Number(rawBreakdown.total ?? rawBreakdown.Total ?? 0),
+    };
+  }
+
+  // Status History
+  const rawHistory = Array.isArray(raw.statusHistory) ? raw.statusHistory : Array.isArray(raw.StatusHistory) ? raw.StatusHistory : [];
+  const statusHistory = rawHistory.map((item: any) => ({
+    status: String(item?.status ?? item?.Status ?? ''),
+    changedAt: String(item?.changedAt ?? item?.ChangedAt ?? new Date().toISOString()),
+    note: item?.note || item?.Note ? String(item?.note ?? item?.Note) : undefined,
+    changedBy: item?.changedBy || item?.ChangedBy ? String(item?.changedBy ?? item?.ChangedBy) : undefined,
+  }));
+
+  const adults = typeof raw.adults === 'number' ? raw.adults : typeof raw.Adults === 'number' ? raw.Adults : undefined;
+  const children = typeof raw.children === 'number' ? raw.children : typeof raw.Children === 'number' ? raw.Children : undefined;
+  const source = typeof raw.source === 'string' ? raw.source : typeof raw.Source === 'string' ? raw.Source : 'app';
+  const travelDate = typeof raw.travelDate === 'string' ? raw.travelDate : typeof raw.TravelDate === 'string' ? raw.TravelDate : formattedDate;
+
+  const resolvedTourName = snapshot?.title || String(raw.tourName ?? raw.TourName ?? raw.title ?? 'Curated Expedition');
+  const resolvedTourImage = snapshot?.coverImage || resolveImageUrl(imageStr);
+  const resolvedDestination = snapshot?.destination || destination;
+  const resolvedDuration = snapshot?.duration || duration;
+  const resolvedUnitPrice = snapshot?.pricePerPerson ?? unitPrice;
+  const resolvedCurrency = snapshot?.currency || String(raw.currency ?? raw.Currency ?? '$');
+
+  // Individual Travelers List
+  const rawTravelersList = raw.travelersList ?? raw.TravelersList;
+  const travelersList: BookingTraveler[] = Array.isArray(rawTravelersList)
+    ? rawTravelersList.map((t: any, i: number) => ({
+        id: String(t?.id ?? `trv-${i + 1}`),
+        name: String(t?.name ?? `Traveler ${i + 1}`),
+        type: String(t?.type ?? 'Adult'),
+        age: typeof t?.age === 'number' ? t.age : undefined,
+        gender: typeof t?.gender === 'string' ? t.gender : undefined,
+        passportOrId: typeof t?.passportOrId === 'string' ? t.passportOrId : undefined,
+      }))
+    : [];
+
   return {
     id: String(raw.id ?? raw._id ?? `bkg_${index}`),
-    tourId: Number(raw.tourId ?? raw.TourId ?? 1),
-    tourName: String(raw.tourName ?? raw.TourName ?? raw.title ?? 'Curated Expedition'),
-    tourImage: resolveImageUrl(imageStr),
-    location: String(raw.location ?? raw.Location ?? 'Global'),
+    _id: raw._id ? String(raw._id) : undefined,
+    reference,
+    tourId: Number(snapshot?.tourId ?? raw.tourId ?? raw.TourId ?? 1),
+    tourSlug: snapshot?.slug || tourSlug,
+    tourName: resolvedTourName,
+    tourImage: resolvedTourImage,
+    location: String(raw.location ?? raw.Location ?? resolvedDestination),
+    destination: resolvedDestination,
+    unitPrice: resolvedUnitPrice,
+    originalPrice,
+    duration: resolvedDuration,
     guestName: String(raw.guestName ?? raw.GuestName ?? 'Guest'),
     email: String(raw.email ?? raw.Email ?? ''),
     phone: String(raw.phone ?? raw.Phone ?? ''),
     date: formattedDate,
+    travelDate,
     startDate: typeof rawStartDate === 'string' ? rawStartDate : undefined,
     endDate: formattedEndDate,
-    travelers: Number(raw.travelers ?? raw.Travelers ?? 1),
+    adults,
+    children,
+    travelers: Number(raw.travelers ?? raw.Travelers ?? (adults ?? 1) + (children ?? 0)),
+    travelersList: travelersList.length > 0 ? travelersList : undefined,
     totalPrice: parsePrice(raw.totalPrice ?? raw.TotalPrice ?? raw.price, 499),
-    currency: String(raw.currency ?? raw.Currency ?? '$'),
+    currency: resolvedCurrency,
     status: validStatus,
+    paymentStatus,
+    paymentMethod,
+    paymentReference,
+    paidAt,
     specialRequest: String(raw.specialRequest ?? raw.SpecialRequest ?? ''),
     websiteId: String(raw.websiteId ?? raw.WebsiteId ?? 'website1'),
+    website: String(raw.website ?? raw.Website ?? raw.websiteId ?? raw.WebsiteId ?? 'website1'),
+    source,
     createdAt: String(raw.createdAt ?? raw.CreatedAt ?? new Date().toISOString()),
+    updatedAt: raw.updatedAt ? String(raw.updatedAt) : undefined,
     userId: raw.userId ?? raw.UserId ? String(raw.userId ?? raw.UserId) : undefined,
     qrCode: typeof raw.qrCode === 'string' ? raw.qrCode : undefined,
+    snapshot,
+    priceBreakdown,
+    statusHistory: statusHistory.length > 0 ? statusHistory : undefined,
+    rejectionReason:
+      typeof raw.rejectionReason === 'string'
+        ? raw.rejectionReason
+        : typeof raw.RejectionReason === 'string'
+        ? raw.RejectionReason
+        : undefined,
+    cancellationReason:
+      typeof raw.cancellationReason === 'string'
+        ? raw.cancellationReason
+        : typeof raw.CancellationReason === 'string'
+        ? raw.CancellationReason
+        : undefined,
+    cancellationRequest: (() => {
+      const cr = isRecord(raw.cancellationRequest)
+        ? raw.cancellationRequest
+        : isRecord(raw.CancellationRequest)
+        ? raw.CancellationRequest
+        : undefined;
+      if (!cr) return undefined;
+      return {
+        requestedAt: String(cr.requestedAt ?? cr.RequestedAt ?? new Date().toISOString()),
+        reason: String(cr.reason ?? cr.Reason ?? ''),
+        status: String(cr.status ?? cr.Status ?? 'pending'),
+        reviewedAt: cr.reviewedAt ? String(cr.reviewedAt) : undefined,
+        reviewedBy: cr.reviewedBy ? String(cr.reviewedBy) : undefined,
+        reviewNote: cr.reviewNote ? String(cr.reviewNote) : undefined,
+      } as CancellationRequestDto;
+    })(),
+    emailsSent: (() => {
+      const list = Array.isArray(raw.emailsSent)
+        ? raw.emailsSent
+        : Array.isArray(raw.EmailsSent)
+        ? raw.EmailsSent
+        : [];
+      if (list.length === 0) return undefined;
+      return list.map((e: any) => ({
+        id: e?.id ? String(e.id) : undefined,
+        to: String(e?.to ?? e?.To ?? ''),
+        subject: String(e?.subject ?? e?.Subject ?? ''),
+        sentAt: String(e?.sentAt ?? e?.SentAt ?? new Date().toISOString()),
+        template: String(e?.template ?? e?.Template ?? ''),
+        status: String(e?.status ?? e?.Status ?? 'Sent'),
+        error: e?.error ? String(e.error) : undefined,
+      })) as BookingEmailOutboxItem[];
+    })(),
   };
 }

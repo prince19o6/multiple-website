@@ -1,0 +1,30 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 4: Bookings List, E-Ticket Rule Enforcement & Cancellation
+- launchApp
+
+# Open Bookings Tab
+- tapOn: "Bookings"
+- assertVisible: "My Bookings|Reservations"
+
+# Tap First Booking Card
+- tapOn:
+    point: "50%,30%"
+
+# Verify Booking Details & E-Ticket Evaluation
+# If Confirmed: E-Ticket Voucher & QR is Visible
+# If Pending: Locked message "Pending Approval" is displayed
+- assertVisible: "Reservation Details|Reference|Status"
+
+# Cancellation Request Journey
+- scroll
+- tapOn: "Cancel Reservation|Request Cancellation"
+- assertVisible: "Reason for Cancellation"
+
+- tapOn:
+    id: "input-cancellation-reason"
+- inputText: "Flight rescheduled by airline. Need to adjust travel itinerary."
+
+- tapOn: "Submit Cancellation Request"
+- assertVisible: "Cancellation Submitted|Status: Cancelled|Pending Cancellation Review"
+

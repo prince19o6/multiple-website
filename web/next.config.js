@@ -9,6 +9,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -23,6 +24,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'stagingimage.technoheaven.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'stagingimage.gujjutours.com',
         pathname: '/**',
       },
       {
@@ -43,6 +49,16 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
         pathname: '/**',
       },
       {

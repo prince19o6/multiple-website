@@ -53,7 +53,7 @@ export const MarketDirectoryCard: React.FC<MarketDirectoryCardProps> = ({
   const badgeStyle = getIntensityBadge(market.bargainingIntensity);
 
   return (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-marketdirectorycard-56"
       style={[
         styles.card,
         {

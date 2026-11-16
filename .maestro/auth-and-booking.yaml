@@ -1,0 +1,44 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 3: Complete User Authentication & Tour Booking Journey
+- launchApp
+
+# Step 1: Open Profile and Register / Sign In
+- tapOn: "Profile"
+- tapOn: "Sign In|Create Account|Log In"
+
+# Fill Login Credentials
+- tapOn:
+    id: "input-email"
+- inputText: "traveller@gujjutours.com"
+- tapOn:
+    id: "input-password"
+- inputText: "SecurePass2026!"
+- tapOn: "Sign In|Continue"
+
+# Step 2: Browse & Select Tour
+- tapOn: "Home"
+- tapOn:
+    point: "50%,40%"
+
+# Step 3: Start Booking Flow
+- tapOn: "Book Now|Reserve Spot"
+
+# Fill Passenger Details
+- tapOn:
+    id: "input-guest-name"
+- inputText: "Aarav Patel"
+- tapOn:
+    id: "input-guest-phone"
+- inputText: "+91 98765 43210"
+
+# Select Future Departure Date
+- tapOn: "Select Date|Departure"
+- tapOn: "Confirm Date"
+
+# Submit Reservation (Mock Payment Step)
+- tapOn: "Confirm & Reserve|Pay Now"
+
+# Verify Booking Confirmation Screen
+- assertVisible: "Reservation Submitted|Booking Confirmed|Reference: GT-"
+

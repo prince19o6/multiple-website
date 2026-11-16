@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
 using System.Security.Claims;
 using System.Text.Json;
 using ToursApi.Configuration;
+using ToursApi.Models;
 using ToursApi.Repositories;
 using ToursApi.Services;
 
@@ -104,5 +106,122 @@ public class WebsiteConfigAdminController : ControllerBase
 
         await _repo.UpsertAsync(normalized, bson);
         return Ok(new { success = true, hostname = normalized });
+    }
+
+    [HttpGet("{hostname}/features")]
+    public async Task<IActionResult> GetFeatures(string hostname)
+    {
+        if (!ValidateTenantAndHostname(hostname, out var errorResult))
+        {
+            return errorResult!;
+        }
+
+        var normalized = WebsiteRegistry.NormalizeHostname(hostname);
+        var doc = await _repo.GetByHostnameAsync(normalized);
+        if (doc == null || doc.Config == null)
+        {
+            await _repo.SeedDefaultsIfMissingAsync();
+            doc = await _repo.GetByHostnameAsync(normalized);
+        }
+
+        if (doc == null || doc.Config == null)
+        {
+            return NotFound(new { success = false, error = $"Config not found for '{hostname}'" });
+        }
+
+        var config = doc.Config;
+        var featuresList = new List<FeatureItemContract>();
+
+        if (config.Contains("featureRegistry") && config["featureRegistry"].IsBsonArray)
+        {
+            var json = config["featureRegistry"].ToJson(new JsonWriterSettings { OutputMode = JsonOutputMode.RelaxedExtendedJson });
+            featuresList = JsonSerializer.Deserialize<List<FeatureItemContract>>(json) ?? new();
+        }
+
+        var resolved = FeatureDependencyResolver.Resolve(featuresList);
+
+        return Ok(new
+        {
+            success = true,
+            hostname = normalized,
+            version = config.Contains("version") ? config["version"].AsString : "1.0.0",
+            updatedAt = doc.UpdatedAt,
+            features = resolved
+        });
+    }
+
+    [HttpPut("{hostname}/features")]
+    public async Task<IActionResult> UpdateFeatures(string hostname, [FromBody] List<FeatureItemContract> features)
+    {
+        if (!ValidateTenantAndHostname(hostname, out var errorResult))
+        {
+            return errorResult!;
+        }
+
+        if (features == null || features.Count == 0)
+        {
+            return BadRequest(new { success = false, error = "Feature list cannot be empty." });
+        }
+
+        var normalized = WebsiteRegistry.NormalizeHostname(hostname);
+        var doc = await _repo.GetByHostnameAsync(normalized);
+        if (doc == null || doc.Config == null)
+        {
+            await _repo.SeedDefaultsIfMissingAsync();
+            doc = await _repo.GetByHostnameAsync(normalized);
+        }
+
+        if (doc == null || doc.Config == null)
+        {
+            return NotFound(new { success = false, error = $"Config not found for '{hostname}'" });
+        }
+
+        var config = doc.Config;
+
+        // 1. Resolve dependencies cascading
+        var resolved = FeatureDependencyResolver.Resolve(features);
+
+        // 2. Bump version patch (e.g. 1.0.0 -> 1.0.1)
+        var currentVersion = config.Contains("version") ? config["version"].AsString : "1.0.0";
+        var parts = currentVersion.Split('.');
+        if (parts.Length >= 3 && int.TryParse(parts[2], out var patch))
+        {
+            config["version"] = $"{parts[0]}.{parts[1]}.{patch + 1}";
+        }
+        else
+        {
+            config["version"] = "1.0.1";
+        }
+
+        // 3. Serialize and attach featureRegistry
+        var serializedFeatures = JsonSerializer.Serialize(resolved);
+        config["featureRegistry"] = BsonSerializer.Deserialize<BsonArray>(serializedFeatures);
+
+        // 4. Sync backward compatible features map
+        if (config.Contains("features") && config["features"].IsBsonDocument)
+        {
+            var legacyFeatures = config["features"].AsBsonDocument;
+            foreach (var item in resolved)
+            {
+                var key = item.Id.Replace("-", "");
+                if (legacyFeatures.Contains(key))
+                {
+                    legacyFeatures[key] = item.Enabled;
+                }
+            }
+        }
+
+        var updatedBy = User.FindFirst(ClaimTypes.Email)?.Value ?? User.Identity?.Name ?? "admin";
+        await _repo.SaveConfigAsync(normalized, config, updatedBy);
+
+        return Ok(new
+        {
+            success = true,
+            hostname = normalized,
+            version = config["version"].AsString,
+            updatedAt = DateTime.UtcNow,
+            updatedBy,
+            features = resolved
+        });
     }
 }

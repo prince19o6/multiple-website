@@ -1,0 +1,434 @@
+[
+  {
+    "functionName": "fetchDestinations",
+    "method": "GET",
+    "endpoint": "/api/destinations",
+    "line": 979
+  },
+  {
+    "functionName": "fetchTour",
+    "method": "GET",
+    "endpoint": "/api/tours/${id}",
+    "line": 1023
+  },
+  {
+    "functionName": "fetchTourByNumber",
+    "method": "GET",
+    "endpoint": "/api/tours/by-number/${tourNumber}",
+    "line": 1048
+  },
+  {
+    "functionName": "submitTourReview",
+    "method": "POST",
+    "endpoint": "/api/tours/${tourIdOrSlug}/reviews",
+    "line": 1109
+  },
+  {
+    "functionName": "createTour",
+    "method": "POST",
+    "endpoint": "/api/tours",
+    "line": 1123
+  },
+  {
+    "functionName": "updateTour",
+    "method": "PUT",
+    "endpoint": "/api/tours/${id}",
+    "line": 1137
+  },
+  {
+    "functionName": "deleteTour",
+    "method": "DELETE",
+    "endpoint": "/api/tours/${id}",
+    "line": 1151
+  },
+  {
+    "functionName": "createBooking",
+    "method": "POST",
+    "endpoint": "/api/bookings",
+    "line": 1234
+  },
+  {
+    "functionName": "validateCoupon",
+    "method": "POST",
+    "endpoint": "/api/bookings/validate-coupon",
+    "line": 1281
+  },
+  {
+    "functionName": "fetchConciergeSpecialist",
+    "method": "GET",
+    "endpoint": "/api/concierge/specialist",
+    "line": 1305
+  },
+  {
+    "functionName": "submitConciergeInquiry",
+    "method": "POST",
+    "endpoint": "/api/concierge/inquire",
+    "line": 1325
+  },
+  {
+    "functionName": "lookupGuestBooking",
+    "method": "POST",
+    "endpoint": "/api/bookings/lookup",
+    "line": 1952
+  },
+  {
+    "functionName": "fetchBooking",
+    "method": "GET",
+    "endpoint": "/api/bookings/${id}",
+    "line": 2089
+  },
+  {
+    "functionName": "login",
+    "method": "POST",
+    "endpoint": "/api/auth/login",
+    "line": 2156
+  },
+  {
+    "functionName": "forgotPassword",
+    "method": "POST",
+    "endpoint": "/api/auth/forgot-password",
+    "line": 2315
+  },
+  {
+    "functionName": "resetPassword",
+    "method": "POST",
+    "endpoint": "/api/auth/reset-password",
+    "line": 2325
+  },
+  {
+    "functionName": "logout",
+    "method": "POST",
+    "endpoint": "/api/auth/logout",
+    "line": 2340
+  },
+  {
+    "functionName": "fetchAdminStats",
+    "method": "GET",
+    "endpoint": "/api/admin/stats",
+    "line": 2450
+  },
+  {
+    "functionName": "fetchAdminAnalytics",
+    "method": "GET",
+    "endpoint": "/api/admin/analytics",
+    "line": 2461
+  },
+  {
+    "functionName": "fetchAdminUsers",
+    "method": "GET",
+    "endpoint": "/api/users",
+    "line": 2472
+  },
+  {
+    "functionName": "updateAdminUserRole",
+    "method": "PUT",
+    "endpoint": "/api/users/${id}/role",
+    "line": 2484
+  },
+  {
+    "functionName": "updateAdminUserStatus",
+    "method": "PUT",
+    "endpoint": "/api/users/${id}/status",
+    "line": 2494
+  },
+  {
+    "functionName": "deleteAdminUser",
+    "method": "DELETE",
+    "endpoint": "/api/users/${id}",
+    "line": 2504
+  },
+  {
+    "functionName": "updateBookingStatus",
+    "method": "PUT",
+    "endpoint": "/api/bookings/${id}",
+    "line": 2513
+  },
+  {
+    "functionName": "deleteBooking",
+    "method": "DELETE",
+    "endpoint": "/api/bookings/${id}",
+    "line": 2523
+  },
+  {
+    "functionName": "fetchAdminInboxCounts",
+    "method": "GET",
+    "endpoint": "/api/bookings/inbox/counts",
+    "line": 2535
+  },
+  {
+    "functionName": "confirmBookingApi",
+    "method": "POST",
+    "endpoint": "/api/bookings/${id}/confirm",
+    "line": 2557
+  },
+  {
+    "functionName": "rejectBookingApi",
+    "method": "POST",
+    "endpoint": "/api/bookings/${id}/reject",
+    "line": 2572
+  },
+  {
+    "functionName": "requestCancellationApi",
+    "method": "POST",
+    "endpoint": "/api/bookings/${id}/request-cancellation",
+    "line": 2592
+  },
+  {
+    "functionName": "reviewCancellationApi",
+    "method": "POST",
+    "endpoint": "/api/bookings/${id}/review-cancellation",
+    "line": 2612
+  },
+  {
+    "functionName": "fetchBookingOutbox",
+    "method": "GET",
+    "endpoint": "/api/bookings/${id}/outbox",
+    "line": 2632
+  },
+  {
+    "functionName": "resendBookingEmailApi",
+    "method": "POST",
+    "endpoint": "/api/bookings/${id}/resend-email",
+    "line": 2650
+  },
+  {
+    "functionName": "fetchTaxRefundRules",
+    "method": "GET",
+    "endpoint": "/api/tax-refund/rules",
+    "line": 2672
+  },
+  {
+    "functionName": "fetchCustomsAllowances",
+    "method": "GET",
+    "endpoint": "/api/tax-refund/allowances",
+    "line": 2687
+  },
+  {
+    "functionName": "createTaxClaim",
+    "method": "POST",
+    "endpoint": "/api/tax-refund/claims",
+    "line": 2730
+  },
+  {
+    "functionName": "updateTaxClaimStatus",
+    "method": "PUT",
+    "endpoint": "/api/tax-refund/claims/${claimId}/status",
+    "line": 2750
+  },
+  {
+    "functionName": "deleteTaxClaim",
+    "method": "DELETE",
+    "endpoint": "/api/tax-refund/claims/${claimId}",
+    "line": 2766
+  },
+  {
+    "functionName": "fetchEsimHubData",
+    "method": "GET",
+    "endpoint": "/api/esim/hub",
+    "line": 2783
+  },
+  {
+    "functionName": "activateEsimPackage",
+    "method": "POST",
+    "endpoint": "/api/esim/activate",
+    "line": 2801
+  },
+  {
+    "functionName": "topUpEsimData",
+    "method": "POST",
+    "endpoint": "/api/esim/topup",
+    "line": 2820
+  },
+  {
+    "functionName": "fetchTravelInsurancePolicy",
+    "method": "GET",
+    "endpoint": "/api/insurance/policy",
+    "line": 2840
+  },
+  {
+    "functionName": "fetchInsuranceHospitals",
+    "method": "GET",
+    "endpoint": "/api/insurance/hospitals${queryStr}",
+    "line": 2863
+  },
+  {
+    "functionName": "submitClaimInquiry",
+    "method": "POST",
+    "endpoint": "/api/insurance/claim-inquiry",
+    "line": 2880
+  },
+  {
+    "functionName": "fetchVisaHubData",
+    "method": "GET",
+    "endpoint": "/api/visa/hub${queryStr}",
+    "line": 2907
+  },
+  {
+    "functionName": "checkVisaRule",
+    "method": "GET",
+    "endpoint": "/api/visa/check?${params.toString()}",
+    "line": 2926
+  },
+  {
+    "functionName": "checkPassportValidity",
+    "method": "POST",
+    "endpoint": "/api/visa/check-validity",
+    "line": 2943
+  },
+  {
+    "functionName": "fetchDestinationEmbassies",
+    "method": "GET",
+    "endpoint": "/api/visa/embassies${queryStr}",
+    "line": 2968
+  },
+  {
+    "functionName": "fetchEcoHubData",
+    "method": "GET",
+    "endpoint": "/api/eco/hub",
+    "line": 2986
+  },
+  {
+    "functionName": "calculateCarbonEmissions",
+    "method": "POST",
+    "endpoint": "/api/eco/calculate",
+    "line": 3003
+  },
+  {
+    "functionName": "submitCarbonOffset",
+    "method": "POST",
+    "endpoint": "/api/eco/offset",
+    "line": 3022
+  },
+  {
+    "functionName": "toggleEcoPledge",
+    "method": "POST",
+    "endpoint": "/api/eco/pledge",
+    "line": 3042
+  },
+  {
+    "functionName": "fetchCultureHubData",
+    "method": "GET",
+    "endpoint": "/api/culture/hub${queryStr}",
+    "line": 3067
+  },
+  {
+    "functionName": "checkOutfitCompliance",
+    "method": "POST",
+    "endpoint": "/api/culture/check-outfit",
+    "line": 3084
+  },
+  {
+    "functionName": "fetchEtiquetteItems",
+    "method": "GET",
+    "endpoint": "/api/culture/etiquette${queryStr}",
+    "line": 3107
+  },
+  {
+    "functionName": "fetchPowerHubData",
+    "method": "GET",
+    "endpoint": "/api/power/hub${queryStr}",
+    "line": 3130
+  },
+  {
+    "functionName": "checkApplianceSafety",
+    "method": "POST",
+    "endpoint": "/api/power/check-appliance",
+    "line": 3147
+  },
+  {
+    "functionName": "fetchBaggageHubData",
+    "method": "GET",
+    "endpoint": "/api/baggage/hub${queryStr}",
+    "line": 3172
+  },
+  {
+    "functionName": "calculateBaggageFee",
+    "method": "POST",
+    "endpoint": "/api/baggage/calculate-excess",
+    "line": 3189
+  },
+  {
+    "functionName": "fetchTransitHubData",
+    "method": "GET",
+    "endpoint": "/api/transit/hub",
+    "line": 3209
+  },
+  {
+    "functionName": "calculateTransitFare",
+    "method": "POST",
+    "endpoint": "/api/transit/calculate-fare",
+    "line": 3226
+  },
+  {
+    "functionName": "estimateTaxiFare",
+    "method": "POST",
+    "endpoint": "/api/transit/estimate-taxi",
+    "line": 3245
+  },
+  {
+    "functionName": "fetchPharmacyHubData",
+    "method": "GET",
+    "endpoint": "/api/pharmacy/hub",
+    "line": 3265
+  },
+  {
+    "functionName": "fetchTippingGuide",
+    "method": "GET",
+    "endpoint": "/api/tipping/guide",
+    "line": 3301
+  },
+  {
+    "functionName": "calculateTipping",
+    "method": "POST",
+    "endpoint": "/api/tipping/calculate",
+    "line": 3318
+  },
+  {
+    "functionName": "fetchDriveSafetyHub",
+    "method": "GET",
+    "endpoint": "/api/drive-safety/hub",
+    "line": 3338
+  },
+  {
+    "functionName": "fetchRoadRules",
+    "method": "GET",
+    "endpoint": "/api/drive-safety/rules",
+    "line": 3354
+  },
+  {
+    "functionName": "fetchForexRadar",
+    "method": "GET",
+    "endpoint": "/api/forex/radar",
+    "line": 3370
+  },
+  {
+    "functionName": "fetchVerifiedForexKiosks",
+    "method": "GET",
+    "endpoint": "/api/forex/kiosks${q}",
+    "line": 3388
+  },
+  {
+    "functionName": "fetchBargainHubData",
+    "method": "GET",
+    "endpoint": "/api/bargain/data",
+    "line": 3404
+  },
+  {
+    "functionName": "fetchExpeditionSummaryHub",
+    "method": "GET",
+    "endpoint": "/api/expedition-summary/hub",
+    "line": 3422
+  },
+  {
+    "functionName": "claimLoyaltyReward",
+    "method": "POST",
+    "endpoint": "/api/expedition-summary/claim-reward",
+    "line": 3440
+  },
+  {
+    "functionName": "submitReviewBoost",
+    "method": "POST",
+    "endpoint": "/api/expedition-summary/review-boost",
+    "line": 3462
+  }
+]

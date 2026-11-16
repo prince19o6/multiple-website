@@ -54,7 +54,7 @@ export const VendorFlashcardModal: React.FC = () => {
       <SafeAreaView style={[styles.safeArea, { backgroundColor: '#0f172a' }]}>
         {/* Header Bar */}
         <View style={styles.headerBar}>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-close"
             style={styles.closeBtn}
             onPress={handleDismiss}
             accessibilityRole="button"
@@ -129,7 +129,7 @@ export const VendorFlashcardModal: React.FC = () => {
             {phrases.map((phrase) => {
               const isSelected = (currentPhrase?.phraseId || currentPhrase?.id) === (phrase.phraseId || phrase.id);
               return (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-vendorflashcardmodal-132" accessibilityLabel="vendorflashcardmodal action"
                   key={phrase.phraseId || phrase.id}
                   style={[
                     styles.phrasePill,

@@ -1,0 +1,44 @@
+{
+  "site": {
+    "id": "technoheaven",
+    "name": "Technoheaven",
+    "hostnames": ["stagingb2b.technoheaven.com", "technoheaven.com"],
+    "defaultLanguage": "en",
+    "languages": ["en", "ar", "fr"],
+    "currency": "USD",
+    "currencySymbol": "$",
+    "timeZone": "Asia/Dubai"
+  },
+  "theme": {
+    "primary": "#00aacf",
+    "secondary": "#0284c7",
+    "accent": "#ef4444",
+    "background": "#ffffff",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "mutedText": "#64748b",
+    "border": "#e2e8f0"
+  },
+  "typography": {
+    "heading": "Poppins",
+    "body": "Inter"
+  },
+  "assets": {
+    "logoLight": "https://stagingimage.technoheaven.com/uploads/techno-logo.svg",
+    "logoDark": "https://stagingimage.technoheaven.com/uploads/techno-logo-dark.svg",
+    "favicon": "https://stagingimage.technoheaven.com/uploads/favicon.ico"
+  },
+  "layout": {
+    "headerVariant": "standard",
+    "footerVariant": "multi-column"
+  },
+  "modules": [
+    { "id": "tours", "enabled": true },
+    { "id": "hotels", "enabled": true },
+    { "id": "transfers", "enabled": true },
+    { "id": "visas", "enabled": true },
+    { "id": "flights", "enabled": true },
+    { "id": "activities", "enabled": true }
+  ]
+}
+

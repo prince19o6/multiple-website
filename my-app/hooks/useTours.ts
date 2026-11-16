@@ -10,7 +10,7 @@
 
 import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchTours, searchTours, fetchTour, ApiError, type TourSearchParams } from '@/lib/api';
+import { fetchTours, searchTours, fetchTour, fetchSimilarTours, ApiError, type TourSearchParams } from '@/lib/api';
 import { queryKeys } from '@/store/queryClient';
 import { useSite } from '@/store/SiteConfigContext';
 import { LEGACY_TO_BRAND, type LegacySiteId, type SiteId } from '@/src/config/sites';
@@ -64,14 +64,22 @@ export function useTours(
       }
 
       if (filters && (filters.q || filters.minPrice !== undefined || filters.maxPrice !== undefined || filters.difficulty)) {
-        const result = await searchTours(filters, canonicalSiteId);
-        if (__DEV__) {
-          console.log(`[DEBUG] [useTours] Search query returned ${result.data.length} tours`);
+        try {
+          const result = await searchTours(filters, canonicalSiteId);
+          if (result && result.data && result.data.length > 0) {
+            if (__DEV__) {
+              console.log(`[DEBUG] [useTours] Search query returned ${result.data.length} tours`);
+            }
+            return result.data;
+          }
+        } catch (searchErr) {
+          if (__DEV__) {
+            console.warn('[DEBUG] [useTours] Search failed, falling back to full tours catalog:', searchErr);
+          }
         }
-        return result.data;
       }
 
-      const result = await fetchTours(canonicalSiteId);
+      const result = await fetchTours(canonicalSiteId, filters?.sort, filters?.category);
       if (__DEV__) {
         console.log(`[DEBUG] [useTours] Query returned ${result.data.length} normalized tours from API for "${activeHostname}"`);
       }
@@ -184,3 +192,86 @@ export function useTour(
     [query.data, query.isLoading, query.isError, isNotFound, query.error, query.refetch]
   );
 }
+
+// ─── Similar Tours Hook ──────────────────────────────────────────────────────
+
+export interface UseSimilarToursResult {
+  tours: Tour[];
+  isLoading: boolean;
+  isError: boolean;
+  error: Error | null;
+  refetch: () => Promise<unknown>;
+}
+
+export function useSimilarTours(
+  currentTour: Tour | null,
+  overrideSiteOrHostname?: string,
+  limit: number = 4
+): UseSimilarToursResult {
+  const { isLoaded, hostname: currentHostname, siteId } = useSite();
+
+  const isHostParam = overrideSiteOrHostname && overrideSiteOrHostname.includes('.');
+  const activeHostname = isHostParam ? overrideSiteOrHostname : currentHostname;
+
+  const rawSite = !isHostParam && overrideSiteOrHostname ? overrideSiteOrHostname : siteId;
+  const canonicalSiteId = toCanonicalSiteId(rawSite);
+
+  const tourIdentifier = currentTour?.slug || (currentTour?.id ? String(currentTour.id) : '');
+
+  const query = useQuery<Tour[], Error>({
+    queryKey: queryKeys.similarTours(canonicalSiteId, tourIdentifier, activeHostname),
+    queryFn: async () => {
+      if (!currentTour || !tourIdentifier) return [];
+
+      // 1. Try dedicated backend endpoint
+      const result = await fetchSimilarTours(tourIdentifier, canonicalSiteId, limit);
+      if (result.success && result.data.length > 0) {
+        return result.data;
+      }
+
+      // 2. Client-side fallback ranking from catalog
+      const allResult = await fetchTours(canonicalSiteId);
+      const all = allResult.data;
+
+      const candidates = all
+        .filter((t) => t.id !== currentTour.id && t.slug !== currentTour.slug)
+        .map((t) => {
+          let score = 0;
+          if (currentTour.category && t.category && t.category.toLowerCase() === currentTour.category.toLowerCase()) {
+            score += 10;
+          }
+          if (currentTour.destination && t.destination && t.destination.toLowerCase() === currentTour.destination.toLowerCase()) {
+            score += 8;
+          }
+          if (currentTour.location && t.location && t.location.toLowerCase().includes(currentTour.location.toLowerCase().split(',')[0].trim())) {
+            score += 6;
+          }
+          score += (t.rating || 4.5) * 0.5;
+          return { tour: t, score };
+        })
+        .sort((a, b) => b.score - a.score)
+        .map((entry) => entry.tour)
+        .slice(0, limit);
+
+      return candidates;
+    },
+    enabled: isLoaded && !!activeHostname && !!currentTour && !!tourIdentifier,
+    staleTime: 5 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
+    refetchOnWindowFocus: false,
+  });
+
+  const tours = query.data ?? [];
+
+  return useMemo(
+    () => ({
+      tours,
+      isLoading: query.isLoading,
+      isError: query.isError,
+      error: query.error ?? null,
+      refetch: query.refetch,
+    }),
+    [tours, query.isLoading, query.isError, query.error, query.refetch]
+  );
+}
+

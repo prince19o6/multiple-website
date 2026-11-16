@@ -18,20 +18,23 @@ import { Platform } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useRouter } from 'expo-router';
 import { useSite } from '@/store/SiteConfigContext';
+import { useAuth } from '@/context/AuthContext';
 import { storeGetObject, storeSetObject } from '@/src/lib/storage';
 
-// Safe dynamic loader for expo-notifications to prevent Expo Go Android crashes
+// Safe dynamic loader for expo-notifications to prevent Expo Go Android crashes and web warnings
 let Notifications: any = null;
 try {
-  Notifications = require('expo-notifications');
-  Notifications?.setNotificationHandler?.({
-    handleNotification: async () => ({
-      shouldShowBanner: true,
-      shouldShowList: true,
-      shouldPlaySound: true,
-      shouldSetBadge: true,
-    }),
-  });
+  if (Platform.OS !== 'web') {
+    Notifications = require('expo-notifications');
+    Notifications?.setNotificationHandler?.({
+      handleNotification: async () => ({
+        shouldShowBanner: true,
+        shouldShowList: true,
+        shouldPlaySound: true,
+        shouldSetBadge: true,
+      }),
+    });
+  }
 } catch {
   // Safe fallback if native notification modules are absent (e.g. in Expo Go)
 }
@@ -71,6 +74,9 @@ export interface NotificationContextType {
   preferences: NotificationPreferences;
   notifications: AppNotification[];
   unreadCount: number;
+  hasUnseenNotifications: boolean;
+  showNotificationDot: boolean;
+  markNotificationsSeen: () => void;
   isCenterVisible: boolean;
   openCenter: () => void;
   closeCenter: () => void;
@@ -94,6 +100,9 @@ const NotificationContext = createContext<NotificationContextType>({
   preferences: DEFAULT_NOTIFICATION_PREFERENCES,
   notifications: [],
   unreadCount: 0,
+  hasUnseenNotifications: false,
+  showNotificationDot: false,
+  markNotificationsSeen: () => {},
   isCenterVisible: false,
   openCenter: () => {},
   closeCenter: () => {},
@@ -180,11 +189,20 @@ function getTenantWelcomeNotifications(siteId: string, siteName: string): AppNot
 export function NotificationProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { siteId, siteName } = useSite();
+  const { user } = useAuth();
+
+  const userKey = user?.id
+    ? `user_${user.id}`
+    : user?.email
+    ? `user_${user.email.toLowerCase().trim().replace(/[^a-z0-9]/g, '_')}`
+    : 'guest';
 
   const [permissionStatus, setPermissionStatus] = useState<'undetermined' | 'granted' | 'denied'>('undetermined');
   const [expoPushToken, setExpoPushToken] = useState<string | null>(null);
   const [preferences, setPreferences] = useState<NotificationPreferences>(DEFAULT_NOTIFICATION_PREFERENCES);
   const [notifications, setNotifications] = useState<AppNotification[]>([]);
+  const [seenNotificationCount, setSeenNotificationCount] = useState<number>(0);
+  const [isSeenLoaded, setIsSeenLoaded] = useState(false);
   const [isCenterVisible, setIsCenterVisible] = useState(false);
 
   const notificationListenerRef = useRef<any>(null);
@@ -231,7 +249,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
     };
   }, []);
 
-  // Load tenant-isolated preferences and inbox
+  // Load tenant-isolated preferences, inbox, and seen counter
   useEffect(() => {
     let active = true;
     async function loadTenantData() {
@@ -251,10 +269,21 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
             await storeSetObject('app_notifications', defaults, siteId);
           }
         }
+
+        const storedSeen = await storeGetObject<number>(`seen_notifications_${userKey}`, siteId);
+        if (active) {
+          if (typeof storedSeen === 'number') {
+            setSeenNotificationCount(storedSeen);
+          } else {
+            setSeenNotificationCount(0);
+          }
+          setIsSeenLoaded(true);
+        }
       } catch {
         if (active) {
           const defaults = getTenantWelcomeNotifications(siteId, siteName);
           setNotifications(defaults);
+          setIsSeenLoaded(true);
         }
       }
     }
@@ -263,7 +292,7 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
     return () => {
       active = false;
     };
-  }, [siteId, siteName]);
+  }, [siteId, siteName, userKey]);
 
   // Push notification click / response listener
   useEffect(() => {
@@ -469,30 +498,54 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
       storeSetObject('app_notifications', updated, siteId).catch(() => {});
       return updated;
     });
-  }, [siteId]);
+    setSeenNotificationCount(0);
+    await storeSetObject(`seen_notifications_${userKey}`, 0, siteId);
+  }, [siteId, userKey]);
 
   const clearNotifications = useCallback(async () => {
     try {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     } catch {}
     setNotifications([]);
+    setSeenNotificationCount(0);
     await storeSetObject('app_notifications', [], siteId);
-  }, [siteId]);
+    await storeSetObject(`seen_notifications_${userKey}`, 0, siteId);
+  }, [siteId, userKey]);
+
+  const unreadCount = useMemo(() => {
+    return notifications.filter((n) => !n.read).length;
+  }, [notifications]);
+
+  const markNotificationsSeen = useCallback(() => {
+    setSeenNotificationCount(unreadCount);
+    storeSetObject(`seen_notifications_${userKey}`, unreadCount, siteId).catch(() => {});
+  }, [unreadCount, userKey, siteId]);
 
   const openCenter = useCallback(() => {
     try {
       Haptics.selectionAsync();
     } catch {}
+    markNotificationsSeen();
     setIsCenterVisible(true);
-  }, []);
+  }, [markNotificationsSeen]);
 
   const closeCenter = useCallback(() => {
     setIsCenterVisible(false);
   }, []);
 
-  const unreadCount = useMemo(() => {
-    return notifications.filter((n) => !n.read).length;
-  }, [notifications]);
+  // Sync seen count if unread items decrease (e.g. individually marked read)
+  useEffect(() => {
+    if (!isSeenLoaded) return;
+    if (unreadCount < seenNotificationCount) {
+      setSeenNotificationCount(unreadCount);
+      storeSetObject(`seen_notifications_${userKey}`, unreadCount, siteId).catch(() => {});
+    }
+  }, [unreadCount, seenNotificationCount, isSeenLoaded, userKey, siteId]);
+
+  // When unread notifications exist that have not been seen, show numeric badge count
+  const hasUnseenNotifications = unreadCount > seenNotificationCount;
+  // When unread notifications exist and have been seen, show the single red dot indicator
+  const showNotificationDot = unreadCount > 0 && !hasUnseenNotifications;
 
   const value = useMemo(
     () => ({
@@ -501,6 +554,9 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
       preferences,
       notifications,
       unreadCount,
+      hasUnseenNotifications,
+      showNotificationDot,
+      markNotificationsSeen,
       isCenterVisible,
       openCenter,
       closeCenter,
@@ -518,6 +574,9 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
       preferences,
       notifications,
       unreadCount,
+      hasUnseenNotifications,
+      showNotificationDot,
+      markNotificationsSeen,
       isCenterVisible,
       openCenter,
       closeCenter,

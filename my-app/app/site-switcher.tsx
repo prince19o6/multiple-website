@@ -35,7 +35,7 @@ export default function SiteSwitcherModal() {
       return;
     }
     await selectSite(id);
-    router.replace('/(app)');
+    router.replace('/(tabs)');
   };
 
   // If switcher is disabled, show single-site information
@@ -61,7 +61,7 @@ export default function SiteSwitcherModal() {
             <Text style={styles.snippetText}>npm run start:tripgoasia</Text>
             <Text style={styles.snippetText}>npm run start:technoheaven</Text>
           </View>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-return-to-app" accessibilityLabel="Return to App"
             style={[styles.closeBtn, { backgroundColor: ACTIVE_SITE_INFO.primaryColor }]}
             onPress={() => router.back()}
             activeOpacity={0.85}
@@ -88,7 +88,7 @@ export default function SiteSwitcherModal() {
           const isSelected = activeSiteId === id;
 
           return (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-site-switcher-91" accessibilityLabel="site-switcher action"
               key={id}
               activeOpacity={0.88}
               onPress={() => handleSelect(id)}
@@ -125,7 +125,7 @@ export default function SiteSwitcherModal() {
         })}
       </View>
 
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-site-switcher-128" accessibilityLabel="site-switcher action"
         style={styles.cancelButton}
         onPress={() => router.back()}
         activeOpacity={0.8}

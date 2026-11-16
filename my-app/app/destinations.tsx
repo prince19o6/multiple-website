@@ -51,12 +51,18 @@ export default function DestinationsScreen() {
   }, [destinations, search]);
 
   const renderCard = ({ item }: { item: DestinationItem }) => (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-destinations-54"
       style={[
         styles.card,
         { backgroundColor: colors.surface, borderColor: colors.border },
       ]}
-      onPress={() => router.push(`/(tabs)/explore`)}
+      onPress={() => {
+        const primaryDest = item.name.split(',')[0].trim();
+        router.push({
+          pathname: '/(tabs)/explore',
+          params: { q: primaryDest },
+        } as any);
+      }}
       activeOpacity={0.85}
       accessibilityRole="button"
       accessibilityLabel={`${item.name}, ${item.tours} tours`}
@@ -84,7 +90,7 @@ export default function DestinationsScreen() {
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       <AppHeader
-        title="Popular Destinations"
+        title="Trending Destinations"
         showBackButton
         onBackPress={() => router.back()}
       />
@@ -110,7 +116,7 @@ export default function DestinationsScreen() {
             clearButtonMode="while-editing"
           />
           {search ? (
-            <TouchableOpacity onPress={() => setSearch('')}>
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={() => setSearch('')}>
               <Ionicons name="close-circle" size={16} color={colors.mutedText} />
             </TouchableOpacity>
           ) : null}
@@ -126,7 +132,7 @@ export default function DestinationsScreen() {
         <View style={styles.centerWrap}>
           <Text style={[styles.errorTitle, { color: colors.heading }]}>Unable to load destinations</Text>
           <Text style={[styles.errorDesc, { color: colors.mutedText }]}>{error?.message}</Text>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-retry" accessibilityLabel="Retry"
             style={[styles.retryBtn, { backgroundColor: colors.primary }]}
             onPress={() => refetch()}
           >

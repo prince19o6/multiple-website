@@ -136,7 +136,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
           const isFirm = cat.bargainingFlexibility === 'FIRM_FIXED';
 
           return (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-counteroffercalculatorcard-139" accessibilityLabel="counteroffercalculatorcard action"
               key={cat.categoryId || cat.id}
               style={[
                 styles.categoryPill,
@@ -199,7 +199,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
             maxLength={7}
           />
           {inputVal.length > 0 && (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close"
               style={styles.clearBtn}
               onPress={() => {
                 setInputVal('');
@@ -214,7 +214,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
         {/* Quick presets */}
         <View style={styles.presetsRow}>
           {[200, 500, 800, 1200].map((preset) => (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-counteroffercalculatorcard-217" accessibilityLabel="counteroffercalculatorcard action"
               key={preset}
               style={[styles.presetBtn, { borderColor: colors.border, backgroundColor: colors.background }]}
               onPress={() => handleSetExact(preset)}
@@ -224,7 +224,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
               </Text>
             </TouchableOpacity>
           ))}
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-counteroffercalculatorcard-227" accessibilityLabel="counteroffercalculatorcard action"
             style={[styles.presetBtnAdd, { borderColor: colors.primary }]}
             onPress={() => handleQuickAdd(100)}
           >
@@ -244,7 +244,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
             { backgroundColor: colors.background, borderColor: colors.border },
           ]}
         >
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-counteroffercalculatorcard-247" accessibilityLabel="counteroffercalculatorcard action"
             style={[
               styles.toggleTab,
               bargainAggression === 'gentle' && { backgroundColor: colors.surface },
@@ -262,7 +262,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-counteroffercalculatorcard-265" accessibilityLabel="counteroffercalculatorcard action"
             style={[
               styles.toggleTab,
               bargainAggression === 'balanced' && { backgroundColor: colors.surface },
@@ -280,7 +280,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-counteroffercalculatorcard-283" accessibilityLabel="counteroffercalculatorcard action"
             style={[
               styles.toggleTab,
               bargainAggression === 'firm' && { backgroundColor: colors.surface },
@@ -370,7 +370,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
 
           {/* Action Buttons */}
           <View style={styles.buttonActionRow}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-phone-portrait-outline"
               style={[styles.primaryActionBtn, { backgroundColor: colors.primary }]}
               onPress={handleShowToVendor}
               activeOpacity={0.85}
@@ -384,7 +384,7 @@ export const CounterOfferCalculatorCard: React.FC<CounterOfferCalculatorCardProp
             </TouchableOpacity>
 
             {onOpenLogModal && (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-bookmark-outline"
                 style={[
                   styles.logActionBtn,
                   { backgroundColor: colors.background, borderColor: colors.border },

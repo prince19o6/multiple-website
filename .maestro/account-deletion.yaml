@@ -1,0 +1,32 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 5: Apple Guideline 5.1.1(v) Mandatory In-App Account Deletion
+- launchApp
+
+# Open Profile Tab
+- tapOn: "Profile"
+- assertVisible: "Active Traveler|Preferences|Settings"
+
+# Scroll Down to Account Actions
+- scroll
+- scroll
+- assertVisible: "Delete Account"
+
+# Tap Delete Account Button
+- tapOn:
+    id: "btn-delete-account"
+
+# Verify Irreversible Confirmation Dialog (GDPR & Apple Mandate)
+- assertVisible: "Delete Account"
+- assertVisible: "Are you sure you want to permanently delete your account.*"
+
+# Confirm Deletion
+- tapOn: "Permanently Delete"
+
+# Verify Success Dialog & Redirection to Unauthenticated State
+- assertVisible: "Account Deleted"
+- tapOn: "OK"
+
+# Verify Signed Out State
+- assertVisible: "Sign In|Guest Profile"
+

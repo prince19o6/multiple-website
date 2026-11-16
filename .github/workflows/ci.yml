@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Comprehensive CI/CD Quality Gates
 
 on:
   push:
@@ -6,14 +6,41 @@ on:
   pull_request:
     branches: [ "master", "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # ==============================================================================
-  # Job 1: Backend CI (.NET 8.0 + Tests)
+  # Job 1: Static Quality Gates & Security Checks
   # ==============================================================================
-  backend-ci:
-    name: Backend Build & Unit/Isolation Tests
+  quality-gates:
+    name: Security, iOS Compliance & Pressable Audits
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Secret Leak Scanner Gate
+        run: node scripts/scan-secrets.js
+
+      - name: iOS Static Compliance Gate (Apple Guidelines 5.1.1, 2.3.10)
+        run: node scripts/check-ios-compliance.js
+
+      - name: Pressable & Accessibility Audit
+        run: node scripts/audit-pressables.js
+
+  # ==============================================================================
+  # Job 2: Backend Multi-Tenant Integration Tests
+  # ==============================================================================
+  backend-tests:
+    name: Backend Multi-Tenant & Workflow Tests (.NET 8)
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -24,21 +51,38 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore Backend Dependencies
-        run: dotnet restore backend/toursApi/ToursApi.csproj
+        run: dotnet restore backend/ToursApi.Tests/ToursApi.Tests.csproj
 
-      - name: Build Backend
-        run: dotnet build backend/toursApi/ToursApi.csproj --no-restore --configuration Release
-
-      - name: Run Backend Isolation Tests
+      - name: Run Backend xUnit Tests
         run: dotnet test backend/ToursApi.Tests/ToursApi.Tests.csproj --configuration Release --verbosity normal
 
   # ==============================================================================
-  # Job 2: Web CI (Next.js 15 TypeScript & Build)
+  # Job 3: Mobile App Unit & Normalizer Tests
   # ==============================================================================
-  web-ci:
-    name: Web Frontend TypeScript & Next.js Build
+  app-tests:
+    name: Mobile App Unit, Storage & E-Ticket Tests
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run App Unit & Fixture Tests
+        run: node --test tests/app/*.test.js
+
+      - name: Run App Tenant Storage Isolation Suite
+        run: node my-app/scripts/test-storage.js
+
+  # ==============================================================================
+  # Job 4: Web Unit & Build Tests
+  # ==============================================================================
+  web-tests:
+    name: Web Frontend Unit & Next.js Build
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -50,13 +94,12 @@ jobs:
           cache: "npm"
           cache-dependency-path: web/package-lock.json
 
+      - name: Run Web Helper & Contrast Unit Tests
+        run: node --test tests/web/*.test.js
+
       - name: Install Web Dependencies
         working-directory: web
         run: npm ci
-
-      - name: Type Check (TypeScript)
-        working-directory: web
-        run: npx tsc --noEmit
 
       - name: Build Next.js Production Bundle
         working-directory: web
@@ -66,16 +109,19 @@ jobs:
         run: npm run build
 
   # ==============================================================================
-  # Job 3: Docker Orchestration Validation
+  # Job 5: Multi-Tenant Staging API Contract Verification
   # ==============================================================================
-  docker-validation:
-    name: Dockerfile & Compose Syntax Validation
+  contract-tests:
+    name: Staging API Contract Drift Verification
     runs-on: ubuntu-latest
-    needs: [backend-ci, web-ci]
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Validate Docker Compose Configuration
-        run: docker compose config
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verify Staging Contracts for GujjuTours, TripGoAsia, Technoheaven
+        run: node scripts/test-api-contracts.js

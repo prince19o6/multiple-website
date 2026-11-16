@@ -28,9 +28,9 @@ export default function Activities({ config }: SectionProps) {
                     <p className="text-white/70 text-lg mb-12">{activitiesConfig.subtitle}</p>
                 )}
                 <div className="flex gap-5 overflow-x-auto pb-4 -mx-4 px-4 snap-x">
-                    {activitiesConfig.items.map((item: any) => (
+                    {activitiesConfig.items.map((item: any, idx: number) => (
                         <button
-                            key={item.id}
+                            key={`${item.id || 'activity'}-${idx}`}
                             onClick={() => router.push(sitePath(site, "/explore"))}
                             className="shrink-0 w-56 snap-start bg-white/10 hover:bg-white/20 transition-colors rounded-2xl p-6 text-left border border-white/10"
                         >

@@ -33,9 +33,9 @@ export default function ActivitiesSection({ config, onNavigate }: SectionProps) 
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scrollList}
       >
-        {activitiesConfig.items.map((item: any) => (
-          <TouchableOpacity
-            key={item.id}
+        {activitiesConfig.items.map((item: any, idx: number) => (
+          <TouchableOpacity testID="btn-activitiessection-37" accessibilityLabel="activitiessection action"
+            key={`act_${item.id || idx}_${idx}`}
             activeOpacity={0.85}
             onPress={() => onNavigate?.('/explore')}
             style={styles.card}

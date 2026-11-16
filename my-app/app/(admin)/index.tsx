@@ -78,7 +78,7 @@ export default function AdminDashboardScreen() {
           <Text style={styles.siteHeaderLabel}>ACTIVE MULTI-TENANT BRAND</Text>
           <Text style={styles.siteHeaderTitle}>{currentSite?.label || siteId}</Text>
         </View>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-swap-horizontal" accessibilityLabel="swap horizontal"
           style={styles.switchSiteBadge}
           onPress={() => router.push('/site-switcher')}
         >
@@ -92,7 +92,7 @@ export default function AdminDashboardScreen() {
         <View style={styles.errorBox}>
           <Ionicons name="alert-circle-outline" size={18} color="#ef4444" />
           <Text style={styles.errorText}>{error}</Text>
-          <TouchableOpacity onPress={loadData} style={styles.retryBtn}>
+          <TouchableOpacity testID="btn-retry" accessibilityLabel="Retry" onPress={loadData} style={styles.retryBtn}>
             <Text style={styles.retryBtnText}>Retry</Text>
           </TouchableOpacity>
         </View>
@@ -149,7 +149,7 @@ export default function AdminDashboardScreen() {
           {/* Quick Management Links */}
           <Text style={styles.sectionTitle}>Operations Management</Text>
           <View style={styles.actionsGrid}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-map-outline" accessibilityLabel="map outline"
               style={styles.actionCard}
               onPress={() => router.push('/(admin)/tours')}
               activeOpacity={0.85}
@@ -161,7 +161,7 @@ export default function AdminDashboardScreen() {
               <Text style={styles.actionCardSub}>Create, edit, toggle, duplicate packages</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-receipt-outline" accessibilityLabel="receipt outline"
               style={styles.actionCard}
               onPress={() => router.push('/(admin)/bookings')}
               activeOpacity={0.85}
@@ -173,7 +173,7 @@ export default function AdminDashboardScreen() {
               <Text style={styles.actionCardSub}>Confirm, cancel, and inspect bookings</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-people-outline" accessibilityLabel="people outline"
               style={styles.actionCard}
               onPress={() => router.push('/(admin)/users')}
               activeOpacity={0.85}
@@ -185,7 +185,7 @@ export default function AdminDashboardScreen() {
               <Text style={styles.actionCardSub}>Manage member roles and status</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-trending-up-outline" accessibilityLabel="trending up outline"
               style={styles.actionCard}
               onPress={() => router.push('/(admin)/analytics')}
               activeOpacity={0.85}

@@ -26,6 +26,7 @@ import EmptyState from '@/components/EmptyState';
 import TourCard from '@/components/TourCard';
 import AdventureTourCard from '@/components/AdventureTourCard';
 import LuxuryTourCard from '@/components/LuxuryTourCard';
+import { resolveTourCardVariant } from '@/lib/tourCardResolver';
 import type { Tour } from '@/types';
 import { tourHref } from '@/lib/navigation';
 
@@ -61,7 +62,9 @@ export default function CategoryScreen() {
 
   const renderTourItem = ({ item }: { item: Tour }) => {
     const href = tourHref(item);
-    if (siteId === 'tripgoasia' || siteId === 'website2') {
+    const cardVariant = resolveTourCardVariant(config);
+
+    if (cardVariant === 'adventure') {
       return (
         <View style={styles.cardWrapper}>
           <AdventureTourCard
@@ -80,7 +83,7 @@ export default function CategoryScreen() {
       );
     }
 
-    if (siteId === 'technoheaven' || siteId === 'website3') {
+    if (cardVariant === 'luxury') {
       return (
         <View style={styles.cardWrapper}>
           <LuxuryTourCard
@@ -152,7 +155,9 @@ export default function CategoryScreen() {
           refreshControl={
             <RefreshControl
               refreshing={false}
-              onRefresh={() => refetch()}
+              onRefresh={() => {
+                refetch();
+              }}
               colors={[colors.primary]}
               tintColor={colors.primary}
             />

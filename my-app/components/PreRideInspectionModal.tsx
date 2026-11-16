@@ -51,7 +51,7 @@ export const PreRideInspectionModal: React.FC<PreRideInspectionModalProps> = ({
               </Text>
             </View>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close"
               style={styles.closeBtn}
               onPress={onClose}
               hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
@@ -92,7 +92,7 @@ export const PreRideInspectionModal: React.FC<PreRideInspectionModalProps> = ({
             {steps.map((step, idx) => {
               const isChecked = !!completedSteps[step.stepId];
               return (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-prerideinspectionmodal-95" accessibilityLabel="prerideinspectionmodal action"
                   key={step.stepId}
                   style={[
                     styles.stepCard,
@@ -146,7 +146,7 @@ export const PreRideInspectionModal: React.FC<PreRideInspectionModalProps> = ({
 
             {/* Bottom Actions */}
             <View style={styles.actionRow}>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-refresh-outline" accessibilityLabel="refresh outline"
                 style={[styles.resetBtn, { borderColor: colors.border }]}
                 onPress={resetChecklist}
               >
@@ -154,7 +154,7 @@ export const PreRideInspectionModal: React.FC<PreRideInspectionModalProps> = ({
                 <Text style={[styles.resetBtnText, { color: colors.mutedText }]}>Reset</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-prerideinspectionmodal-157" accessibilityLabel="prerideinspectionmodal action"
                 style={[
                   styles.doneBtn,
                   { backgroundColor: isAllDone ? '#16a34a' : colors.primary },

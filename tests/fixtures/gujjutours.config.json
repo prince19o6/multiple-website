@@ -1,0 +1,43 @@
+{
+  "site": {
+    "id": "gujjutours",
+    "name": "Gujju Tours",
+    "hostnames": ["www.gujjutours.com", "gujjutours.com"],
+    "defaultLanguage": "en",
+    "languages": ["en", "gu", "hi"],
+    "currency": "USD",
+    "currencySymbol": "$",
+    "timeZone": "Asia/Kolkata"
+  },
+  "theme": {
+    "primary": "#2882c5",
+    "secondary": "#1e40af",
+    "accent": "#f59e0b",
+    "background": "#ffffff",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "mutedText": "#64748b",
+    "border": "#e2e8f0"
+  },
+  "typography": {
+    "heading": "Poppins",
+    "body": "Inter"
+  },
+  "assets": {
+    "logoLight": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/gujju-logo.svg",
+    "logoDark": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/gujju-logo-dark.svg",
+    "favicon": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/favicon.ico"
+  },
+  "layout": {
+    "headerVariant": "standard",
+    "footerVariant": "multi-column"
+  },
+  "modules": [
+    { "id": "tours", "enabled": true },
+    { "id": "hotels", "enabled": true },
+    { "id": "transfers", "enabled": true },
+    { "id": "visas", "enabled": true },
+    { "id": "holidays", "enabled": true }
+  ]
+}
+

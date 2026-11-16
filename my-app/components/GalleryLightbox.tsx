@@ -155,7 +155,7 @@ export default function GalleryLightbox({
           ]}
         >
           {/* Close Button */}
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-close"
             style={styles.circleBtn}
             onPress={handleClose}
             activeOpacity={0.7}
@@ -174,7 +174,7 @@ export default function GalleryLightbox({
 
           {/* Share Button (if provided) */}
           {onShare ? (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-share"
               style={styles.circleBtn}
               onPress={onShare}
               activeOpacity={0.7}
@@ -234,7 +234,7 @@ export default function GalleryLightbox({
                 const isSelected = currentIndex === idx;
                 const thumbUri = resolveImageUrl(img);
                 return (
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-gallerylightbox-237"
                     key={idx}
                     onPress={() => jumpToIndex(idx)}
                     style={[

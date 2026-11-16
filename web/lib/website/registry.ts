@@ -1,13 +1,9 @@
 /**
- * CENTRAL REGISTRY — the one place that says which website reads from
- * which data source. To add a website:
- *   1. add its static config in /config (like website1.js)
- *   2. add one row to SITE_REGISTRY below
- *   3. add its hostname(s) to lib/hostnameRegistry.ts
+ * CENTRAL REGISTRY — Backward-compatible adapter for legacy callers.
+ * All dynamic tenant configuration is now driven by SiteConfig (lib/config/siteConfigSchema.ts)
+ * and served directly by the tenant's API.
  */
-import website1 from "@/config/website1";
-import website2 from "@/config/website2";
-import website3 from "@/config/website3";
+import { DEFAULT_SITE_CONFIG } from "@/lib/config/siteConfigSchema";
 import {
     normalizeHostname,
     resolveCanonicalHostname,
@@ -28,23 +24,23 @@ import type {
 export const SITE_REGISTRY: Record<WebsiteId, SiteDefinition> = {
     website1: {
         id: "website1",
-        label: "Travel Explorer",
+        label: "Gujju Tours",
         dataSource: "gujjutourdata",
-        staticConfig: website1,
+        staticConfig: DEFAULT_SITE_CONFIG as any,
         source: SOURCE_OVERRIDES.website1,
     },
     website2: {
         id: "website2",
-        label: "Adventure World",
+        label: "TripGo Asia",
         dataSource: "tripgoasia",
-        staticConfig: website2,
+        staticConfig: DEFAULT_SITE_CONFIG as any,
         source: SOURCE_OVERRIDES.website2,
     },
     website3: {
         id: "website3",
-        label: "Holiday Paradise",
+        label: "Technoheaven",
         dataSource: "technoheaven",
-        staticConfig: website3,
+        staticConfig: DEFAULT_SITE_CONFIG as any,
         source: SOURCE_OVERRIDES.website3,
     },
 };
@@ -75,9 +71,7 @@ function staticConfigFor(extra: ExtraSiteDefinition): Record<string, any> {
         ? extra.staticConfig
         : extra.template
           ? SITE_REGISTRY[extra.template].staticConfig
-          : {};
-    // Keep the template's own id on purpose: navigation/footer pick their
-    // look ("adventure", "luxury"...) from it.
+          : DEFAULT_SITE_CONFIG;
     return { ...base, ...(base.id ? {} : { id: extra.id }), name: extra.label };
 }
 
@@ -91,53 +85,50 @@ function resolveHostname(input: string): string {
     return normalizeHostname(resolveDefaultHostname());
 }
 
-/**
- * Accepts a website id ("website1"), a brand slug ("gujjutours"), or a real
- * hostname ("www.tripgoasia.com") and returns everything needed to fetch and
- * build that site's config. Never throws. Unknown hostnames are still
- * supported (multi-tenant): they get a generic definition with no static
- * theme, and their hostname doubles as the data source name.
- */
-export function resolveSite(input: string): ResolvedSite {
-    const raw = typeof input === "string" ? input.trim() : "";
-
-    // Websites added in lib/website/sites.config.ts (own hostnames + own API).
-    const extra = findExtraSite(raw);
+export function resolveWebsite(input: string): ResolvedSite {
+    const extra = findExtraSite(input);
     if (extra) {
         return {
             id: extra.site.id,
             label: extra.site.label,
-            dataSource: extra.site.dataSource ?? extra.site.id,
+            hostname: extra.hostname,
+            dataSource: extra.site.dataSource || extra.site.id,
             staticConfig: staticConfigFor(extra.site),
             source: extra.site.source,
-            hostname: extra.hostname,
             known: true,
         };
     }
 
-    const hostname = resolveHostname(raw);
-    const slug = resolveStaticSlug(raw);
-
-    if (slug && isWebsiteId(slug)) {
-        return { ...SITE_REGISTRY[slug], hostname, known: true };
+    const staticSlug = resolveStaticSlug(input);
+    if (staticSlug && isWebsiteId(staticSlug)) {
+        const def = SITE_REGISTRY[staticSlug];
+        return {
+            id: def.id,
+            label: def.label,
+            hostname: resolveHostname(input),
+            dataSource: def.dataSource,
+            staticConfig: def.staticConfig,
+            source: def.source,
+            known: true,
+        };
     }
 
-    const id = raw || hostname;
+    const hostname = resolveHostname(input);
     return {
-        id,
-        label: hostname || id,
-        dataSource: hostname || id,
-        staticConfig: { id },
+        id: hostname,
+        label: hostname,
         hostname,
+        dataSource: hostname,
+        staticConfig: DEFAULT_SITE_CONFIG as any,
         known: false,
     };
 }
 
-/** Static config + (optional) dynamic data -> final config. Client-safe. */
+export const resolveSite = resolveWebsite;
+
 export function buildWebsiteConfig(
-    site: SiteDefinition,
-    dynamic: SiteConfigResult | null
+    site: ResolvedSite,
+    dynamicResult: SiteConfigResult | null
 ): MergedWebsiteConfig {
-    if (site.createConfig) return site.createConfig(dynamic);
-    return mergeWebsiteConfig(site.staticConfig, dynamic);
+    return mergeWebsiteConfig(site.staticConfig, dynamicResult) as any;
 }

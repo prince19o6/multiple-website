@@ -68,14 +68,12 @@ export default function Navbar({
       ? showBackButton
       : pathname.includes('/tour') ||
         (pathname !== '/' &&
-          pathname !== '/(app)' &&
-          pathname !== '/(app)/index' &&
+          pathname !== '/(tabs)' &&
+          pathname !== '/(tabs)/index' &&
           pathname !== '/explore' &&
-          pathname !== '/(app)/explore' &&
+          pathname !== '/(tabs)/explore' &&
           pathname !== '/about' &&
-          pathname !== '/(app)/about' &&
-          pathname !== '/contact' &&
-          pathname !== '/(app)/contact');
+          pathname !== '/contact');
 
   // Handle back button press
   const handleBack = () => {
@@ -86,7 +84,7 @@ export default function Navbar({
     if (router.canGoBack()) {
       router.back();
     } else {
-      router.replace('/(app)');
+      router.replace('/(tabs)');
     }
   };
 
@@ -105,7 +103,7 @@ export default function Navbar({
         <View style={styles.navRow}>
           {/* ─── LEFT: Back Button OR Brand Logo & Title ─── */}
           {isInnerScreen ? (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-navigate"
               style={styles.backButton}
               onPress={handleBack}
               activeOpacity={0.7}
@@ -140,9 +138,9 @@ export default function Navbar({
               </View>
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-navbar-141"
               style={styles.brandRow}
-              onPress={() => router.replace('/(app)')}
+              onPress={() => router.replace('/(tabs)')}
               activeOpacity={0.8}
               accessibilityRole="button"
               accessibilityLabel={`Go to ${siteName} Home`}
@@ -154,7 +152,7 @@ export default function Navbar({
           {/* ─── RIGHT: Search, Site Switcher & Hamburger Menu ─── */}
           <View style={styles.actionRow}>
             {/* Quick Explore / Search Shortcut */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-search"
               style={styles.iconButton}
               onPress={() => router.push('/explore')}
               activeOpacity={0.7}
@@ -165,7 +163,7 @@ export default function Navbar({
             </TouchableOpacity>
 
             {/* Quick Switch Site Globe */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-globe-outline"
               style={[
                 styles.switcherButton,
                 { backgroundColor: `${colors.primary}18` },
@@ -180,7 +178,7 @@ export default function Navbar({
             </TouchableOpacity>
 
             {/* Hamburger Drawer Trigger */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-menu-outline"
               style={styles.iconButton}
               onPress={() => setIsDrawerOpen(true)}
               activeOpacity={0.7}

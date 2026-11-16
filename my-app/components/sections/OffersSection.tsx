@@ -37,7 +37,7 @@ export default function OffersSection({ config, onNavigate }: SectionProps) {
         <Text style={styles.subtitle}>{offersConfig.subtitle}</Text>
       )}
 
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-offerssection-40" accessibilityLabel="offerssection action"
         style={styles.button}
         onPress={() => onNavigate?.('/explore')}
         activeOpacity={0.88}

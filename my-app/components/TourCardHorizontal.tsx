@@ -42,7 +42,7 @@ export default function TourCardHorizontal({
   };
 
   return (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-press"
       activeOpacity={0.88}
       onPress={onPress}
       accessibilityRole="button"

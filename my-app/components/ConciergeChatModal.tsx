@@ -179,7 +179,7 @@ export default function ConciergeChatModal() {
           </View>
 
           <View style={styles.headerActions}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-call"
               style={[styles.headerIconBtn, { backgroundColor: `${colors.primary}12` }]}
               onPress={handlePhoneCall}
               accessibilityRole="button"
@@ -188,7 +188,7 @@ export default function ConciergeChatModal() {
               <Ionicons name="call" size={17} color={colors.primary} />
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-logo-whatsapp"
               style={[styles.headerIconBtn, { backgroundColor: '#25D36618' }]}
               onPress={handleOpenWhatsApp}
               accessibilityRole="button"
@@ -197,7 +197,7 @@ export default function ConciergeChatModal() {
               <Ionicons name="logo-whatsapp" size={18} color="#25D366" />
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-trash-outline"
               style={[styles.headerIconBtn, { backgroundColor: `${colors.text}10` }]}
               onPress={handleClearChatPrompt}
               accessibilityRole="button"
@@ -206,7 +206,7 @@ export default function ConciergeChatModal() {
               <Ionicons name="trash-outline" size={17} color={colors.mutedText} />
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-close"
               style={[styles.headerIconBtn, { backgroundColor: `${colors.text}10` }]}
               onPress={closeConcierge}
               accessibilityRole="button"
@@ -289,7 +289,7 @@ export default function ConciergeChatModal() {
                   {!isUser && msg.suggestedFollowUps && msg.suggestedFollowUps.length > 0 && (
                     <View style={styles.followUpsContainer}>
                       {msg.suggestedFollowUps.map((question, idx) => (
-                        <TouchableOpacity
+                        <TouchableOpacity testID="btn-chatbubble-ellipses-outline" accessibilityLabel="chatbubble ellipses outline"
                           key={idx}
                           style={[
                             styles.followUpChip,
@@ -339,7 +339,7 @@ export default function ConciergeChatModal() {
             contentContainerStyle={styles.quickScroll}
           >
             {specialist.quickInquiries.map((q, idx) => (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-conciergechatmodal-342" accessibilityLabel="conciergechatmodal action"
                 key={idx}
                 style={[
                   styles.quickPill,
@@ -384,7 +384,7 @@ export default function ConciergeChatModal() {
             onSubmitEditing={handleSend}
           />
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-navigate"
             style={[
               styles.sendBtn,
               {

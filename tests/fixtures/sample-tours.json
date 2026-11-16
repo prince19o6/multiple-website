@@ -1,0 +1,33 @@
+[
+  {
+    "_id": "6710abcd1234567890ef0001",
+    "tourNumericId": 101,
+    "Title": "Desert Safari with BBQ Dinner",
+    "ShortDescription": "Experience thrill of dune bashing in the golden sands of Dubai.",
+    "Price": "$149.00",
+    "Rating": 4.9,
+    "Reviews": 320,
+    "Duration": "6 Hours",
+    "Difficulty": "Easy",
+    "Location": "Dubai Desert",
+    "Image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+    "Category": "Adventure",
+    "Featured": true
+  },
+  {
+    "_id": "6710abcd1234567890ef0002",
+    "id": 102,
+    "name": "Bangkok Temples and River Cruise",
+    "description": "Visit Wat Arun, Wat Pho, and enjoy evening dinner cruise on Chao Phraya.",
+    "price": 89.5,
+    "rating": 4.8,
+    "reviews": 185,
+    "duration": "8 Hours",
+    "difficulty": "Moderate",
+    "location": "Bangkok",
+    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365",
+    "category": "Culture",
+    "featured": false
+  }
+]
+

@@ -134,11 +134,14 @@ export default function BrandLogo({
   const containerAlign =
     align === 'center' ? 'center' : align === 'right' ? 'flex-end' : 'flex-start';
 
-  // Site emblem emoji & tagline
-  const isTripGo = siteId === 'tripgoasia' || siteId === 'website2';
-  const isTechno = siteId === 'technoheaven' || siteId === 'website3';
-  const siteIcon = isTripGo ? '🏔️' : isTechno ? '🌴' : '✈️';
-  const siteTagline = isTripGo ? 'Asia Expeditions' : isTechno ? 'Luxury Escapes' : 'Travel Beyond Boundaries';
+  // Site emblem emoji & tagline from config
+  const siteIcon = (config as any)?.icon || (config as any)?.site?.icon || '✈️';
+  const siteTagline =
+    (config as any)?.tagline ||
+    (config as any)?.seo?.defaultTitle ||
+    (config as any)?.description ||
+    siteName ||
+    'Travel Beyond Boundaries';
 
   // Fallback: If no URL or failed to load, show premium branded monogram emblem
   if (!resolvedUrl || hasError) {

@@ -41,12 +41,12 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".next_gujjutours/types/**/*.ts",
-    ".next_tripgoasia/types/**/*.ts",
-    ".next_technoheaven/types/**/*.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next/types/validator.ts",
+    "tests",
+    "playwright.config.ts"
   ]
 }

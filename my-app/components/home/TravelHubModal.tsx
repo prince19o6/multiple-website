@@ -249,9 +249,9 @@ export function TravelHubModal({ visible, onClose }: TravelHubModalProps) {
       animationType="slide"
       onRequestClose={onClose}
     >
-      <TouchableWithoutFeedback onPress={onClose}>
+      <TouchableWithoutFeedback testID="btn-dismiss" accessibilityLabel="Dismiss" onPress={onClose}>
         <View style={styles.backdrop}>
-          <TouchableWithoutFeedback>
+          <TouchableWithoutFeedback testID="btn-travelhubmodal-254" accessibilityLabel="travelhubmodal action" onPress={(e) => e?.stopPropagation?.()}>
             <View style={[styles.sheetContainer, { backgroundColor: colors.surface }]}>
               {/* Header */}
               <View style={[styles.headerRow, { borderBottomColor: colors.border }]}>
@@ -269,7 +269,7 @@ export function TravelHubModal({ visible, onClose }: TravelHubModalProps) {
                   </View>
                 </View>
 
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-close"
                   onPress={onClose}
                   style={[styles.closeButton, { backgroundColor: colors.background }]}
                   hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
@@ -297,7 +297,7 @@ export function TravelHubModal({ visible, onClose }: TravelHubModalProps) {
 
                     <View style={styles.itemsGrid}>
                       {cat.items.map((item) => (
-                        <TouchableOpacity
+                        <TouchableOpacity testID="btn-travelhubmodal-300" accessibilityLabel="travelhubmodal action"
                           key={item.id}
                           style={[
                             styles.itemCard,

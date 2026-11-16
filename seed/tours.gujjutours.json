@@ -13,8 +13,8 @@
     "description": "Bask along horse-shoe shaped Nagoa Beach, tour the imposing 16th-century sea-facing Portuguese Fortress, and savor relaxed coastal charm.",
     "shortDescription": "Portuguese sea-forts, pristine Hoka palms, and golden sands on Diu Island.",
     "fullDescription": "Escape to Diu, a tranquil coastal enclave steeped in Portuguese history. Walk the battlements of Diu Fort commanding sweeping Arabian Sea views, relax under rare Hoka palm trees on Nagoa Beach, explore the baroque St. Paul Church, and enjoy evening strolls along Ghoghla Beach.",
-    "price": 14999,
-    "originalPrice": 18500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 14999,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -24,11 +24,11 @@
     "rating": 4.8,
     "reviews": 64,
     "reviewCount": 64,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-15 travelers",
     "bestTime": "October to March",
@@ -95,7 +95,21 @@
         "text": "Authentic Gujarati meals and very comfortable stay right next to Nagoa beach.",
         "date": "2026-09-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 102,
@@ -112,7 +126,7 @@
     "shortDescription": "Regal private beaches, royal Rajput palaces, and camel rides by the Kutch seashore.",
     "fullDescription": "Mandvi is the crowning jewel of Kutch’s coastline. Stay close to the majestic Vijay Vilas Palace where Bollywood classics were filmed, take evening camel rides across wind-sculpted sand dunes, and observe master carpenters handcrafting ocean dhows using centuries-old maritime techniques.",
     "price": 11500,
-    "originalPrice": 13800,
+    "originalPrice": 14375,
     "discountedPrice": 11500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -122,10 +136,11 @@
     "rating": 4.7,
     "reviews": 49,
     "reviewCount": 49,
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1471922694855-fa59ac7c7bc8?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "November to February",
@@ -179,7 +194,21 @@
         "text": "Mandvi is a hidden gem. Vijay Vilas palace private beach was serene and clean.",
         "date": "2026-07-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 103,
@@ -195,8 +224,8 @@
     "description": "Combine deep spiritual serenity at the holy Dwarkadhish Temple with pristine azure water diving and dolphin watching at Blue Flag-certified Shivrajpur Beach.",
     "shortDescription": "Certified Blue Flag azure waters, scuba reef dives, and coastal Dwarkadhish blessings.",
     "fullDescription": "Shivrajpur Beach is one of India’s most pristine certified Blue Flag beaches with translucent turquoise water and white sands. After taking early darshan at the 2,500-year-old Dwarkadhish Temple, head to Shivrajpur for scuba diving, sea-glass hunting, and dolphin watching boat rides off the Arabian shore.",
-    "price": 16200,
-    "originalPrice": 19000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 16200,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -206,10 +235,11 @@
     "rating": 4.9,
     "reviews": 82,
     "reviewCount": 82,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1520483601560-389dff434fdf?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to April",
@@ -269,7 +299,21 @@
         "text": "Shivrajpur beach was as clear as the Maldives! Combined with temple darshan, this was ideal.",
         "date": "2026-08-11"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 104,
@@ -286,7 +330,7 @@
     "shortDescription": "Colonial fortresses, black sand beaches, and leisurely coastal promenades in Daman.",
     "fullDescription": "Daman offers a quick seaside escape from southern Gujarat. Discover towering stone walls at Fort St. Jerome, walk beneath the leafy canopy of Moti Daman lighthouse, stroll the long tides of Jampore Beach, and recharge with refreshing coastal breeze.",
     "price": 9999,
-    "originalPrice": 12000,
+    "originalPrice": 12499,
     "discountedPrice": 9999,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -296,10 +340,11 @@
     "rating": 4.5,
     "reviews": 38,
     "reviewCount": 38,
-    "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to May",
@@ -353,7 +398,21 @@
         "text": "Relaxing weekend trip close to Surat. Jampore beach was peaceful and clean.",
         "date": "2026-06-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 105,
@@ -370,7 +429,7 @@
     "shortDescription": "Regal seaside palace of Bhavnagar Maharajas and peaceful untouched coastal shores.",
     "fullDescription": "Gopnath Beach offers untouched coastal serenity where the Bhavnagar royals once spent their summers. Walk through the summer palace, observe unique limestone cliffs, visit the ancient Gopnath Mahadev shrine on the water edge, and view Alang maritime bay.",
     "price": 10800,
-    "originalPrice": 12900,
+    "originalPrice": 13500,
     "discountedPrice": 10800,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -380,10 +439,11 @@
     "rating": 4.6,
     "reviews": 29,
     "reviewCount": 29,
-    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "6-10 travelers",
     "bestTime": "October to March",
@@ -437,7 +497,21 @@
         "text": "Zero crowds, tranquil waves, and royal palace ambiance. Truly special.",
         "date": "2026-05-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 106,
@@ -453,8 +527,8 @@
     "description": "Experience golden palm-fringed sands at Calangute, Palolem and Baga, spice estate tours, and Portuguese heritage quarters of Fontainhas.",
     "shortDescription": "Golden sands, Mandovi river luxury cruise, and Portuguese Latin Quarter walking tour.",
     "fullDescription": "The ultimate Indian beach holiday, specially curated for Gujarati families and groups with vegetarian dining arrangements. Relax on iconic Goa beaches, sail down the Mandovi River, tour aromatic spice plantations in Ponda, and photograph pastel colonial mansions in Fontainhas.",
-    "price": 22500,
-    "originalPrice": 26000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 22500,
     "currency": "INR",
     "duration": "5 Days / 4 Nights",
@@ -464,10 +538,11 @@
     "rating": 4.8,
     "reviews": 110,
     "reviewCount": 110,
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-20 travelers",
     "bestTime": "October to April",
@@ -532,7 +607,21 @@
         "text": "Great Gujarati food arrangements in Goa! The kids loved the cruise and resort pool.",
         "date": "2026-08-30"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 107,
@@ -548,8 +637,8 @@
     "description": "Gaze over majestic red laterite cliffs at Varkala, relax on crescent-shaped Lighthouse Beach in Kovalam, and experience soothing Ayurvedic wellness.",
     "shortDescription": "Dramatic red sea-cliffs, crescent lighthouse bays, and Ayurvedic rejuvenation by the sea.",
     "fullDescription": "Kerala’s coast provides unmatched natural drama. Stay perched atop the cliffs of Varkala overlooking natural mineral springs and crashing surf. Then travel to Kovalam’s three adjacent crescent beaches, climb the striped beacon lighthouse, and experience restorative Ayurvedic massage treatments.",
-    "price": 28900,
-    "originalPrice": 33500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 28900,
     "currency": "INR",
     "duration": "6 Days / 5 Nights",
@@ -559,10 +648,11 @@
     "rating": 4.9,
     "reviews": 73,
     "reviewCount": 73,
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "September to March",
@@ -632,7 +722,21 @@
         "text": "The Varkala cliff views were out of this world. Excellent driver and cozy hotels.",
         "date": "2026-08-04"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 108,
@@ -648,21 +752,22 @@
     "description": "Sink your toes into Radhanagar Beach, ranked among Asia’s finest shores, snorkel vibrant reefs at Elephant Beach, and explore historic Port Blair.",
     "shortDescription": "Asia’s top-ranked Radhanagar Beach, crystal coral waters, and catamaran cruises in Andaman.",
     "fullDescription": "The Andaman archipelago is India’s premier tropical wonderland. Cruise aboard high-speed catamarans to Havelock Island, walk beneath mahua trees lining powdery Radhanagar Beach, snorkel with sea turtles at Elephant Beach, and marvel at the natural rock bridge of Neil Island.",
-    "price": 38500,
-    "originalPrice": 44000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 38500,
     "currency": "INR",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "durationNights": 5,
     "difficulty": "Easy",
-    "rating": 5,
+    "rating": 4.6,
     "reviews": 95,
     "reviewCount": 95,
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to May",
@@ -732,7 +837,21 @@
         "text": "Unforgettable holiday! Havelock waters are unreal. The team took care of all ferry and meal logistics.",
         "date": "2026-09-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 109,
@@ -748,8 +867,8 @@
     "description": "Hike across coastal hills connecting Kudle, Om, Half Moon and Paradise beaches, and visit the historic Mahabaleshwar Temple.",
     "shortDescription": "Spiritual seaside sanctuary, the iconic Om Beach, and rugged headland trails.",
     "fullDescription": "Gokarna seamlessly pairs sacred pilgrimage with bohemian coastal bliss. Trek from one secluded cove to the next along scenic ocean bluffs, swim in the calm curve of Om Beach, spot dolphins off the coastline, and seek blessings at the sacred Atmalinga shrine.",
-    "price": 15400,
-    "originalPrice": 17800,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 15400,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -759,10 +878,11 @@
     "rating": 4.7,
     "reviews": 44,
     "reviewCount": 44,
-    "image": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to March",
@@ -821,7 +941,21 @@
         "text": "The beach trek was simply fantastic! Clean shores and very peaceful vibe.",
         "date": "2026-07-28"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 110,
@@ -837,8 +971,8 @@
     "description": "Experience holy coastal winds on Puri’s Blue Flag Golden Beach, drive along scenic Marine Drive to the Konark Sun Temple, and cruise Chilika Lake.",
     "shortDescription": "Golden Beach sunrise, 13th-century Konark stone chariot, and Chilika dolphin cruise.",
     "fullDescription": "Puri offers an enchanting blend of devotion and marine beauty. Walk along the eco-friendly Blue Flag Golden Beach, cruise down the Konark Marine Drive with casuarina trees on both sides, explore the UNESCO 13th-century Konark Sun Temple, and witness Irrawaddy dolphins on Asia’s largest brackish lagoon at Chilika Lake.",
-    "price": 17800,
-    "originalPrice": 21000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 17800,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -848,10 +982,11 @@
     "rating": 4.8,
     "reviews": 58,
     "reviewCount": 58,
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to March",
@@ -910,7 +1045,21 @@
         "text": "Puri golden beach was exceptionally clean and Konark temple was mind blowing.",
         "date": "2026-08-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+    ],
+    "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
+    "photoCredit": {
+      "photographer": "Alexey Turenkov",
+      "profileUrl": "https://unsplash.com/@turenkov",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 111,
@@ -926,8 +1075,8 @@
     "description": "Race across endless white salt flats on quad bikes, soar high in a paramotor above the horizon, and watch the sun sink into glistening salt crystals.",
     "shortDescription": "High-octane ATV quad biking, paramotor flights, and desert camping on the endless white salt desert.",
     "fullDescription": "The Great Rann of Kutch transforms into a playground for thrills during winter. Zip across the barren white salt crust on all-terrain vehicles, fly tandem in paramotor gliders for panoramic aerial views, cycle through border desert outpost trails, and stargaze under crystal desert night skies.",
-    "price": 19500,
-    "originalPrice": 23000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 19500,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -937,10 +1086,11 @@
     "rating": 4.9,
     "reviews": 120,
     "reviewCount": 120,
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
     ],
     "groupSize": "8-18 travelers",
     "bestTime": "November to February",
@@ -1000,7 +1150,21 @@
         "text": "Riding the ATV across the white desert is an experience you will never forget. 10/10 trip!",
         "date": "2026-08-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+    ],
+    "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
+    "photoCredit": {
+      "photographer": "David Rodrigo",
+      "profileUrl": "https://unsplash.com/@davidrodrigo",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 112,
@@ -1017,7 +1181,7 @@
     "shortDescription": "Lush Sahyadri ridge trekking, thunderous Gira waterfalls, and valley zip-lining in Saputara.",
     "fullDescription": "Perched in the lush Sahyadri ranges of Dang district, Saputara offers crisp mountain air and active wilderness. Trek along Governor Hill trails, conquer the Table Point ridge, zip-line across valley gaps, and witness the thunderous cascade of Gira Waterfalls into the Ambika River.",
     "price": 8500,
-    "originalPrice": 10200,
+    "originalPrice": 10625,
     "discountedPrice": 8500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -1027,10 +1191,11 @@
     "rating": 4.6,
     "reviews": 55,
     "reviewCount": 55,
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "July to February",
@@ -1084,7 +1249,21 @@
         "text": "The waterfall was roaring and the morning trek was refreshing! Great escape from the city heat.",
         "date": "2026-07-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 113,
@@ -1101,7 +1280,7 @@
     "shortDescription": "Epic 10,000-step holy mountain climb, ropeway flight over volcanic ridges, and ancient cave temples.",
     "fullDescription": "Mount Girnar is older than the Himalayas and soars 3,666 feet above the Saurashtra plains. Test your endurance on the iconic dawn stairway challenge passing centuries-old Jain marble temples, proceed to the razor-thin pinnacles of Guru Dattatreya, or take in staggering aerial views via the Girnar Ropeway.",
     "price": 9800,
-    "originalPrice": 11500,
+    "originalPrice": 12250,
     "discountedPrice": 9800,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -1111,10 +1290,11 @@
     "rating": 4.8,
     "reviews": 67,
     "reviewCount": 67,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to March",
@@ -1168,7 +1348,21 @@
         "text": "Climbing Girnar was a life milestone. The sunrise from Ambaji peak was spiritual and exhilarating.",
         "date": "2026-08-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+    ],
+    "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
+    "photoCredit": {
+      "photographer": "Bailey Zindel",
+      "profileUrl": "https://unsplash.com/@baileyzindel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 114,
@@ -1185,7 +1379,7 @@
     "shortDescription": "Hidden ancient ruins engulfed by jungle, Harnav river walking, and night camping under the stars.",
     "fullDescription": "Tucked away in the Aravalli foothills near Idar, Polo Forest is Gujarat’s best-kept wilderness secret. Hike through thick canopies of deciduous trees, discover moss-cloaked stone temples dating back to the 15th century, cross the Harnav Dam walkways, and camp beside bubbling forest streams.",
     "price": 5999,
-    "originalPrice": 7500,
+    "originalPrice": 7499,
     "discountedPrice": 5999,
     "currency": "INR",
     "duration": "2 Days / 1 Night",
@@ -1195,10 +1389,11 @@
     "rating": 4.7,
     "reviews": 51,
     "reviewCount": 51,
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-16 travelers",
     "bestTime": "August to February",
@@ -1248,7 +1443,21 @@
         "text": "Perfect weekend adventure from Ahmedabad! The ruins felt like Tomb Raider in real life.",
         "date": "2026-06-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 115,
@@ -1264,8 +1473,8 @@
     "description": "Ride Class III and IV rapids from Marine Drive to NIM Beach, leap from 30-foot river cliffs, and camp in riverbank alpine tents.",
     "shortDescription": "Conquer Class IV Ganges rapids, bungee jumping, and riverside alpine camping in Rishikesh.",
     "fullDescription": "Rishikesh is the adventure capital of the Himalayas. Tackle legendary rapids including Roller Coaster, Golf Course, and Club House on a thrilling 24 km rafting expedition down the roaring Ganges. Test your nerve with bungee jumping at Mohan Chatti and sleep to the lullaby of river rapids.",
-    "price": 14200,
-    "originalPrice": 17000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 14200,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -1275,10 +1484,11 @@
     "rating": 4.9,
     "reviews": 135,
     "reviewCount": 135,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "September to May",
@@ -1338,7 +1548,21 @@
         "text": "Rafting the Ganges was an adrenaline rush of a lifetime. Camping setup was top class!",
         "date": "2026-08-16"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 116,
@@ -1354,21 +1578,22 @@
     "description": "Cross the world’s highest motorable pass Khardung La at 17,982 ft, ride double-humped camels in Nubra Valley, and camp beside Pangong Tso.",
     "shortDescription": "Khardung La high-pass thrills, sand dune camel safaris, and electric-blue Pangong Lake camping.",
     "fullDescription": "Ladakh is the ultimate adventure frontier. Drive over the world’s highest passes on Royal Enfield bikes or customized 4x4 SUVs, traverse the cold desert sand dunes of Hunder in Nubra Valley, marvel at Magnetic Hill defying gravity, and gaze upon the changing hues of sapphire Pangong Tso.",
-    "price": 45000,
-    "originalPrice": 52000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 45000,
     "currency": "INR",
     "duration": "8 Days / 7 Nights",
     "durationDays": 8,
     "durationNights": 7,
     "difficulty": "Challenging",
-    "rating": 5,
+    "rating": 4.4,
     "reviews": 140,
     "reviewCount": 140,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "May to September",
@@ -1448,7 +1673,21 @@
         "text": "The best journey of my entire life. Antigravity handled the oxygen and permits seamlessly!",
         "date": "2026-07-11"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 117,
@@ -1464,8 +1703,8 @@
     "description": "Traverse treacherous Kunzum Pass, visit the highest post office in the world at Hikkim, and explore 1,000-year-old Key Monastery.",
     "shortDescription": "Remote Himalayan moonscape, world’s highest post office at Hikkim, and ancient Key monastery.",
     "fullDescription": "Spiti Valley is the rugged heart of the Middle Land. Drive through stark moonscapes in rugged 4x4 Mahindra Scorpios, post postcards from Hikkim at 14,567 ft, discover marine fossils at Langza, camp near the crescent jewel of Chandratal Lake, and traverse raw glacial river crossings.",
-    "price": 36500,
-    "originalPrice": 42000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 36500,
     "currency": "INR",
     "duration": "7 Days / 6 Nights",
@@ -1475,10 +1714,11 @@
     "rating": 4.9,
     "reviews": 62,
     "reviewCount": 62,
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "June to October",
@@ -1553,7 +1793,21 @@
         "text": "Raw, wild and totally unplugged from the world. Chandratal lake at night was unreal.",
         "date": "2026-08-18"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+    ],
+    "alt": "Golden red desert sand dunes under dramatic sunset sky",
+    "photoCredit": {
+      "photographer": "Sajjad Zabihi",
+      "profileUrl": "https://unsplash.com/@sajjadzabihi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 118,
@@ -1569,21 +1823,22 @@
     "description": "Walk on sheets of glass-like ice over a roaring frozen river through sheer 1,000-foot rock canyons in sub-zero winter temperatures.",
     "shortDescription": "The ultimate winter ice expedition walking directly on the frozen Zanskar river.",
     "fullDescription": "The Chadar Trek is world-famous as one of the wildest winter expeditions on Earth. Trek in crampons over the frozen blanket (\"Chadar\") of the Zanskar River as it snakes between vertical mountain walls, sleep in heated cave camps, and marvel at the frozen waterfall of Nerak.",
-    "price": 62000,
-    "originalPrice": 70000,
+    "price": 1850,
+    "originalPrice": 2313,
     "discountedPrice": 62000,
     "currency": "INR",
     "duration": "9 Days / 8 Nights",
     "durationDays": 9,
     "durationNights": 8,
     "difficulty": "Challenging",
-    "rating": 5,
+    "rating": 4.6,
     "reviews": 38,
     "reviewCount": 38,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-10 travelers",
     "bestTime": "January to February",
@@ -1667,7 +1922,21 @@
         "text": "Toughest thing I have ever done, but easily the most rewarding. Unmatched thrill!",
         "date": "2026-03-02"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 119,
@@ -1684,7 +1953,7 @@
     "shortDescription": "White water Kali river rafting, canopy zip-lining, and hornbill birding in Dandeli forests.",
     "fullDescription": "Dandeli is South India’s adventure capital nestled in dense Western Ghats rainforests. Navigate 12 km of exciting white water on the Kali River, test your balancing skills on river kayaking, zip-line high above jungle streams, and safari through Dandeli Tiger Reserve.",
     "price": 11200,
-    "originalPrice": 13500,
+    "originalPrice": 14000,
     "discountedPrice": 11200,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -1694,10 +1963,11 @@
     "rating": 4.7,
     "reviews": 48,
     "reviewCount": 48,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "October to May",
@@ -1751,7 +2021,21 @@
         "text": "Rafting was thrilling and the river jacuzzi bath was pure fun for our group.",
         "date": "2026-06-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 120,
@@ -1768,7 +2052,7 @@
     "shortDescription": "The \"Valley of Shadows\" 200-foot canyon descent, three technical rappels, and starry gorge camping.",
     "fullDescription": "Sandhan Valley is India’s greatest canyon trek. Carved between 200-foot vertical basalt walls where sunlight rarely reaches the floor, this technical descent involves wading through waist-deep pools, negotiating boulders the size of houses, rappelling three massive vertical rock faces, and camping in the canyon bed.",
     "price": 7900,
-    "originalPrice": 9500,
+    "originalPrice": 9875,
     "discountedPrice": 7900,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -1778,10 +2062,11 @@
     "rating": 4.8,
     "reviews": 42,
     "reviewCount": 42,
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-14 travelers",
     "bestTime": "November to February",
@@ -1835,7 +2120,21 @@
         "text": "Rappelling down into the dark canyon was thrilling! Top-notch safety equipment and instructors.",
         "date": "2026-05-14"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 121,
@@ -1851,8 +2150,8 @@
     "description": "Embark on Gujarat’s most revered pilgrimage circuit: First Jyotirlinga at Somnath, Dwarkadhish kingdom, Nageshwar, and Porbandar.",
     "shortDescription": "First Jyotirlinga Somnath, holy Dwarkadhish darshan, and Mahatma Gandhi birth heritage.",
     "fullDescription": "Experience the deep spiritual roots of Saurashtra. Witness the evening oceanfront sound-and-light show at Somnath Temple directly overlooking the Arabian Sea, seek blessings at the supreme Jagat Mandir in Dwarka, visit Nageshwar Jyotirlinga, and stop at Kirti Mandir in Porbandar where Mahatma Gandhi was born.",
-    "price": 18999,
-    "originalPrice": 22000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 18999,
     "currency": "INR",
     "duration": "5 Days / 4 Nights",
@@ -1862,10 +2161,11 @@
     "rating": 4.9,
     "reviews": 160,
     "reviewCount": 160,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-20 travelers",
     "bestTime": "Year-round (Best Oct-Mar)",
@@ -1930,7 +2230,21 @@
         "text": "Our entire family was blessed on this yatra. Gujarati meals were pure and hotels were very clean.",
         "date": "2026-08-29"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 122,
@@ -1947,7 +2261,7 @@
     "shortDescription": "UNESCO heritage Pol walking tour, intricate Adalaj stepwell stone filigree, and Gandhi Ashram.",
     "fullDescription": "Ahmedabad is India’s first designated UNESCO World Heritage City. Join the dawn Heritage Walk through the historic pols with ornate wooden bird feeders (chabutras) and secret underground rainwater tanks, marvel at the 5-story subterranean architecture of Adalaj Stepwell, and find serenity at Mahatma Gandhi’s Sabarmati Ashram.",
     "price": 9500,
-    "originalPrice": 11000,
+    "originalPrice": 11875,
     "discountedPrice": 9500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -1957,10 +2271,11 @@
     "rating": 4.8,
     "reviews": 78,
     "reviewCount": 78,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "October to March",
@@ -2014,7 +2329,21 @@
         "text": "Staying in an authentic pol haveli was magical! The stepwell carvings are unbelievable.",
         "date": "2026-07-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 123,
@@ -2030,21 +2359,22 @@
     "description": "Celebrate the world-famous Rann Utsav on full moon night amidst illuminated white salt sands, Kutchi folk dances, and artisan crafts.",
     "shortDescription": "Full moon white desert luminescence, vibrant Kutchi Garba dances, and artisan master workshops.",
     "fullDescription": "Rann Utsav is one of the world’s most magnificent cultural spectacles. Live in royal Swiss tents at Dhordo, walk out under the ethereal glow of the full moon reflecting off miles of white salt crust, listen to soul-stirring Sufi music, and watch master artisans demonstrate Rogan art, lacquer woodcraft, and Kutchi embroidery.",
-    "price": 24500,
-    "originalPrice": 28000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 24500,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
     "difficulty": "Easy",
-    "rating": 5,
+    "rating": 4.6,
     "reviews": 180,
     "reviewCount": 180,
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "8-20 travelers",
     "bestTime": "November to February (Full Moon Dates)",
@@ -2104,7 +2434,21 @@
         "text": "The full moon night in the white desert is heavenly! Flawless arrangements by GujjuTours.",
         "date": "2026-09-04"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 124,
@@ -2120,8 +2464,8 @@
     "description": "Stand at the feet of the world’s tallest statue (182m), take a high-speed elevator to the viewing gallery, cruise the Narmada, and explore Valley of Flowers.",
     "shortDescription": "World’s tallest 182-meter statue, high-speed viewing gallery, and Narmada river cruise.",
     "fullDescription": "The Statue of Unity honors Sardar Vallabhbhai Patel with monumental majesty. Take a high-speed elevator 153 meters into the statue chest viewing gallery, cruise the sparkling waters of the Narmada River, watch the evening projection mapping laser spectacle, and stroll through the Valley of Flowers and Cactus Garden.",
-    "price": 12800,
-    "originalPrice": 15000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 12800,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2131,10 +2475,11 @@
     "rating": 4.8,
     "reviews": 104,
     "reviewCount": 104,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to March",
@@ -2188,7 +2533,21 @@
         "text": "Massive engineering wonder! Seeing the laser show on the statue gave goosebumps.",
         "date": "2026-08-05"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 125,
@@ -2205,7 +2564,7 @@
     "shortDescription": "The city of temples: 863 white marble shrines perched atop holy Shatrunjaya Hill.",
     "fullDescription": "Palitana is the holiest pilgrimage site for the Jain community and the world’s only hill with over 800 carved temples. Climb 3,500 stone steps at sunrise to reach the sanctum of Adinath, marvel at exquisite marble lattice work that rivals the finest palaces, and absorb total tranquility in the holy hill complex.",
     "price": 10500,
-    "originalPrice": 12500,
+    "originalPrice": 13125,
     "discountedPrice": 10500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2215,10 +2574,11 @@
     "rating": 4.9,
     "reviews": 86,
     "reviewCount": 86,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "October to March",
@@ -2272,7 +2632,21 @@
         "text": "Shatrunjaya yatra was conducted with absolute devotion and care. Everything was well planned.",
         "date": "2026-07-30"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 126,
@@ -2288,8 +2662,8 @@
     "description": "Witness the hypnotic evening Ganga Aarti at Dashashwamedh Ghat, take a sunrise rowboat past Manikarnika, and visit the Deer Park at Sarnath.",
     "shortDescription": "Mesmerizing Dashashwamedh Ganga Aarti, dawn rowing past ancient ghats, and Sarnath Buddhist ruins.",
     "fullDescription": "Varanasi is one of the world’s oldest continuously inhabited cities. Experience sunrise rowing on the holy Ganges as bells chime across sacred ghats, receive blessings at Kashi Vishwanath Corridor, witness the grand evening Aarti with blazing brass lamps, and explore Sarnath where Lord Buddha gave his first sermon.",
-    "price": 16500,
-    "originalPrice": 19500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 16500,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -2299,10 +2673,11 @@
     "rating": 4.9,
     "reviews": 112,
     "reviewCount": 112,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to March",
@@ -2362,7 +2737,21 @@
         "text": "Seeing the Ganga Aarti from our reserved boat was unforgettable. Very smooth VIP darshan.",
         "date": "2026-08-17"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 127,
@@ -2378,8 +2767,8 @@
     "description": "Immerse yourself in royal Rajput glory: Amber Fort and Hawa Mahal in the Pink City, Mehrangarh Fort in the Blue City, and Lake Pichola in the City of Lakes.",
     "shortDescription": "Regal Amber Fort, blue rooftops of Mehrangarh, and Lake Pichola boat palaces in Rajasthan.",
     "fullDescription": "Rajasthan is India’s kingdom of pageantry and valor. Ride up the cobblestone ramparts of Amber Fort in Jaipur, gaze out from the towering battlements of Mehrangarh Fort in Jodhpur, take an evening royal boat cruise past Lake Palace in Udaipur, and savor authentic Rajasthani Dal Baati Churma.",
-    "price": 34900,
-    "originalPrice": 39500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 34900,
     "currency": "INR",
     "duration": "7 Days / 6 Nights",
@@ -2389,10 +2778,11 @@
     "rating": 4.9,
     "reviews": 145,
     "reviewCount": 145,
-    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-18 travelers",
     "bestTime": "October to March",
@@ -2467,7 +2857,21 @@
         "text": "Royalty at every step! The Udaipur lake boat ride was heavenly and food was outstanding.",
         "date": "2026-08-22"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 128,
@@ -2483,8 +2887,8 @@
     "description": "Marvel at the towering multicolored gopurams of Meenakshi Amman Temple, the thousand-year-old Brihadisvara Temple, and Ranganathaswamy.",
     "shortDescription": "Towering sculpted temple gopurams, thousand-year-old Chola granite monoliths, and sacred Cauvery traditions.",
     "fullDescription": "Tamil Nadu’s temple architecture represents the pinnacle of Dravidian artistry. Gaze upon the 14 sculpted gopurams of Madurai Meenakshi Temple, witness the massive granite vimana of Thanjavur’s 1,000-year-old Brihadisvara UNESCO Temple, and explore Srirangam, the world’s largest functioning Hindu temple complex.",
-    "price": 21800,
-    "originalPrice": 25000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 21800,
     "currency": "INR",
     "duration": "5 Days / 4 Nights",
@@ -2494,10 +2898,11 @@
     "rating": 4.8,
     "reviews": 53,
     "reviewCount": 53,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
     ],
     "groupSize": "8-16 travelers",
     "bestTime": "October to March",
@@ -2561,7 +2966,21 @@
         "text": "The Brihadisvara temple architecture left us speechless. Excellent tour guide!",
         "date": "2026-07-06"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+    ],
+    "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
+    "photoCredit": {
+      "photographer": "Annie Spratt",
+      "profileUrl": "https://unsplash.com/@anniespratt",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 129,
@@ -2578,7 +2997,7 @@
     "shortDescription": "Illuminated Harmandir Sahib, Langar community kitchen service, and electrifying Wagah Border ceremony.",
     "fullDescription": "Amritsar radiates unmatched warmth and devotion. Walk barefoot around the sacred Sarovar reflecting the gilded Harmandir Sahib, participate in making Rotis at the monumental Langar kitchen feeding 100,000 people daily, pay solemn homage at Jallianwala Bagh, and witness the roaring Wagah Border retreat parade.",
     "price": 11900,
-    "originalPrice": 14000,
+    "originalPrice": 14875,
     "discountedPrice": 11900,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2588,10 +3007,11 @@
     "rating": 4.9,
     "reviews": 98,
     "reviewCount": 98,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "8-18 travelers",
     "bestTime": "October to March",
@@ -2645,7 +3065,21 @@
         "text": "The peace inside Golden Temple at night cannot be described in words. Wagah ceremony was energetic!",
         "date": "2026-08-15"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 130,
@@ -2661,8 +3095,8 @@
     "description": "Step into a surreal boulder landscape among ruins of the 14th-century Vijayanagara Empire: stone chariot at Vittala Temple, Virupaksha, and Queen’s Bath.",
     "shortDescription": "Monolithic stone chariot of Vittala, musical stone pillars, and UNESCO boulder empire in Hampi.",
     "fullDescription": "Hampi is an open-air museum frozen in stone. Wander amidst colossal granite boulders framing grand palaces, discover the iconic monolithic Stone Chariot at Vittala Temple, listen to the acoustic mystery of musical pillars, take a round coracle boat ride on the Tungabhadra River, and climb Matanga Hill for a magical sunset.",
-    "price": 15200,
-    "originalPrice": 17500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 15200,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -2672,10 +3106,11 @@
     "rating": 4.8,
     "reviews": 69,
     "reviewCount": 69,
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "October to March",
@@ -2734,7 +3169,21 @@
         "text": "Hampi feels like another planet. The coracle boat ride and Vittala stone chariot were extraordinary.",
         "date": "2026-06-25"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 131,
@@ -2750,8 +3199,8 @@
     "description": "Track the world’s only surviving wild Asiatic Lions in their natural dry deciduous teak kingdom on open-top 4x4 Gypsy jungle safaris.",
     "shortDescription": "World’s only wild Asiatic lions, open 4x4 Gypsy jungle safaris, and Maldhari tribal settlements.",
     "fullDescription": "Gir National Park is the proud sanctuary of the Asiatic Lion. Set out on morning and afternoon open-top 4x4 Gypsy drives deep into the rugged wilderness, watch for majestic lion prides resting under banyan trees, spot leopards, sambar deer, and mugger crocodiles along Kamleshwar Dam, and meet the forest-dwelling Maldhari pastoralists.",
-    "price": 17500,
-    "originalPrice": 20000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 17500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2761,10 +3210,11 @@
     "rating": 4.9,
     "reviews": 152,
     "reviewCount": 152,
-    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to May",
@@ -2819,7 +3269,21 @@
         "text": "Saw a pride of two lionesses and cubs just 15 feet from our jeep! An unbelievable wildlife encounter.",
         "date": "2026-08-27"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 132,
@@ -2835,8 +3299,8 @@
     "description": "Safari across golden savanna grasslands to see leaping spiral-horned Blackbuck antelopes, endangered Indian Wolves, and striped hyenas.",
     "shortDescription": "Golden savanna plains, thousands of spiral-horned blackbucks, and rare Indian wolf sightings.",
     "fullDescription": "Velavadar is Gujarat’s premier African-style savanna sanctuary. Watch herds of graceful Blackbuck antelopes sprinting at speeds over 80 km/h, witness the world’s largest roost of Montagu’s and Pallid harriers returning at sunset, and track the elusive Indian wolf across the vast golden plains of the Bhal region.",
-    "price": 13200,
-    "originalPrice": 15500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 13200,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2846,10 +3310,11 @@
     "rating": 4.8,
     "reviews": 61,
     "reviewCount": 61,
-    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-10 travelers",
     "bestTime": "October to March",
@@ -2903,7 +3368,21 @@
         "text": "Feels like the Serengeti right here in Gujarat! Thousands of blackbucks running free.",
         "date": "2026-07-16"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 133,
@@ -2919,8 +3398,8 @@
     "description": "Safari across cracked mudflats to track the last surviving population of the magnificent chestnut Indian Wild Ass (Khur) and thousands of flamingos.",
     "shortDescription": "The last wild sanctuary of the chestnut Indian Wild Ass, cracked mudflats, and greater flamingo colonies.",
     "fullDescription": "The Little Rann of Kutch is a vast saline desert landscape unlike anywhere else on the planet. Embark on custom open 4x4 safaris across cracked earth plains to observe herds of the endangered Indian Wild Ass galloping up to 50 km/h, visit traditional salt-making Agariya communities, and see Greater Flamingos turning seasonal wetlands pink.",
-    "price": 12500,
-    "originalPrice": 15000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 12500,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -2930,10 +3409,11 @@
     "rating": 4.8,
     "reviews": 74,
     "reviewCount": 74,
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to March",
@@ -2987,7 +3467,21 @@
         "text": "The wild asses running in the open cracked desert was breathtaking! Fantastic eco-resort hospitality.",
         "date": "2026-08-10"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 134,
@@ -3004,7 +3498,7 @@
     "shortDescription": "Ramsar wetland bird sanctuaries, thousands of flamingos, and rare pelican colonies.",
     "fullDescription": "Gujarat is India’s foremost avian paradise. Travel between Ramsar-designated Thol Bird Sanctuary near Ahmedabad and Khijadiya Sanctuary on the Gulf of Kutch, where freshwater marshes meet seawater mangroves. Accompanied by expert ornithologists, witness thousands of Sarus Cranes, Demoiselle Cranes, and Dalmatian Pelicans.",
     "price": 9900,
-    "originalPrice": 11800,
+    "originalPrice": 12375,
     "discountedPrice": 9900,
     "currency": "INR",
     "duration": "3 Days / 2 Nights",
@@ -3014,10 +3508,11 @@
     "rating": 4.7,
     "reviews": 45,
     "reviewCount": 45,
-    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "6-10 travelers",
     "bestTime": "November to February",
@@ -3071,7 +3566,21 @@
         "text": "A photographer dream! Captured pelicans, flamingos, and harriers from close range.",
         "date": "2026-06-12"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 135,
@@ -3088,7 +3597,7 @@
     "shortDescription": "Teak forest trails, elusive Indian leopards, sloth bears, and UNESCO medieval fortresses.",
     "fullDescription": "Located near the UNESCO World Heritage site of Champaner, Jambughoda is a lush forest reserve populated by Indian leopards, sloth bears, wild boars, and four-horned antelopes (Chousingha). Stay at a heritage jungle palace, trek along the Kada Dam reservoir trails, and discover ancient tribal shrines.",
     "price": 6800,
-    "originalPrice": 8200,
+    "originalPrice": 8500,
     "discountedPrice": 6800,
     "currency": "INR",
     "duration": "2 Days / 1 Night",
@@ -3098,10 +3607,11 @@
     "rating": 4.6,
     "reviews": 36,
     "reviewCount": 36,
-    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to March",
@@ -3150,7 +3660,21 @@
         "text": "Quiet forest close to Vadodara. The palace hospitality was royal and peaceful.",
         "date": "2026-05-28"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+    ],
+    "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
+    "photoCredit": {
+      "photographer": "Sylwia Bartyzel",
+      "profileUrl": "https://unsplash.com/@sylwiabartyzel",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 136,
@@ -3166,21 +3690,22 @@
     "description": "Track the majestic Royal Bengal Tiger in the shadow of the 10th-century Ranthambore Fort across ancient banyan trees and lake ruins.",
     "shortDescription": "Royal Bengal tigers amidst ancient ruined fortresses, lake safaris, and open Gypsy tracking.",
     "fullDescription": "Ranthambore is India’s most iconic tiger reserve. Board open 4x4 Gypsies to track Bengal tigers walking past ancient stone arches, crocodiles sunbathing on the banks of Padam Talao, sambar deer grazing in lotus ponds, and leopards lounging along ancient banyan canopies.",
-    "price": 23500,
-    "originalPrice": 27000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 23500,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "durationNights": 3,
     "difficulty": "Easy",
-    "rating": 5,
+    "rating": 4.4,
     "reviews": 170,
     "reviewCount": 170,
-    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-12 travelers",
     "bestTime": "October to June",
@@ -3240,7 +3765,21 @@
         "text": "Saw tiger T-120 walking right past our gypsy in Zone 3! Unbelievable rush. GujjuTours zone booking was spot on.",
         "date": "2026-08-19"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 137,
@@ -3256,8 +3795,8 @@
     "description": "Explore India’s oldest national park on the banks of River Ramganga: Bengal tigers, Asian wild elephant herds, and Gharial crocodiles.",
     "shortDescription": "India’s oldest national park, wild Asian elephant herds, and luxury eco-lodges along the Kosi River.",
     "fullDescription": "Established in 1936, Jim Corbett National Park is celebrated for its towering Sal forests, picturesque river valleys, and thriving predator population. Journey through Bijrani and Dhikala zones in 4x4 jeeps, watch Asian elephant herds bathing in the Ramganga, and unwind at a riverside eco-lodge along the clear waters of River Kosi.",
-    "price": 21000,
-    "originalPrice": 24500,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 21000,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -3267,10 +3806,11 @@
     "rating": 4.8,
     "reviews": 89,
     "reviewCount": 89,
-    "image": "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "November to May",
@@ -3329,7 +3869,21 @@
         "text": "Saw a herd of 20 wild elephants crossing the river right in front of us! Magical park.",
         "date": "2026-07-01"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+    ],
+    "alt": "Endless desert dunes with 4x4 tracks during golden hour",
+    "photoCredit": {
+      "photographer": "Ferdinand Stöhr",
+      "profileUrl": "https://unsplash.com/@fellowferdi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 138,
@@ -3345,8 +3899,8 @@
     "description": "Encounter the prehistoric Great Indian One-Horned Rhinoceros on dawn elephant safaris through mist-shrouded tall elephant grass in Kaziranga.",
     "shortDescription": "Prehistoric one-horned rhinos, dawn elephant-back mist safaris, and Brahmaputra river dolphins.",
     "fullDescription": "Kaziranga National Park is a UNESCO World Heritage biodiversity hotspot harboring two-thirds of the world’s one-horned rhinos. Ride atop gentle elephants at sunrise through sea-like tall grasslands, board 4x4 jeeps across Central and Western ranges to spot wild water buffaloes, swamp deer, and Bengal floricans, and cruise the Brahmaputra.",
-    "price": 29800,
-    "originalPrice": 34000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 29800,
     "currency": "INR",
     "duration": "5 Days / 4 Nights",
@@ -3356,10 +3910,11 @@
     "rating": 4.9,
     "reviews": 92,
     "reviewCount": 92,
-    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "November to April",
@@ -3424,7 +3979,21 @@
         "text": "Riding through the morning mist and seeing rhinos grazing just yards away was a dream come true!",
         "date": "2026-08-08"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+    ],
+    "alt": "Camels trekking across rippling sand ridges at dusk",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 139,
@@ -3440,8 +4009,8 @@
     "description": "Track the world’s highest density of Royal Bengal Tigers among ancient ruins, bamboo thickets, and towering Sal forests in Bandhavgarh.",
     "shortDescription": "World’s highest tiger density, ancient Bandhavgarh fort cliff, and expert photo-safaris.",
     "fullDescription": "Bandhavgarh boasts the highest concentration of wild tigers in India. Surrounded by steep cliffs of the Vindhya range with the legendary 2,000-year-old Bandhavgarh Fort and reclining Vishnu statue at its center, this reserve offers exceptional photographic opportunities of predator hunts in Tala and Magdhi zones.",
-    "price": 26500,
-    "originalPrice": 31000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 26500,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -3451,10 +4020,11 @@
     "rating": 4.9,
     "reviews": 79,
     "reviewCount": 79,
-    "image": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
     ],
     "groupSize": "6-10 travelers",
     "bestTime": "October to June",
@@ -3513,7 +4083,21 @@
         "text": "Saw three different tigers in two days! Tala zone was mindblowing. High quality naturalist guide.",
         "date": "2026-07-24"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+    ],
+    "alt": "Gateway of India monument overlooking Mumbai harbor",
+    "photoCredit": {
+      "photographer": "Hardik Joshi",
+      "profileUrl": "https://unsplash.com/@hardikjoshi",
+      "source": "Unsplash"
+    }
   },
   {
     "id": 140,
@@ -3529,8 +4113,8 @@
     "description": "Cruise the mist-covered artificial lake in Periyar Tiger Reserve to view wild elephant herds swimming, gaur bisons, and fragrant spice plantations.",
     "shortDescription": "Wild elephant herds along Periyar lake shores, bamboo rafting, and Cardamom Hills spice estates.",
     "fullDescription": "Periyar Tiger Reserve in Thekkady is a pristine highland jungle set in Kerala’s Cardamom Hills. Cruise on the calm waters of Periyar Lake as wild elephant families come down to swim and graze along the banks, trek with armed tribal forest guards through thick evergreen canopies, and smell fresh vanilla, pepper, and cardamom on plantation estates.",
-    "price": 19800,
-    "originalPrice": 23000,
+    "price": 4850,
+    "originalPrice": 6063,
     "discountedPrice": 19800,
     "currency": "INR",
     "duration": "4 Days / 3 Nights",
@@ -3540,10 +4124,11 @@
     "rating": 4.8,
     "reviews": 88,
     "reviewCount": 88,
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
     "gallery": [
-      "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
     ],
     "groupSize": "6-14 travelers",
     "bestTime": "September to April",
@@ -3602,6 +4187,20 @@
         "text": "The bamboo rafting was peaceful and seeing elephant calves drinking water was lovely.",
         "date": "2026-07-29"
       }
-    ]
+    ],
+    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+    ],
+    "alt": "Crystal clear turquoise ocean waves gently lapping shore",
+    "photoCredit": {
+      "photographer": "Sean Oulashin",
+      "profileUrl": "https://unsplash.com/@oulashin",
+      "source": "Unsplash"
+    }
   }
 ]

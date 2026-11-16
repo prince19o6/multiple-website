@@ -15,6 +15,8 @@ import {
   ScrollView,
   ActivityIndicator,
   Alert,
+  Platform,
+  KeyboardAvoidingView,
 } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -72,12 +74,16 @@ export default function ResetPasswordScreen() {
   };
 
   return (
-    <ScrollView
-      style={[styles.container, { backgroundColor: colors.background }]}
-      contentContainerStyle={[styles.content, { paddingTop: insets.top + SPACING.lg, paddingBottom: insets.bottom + SPACING.lg }]}
-      keyboardShouldPersistTaps="handled"
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      style={{ flex: 1, backgroundColor: colors.background }}
     >
-      <TouchableOpacity
+      <ScrollView
+        style={[styles.container, { backgroundColor: colors.background }]}
+        contentContainerStyle={[styles.content, { paddingTop: insets.top + SPACING.lg, paddingBottom: insets.bottom + SPACING.lg }]}
+        keyboardShouldPersistTaps="handled"
+      >
+      <TouchableOpacity testID="btn-navigate" accessibilityLabel="Navigate"
         style={styles.backButton}
         onPress={() => router.back()}
         activeOpacity={0.7}
@@ -124,7 +130,7 @@ export default function ResetPasswordScreen() {
               secureTextEntry={!showPassword}
               autoCapitalize="none"
             />
-            <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
+            <TouchableOpacity testID="btn-reset-password-127" accessibilityLabel="reset-password action" onPress={() => setShowPassword(!showPassword)} style={styles.eyeIcon}>
               <Ionicons name={showPassword ? 'eye-off-outline' : 'eye-outline'} size={20} color={colors.mutedText} />
             </TouchableOpacity>
           </View>
@@ -146,7 +152,7 @@ export default function ResetPasswordScreen() {
           </View>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-save-new-password" accessibilityLabel="Save New Password"
           style={[styles.submitButton, { backgroundColor: colors.primary }]}
           onPress={handleReset}
           disabled={loading}
@@ -160,7 +166,8 @@ export default function ResetPasswordScreen() {
         </TouchableOpacity>
       </View>
     </ScrollView>
-  );
+  </KeyboardAvoidingView>
+);
 }
 
 const styles = StyleSheet.create({

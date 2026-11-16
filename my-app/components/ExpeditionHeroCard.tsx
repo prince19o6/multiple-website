@@ -40,7 +40,7 @@ export function ExpeditionHeroCard({
           <Ionicons name="sparkles" size={14} color="#FFD700" />
           <Text style={styles.badgeText}>{stats.year} TRAVEL WRAPPED</Text>
         </View>
-        <TouchableOpacity style={styles.certButton} onPress={onOpenCertificate} activeOpacity={0.8}>
+        <TouchableOpacity testID="btn-ribbon-outline" accessibilityLabel="ribbon outline" style={styles.certButton} onPress={onOpenCertificate} activeOpacity={0.8}>
           <Ionicons name="ribbon-outline" size={16} color="#FFD700" />
           <Text style={styles.certButtonText}>Honorary Diploma</Text>
         </TouchableOpacity>
@@ -87,12 +87,12 @@ export function ExpeditionHeroCard({
 
       {/* Action CTA Row */}
       <View style={styles.actionRow}>
-        <TouchableOpacity style={styles.playReelButton} onPress={onPlayStories} activeOpacity={0.85}>
+        <TouchableOpacity testID="btn-play-circle" accessibilityLabel="play circle" style={styles.playReelButton} onPress={onPlayStories} activeOpacity={0.85}>
           <Ionicons name="play-circle" size={20} color="#0B3B60" />
           <Text style={styles.playReelText}>Play Wrapped Story Reel</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.reviewButton} onPress={onOpenReview} activeOpacity={0.85}>
+        <TouchableOpacity testID="btn-star" accessibilityLabel="star" style={styles.reviewButton} onPress={onOpenReview} activeOpacity={0.85}>
           <Ionicons name="star" size={16} color="#FFD700" />
           <Text style={styles.reviewButtonText}>+250 Pts Review</Text>
         </TouchableOpacity>

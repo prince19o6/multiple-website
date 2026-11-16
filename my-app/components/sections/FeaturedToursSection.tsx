@@ -59,11 +59,12 @@ export default function FeaturedToursSection({ config, data, onNavigate }: Secti
       </View>
 
       <View style={styles.list}>
-        {visibleTours.map((tour) => {
+        {visibleTours.map((tour, index) => {
+          const cardKey = `fts_${tour.id || tour.slug || index}_${index}`;
           if (useAdventureCard) {
             return (
               <AdventureTourCard
-                key={tour.id}
+                key={cardKey}
                 {...tour}
                 tourCardConfig={tourCard}
                 theme={theme}
@@ -76,7 +77,7 @@ export default function FeaturedToursSection({ config, data, onNavigate }: Secti
           if (useLuxuryCard) {
             return (
               <LuxuryTourCard
-                key={tour.id}
+                key={cardKey}
                 {...tour}
                 tourCardConfig={tourCard}
                 theme={theme}
@@ -89,7 +90,7 @@ export default function FeaturedToursSection({ config, data, onNavigate }: Secti
 
           return (
             <TourCard
-              key={tour.id}
+              key={cardKey}
               {...tour}
               onBook={() => handleTourPress(tour)}
               onPress={() => handleTourPress(tour)}
@@ -99,7 +100,7 @@ export default function FeaturedToursSection({ config, data, onNavigate }: Secti
       </View>
 
       {featuredToursConfig.showViewAll !== false && (
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-featuredtourssection-102" accessibilityLabel="featuredtourssection action"
           style={[styles.viewAllBtn, { backgroundColor: colors.primary }]}
           onPress={() => onNavigate?.('/explore')}
           activeOpacity={0.85}

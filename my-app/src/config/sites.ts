@@ -55,8 +55,8 @@ export const SITES: readonly SiteDefinition[] = [
     ],
     fallbackAccentColor: '#2563eb',
     currencyDefault: {
-      code: 'USD',
-      symbol: '$',
+      code: 'INR',
+      symbol: '₹',
     },
   },
   {

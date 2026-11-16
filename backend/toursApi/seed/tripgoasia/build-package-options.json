@@ -1,0 +1,3122 @@
+[
+  {
+    "id": 1000,
+    "destinationNumericId": 1000,
+    "destinationId": "bpo_tripgoasia_1000",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "bali-tropical-package",
+    "destinationName": "Bali Tropical Island Escape",
+    "country": "Indonesia",
+    "flag": "🇮🇩",
+    "tagline": "Pristine Beaches, Cliff Temples & Ubud Rainforest Sanctuary",
+    "badge": "Top Seller Asia",
+    "overview": "Tailor every detail of your vacation to Bali Tropical Island Escape. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 366,
+    "startingPrice": 480,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 420,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 966,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Bali Tropical Island Escape Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 158,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Bali Tropical Island Escape Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 220,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Bali Tropical Island Escape Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 407,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-1-1",
+        "name": "Ubud Rice Terrace, Waterfall & Jungle Swing Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Bali Tropical Island Escape with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 35,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-2",
+        "name": "Nusa Penida Island Speedboat Day Cruise & Snorkeling",
+        "duration": "Full Day",
+        "description": "Experience the best of Bali Tropical Island Escape with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-3",
+        "name": "Mount Batur Sunrise Hike & Volcanic Hot Springs",
+        "duration": "7 Hours",
+        "description": "Experience the best of Bali Tropical Island Escape with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 45,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-1-4",
+        "name": "Uluwatu Sunset Temple & Fire Dance Experience",
+        "duration": "4 Hours",
+        "description": "Experience the best of Bali Tropical Island Escape with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 30,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-5",
+        "name": "Seminyak Coastal Catamaran Sunset Party Cruise",
+        "duration": "3 Hours",
+        "description": "Experience the best of Bali Tropical Island Escape with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 55,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-1-1",
+        "name": "Private AC Airport & Island Sedan Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 50,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-1-2",
+        "name": "Private Family Minivan with Driver",
+        "vehicleClass": "Van (6 Pax)",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 85,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-1-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-1-express",
+        "name": "Indonesia 30-Day Electronic Visa on Arrival (e-VOA)",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 45,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-1-standard",
+        "name": "Bali Tropical Island Escape Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 38,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-1-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 38,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 72,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 480,
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "alt": "Traditional luxury houseboat cruising on tranquil Kerala backwaters",
+    "photoCredit": {
+      "photographer": "Kyran Low",
+      "profileUrl": "https://unsplash.com/@kyranlow",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1001,
+    "destinationNumericId": 1001,
+    "destinationId": "bpo_tripgoasia_1001",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "phuket-krabi-package",
+    "destinationName": "Phuket & Krabi Coastal Getaway",
+    "country": "Thailand",
+    "flag": "🇹🇭",
+    "tagline": "Emerald Waters, Limestone Cliffs & Vibrant Island Nightlife",
+    "badge": "Beach Paradise",
+    "overview": "Tailor every detail of your vacation to Phuket & Krabi Coastal Getaway. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 540,
+    "startingPrice": 420,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 380,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 874,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Phuket & Krabi Coastal Getaway Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 137,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Phuket & Krabi Coastal Getaway Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 190,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Phuket & Krabi Coastal Getaway Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 352,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-2-1",
+        "name": "Phi Phi Islands & Maya Bay VIP Speedboat Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Phuket & Krabi Coastal Getaway with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 60,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-2",
+        "name": "James Bond Island Sea Kayaking in Phang Nga Bay",
+        "duration": "Full Day",
+        "description": "Experience the best of Phuket & Krabi Coastal Getaway with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 55,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-3",
+        "name": "Krabi 4-Islands Sunset Tour with Bio-Luminescent Swim",
+        "duration": "5 Hours",
+        "description": "Experience the best of Phuket & Krabi Coastal Getaway with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 40,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-4",
+        "name": "Phuket Big Buddha & Old Town Cultural Trail",
+        "duration": "4 Hours",
+        "description": "Experience the best of Phuket & Krabi Coastal Getaway with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 28,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-2-5",
+        "name": "Carnival Magic & Cultural Evening Show Ticket",
+        "duration": "4 Hours",
+        "description": "Experience the best of Phuket & Krabi Coastal Getaway with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-2-1",
+        "name": "Private Airport Return & City Sedan Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 45,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-2-2",
+        "name": "Private VIP Minibus Transfer",
+        "vehicleClass": "Minibus (8 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 75,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-2-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-2-express",
+        "name": "Thailand Tourist eVisa Fast Track Processing",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 35,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-2-standard",
+        "name": "Phuket & Krabi Coastal Getaway Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 28,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-2-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 34,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 63,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 420,
+    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "alt": "Luxury 5-star resort with infinity swimming pool and palm cabanas",
+    "photoCredit": {
+      "photographer": "Humphrey Muleba",
+      "profileUrl": "https://unsplash.com/@humphreymuleba",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1002,
+    "destinationNumericId": 1002,
+    "destinationId": "bpo_tripgoasia_1002",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "singapore-urban-package",
+    "destinationName": "Singapore Urban Wonder",
+    "country": "Singapore",
+    "flag": "🇸🇬",
+    "tagline": "Futuristic Architecture, Theme Parks & World-Class Dining",
+    "badge": "Family Favorite",
+    "overview": "Tailor every detail of your vacation to Singapore Urban Wonder. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 460,
+    "startingPrice": 580,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 410,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 943,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Singapore Urban Wonder Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 209,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Singapore Urban Wonder Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 290,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Singapore Urban Wonder Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 537,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-3-1",
+        "name": "Universal Studios Singapore All-Access Theme Park Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Singapore Urban Wonder with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 75,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-2",
+        "name": "Gardens by the Bay Supertree & Cloud Forest Dome",
+        "duration": "3 Hours",
+        "description": "Experience the best of Singapore Urban Wonder with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 32,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-3",
+        "name": "Marina Bay Sands SkyPark Observation Deck & Drinks",
+        "duration": "2 Hours",
+        "description": "Experience the best of Singapore Urban Wonder with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 28,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-4",
+        "name": "Mandai Wildlife Reserve Night Safari with Tram",
+        "duration": "4 Hours",
+        "description": "Experience the best of Singapore Urban Wonder with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 48,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-3-5",
+        "name": "Sentosa Island Hopper Cable Car & Aquarium Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Singapore Urban Wonder with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 56,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-3-1",
+        "name": "Changi Airport Private Sedan Return Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 65,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-3-2",
+        "name": "Changi Luxury VIP Van Transfer",
+        "vehicleClass": "Van (7 Pax)",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 110,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-3-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-3-express",
+        "name": "Singapore Electronic Travel Authorisation & eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 40,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-3-standard",
+        "name": "Singapore Urban Wonder Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 32,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-3-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 46,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 87,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 580,
+    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+    ],
+    "alt": "Grand luxury palace hotel courtyard and illuminated architecture",
+    "photoCredit": {
+      "photographer": "Manuel Moreno",
+      "profileUrl": "https://unsplash.com/@manuelmoreno",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1003,
+    "destinationNumericId": 1003,
+    "destinationId": "bpo_tripgoasia_1003",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "tokyo-kyoto-package",
+    "destinationName": "Tokyo & Kyoto Heritage",
+    "country": "Japan",
+    "flag": "🇯🇵",
+    "tagline": "High-Tech Metropolises, Shinkansen Bullet Trains & Ancient Shrines",
+    "badge": "Cultural Masterpiece",
+    "overview": "Tailor every detail of your vacation to Tokyo & Kyoto Heritage. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 233,
+    "startingPrice": 890,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 680,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 1564,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Tokyo & Kyoto Heritage Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 302,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Tokyo & Kyoto Heritage Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 420,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Tokyo & Kyoto Heritage Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 777,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-4-1",
+        "name": "Tokyo Shibuya Sky & TeamLab Planets Immersive Pass",
+        "duration": "Half Day",
+        "description": "Experience the best of Tokyo & Kyoto Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 52,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-2",
+        "name": "Mount Fuji, Lake Kawaguchi & Oshino Hakkai Day Trip",
+        "duration": "Full Day",
+        "description": "Experience the best of Tokyo & Kyoto Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 95,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-3",
+        "name": "Kyoto Fushimi Inari Shrine & Arashiyama Bamboo Grove",
+        "duration": "Full Day",
+        "description": "Experience the best of Tokyo & Kyoto Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 70,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-4",
+        "name": "Traditional Kimono Tea Ceremony & Gion Walking Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of Tokyo & Kyoto Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 45,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-4-5",
+        "name": "7-Day Japan Rail Pass Unlimited Shinkansen Access",
+        "duration": "Multi-Day",
+        "description": "Experience the best of Tokyo & Kyoto Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 310,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-4-1",
+        "name": "Narita / Haneda Private Chauffeur Airport Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 140,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-4-2",
+        "name": "Tokyo & Kyoto Station Luggage Forwarding & Transfer",
+        "vehicleClass": "Service",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 80,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-4-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-4-express",
+        "name": "Japan Single/Double Entry Tourist eVisa Screening",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 55,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-4-standard",
+        "name": "Tokyo & Kyoto Heritage Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 42,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-4-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 71,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 134,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 890,
+    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+    ],
+    "alt": "Beachfront resort private balcony overlooking the ocean",
+    "photoCredit": {
+      "photographer": "Edvin Johansson",
+      "profileUrl": "https://unsplash.com/@edvinjohansson",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1004,
+    "destinationNumericId": 1004,
+    "destinationId": "bpo_tripgoasia_1004",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "sydney-melbourne-package",
+    "destinationName": "Sydney & Melbourne Highlights",
+    "country": "Australia",
+    "flag": "🇦🇺",
+    "tagline": "Opera House Harbor Cruises, Great Ocean Road & Wildlife",
+    "badge": "Southern Explorer",
+    "overview": "Tailor every detail of your vacation to Sydney & Melbourne Highlights. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 300,
+    "startingPrice": 980,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 740,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 1702,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Sydney & Melbourne Highlights Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 331,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Sydney & Melbourne Highlights Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 460,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Sydney & Melbourne Highlights Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 851,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-5-1",
+        "name": "Sydney Opera House Guided Tour & Harbor Bridge Climb",
+        "duration": "Half Day",
+        "description": "Experience the best of Sydney & Melbourne Highlights with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 115,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-2",
+        "name": "Blue Mountains Scenic World & Wildlife Sanctuary Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Sydney & Melbourne Highlights with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 85,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-3",
+        "name": "Melbourne Great Ocean Road & 12 Apostles Day Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Sydney & Melbourne Highlights with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 90,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-4",
+        "name": "Phillip Island Penguin Parade Sunset Viewing Deck",
+        "duration": "5 Hours",
+        "description": "Experience the best of Sydney & Melbourne Highlights with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-5-5",
+        "name": "Yarra Valley Wine & Gourmet Farmhouse Tasting",
+        "duration": "Full Day",
+        "description": "Experience the best of Sydney & Melbourne Highlights with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 80,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-5-1",
+        "name": "Sydney Kingsford Smith Airport Private Sedan",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 75,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-5-2",
+        "name": "Melbourne Tullamarine Airport Private Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 70,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-5-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-5-express",
+        "name": "Australia Subclass 601 / 651 Tourist eVisitor",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-5-standard",
+        "name": "Sydney & Melbourne Highlights Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 50,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-5-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 78,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 147,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 980,
+    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+    ],
+    "alt": "Executive luxury hotel master bedroom suite with king bed",
+    "photoCredit": {
+      "photographer": "RArchitecture",
+      "profileUrl": "https://unsplash.com/@rarchitecture",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1005,
+    "destinationNumericId": 1005,
+    "destinationId": "bpo_tripgoasia_1005",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "dubai-abudhabi-package",
+    "destinationName": "Dubai & Abu Dhabi Oasis",
+    "country": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "tagline": "Gilded Architecture, Desert Safaris & Sheikh Zayed Grand Mosque",
+    "badge": "Luxury Desert",
+    "overview": "Tailor every detail of your vacation to Dubai & Abu Dhabi Oasis. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 471,
+    "startingPrice": 540,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 460,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 1058,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Dubai & Abu Dhabi Oasis Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 187,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Dubai & Abu Dhabi Oasis Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 260,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Dubai & Abu Dhabi Oasis Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 481,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-6-1",
+        "name": "Burj Khalifa 124th Floor + Dubai Aquarium Combo Pass",
+        "duration": "Half Day",
+        "description": "Experience the best of Dubai & Abu Dhabi Oasis with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 68,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-2",
+        "name": "Premium Red Dunes Desert Safari with BBQ Dinner",
+        "duration": "6 Hours",
+        "description": "Experience the best of Dubai & Abu Dhabi Oasis with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 42,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-3",
+        "name": "Abu Dhabi Grand Mosque & Louvre Museum Day Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Dubai & Abu Dhabi Oasis with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 58,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-4",
+        "name": "Dubai Marina Luxury Sunset Yacht Cruise with Snacks",
+        "duration": "2 Hours",
+        "description": "Experience the best of Dubai & Abu Dhabi Oasis with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 38,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-6-5",
+        "name": "Ferrari World & Warner Bros World Abu Dhabi Dual Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Dubai & Abu Dhabi Oasis with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 95,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-6-1",
+        "name": "Dubai DXB Airport Private Sedan Return Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 55,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-6-2",
+        "name": "Intercity Dubai to Abu Dhabi Private Transfer Car",
+        "vehicleClass": "Sedan",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 90,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-6-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-6-express",
+        "name": "UAE 30-Day Express Tourist eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 85,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-6-standard",
+        "name": "Dubai & Abu Dhabi Oasis Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 70,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-6-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 43,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 81,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 540,
+    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+    ],
+    "alt": "Tropical pool villa surrounded by private lush gardens",
+    "photoCredit": {
+      "photographer": "Sasha Kaunas",
+      "profileUrl": "https://unsplash.com/@sashakaunas",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1006,
+    "destinationNumericId": 1006,
+    "destinationId": "bpo_tripgoasia_1006",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "kualalumpur-langkawi-package",
+    "destinationName": "Kuala Lumpur & Langkawi",
+    "country": "Malaysia",
+    "flag": "🇲🇾",
+    "tagline": "Petronas Twin Towers, Batu Caves & Tropical Geoforest Island",
+    "badge": "Best Value",
+    "overview": "Tailor every detail of your vacation to Kuala Lumpur & Langkawi. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 334,
+    "startingPrice": 390,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 340,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 782,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Kuala Lumpur & Langkawi Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 130,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Kuala Lumpur & Langkawi Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 180,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Kuala Lumpur & Langkawi Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 333,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-7-1",
+        "name": "Petronas Twin Towers Observation Deck & Batu Caves Tour",
+        "duration": "Half Day",
+        "description": "Experience the best of Kuala Lumpur & Langkawi with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 35,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-2",
+        "name": "Langkawi SkyCab Cable Car & SkyBridge Admission Ticket",
+        "duration": "3 Hours",
+        "description": "Experience the best of Kuala Lumpur & Langkawi with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 28,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-3",
+        "name": "Kilim Geoforest Park Mangrove Kayak & Eagle Feeding",
+        "duration": "5 Hours",
+        "description": "Experience the best of Kuala Lumpur & Langkawi with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 42,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-4",
+        "name": "Sunway Lagoon Theme Park Unlimited Multi-Park Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Kuala Lumpur & Langkawi with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 48,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-7-5",
+        "name": "Genting Highlands Cable Car & Indoor Theme Park Trip",
+        "duration": "Full Day",
+        "description": "Experience the best of Kuala Lumpur & Langkawi with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 38,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-7-1",
+        "name": "KLIA Airport Private Sedan Transfer to Hotel",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 40,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-7-2",
+        "name": "Langkawi Airport & Ferry Terminal Return Transfers",
+        "vehicleClass": "Van (6 Pax)",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 30,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-7-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-7-express",
+        "name": "Malaysia Digital Arrival Card (MDAC) & eVisa Support",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 25,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-7-standard",
+        "name": "Kuala Lumpur & Langkawi Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 18,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-7-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 31,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 59,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 390,
+    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+    ],
+    "alt": "Dubai luxury marina holiday vacation experience",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1007,
+    "destinationNumericId": 1007,
+    "destinationId": "bpo_tripgoasia_1007",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "vietnam-heritage-package",
+    "destinationName": "Vietnam Golden Bridge & Heritage",
+    "country": "Vietnam",
+    "flag": "🇻🇳",
+    "tagline": "Sun World Ba Na Hills, Halong Bay & Hoi An Lantern Town",
+    "badge": "Top Trending",
+    "overview": "Tailor every detail of your vacation to Vietnam Golden Bridge & Heritage. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 441,
+    "startingPrice": 460,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 390,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 897,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Vietnam Golden Bridge & Heritage Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 151,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Vietnam Golden Bridge & Heritage Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 210,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Vietnam Golden Bridge & Heritage Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 389,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-8-1",
+        "name": "Halong Bay UNESCO World Heritage Day Cruise & Kayaking",
+        "duration": "Full Day",
+        "description": "Experience the best of Vietnam Golden Bridge & Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-2",
+        "name": "Ba Na Hills & Golden Bridge Giant Hands Cable Car Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Vietnam Golden Bridge & Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 52,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-3",
+        "name": "Hoi An Ancient Town Twilight Walk & Lantern Boat Ride",
+        "duration": "4 Hours",
+        "description": "Experience the best of Vietnam Golden Bridge & Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 30,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-4",
+        "name": "Cu Chi Tunnels & Mekong Delta River Boat Discovery",
+        "duration": "Full Day",
+        "description": "Experience the best of Vietnam Golden Bridge & Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 44,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-8-5",
+        "name": "Hanoi Cyclo Historic Quarter & Gourmet Street Food Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of Vietnam Golden Bridge & Heritage with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 25,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-8-1",
+        "name": "Private AC Airport Return Transfers (Hanoi / Da Nang)",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 45,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-8-2",
+        "name": "Private Minivan for Central Vietnam Excursions",
+        "vehicleClass": "Van (6 Pax)",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 78,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-8-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-8-express",
+        "name": "Vietnam 30-Day Single Entry Tourist eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 45,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-8-standard",
+        "name": "Vietnam Golden Bridge & Heritage Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 35,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-8-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 37,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 69,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 460,
+    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+    ],
+    "alt": "Tropical Bali vacation villa with palm trees and infinity pool",
+    "photoCredit": {
+      "photographer": "Oliver Sjöström",
+      "profileUrl": "https://unsplash.com/@ollivves",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1008,
+    "destinationNumericId": 1008,
+    "destinationId": "bpo_tripgoasia_1008",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "seoul-jeju-package",
+    "destinationName": "Seoul & Jeju Island Magic",
+    "country": "South Korea",
+    "flag": "🇰🇷",
+    "tagline": "K-Culture, Gyeongbokgung Palace, Mount Hallasan & Lava Tubes",
+    "badge": "K-Trend Choice",
+    "overview": "Tailor every detail of your vacation to Seoul & Jeju Island Magic. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 603,
+    "startingPrice": 780,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 590,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 1357,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Seoul & Jeju Island Magic Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 259,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Seoul & Jeju Island Magic Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 360,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Seoul & Jeju Island Magic Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 666,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-9-1",
+        "name": "Gyeongbokgung Palace Royal Guard & Hanbok Rental Tour",
+        "duration": "4 Hours",
+        "description": "Experience the best of Seoul & Jeju Island Magic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 38,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-2",
+        "name": "Nami Island & Petite France Scenic Day Excursion",
+        "duration": "Full Day",
+        "description": "Experience the best of Seoul & Jeju Island Magic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 65,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-3",
+        "name": "Jeju Island Seongsan Ilchulbong & Manjanggul Lava Cave",
+        "duration": "Full Day",
+        "description": "Experience the best of Seoul & Jeju Island Magic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 72,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-4",
+        "name": "Lotte World Adventure Indoor/Outdoor Theme Park Ticket",
+        "duration": "Full Day",
+        "description": "Experience the best of Seoul & Jeju Island Magic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 46,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-9-5",
+        "name": "DMZ Korean Demilitarized Zone Educational Morning Tour",
+        "duration": "5 Hours",
+        "description": "Experience the best of Seoul & Jeju Island Magic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 58,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-9-1",
+        "name": "Incheon Airport AREX Express Train & Private Sedan Car",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 55,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-9-2",
+        "name": "Jeju Airport Dedicated Island Chauffeur Car",
+        "vehicleClass": "SUV (4 Pax)",
+        "capacity": "Up to 6 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 80,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-9-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-9-express",
+        "name": "South Korea K-ETA Electronic Travel Authorization",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 35,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-9-standard",
+        "name": "Seoul & Jeju Island Magic Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 28,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-9-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 62,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 117,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 780,
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "alt": "Traditional luxury houseboat cruising on tranquil Kerala backwaters",
+    "photoCredit": {
+      "photographer": "Kyran Low",
+      "profileUrl": "https://unsplash.com/@kyranlow",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1009,
+    "destinationNumericId": 1009,
+    "destinationId": "bpo_tripgoasia_1009",
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "destinationSlug": "newzealand-adventure-package",
+    "destinationName": "Auckland & Queenstown Adventure",
+    "country": "New Zealand",
+    "flag": "🇳🇿",
+    "tagline": "Milford Sound Fjords, Hobbiton Movie Set & Alpine Thrills",
+    "badge": "Ultimate Adventure",
+    "overview": "Tailor every detail of your vacation to Auckland & Queenstown Adventure. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 444,
+    "startingPrice": 1150,
+    "netStartingPrice": null,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 890,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 2047,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Auckland & Queenstown Adventure Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 389,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Auckland & Queenstown Adventure Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 540,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Auckland & Queenstown Adventure Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 999,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-10-1",
+        "name": "Milford Sound Scenic Nature Cruise & Glass-Roof Coach",
+        "duration": "Full Day",
+        "description": "Experience the best of Auckland & Queenstown Adventure with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 135,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-2",
+        "name": "Hobbiton Movie Set & Waitomo Glowworm Caves Combo",
+        "duration": "Full Day",
+        "description": "Experience the best of Auckland & Queenstown Adventure with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 160,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-3",
+        "name": "Queenstown Shotover Jet & Skyline Gondola Experience",
+        "duration": "4 Hours",
+        "description": "Experience the best of Auckland & Queenstown Adventure with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 88,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-4",
+        "name": "Rotorua Te Puia Geothermal Valley & Maori Cultural Feast",
+        "duration": "5 Hours",
+        "description": "Experience the best of Auckland & Queenstown Adventure with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 78,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-10-5",
+        "name": "Mount Cook National Park Glacier Valley Guided Hike",
+        "duration": "Full Day",
+        "description": "Experience the best of Auckland & Queenstown Adventure with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 95,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-10-1",
+        "name": "Queenstown Airport Private AC Chauffeur Car",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 80,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-10-2",
+        "name": "Auckland Airport Return Executive Van Transfer",
+        "vehicleClass": "Van (6 Pax)",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 95,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-10-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": null,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-10-express",
+        "name": "New Zealand NZeTA Electronic Travel Authority",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 55,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-10-standard",
+        "name": "Auckland & Queenstown Adventure Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 45,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-10-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 92,
+        "netPricePerPerson": null
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 173,
+        "netPricePerPerson": null
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 1150,
+    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "alt": "Luxury 5-star resort with infinity swimming pool and palm cabanas",
+    "photoCredit": {
+      "photographer": "Humphrey Muleba",
+      "profileUrl": "https://unsplash.com/@humphreymuleba",
+      "source": "Unsplash"
+    }
+  }
+]

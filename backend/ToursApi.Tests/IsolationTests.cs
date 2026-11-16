@@ -126,16 +126,20 @@ public class IsolationTests
         var mockTourService = new Mock<ITourService>();
         var mockBookingService = new Mock<IBookingService>();
         var mockUserRepo = new Mock<IUserRepository>();
+        var mockDatabaseProvider = new Mock<IMongoDatabaseProvider>();
         var mockConfiguration = new Mock<IConfiguration>();
         var mockEnvironment = new Mock<IHostEnvironment>();
+        var mockLogger = new Mock<Microsoft.Extensions.Logging.ILogger<AdminController>>();
 
         var adminControllerB = new AdminController(
             mockTourService.Object,
             mockBookingService.Object,
             mockUserRepo.Object,
             siteBContext,
+            mockDatabaseProvider.Object,
             mockConfiguration.Object,
-            mockEnvironment.Object
+            mockEnvironment.Object,
+            mockLogger.Object
         );
 
         // Simulate an Admin user whose token claims websiteId = "gujjutours" (Site A)

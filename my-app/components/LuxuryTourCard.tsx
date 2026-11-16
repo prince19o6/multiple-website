@@ -12,14 +12,16 @@
  * - Theme-aware error state with [DEBUG] warning on load failure.
  */
 
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { useColors } from '@/store/ThemeContext';
 import { useCurrency } from '@/context/CurrencyContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
-import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH } from '@/lib/imageUtils';
+import { resolveImageUrl, getActualImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH } from '@/lib/imageUtils';
+import * as Haptics from 'expo-haptics';
+import { useWishlist } from '@/context/WishlistContext';
 
 export interface LuxuryTourCardProps {
   id?: number | string;
@@ -32,6 +34,8 @@ export interface LuxuryTourCardProps {
   location?: string;
   onBook: () => void;
   onPress?: () => void;
+  isWishlisted?: boolean;
+  onToggleWishlist?: () => void;
   tourCardConfig?: {
     bookButtonText?: string;
     pricePrefix?: string;
@@ -60,13 +64,55 @@ export default function LuxuryTourCard({
   location,
   onBook,
   onPress,
+  isWishlisted,
+  onToggleWishlist,
   tourCardConfig = {},
   theme = {},
   headingFontFamily = 'Playfair Display',
 }: LuxuryTourCardProps) {
   const globalColors = useColors();
   const { formatPrice } = useCurrency();
+  const { isWishlisted: checkWishlist, toggleWishlist: defaultToggle } = useWishlist();
   const [imgError, setImgError] = useState(false);
+
+  const itemIdentifier = id !== undefined && id !== null && String(id).trim() !== '' ? id : name;
+  const isSaved = isWishlisted !== undefined
+    ? isWishlisted
+    : Boolean(
+        checkWishlist(itemIdentifier) ||
+        (name && checkWishlist(name)) ||
+        (id !== undefined && checkWishlist(id))
+      );
+
+  const lastWishlistPressRef = useRef<number>(0);
+
+  const handleToggleWishlist = () => {
+    lastWishlistPressRef.current = Date.now();
+    try {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    } catch {}
+    if (onToggleWishlist) {
+      onToggleWishlist();
+    } else if (itemIdentifier) {
+      defaultToggle(
+        itemIdentifier,
+        {
+          id: itemIdentifier,
+          name,
+          title: name,
+          description,
+          price,
+          rating,
+          image,
+          imageUrl: image,
+          duration,
+          location,
+          module: 'tours',
+        },
+        'tours'
+      );
+    }
+  };
 
   const badgeEnabled = tourCardConfig.badge?.enabled !== false;
   const badgeText = tourCardConfig.badge?.text || 'Luxury Escape';
@@ -81,7 +127,8 @@ export default function LuxuryTourCard({
   const border = theme.border || globalColors.border || '#e4d4cf';
   const surface = theme.surface || globalColors.surface || '#ffffff';
 
-  const resolvedUrl = resolveImageUrl(image) || PLACEHOLDER_IMAGE;
+  const fallbackUrl = getActualImageUrl(null, { module: 'tours', title: name, city: location });
+  const resolvedUrl = resolveImageUrl(image, undefined, { module: 'tours', title: name, city: location }) || fallbackUrl;
 
   const handleImageError = () => {
     if (__DEV__) {
@@ -102,12 +149,17 @@ export default function LuxuryTourCard({
         },
       ]}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-press"
         activeOpacity={0.92}
-        onPress={onPress ?? onBook}
+        onPress={() => {
+          if (Date.now() - lastWishlistPressRef.current < 600) return;
+          if (onPress) onPress();
+          else if (onBook) onBook();
+        }}
         accessibilityLabel={`Luxury tour ${name}, package from ${formatPrice(price)}`}
         accessibilityHint="Tap to view package details"
-        accessibilityRole="button"
+        role={Platform.OS === 'web' ? 'article' : undefined}
+        accessibilityRole={Platform.OS === 'web' ? undefined : 'button'}
       >
         {/* ─── Top Image Container ─── */}
         <View style={[styles.imageContainer, { backgroundColor: surface }]}>
@@ -133,6 +185,29 @@ export default function LuxuryTourCard({
               <Text style={styles.goldBadgeText}>{badgeText}</Text>
             </View>
           )}
+
+          {/* Wishlist Button on top-right */}
+          <TouchableOpacity testID="btn-luxurytourcard-159"
+            style={styles.wishlistBtn}
+            onPress={(e) => {
+              lastWishlistPressRef.current = Date.now();
+              if (e && e.stopPropagation) e.stopPropagation();
+              handleToggleWishlist();
+            }}
+            {...(Platform.OS === 'web' ? {
+              onClick: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+              onPointerDown: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+            } : {})}
+            activeOpacity={0.75}
+            accessibilityRole="button"
+            accessibilityLabel={isSaved ? `Remove ${name} from wishlist` : `Save ${name} to wishlist`}
+          >
+            <Ionicons
+              name={isSaved ? 'heart' : 'heart-outline'}
+              size={19}
+              color={isSaved ? '#ef4444' : '#ffffff'}
+            />
+          </TouchableOpacity>
         </View>
 
         {/* ─── Editorial Content Top ─── */}
@@ -182,7 +257,7 @@ export default function LuxuryTourCard({
 
       {/* ─── Footer with Sibling Touchables ─── */}
       <View style={styles.footer}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-press"
           onPress={onPress ?? onBook}
           activeOpacity={0.92}
           style={styles.priceContainer}
@@ -195,7 +270,7 @@ export default function LuxuryTourCard({
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-book"
           style={[styles.reserveButton, { backgroundColor: primary }]}
           onPress={onBook}
           activeOpacity={0.85}
@@ -254,6 +329,18 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 1.2,
     textTransform: 'uppercase',
+  },
+  wishlistBtn: {
+    position: 'absolute',
+    top: SPACING.md,
+    right: SPACING.md,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
   },
   topContent: {
     paddingHorizontal: SPACING.md + 2,

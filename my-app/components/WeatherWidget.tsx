@@ -44,7 +44,7 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ style, compact = f
 
   if (compact) {
     return (
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-press"
         style={[styles.compactPill, { backgroundColor: `${colors.primary}12`, borderColor: `${colors.primary}30` }, style]}
         onPress={handlePress}
         activeOpacity={0.8}
@@ -66,7 +66,7 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ style, compact = f
     <View
       style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }, style]}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-press"
         style={styles.mainTouchable}
         onPress={handlePress}
         activeOpacity={0.85}
@@ -96,7 +96,7 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ style, compact = f
       </TouchableOpacity>
 
       <View style={styles.rightRow}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-weatherwidget-99"
           onPress={() => toggleUnit()}
           style={styles.unitBtn}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
@@ -107,7 +107,7 @@ export const WeatherWidget: React.FC<WeatherWidgetProps> = ({ style, compact = f
             {tempUnit === 'C' ? '°F' : '°C'}
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           onPress={handlePress}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
           accessibilityRole="button"

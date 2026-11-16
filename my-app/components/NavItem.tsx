@@ -49,7 +49,7 @@ export default function NavItem({
   const colors = useColors();
 
   return (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-press"
       style={[
         styles.container,
         isActive

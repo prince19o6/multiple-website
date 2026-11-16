@@ -1,0 +1,28 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 1: First Launch, Browse Home, and Search with Filters
+- launchApp
+- assertVisible: "Gujju Tours|Curated Expeditions|Explore"
+
+# Verify Home Screen Components
+- scroll
+- assertVisible: "Featured Tours|Popular Destinations|Top Experiences"
+
+# Tap Search Bar
+- tapOn: "Search tours, cities, or activities"
+- inputText: "Dubai"
+- pressKey: Enter
+
+# Verify Search Results
+- assertVisible: "Dubai.*|Results"
+
+# Open Filters Modal
+- tapOn:
+    id: "btn-filters"
+- assertVisible: "Filter Tours|Price Range|Difficulty"
+
+# Apply Filter
+- tapOn: "Easy"
+- tapOn: "Apply Filters"
+- assertVisible: "Results"
+

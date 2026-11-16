@@ -416,6 +416,72 @@ export async function clearSiteStorage(siteIdOverride?: string): Promise<void> {
   }
 }
 
+/**
+ * Thoroughly purges all auth-related credentials, tokens, and active profiles
+ * across all potential site namespaces and storage engines.
+ */
+export async function clearAuthStorage(siteIdOverride?: string): Promise<void> {
+  const sitesToClear = new Set<string>();
+  if (siteIdOverride) sitesToClear.add(siteIdOverride);
+  if (ENV?.siteId) sitesToClear.add(ENV.siteId);
+  sitesToClear.add('website1');
+  sitesToClear.add('website2');
+  sitesToClear.add('website3');
+  sitesToClear.add('gujjutours');
+  sitesToClear.add('tripgoasia');
+  sitesToClear.add('technoheaven');
+  sitesToClear.add('default');
+
+  for (const s of sitesToClear) {
+    await secureDelete('auth.token', s).catch(() => {});
+    await secureDelete('auth.refresh_token', s).catch(() => {});
+    await secureDelete('auth.user', s).catch(() => {});
+    await storeRemove('auth.token', s).catch(() => {});
+    await storeRemove('auth.refresh_token', s).catch(() => {});
+    await storeRemove('auth.user', s).catch(() => {});
+  }
+
+  // Also clear legacy valid secure keys if any
+  try {
+    const isAvail = await isSecureStoreAvailable();
+    if (isAvail && secureStoreModule) {
+      await secureStoreModule.deleteItemAsync('auth_token').catch(() => {});
+      await secureStoreModule.deleteItemAsync('auth.token').catch(() => {});
+      await secureStoreModule.deleteItemAsync('refresh_token').catch(() => {});
+      await secureStoreModule.deleteItemAsync('auth.refresh_token').catch(() => {});
+    }
+  } catch {
+    // Ignore
+  }
+
+  const storage = getAsyncStorage();
+  try {
+    if (typeof storage.getAllKeys === 'function') {
+      const allKeys = await storage.getAllKeys();
+      const authKeys = allKeys.filter(
+        (k) =>
+          k.includes('auth.token') ||
+          k.includes('auth.user') ||
+          k.includes('auth.refresh_token') ||
+          k.includes('auth_token') ||
+          k.includes('@auth:token') ||
+          k.includes('@auth:user')
+      );
+      if (authKeys.length > 0) {
+        if (typeof storage.multiRemove === 'function') {
+          await storage.multiRemove(authKeys).catch(() => {});
+        } else {
+          for (const k of authKeys) {
+            await storage.removeItem(k).catch(() => {});
+          }
+        }
+      }
+    }
+  } catch (err: unknown) {
+    console.warn('[DEBUG] [storage] Error during clearAuthStorage:', err);
+  }
+}
+
 // ─── Legacy Migration ─────────────────────────────────────────────────────────
 
 /**
@@ -467,24 +533,44 @@ export async function migrateLegacyStorage(siteIdOverride?: string): Promise<voi
       await storage.removeItem(`@wishlist:${siteId}`).catch(() => {});
     }
 
-    // 4. Migrate config cache
-    const oldConfig = await storage.getItem(`@site:cached_config_${siteId}`);
-    if (oldConfig) {
-      await storeSet('config.cache', oldConfig, siteId);
-      await storage.removeItem(`@site:cached_config_${siteId}`).catch(() => {});
+    // 5. Migrate guest bookings from legacy formats
+    const legacyGuestKeys = [
+      `@bookings:guest_ids_${siteId}`,
+      `bookings.guest_ids_${siteId}`,
+      'bookings.guest_ids',
+      'guest_booking_ids',
+      'guest_booking_refs',
+    ];
+
+    let combinedGuestIds: string[] = [];
+    for (const k of legacyGuestKeys) {
+      try {
+        const val = await storage.getItem(k);
+        if (val) {
+          const parsed = JSON.parse(val);
+          if (Array.isArray(parsed)) {
+            combinedGuestIds = [...combinedGuestIds, ...parsed];
+          }
+          await storage.removeItem(k).catch(() => {});
+        }
+      } catch {
+        // ignore parse errors
+      }
     }
 
-    // 5. Migrate guest bookings
-    const oldGuestIds = await storage.getItem(`@bookings:guest_ids_${siteId}`);
-    if (oldGuestIds) {
-      await storeSet('bookings.guest_ids', oldGuestIds, siteId);
-      await storage.removeItem(`@bookings:guest_ids_${siteId}`).catch(() => {});
+    if (combinedGuestIds.length > 0) {
+      const uniqueIds = Array.from(new Set(combinedGuestIds.filter(Boolean)));
+      await storeSetObject('bookings.guest_ids', uniqueIds, siteId);
+      await storeSetObject('bookings.guest_refs', uniqueIds, siteId);
     }
 
-    const oldGuestContact = await storage.getItem(`@bookings:guest_contact_${siteId}`);
+    const oldGuestContact =
+      (await storage.getItem(`@bookings:guest_contact_${siteId}`)) ||
+      (await storage.getItem('bookings.guest_contact'));
     if (oldGuestContact) {
       await storeSet('bookings.guest_contact', oldGuestContact, siteId);
       await storage.removeItem(`@bookings:guest_contact_${siteId}`).catch(() => {});
+      await storage.removeItem('bookings.guest_contact').catch(() => {});
     }
 
     // Mark migration complete

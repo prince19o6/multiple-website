@@ -41,7 +41,7 @@ export default function ErrorScreen({
       <Text style={[styles.message, { color: colors.mutedText }]}>{message}</Text>
 
       {onRetry && (
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-refresh-outline" accessibilityLabel="refresh outline"
           style={[styles.button, { backgroundColor: colors.primary }]}
           onPress={onRetry}
           activeOpacity={0.85}

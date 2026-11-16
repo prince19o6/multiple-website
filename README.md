@@ -5,6 +5,7 @@ A unified, multi-tenant travel and tours platform powered by:
 - **Backend**: **ASP.NET Core 8.0 REST API** running on port `5000` with strict database-per-website isolation on MongoDB Atlas.
 - **Mobile**: **React Native (Expo)** cross-platform app with dynamic LAN reachability and tenant-isolated SecureStore keys.
 - **DevOps**: Multi-stage **Docker**, **Docker Compose** orchestration, and **GitHub Actions CI/CD**.
+- **Booking Lifecycle & Confirmation**: Complete state machine (`pending` -> `confirmed` | `rejected` | `expired` | `cancelled`), transactional outbox emailing, 1-tap signed decision links, and multi-tenant admin inboxes. See the [Booking Workflow Runbook](BOOKING_WORKFLOW_RUNBOOK.md) for full architectural documentation.
 
 ---
 

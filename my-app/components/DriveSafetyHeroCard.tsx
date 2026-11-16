@@ -85,7 +85,7 @@ export const DriveSafetyHeroCard: React.FC<DriveSafetyHeroCardProps> = ({ style 
 
       {/* Action Buttons */}
       <View style={styles.actionRow}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-book-outline" accessibilityLabel="book outline"
           style={[styles.mainBtn, { backgroundColor: colors.primary }]}
           onPress={handleOpenHub}
           activeOpacity={0.85}
@@ -94,7 +94,7 @@ export const DriveSafetyHeroCard: React.FC<DriveSafetyHeroCardProps> = ({ style 
           <Text style={styles.mainBtnText}>Road Rules & Scam Shield</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-camera-outline" accessibilityLabel="camera outline"
           style={[styles.inspectBtn, { backgroundColor: colors.background, borderColor: colors.border }]}
           onPress={handleOpenInspection}
           activeOpacity={0.7}

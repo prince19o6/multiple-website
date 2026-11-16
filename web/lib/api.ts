@@ -21,9 +21,10 @@ import {
   type SiteDefinition,
   type SiteId,
 } from "@/lib/siteRegistry";
+import { getSiteApiCredentials } from "@/lib/serverSiteSecrets";
 import type { Tour } from "@/lib/type";
 import type { DestinationItem } from "@/lib/componentRegistry";
-import type { SiteConfigResult, SiteConfigResponse } from "@/lib/siteConfig";
+import { validateSiteConfig, DEFAULT_CONFIGS_BY_SITE, type SiteConfig } from "@/lib/config/siteConfigSchema";
 
 // ─── Typed Errors ─────────────────────────────────────────────────────────────
 
@@ -53,44 +54,124 @@ export class ApiError extends Error {
 
 // ─── Booking Types ────────────────────────────────────────────────────────────
 
+export interface ItineraryDaySummary {
+  day: number;
+  title: string;
+  description: string;
+}
+
+export interface TourSnapshot {
+  tourId: number;
+  slug: string;
+  title: string;
+  coverImage: string;
+  destination: string;
+  category: string;
+  duration: string;
+  pricePerPerson: number;
+  currency: string;
+  itinerarySummary?: ItineraryDaySummary[];
+  includedSummary?: string[];
+  excludedSummary?: string[];
+}
+
+export interface BookingPriceBreakdown {
+  subtotal: number;
+  discount: number;
+  taxes: number;
+  total: number;
+}
+
+export interface BookingStatusHistoryItem {
+  status: string;
+  changedAt: string;
+  note?: string;
+  changedBy?: string;
+}
+
+export interface BookingTraveler {
+  id?: string;
+  name: string;
+  type: "Adult" | "Child";
+  age?: number;
+  gender?: "Male" | "Female" | "Other" | "";
+  passportOrId?: string;
+  passportNumber?: string;
+  passportExpiry?: string;
+  dateOfBirth?: string;
+  nationality?: string;
+}
+
 export interface Booking {
   id: string;
-  website: string;
-  tourId: number | string;
-  tourName: string;
-  totalPrice: number;
+  _id?: string;
+  reference: string;
+  websiteId: string;
+  website?: string;
+  source?: "web" | "app" | string;
+  userId?: string | null;
+
   guestName: string;
   email: string;
   phone: string;
-  travelers: number;
-  startDate: string;
-  endDate: string;
-  status?: string;
-  reference?: string;
-  paymentMethod?: string;
-  paymentStatus?: string;
-  paymentReference?: string;
-  paidAt?: string;
-  createdAt?: string;
+
+  snapshot?: TourSnapshot;
+
+  tourId: number | string;
+  tourName: string;
+  tourSlug?: string;
   tourImage?: string;
   location?: string;
+  destination?: string;
   currency?: string;
+  unitPrice?: number;
+  originalPrice?: number;
+  duration?: string;
+
+  travelDate?: string;
+  startDate: string;
+  endDate: string;
+  adults?: number;
+  children?: number;
+  travelers: number;
+  travelersList?: BookingTraveler[];
+
+  priceBreakdown?: BookingPriceBreakdown;
+  totalPrice: number;
+
+  status: "pending" | "confirmed" | "cancelled" | "completed" | string;
+  paymentMethod?: string;
+  paymentStatus: "unpaid" | "paid" | "refunded" | string;
+  paymentReference?: string;
+  paidAt?: string;
+  specialRequest?: string;
+
+  statusHistory?: BookingStatusHistoryItem[];
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface CreateBookingPayload {
   website?: string;
-  tourId: number | string;
-  tourName: string;
-  totalPrice: number;
+  tourId: number;
+  tourName?: string;
   guestName: string;
   email: string;
   phone: string;
-  travelers: number;
+  travelDate?: string;
   startDate: string;
   endDate: string;
+  adults?: number;
+  children?: number;
+  travelers: number;
+  travelersList?: BookingTraveler[];
+  specialRequest?: string;
+  specialRequests?: string;
   paymentMethod?: string;
   paymentStatus?: string;
   paymentReference?: string;
+  idempotencyKey?: string;
+  source?: string;
 }
 
 export interface ApiHealthResult {
@@ -138,91 +219,71 @@ export async function resolveSite(
       if (byId) return byId;
     }
 
-    const hostHeader = h.get("x-forwarded-host") || h.get("host");
-    const byHost = resolveSiteFromHost(hostHeader);
-    if (byHost) return byHost;
+    const hostHeader = h.get("host") || h.get("x-forwarded-host");
+    if (hostHeader) {
+      const byHost = resolveSiteFromHost(hostHeader);
+      if (byHost) return byHost;
+    }
   } catch {
-    // headers() might be called outside request context (e.g. static generation)
+    // In environments where nextHeaders is not available
   }
 
-  // Fallback to defaultSiteId if configured in env
-  if (ENV.defaultSiteId) {
-    const def = getSiteById(ENV.defaultSiteId);
-    if (def) return def;
-  }
+  const def = getSiteById(ENV.defaultSiteId);
+  if (def) return def;
 
-  // Fail fast: No default site
-  throw new ApiError(
-    "Cannot execute API request: Unable to resolve active website from context or host header.",
-    "client",
-    400
-  );
+  throw new Error("Unable to resolve site definition for request");
 }
 
 // ─── Normalizers ──────────────────────────────────────────────────────────────
 
-function normalizeImageUrl(url?: string | null): string {
-  if (!url || typeof url !== "string") {
-    return "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80";
-  }
-  const clean = url.trim();
-  if (clean.startsWith("http://") || clean.startsWith("https://") || clean.startsWith("data:")) {
-    return clean;
-  }
-  if (clean.startsWith("/")) {
-    return `${ENV.apiUrl}${clean}`;
-  }
-  return `${ENV.apiUrl}/${clean}`;
+function normalizeImageUrl(url: string | undefined): string {
+  if (!url) return "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80";
+  return url;
 }
 
-export function normalizeTour(raw: Record<string, unknown>, backendHostname?: string): Tour {
-  const id = String(raw.id ?? raw._id ?? raw.tourNumericId ?? Math.random().toString(36).slice(2));
-  const numericId = typeof raw.tourNumericId === "number" ? raw.tourNumericId : (parseInt(id, 10) || 1);
-  const name = String(raw.name ?? raw.title ?? "Tour Package");
-  const price = typeof raw.price === "number" ? raw.price : (parseFloat(String(raw.price ?? 0)) || 0);
+export function normalizeTour(raw: Record<string, unknown>, _backendHostname?: string): Tour {
+  const id = typeof raw.tourNumericId === "number" ? raw.tourNumericId : (parseInt(String(raw.id ?? raw._id ?? "1"), 10) || 1);
+  const name = String(raw.name ?? raw.title ?? "Experience");
+  const rawGallery = Array.isArray(raw.gallery) ? (raw.gallery as string[]) : [];
+  const gallery = rawGallery.length > 0 ? rawGallery.map(normalizeImageUrl) : [normalizeImageUrl(raw.image as string)];
 
-  let rawImages: string[] = [];
-  if (Array.isArray(raw.gallery)) {
-    rawImages = raw.gallery.map((x) => String(x));
-  } else if (Array.isArray(raw.images)) {
-    rawImages = raw.images.map((x) => String(x));
-  } else if (raw.image) {
-    rawImages = [String(raw.image)];
-  }
+  const rawItinerary = Array.isArray(raw.itinerary) ? raw.itinerary : [];
+  const itinerary = rawItinerary.map((item: any, idx: number) => ({
+    day: Number(item?.day ?? idx + 1),
+    title: String(item?.title ?? `Day ${idx + 1}`),
+    description: String(item?.description ?? ""),
+  }));
 
-  const gallery = rawImages.length > 0
-    ? rawImages.map(normalizeImageUrl)
-    : [normalizeImageUrl(raw.image as string)];
+  const rawReviews = Array.isArray(raw.guestReviews) ? raw.guestReviews : [];
+  const guestReviews = rawReviews.map((r: any) => ({
+    author: String(r?.author ?? "Traveler"),
+    rating: Number(r?.rating ?? 5),
+    text: String(r?.text ?? ""),
+    date: r?.date ? String(r.date) : undefined,
+    avatar: r?.avatar ? String(r.avatar) : undefined,
+  }));
 
-  const itinerary: { day: number; title: string; description: string }[] = Array.isArray(raw.itinerary)
-    ? (raw.itinerary as Record<string, unknown>[]).map((item, idx) => ({
-        day: typeof item.day === "number" ? item.day : idx + 1,
-        title: String(item.title ?? `Day ${idx + 1}`),
-        description: String(item.description ?? ""),
-      }))
-    : [];
-
-  const guestReviews: { author: string; rating: number; text: string }[] = Array.isArray(raw.guestReviews)
-    ? (raw.guestReviews as Record<string, unknown>[]).map((item) => ({
-        author: String(item.author ?? "Traveler"),
-        rating: typeof item.rating === "number" ? item.rating : 5,
-        text: String(item.text ?? ""),
-      }))
-    : [];
+  const discounted = typeof raw.discountedPrice === "number" ? raw.discountedPrice : undefined;
+  const original = typeof raw.originalPrice === "number" ? raw.originalPrice : undefined;
+  const price = typeof raw.price === "number" ? raw.price : 199;
 
   return {
-    id: numericId,
-    _id: id,
-    website: String(raw.website ?? raw.Website ?? backendHostname ?? ""),
+    id,
     name,
-    slug: String(raw.slug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")),
-    category: String(raw.category ?? "General"),
-    destination: String(raw.destination ?? raw.location ?? "Various"),
-    location: String(raw.location ?? raw.destination ?? "Various"),
-    description: String(raw.description ?? raw.shortDescription ?? ""),
+    title: name,
+    slug: String(raw.slug ?? name.toLowerCase().replace(/[^a-z0-9]+/g, "-")),
+    category: String(raw.category ?? "Adventure"),
+    destination: String(raw.destination ?? raw.location ?? "Global"),
+    location: String(raw.location ?? raw.destination ?? "Global"),
+    description: String(raw.shortDescription ?? raw.description ?? ""),
     fullDescription: String(raw.fullDescription ?? raw.description ?? ""),
     price,
-    duration: String(raw.duration ?? "1 Day"),
+    discountedPrice: discounted,
+    originalPrice: original,
+    currency: String(raw.currency ?? "$"),
+    duration: String(raw.duration ?? "3 Days / 2 Nights"),
+    durationDays: typeof raw.durationDays === "number" ? raw.durationDays : 3,
+    durationNights: typeof raw.durationNights === "number" ? raw.durationNights : 2,
     difficulty: String(raw.difficulty ?? "Easy"),
     rating: typeof raw.rating === "number" ? raw.rating : (parseFloat(String(raw.rating ?? 4.5)) || 4.5),
     reviews: typeof raw.reviews === "number" ? raw.reviews : (parseInt(String(raw.reviews ?? 10), 10) || 10),
@@ -288,10 +349,12 @@ async function requestWithRetry<T>(
     const timer = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
+      const creds = getSiteApiCredentials(site.siteId);
       const requestHeaders: Record<string, string> = {
         Accept: "application/json",
         "X-Website-Hostname": site.backendHostname,
         "X-Website-Id": site.siteId,
+        "X-Api-Key": creds.apiKey,
         ...headers,
       };
 
@@ -386,43 +449,51 @@ async function requestWithRetry<T>(
 
 // ─── Domain API Functions ─────────────────────────────────────────────────────
 
-/**
- * Fetch dynamic website configuration for the specified site.
- * Cache isolated strictly by site.siteId.
- */
 export async function fetchSiteConfig(
   siteTarget?: SiteDefinition | SiteId | string,
   lang: string = ENV.defaultLang
-): Promise<SiteConfigResult> {
+): Promise<SiteConfig> {
   const site = await resolveSite(siteTarget);
   const cleanHost = encodeURIComponent(site.backendHostname);
   const cleanLang = encodeURIComponent(lang);
   const primaryUrl = `${ENV.apiUrl}/api/core/v1/config/${cleanHost}?lang=${cleanLang}`;
 
   try {
-    const res = await requestWithRetry<SiteConfigResponse>(site, primaryUrl, {
+    const res = await requestWithRetry<{
+      result: unknown;
+      error: string | null;
+      isSuccess: boolean;
+    }>(site, primaryUrl, {
       revalidate: 300,
-      tags: [`site-config:${site.siteId}`],
+      tags: ["config", `config:${site.siteId}`, `site-config:${site.siteId}`],
       timeoutMs: 6000,
       retries: 1,
     });
 
     if (res.data?.isSuccess && res.data?.result) {
-      return res.data.result;
+      const siteFallback = DEFAULT_CONFIGS_BY_SITE[site.siteId] || DEFAULT_CONFIGS_BY_SITE.gujjutours;
+      const validated = validateSiteConfig(res.data.result, siteFallback);
+      return validated.config;
     }
     throw new ApiError(res.data?.error || "Config API reported error", "server", 200, primaryUrl);
   } catch (primaryErr) {
     if (site.stagingApiUrl && !ENV.apiUrl.includes(site.stagingApiUrl)) {
       const fallbackUrl = `${site.stagingApiUrl}/api/core/v1/config/${cleanHost}?lang=${cleanLang}`;
       try {
-        const fallbackRes = await requestWithRetry<SiteConfigResponse>(site, fallbackUrl, {
+        const fallbackRes = await requestWithRetry<{
+          result: unknown;
+          error: string | null;
+          isSuccess: boolean;
+        }>(site, fallbackUrl, {
           revalidate: 300,
-          tags: [`site-config:${site.siteId}`],
+          tags: ["config", `config:${site.siteId}`, `site-config:${site.siteId}`],
           timeoutMs: 6000,
           retries: 1,
         });
         if (fallbackRes.data?.isSuccess && fallbackRes.data?.result) {
-          return fallbackRes.data.result;
+          const siteFallback = DEFAULT_CONFIGS_BY_SITE[site.siteId] || DEFAULT_CONFIGS_BY_SITE.gujjutours;
+          const validated = validateSiteConfig(fallbackRes.data.result, siteFallback);
+          return validated.config;
         }
       } catch {
         // preserve original error
@@ -432,10 +503,6 @@ export async function fetchSiteConfig(
   }
 }
 
-/**
- * Fetch all tours for the specified site.
- * Cache isolated strictly by site.siteId.
- */
 export async function fetchTours(
   siteTarget?: SiteDefinition | SiteId | string,
   category?: string
@@ -482,9 +549,6 @@ export async function fetchTours(
   }
 }
 
-/**
- * Fetch a single tour by ID or Slug for the specified site.
- */
 export async function fetchTourById(
   id: string,
   siteTarget?: SiteDefinition | SiteId | string
@@ -515,10 +579,6 @@ export async function fetchTourById(
 
 export { fetchTourById as fetchTour };
 
-/**
- * Fetch destinations for the specified site.
- * Cache isolated strictly by site.siteId.
- */
 export async function fetchDestinations(
   siteTarget?: SiteDefinition | SiteId | string
 ): Promise<DestinationItem[]> {
@@ -549,24 +609,32 @@ export async function fetchDestinations(
   }
 }
 
-/**
- * Create a new booking for the specified site.
- */
 export async function createBooking(
   siteTarget: SiteDefinition | SiteId | string,
-  payload: CreateBookingPayload
+  payload: CreateBookingPayload,
+  idempotencyKey?: string
 ): Promise<Booking> {
   const site = await resolveSite(siteTarget);
   const url = `${ENV.apiUrl}/api/bookings`;
 
   const bookingData = {
     ...payload,
+    source: "web",
     website: site.backendHostname,
+    websiteId: site.siteId,
   };
+
+  const headers: Record<string, string> = {
+    "X-Client-Source": "web",
+  };
+  if (idempotencyKey || payload.idempotencyKey) {
+    headers["X-Idempotency-Key"] = idempotencyKey || payload.idempotencyKey!;
+  }
 
   const res = await requestWithRetry<Record<string, unknown>>(site, url, {
     method: "POST",
     body: bookingData,
+    headers,
     timeoutMs: 8000,
     retries: 0,
   });
@@ -574,35 +642,68 @@ export async function createBooking(
   return (res.data.data ?? res.data) as Booking;
 }
 
-/**
- * Fetch bookings list for the specified site.
- */
 export async function fetchBookings(
   siteTarget: SiteDefinition | SiteId | string,
-  email?: string
-): Promise<Booking[]> {
+  email?: string,
+  authHeader?: string,
+  status?: string,
+  page: number = 1,
+  pageSize: number = 20
+): Promise<{ data: Booking[]; count: number }> {
   const site = await resolveSite(siteTarget);
-  const url = email
-    ? `${ENV.apiUrl}/api/bookings?email=${encodeURIComponent(email)}`
-    : `${ENV.apiUrl}/api/bookings`;
+  const params = new URLSearchParams();
+  if (email) params.append("email", email.trim());
+  if (status && status !== "all") params.append("status", status.trim());
+  params.append("page", String(page));
+  params.append("pageSize", String(pageSize));
+
+  const url = `${ENV.apiUrl}/api/bookings?${params.toString()}`;
+
+  const headers: Record<string, string> = {
+    "X-Client-Source": "web",
+  };
+  if (authHeader) {
+    headers["Authorization"] = authHeader;
+  }
 
   const res = await requestWithRetry<unknown>(site, url, {
+    headers,
     timeoutMs: 6000,
     retries: 1,
   });
 
   const json = res.data;
-  if (Array.isArray(json)) return json as Booking[];
-  if (json && typeof json === "object" && Array.isArray((json as Record<string, unknown>).data)) {
-    return (json as Record<string, unknown>).data as Booking[];
+  if (Array.isArray(json)) return { data: json as Booking[], count: json.length };
+  if (json && typeof json === "object") {
+    const obj = json as Record<string, unknown>;
+    if (Array.isArray(obj.data)) {
+      return {
+        data: obj.data as Booking[],
+        count: typeof obj.count === "number" ? obj.count : obj.data.length,
+      };
+    }
   }
-  return [];
+  return { data: [], count: 0 };
 }
 
-/**
- * Health check function for DevBanner and /api/health endpoint.
- * Accurately measures latency and inspects backend diagnostic response headers.
- */
+export async function lookupGuestBooking(
+  siteTarget: SiteDefinition | SiteId | string,
+  reference: string,
+  email: string
+): Promise<Booking> {
+  const site = await resolveSite(siteTarget);
+  const url = `${ENV.apiUrl}/api/bookings/lookup`;
+
+  const res = await requestWithRetry<Record<string, unknown>>(site, url, {
+    method: "POST",
+    body: { reference: reference.trim(), email: email.trim() },
+    timeoutMs: 8000,
+    retries: 0,
+  });
+
+  return (res.data.data ?? res.data) as Booking;
+}
+
 export async function checkApiHealth(
   siteTarget?: SiteDefinition | SiteId | string,
   reqHost: string = "localhost"
@@ -623,7 +724,7 @@ export async function checkApiHealth(
   try {
     const config = await fetchSiteConfig(site);
     configOk = true;
-    brandName = config.website?.name || config.website?.fullName || site.displayName;
+    brandName = config.site?.name || (config as any).website?.name || site.displayName;
   } catch (err) {
     errorMsg = err instanceof Error ? err.message : String(err);
   }

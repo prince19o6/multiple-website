@@ -148,7 +148,7 @@ export function TravelGuidesCards({ headingFontFamily, onPressGuide }: TravelGui
   };
 
   const renderGuideCard = ({ item }: { item: TravelGuideItem }) => (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-travelguidescards-151"
       style={[
         styles.card,
         {

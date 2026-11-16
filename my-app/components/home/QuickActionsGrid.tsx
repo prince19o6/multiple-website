@@ -11,6 +11,8 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useColors } from '@/store/ThemeContext';
+import { useSiteConfig } from '@/store/SiteConfigContext';
+import { isFeatureEnabled } from '@/hooks/useFeature';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 
 export interface QuickActionsGridProps {
@@ -28,6 +30,7 @@ interface QuickAction {
 export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
   const router = useRouter();
   const colors = useColors();
+  const config = useSiteConfig();
 
   const handleAction = (cb: () => void) => {
     try {
@@ -38,9 +41,9 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
     cb();
   };
 
-  const actions: QuickAction[] = [
+  const allActions: QuickAction[] = [
     {
-      id: 'offers',
+      id: 'special-offers',
       label: 'Deals',
       icon: 'pricetag-outline',
       onPress: () => router.push('/special-offers' as any),
@@ -50,6 +53,18 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
       label: 'Transfers',
       icon: 'car-sport-outline',
       onPress: () => router.push('/airport-transfer' as any),
+    },
+    {
+      id: 'car-rental',
+      label: 'Rent Car',
+      icon: 'car-outline',
+      onPress: () => router.push('/car-rental' as any),
+    },
+    {
+      id: 'visas',
+      label: 'Visas',
+      icon: 'document-text-outline',
+      onPress: () => router.push('/visa-hub' as any),
     },
     {
       id: 'esim',
@@ -64,6 +79,15 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
       icon: 'trending-up-outline',
       onPress: () => router.push('/forex-radar' as any),
     },
+  ];
+
+  // Filter actions enabled for current website
+  const enabledShortcuts = allActions
+    .filter((a) => isFeatureEnabled(config, a.id, 'app'))
+    .slice(0, 4);
+
+  const actions: QuickAction[] = [
+    ...enabledShortcuts,
     {
       id: 'more',
       label: 'All Tools',
@@ -78,7 +102,7 @@ export function QuickActionsGrid({ onOpenTravelHub }: QuickActionsGridProps) {
         {actions.map((act) => {
           const isMore = act.id === 'more';
           return (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-quickactionsgrid-81"
               key={act.id}
               style={[
                 styles.actionItem,

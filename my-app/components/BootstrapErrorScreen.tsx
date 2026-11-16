@@ -60,7 +60,7 @@ export default function BootstrapErrorScreen({
           </View>
         )}
 
-        <TouchableOpacity style={styles.retryButton} onPress={onRetry} activeOpacity={0.8}>
+        <TouchableOpacity testID="btn-reload" accessibilityLabel="reload" style={styles.retryButton} onPress={onRetry} activeOpacity={0.8}>
           <Ionicons name="reload" size={18} color="#ffffff" style={{ marginRight: 8 }} />
           <Text style={styles.retryText}>Retry Connection</Text>
         </TouchableOpacity>

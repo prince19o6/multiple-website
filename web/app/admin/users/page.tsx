@@ -3,6 +3,8 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import {
   fetchAdminUsers,
+  fetchAdminUserBookings,
+  resetAdminUserPassword,
   updateAdminUserRole,
   updateAdminUserStatus,
   deleteAdminUser,
@@ -11,6 +13,7 @@ import {
   ADMIN_SITE_NAMES,
   getAdminSite,
   type AdminUser,
+  type AdminBooking,
 } from "@/lib/adminApi";
 
 export default function AdminUsers() {
@@ -21,6 +24,17 @@ export default function AdminUsers() {
   // Search & Role Filter
   const [searchTerm, setSearchTerm] = useState("");
   const [roleFilter, setRoleFilter] = useState("all");
+
+  // User Bookings Modal
+  const [viewingUser, setViewingUser] = useState<AdminUser | null>(null);
+  const [userBookings, setUserBookings] = useState<AdminBooking[]>([]);
+  const [loadingBookings, setLoadingBookings] = useState(false);
+
+  // Password Reset Modal
+  const [resettingUser, setResettingUser] = useState<AdminUser | null>(null);
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [resetSubmitting, setResetSubmitting] = useState(false);
 
   const currentAdmin = getAdminUser();
 
@@ -34,8 +48,9 @@ export default function AdminUsers() {
     try {
       const data = await fetchAdminUsers();
       setUsers(data);
-    } catch (err: any) {
-      showToast(err?.message || "Failed to load user accounts", "error");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to load user accounts";
+      showToast(msg, "error");
     } finally {
       setLoading(false);
     }
@@ -49,7 +64,7 @@ export default function AdminUsers() {
   }, [loadUsers]);
 
   const activeSite = getAdminSite();
-  const currentBrand = ADMIN_SITE_NAMES[activeSite] || ADMIN_SITE_NAMES.website1;
+  const currentBrand = ADMIN_SITE_NAMES[activeSite] || ADMIN_SITE_NAMES.tripgoasia;
 
   const filteredUsers = useMemo(() => {
     return users.filter((u) => {
@@ -61,6 +76,51 @@ export default function AdminUsers() {
       return matchesRole && matchesSearch;
     });
   }, [users, roleFilter, searchTerm]);
+
+  // Open User Bookings
+  const handleOpenBookings = async (user: AdminUser) => {
+    setViewingUser(user);
+    setLoadingBookings(true);
+    try {
+      const bookings = await fetchAdminUserBookings(user.id);
+      setUserBookings(bookings);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to load bookings";
+      showToast(msg, "error");
+      setUserBookings([]);
+    } finally {
+      setLoadingBookings(false);
+    }
+  };
+
+  // Submit Password Reset
+  const handleResetPasswordSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!resettingUser) return;
+
+    if (!newPassword || newPassword.length < 6) {
+      showToast("Password must be at least 6 characters long.", "error");
+      return;
+    }
+    if (newPassword !== confirmPassword) {
+      showToast("Passwords do not match.", "error");
+      return;
+    }
+
+    setResetSubmitting(true);
+    try {
+      await resetAdminUserPassword(resettingUser.id, newPassword);
+      showToast(`Password reset successfully for ${resettingUser.email}`);
+      setResettingUser(null);
+      setNewPassword("");
+      setConfirmPassword("");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to reset password";
+      showToast(msg, "error");
+    } finally {
+      setResetSubmitting(false);
+    }
+  };
 
   const handleRoleToggle = async (user: AdminUser) => {
     if (user.id === currentAdmin?.id) {
@@ -80,11 +140,12 @@ export default function AdminUsers() {
     try {
       await updateAdminUserRole(user.id, newRole);
       setUsers((prev) =>
-        prev.map((u) => (u.id === user.id ? { ...u, role: newRole as any } : u))
+        prev.map((u) => (u.id === user.id ? { ...u, role: newRole as "Admin" | "user" } : u))
       );
       showToast(`User role updated to ${newRole}.`);
-    } catch (err: any) {
-      showToast(err?.message || "Failed to update role", "error");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to update role";
+      showToast(msg, "error");
     }
   };
 
@@ -95,7 +156,7 @@ export default function AdminUsers() {
     }
 
     const nextDisabled = !user.isDisabled;
-    const actionLabel = nextDisabled ? "deactivate" : "activate";
+    const actionLabel = nextDisabled ? "lock/deactivate" : "unlock/activate";
     if (!confirm(`Are you sure you want to ${actionLabel} account for "${user.name}"?`)) {
       return;
     }
@@ -109,9 +170,10 @@ export default function AdminUsers() {
             : u
         )
       );
-      showToast(`User account ${actionLabel}d.`);
-    } catch (err: any) {
-      showToast(err?.message || "Failed to update status", "error");
+      showToast(`User account ${nextDisabled ? "locked" : "unlocked"}.`);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to update status";
+      showToast(msg, "error");
     }
   };
 
@@ -129,13 +191,14 @@ export default function AdminUsers() {
       await deleteAdminUser(user.id);
       setUsers((prev) => prev.filter((u) => u.id !== user.id));
       showToast(`User account deleted.`);
-    } catch (err: any) {
-      showToast(err?.message || "Failed to delete user", "error");
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to delete user";
+      showToast(msg, "error");
     }
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 font-sans">
       {/* Toast Alert */}
       {toast && (
         <div
@@ -156,7 +219,7 @@ export default function AdminUsers() {
           User Accounts & Permissions
         </h1>
         <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-          Manage member accounts, promote administrators, and enforce security for{" "}
+          Manage member accounts, promote administrators, view reservations, and enforce security for{" "}
           {currentBrand.label}.
         </p>
       </div>
@@ -256,32 +319,62 @@ export default function AdminUsers() {
                               : "bg-emerald-100 text-emerald-800"
                           }`}
                         >
-                          {u.isDisabled ? "Disabled" : "Active"}
+                          {u.isDisabled ? "Locked / Disabled" : "Active"}
                         </span>
                       </td>
-                      <td className="px-5 py-3.5 text-right space-x-2">
+                      <td className="px-5 py-3.5 text-right space-x-1.5 whitespace-nowrap">
+                        {/* View Bookings Button */}
                         <button
+                          type="button"
+                          onClick={() => handleOpenBookings(u)}
+                          className="px-2.5 py-1 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-lg text-xs font-bold transition-all cursor-pointer"
+                        >
+                          📅 Bookings
+                        </button>
+
+                        {/* Reset Password Button */}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setResettingUser(u);
+                            setNewPassword("");
+                            setConfirmPassword("");
+                          }}
+                          className="px-2.5 py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 rounded-lg text-xs font-bold transition-all cursor-pointer"
+                        >
+                          🔑 Reset Pwd
+                        </button>
+
+                        {/* Role Toggle */}
+                        <button
+                          type="button"
                           onClick={() => handleRoleToggle(u)}
                           disabled={isCurrent}
-                          className="px-2.5 py-1 bg-purple-50 text-purple-700 hover:bg-purple-100 disabled:opacity-40 rounded-lg text-xs font-bold transition-all"
+                          className="px-2.5 py-1 bg-purple-50 text-purple-700 hover:bg-purple-100 disabled:opacity-40 rounded-lg text-xs font-bold transition-all cursor-pointer"
                         >
-                          {isAdmin ? "Demote to User" : "Make Admin"}
+                          {isAdmin ? "Demote" : "Promote"}
                         </button>
+
+                        {/* Lock / Unlock Toggle */}
                         <button
+                          type="button"
                           onClick={() => handleStatusToggle(u)}
                           disabled={isCurrent}
-                          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all disabled:opacity-40 ${
+                          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all disabled:opacity-40 cursor-pointer ${
                             u.isDisabled
                               ? "bg-emerald-50 text-emerald-700 hover:bg-emerald-100"
-                              : "bg-amber-50 text-amber-700 hover:bg-amber-100"
+                              : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                           }`}
                         >
-                          {u.isDisabled ? "Activate" : "Disable"}
+                          {u.isDisabled ? "Unlock" : "Lock"}
                         </button>
+
+                        {/* Delete User */}
                         <button
+                          type="button"
                           onClick={() => handleDelete(u)}
                           disabled={isCurrent}
-                          className="px-2.5 py-1 bg-rose-50 text-rose-700 hover:bg-rose-100 disabled:opacity-40 rounded-lg text-xs font-bold transition-all"
+                          className="px-2.5 py-1 bg-rose-50 text-rose-700 hover:bg-rose-100 disabled:opacity-40 rounded-lg text-xs font-bold transition-all cursor-pointer"
                         >
                           Delete
                         </button>
@@ -294,6 +387,168 @@ export default function AdminUsers() {
           </div>
         )}
       </div>
+
+      {/* ─── MODAL: View User Bookings ─── */}
+      {viewingUser && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95">
+            <div className="p-5 border-b border-gray-100 flex items-center justify-between bg-gray-50">
+              <div>
+                <h3 className="font-bold text-gray-900 text-base">
+                  Reservations for {viewingUser.name}
+                </h3>
+                <p className="text-xs text-gray-500">{viewingUser.email}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setViewingUser(null)}
+                className="p-1.5 text-gray-400 hover:text-gray-700 rounded-lg text-lg font-bold"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="p-5 overflow-y-auto flex-1">
+              {loadingBookings ? (
+                <div className="p-8 text-center text-gray-400 text-xs font-semibold">
+                  Loading user reservations...
+                </div>
+              ) : userBookings.length === 0 ? (
+                <div className="p-8 text-center text-gray-400 text-xs">
+                  No bookings found for this customer on this website.
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {userBookings.map((b) => (
+                    <div
+                      key={b.id || b._id}
+                      className="p-4 border border-gray-100 rounded-xl bg-gray-50/50 flex items-center justify-between gap-4"
+                    >
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                            {b.reference || b.id}
+                          </span>
+                          <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-gray-200 text-gray-700">
+                            {b.serviceType || "tour"}
+                          </span>
+                          <span
+                            className={`text-[10px] font-bold px-2 py-0.5 rounded capitalize ${
+                              b.status === "confirmed"
+                                ? "bg-emerald-100 text-emerald-800"
+                                : b.status === "cancelled"
+                                  ? "bg-rose-100 text-rose-800"
+                                  : "bg-amber-100 text-amber-800"
+                            }`}
+                          >
+                            {b.status}
+                          </span>
+                        </div>
+                        <h4 className="text-sm font-bold text-gray-900 mt-1">
+                          {b.tourName || "Custom Reservation"}
+                        </h4>
+                        <p className="text-xs text-gray-400">
+                          {b.travelers || 1} guest{(b.travelers || 1) > 1 ? "s" : ""} •{" "}
+                          {b.createdAt ? new Date(b.createdAt).toLocaleDateString() : "—"}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-base font-black text-gray-900">
+                          ₹{(b.totalPrice || 0).toLocaleString()}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="p-4 border-t border-gray-100 bg-gray-50 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setViewingUser(null)}
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-xl text-xs font-bold text-gray-700 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ─── MODAL: Admin Reset Password ─── */}
+      {resettingUser && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden animate-in zoom-in-95">
+            <div className="p-5 border-b border-gray-100 bg-gray-50 flex items-center justify-between">
+              <div>
+                <h3 className="font-bold text-gray-900 text-base">Reset Password</h3>
+                <p className="text-xs text-gray-500">For {resettingUser.email}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setResettingUser(null)}
+                className="p-1.5 text-gray-400 hover:text-gray-700 rounded-lg text-lg font-bold"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleResetPasswordSubmit} className="p-5 space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-gray-700 mb-1">
+                  New Password (minimum 6 chars)
+                </label>
+                <input
+                  type="password"
+                  required
+                  minLength={6}
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  placeholder="Enter new password…"
+                  className="w-full px-3.5 py-2 border border-gray-300 rounded-xl text-xs sm:text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-gray-700 mb-1">
+                  Confirm New Password
+                </label>
+                <input
+                  type="password"
+                  required
+                  minLength={6}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Re-enter password…"
+                  className="w-full px-3.5 py-2 border border-gray-300 rounded-xl text-xs sm:text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-800">
+                ⚠️ Resetting the password will unlock the account and reset any failed login attempts.
+              </div>
+
+              <div className="flex justify-end gap-2 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setResettingUser(null)}
+                  className="px-4 py-2 border border-gray-300 rounded-xl text-xs font-bold text-gray-700 hover:bg-gray-50"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={resetSubmitting}
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white rounded-xl text-xs font-bold shadow transition-all"
+                >
+                  {resetSubmitting ? "Resetting…" : "Confirm Password Reset"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

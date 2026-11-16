@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { View, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, ActivityIndicator, Platform } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { DestinationLandmark } from '../types';
 
@@ -19,26 +19,66 @@ export const ExpeditionMapView: React.FC<ExpeditionMapViewProps> = ({
   isDarkMode = false,
 }) => {
   const webViewRef = useRef<any>(null);
+  const iframeRef = useRef<any>(null);
   const WebViewComponent = WebView as any;
 
   // Compute bounding box or center
   const centerLat = landmarks.length > 0 ? landmarks[0].latitude : 22.0;
   const centerLng = landmarks.length > 0 ? landmarks[0].longitude : 71.0;
 
+  // Sync selected landmark to map (both web iframe and native WebView)
   useEffect(() => {
     if (selectedLandmarkId && landmarks.length > 0) {
       const target = landmarks.find((l) => l.id === selectedLandmarkId);
-      if (target && webViewRef.current) {
-        const script = `
-          if (window.selectMarkerById) {
-            window.selectMarkerById('${target.id}', ${target.latitude}, ${target.longitude});
+      if (target) {
+        if (Platform.OS === 'web') {
+          if (iframeRef.current?.contentWindow) {
+            iframeRef.current.contentWindow.postMessage(
+              JSON.stringify({
+                type: 'SELECT_MARKER',
+                id: target.id,
+                lat: target.latitude,
+                lng: target.longitude,
+              }),
+              '*'
+            );
           }
-          true;
-        `;
-        webViewRef.current.injectJavaScript(script);
+        } else if (webViewRef.current) {
+          const script = `
+            if (window.selectMarkerById) {
+              window.selectMarkerById('${target.id}', ${target.latitude}, ${target.longitude});
+            }
+            true;
+          `;
+          webViewRef.current.injectJavaScript(script);
+        }
       }
     }
   }, [selectedLandmarkId, landmarks]);
+
+  // Listen for message events on Web from the iframe
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+
+    const handleWebMessage = (event: MessageEvent) => {
+      try {
+        const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        if (data && data.type === 'SELECT_LANDMARK' && data.id) {
+          const matched = landmarks.find((l) => l.id === data.id);
+          if (matched) {
+            onSelectLandmark(matched);
+          }
+        }
+      } catch {
+        // Ignore non-JSON postMessage events
+      }
+    };
+
+    window.addEventListener('message', handleWebMessage);
+    return () => {
+      window.removeEventListener('message', handleWebMessage);
+    };
+  }, [landmarks, onSelectLandmark]);
 
   const mapHtml = `
 <!DOCTYPE html>
@@ -165,8 +205,11 @@ export const ExpeditionMapView: React.FC<ExpeditionMapViewProps> = ({
       );
 
       marker.on('click', function() {
-        if (window.ReactNativeWebView) {
-          window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'SELECT_LANDMARK', id: l.id }));
+        var payload = JSON.stringify({ type: 'SELECT_LANDMARK', id: l.id });
+        if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+          window.ReactNativeWebView.postMessage(payload);
+        } else if (window.parent && window.parent.postMessage) {
+          window.parent.postMessage(payload, '*');
         }
       });
 
@@ -188,6 +231,15 @@ export const ExpeditionMapView: React.FC<ExpeditionMapViewProps> = ({
       }
     };
 
+    window.addEventListener('message', function(event) {
+      try {
+        var data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+        if (data && data.type === 'SELECT_MARKER' && window.selectMarkerById) {
+          window.selectMarkerById(data.id, data.lat, data.lng);
+        }
+      } catch(e) {}
+    });
+
     window.recenterAll = function() {
       if (bounds.length > 0) {
         map.fitBounds(bounds, { padding: [50, 50] });
@@ -205,6 +257,25 @@ export const ExpeditionMapView: React.FC<ExpeditionMapViewProps> = ({
 </body>
 </html>
   `;
+
+  // On Web browsers, render clean responsive iframe to avoid "React Native WebView does not support this platform"
+  if (Platform.OS === 'web') {
+    return (
+      <View style={styles.container}>
+        {React.createElement('iframe', {
+          ref: iframeRef,
+          srcDoc: mapHtml,
+          style: {
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            backgroundColor: 'transparent',
+          },
+          title: 'Expedition Map Explorer',
+        })}
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -249,7 +320,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   loadingContainer: {
-    ...StyleSheet.absoluteFill,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.7)',

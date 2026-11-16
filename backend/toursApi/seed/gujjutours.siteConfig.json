@@ -1,0 +1,1349 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-10-29T11:43:27.460Z",
+  "site": {
+    "id": "gujjutours",
+    "name": "Gujju Tours",
+    "fullName": "Gujju Tours Private Limited",
+    "tagline": "Your Gateway to Extraordinary Adventures",
+    "canonicalHostname": "www.gujjutours.com",
+    "hostnames": [
+      "www.gujjutours.com",
+      "gujjutours.com",
+      "b2b.gujjutours.com",
+      "gujjutours"
+    ],
+    "defaultLanguage": "en",
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "isRTL": false
+      },
+      {
+        "code": "gu",
+        "name": "Gujarati",
+        "isRTL": false
+      },
+      {
+        "code": "hi",
+        "name": "Hindi",
+        "isRTL": false
+      }
+    ],
+    "currency": {
+      "code": "INR",
+      "symbol": "₹",
+      "name": "Indian Rupee",
+      "decimalPlaces": 2
+    },
+    "timeZone": "Asia/Kolkata"
+  },
+  "theme": {
+    "defaultMode": "light",
+    "colors": {
+      "primary": "#2882c5",
+      "primaryDark": "#1f679c",
+      "primaryLight": "#eaf3f9",
+      "primaryContrast": "#ffffff",
+      "primaryText": "#1f679c",
+      "secondary": "#0f172a",
+      "accent": "#f58e83",
+      "background": "#ffffff",
+      "surface": "#ffffff",
+      "surface2": "#f8fafc",
+      "text": "#0f172a",
+      "heading": "#0f172a",
+      "mutedText": "#64748b",
+      "border": "#e2e8f0",
+      "success": "#16a34a",
+      "danger": "#dc2626",
+      "footerBg": "#0f172a",
+      "footerText": "#f8fafc"
+    },
+    "radius": {
+      "xs": 4,
+      "sm": 8,
+      "md": 12,
+      "lg": 16,
+      "xl": 24,
+      "full": 9999
+    },
+    "shadows": {
+      "none": "none",
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "md": "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+      "lg": "0 10px 15px -3px rgb(0 0 0 / 0.1)"
+    },
+    "spacing": {
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48
+    }
+  },
+  "typography": {
+    "headingFont": "Poppins",
+    "bodyFont": "Poppins",
+    "headingWeight": "700",
+    "bodyWeight": "400",
+    "customFonts": [
+      {
+        "family": "Poppins",
+        "url": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/fonts/Poppins-Regular.woff2",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "url": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/fonts/Poppins-SemiBold.woff2",
+        "weight": 600,
+        "style": "normal"
+      },
+      {
+        "family": "Poppins",
+        "url": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/fonts/Poppins-SemiBold.woff2",
+        "weight": 700,
+        "style": "normal"
+      }
+    ]
+  },
+  "assets": {
+    "logoUrl": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/headerLogoId/44df6d60-4c20-4590-b5d1-439796a6eae9_gujju-logo.svg",
+    "logoLight": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/headerLogoId/44df6d60-4c20-4590-b5d1-439796a6eae9_gujju-logo.svg",
+    "logoDark": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/darkThemeLogoId/adfa5ffd-232b-4cff-a0ce-cac1d4c8fc05_gujju-logo.svg",
+    "favicon": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/faviconId/7e70a77e-d7fc-4b21-a364-497a69d296b2_favicon.ico",
+    "ogImage": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/headerLogoId/44df6d60-4c20-4590-b5d1-439796a6eae9_gujju-logo.svg",
+    "appIcon": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/iconId/fdad654c-a4f9-4abc-8633-b23a28a38107_gujju-logo.svg",
+    "appSplash": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/headerLogoId/44df6d60-4c20-4590-b5d1-439796a6eae9_gujju-logo.svg",
+    "adaptiveIcon": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/iconId/fdad654c-a4f9-4abc-8633-b23a28a38107_gujju-logo.svg"
+  },
+  "layout": {
+    "headerVariant": "default",
+    "footerVariant": "columns",
+    "topBar": true,
+    "stickyHeader": true,
+    "pageWidth": "default"
+  },
+  "components": {
+    "home": [
+      {
+        "id": "hero-1",
+        "type": "hero",
+        "variant": "carousel",
+        "enabled": true,
+        "title": "",
+        "order": 1,
+        "props": {},
+        "maxItems": 1,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "search-1",
+        "type": "searchWidget",
+        "variant": "default",
+        "enabled": true,
+        "title": "Find Experiences",
+        "order": 2,
+        "props": {},
+        "maxItems": 1,
+        "platforms": [
+          "app"
+        ]
+      },
+      {
+        "id": "cats-1",
+        "type": "categoryList",
+        "variant": "chips",
+        "enabled": true,
+        "title": "Travel Styles",
+        "order": 3,
+        "props": {},
+        "maxItems": 8,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "tours-1",
+        "type": "tourCarousel",
+        "variant": "classic",
+        "enabled": true,
+        "title": "Featured Expeditions",
+        "order": 4,
+        "props": {},
+        "dataSource": "featuredTours",
+        "maxItems": 6,
+        "viewMore": {
+          "enabled": true,
+          "label": "View All Tours",
+          "targetUrl": "/tours"
+        },
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "dests-1",
+        "type": "destinationGrid",
+        "variant": "cards",
+        "enabled": true,
+        "title": "Trending Destinations",
+        "order": 5,
+        "props": {},
+        "dataSource": "destinations",
+        "maxItems": 8,
+        "viewMore": {
+          "enabled": true,
+          "label": "Explore Destinations",
+          "targetUrl": "/destinations"
+        },
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "offers-1",
+        "type": "offers",
+        "variant": "banner",
+        "enabled": true,
+        "title": "Exclusive Travel Deals",
+        "order": 6,
+        "props": {},
+        "maxItems": 3,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "reviews-1",
+        "type": "reviews",
+        "variant": "carousel",
+        "enabled": true,
+        "title": "Traveler Reviews",
+        "order": 7,
+        "props": {},
+        "maxItems": 6,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "badges-1",
+        "type": "partnersStrip",
+        "variant": "marquee",
+        "enabled": true,
+        "title": "Trusted Airline & Hotel Partners",
+        "order": 8,
+        "props": {},
+        "maxItems": 12,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "faq-1",
+        "type": "faq",
+        "variant": "accordion",
+        "enabled": true,
+        "title": "Frequently Asked Questions",
+        "order": 9,
+        "props": {},
+        "maxItems": 5,
+        "platforms": [
+          "web",
+          "app"
+        ]
+      },
+      {
+        "id": "footer-1",
+        "type": "footer",
+        "variant": "columns",
+        "enabled": true,
+        "title": "Footer",
+        "order": 10,
+        "props": {},
+        "platforms": [
+          "web"
+        ]
+      }
+    ],
+    "listing": [],
+    "detail": []
+  },
+  "navigation": {
+    "web": {
+      "menuItems": [
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Tours",
+          "href": "/tours"
+        },
+        {
+          "label": "Hotels",
+          "href": "/hotels"
+        },
+        {
+          "label": "Flights",
+          "href": "/flights"
+        },
+        {
+          "label": "Holidays",
+          "href": "/holidays"
+        },
+        {
+          "label": "My Bookings",
+          "href": "/my-bookings",
+          "requiresAuth": true
+        }
+      ],
+      "serviceTabs": [
+        {
+          "id": "tours",
+          "label": "Tours",
+          "href": "/tours",
+          "icon": "compass",
+          "enabled": true
+        },
+        {
+          "id": "hotels",
+          "label": "Hotels",
+          "href": "/hotels",
+          "icon": "business",
+          "enabled": true
+        },
+        {
+          "id": "flights",
+          "label": "Flights",
+          "href": "/flights",
+          "icon": "airplane",
+          "enabled": true
+        },
+        {
+          "id": "holidays",
+          "label": "Holidays",
+          "href": "/holidays",
+          "icon": "calendar",
+          "enabled": true
+        },
+        {
+          "id": "transfers",
+          "label": "Transfers",
+          "href": "/transfers",
+          "icon": "car",
+          "enabled": true
+        },
+        {
+          "id": "visas",
+          "label": "Visas",
+          "href": "/visas",
+          "icon": "document-text",
+          "enabled": true
+        }
+      ],
+      "footerColumns": [
+        {
+          "title": "Popular Expeditions",
+          "links": [
+            {
+              "label": "Dubai Desert Safari",
+              "href": "/tours/dubai-desert-safari"
+            },
+            {
+              "label": "Abu Dhabi City Tour",
+              "href": "/tours/abu-dhabi-city-tour"
+            },
+            {
+              "label": "Marina Dhow Cruise",
+              "href": "/tours/marina-dhow-cruise"
+            }
+          ]
+        },
+        {
+          "title": "Corporate & MICE",
+          "links": [
+            {
+              "label": "MICE Services",
+              "href": "/mice"
+            },
+            {
+              "label": "Group Bookings",
+              "href": "/group-planning"
+            },
+            {
+              "label": "B2B Partner Portal",
+              "href": "/admin/login"
+            }
+          ]
+        },
+        {
+          "title": "Guest Care & Legal",
+          "links": [
+            {
+              "label": "Privacy Policy",
+              "href": "/privacy"
+            },
+            {
+              "label": "Terms of Service",
+              "href": "/terms"
+            },
+            {
+              "label": "Cancellation Rules",
+              "href": "/cancellation"
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com/gujjutours"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/gujjutours"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://youtube.com/@gujjutours"
+        }
+      ]
+    },
+    "app": {
+      "tabs": [
+        {
+          "id": "home",
+          "label": "Home",
+          "icon": "home-outline",
+          "activeIcon": "home",
+          "route": "(tabs)/index",
+          "enabled": true,
+          "order": 1
+        },
+        {
+          "id": "explore",
+          "label": "Explore",
+          "icon": "compass-outline",
+          "activeIcon": "compass",
+          "route": "(tabs)/explore",
+          "enabled": true,
+          "order": 2
+        },
+        {
+          "id": "bookings",
+          "label": "Bookings",
+          "icon": "calendar-outline",
+          "activeIcon": "calendar",
+          "route": "(tabs)/bookings",
+          "enabled": true,
+          "order": 3,
+          "badgeKey": "upcomingCount"
+        },
+        {
+          "id": "wishlist",
+          "label": "Wishlist",
+          "icon": "heart-outline",
+          "activeIcon": "heart",
+          "route": "(tabs)/wishlist",
+          "enabled": true,
+          "order": 4,
+          "badgeKey": "wishlistCount"
+        },
+        {
+          "id": "profile",
+          "label": "Profile",
+          "icon": "person-outline",
+          "activeIcon": "person",
+          "route": "(tabs)/profile",
+          "enabled": true,
+          "order": 5
+        }
+      ],
+      "profileMenu": [
+        {
+          "id": "bookings",
+          "label": "My Bookings",
+          "icon": "calendar-outline",
+          "route": "/(tabs)/bookings",
+          "enabled": true,
+          "section": "account"
+        },
+        {
+          "id": "wishlist",
+          "label": "Saved Wishlists",
+          "icon": "heart-outline",
+          "route": "/(tabs)/wishlist",
+          "enabled": true,
+          "section": "account"
+        },
+        {
+          "id": "appearance",
+          "label": "Appearance & Display",
+          "icon": "contrast-outline",
+          "route": "/(tabs)/profile",
+          "enabled": true,
+          "section": "preferences"
+        },
+        {
+          "id": "language",
+          "label": "Language & Currency",
+          "icon": "globe-outline",
+          "route": "/(tabs)/profile",
+          "enabled": true,
+          "section": "preferences"
+        },
+        {
+          "id": "concierge",
+          "label": "Concierge Desk",
+          "icon": "chatbubbles-outline",
+          "route": "/(tabs)/profile",
+          "enabled": true,
+          "section": "support"
+        },
+        {
+          "id": "privacy",
+          "label": "Privacy & Terms",
+          "icon": "shield-checkmark-outline",
+          "route": "/about",
+          "enabled": true,
+          "section": "legal"
+        }
+      ]
+    }
+  },
+  "features": {
+    "hotels": true,
+    "tours": true,
+    "packages": true,
+    "flights": true,
+    "transfers": true,
+    "visas": true,
+    "restaurants": false,
+    "rentals": false,
+    "insurance": false,
+    "buildPackage": false,
+    "bookingApproval": true,
+    "wishlist": true,
+    "reviews": true,
+    "promoCodes": true,
+    "conciergeChat": true,
+    "languageSwitch": true,
+    "currencySwitch": true,
+    "darkModeToggle": true,
+    "biometricLogin": false,
+    "pushNotifications": true
+  },
+  "content": {
+    "banners": [
+      {
+        "id": "banner-gujju-1",
+        "title": "Dubai Luxury Desert Safari",
+        "subtitle": "Save up to 25% with code DUBAI2026",
+        "code": "DUBAI2026",
+        "discount": "25% OFF",
+        "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+        "targetUrl": "/tours/dubai-desert-safari",
+        "enabled": true
+      },
+      {
+        "id": "banner-gujju-2",
+        "title": "Abu Dhabi Ferrari World Grand Tour",
+        "subtitle": "Fast-track access with private luxury transfer",
+        "code": "YAS2026",
+        "discount": "15% OFF",
+        "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=80",
+        "targetUrl": "/tours",
+        "enabled": true
+      }
+    ],
+    "trustBadges": [
+      {
+        "icon": "shield-checkmark",
+        "title": "100% Verified Tours",
+        "description": "Instant ticket confirmation with full operator credentials."
+      },
+      {
+        "icon": "time",
+        "title": "24/7 Dedicated Concierge",
+        "description": "Reach our desk anytime via WhatsApp and phone."
+      },
+      {
+        "icon": "card",
+        "title": "Zero Hidden Fees",
+        "description": "Transparent pricing with all local taxes included."
+      },
+      {
+        "icon": "refresh",
+        "title": "Flexible Free Cancellation",
+        "description": "Cancel or reschedule with zero fee up to 48 hours prior."
+      }
+    ],
+    "partners": [
+      {
+        "name": "Emirates",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Emirates_logo.svg"
+      },
+      {
+        "name": "Air India",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Air_India_2023.svg"
+      },
+      {
+        "name": "IndiGo",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/IndiGo_Airlines_logo.svg"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I receive my booking voucher?",
+        "answer": "Your digital voucher with QR access code is sent immediately via email and accessible in your account."
+      },
+      {
+        "question": "Is pickup included for the desert safari?",
+        "answer": "Yes, 4x4 pickup from your hotel lobby in Dubai or Sharjah is included in all safari packages."
+      },
+      {
+        "question": "What is the child policy for activities?",
+        "answer": "Children under 3 are free of charge. Child rates apply for ages 3-11."
+      }
+    ],
+    "bookingAddOns": [
+      {
+        "id": "addon-buffet",
+        "name": "VIP Gourmet Buffet Dinner",
+        "price": 45,
+        "currency": "INR",
+        "description": "5-star international barbecue dinner under the stars",
+        "icon": "restaurant-outline"
+      },
+      {
+        "id": "addon-transfer",
+        "name": "Private Mercedes Transfer",
+        "price": 75,
+        "currency": "INR",
+        "description": "Exclusive luxury door-to-door vehicle upgrade",
+        "icon": "car-sport-outline"
+      }
+    ],
+    "concierge": {
+      "name": "Aarav Patel",
+      "title": "Senior Regional Travel Specialist",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces",
+      "phone": "+91 9875095616",
+      "whatsapp": "+91 9875095616",
+      "email": "concierge@gujjutours.com",
+      "welcomeMessage": "Namaste! I am Aarav from Gujju Tours. How can I craft your perfect holiday itinerary today?"
+    },
+    "contact": {
+      "phone": "+91 9875095616",
+      "email": "support@gujjutours.com",
+      "address": "Sandhya Wad, Bilimora - Chikhli Rd, Gujarat, India",
+      "supportHours": "24/7 Dedicated Support"
+    },
+    "cancellationPolicy": "Free cancellation up to 48 hours before departure. Cancellations within 48 hours are subject to a 20% processing fee.",
+    "termsUrl": "/terms",
+    "privacyUrl": "/privacy",
+    "deleteAccountUrl": "/delete-account"
+  },
+  "seo": {
+    "titleTemplate": "%s | Gujju Tours",
+    "defaultTitle": "Gujju Tours - Extraordinary Adventures & Bespoke Holidays",
+    "defaultDescription": "Book bespoke desert safaris, luxury hotels, flights, and authentic regional tours.",
+    "keywords": [
+      "gujjutours",
+      "dubai safari",
+      "abu dhabi tours",
+      "gujarat travel agency"
+    ],
+    "ogImage": "https://d3bfv5x1dw8ekm.cloudfront.net/uploads/a29cd3ee-d050-a34a-3a53-3a20e4faf5f3/WebsiteMaster/headerLogoId/44df6d60-4c20-4590-b5d1-439796a6eae9_gujju-logo.svg",
+    "twitterHandle": "@gujjutours"
+  },
+  "integrations": {
+    "googleAnalyticsId": "G-GUJJUTOURS"
+  },
+  "app": {
+    "minSupportedVersion": "1.0.0",
+    "latestVersion": "1.0.0",
+    "forceUpdate": false,
+    "forceUpdateMessage": "A critical update is required. Please download the latest version to continue.",
+    "maintenance": false,
+    "maintenanceMessage": "Our systems are currently undergoing scheduled maintenance. Please check back shortly.",
+    "storeUrls": {
+      "ios": "https://apps.apple.com/app/gujjutours/id123456789",
+      "android": "https://play.google.com/store/apps/details?id=com.gujjutours.app"
+    },
+    "deepLinkScheme": "gujjutours",
+    "supportEmail": "support@gujjutours.com"
+  },
+  "featureRegistry": [
+    {
+      "id": "hotels",
+      "type": "service",
+      "label": {
+        "en": "Hotels"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/46d3edfc-3992-41af-bd18-c67eea78aaaa_hotes.svg",
+        "fallbackKey": "Building2"
+      },
+      "route": "/en/hotels",
+      "order": 1,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "hotel",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "packages",
+      "type": "service",
+      "label": {
+        "en": "Packages"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/b1ec27e2-cf65-4f7f-aa6a-605bb1a49ae7_packages.svg",
+        "fallbackKey": "Luggage"
+      },
+      "route": "/en/holidays",
+      "order": 2,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "holiday",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "activities",
+      "type": "service",
+      "label": {
+        "en": "Activities"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/06059695-1bc7-4d9f-a49d-64901f4682df_activites.svg",
+        "fallbackKey": "Compass"
+      },
+      "route": "/en/tours",
+      "order": 3,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "tour",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "flights",
+      "type": "service",
+      "label": {
+        "en": "Flight"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/df2a9fc9-ea04-45b6-b51f-6156a598cfa2_flight.svg",
+        "fallbackKey": "Plane"
+      },
+      "route": "/en/flights",
+      "order": 4,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "flight",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "transfers",
+      "type": "service",
+      "label": {
+        "en": "Transfer"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/ea346d04-18fa-48ef-aa2a-6045330e70ca_transfer.svg",
+        "fallbackKey": "Car"
+      },
+      "route": "/en/transfers",
+      "order": 5,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "transfer",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "visas",
+      "type": "service",
+      "label": {
+        "en": "Visa"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/17320f86-2776-4740-a359-59eb482a8848_visa.svg",
+        "fallbackKey": "FileText"
+      },
+      "route": "/en/visas",
+      "order": 6,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "restaurants",
+      "type": "service",
+      "label": {
+        "en": "Restaurant"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/f6264ff0-aa33-4f5a-8b1b-193aa4367eb6_restaurant.svg",
+        "fallbackKey": "Utensils"
+      },
+      "route": "/en/restaurants",
+      "order": 7,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "buildpackage",
+      "type": "service",
+      "label": {
+        "en": "Build Package"
+      },
+      "icon": {
+        "url": "https://stagingimage.gujjutours.com/uploads/f61c3fdc-c9e5-41e9-92c2-83b68f566164_build_package.svg",
+        "fallbackKey": "Hammer"
+      },
+      "route": "/en/buildpackage",
+      "order": 8,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "car-rental",
+      "type": "service",
+      "label": {
+        "en": "Car Rental"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Car"
+      },
+      "route": "/en/car-rental",
+      "order": 9,
+      "enabled": false,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "car",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "remote_api"
+    },
+    {
+      "id": "whatsapp-chat",
+      "type": "module",
+      "label": {
+        "en": "WhatsApp Concierge"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "MessageCircle"
+      },
+      "route": "https://wa.me/919825111370",
+      "order": 17,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "search",
+      "type": "module",
+      "label": {
+        "en": "Search Experiences"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Search"
+      },
+      "route": "/search",
+      "order": 10,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "bookings",
+      "type": "module",
+      "label": {
+        "en": "Online Bookings"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Calendar"
+      },
+      "route": "/booking",
+      "order": 11,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": true,
+      "roles": [
+        "Customer",
+        "Admin"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "my-bookings",
+      "type": "module",
+      "label": {
+        "en": "My Bookings"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Ticket"
+      },
+      "route": "/my-bookings",
+      "order": 12,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [
+        "bookings"
+      ],
+      "requiresAuth": true,
+      "roles": [
+        "Customer",
+        "Admin"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "booking-approval",
+      "type": "module",
+      "label": {
+        "en": "Booking Approval Workflow"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "CheckCircle"
+      },
+      "route": "/admin/bookings",
+      "order": 13,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [
+        "bookings"
+      ],
+      "requiresAuth": true,
+      "roles": [
+        "Admin"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "wishlist",
+      "type": "module",
+      "label": {
+        "en": "Saved Wishlist"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Heart"
+      },
+      "route": "/wishlist",
+      "order": 14,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "reviews",
+      "type": "module",
+      "label": {
+        "en": "Traveler Reviews"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Star"
+      },
+      "route": "/reviews",
+      "order": 15,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "promo-codes",
+      "type": "module",
+      "label": {
+        "en": "Promo Codes & Discounts"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Tag"
+      },
+      "route": "/offers",
+      "order": 16,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": true,
+      "searchType": "none",
+      "dependsOn": [
+        "bookings"
+      ],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "currency-switch",
+      "type": "module",
+      "label": {
+        "en": "Currency Switcher"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Coins"
+      },
+      "route": "",
+      "order": 18,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "language-switch",
+      "type": "module",
+      "label": {
+        "en": "Language Switcher"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Globe"
+      },
+      "route": "",
+      "order": 19,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "admin",
+      "type": "module",
+      "label": {
+        "en": "Admin Portal"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Shield"
+      },
+      "route": "/admin",
+      "order": 20,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": true,
+      "roles": [
+        "Admin"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "about",
+      "type": "page",
+      "label": {
+        "en": "About Us"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Info"
+      },
+      "route": "/en/about-us",
+      "order": 21,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "contact",
+      "type": "page",
+      "label": {
+        "en": "Contact Us"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Phone"
+      },
+      "route": "/en/contact-us",
+      "order": 22,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": true,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "privacy",
+      "type": "page",
+      "label": {
+        "en": "Privacy Policy"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "Lock"
+      },
+      "route": "/en/privacy-policy",
+      "order": 23,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    },
+    {
+      "id": "terms",
+      "type": "page",
+      "label": {
+        "en": "Terms & Conditions"
+      },
+      "icon": {
+        "url": "",
+        "fallbackKey": "FileText"
+      },
+      "route": "/en/termsandconditions",
+      "order": 24,
+      "enabled": true,
+      "platforms": [
+        "web",
+        "app"
+      ],
+      "visibleInNav": false,
+      "visibleOnHome": false,
+      "searchType": "none",
+      "dependsOn": [],
+      "requiresAuth": false,
+      "roles": [
+        "Public"
+      ],
+      "provider": "local_backend"
+    }
+  ]
+}

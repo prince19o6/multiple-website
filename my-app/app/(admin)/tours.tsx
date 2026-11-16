@@ -217,7 +217,7 @@ export default function AdminToursScreen() {
             onChangeText={setSearch}
           />
         </View>
-        <TouchableOpacity style={styles.addBtn} onPress={openCreateModal} activeOpacity={0.88}>
+        <TouchableOpacity testID="btn-add" accessibilityLabel="add" style={styles.addBtn} onPress={openCreateModal} activeOpacity={0.88}>
           <Ionicons name="add" size={18} color="#ffffff" />
           <Text style={styles.addBtnText}>New Tour</Text>
         </TouchableOpacity>
@@ -259,7 +259,7 @@ export default function AdminToursScreen() {
                 </View>
 
                 <View style={styles.btnRow}>
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-create-outline" accessibilityLabel="create outline"
                     style={styles.actionBtn}
                     onPress={() => openEditModal(item)}
                   >
@@ -267,7 +267,7 @@ export default function AdminToursScreen() {
                     <Text style={styles.actionBtnText}>Edit</Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-copy-outline" accessibilityLabel="copy outline"
                     style={styles.actionBtn}
                     onPress={() => handleDuplicate(item)}
                   >
@@ -275,7 +275,7 @@ export default function AdminToursScreen() {
                     <Text style={[styles.actionBtnText, { color: '#7c3aed' }]}>Copy</Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-trash-outline" accessibilityLabel="trash outline"
                     style={[styles.actionBtn, styles.deleteBtn]}
                     onPress={() => handleDelete(item.id, item.name)}
                   >
@@ -302,7 +302,7 @@ export default function AdminToursScreen() {
               <Text style={styles.modalTitle}>
                 {editingTour ? 'Edit Tour Package' : 'Create New Tour'}
               </Text>
-              <TouchableOpacity onPress={() => setModalVisible(false)}>
+              <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={() => setModalVisible(false)}>
                 <Ionicons name="close" size={24} color="#64748b" />
               </TouchableOpacity>
             </View>
@@ -357,7 +357,7 @@ export default function AdminToursScreen() {
               />
 
               <View style={styles.checkboxRow}>
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-tours-360" accessibilityLabel="tours action"
                   style={styles.checkboxItem}
                   onPress={() => setFeatured(!featured)}
                 >
@@ -369,7 +369,7 @@ export default function AdminToursScreen() {
                   <Text style={styles.checkboxLabel}>Featured</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-tours-372" accessibilityLabel="tours action"
                   style={styles.checkboxItem}
                   onPress={() => setPopular(!popular)}
                 >
@@ -382,7 +382,7 @@ export default function AdminToursScreen() {
                 </TouchableOpacity>
               </View>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-save" accessibilityLabel="Save"
                 style={styles.saveBtn}
                 onPress={handleSave}
                 disabled={saving}

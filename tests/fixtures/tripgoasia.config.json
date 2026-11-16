@@ -1,0 +1,42 @@
+{
+  "site": {
+    "id": "tripgoasia",
+    "name": "TripGo Asia",
+    "hostnames": ["www.tripgoasia.com", "tripgoasia.com"],
+    "defaultLanguage": "en",
+    "languages": ["en", "th", "vi"],
+    "currency": "USD",
+    "currencySymbol": "$",
+    "timeZone": "Asia/Bangkok"
+  },
+  "theme": {
+    "primary": "#FF932C",
+    "secondary": "#ea580c",
+    "accent": "#10b981",
+    "background": "#ffffff",
+    "surface": "#ffffff",
+    "text": "#0f172a",
+    "mutedText": "#64748b",
+    "border": "#e2e8f0"
+  },
+  "typography": {
+    "heading": "Poppins",
+    "body": "Inter"
+  },
+  "assets": {
+    "logoLight": "https://d21bqxhdty55n7.cloudfront.net/uploads/tripgo-logo.svg",
+    "logoDark": "https://d21bqxhdty55n7.cloudfront.net/uploads/tripgo-logo-dark.svg",
+    "favicon": "https://d21bqxhdty55n7.cloudfront.net/uploads/favicon.ico"
+  },
+  "layout": {
+    "headerVariant": "standard",
+    "footerVariant": "multi-column"
+  },
+  "modules": [
+    { "id": "tours", "enabled": true },
+    { "id": "hotels", "enabled": true },
+    { "id": "transfers", "enabled": true },
+    { "id": "holidays", "enabled": true }
+  ]
+}
+

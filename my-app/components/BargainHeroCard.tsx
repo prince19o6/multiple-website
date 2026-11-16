@@ -76,7 +76,7 @@ export const BargainHeroCard: React.FC<BargainHeroCardProps> = ({ style }) => {
           )}
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-phone-portrait-outline"
           style={styles.flashcardQuickBtn}
           onPress={handleQuickFlashcard}
           activeOpacity={0.8}
@@ -91,7 +91,7 @@ export const BargainHeroCard: React.FC<BargainHeroCardProps> = ({ style }) => {
       </View>
 
       {/* Main Title & Teaser */}
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-openhub" accessibilityLabel="Open Hub"
         onPress={handleOpenHub}
         activeOpacity={0.9}
         style={styles.mainTouchable}
@@ -114,7 +114,7 @@ export const BargainHeroCard: React.FC<BargainHeroCardProps> = ({ style }) => {
 
       {/* Footer Action Bar */}
       <View style={[styles.footerBar, { borderTopColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-calculator-outline"
           style={[styles.fullActionBtn, { backgroundColor: colors.primary }]}
           onPress={handleOpenHub}
           activeOpacity={0.85}

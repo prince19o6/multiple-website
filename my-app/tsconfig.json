@@ -14,6 +14,7 @@
     "skipLibCheck": true,
     "target": "ESNext",
     "strict": true,
+    "types": ["node"],
     "paths": {
       "@/*": [
         "./*"

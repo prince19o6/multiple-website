@@ -11,6 +11,7 @@ import { ENV } from "@/lib/env";
 const PASSTHROUGH_PREFIXES = [
   "/_next",
   "/api",
+  "/booking-action",
   "/env-error",
   "/favicon.ico",
   "/robots.txt",
@@ -69,10 +70,17 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // 3c. Localhost, 127.0.0.1, LAN IPs, or any unrouted dev hosts: resolve directly from SITE_ID in .env
+  // 3c. Explicit path segment site routing in local/dev (e.g. /tripgoasia, /gujjutours, /technoheaven)
+  const pathFirstSegment = pathname.split("/").filter(Boolean)[0] || "";
+  const pathSite = (ENV.isDev || isPrivateOrLocalHost(normalizedHost)) ? getSiteById(pathFirstSegment) : null;
+  if (!site && pathSite) {
+    site = pathSite;
+    resolutionSource = "env";
+  }
+
+  // 3d. Localhost, 127.0.0.1, LAN IPs, or any unrouted dev hosts: resolve directly from SITE_ID in .env
   if (!site && (ENV.isDev || isPrivateOrLocalHost(normalizedHost))) {
     if (!ENV.isSiteIdValid || !ENV.siteId) {
-      // Missing or invalid SITE_ID in .env: rewrite immediately to /env-error
       const errorUrl = request.nextUrl.clone();
       errorUrl.pathname = "/env-error";
       const errRes = NextResponse.rewrite(errorUrl);
@@ -84,7 +92,7 @@ export function middleware(request: NextRequest) {
     resolutionSource = "env";
   }
 
-  // 3d. Unknown host in Production
+  // 3e. Unknown host in Production
   if (!site) {
     return new NextResponse(
       `Unknown website hostname: "${normalizedHost}". Host is not registered.`,
@@ -95,12 +103,26 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  // 4. Admin routes (/admin, /admin/**) pass through to the shared admin app directly
+  // 4. Admin routes (/admin, /admin/**) guarded and scoped to active site
   if (pathname === "/admin" || pathname.startsWith("/admin/")) {
-    if (ENV.isDev) {
-      console.log(
-        `[DEBUG] Incoming path: "${pathname}" | Resolved site: "${site.siteId}" (${site.backendHostname}) | Action: pass-through admin route`
-      );
+    const isLoginOrAuth = pathname === "/admin/login" || pathname === "/admin/unauthorized";
+    const adminToken = request.cookies.get(`admin_token_${site.siteId}`)?.value || request.cookies.get("admin_token")?.value;
+
+    if (!adminToken && !isLoginOrAuth) {
+      const returnUrl = encodeURIComponent(pathname + (request.nextUrl.search || ""));
+      const loginUrl = new URL(`/admin/login?returnUrl=${returnUrl}`, request.url);
+      const redirectRes = NextResponse.redirect(loginUrl);
+      redirectRes.cookies.set("admin_active_site", site.siteId, {
+        path: "/",
+        sameSite: "lax",
+        maxAge: 86400,
+      });
+      return redirectRes;
+    }
+
+    if (adminToken && pathname === "/admin/login") {
+      const dashboardUrl = new URL("/admin", request.url);
+      return NextResponse.redirect(dashboardUrl);
     }
 
     const requestHeaders = new Headers(request.headers);
@@ -129,17 +151,36 @@ export function middleware(request: NextRequest) {
   }
 
   // 5. Clean path (if someone navigates to legacy /chooser, redirect to root)
-  const cleanPath = pathname === "/chooser" ? "/" : pathname;
+  let cleanPath = pathname === "/chooser" ? "/" : pathname;
+  if (pathSite && cleanPath.startsWith(`/${pathSite.siteId}`)) {
+    cleanPath = cleanPath.slice(pathSite.siteId.length + 1) || "/";
+  }
+
+  const LEGACY_SITE_ROUTES = [
+    "/about",
+    "/booking",
+    "/bookings",
+    "/category",
+    "/contact",
+    "/explore",
+    "/my-bookings",
+    "/reset-password",
+    "/tour",
+  ];
+
+  // Canonical language prefix: if navigating to root "/", rewrite internally to "/en"
+  if (cleanPath === "/" || cleanPath === "") {
+    cleanPath = "/en";
+  } else if (
+    !/^\/(en|ar|hi|gu)(\/|$)/.test(cleanPath) &&
+    !LEGACY_SITE_ROUTES.some((p) => cleanPath === p || cleanPath.startsWith(`${p}/`))
+  ) {
+    cleanPath = `/en${cleanPath}`;
+  }
 
   // 6. Internally rewrite to dynamic site route segment `/${site.siteId}${cleanPath}`
   const targetUrl = request.nextUrl.clone();
-  targetUrl.pathname = `/${site.siteId}${cleanPath === "/" ? "" : cleanPath}`;
-
-  if (ENV.isDev) {
-    console.log(
-      `[DEBUG] Incoming path: "${pathname}" | Resolved site: "${site.siteId}" (${site.backendHostname}) | Rewritten path: "${targetUrl.pathname}"`
-    );
-  }
+  targetUrl.pathname = `/${site.siteId}${cleanPath}`;
 
   const response = NextResponse.rewrite(targetUrl);
   response.headers.set("x-site-id", site.siteId);
@@ -152,13 +193,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except:
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - public assets with extensions (.svg, .png, .jpg, .jpeg, .gif, .webp, .ico, .woff, .woff2)
-     */
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|woff|woff2)$).*)",
   ],
 };

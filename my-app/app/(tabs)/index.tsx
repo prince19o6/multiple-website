@@ -1,561 +1,154 @@
 /**
  * app/(tabs)/index.tsx
  *
- * Home screen for the native mobile application.
- * Architected with a dynamic Section Registry pattern for maximum scanability:
- *   - Fixed top hero card & compact search trigger
- *   - 5-item Quick Actions grid with "All Tools" bottom sheet trigger (TravelHubModal)
- *   - Virtualized vertical FlatList rendering sections according to tenant configuration
- *   - Categories horizontal filter
- *   - Featured Expeditions horizontal list (max 5 cards + "See all" -> /featured-tours)
- *   - Popular Destinations horizontal list (max 6 cards + "See all" -> /destinations)
- *   - Curated Seasonal Deals promo card ("View more" -> /special-offers)
- *   - Personalized block (Trip Countdown & Recently Viewed — 100% hidden when empty)
- *   - "More for You" collapsible accordion (Culinary, Culture, Concierge) with session persistence
- *   - Full TravelHubModal containing all 18+ specialized utilities
- *   - Isolated skeletons, empty states, and per-section error boundaries with Retry
+ * Fully responsive, module-driven Home screen for the ToursApp mobile application.
+ * Multi-tenant aware: Gujju Tours, TripGoAsia, Technoheaven.
+ *
+ * Features:
+ * - Module selector strip at top: horizontal scrollable chips for all enabled modules.
+ * - Dynamic module content below selector driven by GET /api/core/v1/home?module={module}.
+ * - Instant module switching with zero layout shift (cached per module + tenant).
+ * - React Query skeleton loaders on initial load.
+ * - Safe error state with Retry button (never fakes success on API failure).
+ * - Polished empty state if a module returns no content.
+ * - Module Hero Banner with specialized search widget.
+ * - Category Chips carousel.
+ * - Special Offers / Banners carousel.
+ * - Featured Items horizontal card list powered by unified ModuleItemCard.
+ * - Destinations and Curated Packages sections.
+ * - Video highlights, verified traveler reviews, and FAQs.
+ * - Pull-to-refresh that invalidates query cache and refetches tenant data.
+ * - Global modals (TravelHubModal, MobileEnquirySheet, MobileFloatingWhatsApp).
+ * - Integrated native app Footer.
  */
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
-  FlatList,
+  TextInput,
   TouchableOpacity,
   ScrollView,
+  FlatList,
   RefreshControl,
-  LayoutAnimation,
+  StyleSheet,
   Platform,
   UIManager,
+  Dimensions,
 } from 'react-native';
-import { Image as ExpoImage } from 'expo-image';
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { useQueryClient } from '@tanstack/react-query';
 import { Ionicons } from '@expo/vector-icons';
+import * as Haptics from 'expo-haptics';
+
 import { useSite, useSiteConfig } from '@/store/SiteConfigContext';
 import { useColors } from '@/store/ThemeContext';
-import { useTours } from '@/hooks/useTours';
-import { useDestinations } from '@/hooks/useDestinations';
-import { useBooking } from '@/context/BookingContext';
 import { useCurrency } from '@/context/CurrencyContext';
-import { useLanguage } from '@/context/LanguageContext';
-import { queryKeys } from '@/store/queryClient';
-import { getSiteEntry } from '@/constants/siteRegistry';
-import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
-import { getHeadingFontFamily } from '@/lib/sectionHelpers';
-import { DEFAULT_BLURHASH, resolveImageUrl } from '@/lib/imageUtils';
-import { tourHref } from '@/lib/navigation';
-import type { Tour } from '@/types';
-import type { DestinationItem } from '@/hooks/useDestinations';
-
-// Registry & Home Components
-import { resolveHomeSections, type HomeSection } from '@/constants/homeSections';
-import { SectionHeader } from '@/components/home/SectionHeader';
-import { HorizontalList } from '@/components/home/HorizontalList';
-import { QuickActionsGrid } from '@/components/home/QuickActionsGrid';
+import { useWishlist } from '@/context/WishlistContext';
+import { useActiveModule, ModuleSelectorStrip, type CanonicalModule } from '@/store/ModuleContext';
+import { HomeHeroSearchSection } from '@/components/home/HomeHeroSearchSection';
+import { useModuleHome } from '@/hooks/useModuleHome';
+import { ModuleItemCard } from '@/components/cards/ModuleItemCard';
+import { SkeletonItem } from '@/components/SkeletonLoader';
+import EmptyState from '@/components/EmptyState';
+import Footer from '@/components/Footer';
 import { TravelHubModal } from '@/components/home/TravelHubModal';
-import { CollapsibleSection } from '@/components/home/CollapsibleSection';
-import { ViewMoreButton } from '@/components/home/ViewMoreButton';
-import { TravelGuidesCards } from '@/components/home/TravelGuidesCards';
-import { SpecialOffersSection } from '@/components/home/SpecialOffersSection';
-import { RecentlyViewedSection } from '@/components/home/RecentlyViewedSection';
-import { SectionSkeleton } from '@/components/home/SectionSkeleton';
-
-// Card variants & Existing components
-import { MemoizedTourCardHorizontal as TourCardHorizontal } from '@/components/TourCardHorizontal';
-import UpcomingTripCountdown from '@/components/UpcomingTripCountdown';
-import { CulinaryHighlightCard } from '@/components/CulinaryHighlightCard';
-import { CultureHeroCard } from '@/components/CultureHeroCard';
-import { useConcierge } from '@/context/ConciergeContext';
+import { MobileFloatingWhatsApp } from '@/components/common/MobileFloatingWhatsApp';
+import { MobileEnquirySheet } from '@/components/common/MobileEnquirySheet';
+import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH } from '@/lib/imageUtils';
+import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
+import type { ModuleBanner, ModuleCategoryItem, ModuleDestinationItem, ModuleCuratedPackageItem } from '@/services/api';
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
 export default function HomeScreen() {
   const router = useRouter();
-  const config = useSiteConfig();
   const colors = useColors();
   const queryClient = useQueryClient();
-  const { siteId, hostname, currency: siteCurrency } = useSite();
-  const currentSite = getSiteEntry(siteId);
-  const { t } = useLanguage();
-  const headingFontFamily = getHeadingFontFamily(config);
-  const { openConcierge } = useConcierge();
+  const { siteId, hostname, siteName } = useSite();
+  const config = useSiteConfig();
+  const { formatPrice } = useCurrency();
+  const { isWishlisted, toggleWishlist } = useWishlist();
+  const lastWishlistPressRef = useRef<number>(0);
 
-  const { currencySymbol } = useCurrency();
-  const currency = currencySymbol || siteCurrency?.symbol || '$';
+  const { activeModule, activeItem } = useActiveModule();
+  const { data, isLoading, isError, error, refetch, isFetching } = useModuleHome(activeModule);
 
-  // Live queries
-  const {
-    tours,
-    isLoading: toursLoading,
-    isError: toursIsError,
-    error: toursError,
-    refetch: refetchTours,
-  } = useTours();
+  // Search input state per module
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedFaqId, setExpandedFaqId] = useState<string | null>(null);
 
-  const {
-    destinations,
-    isLoading: destsLoading,
-    isError: destsIsError,
-    error: destsError,
-    refetch: refetchDests,
-  } = useDestinations();
-
-  const { bookings, refreshBookings } = useBooking();
-
-  // Local UI states
+  // Modals state
   const [refreshing, setRefreshing] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [travelHubVisible, setTravelHubVisible] = useState(false);
-  const [moreForYouExpanded, setMoreForYouExpanded] = useState(false);
+  const [enquiryVisible, setEnquiryVisible] = useState(false);
+  const [enquiryService, setEnquiryService] = useState('Custom Travel Package');
+
+  const handleOpenEnquiry = (serviceName?: string) => {
+    setEnquiryService(serviceName || `Booking for ${activeItem.label}`);
+    setEnquiryVisible(true);
+  };
 
   // Pull-to-refresh
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
       await Promise.all([
-        queryClient.invalidateQueries({ queryKey: queryKeys.tours(siteId, hostname) }),
-        queryClient.invalidateQueries({ queryKey: queryKeys.destinations(siteId, hostname) }),
-        queryClient.invalidateQueries({ queryKey: queryKeys.siteConfig(siteId, hostname) }),
+        queryClient.invalidateQueries({ queryKey: ['moduleHome', siteId] }),
+        refetch(),
       ]);
-      await Promise.all([refetchTours(), refetchDests(), refreshBookings()]);
     } finally {
       setRefreshing(false);
     }
-  }, [siteId, hostname, queryClient, refetchTours, refetchDests, refreshBookings]);
+  }, [siteId, queryClient, refetch]);
 
-  // Categories definition
-  const categories = useMemo(
-    () => [
-      { id: 'all', label: 'All', icon: 'compass-outline' as const },
-      { id: 'adventure', label: 'Adventure', icon: 'trail-sign-outline' as const },
-      { id: 'beach', label: 'Beach', icon: 'water-outline' as const },
-      { id: 'cultural', label: 'Cultural', icon: 'business-outline' as const },
-      { id: 'wildlife', label: 'Wildlife', icon: 'leaf-outline' as const },
-      { id: 'luxury', label: 'Luxury', icon: 'diamond-outline' as const },
-    ],
-    []
-  );
-
-  // Resolved dynamic section order
-  const sections = useMemo(() => {
-    return resolveHomeSections(config);
-  }, [config]);
-
-  // Filtered featured tours (capped to section maxItems)
-  const featuredToursList = useMemo(() => {
-    if (!tours || tours.length === 0) return [];
-    const filtered = tours.filter((t) => {
-      if (selectedCategory === 'All') return true;
-      const cat = (t.category || '').toLowerCase();
-      const target = selectedCategory.toLowerCase();
-      return cat === target || t.description?.toLowerCase().includes(target);
-    });
-    return filtered.slice(0, 5);
-  }, [tours, selectedCategory]);
-
-  // Capped destinations list (up to 10 destinations)
-  const destinationsList = useMemo(() => {
-    return (destinations || []).slice(0, 10);
-  }, [destinations]);
-
-  // Toggle "More for you" section
-  const handleToggleMoreForYou = () => {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-    setMoreForYouExpanded((prev) => !prev);
+  // Execute search
+  const handleSearchSubmit = () => {
+    if (!searchQuery.trim()) return;
+    router.push({
+      pathname: '/search-results',
+      params: {
+        type: activeItem.searchType || activeModule,
+        q: searchQuery.trim(),
+      },
+    } as any);
   };
 
-  // ─── Header Component (Welcome Card + Quick Actions) ───
-  const renderHeader = () => (
-    <View style={styles.headerWrap}>
-      {/* Welcome Search Card */}
-      <View
-        style={[
-          styles.heroCard,
-          {
-            backgroundColor: colors.surface,
-            borderColor: colors.border,
-          },
-        ]}
-      >
-        <View style={[styles.pillBadge, { backgroundColor: `${colors.primary}18` }]}>
-          <Ionicons name="sparkles" size={13} color={colors.primary} />
-          <Text style={[styles.pillBadgeText, { color: colors.primary }]}>
-            {currentSite?.themeName || 'Curated Expeditions'}
-          </Text>
-        </View>
-
-        <Text
-          style={[
-            styles.heroHeading,
-            { color: colors.heading, fontFamily: headingFontFamily },
-          ]}
-        >
-          {t('home_welcome', 'Where will you journey next?')}
-        </Text>
-
-        <Text style={[styles.heroSub, { color: colors.mutedText }]}>
-          {t(
-            'home_tagline',
-            'Discover verified tours, boutique stays, and authentic global adventures customized for you.'
-          )}
-        </Text>
-
-        {/* Compact Search Bar Trigger */}
-        <TouchableOpacity
-          style={[
-            styles.searchBarTrigger,
-            {
-              backgroundColor: colors.background,
-              borderColor: colors.border,
-            },
-          ]}
-          onPress={() => router.push('/(tabs)/explore')}
-          activeOpacity={0.85}
-          accessibilityRole="search"
-          accessibilityLabel="Search destination, tour or style"
-        >
-          <Ionicons name="search" size={18} color={colors.primary} style={{ marginRight: 8 }} />
-          <Text style={[styles.searchBarPlaceholder, { color: colors.mutedText }]}>
-            {t('action_search', 'Search by destination, tour or style...')}
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Quick Actions Row with 5th "All Tools" Hub Tile */}
-      <QuickActionsGrid onOpenTravelHub={() => setTravelHubVisible(true)} />
-    </View>
-  );
-
-  // ─── Section Renderer ───
-  const renderSection = ({ item }: { item: HomeSection }) => {
-    switch (item.id) {
-      case 'categories':
-        return (
-          <View style={styles.sectionWrap}>
-            <SectionHeader
-              title={item.title}
-              subtitle={item.subtitle}
-              headingFontFamily={headingFontFamily}
-              onSeeAll={() => router.push('/(tabs)/explore')}
-              seeAllText="All Filters"
-            />
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.chipsScroll}
-            >
-              {categories.map((cat) => {
-                const isSelected = selectedCategory === cat.label;
-                return (
-                  <TouchableOpacity
-                    key={cat.id}
-                    style={[
-                      styles.categoryChip,
-                      {
-                        backgroundColor: isSelected ? colors.primary : colors.surface,
-                        borderColor: isSelected ? colors.primary : colors.border,
-                      },
-                    ]}
-                    onPress={() => setSelectedCategory(cat.label)}
-                    activeOpacity={0.7}
-                    accessibilityRole="button"
-                    accessibilityState={{ selected: isSelected }}
-                  >
-                    <Ionicons
-                      name={cat.icon}
-                      size={14}
-                      color={isSelected ? '#ffffff' : colors.primary}
-                      style={{ marginRight: 6 }}
-                    />
-                    <Text
-                      style={[
-                        styles.chipText,
-                        {
-                          color: isSelected ? '#ffffff' : colors.heading,
-                          fontWeight: isSelected ? '700' : '500',
-                        },
-                      ]}
-                    >
-                      {cat.label}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </ScrollView>
-          </View>
-        );
-
-      case 'featuredTours':
-        if (toursLoading) {
-          return <SectionSkeleton />;
-        }
-        if (toursIsError) {
-          return (
-            <View
-              style={[
-                styles.errorCard,
-                { backgroundColor: `${colors.accent}12`, borderColor: colors.accent },
-              ]}
-            >
-              <Ionicons name="alert-circle-outline" size={24} color={colors.accent || '#ef4444'} />
-              <Text style={[styles.errorTitle, { color: colors.heading }]}>
-                Unable to load featured trips
-              </Text>
-              <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
-                {toursError?.message || 'Check network connection'}
-              </Text>
-              <TouchableOpacity
-                style={[styles.retryBtn, { backgroundColor: colors.primary }]}
-                onPress={() => refetchTours()}
-              >
-                <Text style={styles.retryBtnText}>Retry</Text>
-              </TouchableOpacity>
-            </View>
-          );
-        }
-        if (featuredToursList.length === 0) return null;
-
-        return (
-          <View style={styles.sectionWrap}>
-            <SectionHeader
-              title={item.title}
-              subtitle={item.subtitle}
-              headingFontFamily={headingFontFamily}
-              onSeeAll={() => router.push('/featured-tours' as any)}
-              seeAllText="See all"
-            />
-            <HorizontalList<Tour>
-              data={featuredToursList}
-              itemWidth={260}
-              keyExtractor={(t) => String(t.id)}
-              renderItem={({ item: tour }) => (
-                <TourCardHorizontal
-                  tour={tour}
-                  onPress={() => router.push(tourHref(tour) as any)}
-                  currency={currency}
-                />
-              )}
-            />
-          </View>
-        );
-
-      case 'destinations':
-        if (destsLoading) {
-          return <SectionSkeleton />;
-        }
-        if (destsIsError) {
-          return (
-            <View
-              style={[
-                styles.errorCard,
-                { backgroundColor: `${colors.accent}12`, borderColor: colors.accent },
-              ]}
-            >
-              <Ionicons name="alert-circle-outline" size={24} color={colors.accent || '#ef4444'} />
-              <Text style={[styles.errorTitle, { color: colors.heading }]}>
-                Unable to load destinations
-              </Text>
-              <TouchableOpacity
-                style={[styles.retryBtn, { backgroundColor: colors.primary }]}
-                onPress={() => refetchDests()}
-              >
-                <Text style={styles.retryBtnText}>Retry</Text>
-              </TouchableOpacity>
-            </View>
-          );
-        }
-        if (destinationsList.length === 0) return null;
-
-        return (
-          <View style={styles.sectionWrap}>
-            <SectionHeader
-              title={item.title}
-              subtitle={item.subtitle}
-              headingFontFamily={headingFontFamily}
-              onSeeAll={() => router.push('/destinations' as any)}
-              seeAllText="See all"
-            />
-            <HorizontalList<DestinationItem>
-              data={destinationsList}
-              itemWidth={150}
-              keyExtractor={(d, idx) => d.id || `dest_${idx}`}
-              renderItem={({ item: dest }) => (
-                <TouchableOpacity
-                  style={[
-                    styles.destCard,
-                    { backgroundColor: colors.surface, borderColor: colors.border },
-                  ]}
-                  onPress={() => router.push('/(tabs)/explore')}
-                  activeOpacity={0.85}
-                  accessibilityRole="button"
-                  accessibilityLabel={`${dest.name}, ${dest.tours} tours`}
-                >
-                  <ExpoImage
-                    source={{ uri: resolveImageUrl(dest.image) || undefined }}
-                    style={styles.destImage}
-                    contentFit="cover"
-                    transition={250}
-                    cachePolicy="memory-disk"
-                    placeholder={{ blurhash: DEFAULT_BLURHASH }}
-                  />
-                  <View style={styles.destOverlay} />
-                  <View style={styles.destTextContainer}>
-                    <Text style={styles.destName} numberOfLines={1}>
-                      {dest.name}
-                    </Text>
-                    <Text style={styles.destCount}>
-                      {dest.tours} {dest.tours === 1 ? 'Tour' : 'Tours'}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              )}
-            />
-          </View>
-        );
-
-      case 'offers':
-        return (
-          <View style={styles.sectionWrap}>
-            <SectionHeader
-              title={item.title}
-              subtitle={item.subtitle}
-              headingFontFamily={headingFontFamily}
-              onSeeAll={() => router.push('/special-offers' as any)}
-              seeAllText="All Deals"
-            />
-            <SpecialOffersSection
-              headingFontFamily={headingFontFamily}
-              onViewMore={() => router.push('/special-offers' as any)}
-            />
-          </View>
-        );
-
-      case 'personalized':
-        return (
-          <View style={styles.sectionWrap}>
-            {/* Countdown (renders only if an active booking exists) */}
-            <UpcomingTripCountdown bookings={bookings} />
-
-            {/* Recently Viewed (renders only if viewing history exists) */}
-            <RecentlyViewedSection headingFontFamily={headingFontFamily} />
-          </View>
-        );
-
-      case 'moreForYou':
-        return (
-          <View style={styles.moreForYouContainer}>
-            <SectionHeader
-              title={item.title}
-              subtitle={item.subtitle}
-              headingFontFamily={headingFontFamily}
-            />
-
-            {/* Curated horizontal travel guides (Culinary, Culture, Transit, Audio, Phrasebook, Pharmacy, Weather, Tipping) */}
-            <TravelGuidesCards headingFontFamily={headingFontFamily} />
-
-            {/* Collapsed deep-dive interactive widgets: expands in-place */}
-            {moreForYouExpanded ? (
-              <View style={styles.accordionList}>
-                {/* 1. Regional Culinary Trail Highlight */}
-                <CollapsibleSection
-                  title="Regional Culinary Trails"
-                  subtitle="Masterclass tastings, night markets & dining passes"
-                  icon="restaurant-outline"
-                  defaultExpanded={true}
-                  headingFontFamily={headingFontFamily}
-                >
-                  <CulinaryHighlightCard />
-                </CollapsibleSection>
-
-                {/* 2. Cultural Decorum & Temple Dress Codes */}
-                <CollapsibleSection
-                  title="Cultural Decorum & Dress Codes"
-                  subtitle="Sacred site modesty guidelines & polite local greetings"
-                  icon="sparkles-outline"
-                  defaultExpanded={false}
-                  headingFontFamily={headingFontFamily}
-                >
-                  <CultureHeroCard />
-                </CollapsibleSection>
-
-                {/* 3. Verified Traveler Reviews & Trust */}
-                <CollapsibleSection
-                  title="Verified Traveler Reviews"
-                  subtitle="Genuine reviews from 12,000+ satisfied explorers"
-                  icon="star-outline"
-                  defaultExpanded={false}
-                  headingFontFamily={headingFontFamily}
-                >
-                  <View style={styles.reviewBanner}>
-                    <Ionicons name="shield-checkmark" size={24} color={colors.primary} />
-                    <View style={{ flex: 1, marginLeft: 10 }}>
-                      <Text style={[styles.reviewScore, { color: colors.heading }]}>
-                        4.9 / 5.0 Average Rating
-                      </Text>
-                      <Text style={[styles.reviewSub, { color: colors.mutedText }]}>
-                        Based on verified post-trip guest submissions across all active itineraries.
-                      </Text>
-                    </View>
-                  </View>
-                </CollapsibleSection>
-
-                {/* 4. Travel Concierge & Live Support */}
-                <CollapsibleSection
-                  title="Travel Concierge & Support"
-                  subtitle="Instant AI itinerary assistance & emergency help"
-                  icon="headset-outline"
-                  defaultExpanded={false}
-                  headingFontFamily={headingFontFamily}
-                >
-                  <View style={styles.supportBox}>
-                    <Text style={[styles.supportTitle, { color: colors.heading }]}>
-                      Need tailored advice or custom booking arrangements?
-                    </Text>
-                    <TouchableOpacity
-                      style={[styles.conciergeBtn, { backgroundColor: colors.primary }]}
-                      onPress={() => openConcierge()}
-                      activeOpacity={0.8}
-                    >
-                      <Ionicons name="chatbubbles" size={16} color="#ffffff" style={{ marginRight: 6 }} />
-                      <Text style={styles.conciergeBtnText}>Talk to Concierge</Text>
-                    </TouchableOpacity>
-                  </View>
-                </CollapsibleSection>
-              </View>
-            ) : null}
-
-            {/* View More / Show Less Toggle Button for Deep-Dive Tools */}
-            <ViewMoreButton
-              isExpanded={moreForYouExpanded}
-              onPress={handleToggleMoreForYou}
-              moreText="View deep-dive guide tools"
-              lessText="Show fewer tools"
-            />
-          </View>
-        );
-
+  // Dynamic placeholder based on active module
+  const searchPlaceholder = useMemo(() => {
+    switch (activeModule) {
+      case 'hotels':
+        return 'Search luxury hotels, resorts, suites...';
+      case 'tours':
+        return 'Search top tours, desert safari, excursions...';
+      case 'packages':
+        return 'Search international & domestic holiday packages...';
+      case 'flights':
+        return 'Search airline routes, flight numbers...';
+      case 'transfers':
+        return 'Search airport cabs, private chauffeur...';
+      case 'visas':
+        return 'Search tourist e-visas by country...';
+      case 'restaurants':
+        return 'Search Jain & pure veg dining, rooftop tables...';
+      case 'buildpackage':
+        return 'Tell us your dream destinations...';
       default:
-        return null;
+        return `Search ${activeItem.label}...`;
     }
-  };
+  }, [activeModule, activeItem]);
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
-      {/* ─── Virtualized Home Feed ─── */}
-      <FlatList
-        data={sections}
-        keyExtractor={(item) => item.id}
-        renderItem={renderSection}
-        ListHeaderComponent={renderHeader}
+      <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.listContent}
-        initialNumToRender={4}
-        maxToRenderPerBatch={3}
-        windowSize={5}
+        contentContainerStyle={styles.scrollContent}
+        keyboardShouldPersistTaps="handled"
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -564,12 +157,523 @@ export default function HomeScreen() {
             colors={[colors.primary]}
           />
         }
-      />
+      >
+        {/* ─── 1. HERO BANNER & FLOATING MODULE SEARCH CARD (PIXEL-PERFECT MATCH) ─── */}
+        <HomeHeroSearchSection
+          onOpenTravelHub={() => setTravelHubVisible(true)}
+          onOpenEnquiry={handleOpenEnquiry}
+        />
 
-      {/* ─── Travel Hub Bottom Sheet Modal (Contains all 18 utility cards) ─── */}
+        {/* ─── LOADING STATE FOR FEED (SKELETONS) ─── */}
+        {isLoading && !data && (
+          <View style={styles.loadingContainer}>
+            {/* Categories Skeleton */}
+            <View style={styles.skeletonSection}>
+              <SkeletonItem width="35%" height={20} style={{ marginBottom: 12, marginLeft: SPACING.md }} />
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: SPACING.md, gap: 10 }}>
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <SkeletonItem key={i} width={100} height={38} borderRadius={RADIUS.full} />
+                ))}
+              </ScrollView>
+            </View>
+
+            {/* Cards Skeleton */}
+            <View style={styles.skeletonSection}>
+              <SkeletonItem width="45%" height={22} style={{ marginBottom: 12, marginLeft: SPACING.md }} />
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: SPACING.md, gap: 12 }}>
+                {[1, 2, 3].map((i) => (
+                  <View key={i} style={[styles.cardSkeletonItem, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+                    <SkeletonItem width="100%" height={140} borderRadius={0} />
+                    <View style={{ padding: 12, gap: 8 }}>
+                      <SkeletonItem width="50%" height={14} />
+                      <SkeletonItem width="80%" height={18} />
+                      <SkeletonItem width="40%" height={16} style={{ marginTop: 8 }} />
+                    </View>
+                  </View>
+                ))}
+              </ScrollView>
+            </View>
+          </View>
+        )}
+
+        {/* ─── INLINE ERROR STATE WITH RETRY (HERO & SEARCH REMAIN USABLE) ─── */}
+        {isError && !data && (
+          <View style={[styles.inlineErrorCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <Ionicons name="cloud-offline-outline" size={32} color={colors.primary} />
+            <Text style={[styles.inlineErrorTitle, { color: colors.heading }]}>
+              Unable to load {activeItem.label} catalog
+            </Text>
+            <Text style={[styles.inlineErrorDesc, { color: colors.mutedText }]}>
+              {error?.message || 'Please check your connection and try again.'}
+            </Text>
+            <TouchableOpacity
+              onPress={() => refetch()}
+              style={[styles.inlineRetryBtn, { backgroundColor: colors.primary }]}
+              accessibilityRole="button"
+              accessibilityLabel={`Retry loading ${activeItem.label}`}
+            >
+              <Text style={styles.inlineRetryBtnText}>Retry</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* ─── DYNAMIC MODULE-DRIVEN CONTENT ─── */}
+        {data && (
+          <View style={styles.moduleContent}>
+
+            {/* 2. CATEGORY CHIPS */}
+            {data.categories && data.categories.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <ScrollView
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={styles.categoriesScroll}
+                >
+                  {data.categories.map((cat: ModuleCategoryItem) => (
+                    <TouchableOpacity
+                      key={cat.slug}
+                      onPress={() => {
+                        router.push({
+                          pathname: '/search-results',
+                          params: { type: activeItem.searchType || activeModule, category: cat.slug },
+                        } as any);
+                      }}
+                      activeOpacity={0.8}
+                      style={[styles.categoryChip, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                      accessibilityRole="button"
+                      accessibilityLabel={`Category ${cat.name}`}
+                    >
+                      <Ionicons
+                        name={(cat.icon as any) || 'compass-outline'}
+                        size={15}
+                        color={colors.primary}
+                        style={{ marginRight: 6 }}
+                      />
+                      <Text style={[styles.categoryChipText, { color: colors.text }]}>{cat.name}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              </View>
+            )}
+
+            {/* 3. SPECIAL OFFERS / BANNERS */}
+            {data.banners && data.banners.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <ScrollView
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={styles.bannersScroll}
+                  pagingEnabled={Platform.OS === 'ios'}
+                >
+                  {data.banners.map((banner: ModuleBanner, bIdx: number) => (
+                    <TouchableOpacity
+                      key={`banner_${banner.id || ''}_${bIdx}`}
+                      activeOpacity={0.9}
+                      onPress={() => {
+                        if (banner.link) {
+                          router.push(banner.link as any);
+                        } else {
+                          handleOpenEnquiry(banner.title);
+                        }
+                      }}
+                      style={[
+                        styles.bannerCard,
+                        {
+                          width: SCREEN_WIDTH > 420 ? 360 : SCREEN_WIDTH - SPACING.md * 2,
+                          backgroundColor: colors.surface,
+                          borderColor: colors.border,
+                        },
+                      ]}
+                      accessibilityRole="button"
+                      accessibilityLabel={banner.title}
+                    >
+                      <Image
+                        source={{
+                          uri:
+                            resolveImageUrl(banner.imageUrl || (banner as any).image, undefined, {
+                              module: activeModule,
+                              title: banner.title,
+                            }) || PLACEHOLDER_IMAGE,
+                        }}
+                        style={styles.bannerImage}
+                        contentFit="cover"
+                        placeholder={{ blurhash: DEFAULT_BLURHASH }}
+                        transition={300}
+                      />
+                      <View style={styles.bannerOverlay}>
+                        {banner.badge ? (
+                          <View style={[styles.bannerBadge, { backgroundColor: colors.primary }]}>
+                            <Text style={styles.bannerBadgeText}>{banner.badge}</Text>
+                          </View>
+                        ) : null}
+                        <Text style={styles.bannerTitle} numberOfLines={2}>
+                          {banner.title}
+                        </Text>
+                        {banner.subtitle ? (
+                          <Text style={styles.bannerSubtitle} numberOfLines={1}>
+                            {banner.subtitle}
+                          </Text>
+                        ) : null}
+                        <View style={[styles.bannerCta, { backgroundColor: '#ffffff' }]}>
+                          <Text style={[styles.bannerCtaText, { color: colors.primary }]}>
+                            {banner.buttonText || 'Claim Offer'}
+                          </Text>
+                          <Ionicons name="arrow-forward" size={13} color={colors.primary} style={{ marginLeft: 4 }} />
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              </View>
+            )}
+
+            {/* 4. FEATURED ITEMS CAROUSEL */}
+            {data.featured && data.featured.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <View style={styles.sectionHeaderRow}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.sectionTitle, { color: colors.heading }]}>
+                      {data.meta?.collectionTitle || `Featured ${activeItem.label}`}
+                    </Text>
+                    <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
+                      {data.meta?.collectionSubtitle || `Top handpicked ${activeItem.label.toLowerCase()} for you.`}
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    onPress={() => {
+                      router.push({
+                        pathname: '/search-results',
+                        params: { type: activeItem.searchType || activeModule },
+                      } as any);
+                    }}
+                    style={styles.seeAllBtn}
+                    accessibilityRole="button"
+                    accessibilityLabel={`See all ${activeItem.label}`}
+                  >
+                    <Text style={[styles.seeAllText, { color: colors.primary }]}>See all</Text>
+                    <Ionicons name="chevron-forward" size={16} color={colors.primary} />
+                  </TouchableOpacity>
+                </View>
+
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  data={data.featured}
+                  keyExtractor={(item, idx) => `feat_${activeModule}_${item.id || item.slug || idx}_${idx}`}
+                  contentContainerStyle={styles.cardsFlatList}
+                  renderItem={({ item }) => (
+                    <ModuleItemCard
+                      module={activeModule}
+                      item={item}
+                      width={280}
+                      onAction={() => handleOpenEnquiry(item.title)}
+                    />
+                  )}
+                />
+              </View>
+            )}
+
+            {/* 5. DESTINATIONS SECTION */}
+            {data.destinations && data.destinations.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <View style={styles.sectionHeaderRow}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.sectionTitle, { color: colors.heading }]}>
+                      {data.meta?.citySectionTitle || 'Top Destinations'}
+                    </Text>
+                    <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
+                      Trending cities & places loved by travelers
+                    </Text>
+                  </View>
+                </View>
+
+                <ScrollView
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={styles.destinationsScroll}
+                >
+                  {data.destinations.map((dest: ModuleDestinationItem, idx: number) => (
+                    <TouchableOpacity
+                      key={`dest_${dest.name || ''}_${idx}`}
+                      onPress={() => {
+                        router.push({
+                          pathname: '/search-results',
+                          params: { type: activeItem.searchType || activeModule, destination: dest.name },
+                        } as any);
+                      }}
+                      activeOpacity={0.85}
+                      style={[styles.destinationCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                      accessibilityRole="button"
+                      accessibilityLabel={`Destination ${dest.name}`}
+                    >
+                      <Image
+                        source={{
+                          uri:
+                            resolveImageUrl(dest.imageUrl || dest.image, undefined, {
+                              module: activeModule,
+                              city: dest.name,
+                            }) || PLACEHOLDER_IMAGE,
+                        }}
+                        style={styles.destinationImage}
+                        contentFit="cover"
+                        placeholder={{ blurhash: DEFAULT_BLURHASH }}
+                        transition={300}
+                      />
+                      <View style={styles.destinationOverlay}>
+                        <Text style={styles.destinationName}>{dest.name}</Text>
+                        {(dest.itemCount || dest.count || dest.toursCount) ? (
+                          <Text style={styles.destinationCount}>
+                            {dest.itemCount || dest.count || dest.toursCount} {activeItem.label}
+                          </Text>
+                        ) : null}
+                      </View>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
+              </View>
+            )}
+
+            {/* 6. CURATED PACKAGES */}
+            {data.packages && data.packages.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <View style={styles.sectionHeaderRow}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.sectionTitle, { color: colors.heading }]}>
+                      Curated Packages
+                    </Text>
+                    <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
+                      Handcrafted multi-day holiday plans with private transfers
+                    </Text>
+                  </View>
+                </View>
+
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  data={data.packages}
+                  keyExtractor={(pkg, idx) => `curated_pkg_${pkg.id || pkg.slug || idx}_${idx}`}
+                  contentContainerStyle={styles.cardsFlatList}
+                  renderItem={({ item: pkg }) => {
+                    const pkgIdent = pkg.id || pkg.slug || pkg.title;
+                    const isPkgSaved = Boolean(
+                      isWishlisted(pkgIdent) ||
+                      (pkg.id && isWishlisted(pkg.id)) ||
+                      (pkg.slug && isWishlisted(pkg.slug)) ||
+                      (pkg.title && isWishlisted(pkg.title))
+                    );
+
+                    return (
+                      <TouchableOpacity
+                        activeOpacity={0.88}
+                        onPress={() => {
+                          if (Date.now() - lastWishlistPressRef.current < 600) return;
+                          router.push(`/tour/${encodeURIComponent(pkg.slug || pkg.id)}` as any);
+                        }}
+                        style={[styles.curatedPackageCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                        role={Platform.OS === 'web' ? 'article' : undefined}
+                        accessibilityRole={Platform.OS === 'web' ? undefined : 'button'}
+                        accessibilityLabel={pkg.title}
+                      >
+                        <View style={styles.packageImageWrapper}>
+                          <Image
+                            source={{
+                              uri:
+                                resolveImageUrl(pkg.imageUrl || (pkg as any).image, undefined, {
+                                  module: 'packages',
+                                  title: pkg.title,
+                                }) || PLACEHOLDER_IMAGE,
+                            }}
+                            style={styles.packageImage}
+                            contentFit="cover"
+                            placeholder={{ blurhash: DEFAULT_BLURHASH }}
+                            transition={300}
+                          />
+                          <TouchableOpacity
+                            testID={`btn-wishlist-pkg-${pkg.id || pkg.slug}`}
+                            style={styles.packageWishlistBtn}
+                            onPress={(e) => {
+                              lastWishlistPressRef.current = Date.now();
+                              if (e && e.stopPropagation) e.stopPropagation();
+                              toggleWishlist(
+                                pkgIdent,
+                                {
+                                  id: pkg.id || pkgIdent,
+                                  slug: pkg.slug,
+                                  title: pkg.title,
+                                  name: pkg.title,
+                                  price: pkg.price,
+                                  image: pkg.imageUrl,
+                                  imageUrl: pkg.imageUrl,
+                                  duration: pkg.days ? `${pkg.days} Days / ${pkg.nights || pkg.days - 1} Nights` : undefined,
+                                  module: 'packages',
+                                },
+                                'packages'
+                              );
+                            }}
+                            {...(Platform.OS === 'web' ? {
+                              onClick: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+                              onPointerDown: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+                            } : {})}
+                            activeOpacity={0.75}
+                            accessibilityRole="button"
+                            accessibilityLabel={isPkgSaved ? `Remove ${pkg.title} from wishlist` : `Save ${pkg.title} to wishlist`}
+                          >
+                            <Ionicons
+                              name={isPkgSaved ? 'heart' : 'heart-outline'}
+                              size={16}
+                              color={isPkgSaved ? '#ef4444' : '#ffffff'}
+                            />
+                          </TouchableOpacity>
+                        </View>
+                        <View style={styles.packageBody}>
+                          {pkg.days ? (
+                            <View style={[styles.packageDurationPill, { backgroundColor: `${colors.primary}15` }]}>
+                              <Text style={[styles.packageDurationText, { color: colors.primary }]}>
+                                {pkg.days} Days / {pkg.nights || pkg.days - 1} Nights
+                              </Text>
+                            </View>
+                          ) : null}
+                          <Text style={[styles.packageTitle, { color: colors.heading }]} numberOfLines={2}>
+                            {pkg.title}
+                          </Text>
+                          <View style={styles.packageFooter}>
+                            <View>
+                              <Text style={[styles.packagePricePrefix, { color: colors.mutedText }]}>From</Text>
+                              <Text style={[styles.packagePrice, { color: colors.primary }]}>
+                                {formatPrice(pkg.price || 0)}
+                              </Text>
+                            </View>
+                            <View style={[styles.packageActionBtn, { backgroundColor: colors.primary }]}>
+                              <Text style={styles.packageActionBtnText}>View Plan</Text>
+                            </View>
+                          </View>
+                        </View>
+                      </TouchableOpacity>
+                    );
+                  }}
+                />
+              </View>
+            )}
+
+            {/* 7. VERIFIED REVIEWS */}
+            {data.reviews && data.reviews.length > 0 && (
+              <View style={styles.sectionContainer}>
+                <View style={styles.sectionHeaderRow}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.sectionTitle, { color: colors.heading }]}>
+                      Traveler Reviews
+                    </Text>
+                    <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>
+                      Real feedback from verified guests
+                    </Text>
+                  </View>
+                </View>
+
+                <ScrollView
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={styles.reviewsScroll}
+                >
+                  {data.reviews.map((rev, revIdx) => (
+                    <View
+                      key={`rev_${rev.id || revIdx}_${revIdx}`}
+                      style={[styles.reviewCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                    >
+                      <View style={styles.reviewHeader}>
+                        <View style={styles.reviewStarsRow}>
+                          {[1, 2, 3, 4, 5].map((s) => (
+                            <Ionicons
+                              key={s}
+                              name={s <= rev.rating ? 'star' : 'star-outline'}
+                              size={14}
+                              color="#f59e0b"
+                            />
+                          ))}
+                        </View>
+                        <Text style={[styles.reviewAuthor, { color: colors.heading }]}>{rev.author}</Text>
+                      </View>
+                      <Text style={[styles.reviewText, { color: colors.text }]} numberOfLines={4}>
+                        "{rev.text}"
+                      </Text>
+                    </View>
+                  ))}
+                </ScrollView>
+              </View>
+            )}
+
+            {/* 8. FREQUENTLY ASKED QUESTIONS */}
+            {data.faq && data.faq.length > 0 && (
+              <View style={[styles.sectionContainer, { paddingHorizontal: SPACING.md }]}>
+                <Text style={[styles.sectionTitle, { color: colors.heading }]}>
+                  Frequently Asked Questions
+                </Text>
+                <Text style={[styles.sectionSubtitle, { color: colors.mutedText, marginBottom: SPACING.sm }]}>
+                  Got questions about {activeItem.label.toLowerCase()}? Here are the facts.
+                </Text>
+
+                <View style={{ gap: SPACING.xs }}>
+                  {data.faq.map((faq, faqIdx) => {
+                    const isExpanded = expandedFaqId === faq.id;
+                    return (
+                      <TouchableOpacity
+                        key={`faq_${faq.id || faqIdx}_${faqIdx}`}
+                        activeOpacity={0.8}
+                        onPress={() => setExpandedFaqId(isExpanded ? null : faq.id)}
+                        style={[styles.faqCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                      >
+                        <View style={styles.faqHeader}>
+                          <Text style={[styles.faqQuestion, { color: colors.heading, flex: 1 }]}>
+                            {faq.question}
+                          </Text>
+                          <Ionicons
+                            name={isExpanded ? 'chevron-up' : 'chevron-down'}
+                            size={18}
+                            color={colors.primary}
+                          />
+                        </View>
+                        {isExpanded && (
+                          <Text style={[styles.faqAnswer, { color: colors.mutedText }]}>
+                            {faq.answer}
+                          </Text>
+                        )}
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            )}
+
+            {/* EMPTY MODULE STATE */}
+            {(!data.featured || data.featured.length === 0) &&
+              (!data.categories || data.categories.length === 0) &&
+              (!data.banners || data.banners.length === 0) && (
+                <View style={styles.stateWrapper}>
+                  <EmptyState
+                    icon={activeItem.icon}
+                    title={`No ${activeItem.label} available`}
+                    description={`We are currently updating our ${activeItem.label.toLowerCase()} catalog. Contact our concierge for instant quotation.`}
+                    actionLabel="Get Custom Quote"
+                    onAction={() => handleOpenEnquiry(`Quotation for ${activeItem.label}`)}
+                  />
+                </View>
+              )}
+          </View>
+        )}
+
+        {/* ─── NATIVE APP FOOTER ─── */}
+        <Footer />
+      </ScrollView>
+
+      {/* Global Modals */}
       <TravelHubModal
         visible={travelHubVisible}
         onClose={() => setTravelHubVisible(false)}
+      />
+      <MobileFloatingWhatsApp />
+      <MobileEnquirySheet
+        visible={enquiryVisible}
+        onClose={() => setEnquiryVisible(false)}
+        serviceName={enquiryService}
       />
     </View>
   );
@@ -579,179 +683,416 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
   },
-  listContent: {
-    paddingBottom: SPACING.xxl + 20,
+  scrollContent: {
+    flexGrow: 1,
   },
-  headerWrap: {
-    paddingHorizontal: SPACING.md,
-    paddingTop: SPACING.sm,
+  selectorStripWrapper: {
+    paddingVertical: SPACING.xs,
+    borderBottomWidth: 1,
   },
-  heroCard: {
-    padding: SPACING.lg,
-    borderRadius: RADIUS.xl,
+  loadingContainer: {
+    paddingVertical: SPACING.md,
+    gap: SPACING.md,
+  },
+  heroSkeletonCard: {
+    marginHorizontal: SPACING.md,
+    padding: SPACING.md,
+    borderRadius: RADIUS.md,
     borderWidth: 1,
-    marginBottom: SPACING.md,
+  },
+  skeletonSection: {
+    gap: SPACING.xs,
+  },
+  cardSkeletonItem: {
+    width: 260,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  stateWrapper: {
+    padding: SPACING.lg,
+  },
+  inlineErrorCard: {
+    marginHorizontal: SPACING.md,
+    marginTop: SPACING.md,
+    padding: SPACING.lg,
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inlineErrorTitle: {
+    fontSize: FONT_SIZE.md,
+    fontWeight: '700',
+    marginTop: 10,
+    marginBottom: 4,
+    textAlign: 'center',
+  },
+  inlineErrorDesc: {
+    fontSize: FONT_SIZE.xs + 1,
+    textAlign: 'center',
+    lineHeight: 18,
+    marginBottom: 16,
+    maxWidth: 280,
+  },
+  inlineRetryBtn: {
+    paddingHorizontal: 22,
+    paddingVertical: 10,
+    borderRadius: RADIUS.full,
+  },
+  inlineRetryBtnText: {
+    color: '#ffffff',
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+  },
+  moduleContent: {
+    paddingBottom: SPACING.md,
+  },
+
+  // Hero Card
+  heroCard: {
+    marginHorizontal: SPACING.md,
+    marginTop: SPACING.md,
+    padding: SPACING.md,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
     ...SHADOW.sm,
   },
-  pillBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  heroBadge: {
     alignSelf: 'flex-start',
-    paddingHorizontal: SPACING.sm + 2,
+    paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: RADIUS.full,
-    marginBottom: SPACING.sm,
-    gap: 4,
+    marginBottom: 8,
   },
-  pillBadgeText: {
+  heroBadgeText: {
     fontSize: 11,
     fontWeight: '700',
     textTransform: 'uppercase',
-    letterSpacing: 0.5,
   },
-  heroHeading: {
-    fontSize: FONT_SIZE.xxl,
+  heroTitle: {
+    fontSize: FONT_SIZE.xl,
     fontWeight: '800',
-    letterSpacing: -0.5,
-    marginBottom: SPACING.xs,
+    marginBottom: 4,
   },
-  heroSub: {
-    fontSize: FONT_SIZE.sm,
-    lineHeight: 20,
+  heroSubtitle: {
+    fontSize: FONT_SIZE.xs + 1,
+    lineHeight: 18,
     marginBottom: SPACING.md,
   },
-  searchBarTrigger: {
+  searchBarWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: SPACING.md,
-    height: 44,
-    borderRadius: RADIUS.lg,
+    height: 48,
+    borderRadius: RADIUS.full,
     borderWidth: 1,
+    paddingHorizontal: SPACING.sm + 2,
   },
-  searchBarPlaceholder: {
-    fontSize: FONT_SIZE.sm,
+  searchIcon: {
+    marginRight: 8,
+  },
+  searchInput: {
     flex: 1,
+    fontSize: FONT_SIZE.sm,
+    height: '100%',
   },
-  sectionWrap: {
+  clearBtn: {
+    padding: 6,
+  },
+  searchSubmitBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 6,
+  },
+
+  // Section general
+  sectionContainer: {
+    marginTop: SPACING.lg,
+  },
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    paddingHorizontal: SPACING.md,
     marginBottom: SPACING.sm,
   },
-  chipsScroll: {
+  sectionTitle: {
+    fontSize: FONT_SIZE.lg,
+    fontWeight: '800',
+  },
+  sectionSubtitle: {
+    fontSize: FONT_SIZE.xs,
+    marginTop: 2,
+  },
+  seeAllBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: 2,
+  },
+  seeAllText: {
+    fontSize: FONT_SIZE.xs + 1,
+    fontWeight: '700',
+    marginRight: 2,
+  },
+
+  // Categories
+  categoriesScroll: {
     paddingHorizontal: SPACING.md,
     gap: 8,
-    paddingVertical: 4,
-    marginBottom: 6,
   },
   categoryChip: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: SPACING.md,
-    paddingVertical: 7,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
     borderRadius: RADIUS.full,
     borderWidth: 1,
   },
-  chipText: {
+  categoryChipText: {
     fontSize: FONT_SIZE.xs,
+    fontWeight: '600',
   },
-  destCard: {
-    width: 150,
-    height: 190,
-    borderRadius: RADIUS.lg,
+
+  // Banners
+  bannersScroll: {
+    paddingHorizontal: SPACING.md,
+    gap: 12,
+  },
+  bannerCard: {
+    height: 180,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
     overflow: 'hidden',
     position: 'relative',
-    borderWidth: 1,
+    ...SHADOW.sm,
   },
-  destImage: {
+  bannerImage: {
     width: '100%',
     height: '100%',
   },
-  destOverlay: {
-    ...StyleSheet.absoluteFill,
-    backgroundColor: 'rgba(15, 23, 42, 0.45)',
-  },
-  destTextContainer: {
+  bannerOverlay: {
     position: 'absolute',
-    bottom: 10,
-    left: 10,
-    right: 10,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(15, 23, 42, 0.45)',
+    padding: SPACING.md,
+    justifyContent: 'flex-end',
   },
-  destName: {
+  bannerBadge: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 4,
+    marginBottom: 6,
+  },
+  bannerBadgeText: {
     color: '#ffffff',
-    fontSize: FONT_SIZE.sm,
+    fontSize: 10,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+  },
+  bannerTitle: {
+    color: '#ffffff',
+    fontSize: FONT_SIZE.md,
     fontWeight: '800',
+    marginBottom: 2,
   },
-  destCount: {
-    color: 'rgba(255, 255, 255, 0.85)',
-    fontSize: 11,
-    marginTop: 1,
+  bannerSubtitle: {
+    color: '#e2e8f0',
+    fontSize: FONT_SIZE.xs,
+    marginBottom: 10,
   },
-  moreForYouContainer: {
-    marginTop: SPACING.sm,
-  },
-  accordionList: {
-    paddingHorizontal: SPACING.md,
-  },
-  reviewBanner: {
+  bannerCta: {
+    alignSelf: 'flex-start',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: SPACING.sm,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: RADIUS.full,
   },
-  reviewScore: {
+  bannerCtaText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+
+  // FlatList cards
+  cardsFlatList: {
+    paddingHorizontal: SPACING.md,
+    gap: 12,
+  },
+
+  // Destinations
+  destinationsScroll: {
+    paddingHorizontal: SPACING.md,
+    gap: 10,
+  },
+  destinationCard: {
+    width: 130,
+    height: 150,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    ...SHADOW.sm,
+  },
+  destinationImage: {
+    width: '100%',
+    height: '100%',
+  },
+  destinationOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    justifyContent: 'flex-end',
+    padding: 8,
+  },
+  destinationName: {
+    color: '#ffffff',
     fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+  },
+  destinationCount: {
+    color: '#e2e8f0',
+    fontSize: 10,
+    fontWeight: '500',
+  },
+
+  // Curated Packages
+  curatedPackageCard: {
+    width: 250,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    overflow: 'hidden',
+    ...SHADOW.sm,
+  },
+  packageImageWrapper: {
+    width: '100%',
+    height: 130,
+    position: 'relative',
+    backgroundColor: '#e2e8f0',
+  },
+  packageImage: {
+    width: '100%',
+    height: 130,
+  },
+  packageWishlistBtn: {
+    position: 'absolute',
+    top: 6,
+    right: 6,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.25,
+    shadowRadius: 2,
+    elevation: 3,
+  },
+  packageBody: {
+    padding: 10,
+  },
+  packageDurationPill: {
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 4,
+    marginBottom: 6,
+  },
+  packageDurationText: {
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  packageTitle: {
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+    minHeight: 36,
+    marginBottom: 8,
+  },
+  packageFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  packagePricePrefix: {
+    fontSize: 9,
+    textTransform: 'uppercase',
+  },
+  packagePrice: {
+    fontSize: FONT_SIZE.sm + 1,
     fontWeight: '800',
   },
-  reviewSub: {
+  packageActionBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: RADIUS.sm,
+  },
+  packageActionBtnText: {
+    color: '#ffffff',
     fontSize: 11,
-    lineHeight: 15,
-    marginTop: 2,
+    fontWeight: '700',
   },
-  supportBox: {
-    paddingVertical: SPACING.xs,
-    gap: SPACING.sm,
+
+  // Reviews
+  reviewsScroll: {
+    paddingHorizontal: SPACING.md,
+    gap: 12,
   },
-  supportTitle: {
+  reviewCard: {
+    width: 260,
+    padding: SPACING.md,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+    ...SHADOW.sm,
+  },
+  reviewHeader: {
+    marginBottom: 8,
+  },
+  reviewStarsRow: {
+    flexDirection: 'row',
+    gap: 2,
+    marginBottom: 4,
+  },
+  reviewAuthor: {
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+  },
+  reviewText: {
+    fontSize: FONT_SIZE.xs,
+    lineHeight: 18,
+    fontStyle: 'italic',
+  },
+
+  // FAQ
+  faqCard: {
+    padding: SPACING.md,
+    borderRadius: RADIUS.md,
+    borderWidth: 1,
+  },
+  faqHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  faqQuestion: {
+    fontSize: FONT_SIZE.sm,
+    fontWeight: '700',
+    marginRight: 8,
+  },
+  faqAnswer: {
     fontSize: FONT_SIZE.xs + 1,
     lineHeight: 18,
-  },
-  conciergeBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: RADIUS.full,
-  },
-  conciergeBtnText: {
-    color: '#ffffff',
-    fontSize: FONT_SIZE.xs,
-    fontWeight: '700',
-  },
-  errorCard: {
-    marginHorizontal: SPACING.md,
-    padding: SPACING.md,
-    borderRadius: RADIUS.lg,
-    borderWidth: 1,
-    alignItems: 'center',
-    marginVertical: SPACING.sm,
-  },
-  errorTitle: {
-    fontSize: FONT_SIZE.sm,
-    fontWeight: '700',
-    marginTop: 4,
-  },
-  errorDesc: {
-    fontSize: 11,
-    textAlign: 'center',
-    marginVertical: 4,
-  },
-  retryBtn: {
-    paddingHorizontal: 14,
-    paddingVertical: 5,
-    borderRadius: RADIUS.full,
-    marginTop: 4,
-  },
-  retryBtnText: {
-    color: '#ffffff',
-    fontSize: 11,
-    fontWeight: '700',
+    marginTop: 8,
   },
 });

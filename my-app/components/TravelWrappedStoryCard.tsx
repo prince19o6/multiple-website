@@ -113,7 +113,7 @@ export function TravelWrappedStoryCard({
             <Ionicons name="sparkles" size={16} color="#FFD700" />
             <Text style={styles.brandText}>ToursApp Wrapped • {stats.year}</Text>
           </View>
-          <TouchableOpacity onPress={onClose} style={styles.closeButton}>
+          <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={onClose} style={styles.closeButton}>
             <Ionicons name="close" size={24} color="#FFFFFF" />
           </TouchableOpacity>
         </View>
@@ -219,13 +219,13 @@ export function TravelWrappedStoryCard({
           )}
 
           {/* Left / Right Invisible Tap Zones */}
-          <TouchableOpacity style={styles.leftTapZone} onPress={handlePrev} activeOpacity={1} />
-          <TouchableOpacity style={styles.rightTapZone} onPress={handleNext} activeOpacity={1} />
+          <TouchableOpacity testID="btn-prev" accessibilityLabel="Prev" style={styles.leftTapZone} onPress={handlePrev} activeOpacity={1} />
+          <TouchableOpacity testID="btn-next" accessibilityLabel="Next" style={styles.rightTapZone} onPress={handleNext} activeOpacity={1} />
         </View>
 
         {/* Bottom Bar: Slide counter & Share button */}
         <View style={styles.bottomBar}>
-          <TouchableOpacity style={styles.shareButton} onPress={handleShare} activeOpacity={0.85}>
+          <TouchableOpacity testID="btn-share" accessibilityLabel="Share" style={styles.shareButton} onPress={handleShare} activeOpacity={0.85}>
             <Ionicons name="share-social-outline" size={18} color="#0B3B60" />
             <Text style={styles.shareButtonText}>Share Travel Wrapped</Text>
           </TouchableOpacity>

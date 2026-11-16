@@ -72,7 +72,7 @@ export function CollapsibleSection({
         },
       ]}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-toggle"
         style={styles.headerRow}
         onPress={handleToggle}
         activeOpacity={0.7}

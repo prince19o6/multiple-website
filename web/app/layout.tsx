@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display } from "next/font/google";
 import { DevBanner } from "@/components/DevBanner";
 import { ENV } from "@/lib/env";
@@ -9,6 +9,14 @@ const playfair = Playfair_Display({
   weight: ["400", "600", "700"],
   variable: "--font-playfair",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "Travel Platform | Multi-Tenant Tours & Safaris",
@@ -24,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang={ENV.defaultLang} className={playfair.variable}>
+    <html lang={ENV.defaultLang} className={playfair.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="antialiased min-h-screen flex flex-col bg-slate-50 text-slate-900">
+      <body className="antialiased min-h-screen flex flex-col bg-background text-foreground transition-colors duration-200">
         <DevBanner />
         {children}
       </body>

@@ -21,9 +21,9 @@ export default function Difficulty({ config }: SectionProps) {
                     {difficultyConfig.title || "Choose Your Difficulty"}
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-                    {difficultyConfig.levels.map((level: any) => (
+                    {difficultyConfig.levels.map((level: any, idx: number) => (
                         <button
-                            key={level.id}
+                            key={`${level.id}-${idx}`}
                             onClick={() => router.push(sitePath(site, "/explore"))}
                             className="rounded-full border-2 py-6 px-4 text-center font-black uppercase hover:scale-105 transition-transform"
                             style={{ borderColor: theme.primary || "#16a34a" }}

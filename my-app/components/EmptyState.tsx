@@ -43,7 +43,7 @@ export default function EmptyState({
       )}
 
       {actionLabel && onAction && (
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-action" accessibilityLabel="Action"
           style={[styles.button, { backgroundColor: colors.primary }]}
           onPress={onAction}
           activeOpacity={0.85}

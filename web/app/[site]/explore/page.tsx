@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback, useMemo } from "react";
 import Link from "next/link";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import type { Tour } from "@/lib/type";
+import { getActualImageUrl } from "@/lib/imageUtils";
 
 export default function ExplorePage() {
   const config = useSiteConfig();
@@ -268,7 +269,12 @@ export default function ExplorePage() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={tour.image}
+                  src={getActualImageUrl(tour.image, {
+                    title: tour.name,
+                    category: tour.category,
+                    module: "tours",
+                    id: tour.id,
+                  })}
                   alt={tour.name}
                   className="w-full h-52 object-cover"
                 />

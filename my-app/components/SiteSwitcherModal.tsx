@@ -53,14 +53,15 @@ export default function SiteSwitcherModal({ visible, onClose }: SiteSwitcherModa
       animationType="fade"
       onRequestClose={onClose}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-dismiss" accessibilityLabel="Dismiss"
         style={styles.backdrop}
         activeOpacity={1}
         onPress={onClose}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-siteswitchermodal-61" accessibilityLabel="siteswitchermodal action"
           activeOpacity={1}
           style={[styles.modalCard, { backgroundColor: colors.surface }]}
+          onPress={(e) => e?.stopPropagation?.()}
         >
           <View style={styles.header}>
             <View>
@@ -69,7 +70,7 @@ export default function SiteSwitcherModal({ visible, onClose }: SiteSwitcherModa
                 Select an active travel website
               </Text>
             </View>
-            <TouchableOpacity onPress={onClose} style={styles.closeBtn}>
+            <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={onClose} style={styles.closeBtn}>
               <Ionicons name="close" size={22} color={colors.text} />
             </TouchableOpacity>
           </View>
@@ -87,7 +88,7 @@ export default function SiteSwitcherModal({ visible, onClose }: SiteSwitcherModa
             {SITES.map((site) => {
               const isSelected = site.id === siteId;
               return (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-siteswitchermodal-91" accessibilityLabel="siteswitchermodal action"
                   key={site.id}
                   style={[
                     styles.siteOption,

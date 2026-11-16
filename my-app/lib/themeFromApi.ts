@@ -1,14 +1,14 @@
 /**
  * lib/themeFromApi.ts
  *
- * Ported verbatim from web/lib/themeFromApi.ts.
  * Maps the live Config API color palettes to the flat ThemeColors shape
- * used by every component. Zero web dependencies — pure TypeScript.
+ * used by every component in the native mobile app.
  *
- * API colors are shade palettes, e.g.:
- *   colors.primary = { "50": "#eaf3f9", ..., "600": "#2882c5" }
- * Components use flat keys: theme.primary, theme.primaryDark, etc.
+ * Integrates WCAG AA contrast derivation to guarantee readability on white
+ * backgrounds and optimal primary contrast button text.
  */
+
+import { getContrastTextColor, ensureAccessibleTextColor } from './contrast';
 
 export type ColorShadeMap = Partial<Record<string, string>>;
 
@@ -21,15 +21,18 @@ export interface ApiColors {
   [key: string]: ColorShadeMap | string | undefined;
 }
 
-/** Flat theme object consumed by all section/navigation/footer components. */
+/** Flat theme object consumed by all mobile screens and components. */
 export interface ThemeColors {
   primary: string;
   primaryDark: string;
   primaryLight: string;
+  primaryContrast: string;
+  primaryText: string;
   secondary: string;
   accent: string;
   background: string;
   surface: string;
+  surface2: string;
   text: string;
   heading: string;
   mutedText: string;
@@ -44,16 +47,19 @@ export interface ThemeColors {
   neutralScale?: ColorShadeMap;
 }
 
-/** Fallback when the API has no colors or the merge fails. */
+/** Fallback default light theme with white background (#ffffff) and WCAG AA contrast. */
 export const DEFAULT_THEME: ThemeColors = {
-  primary: '#2563eb',
-  primaryDark: '#1d4ed8',
-  primaryLight: '#dbeafe',
+  primary: '#2882c5',
+  primaryDark: '#1f679c',
+  primaryLight: '#eaf3f9',
+  primaryContrast: '#ffffff',
+  primaryText: '#1f679c',
   secondary: '#0f172a',
   accent: '#f59e0b',
-  background: '#f8fafc',
+  background: '#ffffff',
   surface: '#ffffff',
-  text: '#111827',
+  surface2: '#f8fafc',
+  text: '#0f172a',
   heading: '#0f172a',
   mutedText: '#64748b',
   border: '#e2e8f0',
@@ -61,7 +67,7 @@ export const DEFAULT_THEME: ThemeColors = {
   danger: '#dc2626',
   footerBg: '#0f172a',
   footerText: '#f8fafc',
-  cardBg: '#f8fafc',
+  cardBg: '#ffffff',
 };
 
 function shade(
@@ -81,23 +87,34 @@ function shade(
   return fallback;
 }
 
-/** Convert API color palettes → flat ThemeColors. */
-export function themeFromApiColors(colors: ApiColors | null | undefined): ThemeColors {
+/** Convert API color palettes → flat ThemeColors with WCAG AA compliance. */
+export function themeFromApiColors(
+  colors: ApiColors | null | undefined,
+  siteId?: string,
+  explicitOverrides?: {
+    light?: Record<string, string>;
+    dark?: Record<string, string>;
+  }
+): ThemeColors {
   if (!colors || typeof colors !== 'object') {
     return { ...DEFAULT_THEME };
   }
 
-  const primary = shade(colors.primary, ['600', '700', '500', '800'], DEFAULT_THEME.primary);
+  const rawPrimary = shade(colors.primary, ['600', '700', '500', '800'], DEFAULT_THEME.primary);
   const primaryDark = shade(colors.primary, ['800', '900', '700'], DEFAULT_THEME.primaryDark);
   const primaryLight = shade(colors.primary, ['100', '50', '200'], DEFAULT_THEME.primaryLight);
   const accent = shade(colors.secondary, ['500', '600', '400', '700'], DEFAULT_THEME.accent);
   const secondary = shade(colors.neutral, ['900', '800', '700'], DEFAULT_THEME.secondary);
-  const background = shade(colors.neutral, ['50', '100'], DEFAULT_THEME.background);
-  const surface = shade(colors.neutral, ['50'], DEFAULT_THEME.surface) || '#ffffff';
-  const text = shade(colors.neutral, ['900', '800'], DEFAULT_THEME.text);
-  const heading = shade(colors.neutral, ['900', '800'], DEFAULT_THEME.heading);
-  const mutedText = shade(colors.neutral, ['500', '600', '400'], DEFAULT_THEME.mutedText);
-  const border = shade(colors.neutral, ['200', '300'], DEFAULT_THEME.border);
+
+  // Background is strictly pure white (#ffffff) for the default light theme
+  const background = '#ffffff';
+  const surface = '#ffffff';
+  const surface2 = '#f8fafc';
+  const text = '#0f172a';
+  const heading = '#0f172a';
+  const mutedText = '#64748b';
+  const border = '#e2e8f0';
+
   const footerBg = shade(
     colors.footerbgcolor,
     ['800', '900', '700'],
@@ -109,14 +126,26 @@ export function themeFromApiColors(colors: ApiColors | null | undefined): ThemeC
     DEFAULT_THEME.footerText
   );
 
-  return {
-    primary,
+  // Derive WCAG AA accessible variants
+  const primaryContrast = getContrastTextColor(rawPrimary);
+  const { accessibleHex: primaryText } = ensureAccessibleTextColor(
+    rawPrimary,
+    background,
+    siteId,
+    'primary text'
+  );
+
+  const base: ThemeColors = {
+    primary: rawPrimary,
     primaryDark,
     primaryLight,
+    primaryContrast,
+    primaryText,
     secondary,
     accent,
     background,
     surface,
+    surface2,
     text,
     heading,
     mutedText,
@@ -125,27 +154,35 @@ export function themeFromApiColors(colors: ApiColors | null | undefined): ThemeC
     danger: DEFAULT_THEME.danger,
     footerBg,
     footerText,
-    cardBg: surface || '#f8fafc',
+    cardBg: surface,
     primaryScale: typeof colors.primary === 'object' ? colors.primary : undefined,
     secondaryScale: typeof colors.secondary === 'object' ? colors.secondary : undefined,
     neutralScale: typeof colors.neutral === 'object' ? colors.neutral : undefined,
   };
+
+  // If backend provided explicit light overrides (theme.light)
+  if (explicitOverrides?.light && typeof explicitOverrides.light === 'object') {
+    return {
+      ...base,
+      ...explicitOverrides.light,
+    };
+  }
+
+  return base;
 }
 
-/**
- * In the web version this produced CSS variables.
- * In the app we keep it for debug / export purposes only.
- * Components use ThemeColors directly from ThemeContext.
- */
 export function themeToTokenMap(theme: ThemeColors): Record<string, string> {
   return {
     primary: theme.primary,
     primaryDark: theme.primaryDark,
     primaryLight: theme.primaryLight,
+    primaryContrast: theme.primaryContrast,
+    primaryText: theme.primaryText,
     secondary: theme.secondary,
     accent: theme.accent,
     background: theme.background,
     surface: theme.surface,
+    surface2: theme.surface2,
     text: theme.text,
     heading: theme.heading,
     mutedText: theme.mutedText,

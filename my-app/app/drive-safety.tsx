@@ -58,7 +58,7 @@ export default function DriveSafetyScreen() {
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate" accessibilityLabel="Navigate"
           style={styles.backBtn}
           onPress={() => router.back()}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -75,7 +75,7 @@ export default function DriveSafetyScreen() {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-call" accessibilityLabel="call"
           style={styles.sosBtn}
           onPress={dialEmergencyRoadside}
           hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
@@ -87,7 +87,7 @@ export default function DriveSafetyScreen() {
 
       {/* Tabs */}
       <View style={[styles.tabsRow, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate-outline" accessibilityLabel="navigate outline"
           style={[
             styles.tabItem,
             activeTab === 'rules' && [styles.tabItemActive, { borderBottomColor: colors.primary }],
@@ -109,7 +109,7 @@ export default function DriveSafetyScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-alert-circle-outline" accessibilityLabel="alert circle outline"
           style={[
             styles.tabItem,
             activeTab === 'scams' && [styles.tabItemActive, { borderBottomColor: '#dc2626' }],
@@ -131,7 +131,7 @@ export default function DriveSafetyScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-checkbox-outline" accessibilityLabel="checkbox outline"
           style={[
             styles.tabItem,
             activeTab === 'checklist' && [styles.tabItemActive, { borderBottomColor: '#16a34a' }],
@@ -275,7 +275,7 @@ export default function DriveSafetyScreen() {
                   away to establish timestamped proof of vehicle condition.
                 </Text>
 
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-camera-outline" accessibilityLabel="camera outline"
                   style={[styles.launchWizardBtn, { backgroundColor: colors.primary }]}
                   onPress={() => setIsInspectionModalOpen(true)}
                 >

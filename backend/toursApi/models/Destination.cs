@@ -31,6 +31,9 @@ public class Destination
     [BsonElement("sortOrder")]
     public int SortOrder { get; set; } = 0;
 
+    [BsonElement("country")]
+    public string? Country { get; set; }
+
     [BsonElement("createdAt")]
     public DateTime? CreatedAt { get; set; }
 

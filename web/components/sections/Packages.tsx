@@ -31,9 +31,9 @@ export default function Packages({ config }: SectionProps) {
                     </p>
                 )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {packagesConfig.items.map((item: any) => (
+                    {packagesConfig.items.map((item: any, idx: number) => (
                         <button
-                            key={item.id}
+                            key={`${item.id || 'package'}-${idx}`}
                             onClick={() => router.push(sitePath(site, "/explore"))}
                             className="bg-white border p-8 text-left hover:shadow-lg transition-shadow"
                             style={{ borderColor: theme.border }}

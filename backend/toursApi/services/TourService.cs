@@ -80,8 +80,18 @@ public class TourService : ITourService
         await _repository.DeleteAsync(id);
     }
 
-    public async Task<IEnumerable<Tour>> SearchToursAsync(string? q, double? minPrice, double? maxPrice, string? difficulty)
+    public async Task<IEnumerable<Tour>> SearchToursAsync(string? q, double? minPrice, double? maxPrice, string? difficulty, string? sort = null)
     {
-        return await _repository.SearchAsync(q, minPrice, maxPrice, difficulty);
+        return await _repository.SearchAsync(q, minPrice, maxPrice, difficulty, sort);
+    }
+
+    public async Task<IEnumerable<Tour>> GetSimilarToursAsync(string tourIdOrSlug, int limit = 4)
+    {
+        return await _repository.GetSimilarToursAsync(tourIdOrSlug, limit);
+    }
+
+    public async Task<GuestReview?> AddReviewAsync(string tourIdOrSlug, GuestReview review)
+    {
+        return await _repository.AddReviewAsync(tourIdOrSlug, review);
     }
 }

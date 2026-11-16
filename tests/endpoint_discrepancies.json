@@ -1,0 +1,8 @@
+[
+  {
+    "functionName": "fetchBargainHubData",
+    "method": "GET",
+    "endpoint": "/api/bargain/data",
+    "normalized": "get /api/bargain/data"
+  }
+]

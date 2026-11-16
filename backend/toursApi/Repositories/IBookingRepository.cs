@@ -7,6 +7,7 @@ namespace ToursApi.Repositories;
 public interface IBookingRepository
 {
     Task<IEnumerable<Booking>> GetAllAsync();
+
     Task<IEnumerable<Booking>> QueryAsync(
         string? email = null,
         string? userId = null,
@@ -15,9 +16,27 @@ public interface IBookingRepository
         string? search = null,
         int? skip = null,
         int? limit = null);
+
+    Task<long> CountAsync(
+        string? email = null,
+        string? userId = null,
+        IEnumerable<string>? ids = null,
+        string? status = null,
+        string? search = null);
+
     Task<Booking?> GetByIdAsync(string id);
+
     Task<Booking?> GetByReferenceAsync(string reference);
+
+    Task<Booking?> GetByReferenceAndEmailAsync(string reference, string email);
+
+    Task<Booking?> GetByIdempotencyKeyAsync(string idempotencyKey);
+
     Task CreateAsync(Booking booking);
+
     Task UpdateAsync(string id, Booking booking);
+
     Task DeleteAsync(string id);
+
+    Task<int> ClaimGuestBookingsAsync(string userId, string? email, IEnumerable<string>? references);
 }

@@ -136,7 +136,7 @@ export default function SpecialOffersScreen() {
           </View>
 
           <View style={styles.btnRow}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-special-offers-139" accessibilityLabel="special-offers action"
               style={[styles.copyBtn, { borderColor: colors.border, backgroundColor: colors.background }]}
               onPress={() => handleCopyCode(item)}
               activeOpacity={0.7}
@@ -152,7 +152,7 @@ export default function SpecialOffersScreen() {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-book-now" accessibilityLabel="Book Now"
               style={[styles.useBtn, { backgroundColor: colors.primary }]}
               onPress={() => router.push('/(tabs)/explore')}
               activeOpacity={0.8}

@@ -26,5 +26,7 @@ public interface ITourService
     Task<bool> UpsertTourBySlugAsync(Tour tour);
     Task UpdateTourAsync(string id, Tour tour);
     Task DeleteTourAsync(string id);
-    Task<IEnumerable<Tour>> SearchToursAsync(string? q, double? minPrice, double? maxPrice, string? difficulty);
+    Task<IEnumerable<Tour>> SearchToursAsync(string? q, double? minPrice, double? maxPrice, string? difficulty, string? sort = null);
+    Task<IEnumerable<Tour>> GetSimilarToursAsync(string tourIdOrSlug, int limit = 4);
+    Task<GuestReview?> AddReviewAsync(string tourIdOrSlug, GuestReview review);
 }

@@ -1,0 +1,29 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 6: Admin Portal Reservation Review & Approval Workflow
+- launchApp
+
+# Open Profile and Navigate to Admin Management
+- tapOn: "Profile"
+- scroll
+- scroll
+- tapOn: "Admin Management Portal"
+
+# Admin Dashboard
+- assertVisible: "Admin Management Portal|Operations Dashboard"
+
+# Open Pending Reservations Inbox
+- tapOn: "Bookings|Pending Approvals"
+- assertVisible: "Inbox|Pending Verification"
+
+# Select First Pending Booking
+- tapOn:
+    point: "50%,30%"
+
+# Review Booking Snapshot & Pricing
+- assertVisible: "Customer Details|Total Price|Departure"
+
+# Approve Reservation
+- tapOn: "Approve Booking|Confirm Reservation"
+- assertVisible: "Booking Confirmed|Status Updated Successfully"
+

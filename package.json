@@ -1,0 +1,26 @@
+{
+  "name": "toursapp-platform",
+  "version": "1.0.0",
+  "description": "Multi-tenant travel platform across GujjuTours, TripGoAsia, and Technoheaven",
+  "private": true,
+  "scripts": {
+    "release:check": "node scripts/release-check.js",
+    "seed:images": "node scripts/generate-placeholder-images.js",
+    "seed:generate": "node scripts/generate-placeholder-images.js && node backend/seed/generate.js",
+    "test:all": "npm run test:backend && npm run test:app && npm run test:web && npm run test:contracts && npm run test:secrets && npm run test:ios-compliance && npm run test:pressables",
+    "test:backend": "dotnet test backend/ToursApi.Tests -c Release --verbosity minimal",
+    "test:app": "node --test tests/app/*.test.js && node my-app/scripts/test-storage.js",
+    "test:web": "node --test tests/web/*.test.js",
+    "test:contracts": "node scripts/test-api-contracts.js",
+    "test:secrets": "node scripts/scan-secrets.js",
+    "test:ios-compliance": "node scripts/check-ios-compliance.js",
+    "test:pressables": "node scripts/audit-pressables.js",
+    "test:e2e:web": "cd web && npx playwright test",
+    "lint:all": "npm run test:secrets && npm run test:ios-compliance",
+    "typecheck:backend": "dotnet build backend/toursApi/ToursApi.csproj"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
+

@@ -11,14 +11,16 @@
  * - Theme-aware fallback icon view with [DEBUG] warning when image fails to load.
  */
 
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { useColors, useIsDark } from '@/store/ThemeContext';
 import { useCurrency } from '@/context/CurrencyContext';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
-import { resolveImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH, DARK_BLURHASH } from '@/lib/imageUtils';
+import { resolveImageUrl, getActualImageUrl, PLACEHOLDER_IMAGE, DEFAULT_BLURHASH, DARK_BLURHASH } from '@/lib/imageUtils';
+import * as Haptics from 'expo-haptics';
+import { useWishlist } from '@/context/WishlistContext';
 
 export interface TourCardProps {
   id?: number | string;
@@ -29,8 +31,11 @@ export interface TourCardProps {
   image: string;
   duration: string;
   difficulty: string;
+  location?: string;
   onBook: () => void;
   onPress?: () => void;
+  isWishlisted?: boolean;
+  onToggleWishlist?: () => void;
 }
 
 export default function TourCard({
@@ -42,15 +47,60 @@ export default function TourCard({
   image,
   duration,
   difficulty,
+  location,
   onBook,
   onPress,
+  isWishlisted,
+  onToggleWishlist,
 }: TourCardProps) {
   const colors = useColors();
   const isDark = useIsDark();
   const { formatPrice } = useCurrency();
+  const { isWishlisted: checkWishlist, toggleWishlist: defaultToggle } = useWishlist();
   const [imgError, setImgError] = useState(false);
 
-  const resolvedUrl = resolveImageUrl(image) || PLACEHOLDER_IMAGE;
+  const itemIdentifier = id !== undefined && id !== null && String(id).trim() !== '' ? id : name;
+  const isSaved = isWishlisted !== undefined
+    ? isWishlisted
+    : Boolean(
+        checkWishlist(itemIdentifier) ||
+        (name && checkWishlist(name)) ||
+        (id !== undefined && checkWishlist(id))
+      );
+
+  const lastWishlistPressRef = useRef<number>(0);
+
+  const handleToggleWishlist = () => {
+    lastWishlistPressRef.current = Date.now();
+    try {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    } catch {}
+    if (onToggleWishlist) {
+      onToggleWishlist();
+    } else if (itemIdentifier) {
+      defaultToggle(
+        itemIdentifier,
+        {
+          id: itemIdentifier,
+          name,
+          title: name,
+          description,
+          price,
+          rating,
+          image,
+          imageUrl: image,
+          duration,
+          difficulty,
+          location,
+          module: 'tours',
+        },
+        'tours'
+      );
+    }
+  };
+
+  const fallbackUrl = getActualImageUrl(null, { module: 'tours', title: name, city: location });
+  const resolvedUrl = resolveImageUrl(image, undefined, { module: 'tours', title: name, city: location }) || fallbackUrl;
 
   const handleImageError = () => {
     if (__DEV__) {
@@ -71,12 +121,17 @@ export default function TourCard({
         },
       ]}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-press"
         activeOpacity={0.88}
-        onPress={onPress ?? onBook}
+        onPress={() => {
+          if (Date.now() - lastWishlistPressRef.current < 600) return;
+          if (onPress) onPress();
+          else if (onBook) onBook();
+        }}
         accessibilityLabel={`Tour ${name}, price ${formatPrice(price)}, rating ${rating.toFixed(1)} stars`}
         accessibilityHint="Navigates to tour booking and details"
-        accessibilityRole="button"
+        role={Platform.OS === 'web' ? 'article' : undefined}
+        accessibilityRole={Platform.OS === 'web' ? undefined : 'button'}
       >
         {/* ─── Image Container with Theme-Aware Placeholder ─── */}
         <View style={[styles.imageContainer, { backgroundColor: isDark ? '#1e293b' : colors.surface }]}>
@@ -98,10 +153,34 @@ export default function TourCard({
             />
           )}
 
+          {/* Rating Badge on top-left */}
           <View style={[styles.ratingBadge, { backgroundColor: colors.primary }]}>
-            <Ionicons name="star" size={13} color="#ffffff" />
-            <Text style={styles.ratingText}>{rating.toFixed(1)}</Text>
+            <Ionicons name="star" size={13} color={colors.primaryContrast} />
+            <Text style={[styles.ratingText, { color: colors.primaryContrast }]}>{rating.toFixed(1)}</Text>
           </View>
+
+          {/* Wishlist Button on top-right */}
+          <TouchableOpacity testID="btn-tourcard-129"
+            style={styles.wishlistBtn}
+            onPress={(e) => {
+              lastWishlistPressRef.current = Date.now();
+              if (e && e.stopPropagation) e.stopPropagation();
+              handleToggleWishlist();
+            }}
+            {...(Platform.OS === 'web' ? {
+              onClick: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+              onPointerDown: (e: any) => { if (e && e.stopPropagation) e.stopPropagation(); },
+            } : {})}
+            activeOpacity={0.75}
+            accessibilityRole="button"
+            accessibilityLabel={isSaved ? `Remove ${name} from wishlist` : `Save ${name} to wishlist`}
+          >
+            <Ionicons
+              name={isSaved ? 'heart' : 'heart-outline'}
+              size={19}
+              color={isSaved ? '#ef4444' : '#ffffff'}
+            />
+          </TouchableOpacity>
         </View>
 
         {/* ─── Upper Content ─── */}
@@ -136,7 +215,7 @@ export default function TourCard({
 
       {/* ─── Footer with Sibling Touchables ─── */}
       <View style={styles.footer}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-starting-from"
           onPress={onPress ?? onBook}
           activeOpacity={0.88}
           style={styles.priceContainer}
@@ -149,14 +228,14 @@ export default function TourCard({
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-book-now"
           style={[styles.bookButton, { backgroundColor: colors.primary }]}
           onPress={onBook}
           activeOpacity={0.85}
           accessibilityRole="button"
           accessibilityLabel={`Book ${name}`}
         >
-          <Text style={styles.bookButtonText}>Book Now</Text>
+          <Text style={[styles.bookButtonText, { color: colors.primaryContrast }]}>Book Now</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -197,13 +276,26 @@ const styles = StyleSheet.create({
   ratingBadge: {
     position: 'absolute',
     top: SPACING.sm,
-    right: SPACING.sm,
+    left: SPACING.sm,
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: SPACING.sm,
     paddingVertical: 4,
     borderRadius: RADIUS.full,
     gap: 4,
+    zIndex: 5,
+  },
+  wishlistBtn: {
+    position: 'absolute',
+    top: SPACING.sm,
+    right: SPACING.sm,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10,
   },
   ratingText: {
     color: '#ffffff',

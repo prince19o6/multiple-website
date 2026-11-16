@@ -67,7 +67,7 @@ export const SITE_REGISTRY: SiteEntry[] = [
     apiUrl: GUJJUTOURS_API,
     accentColor: '#2563eb',
     primaryColor: '#2563eb',
-    heroImage: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=500&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85',
     themeName: 'Modern Travel',
     icon: '✈️',
   },

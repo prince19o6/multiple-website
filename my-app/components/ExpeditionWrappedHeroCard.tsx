@@ -50,7 +50,7 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
         style,
       ]}
     >
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-sparkles"
         onPress={handleCardPress}
         activeOpacity={0.9}
         accessibilityRole="button"
@@ -102,7 +102,7 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
 
       {/* Footer CTA */}
       <View style={styles.footerRow}>
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-play-circle"
           style={styles.playReelBtn}
           onPress={handlePlayReel}
           activeOpacity={0.85}
@@ -113,7 +113,7 @@ export function ExpeditionWrappedHeroCard({ style }: ExpeditionWrappedHeroCardPr
           <Text style={styles.playReelText}>Play Story Reel</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           style={styles.viewMoreRow}
           onPress={handleCardPress}
           activeOpacity={0.85}

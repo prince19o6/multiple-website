@@ -13,9 +13,15 @@ export type Tour = {
   id: number;
   website?: string;
   name: string;
+  title?: string;
   description: string;
   price: number;
+  discountedPrice?: number;
+  originalPrice?: number;
+  currency?: string;
   duration: string;
+  durationDays?: number;
+  durationNights?: number;
   rating: number;
   reviews: number;
   image: string;
@@ -28,7 +34,7 @@ export type Tour = {
   highlights: string[];
   included: string[];
   itinerary: { day: number; title: string; description: string }[];
-  guestReviews: { author: string; rating: number; text: string }[];
+  guestReviews: { author: string; rating: number; text: string; date?: string; avatar?: string }[];
   category?: string;
   slug?: string;
   destination?: string;

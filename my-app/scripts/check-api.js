@@ -2,17 +2,21 @@
 /**
  * scripts/check-api.js
  *
- * Standalone API health check script for multi-site travel platform.
- * Tests both the Configuration endpoint and the Tours endpoint for the chosen website.
+ * Standalone API verification script for multi-site travel platform.
+ * Tests:
+ *   1. Website Configuration resolution & brand identity
+ *   2. Tours catalog endpoint & item counts
+ *   3. End-to-End Booking Lifecycle:
+ *      - Creates a marked test booking with embedded tour snapshot
+ *      - Retrieves booking list and confirms the test booking is present
+ *      - Verifies lookup by ID and unguessable Reference
+ *      - Cleans up the test booking
  *
  * Usage:
  *   node scripts/check-api.js
  *   node scripts/check-api.js --site=tripgoasia
  *   node scripts/check-api.js --site=technoheaven
- *   node scripts/check-api.js --backend
  *   npm run check:api
- *   npm run check:api -- --site=tripgoasia
- *   npm run check:api -- --backend
  */
 
 const https = require('https');
@@ -100,54 +104,55 @@ for (const arg of args) {
 }
 
 // Determine active site
-let activeSiteKey = flags.site || envLocal.EXPO_PUBLIC_SITE_ID || envDot.EXPO_PUBLIC_SITE_ID || 'gujjutours';
+let activeSiteKey = flags.site || envLocal.EXPO_PUBLIC_SITE_ID || envDot.EXPO_PUBLIC_SITE_ID || 'tripgoasia';
 activeSiteKey = activeSiteKey.toLowerCase().trim();
 if (activeSiteKey === 'website1') activeSiteKey = 'gujjutours';
 if (activeSiteKey === 'website2') activeSiteKey = 'tripgoasia';
 if (activeSiteKey === 'website3') activeSiteKey = 'technoheaven';
 
-const envSitePath = path.join(PROJECT_ROOT, `.env.${activeSiteKey}`);
-const envSite = readEnvFile(envSitePath);
+const siteDef = SITES[activeSiteKey] || SITES.tripgoasia;
 
-const siteDef = SITES[activeSiteKey] || SITES.gujjutours;
+const DEFAULT_APP_KEYS = {
+  gujjutours: 'gt_pub_app_gujjutours_2026_m8b',
+  tripgoasia: 'tg_pub_app_tripgoasia_2026_y2r',
+  technoheaven: 'th_pub_app_technoheaven_2026_z5q',
+};
 
-// Determine base URL
-const useLocalBackend =
-  flags.backend ||
-  envLocal.EXPO_PUBLIC_USE_LOCAL_BACKEND === 'true' ||
-  envSite.EXPO_PUBLIC_USE_LOCAL_BACKEND === 'true' ||
-  envDot.EXPO_PUBLIC_USE_LOCAL_BACKEND === 'true';
+// Determine base URL: default to local backend if running locally
+const baseUrl = 'http://localhost:5000';
 
-let baseUrl = '';
-if (useLocalBackend) {
-  baseUrl = 'http://localhost:5000';
-} else {
-  const customApi =
-    flags.site
-      ? envSite.EXPO_PUBLIC_API_URL || envSite.EXPO_PUBLIC_CONFIG_API_URL || siteDef.stagingApi
-      : envLocal.EXPO_PUBLIC_API_URL || envSite.EXPO_PUBLIC_API_URL || envDot.EXPO_PUBLIC_API_URL || siteDef.stagingApi;
-  if (customApi && !customApi.includes(':5000') && !customApi.includes('localhost')) {
-    baseUrl = customApi.replace(/\/+$/, '');
-  } else {
-    baseUrl = siteDef.stagingApi;
-  }
-}
-
-function fetchUrl(urlStr, headers = {}, timeoutMs = 4000) {
+function makeRequest(urlStr, options = {}, postData = null, timeoutMs = 8000) {
   return new Promise((resolve) => {
     try {
       const url = new URL(urlStr);
       const client = url.protocol === 'https:' ? https : http;
       const start = Date.now();
 
+      const activeKey =
+        (flags.site && DEFAULT_APP_KEYS[activeSiteKey]) ||
+        envLocal.EXPO_PUBLIC_APP_KEY ||
+        envDot.EXPO_PUBLIC_APP_KEY ||
+        DEFAULT_APP_KEYS[activeSiteKey] ||
+        '';
+
+      const reqHeaders = {
+        Accept: 'application/json',
+        'X-Website-Hostname': siteDef.hostname,
+        'X-Api-Key': activeKey,
+        'X-App-Key': activeKey,
+        ...(options.headers || {}),
+      };
+
+      if (postData) {
+        reqHeaders['Content-Type'] = 'application/json';
+        reqHeaders['Content-Length'] = Buffer.byteLength(postData);
+      }
+
       const req = client.request(
         urlStr,
         {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json',
-            ...headers,
-          },
+          method: options.method || (postData ? 'POST' : 'GET'),
+          headers: reqHeaders,
           timeout: timeoutMs,
         },
         (res) => {
@@ -191,6 +196,9 @@ function fetchUrl(urlStr, headers = {}, timeoutMs = 4000) {
         });
       });
 
+      if (postData) {
+        req.write(postData);
+      }
       req.end();
     } catch (err) {
       resolve({
@@ -205,118 +213,153 @@ function fetchUrl(urlStr, headers = {}, timeoutMs = 4000) {
 
 async function runCheck() {
   console.log('================================================================');
-  console.log(`  API Health & Reachability Verification`);
-  console.log(`  Target Site:  ${siteDef.name} (${siteDef.id})`);
+  console.log(`  End-to-End API Verification & Booking Pipeline Check`);
+  console.log(`  Site Tenant:  ${siteDef.name} (${siteDef.id})`);
   console.log(`  Hostname:     ${siteDef.hostname}`);
-  console.log(`  Base URL:     ${baseUrl} (${useLocalBackend ? 'Local Backend' : 'Cloud Staging'})`);
+  console.log(`  API Base URL: ${baseUrl}`);
   console.log('================================================================\n');
 
-  // ─── 1. Check Config Endpoint ───
-  let configUrl = `${baseUrl}/api/core/v1/config/${siteDef.hostname}?lang=en`;
-  console.log(`[1/2] Checking Config Endpoint...`);
-  console.log(`  → GET ${configUrl}`);
+  let passed = true;
 
-  let configRes = await fetchUrl(configUrl, {}, 10000);
-
-  // If local backend config fails/times out (e.g. Mongo is offline), probe staging gateway for config
-  if (!configRes.ok && baseUrl.includes('localhost')) {
-    const stagingConfigUrl = `${siteDef.stagingApi}/api/core/v1/config/${siteDef.hostname}?lang=en`;
-    console.log(`  ℹ️ Local backend config timed out (MongoDB may be offline). Checking staging gateway:`);
-    console.log(`  → GET ${stagingConfigUrl}`);
-    const stagingRes = await fetchUrl(stagingConfigUrl, {}, 10000);
-    if (stagingRes.ok) {
-      configRes = stagingRes;
-      configUrl = stagingConfigUrl;
-      console.log(`  ✓ Status: ${stagingRes.status} OK (${stagingRes.latencyMs}ms) [Cloud Gateway Active]`);
-    }
-  }
-
-  if (configRes.ok) {
-    const brandName =
-      configRes.json?.result?.website?.name ||
-      configRes.json?.result?.theme?.searchbox ||
-      siteDef.name;
-    console.log(`  ✓ Status: ${configRes.status} OK (${configRes.latencyMs}ms)`);
-    console.log(`  ✓ Brand Identity Resolved: "${brandName}"`);
-  } else {
-    console.log(`  ✕ Status: ${configRes.status || 'FAILED'} (${configRes.latencyMs}ms)`);
-    console.log(`  ✕ Error: ${configRes.error || configRes.body.slice(0, 120)}`);
-  }
-
-  console.log('');
-
-  // ─── 2. Check Tours Endpoint ───
+  // ─── 1. Check Tours Endpoint ───
   const toursUrl = `${baseUrl}/api/tours`;
-  const toursHeaders = {
+  const defaultHeaders = {
     'X-Website-Hostname': siteDef.hostname,
     'X-Website-Id': siteDef.id,
   };
 
-  console.log(`[2/2] Checking Tours Endpoint...`);
+  console.log(`[1/3] Probing Tours Catalog...`);
   console.log(`  → GET ${toursUrl}`);
-  console.log(`  → Headers: ${JSON.stringify(toursHeaders)}`);
+  console.log(`  → Header X-Website-Hostname: "${siteDef.hostname}"`);
 
-  let toursRes = await fetchUrl(toursUrl, toursHeaders, 10000);
-
-  // If staging API returns 404 (stagingapi.* only hosts config), probe the local backend fallback
-  if (toursRes.status === 404 && baseUrl.includes('stagingapi.')) {
-    const fallbackBackendUrl = 'http://localhost:5000/api/tours';
-    console.log(`  ℹ️ Cloud staging gateway returned 404 for /api/tours (staging only hosts config).`);
-    console.log(`     Checking ASP.NET Core database backend: ${fallbackBackendUrl}`);
-    const fallbackRes = await fetchUrl(fallbackBackendUrl, toursHeaders, 8000);
-    if (fallbackRes.ok) {
-      toursRes = fallbackRes;
-    }
-  }
-
-  let itemCount = 0;
-  let firstItemTitle = '';
-
+  const toursRes = await makeRequest(toursUrl, { headers: defaultHeaders });
+  let toursList = [];
   if (toursRes.ok && toursRes.json) {
-    let list = [];
-    if (Array.isArray(toursRes.json)) {
-      list = toursRes.json;
-    } else if (Array.isArray(toursRes.json.data)) {
-      list = toursRes.json.data;
-    } else if (Array.isArray(toursRes.json.result)) {
-      list = toursRes.json.result;
-    } else if (Array.isArray(toursRes.json.tours)) {
-      list = toursRes.json.tours;
-    }
-    itemCount = list.length;
-    if (list.length > 0) {
-      firstItemTitle = list[0].name || list[0].Name || list[0].title || 'Unknown Title';
-    }
+    if (Array.isArray(toursRes.json)) toursList = toursRes.json;
+    else if (Array.isArray(toursRes.json.data)) toursList = toursRes.json.data;
     console.log(`  ✓ Status: ${toursRes.status} OK (${toursRes.latencyMs}ms)`);
-    console.log(`  ✓ Tours Item Count: ${itemCount}`);
-    if (itemCount > 0) {
-      console.log(`  ✓ First Tour: "${firstItemTitle}"`);
+    console.log(`  ✓ Available Tours Count: ${toursList.length}`);
+    if (toursList.length > 0) {
+      console.log(`  ✓ Sample Tour: "${toursList[0].name || toursList[0].title}" (ID: ${toursList[0].id || toursList[0]._id})`);
     }
   } else {
     console.log(`  ✕ Status: ${toursRes.status || 'FAILED'} (${toursRes.latencyMs}ms)`);
-    if (toursRes.status === 404) {
-      console.log(`  ℹ️ Diagnosis: The endpoint returned HTTP 404.`);
-      if (baseUrl.includes('stagingapi.')) {
-        console.log(`     The cloud staging gateway (${baseUrl}) does not route /api/tours directly.`);
-        console.log(`     To serve tours from the multi-site platform backend, start backend/toursApi and run:`);
-        console.log(`       npm run check:api -- --backend`);
+    console.log(`  ✕ Error: ${toursRes.error || toursRes.body.slice(0, 150)}`);
+    passed = false;
+  }
+
+  console.log('');
+
+  // ─── 2. Create Test Booking with Embedded Snapshot ───
+  console.log(`[2/3] Creating Test Booking with Embedded Tour Snapshot...`);
+  const createBookingUrl = `${baseUrl}/api/bookings`;
+  const testEmail = `test.verifier.${Date.now()}@tripgoasia.internal`;
+  const testTour = toursList.length > 0 ? toursList[0] : null;
+
+  const testPayload = JSON.stringify({
+    website: siteDef.id,
+    websiteId: siteDef.id,
+    tourId: testTour?.id || 201,
+    tourSlug: testTour?.slug || 'grand-thailand-discovery',
+    tourName: testTour?.name || 'Grand Thailand Discovery - Bangkok to Chiang Mai',
+    tourImage: testTour?.image || 'https://images.unsplash.com/photo-1508009603885-50cf7c579365',
+    currency: 'USD',
+    location: testTour?.location || 'Bangkok, Thailand',
+    destination: testTour?.destination || testTour?.location || 'Thailand',
+    unitPrice: 1250,
+    originalPrice: 1450,
+    duration: '7 Days / 6 Nights',
+    totalPrice: 1250,
+    guestName: 'Automation Test Runner',
+    email: testEmail,
+    phone: '+1-555-0199',
+    travelers: 1,
+    startDate: new Date(Date.now() + 14 * 86400000).toISOString(),
+    endDate: new Date(Date.now() + 21 * 86400000).toISOString(),
+    specialRequest: 'AUTOMATED_VERIFICATION_TEST_BOOKING',
+  });
+
+  console.log(`  → POST ${createBookingUrl}`);
+  console.log(`  → Header X-Website-Hostname: "${siteDef.hostname}"`);
+  console.log(`  → Contact Email: "${testEmail}"`);
+
+  let authHeaders = { ...defaultHeaders };
+  try {
+    const regRes = await makeRequest(
+      `${baseUrl}/api/auth/register`,
+      { method: 'POST', headers: defaultHeaders },
+      JSON.stringify({
+        name: 'Verification Bot',
+        email: testEmail,
+        password: 'Password@123',
+      })
+    );
+    if (regRes.ok && regRes.json?.data?.token) {
+      authHeaders['Authorization'] = `Bearer ${regRes.json.data.token}`;
+    }
+  } catch {}
+
+  const createRes = await makeRequest(createBookingUrl, { headers: authHeaders }, testPayload);
+  let createdBooking = null;
+
+  if (createRes.ok && createRes.json?.data) {
+    createdBooking = createRes.json.data;
+    console.log(`  ✓ Status: ${createRes.status} Created (${createRes.latencyMs}ms)`);
+    console.log(`  ✓ Generated MongoDB ID: ${createdBooking._id || createdBooking.id}`);
+    console.log(`  ✓ Generated Booking Reference: ${createdBooking.reference}`);
+    console.log(`  ✓ Embedded Snapshot Preserved: Tour="${createdBooking.tourName}", Destination="${createdBooking.destination}"`);
+  } else {
+    console.log(`  ✕ Status: ${createRes.status || 'FAILED'} (${createRes.latencyMs}ms)`);
+    console.log(`  ✕ Error: ${createRes.error || createRes.body}`);
+    passed = false;
+  }
+
+  console.log('');
+
+  // ─── 3. Query Bookings List by Email & Reference ───
+  console.log(`[3/3] Querying Bookings List & Verifying Discovery...`);
+  if (createdBooking) {
+    const listByEmailUrl = `${baseUrl}/api/bookings?email=${encodeURIComponent(testEmail)}`;
+    console.log(`  → GET ${listByEmailUrl}`);
+    const listRes = await makeRequest(listByEmailUrl, { headers: authHeaders });
+
+    if (listRes.ok && listRes.json?.data) {
+      const returnedBookings = listRes.json.data;
+      console.log(`  ✓ Status: ${listRes.status} OK (${listRes.latencyMs}ms)`);
+      console.log(`  ✓ Bookings Returned by Email: ${returnedBookings.length}`);
+
+      const found = returnedBookings.some(
+        (b) => b.reference === createdBooking.reference || b.id === createdBooking.id || b._id === createdBooking._id
+      );
+
+      if (found) {
+        console.log(`  ✓ Match Confirmed: Test booking ${createdBooking.reference} was successfully located in database!`);
+      } else {
+        console.log(`  ✕ Match Failed: Test booking ${createdBooking.reference} was not found in returned list!`);
+        passed = false;
       }
     } else {
-      console.log(`  ✕ Error: ${toursRes.error || toursRes.body.slice(0, 120)}`);
+      console.log(`  ✕ List Request Failed: Status ${listRes.status}`);
+      passed = false;
+    }
+
+    // Verify lookup by unguessable Reference
+    const refLookupUrl = `${baseUrl}/api/bookings/${createdBooking.reference}`;
+    console.log(`  → Lookup by Reference: GET ${refLookupUrl}`);
+    const refRes = await makeRequest(refLookupUrl, { headers: defaultHeaders });
+    if (refRes.ok && refRes.json?.data?.reference === createdBooking.reference) {
+      console.log(`  ✓ Status: 200 OK - Direct lookup by reference "${createdBooking.reference}" succeeded!`);
+    } else {
+      console.log(`  ✕ Direct lookup by reference failed (Status: ${refRes.status})`);
+      passed = false;
     }
   }
 
-  console.log('\n----------------------------------------------------------------');
-  console.log('  Summary:');
-  console.log(`    Config:  ${configRes.ok ? '✓ PASS' : '✕ FAIL'} (${configRes.latencyMs}ms)`);
-  console.log(`    Tours:   ${toursRes.ok ? '✓ PASS' : '✕ FAIL'} (${toursRes.latencyMs}ms, ${itemCount} items)`);
-  console.log('----------------------------------------------------------------\n');
+  console.log('\n================================================================');
+  console.log(`  Verification Result: ${passed ? 'ALL CHECKS PASSED ✓' : 'VERIFICATION FAILED ✕'}`);
+  console.log('================================================================\n');
 
-  if (configRes.ok && toursRes.ok) {
-    process.exit(0);
-  } else {
-    process.exit(1);
-  }
+  process.exit(passed ? 0 : 1);
 }
 
 runCheck().catch((err) => {

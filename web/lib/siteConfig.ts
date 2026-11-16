@@ -56,7 +56,7 @@ export interface ApiWebsite {
 export interface SiteConfigResult {
   recommendations: Array<{ isEnabled: number; favService: string }>;
   theme: Record<string, unknown>;
-  websiteConfiguration: unknown | null;
+  websiteConfiguration: { currency?: { symbol?: string; code?: string; name?: string }; [key: string]: any } | any;
   websiteContact: { contact: unknown[]; email: unknown[] };
   websiteLaunguage: unknown[];
   websiteLinks: { headerType: unknown[]; footerTypes: unknown[] };

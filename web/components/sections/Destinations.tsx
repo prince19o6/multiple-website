@@ -93,7 +93,10 @@ export default function Destinations({ config, data }: SectionProps) {
               <div
                 key={dest.id || dest.name || idx}
                 className="relative overflow-hidden rounded-2xl group cursor-pointer shadow-md hover:shadow-xl transition-shadow"
-                onClick={() => router.push("/explore")}
+                onClick={() => {
+                  const primary = dest.name.split(',')[0].trim();
+                  router.push(`/explore?q=${encodeURIComponent(primary)}`);
+                }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -104,7 +107,9 @@ export default function Destinations({ config, data }: SectionProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                   <h3 className="text-xl font-bold">{dest.name}</h3>
-                  <p className="text-sm text-white/80">{dest.tours} tours</p>
+                  <p className="text-sm text-white/80">
+                    {dest.tours} {dest.tours === 1 ? 'tour' : 'tours'}
+                  </p>
                 </div>
               </div>
             ))}

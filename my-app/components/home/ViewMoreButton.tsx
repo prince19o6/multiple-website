@@ -37,7 +37,7 @@ export function ViewMoreButton({
   };
 
   return (
-    <TouchableOpacity
+    <TouchableOpacity testID="btn-press"
       style={[
         styles.button,
         {

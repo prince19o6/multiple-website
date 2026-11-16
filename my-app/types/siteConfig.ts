@@ -7,6 +7,7 @@
  */
 
 import type { SiteDefinition, SiteId } from '@/src/config/sites';
+import { getContrastTextColor, ensureAccessibleTextColor } from '@/lib/contrast';
 
 // ─── Real Config API Response Shape ──────────────────────────────────────────
 
@@ -143,10 +144,13 @@ export interface ThemeColors {
   primary: string;
   primaryDark: string;
   primaryLight: string;
+  primaryContrast: string;
+  primaryText: string;
   secondary: string;
   accent: string;
   background: string;
   surface: string;
+  surface2: string;
   text: string;
   heading: string;
   mutedText: string;
@@ -281,23 +285,29 @@ export function normalizeSiteConfig(raw: any, site: SiteDefinition): SiteConfig 
   const footerBg = pickShade(colors.footerbgcolor, ['800', '900'], '#0f172a');
   const footerText = pickShade(colors.footertextcolor, ['800', '900'], '#f8fafc');
 
+  const primaryContrast = getContrastTextColor(primary);
+  const { accessibleHex: primaryText } = ensureAccessibleTextColor(primary, '#ffffff', site.id, 'primary');
+
   const themeColors: ThemeColors = {
     primary,
     primaryDark,
     primaryLight,
+    primaryContrast,
+    primaryText,
     secondary,
     accent,
-    background,
-    surface,
-    text,
-    heading,
-    mutedText,
-    border,
+    background: '#ffffff',
+    surface: '#ffffff',
+    surface2: '#f8fafc',
+    text: '#0f172a',
+    heading: '#0f172a',
+    mutedText: '#64748b',
+    border: '#e2e8f0',
     success: '#16a34a',
     danger: '#dc2626',
     footerBg,
     footerText,
-    cardBg: surface,
+    cardBg: '#ffffff',
     primaryScale: typeof colors.primary === 'object' ? colors.primary : undefined,
     secondaryScale: typeof colors.secondary === 'object' ? colors.secondary : undefined,
     neutralScale: typeof colors.neutral === 'object' ? colors.neutral : undefined,

@@ -1,26 +1,71 @@
 /**
  * components/DynamicRenderer.tsx
  *
- * Config-driven section engine.
- * Receives the list of section keys from the API config (homeSections)
- * and renders the matching registered React Native components in sequence.
+ * Config-driven mobile section engine.
+ * Renders the ordered component list from `config.components.home` (or passed components)
+ * matching the active tenant's API configuration.
+ *
+ * Resilience:
+ * - Each section is wrapped in an isolated error boundary; one section failing never breaks the screen.
+ * - Unknown types/variants are skipped cleanly.
+ * - Supports legacy string sections array for full backward compatibility.
  */
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { useRouter } from 'expo-router';
+import type { ComponentConfig } from '@/lib/config/siteConfigSchema';
+import { resolveMobileComponent } from '@/lib/registry/componentRegistry';
 import { componentRegistry } from '@/lib/componentRegistry';
 import type { MergedWebsiteConfig } from '@/lib/mergeWebsiteConfig';
 import type { SectionData } from '@/types';
 
+interface SectionErrorBoundaryProps {
+  children: React.ReactNode;
+  fallbackKey: string;
+}
+
+interface SectionErrorBoundaryState {
+  hasError: boolean;
+}
+
+class SectionErrorBoundary extends React.Component<
+  SectionErrorBoundaryProps,
+  SectionErrorBoundaryState
+> {
+  constructor(props: SectionErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    if (__DEV__) {
+      console.warn(`[SectionErrorBoundary] Section '${this.props.fallbackKey}' crashed:`, error);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return null;
+    }
+    return this.props.children;
+  }
+}
+
 interface DynamicRendererProps {
-  sections: string[];
-  config: MergedWebsiteConfig;
+  sections?: string[];
+  components?: ComponentConfig[];
+  config: MergedWebsiteConfig | any;
   data: SectionData;
 }
 
 export default function DynamicRenderer({
   sections,
+  components,
   config,
   data,
 }: DynamicRendererProps) {
@@ -28,29 +73,69 @@ export default function DynamicRenderer({
 
   const handleNavigate = (path: string) => {
     if (path === '/') {
-      router.replace('/(app)');
+      router.replace('/(tabs)');
     } else {
       router.push(path as any);
     }
   };
 
+  // Modern Path: Driven by typed ComponentConfig[] from SiteConfig
+  const effectiveComponents: ComponentConfig[] =
+    components || config?.components?.home || [];
+
+  if (Array.isArray(effectiveComponents) && effectiveComponents.length > 0) {
+    const appComponents = effectiveComponents
+      .filter((c) => c.enabled !== false && (!c.platforms || c.platforms.includes('app')))
+      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+
+    return (
+      <View style={styles.container}>
+        {appComponents.map((comp) => {
+          const Component = resolveMobileComponent(comp);
+          const key = comp.id || `${comp.type}:${comp.variant || 'default'}`;
+
+          if (!Component) {
+            return null;
+          }
+
+          return (
+            <SectionErrorBoundary key={key} fallbackKey={key}>
+              <Component
+                component={comp}
+                config={config}
+                data={data}
+                onNavigate={handleNavigate}
+              />
+            </SectionErrorBoundary>
+          );
+        })}
+      </View>
+    );
+  }
+
+  // Legacy Fallback Path: Driven by string section keys
+  const fallbackSections = sections || config?.homeSections || [];
+
   return (
     <View style={styles.container}>
-      {sections.map((sectionKey, index) => {
+      {fallbackSections.map((sectionKey: string, index: number) => {
         const SectionComponent = componentRegistry[sectionKey];
 
         if (!SectionComponent) {
-          // Unknown or remote-injected component string — silently skip for security
           return null;
         }
 
         return (
-          <SectionComponent
+          <SectionErrorBoundary
             key={`${sectionKey}-${index}`}
-            config={config}
-            data={data}
-            onNavigate={handleNavigate}
-          />
+            fallbackKey={`${sectionKey}-${index}`}
+          >
+            <SectionComponent
+              config={config}
+              data={data}
+              onNavigate={handleNavigate}
+            />
+          </SectionErrorBoundary>
         );
       })}
     </View>

@@ -111,7 +111,7 @@ export function RewardVoucherCard({
       </View>
 
       {/* Action Button */}
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-claimpress" accessibilityLabel="Claim Press"
         style={[
           styles.actionButton,
           isClaimed

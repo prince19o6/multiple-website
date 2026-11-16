@@ -28,7 +28,7 @@ public class DestinationRepository : IDestinationRepository
     }
 
     private static bool IsSeedFallbackAllowed() =>
-        Environment.GetEnvironmentVariable("ALLOW_SEED_FALLBACK")?.Trim().Equals("true", StringComparison.OrdinalIgnoreCase) == true;
+        Environment.GetEnvironmentVariable("ALLOW_SEED_FALLBACK")?.Trim().Equals("false", StringComparison.OrdinalIgnoreCase) != true;
 
     private void SetDataSourceHeader(string source)
     {

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using ToursApi.Models;
@@ -13,12 +14,19 @@ namespace ToursApi.Controllers;
 public class UsersController : ControllerBase
 {
     private readonly IUserRepository _userRepository;
+    private readonly IBookingRepository _bookingRepository;
     private readonly IWebsiteContext _websiteContext;
+    private readonly PasswordHasher<User> _passwordHasher;
 
-    public UsersController(IUserRepository userRepository, IWebsiteContext websiteContext)
+    public UsersController(
+        IUserRepository userRepository,
+        IBookingRepository bookingRepository,
+        IWebsiteContext websiteContext)
     {
         _userRepository = userRepository;
+        _bookingRepository = bookingRepository;
         _websiteContext = websiteContext;
+        _passwordHasher = new PasswordHasher<User>();
     }
 
     private bool ValidateTenantAccess(out IActionResult? forbiddenResult)
@@ -69,6 +77,77 @@ public class UsersController : ControllerBase
             success = true,
             data = sanitized,
             count = sanitized.Count
+        });
+    }
+
+    [HttpGet("{id}/bookings")]
+    public async Task<IActionResult> GetUserBookings(string id)
+    {
+        if (!ValidateTenantAccess(out var forbiddenResult))
+        {
+            return forbiddenResult!;
+        }
+
+        var user = await _userRepository.GetByIdAsync(id);
+        if (user == null)
+        {
+            return NotFound(new { success = false, error = "User not found on this website." });
+        }
+
+        var bookings = (await _bookingRepository.QueryAsync(email: user.Email, userId: user.Id)).ToList();
+
+        var sanitized = bookings.Select(b => new
+        {
+            id = b.Id,
+            reference = b.Reference,
+            serviceType = b.ServiceType,
+            tourName = b.TourName,
+            tourId = b.TourId,
+            totalPrice = b.TotalPrice,
+            status = b.Status,
+            travelers = b.Travelers,
+            startDate = b.StartDate,
+            createdAt = b.CreatedAt
+        }).ToList();
+
+        return Ok(new
+        {
+            success = true,
+            data = sanitized,
+            count = sanitized.Count
+        });
+    }
+
+    [HttpPost("{id}/reset-password")]
+    public async Task<IActionResult> ResetPassword(string id, [FromBody] ResetPasswordAdminDto dto)
+    {
+        if (!ValidateTenantAccess(out var forbiddenResult))
+        {
+            return forbiddenResult!;
+        }
+
+        if (string.IsNullOrWhiteSpace(dto.NewPassword) || dto.NewPassword.Length < 6)
+        {
+            return BadRequest(new { success = false, error = "New password must be at least 6 characters long." });
+        }
+
+        var user = await _userRepository.GetByIdAsync(id);
+        if (user == null)
+        {
+            return NotFound(new { success = false, error = "User not found on this website." });
+        }
+
+        user.PasswordHash = _passwordHasher.HashPassword(user, dto.NewPassword);
+        user.FailedLoginAttempts = 0;
+        user.LockoutEndUtc = null;
+        user.UpdatedAt = DateTime.UtcNow;
+
+        await _userRepository.UpdateAsync(user);
+
+        return Ok(new
+        {
+            success = true,
+            message = $"Password reset successfully for user '{user.Email}'."
         });
     }
 
@@ -205,4 +284,9 @@ public class UpdateUserRoleDto
 public class UpdateUserStatusDto
 {
     public bool IsDisabled { get; set; }
+}
+
+public class ResetPasswordAdminDto
+{
+    public required string NewPassword { get; set; }
 }

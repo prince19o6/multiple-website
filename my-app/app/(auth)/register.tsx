@@ -22,6 +22,7 @@ import {
   ActivityIndicator,
   Alert,
   Platform,
+  KeyboardAvoidingView,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -147,40 +148,36 @@ export default function RegisterScreen() {
         email: formData.email.trim().toLowerCase(),
         password: formData.password,
         phone: formData.phone?.trim() || undefined,
+        termsAccepted: formData.acceptTerms,
       });
 
-      if (regResult && regResult.tokenSaved === false) {
-        Alert.alert(
-          'Account Created',
-          'Your account has been created successfully, but your session token could not be persisted. Please sign in with your email and password.',
-          [
-            {
-              text: 'Sign In',
-              onPress: () => {
-                router.replace('/(auth)/login');
-              },
-            },
-          ]
-        );
+      const registeredEmail = formData.email.trim().toLowerCase();
+
+      const navigateToSignIn = () => {
+        router.replace({
+          pathname: '/(auth)/login',
+          params: { email: registeredEmail, registered: 'true' },
+        });
+      };
+
+      if (Platform.OS === 'web') {
+        navigateToSignIn();
         return;
       }
 
-      // Success! Show confirmation and return to previous screen or main tabs
       Alert.alert(
-        'Registration Successful',
-        'Your account has been created and you are now signed in.',
+        'Account Created',
+        'Your account has been created successfully. Please sign in with your credentials.',
         [
           {
-            text: 'Continue',
-            onPress: () => {
-              if (router.canGoBack()) {
-                router.back();
-              } else {
-                router.replace('/(tabs)');
-              }
-            },
+            text: 'Sign In',
+            onPress: navigateToSignIn,
           },
-        ]
+        ],
+        {
+          cancelable: true,
+          onDismiss: navigateToSignIn,
+        }
       );
     } catch (err: unknown) {
       if (err instanceof ApiError) {
@@ -227,7 +224,7 @@ export default function RegisterScreen() {
           },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           style={[styles.backBtn, { backgroundColor: colors.surface }]}
           onPress={() => router.back()}
           activeOpacity={0.7}
@@ -238,12 +235,16 @@ export default function RegisterScreen() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-        keyboardShouldPersistTaps="handled"
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        style={{ flex: 1 }}
       >
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        >
         <View style={{ alignItems: 'center', marginBottom: 20 }}>
           <BrandLogo size="lg" align="center" showTextFallback={true} />
         </View>
@@ -346,7 +347,7 @@ export default function RegisterScreen() {
             onChangeText={(val) => updateField('password', val)}
             returnKeyType="next"
           />
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-register-344" accessibilityLabel="register action"
             onPress={() => setShowPassword(!showPassword)}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
@@ -384,7 +385,7 @@ export default function RegisterScreen() {
             onChangeText={(val) => updateField('confirmPassword', val)}
             returnKeyType="done"
           />
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-register-382" accessibilityLabel="register action"
             onPress={() => setShowConfirmPassword(!showConfirmPassword)}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
@@ -394,7 +395,7 @@ export default function RegisterScreen() {
         {fieldErrors.confirmPassword && <Text style={styles.fieldErrorText}>{fieldErrors.confirmPassword}</Text>}
 
         {/* 6. Terms and Conditions Checkbox */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-register-392" accessibilityLabel="register action"
           style={styles.termsRow}
           onPress={() => updateField('acceptTerms', !formData.acceptTerms)}
           activeOpacity={0.8}
@@ -418,7 +419,7 @@ export default function RegisterScreen() {
         {fieldErrors.terms && <Text style={[styles.fieldErrorText, { marginBottom: 12 }]}>{fieldErrors.terms}</Text>}
 
         {/* Submit Button */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-create-account" accessibilityLabel="Create Account"
           style={[
             styles.submitBtn,
             { backgroundColor: colors.primary },
@@ -438,12 +439,13 @@ export default function RegisterScreen() {
         {/* Switch to Login */}
         <View style={styles.footerRow}>
           <Text style={{ color: colors.mutedText }}>Already have an account? </Text>
-          <TouchableOpacity onPress={() => router.push('/(auth)/login')}>
+          <TouchableOpacity testID="btn-sign-in" accessibilityLabel="Sign In" onPress={() => router.push('/(auth)/login')}>
             <Text style={{ color: colors.primary, fontWeight: '700' }}>Sign In</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </View>
+    </KeyboardAvoidingView>
+  </View>
   );
 }
 

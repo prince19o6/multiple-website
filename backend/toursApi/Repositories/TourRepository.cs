@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using ToursApi.Configuration;
 using ToursApi.Exceptions;
 using ToursApi.Models;
+using ToursApi.Services;
 
 namespace ToursApi.Repositories;
 
@@ -33,7 +34,7 @@ public class TourRepository : ITourRepository
     }
 
     private static bool IsSeedFallbackAllowed() =>
-        Environment.GetEnvironmentVariable("ALLOW_SEED_FALLBACK")?.Trim().Equals("true", StringComparison.OrdinalIgnoreCase) == true;
+        Environment.GetEnvironmentVariable("ALLOW_SEED_FALLBACK")?.Trim().Equals("false", StringComparison.OrdinalIgnoreCase) != true;
 
     private void SetDataSourceHeader(string source)
     {
@@ -72,6 +73,7 @@ public class TourRepository : ITourRepository
             var candidates = new[]
             {
                 Path.Combine(currentDir, "seed", fileName),
+                Path.Combine(currentDir, "backend", "toursApi", "seed", fileName),
                 Path.Combine(currentDir, "..", "..", "seed", fileName),
                 Path.Combine(AppContext.BaseDirectory, "seed", fileName),
                 Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", fileName),
@@ -299,8 +301,11 @@ public class TourRepository : ITourRepository
 
             var filter = Builders<Tour>.Filter.Or(idBuilders);
             var item = await _tours.Find(filter).FirstOrDefaultAsync();
-            SetDataSourceHeader("mongodb");
-            return item;
+            if (item != null)
+            {
+                SetDataSourceHeader("mongodb");
+                return item;
+            }
         }
         catch (Exception ex)
         {
@@ -317,10 +322,14 @@ public class TourRepository : ITourRepository
         }
 
         var catalog = GetDiskCatalog();
-        return catalog.FirstOrDefault(t =>
+        var match = catalog.FirstOrDefault(t =>
             string.Equals(t.Id, id, StringComparison.OrdinalIgnoreCase) ||
             string.Equals(t.Slug, id, StringComparison.OrdinalIgnoreCase) ||
             (int.TryParse(id, out int nid) && t.TourNumericId == nid));
+
+        if (match != null) return match;
+
+        return ResilientDataGenerator.GetTourDetail(id, siteId);
     }
 
     public async Task<Tour?> GetBySlugAsync(string slug)
@@ -332,8 +341,11 @@ public class TourRepository : ITourRepository
         {
             var filter = Builders<Tour>.Filter.Eq(t => t.Slug, slug);
             var item = await _tours.Find(filter).FirstOrDefaultAsync();
-            SetDataSourceHeader("mongodb");
-            return item;
+            if (item != null)
+            {
+                SetDataSourceHeader("mongodb");
+                return item;
+            }
         }
         catch (Exception ex)
         {
@@ -349,11 +361,17 @@ public class TourRepository : ITourRepository
             }
         }
 
-        return GetDiskCatalog().FirstOrDefault(t => string.Equals(t.Slug, slug, StringComparison.OrdinalIgnoreCase));
+        var catalog = GetDiskCatalog();
+        var match = catalog.FirstOrDefault(t => string.Equals(t.Slug, slug, StringComparison.OrdinalIgnoreCase));
+        if (match != null) return match;
+
+        return ResilientDataGenerator.GetTourDetail(slug, siteId);
     }
 
     public async Task<Tour?> GetByNumericIdAsync(int numericId)
     {
+        if (numericId <= 0) return null;
+
         var dbName = GetDatabaseName();
         var siteId = GetWebsiteId();
 
@@ -361,8 +379,11 @@ public class TourRepository : ITourRepository
         {
             var filter = Builders<Tour>.Filter.Eq(t => t.TourNumericId, numericId);
             var item = await _tours.Find(filter).FirstOrDefaultAsync();
-            SetDataSourceHeader("mongodb");
-            return item;
+            if (item != null)
+            {
+                SetDataSourceHeader("mongodb");
+                return item;
+            }
         }
         catch (Exception ex)
         {
@@ -378,7 +399,11 @@ public class TourRepository : ITourRepository
             }
         }
 
-        return GetDiskCatalog().FirstOrDefault(t => t.TourNumericId == numericId);
+        var catalog = GetDiskCatalog();
+        var match = catalog.FirstOrDefault(t => t.TourNumericId == numericId);
+        if (match != null) return match;
+
+        return ResilientDataGenerator.GetTourDetail(numericId.ToString(), siteId);
     }
 
     public async Task CreateAsync(Tour tour)
@@ -429,7 +454,7 @@ public class TourRepository : ITourRepository
         SetDataSourceHeader("mongodb");
     }
 
-    public async Task<IEnumerable<Tour>> SearchAsync(string? q, double? minPrice, double? maxPrice, string? difficulty)
+    public async Task<IEnumerable<Tour>> SearchAsync(string? q, double? minPrice, double? maxPrice, string? difficulty, string? sort = null)
     {
         var dbName = GetDatabaseName();
         var siteId = GetWebsiteId();
@@ -468,7 +493,18 @@ public class TourRepository : ITourRepository
                 filter &= filterBuilder.Eq(t => t.Difficulty, difficulty);
             }
 
-            var results = await _tours.Find(filter).Limit(100).ToListAsync();
+            var query = _tours.Find(filter);
+
+            query = sort?.ToLowerInvariant() switch
+            {
+                "price-low" or "price_asc" => query.SortBy(t => t.Price),
+                "price-high" or "price_desc" => query.SortByDescending(t => t.Price),
+                "rating" => query.SortByDescending(t => t.Rating),
+                "newest" => query.SortByDescending(t => t.CreatedAt),
+                _ => query.SortBy(t => t.TourNumericId)
+            };
+
+            var results = await query.Limit(100).ToListAsync();
             SetDataSourceHeader("mongodb");
             return results;
         }
@@ -506,6 +542,205 @@ public class TourRepository : ITourRepository
             catalog = catalog.Where(t => string.Equals(t.Difficulty, difficulty.Trim(), StringComparison.OrdinalIgnoreCase));
         }
 
+        catalog = sort?.ToLowerInvariant() switch
+        {
+            "price-low" or "price_asc" => catalog.OrderBy(t => t.Price),
+            "price-high" or "price_desc" => catalog.OrderByDescending(t => t.Price),
+            "rating" => catalog.OrderByDescending(t => t.Rating),
+            "newest" => catalog.OrderByDescending(t => t.CreatedAt),
+            _ => catalog.OrderBy(t => t.TourNumericId)
+        };
+
         return catalog.Take(100).ToList();
+    }
+
+    public async Task<IEnumerable<Tour>> GetSimilarToursAsync(string tourIdOrSlug, int limit = 4)
+    {
+        var siteId = GetWebsiteId();
+        var dbName = GetDatabaseName();
+
+        try
+        {
+            var baseTour = await GetByIdAsync(tourIdOrSlug);
+
+            if (baseTour != null)
+            {
+                var excludeList = new List<FilterDefinition<Tour>>();
+                if (!string.IsNullOrWhiteSpace(baseTour.Id))
+                {
+                    excludeList.Add(Builders<Tour>.Filter.Ne(t => t.Id, baseTour.Id));
+                }
+                if (baseTour.TourNumericId > 0)
+                {
+                    excludeList.Add(Builders<Tour>.Filter.Ne(t => t.TourNumericId, baseTour.TourNumericId));
+                }
+                if (!string.IsNullOrWhiteSpace(baseTour.Slug))
+                {
+                    excludeList.Add(Builders<Tour>.Filter.Ne(t => t.Slug, baseTour.Slug));
+                }
+
+                var excludeFilter = excludeList.Count > 0
+                    ? Builders<Tour>.Filter.And(excludeList)
+                    : Builders<Tour>.Filter.Empty;
+
+                var orFilters = new List<FilterDefinition<Tour>>();
+                if (!string.IsNullOrWhiteSpace(baseTour.Category))
+                {
+                    orFilters.Add(Builders<Tour>.Filter.Eq(t => t.Category, baseTour.Category));
+                }
+                if (!string.IsNullOrWhiteSpace(baseTour.Destination))
+                {
+                    orFilters.Add(Builders<Tour>.Filter.Eq(t => t.Destination, baseTour.Destination));
+                }
+                if (!string.IsNullOrWhiteSpace(baseTour.Location))
+                {
+                    var locPrefix = baseTour.Location.Split(',')[0].Trim();
+                    orFilters.Add(Builders<Tour>.Filter.Regex(t => t.Location, new MongoDB.Bson.BsonRegularExpression(Regex.Escape(locPrefix), "i")));
+                }
+
+                FilterDefinition<Tour> matchFilter = orFilters.Count > 0
+                    ? Builders<Tour>.Filter.And(excludeFilter, Builders<Tour>.Filter.Or(orFilters))
+                    : excludeFilter;
+
+                var similar = await _tours.Find(matchFilter)
+                    .SortByDescending(t => t.Rating)
+                    .Limit(limit * 2)
+                    .ToListAsync();
+
+                // Distinct by id/slug
+                var distinctSimilar = similar
+                    .Where(s => s.Id != baseTour.Id && s.TourNumericId != baseTour.TourNumericId && s.Slug != baseTour.Slug)
+                    .DistinctBy(s => s.TourNumericId > 0 ? s.TourNumericId.ToString() : s.Slug)
+                    .Take(limit)
+                    .ToList();
+
+                if (distinctSimilar.Count < limit)
+                {
+                    var allTours = await _tours.Find(excludeFilter)
+                        .SortByDescending(t => t.Rating)
+                        .Limit(limit * 2)
+                        .ToListAsync();
+
+                    var existingIds = distinctSimilar.Select(s => s.TourNumericId > 0 ? s.TourNumericId.ToString() : s.Slug).ToHashSet();
+                    foreach (var candidate in allTours)
+                    {
+                        var key = candidate.TourNumericId > 0 ? candidate.TourNumericId.ToString() : candidate.Slug;
+                        if (!existingIds.Contains(key) && candidate.Id != baseTour.Id && candidate.Slug != baseTour.Slug)
+                        {
+                            distinctSimilar.Add(candidate);
+                            existingIds.Add(key);
+                            if (distinctSimilar.Count >= limit) break;
+                        }
+                    }
+                }
+
+                SetDataSourceHeader("mongodb");
+                return distinctSimilar;
+            }
+        }
+        catch (Exception ex)
+        {
+            if (IsSeedFallbackAllowed())
+            {
+                _logger?.LogWarning(ex, "[TourRepository.GetSimilarToursAsync] MongoDB query failed. Falling back to disk seed data for '{DatabaseName}'.", dbName);
+                SetDataSourceHeader("seed-fallback");
+            }
+            else
+            {
+                _logger?.LogError(ex, "[TourRepository.GetSimilarToursAsync] MongoDB unreachable for database '{DatabaseName}'.", dbName);
+                throw new MongoDatabaseUnavailableException(dbName, siteId, $"Failed to connect to MongoDB database '{dbName}'", ex);
+            }
+        }
+
+        // Resilient disk catalog fallback
+        var catalog = GetDiskCatalog();
+        var fallbackBase = catalog.FirstOrDefault(t =>
+            (int.TryParse(tourIdOrSlug, out var nId) && t.TourNumericId == nId) ||
+            string.Equals(t.Slug, tourIdOrSlug, StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(t.Id, tourIdOrSlug, StringComparison.OrdinalIgnoreCase)
+        );
+
+        if (fallbackBase == null)
+        {
+            return catalog.Take(limit).ToList();
+        }
+
+        var candidates = catalog
+            .Where(t => t.Id != fallbackBase.Id && t.TourNumericId != fallbackBase.TourNumericId && t.Slug != fallbackBase.Slug)
+            .OrderByDescending(t =>
+                (string.Equals(t.Category, fallbackBase.Category, StringComparison.OrdinalIgnoreCase) ? 10 : 0) +
+                (string.Equals(t.Destination, fallbackBase.Destination, StringComparison.OrdinalIgnoreCase) ? 8 : 0) +
+                (t.Rating * 0.5)
+            )
+            .Take(limit)
+            .ToList();
+
+        return candidates;
+    }
+
+    public async Task<GuestReview?> AddReviewAsync(string tourIdOrSlug, GuestReview review)
+    {
+        if (review == null) return null;
+        if (string.IsNullOrWhiteSpace(review.Author)) review.Author = "Traveler";
+        if (string.IsNullOrWhiteSpace(review.Date)) review.Date = DateTime.UtcNow.ToString("yyyy-MM-dd");
+        if (review.Rating < 1) review.Rating = 1;
+        if (review.Rating > 5) review.Rating = 5;
+
+        var siteId = GetWebsiteId();
+        var dbName = GetDatabaseName();
+
+        try
+        {
+            var baseTour = await GetByIdAsync(tourIdOrSlug);
+            if (baseTour != null)
+            {
+                baseTour.GuestReviews ??= new List<GuestReview>();
+                baseTour.GuestReviews.Insert(0, review);
+
+                var avgRating = baseTour.GuestReviews.Average(r => r.Rating);
+                baseTour.Rating = Math.Round(avgRating, 1);
+                baseTour.Reviews = baseTour.GuestReviews.Count;
+                baseTour.ReviewCount = baseTour.GuestReviews.Count;
+                baseTour.UpdatedAt = DateTime.UtcNow;
+
+                var filter = Builders<Tour>.Filter.Eq(t => t.Id, baseTour.Id);
+                await _tours.ReplaceOneAsync(filter, baseTour);
+                SetDataSourceHeader("mongodb");
+                return review;
+            }
+        }
+        catch (Exception ex)
+        {
+            if (IsSeedFallbackAllowed())
+            {
+                _logger?.LogWarning(ex, "[TourRepository.AddReviewAsync] MongoDB query failed. Falling back to disk seed data for '{DatabaseName}'.", dbName);
+                SetDataSourceHeader("seed-fallback");
+            }
+            else
+            {
+                _logger?.LogError(ex, "[TourRepository.AddReviewAsync] MongoDB unreachable for database '{DatabaseName}'.", dbName);
+                throw new MongoDatabaseUnavailableException(dbName, siteId, $"Failed to connect to MongoDB database '{dbName}'", ex);
+            }
+        }
+
+        var catalog = GetDiskCatalog();
+        var fallbackBase = catalog.FirstOrDefault(t =>
+            (int.TryParse(tourIdOrSlug, out var nId) && t.TourNumericId == nId) ||
+            string.Equals(t.Slug, tourIdOrSlug, StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(t.Id, tourIdOrSlug, StringComparison.OrdinalIgnoreCase)
+        );
+
+        if (fallbackBase != null)
+        {
+            fallbackBase.GuestReviews ??= new List<GuestReview>();
+            fallbackBase.GuestReviews.Insert(0, review);
+            var avg = fallbackBase.GuestReviews.Average(r => r.Rating);
+            fallbackBase.Rating = Math.Round(avg, 1);
+            fallbackBase.Reviews = fallbackBase.GuestReviews.Count;
+            fallbackBase.ReviewCount = fallbackBase.GuestReviews.Count;
+            return review;
+        }
+
+        return null;
     }
 }

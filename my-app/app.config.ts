@@ -1,4 +1,6 @@
 import type { ExpoConfig, ConfigContext } from 'expo/config';
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Dynamic Expo config.
@@ -6,11 +8,10 @@ import type { ExpoConfig, ConfigContext } from 'expo/config';
  * (name, slug, bundleIdentifier, package, theme colors, splash) per website.
  */
 export default ({ config }: ConfigContext): ExpoConfig => {
-  const siteId = (process.env.EXPO_PUBLIC_SITE_ID || '').toLowerCase().trim();
+  const siteId = (process.env.EXPO_PUBLIC_SITE_ID || 'gujjutours').toLowerCase().trim();
   const rawHostname = (process.env.EXPO_PUBLIC_SITE_HOSTNAME || '').toLowerCase().trim();
 
   // Cleartext traffic (HTTP) is permitted in development only for local backend testing.
-  // In production builds and staging, HTTPS is strictly enforced.
   const isDev =
     process.env.NODE_ENV !== 'production' &&
     !process.env.EAS_BUILD_PROFILE?.includes('production');
@@ -20,7 +21,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
   let appSlug = 'gujjutours';
   let appScheme = 'gujjutours';
   let bundleId = 'com.toursapp.gujjutours';
-  let brandColor = '#2563eb';
+  let brandColor = '#2882c5';
   let defaultHostname = 'www.gujjutours.com';
   let defaultApiUrl = 'https://stagingapi.gujjutours.com';
 
@@ -34,7 +35,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     appSlug = 'tripgoasia';
     appScheme = 'tripgoasia';
     bundleId = 'com.toursapp.tripgoasia';
-    brandColor = '#16a34a';
+    brandColor = '#FF932C';
     defaultHostname = 'www.tripgoasia.com';
     defaultApiUrl = 'https://stagingapi.tripgoasia.com';
   } else if (
@@ -47,10 +48,22 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     appSlug = 'technoheaven';
     appScheme = 'technoheaven';
     bundleId = 'com.toursapp.technoheaven';
-    brandColor = '#dc2626';
+    brandColor = '#00aacf';
     defaultHostname = 'stagingb2b.technoheaven.com';
     defaultApiUrl = 'https://stagingapi.technoheaven.com';
   }
+
+  // Check generated brand assets from fetch-site-assets.js
+  const genDir = path.join(__dirname, 'assets/generated', siteId);
+  const iconPath = fs.existsSync(path.join(genDir, 'icon.png'))
+    ? `./assets/generated/${siteId}/icon.png`
+    : './assets/icon.png';
+  const splashPath = fs.existsSync(path.join(genDir, 'splash.png'))
+    ? `./assets/generated/${siteId}/splash.png`
+    : './assets/splash-icon.png';
+  const adaptivePath = fs.existsSync(path.join(genDir, 'adaptive-icon.png'))
+    ? `./assets/generated/${siteId}/adaptive-icon.png`
+    : './assets/adaptive-icon.png';
 
   return {
     ...config,
@@ -59,7 +72,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     version: '1.0.0',
     sdkVersion: '58.0.0',
     orientation: 'portrait',
-    icon: './assets/icon.png',
+    icon: iconPath,
     scheme: appScheme,
     userInterfaceStyle: 'automatic',
 
@@ -79,9 +92,8 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     android: {
       package: bundleId,
       adaptiveIcon: {
-        foregroundImage: './assets/adaptive-icon.png',
-        backgroundImage: './assets/android-icon-background.png',
-        backgroundColor: brandColor,
+        foregroundImage: adaptivePath,
+        backgroundColor: '#ffffff',
       },
       permissions: [
         'android.permission.ACCESS_FINE_LOCATION',
@@ -109,13 +121,13 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       [
         'expo-splash-screen',
         {
-          image: './assets/splash-icon.png',
+          image: splashPath,
           imageWidth: 200,
           resizeMode: 'contain',
-          backgroundColor: brandColor,
+          backgroundColor: '#ffffff',
           dark: {
-            image: './assets/splash-icon.png',
-            backgroundColor: '#0B0F19',
+            image: splashPath,
+            backgroundColor: '#0b0f19',
           },
         },
       ],
@@ -125,7 +137,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
       [
         'expo-notifications',
         {
-          icon: './assets/icon.png',
+          icon: iconPath,
           color: brandColor,
         },
       ],

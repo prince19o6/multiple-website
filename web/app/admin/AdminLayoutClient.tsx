@@ -13,6 +13,7 @@ import {
   type AdminSiteId,
   type AdminUser,
 } from "@/lib/adminApi";
+import { getContrastTextColor } from "@/lib/contrast";
 
 interface Props {
   siteDef: SiteDefinition;
@@ -80,6 +81,7 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
 
   const brandInfo = ADMIN_SITE_NAMES[siteDef.siteId as AdminSiteId] || ADMIN_SITE_NAMES.tripgoasia;
   const brandColor = siteDef.defaultAccentColor || brandInfo.color || "#2563eb";
+  const brandTextColor = getContrastTextColor(brandColor);
 
   if (isLoading) {
     return (
@@ -140,14 +142,16 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
 
   const menuItems = [
     { href: "/admin", label: "Dashboard", icon: "📊" },
-    { href: "/admin/tours", label: "Tours Catalog", icon: "🗺️" },
+    { href: "/admin/catalog", label: "Service Catalog", icon: "🗺️" },
     { href: "/admin/bookings", label: "Reservations", icon: "📅" },
     { href: "/admin/users", label: "Users & Roles", icon: "👥" },
     { href: "/admin/analytics", label: "Analytics", icon: "📈" },
+    { href: "/admin/settings", label: "Website Settings", icon: "🎨" },
+    { href: "/admin/settings/features", label: "Feature Flags", icon: "⚙️" },
   ];
 
   return (
-    <div className="flex h-screen bg-slate-100 overflow-hidden font-sans">
+    <div className="flex h-screen bg-surface-2 text-foreground overflow-hidden font-sans transition-colors duration-200">
       {/* ─── Mobile Slide-over Overlay ─── */}
       {mobileMenuOpen && (
         <div
@@ -166,8 +170,8 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
         <div className="p-4 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-3 overflow-hidden">
             <div
-              className="w-9 h-9 rounded-xl flex items-center justify-center font-black text-white text-lg shadow-md shrink-0"
-              style={{ backgroundColor: brandColor }}
+              className="w-9 h-9 rounded-xl flex items-center justify-center font-black text-lg shadow-md shrink-0"
+              style={{ backgroundColor: brandColor, color: brandTextColor }}
             >
               {siteDef.displayName.charAt(0)}
             </div>
@@ -207,10 +211,10 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
                 href={item.href}
                 className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all ${
                   isActive
-                    ? "text-white font-semibold shadow-md"
+                    ? "font-semibold shadow-md"
                     : "text-slate-300 hover:bg-slate-800/80 hover:text-white"
                 }`}
-                style={isActive ? { backgroundColor: brandColor } : undefined}
+                style={isActive ? { backgroundColor: brandColor, color: brandTextColor } : undefined}
               >
                 <span className="text-lg shrink-0">{item.icon}</span>
                 {(sidebarOpen || mobileMenuOpen) && (
@@ -243,11 +247,11 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
       {/* ─── Main Content Area ─── */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Top Header */}
-        <header className="bg-white border-b border-gray-200 px-4 lg:px-8 py-3.5 flex justify-between items-center shrink-0 shadow-sm z-10">
+        <header className="bg-surface border-b border-border px-4 lg:px-8 py-3.5 flex justify-between items-center shrink-0 shadow-soft-sm z-10 text-foreground transition-colors duration-200">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+              className="lg:hidden p-2 rounded-lg text-foreground-muted hover:bg-surface-2"
               aria-label="Open mobile menu"
             >
               ☰
@@ -257,10 +261,10 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
                 className="w-2.5 h-2.5 rounded-full animate-pulse"
                 style={{ backgroundColor: brandColor }}
               />
-              <span className="text-xs font-semibold uppercase tracking-wider text-gray-500 hidden sm:inline">
+              <span className="text-xs font-semibold uppercase tracking-wider text-foreground-muted hidden sm:inline">
                 Tenant:
               </span>
-              <span className="text-sm font-bold text-gray-900">{siteDef.displayName}</span>
+              <span className="text-sm font-bold text-foreground">{siteDef.displayName}</span>
             </div>
           </div>
 
@@ -269,25 +273,25 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
             <Link
               href="/"
               target="_blank"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-200"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-foreground-muted hover:text-foreground bg-surface-2 hover:bg-surface rounded-lg transition-colors border border-border"
             >
               <span>🌐</span>
               <span>View Site</span>
             </Link>
 
             {/* Admin Profile Info */}
-            <div className="flex items-center gap-2.5 pl-2 border-l border-gray-200">
+            <div className="flex items-center gap-2.5 pl-2 border-l border-border">
               <div
-                className="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-sm shrink-0"
-                style={{ backgroundColor: brandColor }}
+                className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shadow-sm shrink-0"
+                style={{ backgroundColor: brandColor, color: brandTextColor }}
               >
                 {adminUser?.name?.[0]?.toUpperCase() || "A"}
               </div>
               <div className="hidden sm:block text-left">
-                <p className="text-xs font-bold text-gray-900 leading-tight truncate max-w-[120px]">
+                <p className="text-xs font-bold text-foreground leading-tight truncate max-w-[120px]">
                   {adminUser?.name || "Admin"}
                 </p>
-                <p className="text-[10px] text-gray-500 font-medium uppercase">
+                <p className="text-[10px] text-foreground-muted font-medium uppercase">
                   {adminUser?.role || "Admin"}
                 </p>
               </div>
@@ -296,8 +300,21 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
         </header>
 
         {/* Scrollable Viewport */}
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-slate-50">
-          <div className="max-w-7xl mx-auto">{children}</div>
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-surface-2 flex flex-col justify-between">
+          <div className="max-w-7xl mx-auto w-full mb-8">{children}</div>
+
+          {/* Admin Status Footer */}
+          <footer className="max-w-7xl mx-auto w-full pt-6 mt-auto border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-foreground-muted">
+            <p>
+              © {new Date().getFullYear()} {siteDef.displayName} Admin Console • Enterprise Multi-Tenant Engine
+            </p>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 font-semibold text-[11px] border border-emerald-200 dark:border-emerald-800">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Backend Services Active
+              </span>
+            </div>
+          </footer>
         </main>
       </div>
     </div>

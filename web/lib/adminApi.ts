@@ -23,30 +23,145 @@ export interface AdminStats {
   totalTours: number;
   totalBookings: number;
   pendingBookings: number;
+  pendingApprovals?: number;
+  todayBookings?: number;
   confirmedBookings: number;
   completedBookings: number;
   cancelledBookings: number;
   totalRevenue: number;
   totalUsers: number;
+  newUsers?: number;
+  revenueByModule?: Record<string, number>;
   recentBookings: AdminBooking[];
+}
+
+export interface AdminBookingTraveler {
+  id?: string;
+  name: string;
+  type?: "Adult" | "Child" | string;
+  age?: number;
+  gender?: string;
+  passportOrId?: string;
+}
+
+export interface AdminBookingStatusHistoryItem {
+  status: string;
+  changedAt: string;
+  action?: string;
+  reason?: string;
+  note?: string;
+  actorRole?: "Admin" | "Customer" | "System" | string;
+  actorId?: string;
+  previousStatus?: string;
+}
+
+export interface AdminBookingCancellationRequest {
+  requestedAt: string;
+  reason: string;
+  status: "pending" | "approved" | "rejected" | string;
+  reviewedAt?: string;
+  reviewedBy?: string;
+  adminNote?: string;
 }
 
 export interface AdminBooking {
   id: string;
   _id?: string;
+  reference?: string;
   guestName: string;
   email: string;
   phone?: string;
   tourName: string;
   tourId: number | string;
+  tourSlug?: string;
   totalPrice: number;
-  status: "pending" | "confirmed" | "completed" | "cancelled";
+  status: "pending" | "confirmed" | "rejected" | "expired" | "cancelled" | "completed" | string;
   travelers: number;
+  adults?: number;
+  children?: number;
+  travelersList?: AdminBookingTraveler[];
   startDate?: string;
   endDate?: string;
+  travelDate?: string;
   createdAt?: string;
+  updatedAt?: string;
   location?: string;
+  destination?: string | any;
+  serviceType?: string;
+  module?: string;
   currency?: string;
+  paymentStatus?: "unpaid" | "paid" | "refunded" | string;
+  specialRequest?: string;
+  source?: "web" | "app" | string;
+  snapshot?: {
+    title?: string;
+    coverImage?: string;
+    destination?: string | any;
+    duration?: string;
+    category?: string;
+    itinerarySummary?: Array<{ day: number; title: string; description?: string }>;
+    includedSummary?: string[];
+    excludedSummary?: string[];
+    priceSummary?: { basePrice?: number; currency?: string };
+  };
+  statusHistory?: AdminBookingStatusHistoryItem[];
+  cancellationRequest?: AdminBookingCancellationRequest;
+  emailsSent?: string[];
+}
+
+export interface InboxCountsDto {
+  pending: number;
+  confirmed: number;
+  rejected: number;
+  expired: number;
+  cancelled: number;
+  completed: number;
+  cancellationRequests: number;
+  total: number;
+}
+
+export interface BulkActionResultDto {
+  totalRequested: number;
+  successCount: number;
+  failureCount: number;
+  errors: Record<string, string>;
+}
+
+export interface EmailOutboxItem {
+  id: string;
+  websiteId: string;
+  recipientEmail: string;
+  recipientName?: string;
+  template: string;
+  subject: string;
+  status: "Queued" | "Processing" | "Sent" | "Failed";
+  attempts: number;
+  maxAttempts: number;
+  nextAttemptAt?: string;
+  sentAt?: string;
+  lastError?: string;
+  createdAt: string;
+}
+
+export interface ActionTokenVerifyResult {
+  valid: boolean;
+  bookingId?: string;
+  reference?: string;
+  action?: "approve" | "reject" | string;
+  guestName?: string;
+  tourTitle?: string;
+  expiresAt?: string;
+  warning?: string;
+  reason?: string;
+}
+
+export interface ActionTokenExecuteResult {
+  success: boolean;
+  action: string;
+  bookingId: string;
+  reference: string;
+  status: string;
+  message: string;
 }
 
 export interface AdminTour {
@@ -563,3 +678,392 @@ export async function deleteAdminUser(id: string, siteId?: AdminSiteId): Promise
     siteId
   );
 }
+
+// ─── Booking Workflow & Confirmation Methods ────────────────────────────────
+
+export async function fetchAdminInboxCounts(siteId?: AdminSiteId): Promise<InboxCountsDto> {
+  const res = await adminRequest<{ success: boolean; data: InboxCountsDto }>(
+    "/api/bookings/inbox/counts",
+    {},
+    siteId
+  );
+  return (
+    res.data || {
+      pending: 0,
+      confirmed: 0,
+      rejected: 0,
+      expired: 0,
+      cancelled: 0,
+      completed: 0,
+      cancellationRequests: 0,
+      total: 0,
+    }
+  );
+}
+
+export async function confirmAdminBooking(
+  id: string,
+  adminNote?: string,
+  siteId?: AdminSiteId
+): Promise<AdminBooking> {
+  const res = await adminRequest<{ success: boolean; data: AdminBooking }>(
+    `/api/bookings/${encodeURIComponent(id)}/confirm`,
+    {
+      method: "POST",
+      body: JSON.stringify({ note: adminNote || "", adminNote: adminNote || "" }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function rejectAdminBooking(
+  id: string,
+  reason: string,
+  siteId?: AdminSiteId
+): Promise<AdminBooking> {
+  const res = await adminRequest<{ success: boolean; data: AdminBooking }>(
+    `/api/bookings/${encodeURIComponent(id)}/reject`,
+    {
+      method: "POST",
+      body: JSON.stringify({ reason }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function cancelAdminBooking(
+  id: string,
+  reason: string,
+  siteId?: AdminSiteId
+): Promise<AdminBooking> {
+  const res = await adminRequest<{ success: boolean; data: AdminBooking }>(
+    `/api/bookings/${encodeURIComponent(id)}/cancel`,
+    {
+      method: "POST",
+      body: JSON.stringify({ reason }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function bulkConfirmAdminBookings(
+  bookingIds: string[],
+  siteId?: AdminSiteId
+): Promise<BulkActionResultDto> {
+  const res = await adminRequest<{ success: boolean; data: BulkActionResultDto }>(
+    "/api/bookings/bulk-confirm",
+    {
+      method: "POST",
+      body: JSON.stringify({ bookingIds }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function bulkRejectAdminBookings(
+  bookingIds: string[],
+  reason: string,
+  siteId?: AdminSiteId
+): Promise<BulkActionResultDto> {
+  const res = await adminRequest<{ success: boolean; data: BulkActionResultDto }>(
+    "/api/bookings/bulk-reject",
+    {
+      method: "POST",
+      body: JSON.stringify({ bookingIds, reason }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function resendAdminBookingEmail(
+  id: string,
+  template?: string,
+  siteId?: AdminSiteId
+): Promise<{ success: boolean; message: string }> {
+  const query = template ? `?template=${encodeURIComponent(template)}` : "";
+  const res = await adminRequest<{ success: boolean; message: string }>(
+    `/api/bookings/${encodeURIComponent(id)}/resend-email${query}`,
+    {
+      method: "POST",
+    },
+    siteId
+  );
+  return res;
+}
+
+export async function fetchBookingOutbox(
+  id: string,
+  siteId?: AdminSiteId
+): Promise<EmailOutboxItem[]> {
+  const res = await adminRequest<{ success: boolean; data: EmailOutboxItem[] }>(
+    `/api/bookings/${encodeURIComponent(id)}/outbox`,
+    {},
+    siteId
+  );
+  return res.data || [];
+}
+
+export async function reviewCancellationRequest(
+  id: string,
+  approve: boolean,
+  adminNote?: string,
+  siteId?: AdminSiteId
+): Promise<AdminBooking> {
+  const res = await adminRequest<{ success: boolean; data: AdminBooking }>(
+    `/api/bookings/${encodeURIComponent(id)}/review-cancellation`,
+    {
+      method: "POST",
+      body: JSON.stringify({ approve, adminNote: adminNote || "" }),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function verifyActionToken(
+  token: string,
+  siteId?: AdminSiteId
+): Promise<ActionTokenVerifyResult> {
+  const s = siteId || getAdminSite();
+  const hostname = getAdminHostname(s);
+  const url = `${API_BASE}/api/bookings/action-token/verify?token=${encodeURIComponent(token)}`;
+
+  const res = await fetch(url, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "X-Website-Hostname": hostname,
+      "X-Website-Id": s,
+    },
+  });
+
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    return {
+      valid: false,
+      reason: json.error || json.reason || `Verification failed with status ${res.status}`,
+    };
+  }
+
+  return (json.data ?? json) as ActionTokenVerifyResult;
+}
+
+export async function executeActionToken(
+  token: string,
+  reason?: string,
+  action?: string,
+  siteId?: AdminSiteId
+): Promise<ActionTokenExecuteResult> {
+  const s = siteId || getAdminSite();
+  const hostname = getAdminHostname(s);
+  const url = `${API_BASE}/api/bookings/action-token/execute`;
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "X-Website-Hostname": hostname,
+      "X-Website-Id": s,
+    },
+    body: JSON.stringify({ token, action: action || "", reason: reason || "" }),
+  });
+
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(json.error || json.message || `Execution failed with status ${res.status}`);
+  }
+
+  return (json.data ?? json) as ActionTokenExecuteResult;
+}
+
+// ─── User Bookings & Password Management ────────────────────────────────────
+
+export async function fetchAdminUserBookings(
+  userId: string,
+  siteId?: AdminSiteId
+): Promise<AdminBooking[]> {
+  const res = await adminRequest<{ success: boolean; data: AdminBooking[] }>(
+    `/api/users/${encodeURIComponent(userId)}/bookings`,
+    {},
+    siteId
+  );
+  return res.data || [];
+}
+
+export async function resetAdminUserPassword(
+  userId: string,
+  newPassword: string,
+  siteId?: AdminSiteId
+): Promise<{ success: boolean; message: string }> {
+  return await adminRequest<{ success: boolean; message: string }>(
+    `/api/users/${encodeURIComponent(userId)}/reset-password`,
+    {
+      method: "POST",
+      body: JSON.stringify({ newPassword }),
+    },
+    siteId
+  );
+}
+
+// ─── Multi-Module Catalog Management ────────────────────────────────────────
+
+export interface AdminCatalogResult<T = any> {
+  success: boolean;
+  module: string;
+  data: T[];
+  total: number;
+  page: number;
+  pageSize: number;
+}
+
+export async function fetchAdminCatalog(
+  module: string,
+  params?: { search?: string; category?: string; page?: number; limit?: number },
+  siteId?: AdminSiteId
+): Promise<AdminCatalogResult> {
+  const query = new URLSearchParams();
+  if (params?.search) query.append("search", params.search);
+  if (params?.category && params.category !== "all") query.append("category", params.category);
+  if (params?.page) query.append("page", params.page.toString());
+  if (params?.limit) query.append("pageSize", params.limit.toString());
+
+  return await adminRequest<AdminCatalogResult>(
+    `/api/admin/catalog/${encodeURIComponent(module)}?${query.toString()}`,
+    {},
+    siteId
+  );
+}
+
+export async function fetchAdminCatalogItem<T = any>(
+  module: string,
+  id: string,
+  siteId?: AdminSiteId
+): Promise<T> {
+  const res = await adminRequest<{ success: boolean; data: T }>(
+    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    {},
+    siteId
+  );
+  return res.data;
+}
+
+export async function createAdminCatalogItem<T = any>(
+  module: string,
+  item: any,
+  siteId?: AdminSiteId
+): Promise<T> {
+  const res = await adminRequest<{ success: boolean; data: T }>(
+    `/api/admin/catalog/${encodeURIComponent(module)}`,
+    {
+      method: "POST",
+      body: JSON.stringify(item),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function updateAdminCatalogItem<T = any>(
+  module: string,
+  id: string,
+  item: any,
+  siteId?: AdminSiteId
+): Promise<T> {
+  const res = await adminRequest<{ success: boolean; data: T }>(
+    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    {
+      method: "PUT",
+      body: JSON.stringify(item),
+    },
+    siteId
+  );
+  return res.data;
+}
+
+export async function deleteAdminCatalogItem(
+  module: string,
+  id: string,
+  siteId?: AdminSiteId
+): Promise<void> {
+  await adminRequest(
+    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    {
+      method: "DELETE",
+    },
+    siteId
+  );
+}
+
+export async function uploadAdminCatalogImage(
+  file: File,
+  siteId?: AdminSiteId
+): Promise<{ url: string; fileName: string }> {
+  const s = siteId || getAdminSite();
+  const token = getAdminToken(s);
+  const hostname = getAdminHostname(s);
+
+  const formData = new FormData();
+  formData.append("file", file);
+
+  const headers: Record<string, string> = {
+    "X-Website-Hostname": hostname,
+    "X-Website-Id": s,
+  };
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+
+  const res = await fetch(`${API_BASE}/api/admin/catalog/upload-image`, {
+    method: "POST",
+    headers,
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.error || `Upload failed with status ${res.status}`);
+  }
+
+  const json = await res.json();
+  return json;
+}
+
+// ─── Website Settings Management ────────────────────────────────────────────
+
+export async function fetchAdminWebsiteConfig(
+  hostname?: string,
+  siteId?: AdminSiteId
+): Promise<any> {
+  const s = siteId || getAdminSite();
+  const host = hostname || getAdminHostname(s);
+  const res = await adminRequest<{ success: boolean; config: any }>(
+    `/api/admin/website-config/${encodeURIComponent(host)}`,
+    {},
+    s
+  );
+  return res.config;
+}
+
+export async function updateAdminWebsiteConfig(
+  hostname: string,
+  config: any,
+  siteId?: AdminSiteId
+): Promise<{ success: boolean; hostname: string }> {
+  const s = siteId || getAdminSite();
+  return await adminRequest<{ success: boolean; hostname: string }>(
+    `/api/admin/website-config/${encodeURIComponent(hostname)}`,
+    {
+      method: "PUT",
+      body: JSON.stringify(config),
+    },
+    s
+  );
+}
+
+

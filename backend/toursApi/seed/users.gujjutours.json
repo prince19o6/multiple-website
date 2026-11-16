@@ -1,0 +1,33 @@
+[
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a401" },
+    "userCode": "GT-10001",
+    "websiteId": "gujjutours",
+    "fullName": "Prince Patel",
+    "email": "p33@gmail.com",
+    "phoneCountryCode": "+91",
+    "phone": "9875095616",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Customer",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  },
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a402" },
+    "userCode": "GT-10002",
+    "websiteId": "gujjutours",
+    "fullName": "Gujju Admin",
+    "email": "admin@gujjutours.com",
+    "phoneCountryCode": "+91",
+    "phone": "9875095617",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Admin",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  }
+]
+

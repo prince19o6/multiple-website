@@ -29,6 +29,7 @@ import { useColors } from '@/store/ThemeContext';
 import { useWishlist } from '@/context/WishlistContext';
 import { useBooking } from '@/context/BookingContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { useTabBadgeStatus } from '@/hooks/useTabBadgeStatus';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 
 export interface BottomTabBarProps {
@@ -49,6 +50,8 @@ interface TabConfig {
   iconOutline: keyof typeof Ionicons.glyphMap;
   iconFilled: keyof typeof Ionicons.glyphMap;
   badgeCount?: number;
+  showDot?: boolean;
+  dotColor?: string;
 }
 
 export default function CustomTabBar({
@@ -63,6 +66,15 @@ export default function CustomTabBar({
   const { wishlistCount } = useWishlist();
   const { upcomingCount } = useBooking();
   const { t } = useLanguage();
+
+  const activeTabName = state.routes[state.index]?.name;
+  const {
+    hasUnseenWishlist,
+    showWishlistDot,
+    hasUnseenBookings,
+    showBookingDot,
+    markTabSeen,
+  } = useTabBadgeStatus(activeTabName);
 
   const tabConfigs: Record<string, TabConfig> = {
     index: {
@@ -80,20 +92,24 @@ export default function CustomTabBar({
     bookings: {
       name: 'bookings',
       label: t('nav_bookings', 'Bookings'),
-      iconOutline: 'calendar-outline',
-      iconFilled: 'calendar',
-      badgeCount: upcomingCount > 0 ? upcomingCount : undefined,
+      iconOutline: 'ticket-outline',
+      iconFilled: 'ticket',
+      badgeCount: hasUnseenBookings ? upcomingCount : undefined,
+      showDot: showBookingDot,
+      dotColor: '#ef4444', // Red dot for Bookings
     },
     wishlist: {
       name: 'wishlist',
-      label: t('nav_wishlist', 'Wishlist'),
+      label: t('nav_wishlist', 'Wishlists'),
       iconOutline: 'heart-outline',
       iconFilled: 'heart',
-      badgeCount: wishlistCount > 0 ? wishlistCount : undefined,
+      badgeCount: hasUnseenWishlist ? wishlistCount : undefined,
+      showDot: showWishlistDot,
+      dotColor: '#ef4444', // Red dot for Wishlists
     },
     profile: {
       name: 'profile',
-      label: t('nav_profile', 'Profile'),
+      label: t('nav_profile', 'Account'),
       iconOutline: 'person-outline',
       iconFilled: 'person',
     },
@@ -135,6 +151,13 @@ export default function CustomTabBar({
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             } catch {
               // Ignore haptic errors on unsupported simulators
+            }
+
+            // Immediately mark tab as seen when pressed
+            if (route.name === 'wishlist') {
+              markTabSeen('wishlist');
+            } else if (route.name === 'bookings') {
+              markTabSeen('bookings');
             }
 
             let defaultPrevented = false;
@@ -200,19 +223,29 @@ export default function CustomTabBar({
                   color={activeColor}
                 />
 
-                {/* Badge (Bookings / Wishlist) */}
-                {config.badgeCount !== undefined && config.badgeCount > 0 && (
+                {/* Badge or Dot Indicator (Bookings / Wishlist) */}
+                {config.badgeCount !== undefined && config.badgeCount > 0 ? (
                   <View
                     style={[
                       styles.badgeContainer,
-                      { backgroundColor: colors.accent || '#f59e0b' },
+                      { backgroundColor: '#0284c7' },
                     ]}
                   >
                     <Text style={styles.badgeText}>
                       {config.badgeCount > 99 ? '99+' : config.badgeCount}
                     </Text>
                   </View>
-                )}
+                ) : config.showDot ? (
+                  <View
+                    style={[
+                      styles.dotBadge,
+                      {
+                        backgroundColor: config.dotColor || '#ef4444',
+                        borderColor: colors.surface,
+                      },
+                    ]}
+                  />
+                ) : null}
               </View>
 
               {/* Tab Title Label */}
@@ -283,5 +316,14 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 9,
     fontWeight: '800',
+  },
+  dotBadge: {
+    position: 'absolute',
+    top: 1,
+    right: 5,
+    width: 9,
+    height: 9,
+    borderRadius: 5,
+    borderWidth: 1.5,
   },
 });

@@ -31,6 +31,7 @@ import EmptyState from '@/components/EmptyState';
 import TourCard from '@/components/TourCard';
 import AdventureTourCard from '@/components/AdventureTourCard';
 import LuxuryTourCard from '@/components/LuxuryTourCard';
+import { resolveTourCardVariant } from '@/lib/tourCardResolver';
 import { tourHref } from '@/lib/navigation';
 import type { Tour } from '@/types';
 
@@ -56,7 +57,9 @@ export default function FeaturedToursScreen() {
 
   const renderCard = ({ item }: { item: Tour }) => {
     const href = tourHref(item);
-    if (siteId === 'tripgoasia' || siteId === 'website2') {
+    const cardVariant = resolveTourCardVariant(config);
+
+    if (cardVariant === 'adventure') {
       return (
         <AdventureTourCard
           name={item.name}
@@ -71,7 +74,7 @@ export default function FeaturedToursScreen() {
         />
       );
     }
-    if (siteId === 'technoheaven' || siteId === 'website3') {
+    if (cardVariant === 'luxury') {
       return (
         <LuxuryTourCard
           name={item.name}
@@ -121,7 +124,7 @@ export default function FeaturedToursScreen() {
           {categories.map((cat) => {
             const isSelected = activeCategory === cat;
             return (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-featured-tours-127" accessibilityLabel="featured-tours action"
                 key={cat}
                 style={[
                   styles.chip,
@@ -159,7 +162,7 @@ export default function FeaturedToursScreen() {
         <View style={styles.centerWrap}>
           <Text style={[styles.errorTitle, { color: colors.heading }]}>Unable to load expeditions</Text>
           <Text style={[styles.errorDesc, { color: colors.mutedText }]}>{error?.message}</Text>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-retry" accessibilityLabel="Retry"
             style={[styles.retryBtn, { backgroundColor: colors.primary }]}
             onPress={() => refetch()}
           >
@@ -177,7 +180,7 @@ export default function FeaturedToursScreen() {
       ) : (
         <FlatList
           data={filteredTours}
-          keyExtractor={(item) => String(item.id)}
+          keyExtractor={(item, idx) => `feat_${item.id || item.slug || idx}_${idx}`}
           renderItem={renderCard}
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}

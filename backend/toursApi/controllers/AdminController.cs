@@ -98,6 +98,20 @@ public class AdminController : ControllerBase
 
             var totalUsers = users.Count;
 
+            // Real DB calculations for today's bookings, pending approvals, and new users
+            var todayUtc = DateTime.UtcNow.Date;
+            var todayBookings = bookings.Count(b => (b.CreatedAt ?? DateTime.MinValue) >= todayUtc);
+            var pendingApprovals = pendingBookings + bookings.Count(b =>
+                b.CancellationRequest != null &&
+                string.Equals(b.CancellationRequest.Status, "pending", StringComparison.OrdinalIgnoreCase));
+            var newUsers = users.Count(u => u.CreatedAt >= todayUtc);
+
+            // Real revenue breakdown per module
+            var revenueByModule = bookings
+                .Where(b => !string.Equals(b.Status, "cancelled", StringComparison.OrdinalIgnoreCase))
+                .GroupBy(b => string.IsNullOrWhiteSpace(b.ServiceType) ? "tour" : b.ServiceType.ToLowerInvariant())
+                .ToDictionary(g => g.Key, g => Math.Round(g.Sum(b => b.TotalPrice), 2));
+
             var recentBookings = bookings
                 .OrderByDescending(b => b.CreatedAt ?? b.StartDate)
                 .Take(6)
@@ -109,6 +123,7 @@ public class AdminController : ControllerBase
                     email = b.Email,
                     tourName = b.TourName,
                     tourId = b.TourId,
+                    serviceType = b.ServiceType,
                     totalPrice = b.TotalPrice,
                     status = b.Status,
                     travelers = b.Travelers,
@@ -126,11 +141,15 @@ public class AdminController : ControllerBase
                     totalTours,
                     totalBookings,
                     pendingBookings,
+                    pendingApprovals,
+                    todayBookings,
                     confirmedBookings,
                     completedBookings,
                     cancelledBookings,
-                    totalRevenue,
+                    totalRevenue = Math.Round(totalRevenue, 2),
                     totalUsers,
+                    newUsers,
+                    revenueByModule,
                     recentBookings
                 }
             });
@@ -160,7 +179,7 @@ public class AdminController : ControllerBase
 
             var bookingsByStatus = bookings
                 .GroupBy(b => string.IsNullOrWhiteSpace(b.Status) ? "pending" : b.Status.ToLowerInvariant())
-                .Select(g => new { status = g.Key, count = g.Count(), revenue = g.Sum(b => b.TotalPrice) })
+                .Select(g => new { status = g.Key, count = g.Count(), revenue = Math.Round(g.Sum(b => b.TotalPrice), 2) })
                 .ToList();
 
             var toursByCategory = tours
@@ -176,7 +195,7 @@ public class AdminController : ControllerBase
                 {
                     name = g.Key,
                     bookingsCount = g.Count(),
-                    revenue = g.Sum(b => b.TotalPrice)
+                    revenue = Math.Round(g.Sum(b => b.TotalPrice), 2)
                 })
                 .OrderByDescending(x => x.revenue)
                 .Take(5)
@@ -189,7 +208,7 @@ public class AdminController : ControllerBase
                 {
                     period = g.Key,
                     bookings = g.Count(),
-                    revenue = g.Sum(b => b.TotalPrice)
+                    revenue = Math.Round(g.Sum(b => b.TotalPrice), 2)
                 })
                 .ToList();
 
@@ -203,7 +222,7 @@ public class AdminController : ControllerBase
                 data = new
                 {
                     websiteId,
-                    totalRevenue = bookings.Where(b => !string.Equals(b.Status, "cancelled", StringComparison.OrdinalIgnoreCase)).Sum(b => b.TotalPrice),
+                    totalRevenue = Math.Round(bookings.Where(b => !string.Equals(b.Status, "cancelled", StringComparison.OrdinalIgnoreCase)).Sum(b => b.TotalPrice), 2),
                     totalBookings = bookings.Count,
                     avgBookingValue = Math.Round(avgBookingValue, 2),
                     bookingsByStatus,

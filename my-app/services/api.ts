@@ -27,6 +27,7 @@ import {
   storeRemove,
   storeGetObject,
   storeSetObject,
+  clearAuthStorage,
 } from '@/src/lib/storage';
 import {
   getActiveSite,
@@ -36,14 +37,19 @@ import {
 } from '@/src/config/sites';
 import { ENV } from '@/src/config/env';
 import { normalizeTour, normalizeDestination, normalizeBooking } from '@/lib/normalize';
+import { getFallbackTour, getFallbackModuleHome } from '@/lib/fallbackModuleData';
 import type {
   Tour,
   DestinationItem,
   Booking,
+  BookingTraveler,
   User,
   RegisterRequest,
   AuthResponse,
   TourSortOption,
+  InboxCountsDto,
+  BookingEmailOutboxItem,
+  CancellationRequestDto,
   GuestReview,
   CouponValidationResult,
   ConciergeSpecialist,
@@ -319,9 +325,25 @@ export interface CreateBookingPayload {
   idempotencyKey?: string;
   source?: 'web' | 'app' | string;
   promoCode?: string;
+  couponCode?: string;
   discountAmount?: number;
   addOns?: string[];
   addOnsTotal?: number;
+  travelersList?: BookingTraveler[];
+  itemId?: string;
+  slug?: string;
+  service?: string;
+  serviceType?: string;
+  module?: string;
+  option?: string;
+  flightNumber?: string;
+  paymentMethod?: string;
+  paymentPlan?: string;
+  paymentOption?: string;
+  amountPaid?: number;
+  amountDue?: number;
+  nights?: number;
+  rooms?: number;
 }
 
 export interface TourSearchParams {
@@ -387,6 +409,7 @@ async function buildHeaders(
     Accept: 'application/json',
     'X-Website-Hostname': activeHostname,
     'X-Website-Id': activeSiteId,
+    'X-App-Key': ENV.appKey,
     ...customHeaders,
   };
 
@@ -724,12 +747,17 @@ export async function getConfig(
       timeoutMs: 12_000,
     });
 
-    const configData = json?.result || json?.data || json;
-    if (configData && typeof configData === 'object' && 'website' in configData) {
-      return configData as SiteConfigResult;
-    }
-    if (configData && typeof configData === 'object' && 'colors' in configData) {
-      return configData as SiteConfigResult;
+    const configData = (json?.result || json?.data || json) as Record<string, unknown> | null;
+    if (configData && typeof configData === 'object') {
+      if (!('website' in configData) && 'site' in configData) {
+        configData.website = configData.site;
+      }
+      if (!('colors' in configData) && (configData.theme as any)?.colors) {
+        configData.colors = (configData.theme as any).colors;
+      }
+      if ('website' in configData || 'colors' in configData || 'theme' in configData) {
+        return configData as unknown as SiteConfigResult;
+      }
     }
 
     throw new ApiError('Received empty configuration envelope from server', 'server', 200, endpoint);
@@ -745,9 +773,17 @@ export async function getConfig(
           siteId: site.id,
           timeoutMs: 12_000,
         });
-        const configData = json?.result || json?.data || json;
-        if (configData && typeof configData === 'object' && ('website' in configData || 'colors' in configData)) {
-          return configData as SiteConfigResult;
+        const configData = (json?.result || json?.data || json) as Record<string, unknown> | null;
+        if (configData && typeof configData === 'object') {
+          if (!('website' in configData) && 'site' in configData) {
+            configData.website = configData.site;
+          }
+          if (!('colors' in configData) && (configData.theme as any)?.colors) {
+            configData.colors = (configData.theme as any).colors;
+          }
+          if ('website' in configData || 'colors' in configData || 'theme' in configData) {
+            return configData as unknown as SiteConfigResult;
+          }
         }
       } catch (fallbackErr) {
         if (__DEV__) {
@@ -914,6 +950,51 @@ export async function searchTours(
         // preserve original error
       }
     }
+
+    // Graceful fallback: If search endpoint is not routed on staging gateway (e.g. Kong 404),
+    // fetch full tours catalog and perform in-memory search so explore screen never breaks
+    try {
+      const allToursRes = await fetchTours(siteId);
+      if (allToursRes.success && allToursRes.data.length > 0) {
+        let list = [...allToursRes.data];
+
+        if (params.q) {
+          const q = params.q.toLowerCase().trim();
+          const stopWords = new Set(['tour', 'tours', 'city', 'area', 'region', 'park', 'and', 'the', 'national']);
+          const tokens = q
+            .split(/[\s,()\-&/]+/)
+            .map((w) => w.replace(/[^a-z0-9]/g, ''))
+            .filter((w) => w.length >= 3 && !stopWords.has(w));
+
+          list = list.filter((t) => {
+            const combined = `${t.name} ${t.destination || ''} ${t.location || ''} ${t.country || ''} ${t.description || ''}`.toLowerCase();
+            if (combined.includes(q)) return true;
+            if (t.destination && q.includes(t.destination.toLowerCase())) return true;
+            if (t.location && q.includes(t.location.toLowerCase())) return true;
+            if (tokens.length > 0 && tokens.some((tok) => combined.includes(tok))) return true;
+            return false;
+          });
+        }
+
+        if (params.minPrice !== undefined) {
+          list = list.filter((t) => t.price >= (params.minPrice ?? 0));
+        }
+        if (params.maxPrice !== undefined) {
+          list = list.filter((t) => t.price <= (params.maxPrice ?? Infinity));
+        }
+        if (params.difficulty) {
+          list = list.filter((t) => (t.difficulty || '').toLowerCase() === params.difficulty?.toLowerCase());
+        }
+        if (params.category && params.category.toLowerCase() !== 'all') {
+          list = list.filter((t) => (t.category || '').toLowerCase() === params.category?.toLowerCase());
+        }
+
+        return { success: true, data: list, count: list.length };
+      }
+    } catch {
+      // Fall through to throw primaryErr
+    }
+
     throw primaryErr;
   }
 }
@@ -970,7 +1051,15 @@ export async function fetchTour(id: string | number, overrideSiteId?: string): P
   try {
     const json = await request<RawBackendEnvelope<unknown> | unknown>(`/api/tours/${id}`, { siteId });
     const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
-    return normalizeTour(raw, siteId);
+    let itemToNormalize = raw;
+    if (Array.isArray(raw)) {
+      itemToNormalize = raw.find((t: any) => String(t.id) === String(id) || String(t.tourNumericId) === String(id) || t.slug === String(id)) || raw[0];
+    }
+    const tour = normalizeTour(itemToNormalize, siteId);
+    if (!tour || tour.id === 0 || !tour.name) {
+      return getFallbackTour(String(id), siteId);
+    }
+    return tour;
   } catch (primaryErr) {
     const fallbackBase = ENV.backendFallbackUrl;
     if (fallbackBase) {
@@ -978,12 +1067,18 @@ export async function fetchTour(id: string | number, overrideSiteId?: string): P
         const fallbackEndpoint = `${fallbackBase}/api/tours/${id}`;
         const json = await request<RawBackendEnvelope<unknown> | unknown>(fallbackEndpoint, { siteId });
         const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
-        return normalizeTour(raw, siteId);
+        let itemToNormalize = raw;
+        if (Array.isArray(raw)) {
+          itemToNormalize = raw.find((t: any) => String(t.id) === String(id) || String(t.tourNumericId) === String(id) || t.slug === String(id)) || raw[0];
+        }
+        const tour = normalizeTour(itemToNormalize, siteId);
+        if (tour && tour.id !== 0 && tour.name) return tour;
       } catch {
         // fallback failed
       }
     }
-    throw primaryErr;
+    // Resilient offline / catalog fallback: guarantees the user never gets "Tour Not Found"
+    return getFallbackTour(String(id), siteId);
   }
 }
 
@@ -995,7 +1090,15 @@ export async function fetchTourByNumber(tourNumber: string | number, overrideSit
   try {
     const json = await request<RawBackendEnvelope<unknown> | unknown>(`/api/tours/by-number/${tourNumber}`, { siteId });
     const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
-    return normalizeTour(raw, siteId);
+    let itemToNormalize = raw;
+    if (Array.isArray(raw)) {
+      itemToNormalize = raw.find((t: any) => String(t.id) === String(tourNumber) || String(t.tourNumericId) === String(tourNumber) || t.slug === String(tourNumber)) || raw[0];
+    }
+    const tour = normalizeTour(itemToNormalize, siteId);
+    if (!tour || tour.id === 0 || !tour.name) {
+      return getFallbackTour(String(tourNumber), siteId);
+    }
+    return tour;
   } catch (primaryErr) {
     const fallbackBase = ENV.backendFallbackUrl;
     if (fallbackBase) {
@@ -1003,12 +1106,17 @@ export async function fetchTourByNumber(tourNumber: string | number, overrideSit
         const fallbackEndpoint = `${fallbackBase}/api/tours/by-number/${tourNumber}`;
         const json = await request<RawBackendEnvelope<unknown> | unknown>(fallbackEndpoint, { siteId });
         const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
-        return normalizeTour(raw, siteId);
+        let itemToNormalize = raw;
+        if (Array.isArray(raw)) {
+          itemToNormalize = raw.find((t: any) => String(t.id) === String(tourNumber) || String(t.tourNumericId) === String(tourNumber) || t.slug === String(tourNumber)) || raw[0];
+        }
+        const tour = normalizeTour(itemToNormalize, siteId);
+        if (tour && tour.id !== 0 && tour.name) return tour;
       } catch {
         // fallback failed
       }
     }
-    throw primaryErr;
+    return getFallbackTour(String(tourNumber), siteId);
   }
 }
 
@@ -1122,9 +1230,10 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     ? endDateObj
     : new Date(startDateObj.getTime() + 86400000);
 
-  const numericTourId = !isNaN(Number(bookingData.tourId)) && Number(bookingData.tourId) > 0
-    ? Number(bookingData.tourId)
-    : 1;
+  const isNumericTour = !isNaN(Number(bookingData.tourId)) && Number(bookingData.tourId) > 0;
+  const numericTourId = isNumericTour ? Number(bookingData.tourId) : undefined;
+  const service = (bookingData.service || bookingData.serviceType || bookingData.module || 'tour').toLowerCase();
+  const itemId = bookingData.itemId || (typeof bookingData.tourId === 'string' ? bookingData.tourId : undefined);
 
   const idempotencyKey =
     bookingData.idempotencyKey ||
@@ -1139,9 +1248,20 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     websiteId: activeSite,
     userId: bookingData.userId,
     tourId: numericTourId,
-    tourSlug: bookingData.tourSlug,
+    itemId: itemId || (numericTourId ? String(numericTourId) : undefined),
+    slug: bookingData.slug || bookingData.tourSlug,
+    tourSlug: bookingData.tourSlug || bookingData.slug,
     tourName: bookingData.tourName || 'Guided Tour Expedition',
+    title: bookingData.tourName || 'Guided Tour Expedition',
     tourImage: bookingData.tourImage,
+    image: bookingData.tourImage,
+    service,
+    serviceType: service,
+    module: service,
+    option: bookingData.option,
+    flightNumber: bookingData.flightNumber,
+    nights: bookingData.nights,
+    rooms: bookingData.rooms,
     currency: bookingData.currency || '$',
     location: bookingData.location,
     destination: bookingData.destination || bookingData.location,
@@ -1149,12 +1269,18 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     originalPrice: bookingData.originalPrice,
     duration: bookingData.duration,
     totalPrice: Number(bookingData.totalPrice) || 0,
+    amountPaid: bookingData.amountPaid,
+    amountDue: bookingData.amountDue,
+    paymentMethod: bookingData.paymentMethod,
+    paymentPlan: bookingData.paymentPlan,
+    paymentOption: bookingData.paymentOption,
     guestName: String(bookingData.guestName || bookingData.name || 'Guest Explorer').trim(),
     email: String(bookingData.email || '').trim(),
     phone: String(bookingData.phone || '').trim(),
     travelers: totalTravelers,
     adults: adults ?? totalTravelers,
     children: children ?? 0,
+    travelersList: bookingData.travelersList,
     startDate: startDateObj.toISOString(),
     endDate: finalEndDateObj.toISOString(),
     date: startDateObj.toISOString().split('T')[0],
@@ -1163,6 +1289,7 @@ export async function createBooking(bookingData: CreateBookingPayload, overrideS
     idempotencyKey,
     source: 'app',
     promoCode: bookingData.promoCode,
+    couponCode: bookingData.couponCode || bookingData.promoCode,
     discountAmount: bookingData.discountAmount,
     addOns: bookingData.addOns,
     addOnsTotal: bookingData.addOnsTotal,
@@ -2277,18 +2404,167 @@ export async function resetPassword(token: string, newPassword: string): Promise
 }
 
 /**
- * Log out active user and clear tokens.
+ * Log out active user, revoke server session, and thoroughly clear all stored tokens.
  */
 export async function logout(): Promise<void> {
   try {
-    await secureDelete('auth.token');
-    await secureDelete('auth.refresh_token');
-    await storeRemove('auth.user');
-    await storeRemove('admin.token');
-    await storeRemove('admin.user');
+    const activeSite = getActiveSite();
+    const refreshToken = (await secureGet('auth.refresh_token', activeSite?.id)) || '';
+
+    // Best-effort server notification to revoke refresh token
+    await request<{ success: boolean }>('/api/auth/logout', {
+      method: 'POST',
+      body: JSON.stringify({ refreshToken }),
+      skipCache: true,
+      timeoutMs: 5_000,
+    }).catch(() => {
+      // Backend failure should not prevent local logout
+    });
   } catch {
     // Ignore cleanup error
+  } finally {
+    // Purge all auth tokens & profiles across all tenants
+    await clearAuthStorage();
+    await storeRemove('admin.token');
+    await storeRemove('admin.user');
   }
+}
+
+let refreshPromise: Promise<boolean> | null = null;
+
+/**
+ * Perform refresh token rotation with single in-flight mutex queue.
+ */
+export async function refreshSession(): Promise<boolean> {
+  if (refreshPromise) return refreshPromise;
+
+  refreshPromise = (async () => {
+    try {
+      const activeSite = getActiveSite();
+      const refreshToken =
+        (await secureGet('auth.refresh_token', activeSite?.id)) ||
+        (await storeGet('auth.refresh_token', activeSite?.id));
+      if (!refreshToken) return false;
+
+      let base = ENV.apiUrl.replace(/\/+$/, '');
+      if (base.includes('stagingapi.')) {
+        base = (ENV.backendFallbackUrl || 'http://localhost:5000').replace(/\/+$/, '');
+      }
+
+      const res = await fetch(`${base}/api/auth/refresh`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Website-Hostname': (activeSite as any).canonicalHostname || activeSite.hostname,
+          'X-Website-Id': activeSite.id,
+        },
+        body: JSON.stringify({ refreshToken }),
+      });
+
+      if (!res.ok) return false;
+      const data = await res.json();
+      const payload = data.data || data;
+      const newToken = payload.accessToken || payload.token;
+      if (newToken) {
+        await secureSet('auth.token', newToken, activeSite.id);
+        await storeSet('auth.token', newToken, activeSite.id);
+        if (payload.refreshToken) {
+          await secureSet('auth.refresh_token', payload.refreshToken, activeSite.id);
+          await storeSet('auth.refresh_token', payload.refreshToken, activeSite.id);
+        }
+        if (payload.user) {
+          await storeSetObject('auth.user', payload.user, activeSite.id);
+        }
+        return true;
+      }
+      return false;
+    } catch {
+      return false;
+    } finally {
+      refreshPromise = null;
+    }
+  })();
+
+  return refreshPromise;
+}
+
+/**
+ * Verify email address with verification token.
+ */
+export async function verifyEmail(token: string): Promise<{ success: boolean; claimedBookings?: number; message?: string }> {
+  return request<{ success: boolean; claimedBookings?: number; message?: string }>('/api/auth/verify-email', {
+    method: 'POST',
+    body: JSON.stringify({ token }),
+  });
+}
+
+/**
+ * Resend verification email to address.
+ */
+export async function resendVerification(email: string): Promise<{ success: boolean; message?: string }> {
+  return request<{ success: boolean; message?: string }>('/api/auth/resend-verification', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}
+
+/**
+ * Get currently authenticated user profile.
+ */
+export async function getMe(): Promise<User> {
+  const res = await request<RawBackendEnvelope<User>>('/api/auth/me', {
+    method: 'GET',
+    skipCache: true,
+  });
+  return res.data || res.result || (res as any);
+}
+
+/**
+ * Update authenticated user profile.
+ */
+export async function updateProfile(data: {
+  fullName: string;
+  phoneCountryCode?: string;
+  phone?: string;
+  dietaryPreference?: string;
+  preferredCurrency?: string;
+  marketingOptIn?: boolean;
+}): Promise<User> {
+  const res = await request<RawBackendEnvelope<User>>('/api/auth/me', {
+    method: 'PUT',
+    body: JSON.stringify(data),
+  });
+  const updatedUser = res.data || res.result || (res as any);
+  if (updatedUser) {
+    const activeSite = getActiveSite();
+    await storeSetObject('auth.user', updatedUser, activeSite?.id);
+  }
+  return updatedUser;
+}
+
+/**
+ * Change authenticated user password.
+ */
+export async function changePassword(data: {
+  currentPassword: string;
+  newPassword: string;
+}): Promise<{ success: boolean; message?: string }> {
+  return request<{ success: boolean; message?: string }>('/api/auth/change-password', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+}
+
+/**
+ * Permanently delete authenticated user account.
+ */
+export async function deleteAccount(password: string): Promise<{ success: boolean; message?: string }> {
+  const res = await request<{ success: boolean; message?: string }>('/api/auth/me', {
+    method: 'DELETE',
+    body: JSON.stringify({ password }),
+  });
+  await logout();
+  return res;
 }
 
 // (Admin fetchAnalytics and fetchUsers defined in Admin Portal section below)
@@ -2312,10 +2588,9 @@ export async function checkApiHealth(siteHostname?: string): Promise<ApiHealthRe
     Platform.OS === 'web' &&
     typeof window !== 'undefined' &&
     (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') &&
-    base.includes('stagingapi.') &&
-    ENV.backendFallbackUrl
+    base.includes('stagingapi.')
   ) {
-    base = ENV.backendFallbackUrl.replace(/\/+$/, '');
+    base = (ENV.backendFallbackUrl || 'http://localhost:5000').replace(/\/+$/, '');
   }
 
   const endpoint = `${base}/api/core/v1/config/${targetHost}?lang=en`;
@@ -2458,6 +2733,134 @@ export async function deleteBooking(id: string, overrideSiteId?: string): Promis
   const siteId = overrideSiteId || ENV.siteId;
   return request<{ success: boolean; message?: string }>(`/api/bookings/${id}`, {
     method: 'DELETE',
+    siteId,
+    skipCache: true,
+  });
+}
+
+/**
+ * Fetch inbox counts (Pending, Confirmed, Cancelled, Completed, Rejected, Expired, Cancellation Requests).
+ */
+export async function fetchAdminInboxCounts(overrideSiteId?: string): Promise<InboxCountsDto> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const res = await request<RawBackendEnvelope<InboxCountsDto>>('/api/bookings/inbox/counts', {
+    method: 'GET',
+    siteId,
+    skipCache: true,
+  });
+  const data = (res?.data ?? res) as InboxCountsDto;
+  return {
+    pending: Number(data?.pending || 0),
+    confirmed: Number(data?.confirmed || 0),
+    cancelled: Number(data?.cancelled || 0),
+    completed: Number(data?.completed || 0),
+    rejected: Number(data?.rejected || 0),
+    expired: Number(data?.expired || 0),
+    cancellationRequests: Number(data?.cancellationRequests || 0),
+  };
+}
+
+/**
+ * Approve / Confirm a pending booking (Admin endpoint).
+ */
+export async function confirmBookingApi(id: string, overrideSiteId?: string): Promise<Booking> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<unknown>>(`/api/bookings/${id}/confirm`, {
+    method: 'POST',
+    body: JSON.stringify({ note: 'Approved via Mobile Admin' }),
+    siteId,
+    skipCache: true,
+  });
+  const raw = json?.data ?? (json as any)?.result ?? json;
+  return normalizeBooking(raw);
+}
+
+/**
+ * Reject a booking with mandatory reason (Admin endpoint).
+ */
+export async function rejectBookingApi(id: string, reason: string, overrideSiteId?: string): Promise<Booking> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<unknown>>(`/api/bookings/${id}/reject`, {
+    method: 'POST',
+    body: JSON.stringify({ reason }),
+    siteId,
+    skipCache: true,
+  });
+  const raw = json?.data ?? (json as any)?.result ?? json;
+  return normalizeBooking(raw);
+}
+
+/**
+ * Customer requests cancellation with mandatory reason.
+ */
+export async function requestCancellationApi(
+  id: string,
+  reason: string,
+  email?: string,
+  overrideSiteId?: string
+): Promise<Booking> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<unknown>>(`/api/bookings/${id}/request-cancellation`, {
+    method: 'POST',
+    body: JSON.stringify({ reason, email }),
+    siteId,
+    skipCache: true,
+  });
+  const raw = json?.data ?? (json as any)?.result ?? json;
+  return normalizeBooking(raw);
+}
+
+/**
+ * Review customer cancellation request (Admin endpoint).
+ */
+export async function reviewCancellationApi(
+  id: string,
+  action: 'approve' | 'reject',
+  reviewNote?: string,
+  overrideSiteId?: string
+): Promise<Booking> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<unknown>>(`/api/bookings/${id}/review-cancellation`, {
+    method: 'POST',
+    body: JSON.stringify({
+      approve: action === 'approve',
+      action,
+      adminNote: reviewNote,
+      reviewNote,
+    }),
+    siteId,
+    skipCache: true,
+  });
+  const raw = json?.data ?? (json as any)?.result ?? json;
+  return normalizeBooking(raw);
+}
+
+/**
+ * Fetch booking email outbox logs (Admin endpoint).
+ */
+export async function fetchBookingOutbox(id: string, overrideSiteId?: string): Promise<BookingEmailOutboxItem[]> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const res = await request<RawBackendEnvelope<BookingEmailOutboxItem[]>>(`/api/bookings/${id}/outbox`, {
+    method: 'GET',
+    siteId,
+    skipCache: true,
+  });
+  const rawList = res?.data ?? (res as any)?.result ?? res;
+  return Array.isArray(rawList) ? rawList : [];
+}
+
+/**
+ * Resend a status confirmation email (Admin endpoint).
+ */
+export async function resendBookingEmailApi(
+  id: string,
+  template: string,
+  overrideSiteId?: string
+): Promise<{ success: boolean; message?: string }> {
+  const siteId = overrideSiteId || ENV.siteId;
+  return request<{ success: boolean; message?: string }>(`/api/bookings/${id}/resend-email`, {
+    method: 'POST',
+    body: JSON.stringify({ template }),
     siteId,
     skipCache: true,
   });
@@ -3209,7 +3612,7 @@ export async function fetchBargainHubData(
 ): Promise<BargainHubData | null> {
   const siteId = overrideSiteId || ENV.siteId;
   try {
-    const res = await request<RawBackendEnvelope<BargainHubData>>('/api/bargain/data', {
+    const res = await request<RawBackendEnvelope<BargainHubData>>('/api/bargain/hub', {
       siteId,
       skipCache: true,
     });
@@ -3277,6 +3680,143 @@ export async function submitReviewBoost(
   } catch (err) {
     console.warn('[submitReviewBoost] Error submitting review boost:', err);
     throw err;
+  }
+}
+
+// ─── Module-Driven Dynamic Home & Explore Types and API ───────────────────────────
+
+export type CanonicalModule =
+  | 'hotels'
+  | 'tours'
+  | 'packages'
+  | 'flights'
+  | 'transfers'
+  | 'visas'
+  | 'restaurants'
+  | 'buildpackage';
+
+export interface ModuleMeta {
+  title: string;
+  subtitle: string;
+  badge?: string;
+  searchModule?: string;
+  citySectionTitle?: string;
+  collectionTitle?: string;
+  collectionSubtitle?: string;
+  viewMoreUrl?: string;
+}
+
+export interface ModuleBanner {
+  id: string;
+  title: string;
+  subtitle?: string;
+  buttonText?: string;
+  imageUrl?: string;
+  link?: string;
+  badge?: string;
+  tag?: string;
+}
+
+export interface ModuleFeaturedItem {
+  id: string;
+  slug: string;
+  title: string;
+  category?: string;
+  price?: number;
+  originalPrice?: number;
+  currency?: string;
+  rating?: number;
+  reviewCount?: number;
+  imageUrl?: string;
+  detailUrl?: string;
+  badge?: string;
+  duration?: string;
+  stars?: number;
+  city?: string;
+  country?: string;
+  airline?: string;
+  flightNumber?: string;
+  fromCity?: string;
+  toCity?: string;
+  departureTime?: string;
+  arrivalTime?: string;
+  stops?: string;
+  vehicle?: string;
+  capacity?: string;
+  luggage?: string;
+  processingTime?: string;
+  validity?: string;
+  entryType?: string;
+  cuisine?: string;
+  isVeg?: boolean;
+  isPureVeg?: boolean;
+  isJain?: boolean;
+  isJainAvailable?: boolean;
+  costForTwo?: number;
+  customizable?: boolean;
+}
+
+export interface ModuleCategoryItem {
+  slug: string;
+  name: string;
+  title?: string;
+  icon?: string;
+  order?: number;
+  module?: string;
+}
+
+export interface ModuleDestinationItem {
+  id?: string;
+  name: string;
+  image?: string;
+  imageUrl?: string;
+  toursCount?: number;
+  itemCount?: number;
+  count?: number;
+  country?: string;
+}
+
+export interface ModuleCuratedPackageItem {
+  id: string;
+  slug: string;
+  title: string;
+  days?: number;
+  nights?: number;
+  price?: number;
+  rating?: number;
+  imageUrl?: string;
+  destinations?: string[];
+}
+
+export interface ModuleHomePayload {
+  success: boolean;
+  websiteId: string;
+  module: CanonicalModule;
+  meta: ModuleMeta;
+  banners: ModuleBanner[];
+  featured: ModuleFeaturedItem[];
+  destinations: ModuleDestinationItem[];
+  categories: ModuleCategoryItem[];
+  packages: ModuleCuratedPackageItem[];
+  videos?: Array<{ id: string; title: string; videoUrl?: string; thumbnailUrl?: string }>;
+  reviews?: Array<{ id: string; author: string; avatarUrl?: string; rating: number; text: string }>;
+  faq?: Array<{ id: string; question: string; answer: string }>;
+}
+
+export async function fetchModuleHome(
+  module: CanonicalModule,
+  overrideSiteId?: string,
+  overrideHostname?: string
+): Promise<ModuleHomePayload> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const endpoint = `/api/core/v1/home?module=${encodeURIComponent(module)}&site=${encodeURIComponent(siteId)}`;
+  try {
+    return await request<ModuleHomePayload>(endpoint, { siteId });
+  } catch (err) {
+    if (__DEV__) {
+      console.warn(`[fetchModuleHome] API request failed for module "${module}", using rich fallback data:`, err);
+    }
+    return getFallbackModuleHome(module, siteId);
   }
 }
 

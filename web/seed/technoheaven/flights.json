@@ -1,0 +1,4370 @@
+[
+  {
+    "id": 1001,
+    "flightId": "fl_technoheaven_1001",
+    "flightNumericId": 1001,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-101",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:00",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 210,
+    "originalPrice": 253,
+    "netPrice": 179,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-abu dhabi-flights-dxb-auh",
+    "slug": "dubai-to-abu dhabi-flights-dxb-auh-ab-101",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 170,
+    "availableSeats": 18,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1002,
+    "flightId": "fl_technoheaven_1002",
+    "flightNumericId": 1002,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-102",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:25",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 220,
+    "originalPrice": 275,
+    "netPrice": 187,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-abu dhabi-flights-dxb-auh",
+    "slug": "dubai-to-abu dhabi-flights-dxb-auh-ga-102",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 260,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1003,
+    "flightId": "fl_technoheaven_1003",
+    "flightNumericId": 1003,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-103",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:05",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 220,
+    "originalPrice": 265,
+    "netPrice": 187,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-abu dhabi-flights-dxb-auh",
+    "slug": "dubai-to-abu dhabi-flights-dxb-auh-sw-103",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 282,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1004,
+    "flightId": "fl_technoheaven_1004",
+    "flightNumericId": 1004,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-104",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:30",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 210,
+    "originalPrice": 262,
+    "netPrice": 179,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-abu dhabi-flights-dxb-auh",
+    "slug": "dubai-to-abu dhabi-flights-dxb-auh-oj-104",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 314,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1005,
+    "flightId": "fl_technoheaven_1005",
+    "flightNumericId": 1005,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-105",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:00",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 170,
+    "originalPrice": 209,
+    "netPrice": 145,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "abu dhabi-to-dubai-flights-auh-dxb",
+    "slug": "abu dhabi-to-dubai-flights-auh-dxb-sw-105",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 496,
+    "availableSeats": 20,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1006,
+    "flightId": "fl_technoheaven_1006",
+    "flightNumericId": 1006,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-106",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:25",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 210,
+    "originalPrice": 253,
+    "netPrice": 179,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "abu dhabi-to-dubai-flights-auh-dxb",
+    "slug": "abu dhabi-to-dubai-flights-auh-dxb-oj-106",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 452,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1007,
+    "flightId": "fl_technoheaven_1007",
+    "flightNumericId": 1007,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-107",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:05",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 180,
+    "originalPrice": 229,
+    "netPrice": 153,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "abu dhabi-to-dubai-flights-auh-dxb",
+    "slug": "abu dhabi-to-dubai-flights-auh-dxb-pa-107",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 224,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1008,
+    "flightId": "fl_technoheaven_1008",
+    "flightNumericId": 1008,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-108",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "AUH",
+      "city": "Abu Dhabi",
+      "name": "Zayed International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:30",
+    "duration": "0h 45m",
+    "durationMinutes": 45,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 180,
+    "originalPrice": 216,
+    "netPrice": 153,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "abu dhabi-to-dubai-flights-auh-dxb",
+    "slug": "abu dhabi-to-dubai-flights-auh-dxb-ab-108",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 521,
+    "availableSeats": 18,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1009,
+    "flightId": "fl_technoheaven_1009",
+    "flightNumericId": 1009,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-109",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:25",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 410,
+    "originalPrice": 538,
+    "netPrice": 349,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-doha-flights-dxb-doh",
+    "slug": "dubai-to-doha-flights-dxb-doh-pa-109",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 205,
+    "availableSeats": 26,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1010,
+    "flightId": "fl_technoheaven_1010",
+    "flightNumericId": 1010,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-110",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:50",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 440,
+    "originalPrice": 565,
+    "netPrice": 374,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-doha-flights-dxb-doh",
+    "slug": "dubai-to-doha-flights-dxb-doh-ab-110",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 553,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1011,
+    "flightId": "fl_technoheaven_1011",
+    "flightNumericId": 1011,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-111",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:30",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 350,
+    "originalPrice": 421,
+    "netPrice": 298,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-doha-flights-dxb-doh",
+    "slug": "dubai-to-doha-flights-dxb-doh-ga-111",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 534,
+    "availableSeats": 16,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1012,
+    "flightId": "fl_technoheaven_1012",
+    "flightNumericId": 1012,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-112",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:55",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 330,
+    "originalPrice": 404,
+    "netPrice": 281,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-doha-flights-dxb-doh",
+    "slug": "dubai-to-doha-flights-dxb-doh-sw-112",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 267,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1013,
+    "flightId": "fl_technoheaven_1013",
+    "flightNumericId": 1013,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-113",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:25",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 390,
+    "originalPrice": 485,
+    "netPrice": 332,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "doha-to-dubai-flights-doh-dxb",
+    "slug": "doha-to-dubai-flights-doh-dxb-ga-113",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 351,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1014,
+    "flightId": "fl_technoheaven_1014",
+    "flightNumericId": 1014,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-114",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:50",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 420,
+    "originalPrice": 511,
+    "netPrice": 357,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "doha-to-dubai-flights-doh-dxb",
+    "slug": "doha-to-dubai-flights-doh-dxb-sw-114",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 533,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1015,
+    "flightId": "fl_technoheaven_1015",
+    "flightNumericId": 1015,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-115",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:30",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 370,
+    "originalPrice": 442,
+    "netPrice": 315,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "doha-to-dubai-flights-doh-dxb",
+    "slug": "doha-to-dubai-flights-doh-dxb-oj-115",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 184,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1016,
+    "flightId": "fl_technoheaven_1016",
+    "flightNumericId": 1016,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-116",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:55",
+    "duration": "1h 10m",
+    "durationMinutes": 70,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 440,
+    "originalPrice": 523,
+    "netPrice": 374,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "doha-to-dubai-flights-doh-dxb",
+    "slug": "doha-to-dubai-flights-doh-dxb-pa-116",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 338,
+    "availableSeats": 21,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1017,
+    "flightId": "fl_technoheaven_1017",
+    "flightNumericId": 1017,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-117",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:10",
+    "duration": "1h 55m",
+    "durationMinutes": 115,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 560,
+    "originalPrice": 697,
+    "netPrice": 476,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-riyadh-flights-dxb-ruh",
+    "slug": "dubai-to-riyadh-flights-dxb-ruh-oj-117",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 283,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1018,
+    "flightId": "fl_technoheaven_1018",
+    "flightNumericId": 1018,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-118",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:35",
+    "duration": "1h 55m",
+    "durationMinutes": 115,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 490,
+    "originalPrice": 600,
+    "netPrice": 417,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-riyadh-flights-dxb-ruh",
+    "slug": "dubai-to-riyadh-flights-dxb-ruh-pa-118",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 439,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1019,
+    "flightId": "fl_technoheaven_1019",
+    "flightNumericId": 1019,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-119",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:15",
+    "duration": "1h 55m",
+    "durationMinutes": 115,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 520,
+    "originalPrice": 640,
+    "netPrice": 442,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-riyadh-flights-dxb-ruh",
+    "slug": "dubai-to-riyadh-flights-dxb-ruh-ab-119",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 479,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1020,
+    "flightId": "fl_technoheaven_1020",
+    "flightNumericId": 1020,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-120",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:40",
+    "duration": "1h 55m",
+    "durationMinutes": 115,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 510,
+    "originalPrice": 626,
+    "netPrice": 434,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-riyadh-flights-dxb-ruh",
+    "slug": "dubai-to-riyadh-flights-dxb-ruh-ga-120",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 375,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1021,
+    "flightId": "fl_technoheaven_1021",
+    "flightNumericId": 1021,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-121",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:05",
+    "duration": "1h 50m",
+    "durationMinutes": 110,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 580,
+    "originalPrice": 771,
+    "netPrice": 493,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "riyadh-to-dubai-flights-ruh-dxb",
+    "slug": "riyadh-to-dubai-flights-ruh-dxb-ab-121",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 293,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1022,
+    "flightId": "fl_technoheaven_1022",
+    "flightNumericId": 1022,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-122",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:30",
+    "duration": "1h 50m",
+    "durationMinutes": 110,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 460,
+    "originalPrice": 595,
+    "netPrice": 391,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "riyadh-to-dubai-flights-ruh-dxb",
+    "slug": "riyadh-to-dubai-flights-ruh-dxb-ga-122",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 154,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1023,
+    "flightId": "fl_technoheaven_1023",
+    "flightNumericId": 1023,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-123",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:10",
+    "duration": "1h 50m",
+    "durationMinutes": 110,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 480,
+    "originalPrice": 587,
+    "netPrice": 408,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "riyadh-to-dubai-flights-ruh-dxb",
+    "slug": "riyadh-to-dubai-flights-ruh-dxb-sw-123",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 283,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1024,
+    "flightId": "fl_technoheaven_1024",
+    "flightNumericId": 1024,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-124",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "RUH",
+      "city": "Riyadh",
+      "name": "King Khalid International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:35",
+    "duration": "1h 50m",
+    "durationMinutes": 110,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 600,
+    "originalPrice": 721,
+    "netPrice": 510,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "riyadh-to-dubai-flights-ruh-dxb",
+    "slug": "riyadh-to-dubai-flights-ruh-dxb-oj-124",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.4,
+    "reviews": 499,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1025,
+    "flightId": "fl_technoheaven_1025",
+    "flightNumericId": 1025,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-125",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:00",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 580,
+    "originalPrice": 687,
+    "netPrice": 493,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-jeddah-flights-dxb-jed",
+    "slug": "dubai-to-jeddah-flights-dxb-jed-sw-125",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 399,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1026,
+    "flightId": "fl_technoheaven_1026",
+    "flightNumericId": 1026,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-126",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:25",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 680,
+    "originalPrice": 887,
+    "netPrice": 578,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-jeddah-flights-dxb-jed",
+    "slug": "dubai-to-jeddah-flights-dxb-jed-oj-126",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 589,
+    "availableSeats": 16,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1027,
+    "flightId": "fl_technoheaven_1027",
+    "flightNumericId": 1027,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-127",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:05",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 730,
+    "originalPrice": 961,
+    "netPrice": 621,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-jeddah-flights-dxb-jed",
+    "slug": "dubai-to-jeddah-flights-dxb-jed-pa-127",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 187,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1028,
+    "flightId": "fl_technoheaven_1028",
+    "flightNumericId": 1028,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-128",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:30",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 710,
+    "originalPrice": 927,
+    "netPrice": 604,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-jeddah-flights-dxb-jed",
+    "slug": "dubai-to-jeddah-flights-dxb-jed-ab-128",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 532,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1029,
+    "flightId": "fl_technoheaven_1029",
+    "flightNumericId": 1029,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-129",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:55",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 740,
+    "originalPrice": 959,
+    "netPrice": 629,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "jeddah-to-dubai-flights-jed-dxb",
+    "slug": "jeddah-to-dubai-flights-jed-dxb-pa-129",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 526,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1030,
+    "flightId": "fl_technoheaven_1030",
+    "flightNumericId": 1030,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-130",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:20",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 600,
+    "originalPrice": 771,
+    "netPrice": 510,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "jeddah-to-dubai-flights-jed-dxb",
+    "slug": "jeddah-to-dubai-flights-jed-dxb-ab-130",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 390,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1031,
+    "flightId": "fl_technoheaven_1031",
+    "flightNumericId": 1031,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-131",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:00",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 710,
+    "originalPrice": 846,
+    "netPrice": 604,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "jeddah-to-dubai-flights-jed-dxb",
+    "slug": "jeddah-to-dubai-flights-jed-dxb-ga-131",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 152,
+    "availableSeats": 20,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1032,
+    "flightId": "fl_technoheaven_1032",
+    "flightNumericId": 1032,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-132",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "JED",
+      "city": "Jeddah",
+      "name": "King Abdulaziz International Airport",
+      "country": "Saudi Arabia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:25",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 670,
+    "originalPrice": 797,
+    "netPrice": 570,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "jeddah-to-dubai-flights-jed-dxb",
+    "slug": "jeddah-to-dubai-flights-jed-dxb-sw-132",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 473,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1033,
+    "flightId": "fl_technoheaven_1033",
+    "flightNumericId": 1033,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-133",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KWI",
+      "city": "Kuwait City",
+      "name": "Kuwait International Airport",
+      "country": "Kuwait",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:00",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 410,
+    "originalPrice": 532,
+    "netPrice": 349,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-kuwait city-flights-dxb-kwi",
+    "slug": "dubai-to-kuwait city-flights-dxb-kwi-ga-133",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 379,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1034,
+    "flightId": "fl_technoheaven_1034",
+    "flightNumericId": 1034,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-134",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KWI",
+      "city": "Kuwait City",
+      "name": "Kuwait International Airport",
+      "country": "Kuwait",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:25",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 410,
+    "originalPrice": 533,
+    "netPrice": 349,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-kuwait city-flights-dxb-kwi",
+    "slug": "dubai-to-kuwait city-flights-dxb-kwi-sw-134",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 533,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1035,
+    "flightId": "fl_technoheaven_1035",
+    "flightNumericId": 1035,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-135",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KWI",
+      "city": "Kuwait City",
+      "name": "Kuwait International Airport",
+      "country": "Kuwait",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:05",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 420,
+    "originalPrice": 557,
+    "netPrice": 357,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-kuwait city-flights-dxb-kwi",
+    "slug": "dubai-to-kuwait city-flights-dxb-kwi-oj-135",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 201,
+    "availableSeats": 21,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1036,
+    "flightId": "fl_technoheaven_1036",
+    "flightNumericId": 1036,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-136",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KWI",
+      "city": "Kuwait City",
+      "name": "Kuwait International Airport",
+      "country": "Kuwait",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:30",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 420,
+    "originalPrice": 551,
+    "netPrice": 357,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-kuwait city-flights-dxb-kwi",
+    "slug": "dubai-to-kuwait city-flights-dxb-kwi-pa-136",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 568,
+    "availableSeats": 26,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1037,
+    "flightId": "fl_technoheaven_1037",
+    "flightNumericId": 1037,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-137",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "MCT",
+      "city": "Muscat",
+      "name": "Muscat International Airport",
+      "country": "Oman",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:20",
+    "duration": "1h 05m",
+    "durationMinutes": 65,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 330,
+    "originalPrice": 408,
+    "netPrice": 281,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-muscat-flights-dxb-mct",
+    "slug": "dubai-to-muscat-flights-dxb-mct-oj-137",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 295,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1038,
+    "flightId": "fl_technoheaven_1038",
+    "flightNumericId": 1038,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-138",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "MCT",
+      "city": "Muscat",
+      "name": "Muscat International Airport",
+      "country": "Oman",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:45",
+    "duration": "1h 05m",
+    "durationMinutes": 65,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 280,
+    "originalPrice": 362,
+    "netPrice": 238,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-muscat-flights-dxb-mct",
+    "slug": "dubai-to-muscat-flights-dxb-mct-pa-138",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 329,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1039,
+    "flightId": "fl_technoheaven_1039",
+    "flightNumericId": 1039,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-139",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "MCT",
+      "city": "Muscat",
+      "name": "Muscat International Airport",
+      "country": "Oman",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:25",
+    "duration": "1h 05m",
+    "durationMinutes": 65,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 340,
+    "originalPrice": 426,
+    "netPrice": 289,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-muscat-flights-dxb-mct",
+    "slug": "dubai-to-muscat-flights-dxb-mct-ab-139",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 573,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1040,
+    "flightId": "fl_technoheaven_1040",
+    "flightNumericId": 1040,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-140",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "MCT",
+      "city": "Muscat",
+      "name": "Muscat International Airport",
+      "country": "Oman",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:50",
+    "duration": "1h 05m",
+    "durationMinutes": 65,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 340,
+    "originalPrice": 411,
+    "netPrice": 289,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-muscat-flights-dxb-mct",
+    "slug": "dubai-to-muscat-flights-dxb-mct-ga-140",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 273,
+    "availableSeats": 20,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1041,
+    "flightId": "fl_technoheaven_1041",
+    "flightNumericId": 1041,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-141",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BAH",
+      "city": "Manama",
+      "name": "Bahrain International Airport",
+      "country": "Bahrain",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 330,
+    "originalPrice": 390,
+    "netPrice": 281,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-manama-flights-dxb-bah",
+    "slug": "dubai-to-manama-flights-dxb-bah-ab-141",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 502,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1042,
+    "flightId": "fl_technoheaven_1042",
+    "flightNumericId": 1042,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-142",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BAH",
+      "city": "Manama",
+      "name": "Bahrain International Airport",
+      "country": "Bahrain",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 330,
+    "originalPrice": 418,
+    "netPrice": 281,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-manama-flights-dxb-bah",
+    "slug": "dubai-to-manama-flights-dxb-bah-ga-142",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 189,
+    "availableSeats": 18,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1043,
+    "flightId": "fl_technoheaven_1043",
+    "flightNumericId": 1043,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-143",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BAH",
+      "city": "Manama",
+      "name": "Bahrain International Airport",
+      "country": "Bahrain",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 390,
+    "originalPrice": 513,
+    "netPrice": 332,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-manama-flights-dxb-bah",
+    "slug": "dubai-to-manama-flights-dxb-bah-sw-143",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 219,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1044,
+    "flightId": "fl_technoheaven_1044",
+    "flightNumericId": 1044,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-144",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BAH",
+      "city": "Manama",
+      "name": "Bahrain International Airport",
+      "country": "Bahrain",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 360,
+    "originalPrice": 443,
+    "netPrice": 306,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "dubai-to-manama-flights-dxb-bah",
+    "slug": "dubai-to-manama-flights-dxb-bah-oj-144",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 156,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1045,
+    "flightId": "fl_technoheaven_1045",
+    "flightNumericId": 1045,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-145",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "SHJ",
+      "city": "Sharjah",
+      "name": "Sharjah International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 320,
+    "originalPrice": 421,
+    "netPrice": 272,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "sharjah-to-doha-flights-shj-doh",
+    "slug": "sharjah-to-doha-flights-shj-doh-sw-145",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 505,
+    "availableSeats": 19,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1046,
+    "flightId": "fl_technoheaven_1046",
+    "flightNumericId": 1046,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-146",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "SHJ",
+      "city": "Sharjah",
+      "name": "Sharjah International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 400,
+    "originalPrice": 509,
+    "netPrice": 340,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "sharjah-to-doha-flights-shj-doh",
+    "slug": "sharjah-to-doha-flights-shj-doh-oj-146",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 474,
+    "availableSeats": 26,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1047,
+    "flightId": "fl_technoheaven_1047",
+    "flightNumericId": 1047,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-147",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "SHJ",
+      "city": "Sharjah",
+      "name": "Sharjah International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 370,
+    "originalPrice": 460,
+    "netPrice": 315,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "sharjah-to-doha-flights-shj-doh",
+    "slug": "sharjah-to-doha-flights-shj-doh-pa-147",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 431,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1048,
+    "flightId": "fl_technoheaven_1048",
+    "flightNumericId": 1048,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-148",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "SHJ",
+      "city": "Sharjah",
+      "name": "Sharjah International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DOH",
+      "city": "Doha",
+      "name": "Hamad International Airport",
+      "country": "Qatar",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 370,
+    "originalPrice": 459,
+    "netPrice": 315,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "sharjah-to-doha-flights-shj-doh",
+    "slug": "sharjah-to-doha-flights-shj-doh-ab-148",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 430,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1049,
+    "flightId": "fl_technoheaven_1049",
+    "flightNumericId": 1049,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-149",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:40",
+    "duration": "3h 25m",
+    "durationMinutes": 205,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 610,
+    "originalPrice": 745,
+    "netPrice": 519,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-mumbai-flights-dxb-bom",
+    "slug": "dubai-to-mumbai-flights-dxb-bom-pa-149",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 252,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1050,
+    "flightId": "fl_technoheaven_1050",
+    "flightNumericId": 1050,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-150",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "13:05",
+    "duration": "3h 25m",
+    "durationMinutes": 205,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 790,
+    "originalPrice": 974,
+    "netPrice": 672,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-mumbai-flights-dxb-bom",
+    "slug": "dubai-to-mumbai-flights-dxb-bom-ab-150",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 508,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1051,
+    "flightId": "fl_technoheaven_1051",
+    "flightNumericId": 1051,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-151",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:45",
+    "duration": "3h 30m",
+    "durationMinutes": 210,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 740,
+    "originalPrice": 896,
+    "netPrice": 629,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-dubai-flights-bom-dxb",
+    "slug": "mumbai-to-dubai-flights-bom-dxb-ab-151",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 418,
+    "availableSeats": 19,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1052,
+    "flightId": "fl_technoheaven_1052",
+    "flightNumericId": 1052,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-152",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "13:10",
+    "duration": "3h 30m",
+    "durationMinutes": 210,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 700,
+    "originalPrice": 836,
+    "netPrice": 595,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-dubai-flights-bom-dxb",
+    "slug": "mumbai-to-dubai-flights-bom-dxb-ga-152",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 259,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1053,
+    "flightId": "fl_technoheaven_1053",
+    "flightNumericId": 1053,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-153",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "14:00",
+    "duration": "7h 45m",
+    "durationMinutes": 465,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 2482,
+    "netPrice": 1598,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-london-flights-dxb-lhr",
+    "slug": "dubai-to-london-flights-dxb-lhr-ga-153",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 495,
+    "availableSeats": 25,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1054,
+    "flightId": "fl_technoheaven_1054",
+    "flightNumericId": 1054,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-154",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "17:25",
+    "duration": "7h 45m",
+    "durationMinutes": 465,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 145,
+    "originalPrice": 2250,
+    "netPrice": 1564,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-london-flights-dxb-lhr",
+    "slug": "dubai-to-london-flights-dxb-lhr-sw-154",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 543,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1055,
+    "flightId": "fl_technoheaven_1055",
+    "flightNumericId": 1055,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-155",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "IST",
+      "city": "Istanbul",
+      "name": "Istanbul Airport",
+      "country": "Turkey",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "11:05",
+    "duration": "4h 50m",
+    "durationMinutes": 290,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 1200,
+    "originalPrice": 1445,
+    "netPrice": 1020,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-istanbul-flights-dxb-ist",
+    "slug": "dubai-to-istanbul-flights-dxb-ist-sw-155",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 199,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1056,
+    "flightId": "fl_technoheaven_1056",
+    "flightNumericId": 1056,
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-156",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "IST",
+      "city": "Istanbul",
+      "name": "Istanbul Airport",
+      "country": "Turkey",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "14:30",
+    "duration": "4h 50m",
+    "durationMinutes": 290,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 980,
+    "originalPrice": 1266,
+    "netPrice": 833,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-istanbul-flights-dxb-ist",
+    "slug": "dubai-to-istanbul-flights-dxb-ist-oj-156",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 252,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  }
+]

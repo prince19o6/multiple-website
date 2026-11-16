@@ -49,7 +49,7 @@ export function SectionHeader({
       </View>
 
       {onSeeAll ? (
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-seeall"
           onPress={onSeeAll}
           activeOpacity={0.7}
           hitSlop={{ top: 8, bottom: 8, left: 12, right: 12 }}

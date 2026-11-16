@@ -144,9 +144,12 @@ export default function DevBanner() {
 
   if (collapsed) {
     return (
-      <View style={[styles.bottomContainer, { bottom: bottomOffset, pointerEvents: 'box-none' }]}>
+      <View
+        pointerEvents="box-none"
+        style={[styles.bottomContainer, { bottom: bottomOffset }]}
+      >
         <View style={styles.pill}>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-devbanner-152"
             style={styles.pillContent}
             onPress={() => setCollapsed(false)}
             activeOpacity={0.85}
@@ -158,7 +161,7 @@ export default function DevBanner() {
               [DEV] {ENV.siteId} • {apiHealth.ok ? 'Online' : 'Offline'} • Tours: {toursDebug ? `${toursDebug.itemCount}` : '-'} • Detail: {toursDebug?.detailStatus || '-'}
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-close"
             style={styles.pillDismissBtn}
             onPress={() => setDismissed(true)}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
@@ -172,14 +175,17 @@ export default function DevBanner() {
   }
 
   return (
-    <View style={[styles.bannerContainer, { bottom: bottomOffset, pointerEvents: 'box-none' }]}>
+    <View
+      pointerEvents="box-none"
+      style={[styles.bannerContainer, { bottom: bottomOffset }]}
+    >
       <View style={styles.banner}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <View style={[styles.statusDot, { backgroundColor: reachabilityColor }]} />
             <Text style={styles.title}>[DEV DIAGNOSTICS: {siteName}]</Text>
           </View>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-close"
             onPress={() => setCollapsed(true)}
             hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
             style={styles.closeBtn}
@@ -283,7 +289,7 @@ export default function DevBanner() {
                 {reachabilityText}
               </Text>
             )}
-            <TouchableOpacity onPress={testReachability} hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}>
+            <TouchableOpacity testID="btn-refresh" accessibilityLabel="refresh" onPress={testReachability} hitSlop={{ top: 6, bottom: 6, left: 6, right: 6 }}>
               <Ionicons name="refresh" size={14} color="#38bdf8" />
             </TouchableOpacity>
           </View>
@@ -296,7 +302,7 @@ export default function DevBanner() {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-devbanner-305" accessibilityLabel="devbanner action"
           style={styles.hideEntirelyBtn}
           onPress={() => setDismissed(true)}
           activeOpacity={0.8}

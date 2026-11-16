@@ -23,7 +23,7 @@ export default function NotAllowedScreen() {
         This website brand is not available or is currently deactivated in this multi-tenant engine.
       </Text>
 
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-choose-available-brand" accessibilityLabel="Choose Available Brand"
         style={styles.btn}
         onPress={() => router.replace('/site-switcher')}
         activeOpacity={0.85}

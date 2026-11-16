@@ -1,0 +1,4370 @@
+[
+  {
+    "id": 1001,
+    "flightId": "fl_tripgoasia_1001",
+    "flightNumericId": 1001,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-101",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:40",
+    "duration": "1h 25m",
+    "durationMinutes": 85,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 62,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-phuket-flights-bkk-hkt",
+    "slug": "bangkok-to-phuket-flights-bkk-hkt-ab-101",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 366,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1002,
+    "flightId": "fl_tripgoasia_1002",
+    "flightNumericId": 1002,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-102",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:05",
+    "duration": "1h 25m",
+    "durationMinutes": 85,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 60,
+    "originalPrice": 72,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-phuket-flights-bkk-hkt",
+    "slug": "bangkok-to-phuket-flights-bkk-hkt-ga-102",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 224,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1003,
+    "flightId": "fl_tripgoasia_1003",
+    "flightNumericId": 1003,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-103",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:45",
+    "duration": "1h 25m",
+    "durationMinutes": 85,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 60,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-phuket-flights-bkk-hkt",
+    "slug": "bangkok-to-phuket-flights-bkk-hkt-sw-103",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 323,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1004,
+    "flightId": "fl_tripgoasia_1004",
+    "flightNumericId": 1004,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-104",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:10",
+    "duration": "1h 25m",
+    "durationMinutes": 85,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 62,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-phuket-flights-bkk-hkt",
+    "slug": "bangkok-to-phuket-flights-bkk-hkt-oj-104",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 246,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1005,
+    "flightId": "fl_tripgoasia_1005",
+    "flightNumericId": 1005,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-105",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:35",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 60,
+    "originalPrice": 78,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "phuket-to-bangkok-flights-hkt-bkk",
+    "slug": "phuket-to-bangkok-flights-hkt-bkk-sw-105",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 358,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1006,
+    "flightId": "fl_tripgoasia_1006",
+    "flightNumericId": 1006,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-106",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:00",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 50,
+    "originalPrice": 61,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "phuket-to-bangkok-flights-hkt-bkk",
+    "slug": "phuket-to-bangkok-flights-hkt-bkk-oj-106",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 587,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1007,
+    "flightId": "fl_tripgoasia_1007",
+    "flightNumericId": 1007,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-107",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:40",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 60,
+    "originalPrice": 72,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "phuket-to-bangkok-flights-hkt-bkk",
+    "slug": "phuket-to-bangkok-flights-hkt-bkk-pa-107",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 513,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1008,
+    "flightId": "fl_tripgoasia_1008",
+    "flightNumericId": 1008,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-108",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "HKT",
+      "city": "Phuket",
+      "name": "Phuket International Airport",
+      "country": "Thailand",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:05",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 59,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "phuket-to-bangkok-flights-hkt-bkk",
+    "slug": "phuket-to-bangkok-flights-hkt-bkk-ab-108",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 351,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1009,
+    "flightId": "fl_tripgoasia_1009",
+    "flightNumericId": 1009,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-109",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 61,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-chiang mai-flights-bkk-cnx",
+    "slug": "bangkok-to-chiang mai-flights-bkk-cnx-pa-109",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 312,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1010,
+    "flightId": "fl_tripgoasia_1010",
+    "flightNumericId": 1010,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-110",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 145,
+    "originalPrice": 53,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-chiang mai-flights-bkk-cnx",
+    "slug": "bangkok-to-chiang mai-flights-bkk-cnx-ab-110",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 375,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1011,
+    "flightId": "fl_tripgoasia_1011",
+    "flightNumericId": 1011,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-111",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 48,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-chiang mai-flights-bkk-cnx",
+    "slug": "bangkok-to-chiang mai-flights-bkk-cnx-ga-111",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 476,
+    "availableSeats": 21,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1012,
+    "flightId": "fl_tripgoasia_1012",
+    "flightNumericId": 1012,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-112",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 51,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-chiang mai-flights-bkk-cnx",
+    "slug": "bangkok-to-chiang mai-flights-bkk-cnx-sw-112",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 185,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1013,
+    "flightId": "fl_tripgoasia_1013",
+    "flightNumericId": 1013,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-113",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 66,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "chiang mai-to-bangkok-flights-cnx-bkk",
+    "slug": "chiang mai-to-bangkok-flights-cnx-bkk-ga-113",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 578,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1014,
+    "flightId": "fl_tripgoasia_1014",
+    "flightNumericId": 1014,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-114",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 50,
+    "originalPrice": 62,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "chiang mai-to-bangkok-flights-cnx-bkk",
+    "slug": "chiang mai-to-bangkok-flights-cnx-bkk-sw-114",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 305,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1015,
+    "flightId": "fl_tripgoasia_1015",
+    "flightNumericId": 1015,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-115",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 61,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "chiang mai-to-bangkok-flights-cnx-bkk",
+    "slug": "chiang mai-to-bangkok-flights-cnx-bkk-oj-115",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 551,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1016,
+    "flightId": "fl_tripgoasia_1016",
+    "flightNumericId": 1016,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-116",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "CNX",
+      "city": "Chiang Mai",
+      "name": "Chiang Mai International Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 61,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "chiang mai-to-bangkok-flights-cnx-bkk",
+    "slug": "chiang mai-to-bangkok-flights-cnx-bkk-pa-116",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 314,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1017,
+    "flightId": "fl_tripgoasia_1017",
+    "flightNumericId": 1017,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-117",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:15",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 50,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-kuala lumpur-flights-sin-kul",
+    "slug": "singapore-to-kuala lumpur-flights-sin-kul-oj-117",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 367,
+    "availableSeats": 11,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1018,
+    "flightId": "fl_tripgoasia_1018",
+    "flightNumericId": 1018,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-118",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:40",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 50,
+    "originalPrice": 65,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-kuala lumpur-flights-sin-kul",
+    "slug": "singapore-to-kuala lumpur-flights-sin-kul-pa-118",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 165,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1019,
+    "flightId": "fl_tripgoasia_1019",
+    "flightNumericId": 1019,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-119",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:20",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 65,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-kuala lumpur-flights-sin-kul",
+    "slug": "singapore-to-kuala lumpur-flights-sin-kul-ab-119",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 415,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1020,
+    "flightId": "fl_tripgoasia_1020",
+    "flightNumericId": 1020,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-120",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:45",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 66,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-kuala lumpur-flights-sin-kul",
+    "slug": "singapore-to-kuala lumpur-flights-sin-kul-ga-120",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 308,
+    "availableSeats": 20,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1021,
+    "flightId": "fl_tripgoasia_1021",
+    "flightNumericId": 1021,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-121",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:15",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 52,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-singapore-flights-kul-sin",
+    "slug": "kuala lumpur-to-singapore-flights-kul-sin-ab-121",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 306,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1022,
+    "flightId": "fl_tripgoasia_1022",
+    "flightNumericId": 1022,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-122",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:40",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 50,
+    "originalPrice": 65,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-singapore-flights-kul-sin",
+    "slug": "kuala lumpur-to-singapore-flights-kul-sin-ga-122",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 386,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1023,
+    "flightId": "fl_tripgoasia_1023",
+    "flightNumericId": 1023,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-123",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:20",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 145,
+    "originalPrice": 49,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-singapore-flights-kul-sin",
+    "slug": "kuala lumpur-to-singapore-flights-kul-sin-sw-123",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 167,
+    "availableSeats": 11,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1024,
+    "flightId": "fl_tripgoasia_1024",
+    "flightNumericId": 1024,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-124",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:45",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 50,
+    "originalPrice": 61,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-singapore-flights-kul-sin",
+    "slug": "kuala lumpur-to-singapore-flights-kul-sin-oj-124",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 342,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1025,
+    "flightId": "fl_tripgoasia_1025",
+    "flightNumericId": 1025,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-125",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:40",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 123,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-singapore-flights-bkk-sin",
+    "slug": "bangkok-to-singapore-flights-bkk-sin-sw-125",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 179,
+    "availableSeats": 11,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1026,
+    "flightId": "fl_tripgoasia_1026",
+    "flightNumericId": 1026,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-126",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:05",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 100,
+    "originalPrice": 122,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-singapore-flights-bkk-sin",
+    "slug": "bangkok-to-singapore-flights-bkk-sin-oj-126",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 580,
+    "availableSeats": 19,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1027,
+    "flightId": "fl_tripgoasia_1027",
+    "flightNumericId": 1027,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-127",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:45",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 90,
+    "originalPrice": 108,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-singapore-flights-bkk-sin",
+    "slug": "bangkok-to-singapore-flights-bkk-sin-pa-127",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 220,
+    "availableSeats": 18,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1028,
+    "flightId": "fl_tripgoasia_1028",
+    "flightNumericId": 1028,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-128",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:10",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 124,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bangkok-to-singapore-flights-bkk-sin",
+    "slug": "bangkok-to-singapore-flights-bkk-sin-ab-128",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 333,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1029,
+    "flightId": "fl_tripgoasia_1029",
+    "flightNumericId": 1029,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-129",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:35",
+    "duration": "2h 20m",
+    "durationMinutes": 140,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 128,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bangkok-flights-sin-bkk",
+    "slug": "singapore-to-bangkok-flights-sin-bkk-pa-129",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 193,
+    "availableSeats": 25,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1030,
+    "flightId": "fl_tripgoasia_1030",
+    "flightNumericId": 1030,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-130",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:00",
+    "duration": "2h 20m",
+    "durationMinutes": 140,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 100,
+    "originalPrice": 127,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bangkok-flights-sin-bkk",
+    "slug": "singapore-to-bangkok-flights-sin-bkk-ab-130",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 266,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1031,
+    "flightId": "fl_tripgoasia_1031",
+    "flightNumericId": 1031,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-131",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:40",
+    "duration": "2h 20m",
+    "durationMinutes": 140,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 123,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bangkok-flights-sin-bkk",
+    "slug": "singapore-to-bangkok-flights-sin-bkk-ga-131",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 230,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1032,
+    "flightId": "fl_tripgoasia_1032",
+    "flightNumericId": 1032,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-132",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:05",
+    "duration": "2h 20m",
+    "durationMinutes": 140,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 90,
+    "originalPrice": 116,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bangkok-flights-sin-bkk",
+    "slug": "singapore-to-bangkok-flights-sin-bkk-sw-132",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.4,
+    "reviews": 540,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1033,
+    "flightId": "fl_tripgoasia_1033",
+    "flightNumericId": 1033,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-133",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:20",
+    "duration": "3h 05m",
+    "durationMinutes": 185,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 120,
+    "originalPrice": 150,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-bali-flights-kul-dps",
+    "slug": "kuala lumpur-to-bali-flights-kul-dps-ga-133",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 347,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1034,
+    "flightId": "fl_tripgoasia_1034",
+    "flightNumericId": 1034,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-134",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:45",
+    "duration": "3h 05m",
+    "durationMinutes": 185,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 120,
+    "originalPrice": 147,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-bali-flights-kul-dps",
+    "slug": "kuala lumpur-to-bali-flights-kul-dps-sw-134",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 574,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1035,
+    "flightId": "fl_tripgoasia_1035",
+    "flightNumericId": 1035,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-135",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:25",
+    "duration": "3h 05m",
+    "durationMinutes": 185,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 127,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-bali-flights-kul-dps",
+    "slug": "kuala lumpur-to-bali-flights-kul-dps-oj-135",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 480,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1036,
+    "flightId": "fl_tripgoasia_1036",
+    "flightNumericId": 1036,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-136",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:50",
+    "duration": "3h 05m",
+    "durationMinutes": 185,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 120,
+    "originalPrice": 151,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kuala lumpur-to-bali-flights-kul-dps",
+    "slug": "kuala lumpur-to-bali-flights-kul-dps-pa-136",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.9,
+    "reviews": 289,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1037,
+    "flightId": "fl_tripgoasia_1037",
+    "flightNumericId": 1037,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-137",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:15",
+    "duration": "3h 00m",
+    "durationMinutes": 180,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 130,
+    "originalPrice": 172,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-kuala lumpur-flights-dps-kul",
+    "slug": "bali-to-kuala lumpur-flights-dps-kul-oj-137",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 562,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1038,
+    "flightId": "fl_tripgoasia_1038",
+    "flightNumericId": 1038,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-138",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:40",
+    "duration": "3h 00m",
+    "durationMinutes": 180,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 130,
+    "originalPrice": 170,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-kuala lumpur-flights-dps-kul",
+    "slug": "bali-to-kuala lumpur-flights-dps-kul-pa-138",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 150,
+    "availableSeats": 29,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1039,
+    "flightId": "fl_tripgoasia_1039",
+    "flightNumericId": 1039,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-139",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:20",
+    "duration": "3h 00m",
+    "durationMinutes": 180,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 132,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-kuala lumpur-flights-dps-kul",
+    "slug": "bali-to-kuala lumpur-flights-dps-kul-ab-139",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 347,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1040,
+    "flightId": "fl_tripgoasia_1040",
+    "flightNumericId": 1040,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-140",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "name": "Kuala Lumpur International Airport",
+      "country": "Malaysia",
+      "terminal": "KLIA2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:45",
+    "duration": "3h 00m",
+    "durationMinutes": 180,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 100,
+    "originalPrice": 122,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-kuala lumpur-flights-dps-kul",
+    "slug": "bali-to-kuala lumpur-flights-dps-kul-ga-140",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 298,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1041,
+    "flightId": "fl_tripgoasia_1041",
+    "flightNumericId": 1041,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-141",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:00",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 140,
+    "originalPrice": 170,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bali-flights-sin-dps",
+    "slug": "singapore-to-bali-flights-sin-dps-ab-141",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 492,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1042,
+    "flightId": "fl_tripgoasia_1042",
+    "flightNumericId": 1042,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-142",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:25",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 110,
+    "originalPrice": 140,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bali-flights-sin-dps",
+    "slug": "singapore-to-bali-flights-sin-dps-ga-142",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 505,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1043,
+    "flightId": "fl_tripgoasia_1043",
+    "flightNumericId": 1043,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-143",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:05",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 140,
+    "originalPrice": 177,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bali-flights-sin-dps",
+    "slug": "singapore-to-bali-flights-sin-dps-sw-143",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 473,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1044,
+    "flightId": "fl_tripgoasia_1044",
+    "flightNumericId": 1044,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-144",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:30",
+    "duration": "2h 45m",
+    "durationMinutes": 165,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 150,
+    "originalPrice": 177,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": true,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "singapore-to-bali-flights-sin-dps",
+    "slug": "singapore-to-bali-flights-sin-dps-oj-144",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 512,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1045,
+    "flightId": "fl_tripgoasia_1045",
+    "flightNumericId": 1045,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-145",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:55",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 130,
+    "originalPrice": 173,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-singapore-flights-dps-sin",
+    "slug": "bali-to-singapore-flights-dps-sin-sw-145",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 519,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1046,
+    "flightId": "fl_tripgoasia_1046",
+    "flightNumericId": 1046,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-146",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:20",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 110,
+    "originalPrice": 139,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-singapore-flights-dps-sin",
+    "slug": "bali-to-singapore-flights-dps-sin-oj-146",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 309,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1047,
+    "flightId": "fl_tripgoasia_1047",
+    "flightNumericId": 1047,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-147",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "16:00",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 130,
+    "originalPrice": 171,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-singapore-flights-dps-sin",
+    "slug": "bali-to-singapore-flights-dps-sin-pa-147",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 279,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1048,
+    "flightId": "fl_tripgoasia_1048",
+    "flightNumericId": 1048,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-148",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DPS",
+      "city": "Bali",
+      "name": "Ngurah Rai International Airport",
+      "country": "Indonesia",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:25",
+    "duration": "2h 40m",
+    "durationMinutes": 160,
+    "stops": "1 Stop via BKK",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 120,
+    "originalPrice": 148,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bali-to-singapore-flights-dps-sin",
+    "slug": "bali-to-singapore-flights-dps-sin-ab-148",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 536,
+    "availableSeats": 25,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1049,
+    "flightId": "fl_tripgoasia_1049",
+    "flightNumericId": 1049,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-149",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "NRT",
+      "city": "Tokyo",
+      "name": "Narita International Airport",
+      "country": "Japan",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "12:30",
+    "duration": "6h 15m",
+    "durationMinutes": 375,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 290,
+    "originalPrice": 362,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "bangkok-to-tokyo-flights-bkk-nrt",
+    "slug": "bangkok-to-tokyo-flights-bkk-nrt-pa-149",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 512,
+    "availableSeats": 16,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1050,
+    "flightId": "fl_tripgoasia_1050",
+    "flightNumericId": 1050,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-150",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "NRT",
+      "city": "Tokyo",
+      "name": "Narita International Airport",
+      "country": "Japan",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "15:55",
+    "duration": "6h 15m",
+    "durationMinutes": 375,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 300,
+    "originalPrice": 357,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "bangkok-to-tokyo-flights-bkk-nrt",
+    "slug": "bangkok-to-tokyo-flights-bkk-nrt-ab-150",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 145,
+    "availableSeats": 19,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1051,
+    "flightId": "fl_tripgoasia_1051",
+    "flightNumericId": 1051,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-151",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "SYD",
+      "city": "Sydney",
+      "name": "Sydney Kingsford Smith Airport",
+      "country": "Australia",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "14:00",
+    "duration": "7h 45m",
+    "durationMinutes": 465,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 400,
+    "originalPrice": 527,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "singapore-to-sydney-flights-sin-syd",
+    "slug": "singapore-to-sydney-flights-sin-syd-ab-151",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 229,
+    "availableSeats": 18,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1052,
+    "flightId": "fl_tripgoasia_1052",
+    "flightNumericId": 1052,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-152",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "SYD",
+      "city": "Sydney",
+      "name": "Sydney Kingsford Smith Airport",
+      "country": "Australia",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "17:25",
+    "duration": "7h 45m",
+    "durationMinutes": 465,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 500,
+    "originalPrice": 598,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "singapore-to-sydney-flights-sin-syd",
+    "slug": "singapore-to-sydney-flights-sin-syd-ga-152",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 248,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1053,
+    "flightId": "fl_tripgoasia_1053",
+    "flightNumericId": 1053,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-153",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "12:55",
+    "duration": "6h 40m",
+    "durationMinutes": 400,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 330,
+    "originalPrice": 420,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "bangkok-to-dubai-flights-bkk-dxb",
+    "slug": "bangkok-to-dubai-flights-bkk-dxb-ga-153",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 204,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1054,
+    "flightId": "fl_tripgoasia_1054",
+    "flightNumericId": 1054,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-154",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "16:20",
+    "duration": "6h 40m",
+    "durationMinutes": 400,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 260,
+    "originalPrice": 344,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": false,
+      "jainMealAvailable": false,
+      "description": "Complimentary in-flight meal service with vegetarian options"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "bangkok-to-dubai-flights-bkk-dxb",
+    "slug": "bangkok-to-dubai-flights-bkk-dxb-sw-154",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 176,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1055,
+    "flightId": "fl_tripgoasia_1055",
+    "flightNumericId": 1055,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-155",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "19:35",
+    "duration": "13h 20m",
+    "durationMinutes": 800,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 670,
+    "originalPrice": 854,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "singapore-to-london-flights-sin-lhr",
+    "slug": "singapore-to-london-flights-sin-lhr-sw-155",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 403,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1056,
+    "flightId": "fl_tripgoasia_1056",
+    "flightNumericId": 1056,
+    "websiteId": "tripgoasia",
+    "website": "website2",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-156",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "23:00",
+    "duration": "13h 20m",
+    "durationMinutes": 800,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 630,
+    "originalPrice": 792,
+    "netPrice": null,
+    "currency": "USD",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "singapore-to-london-flights-sin-lhr",
+    "slug": "singapore-to-london-flights-sin-lhr-oj-156",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 522,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  }
+]

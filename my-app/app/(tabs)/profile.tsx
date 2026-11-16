@@ -33,7 +33,9 @@ import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import { useColors } from '@/store/ThemeContext';
+import { AppearanceSection } from '@/components/profile/AppearanceSection';
 import { useSite, useSiteConfig } from '@/store/SiteConfigContext';
+import { isFeatureEnabled } from '@/hooks/useFeature';
 import { useSelectedSite } from '@/hooks/useSelectedSite';
 import { useAuth } from '@/context/AuthContext';
 import { useBooking } from '@/context/BookingContext';
@@ -86,7 +88,7 @@ export default function ProfileTabScreen() {
   const config = useSiteConfig();
   const { siteId, hostname, siteName } = useSite();
   const { selectSite } = useSelectedSite();
-  const { user, isAuthenticated, logout, updateProfile } = useAuth();
+  const { user, isAuthenticated, logout, updateProfile, deleteAccount } = useAuth();
   const { bookings, upcomingCount } = useBooking();
   const { wishlistIds } = useWishlist();
   const {
@@ -261,11 +263,45 @@ export default function ProfileTabScreen() {
     ]);
   };
 
+  const handleDeleteAccount = () => {
+    try {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
+    } catch {
+      // Haptics fallback
+    }
+    Alert.alert(
+      'Delete Account',
+      'Are you sure you want to permanently delete your account and personal data? This action is irreversible.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Permanently Delete',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              await deleteAccount('');
+              Alert.alert('Account Deleted', 'Your account has been permanently removed.');
+            } catch (err: unknown) {
+              const msg = err instanceof Error ? err.message : 'Unable to delete account.';
+              Alert.alert('Error', msg);
+            }
+          },
+        },
+      ]
+    );
+  };
+
   // Concierge dialer & whatsapp handlers
-  const contactConfig = (config as { contact?: { phone?: string; email?: string; whatsapp?: string } } | null)?.contact || {};
-  const rawPhone = contactConfig.phone || '+91 79 4000 1234';
+  const contactConfig =
+    (config as any)?.content?.contact ||
+    (config as { contact?: { phone?: string; email?: string; whatsapp?: string } } | null)?.contact ||
+    {};
+  const rawPhone = contactConfig.phone || (config as any)?.phone || '+1 800 555 0199';
   const cleanPhone = rawPhone.replace(/[^0-9+]/g, '');
-  const supportEmail = contactConfig.email || 'concierge@gujjutours.com';
+  const supportEmail =
+    contactConfig.email ||
+    (config as any)?.email ||
+    (hostname ? `concierge@${hostname}` : 'support@example.com');
 
   const handleCallConcierge = () => {
     try {
@@ -336,7 +372,7 @@ export default function ProfileTabScreen() {
       >
         {/* ─── Passenger Identity Card ─── */}
         <View style={[styles.userCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-openeditmodal"
             onPress={handleOpenEditModal}
             activeOpacity={0.8}
             style={styles.avatarWrapper}
@@ -355,7 +391,7 @@ export default function ProfileTabScreen() {
           </TouchableOpacity>
 
           <View style={styles.userInfo}>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-openeditmodal"
               style={styles.userNameRow}
               onPress={handleOpenEditModal}
               activeOpacity={0.7}
@@ -369,9 +405,6 @@ export default function ProfileTabScreen() {
               >
                 {activeName}
               </Text>
-              <View style={[styles.nameEditBadge, { backgroundColor: `${colors.primary}18` }]}>
-                <Ionicons name="pencil" size={12} color={colors.primary} />
-              </View>
             </TouchableOpacity>
 
             <Text style={[styles.userEmail, { color: colors.mutedText }]} numberOfLines={1}>
@@ -407,7 +440,7 @@ export default function ProfileTabScreen() {
           </View>
 
           {!isAuthenticated ? (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-sign-in"
               style={[styles.signInBtn, { backgroundColor: colors.primary }]}
               onPress={() => router.push('/(auth)/login')}
               activeOpacity={0.8}
@@ -416,28 +449,12 @@ export default function ProfileTabScreen() {
             >
               <Text style={styles.signInBtnText}>Sign In</Text>
             </TouchableOpacity>
-          ) : (
-            <TouchableOpacity
-              style={[
-                styles.cardEditActionBtn,
-                {
-                  backgroundColor: `${colors.primary}12`,
-                  borderColor: `${colors.primary}25`,
-                },
-              ]}
-              onPress={handleOpenEditModal}
-              activeOpacity={0.75}
-              accessibilityRole="button"
-              accessibilityLabel="Edit profile"
-            >
-              <Ionicons name="pencil" size={15} color={colors.primary} />
-            </TouchableOpacity>
-          )}
+          ) : null}
         </View>
 
         {/* ─── Quick Journey Stats Dashboard ─── */}
         <View style={styles.statsGrid}>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-briefcase"
             style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
             onPress={() => router.push('/(tabs)/bookings')}
             activeOpacity={0.75}
@@ -453,7 +470,7 @@ export default function ProfileTabScreen() {
             <Text style={[styles.statLabel, { color: colors.mutedText }]}>Reservations</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-calendar"
             style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
             onPress={() => router.push('/(tabs)/bookings')}
             activeOpacity={0.75}
@@ -469,7 +486,7 @@ export default function ProfileTabScreen() {
             <Text style={[styles.statLabel, { color: colors.mutedText }]}>Upcoming</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-wishlist-toggle"
             style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
             onPress={() => router.push('/(tabs)/wishlist')}
             activeOpacity={0.75}
@@ -486,6 +503,9 @@ export default function ProfileTabScreen() {
           </TouchableOpacity>
         </View>
 
+        {/* ─── Appearance & Display Theme ─── */}
+        <AppearanceSection />
+
         {/* ─── Language & Regional Display ─── */}
         <View style={styles.section}>
           <Text style={[styles.sectionHeading, { color: colors.mutedText }]}>
@@ -494,7 +514,7 @@ export default function ProfileTabScreen() {
 
           <View style={[styles.menuGroup, { backgroundColor: colors.surface, borderColor: colors.border }]}>
             {/* Language Switcher */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-openlanguagemodal"
               style={styles.menuItem}
               onPress={openLanguageModal}
               activeOpacity={0.7}
@@ -518,7 +538,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Currency Switcher */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-profile-558"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -547,7 +567,7 @@ export default function ProfileTabScreen() {
             </TouchableOpacity>
 
             {/* Flight & Airport Chauffeur Transfer */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-airplane"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -575,10 +595,43 @@ export default function ProfileTabScreen() {
               <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
             </TouchableOpacity>
 
+            {/* Car Rental & Self-Drive (if enabled for tenant) */}
+            {isFeatureEnabled(config, 'car-rental', 'app') && (
+              <>
+                <View style={[styles.divider, { backgroundColor: colors.border }]} />
+                <TouchableOpacity
+                  testID="btn-car-rental-profile"
+                  style={styles.menuItem}
+                  onPress={() => {
+                    try {
+                      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                    } catch {}
+                    router.push('/car-rental' as never);
+                  }}
+                  activeOpacity={0.7}
+                  accessibilityRole="button"
+                  accessibilityLabel="Open Car Rental Fleet"
+                >
+                  <View style={[styles.menuIconBox, { backgroundColor: '#10B98118' }]}>
+                    <Ionicons name="car-outline" size={18} color="#10B981" />
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.menuItemText, { color: colors.heading }]}>
+                      Car Rental &amp; Self-Drive
+                    </Text>
+                    <Text style={{ fontSize: 11, color: colors.mutedText, marginTop: 1 }}>
+                      Verified fleet, airport pick-up, instant reservation
+                    </Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={18} color={colors.mutedText} />
+                </TouchableOpacity>
+              </>
+            )}
+
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Today's Expedition Cockpit */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-compass"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -609,7 +662,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Group Expedition Planning Hub */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-people"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -640,7 +693,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Travel Scrapbook & Memory Journal */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-book"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -671,7 +724,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* In-Destination Pocket Phrasebook & Show-to-Local Flashcard */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-chatbubbles"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -702,7 +755,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Tax-Free Duty-Free Shopping & VAT/GST Refund Pass */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-receipt"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -733,7 +786,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Travel eSIM & 5G Cellular Roaming Hub */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-cellular"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -764,7 +817,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Travel Insurance Policy & Medical Claim Concierge */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-shield-checkmark"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -795,7 +848,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* International Visa Hub & Consular Clearance */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-airplane"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -826,7 +879,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Sustainable Travel & Carbon Offset */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-leaf"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -857,7 +910,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Cultural Decorum & Temple Dress Codes */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-sparkles"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -888,7 +941,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Power Sockets, Voltage & Battery Rentals */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-hardware-chip-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -919,7 +972,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Airline Baggage Allowance & Sizer */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-airplane-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -950,7 +1003,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Rapid Transit Navigator & Taxi Scam Shield */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-train-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -981,7 +1034,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Travel Pharmacy & Medicine Translator */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-medkit-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1012,7 +1065,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Tipping & Gratuity Etiquette Calculator */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-cash-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1043,7 +1096,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Driving & Motorbike Safety Hub */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-car-sport"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1074,7 +1127,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Currency Exchange & ATM DCC Shield Hub */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-cash-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1105,7 +1158,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Local Market Bargaining Counter-Offer & Negotiation Phrases */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-pricetags-outline"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1136,7 +1189,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Travel Wrapped & VIP Loyalty Rewards Hub (Phase 40) */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-sparkles"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1170,7 +1223,7 @@ export default function ProfileTabScreen() {
             </TouchableOpacity>
 
             {/* Travel Vault & Emergency SOS */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-shield-checkmark"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1201,7 +1254,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Trip Budget & Group Splitter */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-wallet"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1232,7 +1285,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Expedition Audio Guide & Stories */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-headset"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1263,7 +1316,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Expedition Passport & Rewards */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-ribbon"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1294,7 +1347,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Destination Climate & Marine Radar */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-partly-sunny"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1325,7 +1378,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.divider, { backgroundColor: colors.border }]} />
 
             {/* Regional Culinary Trail & Dining */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-restaurant"
               style={styles.menuItem}
               onPress={() => {
                 try {
@@ -1381,7 +1434,7 @@ export default function ProfileTabScreen() {
                 ).map((opt) => {
                   const isSelected = preferences.dietary === opt.key;
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-profile-1421" accessibilityLabel="profile action"
                       key={opt.key}
                       style={[
                         styles.prefChip,
@@ -1426,7 +1479,7 @@ export default function ProfileTabScreen() {
                 ).map((opt) => {
                   const isSelected = preferences.pace === opt.key;
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-profile-1466" accessibilityLabel="profile action"
                       key={opt.key}
                       style={[
                         styles.prefChip,
@@ -1479,7 +1532,7 @@ export default function ProfileTabScreen() {
               NOTIFICATIONS & DEPARTURE ALERTS
             </Text>
             {unreadCount > 0 && (
-              <TouchableOpacity onPress={openCenter} style={styles.inboxPill} activeOpacity={0.8}>
+              <TouchableOpacity testID="btn-notifications" accessibilityLabel="notifications" onPress={openCenter} style={styles.inboxPill} activeOpacity={0.8}>
                 <Ionicons name="notifications" size={11} color="#ffffff" style={{ marginRight: 3 }} />
                 <Text style={styles.inboxPillText}>{unreadCount} unread</Text>
               </TouchableOpacity>
@@ -1522,7 +1575,7 @@ export default function ProfileTabScreen() {
               </View>
 
               {permissionStatus !== 'granted' && (
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-enable"
                   style={[styles.enableBtn, { backgroundColor: colors.primary }]}
                   onPress={requestPermissions}
                   activeOpacity={0.8}
@@ -1596,7 +1649,7 @@ export default function ProfileTabScreen() {
 
             {/* Action Buttons: Open Inbox & Send Test Alert */}
             <View style={styles.notifActionsRow}>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-mail-unread-outline"
                 style={[styles.inboxBtn, { borderColor: colors.border, backgroundColor: colors.background }]}
                 onPress={openCenter}
                 activeOpacity={0.8}
@@ -1609,7 +1662,7 @@ export default function ProfileTabScreen() {
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-paper-plane"
                 style={[styles.testDispatchBtn, { backgroundColor: `${colors.primary}15` }]}
                 onPress={() => sendTestNotification()}
                 activeOpacity={0.8}
@@ -1633,7 +1686,7 @@ export default function ProfileTabScreen() {
 
           <View style={[styles.menuGroup, { backgroundColor: colors.surface, borderColor: colors.border }]}>
             {/* 24/7 Specialist Live Chat */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-chatbubbles"
               style={styles.menuItem}
               onPress={() => openConcierge()}
               activeOpacity={0.7}
@@ -1660,7 +1713,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.itemDivider, { backgroundColor: colors.border }]} />
 
             {/* Call Concierge */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-call"
               style={styles.menuItem}
               onPress={handleCallConcierge}
               activeOpacity={0.7}
@@ -1680,7 +1733,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.itemDivider, { backgroundColor: colors.border }]} />
 
             {/* WhatsApp Concierge */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-logo-whatsapp"
               style={styles.menuItem}
               onPress={handleWhatsAppChat}
               activeOpacity={0.7}
@@ -1700,7 +1753,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.itemDivider, { backgroundColor: colors.border }]} />
 
             {/* Email Concierge */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-mail"
               style={styles.menuItem}
               onPress={handleEmailSupport}
               activeOpacity={0.7}
@@ -1720,7 +1773,7 @@ export default function ProfileTabScreen() {
             <View style={[styles.itemDivider, { backgroundColor: colors.border }]} />
 
             {/* FAQ & Service Information */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-help-circle"
               style={styles.menuItem}
               onPress={handleFAQAlert}
               activeOpacity={0.7}
@@ -1782,7 +1835,7 @@ export default function ProfileTabScreen() {
                 {SITE_REGISTRY.map((site: SiteEntry) => {
                   const isActive = siteId === site.id;
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-profile-1822"
                       key={site.id}
                       style={[
                         styles.siteRow,
@@ -1826,7 +1879,7 @@ export default function ProfileTabScreen() {
         {(user?.role?.toLowerCase() === 'admin' || user?.role?.toLowerCase() === 'superadmin' || !isAuthenticated) && (
           <View style={styles.section}>
             <Text style={[styles.sectionHeading, { color: colors.mutedText }]}>ADMINISTRATION</Text>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-shield-checkmark"
               style={[styles.menuRow, { backgroundColor: colors.surface, borderColor: colors.border }]}
               onPress={() => router.push('/(admin)')}
               activeOpacity={0.7}
@@ -1847,18 +1900,33 @@ export default function ProfileTabScreen() {
           </View>
         )}
 
-        {/* ─── Sign Out Action ─── */}
+        {/* ─── Sign Out & Account Deletion Actions (Apple Guideline 5.1.1 compliant) ─── */}
         {isAuthenticated && (
-          <TouchableOpacity
-            style={[styles.logoutBtn, { borderColor: '#ef4444' }]}
-            onPress={handleSignOut}
-            activeOpacity={0.8}
-            accessibilityRole="button"
-            accessibilityLabel="Sign out of account"
-          >
-            <Ionicons name="log-out-outline" size={20} color="#ef4444" style={{ marginRight: 8 }} />
-            <Text style={styles.logoutBtnText}>Sign Out</Text>
-          </TouchableOpacity>
+          <View style={{ gap: 12, marginTop: 4, marginBottom: 16 }}>
+            <TouchableOpacity
+              style={[styles.logoutBtn, { borderColor: '#ef4444' }]}
+              onPress={handleSignOut}
+              activeOpacity={0.8}
+              accessibilityRole="button"
+              accessibilityLabel="Sign out of account"
+              testID="btn-sign-out"
+            >
+              <Ionicons name="log-out-outline" size={20} color="#ef4444" style={{ marginRight: 8 }} />
+              <Text style={styles.logoutBtnText}>Sign Out</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.logoutBtn, { borderColor: colors.border, backgroundColor: 'transparent' }]}
+              onPress={handleDeleteAccount}
+              activeOpacity={0.8}
+              accessibilityRole="button"
+              accessibilityLabel="Permanently delete account"
+              testID="btn-delete-account"
+            >
+              <Ionicons name="trash-outline" size={18} color="#94a3b8" style={{ marginRight: 8 }} />
+              <Text style={[styles.logoutBtnText, { color: '#94a3b8', fontSize: 13 }]}>Delete Account</Text>
+            </TouchableOpacity>
+          </View>
         )}
       </ScrollView>
 
@@ -1881,7 +1949,7 @@ export default function ProfileTabScreen() {
                   Update passenger details for seamless booking check-in
                 </Text>
               </View>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-close"
                 onPress={() => setIsEditModalVisible(false)}
                 style={styles.modalCloseBtn}
                 accessibilityRole="button"
@@ -1898,7 +1966,7 @@ export default function ProfileTabScreen() {
                 {AVATAR_PRESETS.map((preset, index) => {
                   const isSelected = editAvatar === preset;
                   return (
-                    <TouchableOpacity
+                    <TouchableOpacity testID="btn-profile-1953" accessibilityLabel="profile action"
                       key={preset}
                       onPress={() => {
                         try {
@@ -1991,7 +2059,7 @@ export default function ProfileTabScreen() {
 
               {/* Modal Action Buttons */}
               <View style={styles.modalActions}>
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-cancel" accessibilityLabel="Cancel"
                   style={[styles.modalCancelBtn, { borderColor: colors.border }]}
                   onPress={() => setIsEditModalVisible(false)}
                   disabled={savingProfile}
@@ -2000,7 +2068,7 @@ export default function ProfileTabScreen() {
                   <Text style={[styles.modalCancelBtnText, { color: colors.mutedText }]}>Cancel</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity
+                <TouchableOpacity testID="btn-save-profile" accessibilityLabel="Save Profile"
                   style={[styles.modalSaveBtn, { backgroundColor: colors.primary }]}
                   onPress={handleSaveProfile}
                   disabled={savingProfile}

@@ -1,74 +1,130 @@
 "use client";
 
+import React from "react";
+import type { ComponentConfig } from "@/lib/config/siteConfigSchema";
+import { resolveWebComponent } from "@/lib/registry/componentRegistry";
 import {
-    componentRegistry,
-    DEFAULT_SECTION_ORDER,
-    isRegisteredSection,
-    type SectionData,
+  componentRegistry,
+  DEFAULT_SECTION_ORDER,
+  isRegisteredSection,
+  type SectionData,
 } from "@/lib/componentRegistry";
 import type { MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
 import CustomSection, {
-    type CustomSectionConfig,
+  type CustomSectionConfig,
 } from "@/components/sections/CustomSection";
 
 interface DynamicRendererProps {
-    config: MergedWebsiteConfig;
-    data: SectionData;
+  config: MergedWebsiteConfig | any;
+  data: SectionData;
 }
 
-// Renders the homepage as an ordered list of sections, driven entirely
-// by the CURRENT WEBSITE's configuration (spec #4–#8). Each key in
-// config.homeSections resolves one of two ways:
-//
-//   1. A built-in type (hero, featuredTours, ...) -> componentRegistry
-//   2. Anything else -> looked up in config.customSections[key]; if
-//      present, rendered through the one generic CustomSection
-//      component, so a site can define sections the fixed registry
-//      has no named component for, purely as data.
-//
-// Either way, a key only ever maps to one of these two hardcoded
-// component paths — never to eval, dynamic import, or execution of
-// anything from remote config (spec #21). Unknown keys with no
-// matching custom section, and explicitly disabled sections, are
-// skipped rather than breaking the page (spec #7 / #19).
+/**
+ * DynamicRenderer
+ *
+ * Drives the page layout directly from the website's API configuration.
+ *
+ * Execution Flow:
+ * 1. Checks `config.components.home` for an ordered array of ComponentConfig items.
+ * 2. Filters out disabled components and platform non-web components.
+ * 3. Sorts sequentially by `order`.
+ * 4. Resolves each component type and variant via `resolveWebComponent`.
+ * 5. Falls back cleanly to legacy section registry if `config.components.home` is empty.
+ */
 export function DynamicRenderer({ config, data }: DynamicRendererProps) {
-    const configuredOrder = (config as any)?.homeSections;
-    const order: string[] =
-        Array.isArray(configuredOrder) && configuredOrder.length > 0
-            ? configuredOrder
-            : DEFAULT_SECTION_ORDER;
+  const homeComponents: ComponentConfig[] = config?.components?.home;
 
-    const customSections: Record<string, CustomSectionConfig> =
-        (config as any)?.customSections || {};
+  // Modern Path: Driven by typed ComponentConfig[] from SiteConfig
+  if (Array.isArray(homeComponents) && homeComponents.length > 0) {
+    const rawWebComponents = homeComponents
+      .filter((c) => c.enabled !== false && (!c.platforms || c.platforms.includes("web")))
+      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+
+    // When a hero component is present, it already incorporates the full search widget and service tabs.
+    // Filter out duplicate standalone searchWidget/search components so only the first (hero-integrated) one renders.
+    const hasHero = rawWebComponents.some((c) => c.type === "hero");
+    const webComponents = rawWebComponents.filter((c) => {
+      if (hasHero && (c.type === "searchWidget" || c.type.toLowerCase().includes("search"))) {
+        return false;
+      }
+      return true;
+    });
 
     return (
-        <>
-            {order.map((key) => {
-                if (typeof key !== "string") return null;
+      <>
+        {webComponents.map((comp) => {
+          const Component = resolveWebComponent(comp);
 
-                if (isRegisteredSection(key)) {
-                    const sectionConfig = (config as any)[key];
-                    if (sectionConfig && sectionConfig.enabled === false) return null;
+          if (!Component) {
+            if (process.env.NODE_ENV === "development") {
+              return (
+                <div
+                  key={comp.id || `${comp.type}:${comp.variant}`}
+                  className="max-w-7xl mx-auto my-4 p-4 border border-dashed border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-200 text-xs rounded-xl"
+                >
+                  <span className="font-bold">⚠️ Unmapped Component:</span>{" "}
+                  <code>{comp.type}</code> (variant: <code>{comp.variant || "default"}</code>, id: <code>{comp.id}</code>)
+                </div>
+              );
+            }
+            return null;
+          }
 
-                    const Section = componentRegistry[key];
-                    return <Section key={key} config={config} data={data} />;
-                }
-
-                const customConfig = customSections[key];
-                if (!customConfig || customConfig.enabled === false) {
-                    return null;
-                }
-
-                return (
-                    <CustomSection
-                        key={key}
-                        sectionKey={key}
-                        sectionConfig={customConfig}
-                        config={config}
-                        data={data}
-                    />
-                );
-            })}
-        </>
+          return (
+            <Component
+              key={comp.id || `${comp.type}:${comp.variant || "default"}`}
+              component={comp}
+              config={config}
+              data={data}
+            />
+          );
+        })}
+      </>
     );
+  }
+
+  // Legacy Fallback Path: Driven by homeSections or DEFAULT_SECTION_ORDER
+  const configuredOrder = config?.homeSections;
+  let order: string[] =
+    Array.isArray(configuredOrder) && configuredOrder.length > 0
+      ? configuredOrder
+      : DEFAULT_SECTION_ORDER;
+
+  if (order.includes("hero")) {
+    order = order.filter((k) => k !== "search" && k !== "searchWidget");
+  }
+
+  const customSections: Record<string, CustomSectionConfig> =
+    config?.customSections || {};
+
+  return (
+    <>
+      {order.map((key) => {
+        if (typeof key !== "string") return null;
+
+        if (isRegisteredSection(key)) {
+          const sectionConfig = config[key];
+          if (sectionConfig && sectionConfig.enabled === false) return null;
+
+          const Section = componentRegistry[key];
+          return <Section key={key} config={config} data={data} />;
+        }
+
+        const customConfig = customSections[key];
+        if (!customConfig || customConfig.enabled === false) {
+          return null;
+        }
+
+        return (
+          <CustomSection
+            key={key}
+            sectionKey={key}
+            sectionConfig={customConfig}
+            config={config}
+            data={data}
+          />
+        );
+      })}
+    </>
+  );
 }

@@ -577,6 +577,16 @@ async function main() {
     PORT: String(targetPort),
   };
 
+  // Sync dynamic brand assets before launching Expo
+  try {
+    const fetchScript = path.join(projectRoot, 'scripts', 'fetch-site-assets.js');
+    if (fs.existsSync(fetchScript)) {
+      execSync(`"${process.execPath}" "${fetchScript}"`, { cwd: projectRoot, env: spawnEnv, stdio: 'inherit' });
+    }
+  } catch (err) {
+    console.warn('[Start] Asset sync warning:', err.message);
+  }
+
   const expoCliPath = path.join(projectRoot, 'node_modules', 'expo', 'bin', 'cli');
   let expoProc;
 

@@ -27,7 +27,7 @@ export default function DifficultySection({ config, onNavigate }: SectionProps) 
 
       <View style={styles.grid}>
         {difficultyConfig.levels.map((level: any) => (
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-difficultysection-30" accessibilityLabel="difficultysection action"
             key={level.id}
             activeOpacity={0.85}
             onPress={() => onNavigate?.('/explore')}

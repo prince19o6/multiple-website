@@ -1,0 +1,3122 @@
+[
+  {
+    "id": 1000,
+    "destinationNumericId": 1000,
+    "destinationId": "bpo_technoheaven_1000",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "dubai-vip-b2b-package",
+    "destinationName": "Dubai VIP Executive & Marina Luxury",
+    "country": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "tagline": "VIP Airport Meet & Assist, 5-Star Marina Suites & Luxury Safaris",
+    "badge": "B2B Corporate VIP",
+    "overview": "Tailor every detail of your vacation to Dubai VIP Executive & Marina Luxury. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.8,
+    "reviews": 591,
+    "startingPrice": 2200,
+    "netStartingPrice": 1804,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1600,
+        "netPricePerPerson": 1312,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3680,
+        "netPricePerPerson": 3018,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Dubai VIP Executive & Marina Luxury Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 792,
+        "netPricePerPerson": 634,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Dubai VIP Executive & Marina Luxury Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1100,
+        "netPricePerPerson": 902,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Dubai VIP Executive & Marina Luxury Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 2035,
+        "netPricePerPerson": 1669,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-1-1",
+        "name": "Burj Khalifa At The Top SKY (148th Floor Lounge Access)",
+        "duration": "2.5 Hours",
+        "description": "Experience the best of Dubai VIP Executive & Marina Luxury with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 450,
+        "netPricePerPerson": 369,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-2",
+        "name": "Royal Platinum Desert Safari in Vintage Land Rover with Dinner",
+        "duration": "6 Hours",
+        "description": "Experience the best of Dubai VIP Executive & Marina Luxury with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 380,
+        "netPricePerPerson": 312,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-3",
+        "name": "Private Luxury 52ft Yacht Charter in Dubai Marina (2h)",
+        "duration": "2 Hours",
+        "description": "Experience the best of Dubai VIP Executive & Marina Luxury with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 750,
+        "netPricePerPerson": 615,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-1-4",
+        "name": "Museum of the Future VIP Line-Skip Entry",
+        "duration": "3 Hours",
+        "description": "Experience the best of Dubai VIP Executive & Marina Luxury with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 280,
+        "netPricePerPerson": 230,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-1-5",
+        "name": "Helicopter 17-Min Scenic Flight over The Palm & Atlantis",
+        "duration": "17 Mins",
+        "description": "Experience the best of Dubai VIP Executive & Marina Luxury with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 620,
+        "netPricePerPerson": 508,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-1-1",
+        "name": "Mercedes S-Class VIP Chauffeur Airport & City Service",
+        "vehicleClass": "Mercedes S-Class",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 850,
+        "netPriceTotal": 697,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-1-2",
+        "name": "Executive Cadillac Escalade SUV Chauffeur",
+        "vehicleClass": "Luxury SUV",
+        "capacity": "Up to 6 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 1100,
+        "netPriceTotal": 902,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-1-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-1-express",
+        "name": "UAE 30-Day Express Corporate eVisa (24-Hour Issuance)",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 340,
+        "netPricePerPerson": 289,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-1-standard",
+        "name": "Dubai VIP Executive & Marina Luxury Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 280,
+        "netPricePerPerson": 238,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-1-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 176,
+        "netPricePerPerson": 144
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 330,
+        "netPricePerPerson": 271
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2200,
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "alt": "Traditional luxury houseboat cruising on tranquil Kerala backwaters",
+    "photoCredit": {
+      "photographer": "Kyran Low",
+      "profileUrl": "https://unsplash.com/@kyranlow",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1001,
+    "destinationNumericId": 1001,
+    "destinationId": "bpo_technoheaven_1001",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "abudhabi-grand-package",
+    "destinationName": "Abu Dhabi Grand Yas & Saadiyat Island",
+    "country": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "tagline": "Louvre Abu Dhabi, Formula 1 Yas Marina & Emirates Palace Grandeur",
+    "badge": "Executive Leisure",
+    "overview": "Tailor every detail of your vacation to Abu Dhabi Grand Yas & Saadiyat Island. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 189,
+    "startingPrice": 1950,
+    "netStartingPrice": 1599,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1500,
+        "netPricePerPerson": 1230,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3450,
+        "netPricePerPerson": 2829,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Abu Dhabi Grand Yas & Saadiyat Island Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 706,
+        "netPricePerPerson": 564,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Abu Dhabi Grand Yas & Saadiyat Island Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 980,
+        "netPricePerPerson": 804,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Abu Dhabi Grand Yas & Saadiyat Island Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 1813,
+        "netPricePerPerson": 1487,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-2-1",
+        "name": "Louvre Abu Dhabi VIP Guided Art & Dome Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of Abu Dhabi Grand Yas & Saadiyat Island with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 220,
+        "netPricePerPerson": 180,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-2",
+        "name": "Yas Marina Circuit Formula Driving / Guided Pit Walk",
+        "duration": "3 Hours",
+        "description": "Experience the best of Abu Dhabi Grand Yas & Saadiyat Island with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 420,
+        "netPricePerPerson": 344,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-3",
+        "name": "Sheikh Zayed Mosque Private Diplomatic Tour & Palace High Tea",
+        "duration": "4 Hours",
+        "description": "Experience the best of Abu Dhabi Grand Yas & Saadiyat Island with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 290,
+        "netPricePerPerson": 238,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-2-4",
+        "name": "Warner Bros World Abu Dhabi VIP FastPass Entry",
+        "duration": "Full Day",
+        "description": "Experience the best of Abu Dhabi Grand Yas & Saadiyat Island with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 350,
+        "netPricePerPerson": 287,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-2-5",
+        "name": "Saadiyat Beach Club Full-Day Private Cabana Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Abu Dhabi Grand Yas & Saadiyat Island with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 260,
+        "netPricePerPerson": 213,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-2-1",
+        "name": "Private Chauffeur Mercedes E-Class Service",
+        "vehicleClass": "Mercedes E-Class",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 650,
+        "netPriceTotal": 533,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-2-2",
+        "name": "Luxury Sprinter VIP 12-Seater Executive Coach",
+        "vehicleClass": "VIP Sprinter",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 1250,
+        "netPriceTotal": 1025,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-2-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-2-express",
+        "name": "UAE 30-Day Express Corporate eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 340,
+        "netPricePerPerson": 289,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-2-standard",
+        "name": "Abu Dhabi Grand Yas & Saadiyat Island Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 280,
+        "netPricePerPerson": 238,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-2-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 156,
+        "netPricePerPerson": 128
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 293,
+        "netPricePerPerson": 240
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 1950,
+    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "alt": "Luxury 5-star resort with infinity swimming pool and palm cabanas",
+    "photoCredit": {
+      "photographer": "Humphrey Muleba",
+      "profileUrl": "https://unsplash.com/@humphreymuleba",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1002,
+    "destinationNumericId": 1002,
+    "destinationId": "bpo_technoheaven_1002",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "riyadh-alula-package",
+    "destinationName": "Riyadh & AlUla Heritage Circuit",
+    "country": "Saudi Arabia",
+    "flag": "🇸🇦",
+    "tagline": "Hegra UNESCO Nabataean Tombs, Maraya Concert Hall & Boulevard Riyadh",
+    "badge": "Kingdom Vision",
+    "overview": "Tailor every detail of your vacation to Riyadh & AlUla Heritage Circuit. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": true,
+    "rating": 4.9,
+    "reviews": 469,
+    "startingPrice": 2800,
+    "netStartingPrice": 2296,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1900,
+        "netPricePerPerson": 1558,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 4370,
+        "netPricePerPerson": 3583,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Riyadh & AlUla Heritage Circuit Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 1008,
+        "netPricePerPerson": 806,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Riyadh & AlUla Heritage Circuit Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1400,
+        "netPricePerPerson": 1148,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Riyadh & AlUla Heritage Circuit Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 2590,
+        "netPricePerPerson": 2124,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-3-1",
+        "name": "AlUla Hegra UNESCO Heritage Private 4x4 Tour",
+        "duration": "4 Hours",
+        "description": "Experience the best of Riyadh & AlUla Heritage Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 450,
+        "netPricePerPerson": 369,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-2",
+        "name": "Elephant Rock Sunset Lounge & Stargazing Experience",
+        "duration": "3 Hours",
+        "description": "Experience the best of Riyadh & AlUla Heritage Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 260,
+        "netPricePerPerson": 213,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-3",
+        "name": "Diriyah At-Turaif UNESCO Mud-Brick Palace Guided Walk",
+        "duration": "3 Hours",
+        "description": "Experience the best of Riyadh & AlUla Heritage Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 180,
+        "netPricePerPerson": 148,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-3-4",
+        "name": "Kingdom Centre Sky Bridge Observation Deck Pass",
+        "duration": "1.5 Hours",
+        "description": "Experience the best of Riyadh & AlUla Heritage Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 140,
+        "netPricePerPerson": 115,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-3-5",
+        "name": "Edge of the World (Jebel Fihrayn) Desert Expedition",
+        "duration": "6 Hours",
+        "description": "Experience the best of Riyadh & AlUla Heritage Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 380,
+        "netPricePerPerson": 312,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-3-1",
+        "name": "Dedicated Private 4x4 Toyota Land Cruiser with Driver",
+        "vehicleClass": "Land Cruiser (4 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 950,
+        "netPriceTotal": 779,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-3-2",
+        "name": "Airport Return Chauffeur Sedan Transfers",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 450,
+        "netPriceTotal": 369,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-3-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-3-express",
+        "name": "Saudi Arabia 1-Year Multiple Entry Tourist/Business eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 480,
+        "netPricePerPerson": 408,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-3-standard",
+        "name": "Riyadh & AlUla Heritage Circuit Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 390,
+        "netPricePerPerson": 332,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-3-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 224,
+        "netPricePerPerson": 184
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 420,
+        "netPricePerPerson": 344
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2800,
+    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+    ],
+    "alt": "Grand luxury palace hotel courtyard and illuminated architecture",
+    "photoCredit": {
+      "photographer": "Manuel Moreno",
+      "profileUrl": "https://unsplash.com/@manuelmoreno",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1003,
+    "destinationNumericId": 1003,
+    "destinationId": "bpo_technoheaven_1003",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "doha-prestige-package",
+    "destinationName": "Doha Corniche & Katara Prestige",
+    "country": "Qatar",
+    "flag": "🇶🇦",
+    "tagline": "Museum of Islamic Art, Souq Waqif Heritage & The Pearl Island Marina",
+    "badge": "Gulf Hospitality",
+    "overview": "Tailor every detail of your vacation to Doha Corniche & Katara Prestige. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+    ],
+    "popular": true,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 363,
+    "startingPrice": 2100,
+    "netStartingPrice": 1722,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1450,
+        "netPricePerPerson": 1189,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3335,
+        "netPricePerPerson": 2735,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Doha Corniche & Katara Prestige Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 756,
+        "netPricePerPerson": 605,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Doha Corniche & Katara Prestige Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1050,
+        "netPricePerPerson": 861,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Doha Corniche & Katara Prestige Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 1943,
+        "netPricePerPerson": 1593,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-4-1",
+        "name": "Museum of Islamic Art & National Museum of Qatar Dual Pass",
+        "duration": "Half Day",
+        "description": "Experience the best of Doha Corniche & Katara Prestige with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 160,
+        "netPricePerPerson": 131,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-2",
+        "name": "Khor Al Adaid Inland Sea Monster Dunes Safari & Camp Lunch",
+        "duration": "6 Hours",
+        "description": "Experience the best of Doha Corniche & Katara Prestige with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 380,
+        "netPricePerPerson": 312,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-3",
+        "name": "Traditional Dhow Boat Cruise Along Doha Bay Skyline",
+        "duration": "2 Hours",
+        "description": "Experience the best of Doha Corniche & Katara Prestige with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 190,
+        "netPricePerPerson": 156,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-4-4",
+        "name": "Souq Waqif Evening Culinary & Spice Walking Trail",
+        "duration": "3 Hours",
+        "description": "Experience the best of Doha Corniche & Katara Prestige with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 140,
+        "netPricePerPerson": 115,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-4-5",
+        "name": "Katara Cultural Village & Luxury Opera House Guided Tour",
+        "duration": "2.5 Hours",
+        "description": "Experience the best of Doha Corniche & Katara Prestige with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 120,
+        "netPricePerPerson": 98,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-4-1",
+        "name": "Hamad International Airport Private Executive Sedan",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 380,
+        "netPriceTotal": 312,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-4-2",
+        "name": "Mercedes V-Class Luxury 7-Seater Van",
+        "vehicleClass": "V-Class Van",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 780,
+        "netPriceTotal": 640,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-4-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-4-express",
+        "name": "Qatar Hayya / Tourist eVisa Fast Track",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 220,
+        "netPricePerPerson": 187,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-4-standard",
+        "name": "Doha Corniche & Katara Prestige Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 170,
+        "netPricePerPerson": 145,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-4-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 168,
+        "netPricePerPerson": 138
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 315,
+        "netPricePerPerson": 258
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2100,
+    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+    ],
+    "alt": "Beachfront resort private balcony overlooking the ocean",
+    "photoCredit": {
+      "photographer": "Edvin Johansson",
+      "profileUrl": "https://unsplash.com/@edvinjohansson",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1004,
+    "destinationNumericId": 1004,
+    "destinationId": "bpo_technoheaven_1004",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "london-mayfair-package",
+    "destinationName": "London Mayfair & Westminster Diplomatic",
+    "country": "United Kingdom",
+    "flag": "🇬🇧",
+    "tagline": "Buckingham Palace, Thames Private River Boat & West End Theatres",
+    "badge": "European Flagship",
+    "overview": "Tailor every detail of your vacation to London Mayfair & Westminster Diplomatic. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 195,
+    "startingPrice": 390,
+    "netStartingPrice": 3936,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 2800,
+        "netPricePerPerson": 2296,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 6440,
+        "netPricePerPerson": 5281,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "London Mayfair & Westminster Diplomatic Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 1584,
+        "netPricePerPerson": 1267,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "London Mayfair & Westminster Diplomatic Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 2200,
+        "netPricePerPerson": 1804,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "London Mayfair & Westminster Diplomatic Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 4070,
+        "netPricePerPerson": 3337,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-5-1",
+        "name": "Tower of London & Crown Jewels VIP Early Access Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of London Mayfair & Westminster Diplomatic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 280,
+        "netPricePerPerson": 230,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-2",
+        "name": "London Eye Private Capsule Champagne Experience",
+        "duration": "1 Hour",
+        "description": "Experience the best of London Mayfair & Westminster Diplomatic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 340,
+        "netPricePerPerson": 279,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-3",
+        "name": "Windsor Castle, Stonehenge & Oxford Guided Day Trip",
+        "duration": "Full Day",
+        "description": "Experience the best of London Mayfair & Westminster Diplomatic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 460,
+        "netPricePerPerson": 377,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-5-4",
+        "name": "Westminster Abbey & Houses of Parliament Private Walk",
+        "duration": "3 Hours",
+        "description": "Experience the best of London Mayfair & Westminster Diplomatic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 220,
+        "netPricePerPerson": 180,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-5-5",
+        "name": "Traditional Afternoon Tea at The Ritz London",
+        "duration": "2 Hours",
+        "description": "Experience the best of London Mayfair & Westminster Diplomatic with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 310,
+        "netPricePerPerson": 254,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-5-1",
+        "name": "Heathrow Airport Private Executive Chauffeur (Mercedes S-Class)",
+        "vehicleClass": "Executive Sedan",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 720,
+        "netPriceTotal": 590,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-5-2",
+        "name": "Dedicated London Daily Chauffeur Service",
+        "vehicleClass": "Luxury Sedan",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 1400,
+        "netPriceTotal": 1148,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-5-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-5-express",
+        "name": "UK Standard Visitor Visa Filing & Concierge Support",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 550,
+        "netPricePerPerson": 468,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-5-standard",
+        "name": "London Mayfair & Westminster Diplomatic Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 420,
+        "netPricePerPerson": 357,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-5-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 384,
+        "netPricePerPerson": 315
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 720,
+        "netPricePerPerson": 590
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 390,
+    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+    ],
+    "alt": "Executive luxury hotel master bedroom suite with king bed",
+    "photoCredit": {
+      "photographer": "RArchitecture",
+      "profileUrl": "https://unsplash.com/@rarchitecture",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1005,
+    "destinationNumericId": 1005,
+    "destinationId": "bpo_technoheaven_1005",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "zurich-lucerne-package",
+    "destinationName": "Zurich & Lucerne Alpine Grandeur",
+    "country": "Switzerland",
+    "flag": "🇨🇭",
+    "tagline": "Mount Pilatus Dragon Ride, Lake Lucerne Steamers & Bahnhofstrasse",
+    "badge": "Swiss Splendor",
+    "overview": "Tailor every detail of your vacation to Zurich & Lucerne Alpine Grandeur. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 526,
+    "startingPrice": 390,
+    "netStartingPrice": 4428,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 3100,
+        "netPricePerPerson": 2542,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 7130,
+        "netPricePerPerson": 5847,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Zurich & Lucerne Alpine Grandeur Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 1728,
+        "netPricePerPerson": 1382,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Zurich & Lucerne Alpine Grandeur Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 2400,
+        "netPricePerPerson": 1968,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Zurich & Lucerne Alpine Grandeur Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 4440,
+        "netPricePerPerson": 3641,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-6-1",
+        "name": "Mount Pilatus Golden Round Trip (Boat, Cogwheel & Cable Car)",
+        "duration": "Full Day",
+        "description": "Experience the best of Zurich & Lucerne Alpine Grandeur with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 420,
+        "netPricePerPerson": 344,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-2",
+        "name": "Jungfraujoch Top of Europe High-Alpine Train Expedition",
+        "duration": "Full Day",
+        "description": "Experience the best of Zurich & Lucerne Alpine Grandeur with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 680,
+        "netPricePerPerson": 558,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-3",
+        "name": "Lake Lucerne Scenic Yacht Cruise with Gourmet Canapes",
+        "duration": "2 Hours",
+        "description": "Experience the best of Zurich & Lucerne Alpine Grandeur with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 240,
+        "netPricePerPerson": 197,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-6-4",
+        "name": "Rhine Falls & Stein am Rhein Historic Half-Day Tour",
+        "duration": "5 Hours",
+        "description": "Experience the best of Zurich & Lucerne Alpine Grandeur with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 290,
+        "netPricePerPerson": 238,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-6-5",
+        "name": "First Cliff Walk Grindelwald Adventure Pass",
+        "duration": "Full Day",
+        "description": "Experience the best of Zurich & Lucerne Alpine Grandeur with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 360,
+        "netPricePerPerson": 295,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-6-1",
+        "name": "Zurich Airport to Lucerne Private Luxury Chauffeur",
+        "vehicleClass": "Luxury Sedan",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 850,
+        "netPriceTotal": 697,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-6-2",
+        "name": "First Class Swiss Travel Pass 4-Day Consecutive Pass",
+        "vehicleClass": "Swiss Rail RailPass",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 1650,
+        "netPriceTotal": 1353,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-6-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-6-express",
+        "name": "Schengen Business/Tourist Visa Documentation Assistance",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 480,
+        "netPricePerPerson": 408,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-6-standard",
+        "name": "Zurich & Lucerne Alpine Grandeur Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 380,
+        "netPricePerPerson": 323,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-6-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 432,
+        "netPricePerPerson": 354
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 810,
+        "netPricePerPerson": 664
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 390,
+    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+    ],
+    "alt": "Tropical pool villa surrounded by private lush gardens",
+    "photoCredit": {
+      "photographer": "Sasha Kaunas",
+      "profileUrl": "https://unsplash.com/@sashakaunas",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1006,
+    "destinationNumericId": 1006,
+    "destinationId": "bpo_technoheaven_1006",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "singapore-b2b-package",
+    "destinationName": "Singapore Sentosa & Marina Bay B2B",
+    "country": "Singapore",
+    "flag": "🇸🇬",
+    "tagline": "Suntec Convention Proximity, Sentosa Resorts & Michelin Fine Dining",
+    "badge": "MICE & Corporate",
+    "overview": "Tailor every detail of your vacation to Singapore Sentosa & Marina Bay B2B. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 533,
+    "startingPrice": 2600,
+    "netStartingPrice": 2132,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1750,
+        "netPricePerPerson": 1435,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 4025,
+        "netPricePerPerson": 3300,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Singapore Sentosa & Marina Bay B2B Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 900,
+        "netPricePerPerson": 720,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Singapore Sentosa & Marina Bay B2B Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1250,
+        "netPricePerPerson": 1025,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Singapore Sentosa & Marina Bay B2B Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 2313,
+        "netPricePerPerson": 1896,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-7-1",
+        "name": "Marina Bay Sands Infinity Pool Deck & SkyPark Access",
+        "duration": "2 Hours",
+        "description": "Experience the best of Singapore Sentosa & Marina Bay B2B with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 190,
+        "netPricePerPerson": 156,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-2",
+        "name": "Gardens by the Bay Conservatories VIP Walking Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of Singapore Sentosa & Marina Bay B2B with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 160,
+        "netPricePerPerson": 131,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-3",
+        "name": "Universal Studios Singapore Corporate VIP Guided Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Singapore Sentosa & Marina Bay B2B with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 420,
+        "netPricePerPerson": 344,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-7-4",
+        "name": "Night Safari Tram with Priority Express Line Access",
+        "duration": "4 Hours",
+        "description": "Experience the best of Singapore Sentosa & Marina Bay B2B with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 240,
+        "netPricePerPerson": 197,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-7-5",
+        "name": "Singapore River Electric Catamaran Private Dinner",
+        "duration": "2 Hours",
+        "description": "Experience the best of Singapore Sentosa & Marina Bay B2B with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 380,
+        "netPricePerPerson": 312,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-7-1",
+        "name": "Changi Airport VIP Arrival Meet & Greet with Mercedes Transfer",
+        "vehicleClass": "Executive Sedan",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 480,
+        "netPriceTotal": 394,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-7-2",
+        "name": "Daily Corporate Dedicated Minibus with Driver",
+        "vehicleClass": "Combi Minibus",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 920,
+        "netPriceTotal": 754,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-7-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-7-express",
+        "name": "Singapore Business eVisa Fast Processing",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 260,
+        "netPricePerPerson": 221,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-7-standard",
+        "name": "Singapore Sentosa & Marina Bay B2B Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 200,
+        "netPricePerPerson": 170,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-7-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 208,
+        "netPricePerPerson": 171
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 390,
+        "netPricePerPerson": 320
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2600,
+    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+    ],
+    "alt": "Dubai luxury marina holiday vacation experience",
+    "photoCredit": {
+      "photographer": "Darren Nunis",
+      "profileUrl": "https://unsplash.com/@darrennunis",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1007,
+    "destinationNumericId": 1007,
+    "destinationId": "bpo_technoheaven_1007",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "istanbul-cappadocia-package",
+    "destinationName": "Istanbul & Cappadocia Historic Marvels",
+    "country": "Turkey",
+    "flag": "🇹🇷",
+    "tagline": "Hot Air Balloons over Fairy Chimneys, Bosphorus Yacht & Hagia Sophia",
+    "badge": "East Meets West",
+    "overview": "Tailor every detail of your vacation to Istanbul & Cappadocia Historic Marvels. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 559,
+    "startingPrice": 2400,
+    "netStartingPrice": 1968,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1650,
+        "netPricePerPerson": 1353,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3795,
+        "netPricePerPerson": 3112,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Istanbul & Cappadocia Historic Marvels Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 792,
+        "netPricePerPerson": 634,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Istanbul & Cappadocia Historic Marvels Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1100,
+        "netPricePerPerson": 902,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Istanbul & Cappadocia Historic Marvels Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 2035,
+        "netPricePerPerson": 1669,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-8-1",
+        "name": "Cappadocia Sunrise Hot Air Balloon Flight with Champagne",
+        "duration": "3 Hours",
+        "description": "Experience the best of Istanbul & Cappadocia Historic Marvels with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 580,
+        "netPricePerPerson": 476,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-2",
+        "name": "Hagia Sophia, Blue Mosque & Topkapi Palace Priority Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Istanbul & Cappadocia Historic Marvels with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 240,
+        "netPricePerPerson": 197,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-3",
+        "name": "Bosphorus Sunset Private Yacht Cruise with Turkish Meze",
+        "duration": "2 Hours",
+        "description": "Experience the best of Istanbul & Cappadocia Historic Marvels with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 320,
+        "netPricePerPerson": 262,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-8-4",
+        "name": "Derinkuyu Underground City & Ihlara Valley Canyon Hike",
+        "duration": "Full Day",
+        "description": "Experience the best of Istanbul & Cappadocia Historic Marvels with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 260,
+        "netPricePerPerson": 213,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-8-5",
+        "name": "Grand Bazaar & Spice Market Guided Shopping Trail",
+        "duration": "3 Hours",
+        "description": "Experience the best of Istanbul & Cappadocia Historic Marvels with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 140,
+        "netPricePerPerson": 115,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-8-1",
+        "name": "Istanbul New Airport Private Luxury Mercedes Vito Transfer",
+        "vehicleClass": "Vito VIP Van",
+        "capacity": "Up to 7 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 340,
+        "netPriceTotal": 279,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-8-2",
+        "name": "Kayseri/Nevsehir Airport Cave Hotel Chauffeur Car",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 280,
+        "netPriceTotal": 230,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-8-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-8-express",
+        "name": "Turkey Single/Multiple Entry eVisa Processing",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 210,
+        "netPricePerPerson": 179,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-8-standard",
+        "name": "Istanbul & Cappadocia Historic Marvels Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 160,
+        "netPricePerPerson": 136,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-8-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 192,
+        "netPricePerPerson": 157
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 360,
+        "netPricePerPerson": 295
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2400,
+    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+    ],
+    "alt": "Tropical Bali vacation villa with palm trees and infinity pool",
+    "photoCredit": {
+      "photographer": "Oliver Sjöström",
+      "profileUrl": "https://unsplash.com/@ollivves",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1008,
+    "destinationNumericId": 1008,
+    "destinationId": "bpo_technoheaven_1008",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "cairo-nile-package",
+    "destinationName": "Cairo & Nile Royal Expedition",
+    "country": "Egypt",
+    "flag": "🇪🇬",
+    "tagline": "Great Pyramids of Giza, Grand Egyptian Museum & Nile Steamer",
+    "badge": "Ancient Marvels",
+    "overview": "Tailor every detail of your vacation to Cairo & Nile Royal Expedition. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 175,
+    "startingPrice": 2300,
+    "netStartingPrice": 1886,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1550,
+        "netPricePerPerson": 1271,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3565,
+        "netPricePerPerson": 2923,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Cairo & Nile Royal Expedition Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 734,
+        "netPricePerPerson": 588,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Cairo & Nile Royal Expedition Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 1020,
+        "netPricePerPerson": 836,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Cairo & Nile Royal Expedition Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 1887,
+        "netPricePerPerson": 1547,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-9-1",
+        "name": "Giza Pyramids & Sphinx Private Egyptologist Guided Tour",
+        "duration": "Half Day",
+        "description": "Experience the best of Cairo & Nile Royal Expedition with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 220,
+        "netPricePerPerson": 180,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-2",
+        "name": "Grand Egyptian Museum (GEM) Priority Admission Ticket",
+        "duration": "4 Hours",
+        "description": "Experience the best of Cairo & Nile Royal Expedition with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 180,
+        "netPricePerPerson": 148,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-3",
+        "name": "Nile Maxim 5-Star Luxury Dinner Cruise with Folk Show",
+        "duration": "3 Hours",
+        "description": "Experience the best of Cairo & Nile Royal Expedition with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 210,
+        "netPricePerPerson": 172,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-9-4",
+        "name": "Saqqara Step Pyramid & Memphis Ancient Capital Excursion",
+        "duration": "5 Hours",
+        "description": "Experience the best of Cairo & Nile Royal Expedition with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 190,
+        "netPricePerPerson": 156,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-9-5",
+        "name": "Khan el-Khalili Bazaar Guided Walk with Traditional Mint Tea",
+        "duration": "3 Hours",
+        "description": "Experience the best of Cairo & Nile Royal Expedition with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 120,
+        "netPricePerPerson": 98,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-9-1",
+        "name": "Cairo International Airport Private AC Sedan Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 260,
+        "netPriceTotal": 213,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-9-2",
+        "name": "Dedicated Cairo City Chauffeur Car for Full Itinerary",
+        "vehicleClass": "Sedan with Driver",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 620,
+        "netPriceTotal": 508,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-9-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-9-express",
+        "name": "Egypt 30-Day Single Entry Tourist eVisa",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 190,
+        "netPricePerPerson": 162,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-9-standard",
+        "name": "Cairo & Nile Royal Expedition Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 140,
+        "netPricePerPerson": 119,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-9-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 184,
+        "netPricePerPerson": 151
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 345,
+        "netPricePerPerson": 283
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 2300,
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+    ],
+    "alt": "Traditional luxury houseboat cruising on tranquil Kerala backwaters",
+    "photoCredit": {
+      "photographer": "Kyran Low",
+      "profileUrl": "https://unsplash.com/@kyranlow",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1009,
+    "destinationNumericId": 1009,
+    "destinationId": "bpo_technoheaven_1009",
+    "websiteId": "technoheaven",
+    "website": "technoheaven",
+    "destinationSlug": "india-royal-triangle-package",
+    "destinationName": "Delhi, Agra & Jaipur B2B Royal Circuit",
+    "country": "India",
+    "flag": "🇮🇳",
+    "tagline": "Taj Mahal Sunrise at Agra, Amber Fort Jaipur & Lutyens Delhi",
+    "badge": "Heritage Triangle",
+    "overview": "Tailor every detail of your vacation to Delhi, Agra & Jaipur B2B Royal Circuit. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
+    "heroImage": "/seed-images/buildpackage/build-destination.svg",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "popular": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 522,
+    "startingPrice": 1750,
+    "netStartingPrice": 1435,
+    "currency": "USD",
+    "currencySymbol": "AED ",
+    "durations": [
+      {
+        "id": "3n-4d",
+        "nights": 3,
+        "days": 4,
+        "label": "3 Nights / 4 Days",
+        "priceMultiplier": 1
+      },
+      {
+        "id": "4n-5d",
+        "nights": 4,
+        "days": 5,
+        "label": "4 Nights / 5 Days",
+        "priceMultiplier": 1.25
+      },
+      {
+        "id": "5n-6d",
+        "nights": 5,
+        "days": 6,
+        "label": "5 Nights / 6 Days",
+        "priceMultiplier": 1.5
+      },
+      {
+        "id": "6n-7d",
+        "nights": 6,
+        "days": 7,
+        "label": "6 Nights / 7 Days",
+        "priceMultiplier": 1.75
+      }
+    ],
+    "flightOptions": [
+      {
+        "id": "flight-economy",
+        "name": "Roundtrip Economy Flights (Scheduled Airlines)",
+        "type": "Economy",
+        "airline": "Premium Partner Carrier",
+        "baggage": "20-25kg Check-in + 7kg Cabin",
+        "meals": "Complimentary Meals (Veg/Jain available)",
+        "pricePerPerson": 1350,
+        "netPricePerPerson": 1107,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-business",
+        "name": "Business Class Airfare with Lounge & Priority",
+        "type": "Business",
+        "airline": "Top Tier International Carrier",
+        "baggage": "40kg Check-in + Priority Check-in & Lounge",
+        "meals": "Gourmet Multi-Course Dining",
+        "pricePerPerson": 3105,
+        "netPricePerPerson": 2546,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      },
+      {
+        "id": "flight-none",
+        "name": "Land Package Only (No Flights / Self Arranged)",
+        "type": "None",
+        "airline": "Self Arranged",
+        "baggage": "N/A",
+        "meals": "N/A",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-flight.svg"
+      }
+    ],
+    "hotelTiers": [
+      {
+        "id": "hotel-3star",
+        "tierName": "3-Star Comfort Deluxe",
+        "starRating": 3,
+        "hotelName": "Delhi, Agra & Jaipur B2B Royal Circuit Comfort Deluxe Hotel",
+        "highlights": "Central location, cozy rooms, complimentary breakfast",
+        "inclusions": [
+          "Buffet Breakfast with Pure Veg & Jain options",
+          "Standard Air Conditioned Deluxe Room",
+          "Free High Speed WiFi & Daily Housekeeping"
+        ],
+        "pricePerPerson": 612,
+        "netPricePerPerson": 490,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-4star",
+        "tierName": "4-Star Premium Resort & Suites",
+        "starRating": 4,
+        "hotelName": "Delhi, Agra & Jaipur B2B Royal Circuit Grand Panorama Resort",
+        "highlights": "Scenic view rooms, swimming pool, luxury spa access",
+        "inclusions": [
+          "Lavish Daily Buffet Breakfast",
+          "Premium Room with Balcony / Skyline View",
+          "Free Swimming Pool & Fitness Center Access",
+          "Complimentary Welcome Drink on Arrival"
+        ],
+        "pricePerPerson": 850,
+        "netPricePerPerson": 697,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      },
+      {
+        "id": "hotel-5star",
+        "tierName": "5-Star Ultra Luxury Palace & Villas",
+        "starRating": 5,
+        "hotelName": "Delhi, Agra & Jaipur B2B Royal Circuit Royal Sovereign Palace",
+        "highlights": "VIP butler service, private pool/executive club lounge, gourmet dining",
+        "inclusions": [
+          "Gourmet Champagne & International Breakfast",
+          "Executive Club Suite / Private Pool Villa",
+          "24/7 Dedicated Concierge & Butler Service",
+          "Early Check-in & Late Check-out Privileges"
+        ],
+        "pricePerPerson": 1573,
+        "netPricePerPerson": 1289,
+        "image": "/seed-images/buildpackage/build-hotel.svg"
+      }
+    ],
+    "activityOptions": [
+      {
+        "id": "act-10-1",
+        "name": "Taj Mahal Sunrise VIP Guided Entry & Agra Fort Excursion",
+        "duration": "Half Day",
+        "description": "Experience the best of Delhi, Agra & Jaipur B2B Royal Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 210,
+        "netPricePerPerson": 172,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-2",
+        "name": "Amber Palace Elephant/Jeep Safari & City Palace Jaipur Tour",
+        "duration": "Full Day",
+        "description": "Experience the best of Delhi, Agra & Jaipur B2B Royal Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 180,
+        "netPricePerPerson": 148,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-3",
+        "name": "Qutub Minar, Humayun Tomb & India Gate Delhi Heritage Drive",
+        "duration": "5 Hours",
+        "description": "Experience the best of Delhi, Agra & Jaipur B2B Royal Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 160,
+        "netPricePerPerson": 131,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": true
+      },
+      {
+        "id": "act-10-4",
+        "name": "Fatehpur Sikri Deserted Mughal Capital Guided Walking Tour",
+        "duration": "3 Hours",
+        "description": "Experience the best of Delhi, Agra & Jaipur B2B Royal Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 130,
+        "netPricePerPerson": 107,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      },
+      {
+        "id": "act-10-5",
+        "name": "Authentic Royal Indian Dinner with Cultural Folk Dances",
+        "duration": "3 Hours",
+        "description": "Experience the best of Delhi, Agra & Jaipur B2B Royal Circuit with fully escorted tours, licensed guides, and confirmed admission tickets.",
+        "pricePerPerson": 170,
+        "netPricePerPerson": 139,
+        "image": "/seed-images/buildpackage/build-activity.svg",
+        "isRecommended": false
+      }
+    ],
+    "transferOptions": [
+      {
+        "id": "tr-10-1",
+        "name": "Dedicated Toyota Innova Crysta with Chauffeur for Full Golden Circuit",
+        "vehicleClass": "Innova Crysta",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 780,
+        "netPriceTotal": 640,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-10-2",
+        "name": "Delhi Airport Meet & Assist Chauffeur Transfer",
+        "vehicleClass": "Sedan (3 Pax)",
+        "capacity": "Up to 3 Passengers",
+        "luggage": "3 Large Bags + 3 Hand Bags",
+        "priceTotal": 240,
+        "netPriceTotal": 197,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      },
+      {
+        "id": "tr-10-none",
+        "name": "No Transfer (Self Arranged / Rental Car)",
+        "vehicleClass": "Self Managed",
+        "capacity": "N/A",
+        "luggage": "N/A",
+        "priceTotal": 0,
+        "netPriceTotal": 0,
+        "image": "/seed-images/buildpackage/build-transfer.svg"
+      }
+    ],
+    "visaOptions": [
+      {
+        "id": "visa-10-express",
+        "name": "India 30-Day Double Entry Tourist eVisa Processing",
+        "processingTime": "24 - 48 Hours",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 210,
+        "netPricePerPerson": 179,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-10-standard",
+        "name": "Delhi, Agra & Jaipur B2B Royal Circuit Standard Tourist Visa",
+        "processingTime": "3 - 5 Working Days",
+        "validity": "30 Days Single Entry",
+        "pricePerPerson": 160,
+        "netPricePerPerson": 136,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": true
+      },
+      {
+        "id": "visa-10-none",
+        "name": "Already Have Valid Visa / Visa Free Entry",
+        "processingTime": "Immediate",
+        "validity": "Existing Visa",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0,
+        "image": "/seed-images/buildpackage/build-visa.svg",
+        "isRequired": false
+      }
+    ],
+    "mealPlans": [
+      {
+        "id": "breakfast-only",
+        "name": "Breakfast Only (Complimentary Pure Veg & Jain Included)",
+        "description": "Daily morning buffet at hotel restaurant",
+        "pricePerPerson": 0,
+        "netPricePerPerson": 0
+      },
+      {
+        "id": "half-board",
+        "name": "Half Board (Breakfast + Daily Dinner)",
+        "description": "Includes breakfast buffet plus curated multi-course dinner daily",
+        "pricePerPerson": 140,
+        "netPricePerPerson": 115
+      },
+      {
+        "id": "full-board",
+        "name": "Full Board (Breakfast + Lunch + Dinner)",
+        "description": "All 3 gourmet meals included with dietary customization",
+        "pricePerPerson": 263,
+        "netPricePerPerson": 215
+      }
+    ],
+    "customInclusions": [
+      "24/7 Dedicated Trip Concierge via WhatsApp & Call",
+      "Pre-departure Briefing & Digital Smartphone Vouchers",
+      "All Confirmed Sightseeing Tickets with Skip-the-Line Access",
+      "Private AC Transfers with Fuel, Parking & Tolls Included",
+      "All Applicable Local Government Taxes and Service Surcharges"
+    ],
+    "customExclusions": [
+      "Personal Expenses (Mini Bar, Laundry, Telephone Calls)",
+      "Optional Travel Insurance Policy (Available during checkout)",
+      "Early Hotel Check-In / Late Check-Out (Subject to hotel policy)"
+    ],
+    "isDemo": true,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "price": 1750,
+    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+    ],
+    "alt": "Luxury 5-star resort with infinity swimming pool and palm cabanas",
+    "photoCredit": {
+      "photographer": "Humphrey Muleba",
+      "profileUrl": "https://unsplash.com/@humphreymuleba",
+      "source": "Unsplash"
+    }
+  }
+]

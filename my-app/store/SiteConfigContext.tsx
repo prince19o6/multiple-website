@@ -1,24 +1,26 @@
 /**
  * store/SiteConfigContext.tsx
  *
- * Central SiteProvider & SiteConfigContext.
+ * Central SiteProvider & SiteConfigContext for the React Native mobile application.
  *
- * Responsibilities:
+ * Guarantees:
  * - Bootstraps the application by fetching /api/core/v1/config/{hostname} via TanStack Query.
  * - Single source of truth: Active site is driven strictly by ENV (src/config/env.ts).
  * - Startup cache validation: Compares stored site ID and API URL against current ENV.
  *   If the site or API URL changed, automatically invalidates React Query cache,
  *   AsyncStorage config/query cache, wishlist, bookings, and auth tokens.
- * - Caches the last good config per site in AsyncStorage (@site:cached_config_<siteId>).
+ * - Caches the last good config per site in AsyncStorage (config.cache, activeSiteId).
  * - Offline support: uses cached config when offline or on network error.
  * - Real error state: displays full-screen BootstrapErrorScreen if network fails and no cache exists.
- * - Disables runtime site switching unless EXPO_PUBLIC_ENABLE_SITE_SWITCHER=true.
+ * - Safety valves: Force Update modal (minSupportedVersion / forceUpdate) and Maintenance Mode screen (maintenance).
+ * - Exports convenience hooks: useSite, useSiteConfig, useFeature, useSiteNavigation, useSiteContent, useSiteSeo, useSiteApp.
  */
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
-import { Platform, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+import { Platform, View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Linking } from 'react-native';
 import { Image } from 'expo-image';
 import * as SplashScreen from 'expo-splash-screen';
+import * as Font from 'expo-font';
 import { useQuery } from '@tanstack/react-query';
 import {
   storeGet,
@@ -40,30 +42,14 @@ import {
 import { ENV } from '@/src/config/env';
 import { fetchConfig } from '@/services/api';
 import { queryKeys, queryClient } from './queryClient';
-import type { SiteConfigResult } from '@/lib/siteConfig';
-import { mergeWebsiteConfig, type MergedWebsiteConfig } from '@/lib/mergeWebsiteConfig';
+import type { SiteConfig } from '@/lib/config/siteConfigSchema';
+import { DEFAULT_SITE_CONFIG, validateSiteConfig } from '@/lib/config/siteConfigSchema';
+import { toMergedSiteConfig, type MergedWebsiteConfig } from '@/lib/mergeWebsiteConfig';
 import { resolveLogoFromWebsite } from '@/lib/assetResolver';
-import { themeFromApiColors, DEFAULT_THEME, type ThemeColors } from '@/lib/themeFromApi';
+import { DEFAULT_THEME, type ThemeColors } from '@/lib/themeFromApi';
 import BootstrapErrorScreen from '@/components/BootstrapErrorScreen';
 
-import website1 from '@/config/website1';
-import website2 from '@/config/website2';
-import website3 from '@/config/website3';
-
-// ─── Static Baseline Schemas ──────────────────────────────────────────────────
-
-const BASELINE_CONFIGS: Record<string, Record<string, unknown>> = {
-  gujjutours: website1 as unknown as Record<string, unknown>,
-  tripgoasia: website2 as unknown as Record<string, unknown>,
-  technoheaven: website3 as unknown as Record<string, unknown>,
-  website1: website1 as unknown as Record<string, unknown>,
-  website2: website2 as unknown as Record<string, unknown>,
-  website3: website3 as unknown as Record<string, unknown>,
-};
-
-function getBaselineConfig(siteId: string): Record<string, unknown> {
-  return BASELINE_CONFIGS[siteId] ?? (website1 as unknown as Record<string, unknown>);
-}
+export type MergedSiteConfig = MergedWebsiteConfig & SiteConfig;
 
 function getInitialSiteId(): SiteId {
   const resolved = resolveSite(ENV.siteId || ENV.siteHostname);
@@ -79,7 +65,7 @@ export interface SiteContextValue {
   siteName: string;
   logoUrl: string | null;
   darkLogoUrl?: string | null;
-  config: MergedWebsiteConfig;
+  config: MergedSiteConfig;
   theme: ThemeColors;
   typography: {
     headingFont: string;
@@ -109,51 +95,18 @@ export interface SiteContextValue {
   refetch: () => Promise<void>;
 }
 
-const DEFAULT_INITIAL_CONFIG = mergeWebsiteConfig(getBaselineConfig(DEFAULT_SITE_ID), null);
+const SiteConfigContext = createContext<SiteContextValue | null>(null);
 
-const SiteConfigContext = createContext<SiteContextValue>({
-  site: SITES[0],
-  siteId: DEFAULT_SITE_ID,
-  hostname: SITES[0].hostname,
-  siteName: SITES[0].name,
-  logoUrl: null,
-  darkLogoUrl: null,
-  config: DEFAULT_INITIAL_CONFIG,
-  theme: DEFAULT_THEME,
-  typography: {
-    headingFont: 'Poppins',
-    bodyFont: 'Poppins',
-  },
-  contact: {
-    phones: ['+91 9875095616'],
-    emails: ['booking@gujjutours.com'],
-    phone: '+91 9875095616',
-    email: 'booking@gujjutours.com',
-  },
-  footerLinks: [],
-  headerLinks: [],
-  enabledSections: ['hero', 'categories', 'featuredTours', 'destinations', 'offers'],
-  copyright: '© 2026 Gujju Tours. All Rights Reserved',
-  currency: SITES[0].currencyDefault,
-  isLoaded: false,
-  isLoading: true,
-  isError: false,
-  error: null,
-  isOffline: false,
-  switchSite: async () => {},
-  refetch: async () => {},
-});
+// ─── Provider Props ───────────────────────────────────────────────────────────
 
-// ─── Provider Component ───────────────────────────────────────────────────────
-
-export interface SiteProviderProps {
+interface SiteProviderProps {
   children: React.ReactNode;
   config?: MergedWebsiteConfig;
 }
 
 export function SiteProvider({ children }: SiteProviderProps) {
   const [activeSiteId, setActiveSiteId] = useState<SiteId>(getInitialSiteId);
-  const [cachedConfig, setCachedConfig] = useState<SiteConfigResult | null>(null);
+  const [cachedConfig, setCachedConfig] = useState<SiteConfig | null>(null);
   const [cacheLoaded, setCacheLoaded] = useState<boolean>(false);
 
   const activeSite = useMemo(() => getSiteById(activeSiteId), [activeSiteId]);
@@ -171,22 +124,19 @@ export function SiteProvider({ children }: SiteProviderProps) {
         const currentSiteId = ENV.siteId;
         const currentApiUrl = ENV.apiUrl;
 
-        // Run one-time migration for current site if needed
         await migrateLegacyStorage(currentSiteId);
 
         const lastSiteId = await storeGet('app.last_startup_site_id');
         const lastApiUrl = await storeGet('app.last_startup_api_url');
 
-        // If stored values exist and differ from the current env configuration, clear stale caches
         if (lastSiteId && (lastSiteId !== currentSiteId || lastApiUrl !== currentApiUrl)) {
-          console.log(
-            `[SiteProvider] Active site changed from "${lastSiteId}" to "${currentSiteId}". Purging previous site cache...`
-          );
+          if (__DEV__) {
+            console.log(
+              `[SiteProvider] Active site changed from "${lastSiteId}" to "${currentSiteId}". Purging previous site cache...`
+            );
+          }
 
-          // Purge React Query cache
           queryClient.clear();
-
-          // Purge storage keys related to previous tenant
           await clearSiteStorage(lastSiteId);
 
           if (isMounted) {
@@ -194,7 +144,6 @@ export function SiteProvider({ children }: SiteProviderProps) {
           }
         }
 
-        // Store active site id and API URL for next comparison
         await storeSet('app.last_startup_site_id', currentSiteId);
         await storeSet('app.last_startup_api_url', currentApiUrl);
       } catch (err) {
@@ -212,9 +161,10 @@ export function SiteProvider({ children }: SiteProviderProps) {
     let isMounted = true;
     (async () => {
       try {
-        const parsed = await storeGetObject<SiteConfigResult>('config.cache', activeSiteId);
+        const parsed = await storeGetObject<unknown>('config.cache', activeSiteId);
         if (parsed && typeof parsed === 'object' && isMounted) {
-          setCachedConfig(parsed);
+          const validated = validateSiteConfig(parsed, DEFAULT_SITE_CONFIG);
+          setCachedConfig(validated.config);
         }
       } catch {
         // Cache read failure ignored
@@ -235,7 +185,7 @@ export function SiteProvider({ children }: SiteProviderProps) {
     isError: isQueryError,
     error: queryError,
     refetch: queryRefetch,
-  } = useQuery<SiteConfigResult, Error>({
+  } = useQuery<unknown, Error>({
     queryKey: queryKeys.siteConfig(activeSite.id, activeSite.hostname, ENV.defaultLang),
     queryFn: () => fetchConfig(activeSite.hostname, ENV.defaultLang, activeSite.id),
     staleTime: 10 * 60 * 1000,
@@ -246,20 +196,27 @@ export function SiteProvider({ children }: SiteProviderProps) {
     enabled: !!activeSite.id,
   });
 
-  // 4. Persist successful config to storage cache
+  // Validated live config from queryData
+  const validatedQueryConfig = useMemo<SiteConfig | null>(() => {
+    if (!queryData) return null;
+    const validated = validateSiteConfig(queryData, DEFAULT_SITE_CONFIG);
+    return validated.config;
+  }, [queryData]);
+
+  // 4. Persist successful config to storage cache and hide splash screen
   useEffect(() => {
-    if (queryData) {
-      storeSetObject('config.cache', queryData, activeSite.id).catch(() => {});
+    if (validatedQueryConfig) {
+      storeSetObject('config.cache', validatedQueryConfig, activeSite.id).catch(() => {});
 
       if (Platform.OS !== 'web' && typeof SplashScreen !== 'undefined' && SplashScreen?.hideAsync) {
         SplashScreen.hideAsync().catch(() => {});
       }
     }
-  }, [queryData, activeSite.id]);
+  }, [validatedQueryConfig, activeSite.id]);
 
-  // Effective config: prefer live query data, fallback to offline cached data
-  const effectiveResult = queryData ?? cachedConfig;
-  const isUsingCacheFallback = !queryData && !!cachedConfig;
+  // Effective config: prefer live query data, fallback to offline cached data, then default
+  const effectiveConfig: SiteConfig = validatedQueryConfig ?? cachedConfig ?? DEFAULT_SITE_CONFIG;
+  const isUsingCacheFallback = !validatedQueryConfig && !!cachedConfig;
   const isFatalError = isQueryError && !cachedConfig && cacheLoaded;
 
   // Hide splash screen on fatal error so user can see BootstrapErrorScreen
@@ -268,6 +225,26 @@ export function SiteProvider({ children }: SiteProviderProps) {
       SplashScreen.hideAsync().catch(() => {});
     }
   }, [isFatalError]);
+
+  // Preload custom fonts from config if present
+  useEffect(() => {
+    const customFonts = effectiveConfig.typography?.customFonts;
+    if (Array.isArray(customFonts) && customFonts.length > 0) {
+      const fontMap: Record<string, string> = {};
+      for (const font of customFonts) {
+        if (font.family && font.url) {
+          fontMap[font.family] = font.url;
+        }
+      }
+      if (Object.keys(fontMap).length > 0) {
+        Font.loadAsync(fontMap).catch((err) => {
+          if (__DEV__) {
+            console.warn('[SiteProvider] Failed to load remote custom font:', err);
+          }
+        });
+      }
+    }
+  }, [effectiveConfig.typography?.customFonts]);
 
   // Switch site handler (only allowed when EXPO_PUBLIC_ENABLE_SITE_SWITCHER=true)
   const switchSite = useCallback(
@@ -301,70 +278,58 @@ export function SiteProvider({ children }: SiteProviderProps) {
 
   // Derive merged dynamic config and theme
   const contextValue = useMemo<SiteContextValue>(() => {
-    const baseline = getBaselineConfig(activeSite.id);
-    const merged = mergeWebsiteConfig(baseline, effectiveResult);
+    const merged = toMergedSiteConfig(effectiveConfig);
 
-    // Dynamic theme colors from API
-    const apiTheme =
-      effectiveResult?.colors && Object.keys(effectiveResult.colors).length > 0
-        ? themeFromApiColors(effectiveResult.colors)
-        : null;
-    const themeColors = apiTheme
-      ? { ...merged.theme, ...apiTheme }
-      : merged.theme ?? DEFAULT_THEME;
-
-    // Dynamic logo URLs with full fallbacks (light and dark)
-    const websiteInfo = effectiveResult?.website;
     const resolvedLogo =
-      resolveLogoFromWebsite(websiteInfo, activeSite.id, false) ||
-      merged.logo ||
+      effectiveConfig.assets?.logoLight ||
+      effectiveConfig.assets?.logoUrl ||
       resolveLogoFromWebsite(null, activeSite.id, false);
 
     const resolvedDarkLogo =
-      resolveLogoFromWebsite(websiteInfo, activeSite.id, true) ||
-      resolveLogoFromWebsite(null, activeSite.id, true);
+      effectiveConfig.assets?.logoDark ||
+      resolvedLogo;
 
-    if (resolvedLogo) {
-      merged.logo = resolvedLogo;
-    }
+    const contactConfig = effectiveConfig.content?.contact;
+    const phone = contactConfig?.phone || '+91 9875095616';
+    const email = contactConfig?.email || 'support@travelplatform.com';
+    const address = contactConfig?.address || '';
 
-    // Dynamic contact info
-    const contactList = Array.isArray(effectiveResult?.websiteContact?.contact)
-      ? (effectiveResult?.websiteContact?.contact as Array<{ value?: string }>)
-      : [];
-    const emailList = Array.isArray(effectiveResult?.websiteContact?.email)
-      ? (effectiveResult?.websiteContact?.email as Array<{ value?: string }>)
-      : [];
-    const phones: string[] = contactList.map((c) => String(c?.value || '')).filter(Boolean);
-    const emails: string[] = emailList.map((e) => String(e?.value || '')).filter(Boolean);
+    const phones = [phone];
+    const emails = [email];
 
-    // Dynamic navigation links
-    const headerLinks = Array.isArray(effectiveResult?.websiteLinks?.headerType)
-      ? (effectiveResult?.websiteLinks?.headerType as Array<{ name: string; reference: string; displayOrder?: number }>)
-      : [];
-    const footerLinks = Array.isArray(effectiveResult?.websiteLinks?.footerTypes)
-      ? (effectiveResult?.websiteLinks?.footerTypes as Array<{ name: string; reference: string; displayOrder?: number }>)
-      : [];
+    const headerLinks = (effectiveConfig.navigation?.web?.menuItems || []).map((m, idx) => ({
+      name: m.label,
+      reference: m.href,
+      displayOrder: idx + 1,
+    }));
 
-    const enabledSections = ['hero', 'categories', 'featuredTours', 'destinations', 'offers'];
+    const footerLinks = (effectiveConfig.navigation?.web?.footerColumns || []).flatMap((c) =>
+      c.links.map((l, idx) => ({
+        name: l.label,
+        reference: l.href,
+        displayOrder: idx + 1,
+      }))
+    );
 
-    // Dynamic currency
-    const apiCurrency = (effectiveResult?.websiteConfiguration as { currency?: { code?: string } } | null | undefined)?.currency;
+    const enabledSections = (effectiveConfig.components?.home || [])
+      .filter((c) => c.enabled !== false && (!c.platforms || c.platforms.includes('app')))
+      .map((c) => c.type);
+
     const currency = {
-      code: apiCurrency?.code || activeSite.currencyDefault.code,
-      symbol: activeSite.currencyDefault.symbol,
+      code: effectiveConfig.site?.currency?.code || activeSite.currencyDefault.code,
+      symbol: effectiveConfig.site?.currency?.symbol || activeSite.currencyDefault.symbol,
     };
 
     const typography = {
-      headingFont: effectiveResult?.font?.family || 'Poppins',
-      bodyFont: effectiveResult?.font?.family || 'Poppins',
+      headingFont: effectiveConfig.typography?.headingFont || 'Poppins',
+      bodyFont: effectiveConfig.typography?.bodyFont || 'Poppins',
     };
 
-    const siteName = websiteInfo?.name || activeSite.name;
-    const copyright = websiteInfo?.footerCopyright || `© 2026 ${siteName}. All Rights Reserved`;
+    const siteName = effectiveConfig.site?.name || activeSite.name;
+    const copyright = `© ${new Date().getFullYear()} ${siteName}. All Rights Reserved`;
 
-    const isLoaded = !!effectiveResult;
-    const isLoading = isQueryLoading && !effectiveResult;
+    const isLoaded = !!validatedQueryConfig || !!cachedConfig;
+    const isLoading = isQueryLoading && !isLoaded;
 
     return {
       site: activeSite,
@@ -374,17 +339,14 @@ export function SiteProvider({ children }: SiteProviderProps) {
       logoUrl: resolvedLogo,
       darkLogoUrl: resolvedDarkLogo,
       config: merged,
-      theme: themeColors,
+      theme: merged.theme,
       typography,
       contact: {
         phones,
         emails,
-        phone: phones[0] || '+91 9875095616',
-        email: emails[0] || 'support@travelplatform.com',
-        address:
-          (typeof websiteInfo?.fullAddress === 'string' && websiteInfo.fullAddress) ||
-          (typeof websiteInfo?.subUrb === 'string' && websiteInfo.subUrb) ||
-          undefined,
+        phone,
+        email,
+        address,
       },
       footerLinks,
       headerLinks,
@@ -401,7 +363,9 @@ export function SiteProvider({ children }: SiteProviderProps) {
     };
   }, [
     activeSite,
-    effectiveResult,
+    effectiveConfig,
+    validatedQueryConfig,
+    cachedConfig,
     isQueryLoading,
     isQueryError,
     queryError,
@@ -432,8 +396,65 @@ export function SiteProvider({ children }: SiteProviderProps) {
     );
   }
 
+  // Safety Valve 1: Maintenance Mode Overlay
+  if (effectiveConfig.app?.maintenance) {
+    return (
+      <View style={styles.fullscreenSafety}>
+        <View style={styles.safetyCard}>
+          <Text style={styles.safetyEmoji}>🛠️</Text>
+          <Text style={styles.safetyTitle}>Under Maintenance</Text>
+          <Text style={styles.safetyBody}>
+            {effectiveConfig.app.maintenanceMessage ||
+              'Our systems are currently undergoing scheduled maintenance. Please check back shortly.'}
+          </Text>
+          <Text style={styles.safetySupport}>
+            Support:{' '}
+            <Text
+              style={styles.safetyLink}
+              onPress={() => Linking.openURL(`mailto:${effectiveConfig.app.supportEmail}`)}
+            >
+              {effectiveConfig.app.supportEmail}
+            </Text>
+          </Text>
+        </View>
+      </View>
+    );
+  }
+
+  // Safety Valve 2: Force Update Overlay
+  const currentAppVersion = '1.0.0';
+  const minVersion = effectiveConfig.app?.minSupportedVersion || '1.0.0';
+  const isOutdated = currentAppVersion < minVersion;
+  if (effectiveConfig.app?.forceUpdate || isOutdated) {
+    const storeUrl =
+      Platform.OS === 'ios'
+        ? effectiveConfig.app.storeUrls?.ios
+        : effectiveConfig.app.storeUrls?.android;
+
+    return (
+      <View style={styles.fullscreenSafety}>
+        <View style={styles.safetyCard}>
+          <Text style={styles.safetyEmoji}>🚀</Text>
+          <Text style={styles.safetyTitle}>Update Required</Text>
+          <Text style={styles.safetyBody}>
+            {effectiveConfig.app.forceUpdateMessage ||
+              'A critical update is required. Please download the latest version to continue.'}
+          </Text>
+          {storeUrl ? (
+            <TouchableOpacity
+              style={styles.safetyBtn}
+              onPress={() => Linking.openURL(storeUrl)}
+            >
+              <Text style={styles.safetyBtnText}>Update Now</Text>
+            </TouchableOpacity>
+          ) : null}
+        </View>
+      </View>
+    );
+  }
+
   // Initial loading state before cache or network data arrives
-  if (!effectiveResult && !cacheLoaded && isQueryLoading) {
+  if (!effectiveConfig && !cacheLoaded && isQueryLoading) {
     return (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#2563eb" />
@@ -460,13 +481,44 @@ export function SiteProvider({ children }: SiteProviderProps) {
 
 // ─── Custom Hooks ─────────────────────────────────────────────────────────────
 
-export function useSiteConfig(): MergedWebsiteConfig {
+export function useSiteConfig(): MergedSiteConfig {
   const ctx = useContext(SiteConfigContext);
+  if (!ctx) return toMergedSiteConfig(DEFAULT_SITE_CONFIG);
   return ctx.config;
 }
 
 export function useSite(): SiteContextValue {
-  return useContext(SiteConfigContext);
+  const ctx = useContext(SiteConfigContext);
+  if (!ctx) {
+    throw new Error('useSite must be used within a SiteProvider');
+  }
+  return ctx;
+}
+
+export function useFeature(featureName: keyof SiteConfig['features']): boolean {
+  const config = useSiteConfig();
+  if (!config.features) return false;
+  return Boolean(config.features[featureName]);
+}
+
+export function useSiteNavigation(): SiteConfig['navigation'] {
+  const config = useSiteConfig();
+  return config.navigation || DEFAULT_SITE_CONFIG.navigation;
+}
+
+export function useSiteContent(): SiteConfig['content'] {
+  const config = useSiteConfig();
+  return config.content || DEFAULT_SITE_CONFIG.content;
+}
+
+export function useSiteSeo(): SiteConfig['seo'] {
+  const config = useSiteConfig();
+  return config.seo || DEFAULT_SITE_CONFIG.seo;
+}
+
+export function useSiteApp(): SiteConfig['app'] {
+  const config = useSiteConfig();
+  return config.app || DEFAULT_SITE_CONFIG.app;
 }
 
 export const SiteConfigProvider = SiteProvider;
@@ -506,5 +558,61 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: '700',
     color: '#ffffff',
+  },
+  fullscreenSafety: {
+    flex: 1,
+    backgroundColor: '#0f172a',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 24,
+  },
+  safetyCard: {
+    backgroundColor: '#1e293b',
+    borderRadius: 20,
+    padding: 28,
+    alignItems: 'center',
+    width: '100%',
+    maxWidth: 360,
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  safetyEmoji: {
+    fontSize: 48,
+    marginBottom: 16,
+  },
+  safetyTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#ffffff',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  safetyBody: {
+    fontSize: 14,
+    color: '#94a3b8',
+    textAlign: 'center',
+    lineHeight: 20,
+    marginBottom: 20,
+  },
+  safetySupport: {
+    fontSize: 12,
+    color: '#64748b',
+    textAlign: 'center',
+  },
+  safetyLink: {
+    color: '#38bdf8',
+    fontWeight: '600',
+  },
+  safetyBtn: {
+    backgroundColor: '#2563eb',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    marginTop: 8,
+  },
+  safetyBtnText: {
+    color: '#ffffff',
+    fontWeight: '700',
+    fontSize: 15,
   },
 });

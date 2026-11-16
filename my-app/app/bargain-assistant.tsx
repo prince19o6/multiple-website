@@ -68,7 +68,7 @@ export default function BargainAssistantScreen() {
           { backgroundColor: colors.surface, borderBottomColor: colors.border },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-navigate"
           style={[styles.backBtn, { backgroundColor: colors.background }]}
           onPress={() => {
             Haptics.selectionAsync().catch(() => {});
@@ -90,7 +90,7 @@ export default function BargainAssistantScreen() {
         </View>
 
         {/* Savings Wallet Trigger */}
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-wallet"
           style={[styles.walletBtn, { backgroundColor: '#f0fdf4', borderColor: '#bbf7d0' }]}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
@@ -115,7 +115,7 @@ export default function BargainAssistantScreen() {
           { backgroundColor: colors.surface, borderBottomColor: colors.border },
         ]}
       >
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-calculator-outline"
           style={[styles.tabItem, activeTab === 'calculator' && styles.tabItemActive]}
           onPress={() => handleTabChange('calculator')}
           accessibilityRole="button"
@@ -137,7 +137,7 @@ export default function BargainAssistantScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-chatbubble-ellipses-outline"
           style={[styles.tabItem, activeTab === 'phrases' && styles.tabItemActive]}
           onPress={() => handleTabChange('phrases')}
           accessibilityRole="button"
@@ -159,7 +159,7 @@ export default function BargainAssistantScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-trail-sign-outline"
           style={[styles.tabItem, activeTab === 'markets' && styles.tabItemActive]}
           onPress={() => handleTabChange('markets')}
           accessibilityRole="button"
@@ -181,7 +181,7 @@ export default function BargainAssistantScreen() {
           </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        <TouchableOpacity testID="btn-shield-checkmark-outline"
           style={[styles.tabItem, activeTab === 'etiquette' && styles.tabItemActive]}
           onPress={() => handleTabChange('etiquette')}
           accessibilityRole="button"
@@ -271,7 +271,7 @@ export default function BargainAssistantScreen() {
             </View>
 
             {bargainData?.keyPhrases.map((phrase) => (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-chatbubble-ellipses"
                 key={phrase.phraseId}
                 style={[
                   styles.phraseCard,

@@ -1,15 +1,23 @@
 /**
  * hooks/useDestinations.ts
  *
- * TanStack Query hook for fetching destinations.
- * Scoped strictly to the active website hostname.
+ * TanStack Query hook for fetching destinations with exact tour counts.
+ * Scoped strictly to the active website hostname and tenant.
  * Enabled ONLY after the site configuration has loaded.
+ *
+ * Guarantees:
+ * - Computes dynamic, exact tour counts per destination based on the active tours catalog.
+ * - Prioritizes destinations with available tours so genuine active destinations appear first.
+ * - Zero static fixtures or mock arrays. Loads genuinely from backend API.
  */
 
+import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchDestinations } from '@/lib/api';
+import { fetchDestinations } from '@/services/api';
 import { queryKeys } from '@/store/queryClient';
 import { useSite } from '@/store/SiteConfigContext';
+import { useTours } from '@/hooks/useTours';
+import type { Tour } from '@/types';
 
 export interface DestinationItem {
   id?: string;
@@ -20,53 +28,124 @@ export interface DestinationItem {
   description?: string;
 }
 
-/** Static fallback destinations — used when the API returns nothing. */
-const FALLBACK_DESTINATIONS: DestinationItem[] = [
-  { id: '1', name: 'Paris', image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop', tours: 12, country: 'France' },
-  { id: '2', name: 'Tokyo', image: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&h=400&fit=crop', tours: 8, country: 'Japan' },
-  { id: '3', name: 'New York', image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop', tours: 9, country: 'USA' },
-  { id: '4', name: 'Dubai', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop', tours: 14, country: 'UAE' },
-  { id: '5', name: 'London', image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop', tours: 11, country: 'UK' },
-  { id: '6', name: 'Rome', image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&h=400&fit=crop', tours: 7, country: 'Italy' },
-  { id: '7', name: 'Singapore', image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=400&fit=crop', tours: 10, country: 'Singapore' },
-  { id: '8', name: 'Bangkok', image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=400&fit=crop', tours: 16, country: 'Thailand' },
-  { id: '9', name: 'Barcelona', image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=600&h=400&fit=crop', tours: 6, country: 'Spain' },
-  { id: '10', name: 'Sydney', image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&h=400&fit=crop', tours: 8, country: 'Australia' },
-];
+/**
+ * Accurately count how many tours belong to a destination.
+ */
+export function countToursForDestination(
+  destinationName: string,
+  tours: Tour[],
+  destinationCountry?: string
+): number {
+  if (!tours || tours.length === 0 || !destinationName) return 0;
+
+  const rawClean = destinationName.trim().toLowerCase();
+  const parts = rawClean.split(',').map((p) => p.trim()).filter(Boolean);
+  const primaryName = parts[0] || rawClean;
+  const secondaryName = (destinationCountry || parts[1] || '').trim().toLowerCase();
+
+  const stopWords = new Set(['tour', 'tours', 'city', 'area', 'region', 'park', 'and', 'the', 'national']);
+
+  // Significant keyword tokens from the primary destination name
+  const primaryTokens = primaryName
+    .split(/[\s,()\-&/]+/)
+    .map((w) => w.replace(/[^a-z0-9]/g, ''))
+    .filter((w) => w.length >= 3 && !stopWords.has(w));
+
+  return tours.filter((tour) => {
+    const tourDest = (tour.destination || '').trim().toLowerCase();
+    const tourLoc = (tour.location || '').trim().toLowerCase();
+    const tourName = (tour.name || '').trim().toLowerCase();
+    const tourDesc = (tour.description || '').trim().toLowerCase();
+    const tourCountry = (tour.country || '').trim().toLowerCase();
+    const combined = `${tourName} ${tourDest} ${tourLoc} ${tourCountry} ${tourDesc}`.toLowerCase();
+
+    // 1. Direct match on primary destination name
+    if (combined.includes(primaryName)) {
+      return true;
+    }
+
+    // 2. Reverse match
+    if (tourDest && (primaryName.includes(tourDest) || tourDest.includes(primaryName))) {
+      return true;
+    }
+    if (tourLoc && (primaryName.includes(tourLoc) || tourLoc.includes(primaryName))) {
+      return true;
+    }
+
+    // 3. Significant token match
+    if (primaryTokens.length > 0) {
+      const tokenMatch = primaryTokens.some((token) =>
+        tourName.includes(token) || tourLoc.includes(token) || tourDest.includes(token) || tourCountry.includes(token)
+      );
+      if (tokenMatch) return true;
+    }
+
+    // 4. Secondary/country match if destination name or token appears in tour text
+    if (secondaryName && secondaryName.length >= 4) {
+      if (
+        (tourCountry.includes(secondaryName) || tourLoc.includes(secondaryName)) &&
+        (primaryTokens.length === 0 || primaryTokens.some((tok) => combined.includes(tok)))
+      ) {
+        return true;
+      }
+    }
+
+    return false;
+  }).length;
+}
 
 export interface UseDestinationsResult {
   destinations: DestinationItem[];
   isLoading: boolean;
   isError: boolean;
   error: Error | null;
-  refetch: () => void;
+  refetch: () => Promise<unknown>;
 }
 
-/**
- * Fetch destinations for the active site.
- * Enabled only after the site config has loaded.
- */
 export function useDestinations(overrideHostname?: string): UseDestinationsResult {
   const { isLoaded, hostname: currentHostname, siteId } = useSite();
   const activeHostname = overrideHostname || currentHostname;
+  const { tours } = useTours();
 
   const query = useQuery<DestinationItem[], Error>({
     queryKey: queryKeys.destinations(siteId, activeHostname),
     queryFn: async () => {
       const result = await fetchDestinations(siteId);
-      if (result.success && Array.isArray(result.data) && result.data.length > 0) {
+      if (result.success && Array.isArray(result.data)) {
         return result.data as DestinationItem[];
       }
-      return FALLBACK_DESTINATIONS;
+      return [];
     },
-    // Requirement: Queries enabled ONLY after the site config has loaded
     enabled: isLoaded && !!activeHostname,
     staleTime: 5 * 60 * 1000,
-    placeholderData: FALLBACK_DESTINATIONS,
   });
 
+  // Calculate dynamic exact tour count for each destination using active tours catalog
+  const destinationsWithExactCounts = useMemo(() => {
+    const baseList = query.data || [];
+
+    const mapped = baseList.map((dest: DestinationItem) => {
+      const exactCount = (tours && tours.length > 0)
+        ? countToursForDestination(dest.name, tours, dest.country)
+        : (dest.tours ?? 0);
+
+      return {
+        ...dest,
+        tours: exactCount,
+      };
+    });
+
+    // Prioritize destinations with available tours first
+    return mapped.sort((a: DestinationItem, b: DestinationItem) => {
+      if ((b.tours > 0 ? 1 : 0) !== (a.tours > 0 ? 1 : 0)) {
+        return b.tours > 0 ? 1 : -1;
+      }
+      return (b.tours || 0) - (a.tours || 0);
+    });
+  }, [query.data, tours]);
+
   return {
-    destinations: query.data ?? FALLBACK_DESTINATIONS,
+    destinations: destinationsWithExactCounts,
     isLoading: query.isLoading,
     isError: query.isError,
     error: query.error ?? null,

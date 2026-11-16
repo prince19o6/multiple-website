@@ -21,9 +21,9 @@ export default function NotFoundScreen() {
         The screen you are looking for does not exist or has been relocated.
       </Text>
 
-      <TouchableOpacity
+      <TouchableOpacity testID="btn-return-to-home" accessibilityLabel="Return to Home"
         style={styles.btn}
-        onPress={() => router.replace('/(app)')}
+        onPress={() => router.replace('/(tabs)')}
         activeOpacity={0.85}
       >
         <Text style={styles.btnText}>Return to Home</Text>

@@ -1,55 +1,81 @@
 "use client";
 
 import React, { createContext, useContext, useMemo } from "react";
-import type { MergedWebsiteConfig } from "./mergeWebsiteConfig";
-import { DEFAULT_THEME } from "./themeFromApi";
+import type { SiteConfig } from "@/lib/config/siteConfigSchema";
+import { DEFAULT_SITE_CONFIG } from "@/lib/config/siteConfigSchema";
+import type { MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
+import { toMergedSiteConfig } from "@/lib/mergeWebsiteConfig";
 
-const SiteConfigContext = createContext<MergedWebsiteConfig | null>(null);
+export type MergedSiteConfig = MergedWebsiteConfig & SiteConfig;
+
+const SiteConfigContext = createContext<MergedSiteConfig | null>(null);
 
 export function SiteConfigProvider({
-    config,
-    children,
+  config,
+  children,
 }: {
-    config: MergedWebsiteConfig;
-    children: React.ReactNode;
+  config: SiteConfig | MergedWebsiteConfig;
+  children: React.ReactNode;
 }) {
-    const value = useMemo(() => config, [config]);
-    return (
-        <SiteConfigContext.Provider value={value}>
-            {children}
-        </SiteConfigContext.Provider>
-    );
+  const value = useMemo(() => {
+    return toMergedSiteConfig(config);
+  }, [config]);
+
+  return (
+    <SiteConfigContext.Provider value={value}>
+      {children}
+    </SiteConfigContext.Provider>
+  );
 }
 
-export function useSiteConfig(): MergedWebsiteConfig {
-    const ctx = useContext(SiteConfigContext);
-    if (!ctx) {
-        return {
-            theme: { ...DEFAULT_THEME },
-            cssVariables: {},
-            typography: {},
-            dynamic: null,
-            name: "Tours",
-            services: {
-                tours: true,
-                hotels: false,
-                activities: false,
-                transfers: false,
-                flights: false,
-                visa: false,
-                restaurants: false,
-                insurance: false,
-                packages: true,
-                featureCodes: new Set(),
-                fromApi: false,
-            },
-            headerLinks: null,
-            contact: { email: "", phone: "", address: "" },
-        };
-    }
-    return ctx;
+/**
+ * Hook to retrieve the complete merged, strongly-typed SiteConfig.
+ * Safe fallback guarantees zero null/undefined crashes.
+ */
+export function useSiteConfig(): MergedSiteConfig {
+  const ctx = useContext(SiteConfigContext);
+  if (!ctx) {
+    return toMergedSiteConfig(DEFAULT_SITE_CONFIG);
+  }
+  return ctx;
 }
 
-export function useTheme() {
-    return useSiteConfig().theme;
+/**
+ * Hook to retrieve theme tokens and colors.
+ */
+export function useTheme(): SiteConfig["theme"] {
+  const config = useSiteConfig();
+  return config.theme;
+}
+
+/**
+ * Hook to retrieve per-website feature switches.
+ */
+export function useSiteFeatures(): SiteConfig["features"] {
+  const config = useSiteConfig();
+  return config.features;
+}
+
+/**
+ * Hook to retrieve navigation definitions (menus, tabs, footer columns, social links).
+ */
+export function useSiteNavigation(): SiteConfig["navigation"] {
+  const config = useSiteConfig();
+  return config.navigation;
+}
+
+/**
+ * Hook to retrieve dynamic content (banners, trust badges, partners, contact).
+ */
+export function useSiteContent(): SiteConfig["content"] {
+  const config = useSiteConfig();
+  return config.content;
+}
+
+/**
+ * Hook to retrieve SEO configuration (titles, description, keywords, ogImage).
+ */
+export function useSiteSeo(): SiteConfig["seo"] {
+  const config = useSiteConfig();
+  return config.seo;
 }

@@ -33,6 +33,8 @@ builder.Services
     {
         options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
         options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        options.JsonSerializerOptions.Converters.Add(new ToursApi.Configuration.FlexibleDateTimeConverter());
+        options.JsonSerializerOptions.Converters.Add(new ToursApi.Configuration.FlexibleNullableDateTimeConverter());
     });
 
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.ApiBehaviorOptions>(options =>
@@ -76,27 +78,53 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
 {
     var websiteContext = sp.GetRequiredService<IWebsiteContext>();
     var dbProvider = sp.GetRequiredService<IMongoDatabaseProvider>();
-    var db = dbProvider.GetDatabase(websiteContext.DatabaseName);
-
-    // Asynchronously ensure indexes for this isolated database
-    _ = DatabaseIndexInitializer.EnsureIndexesForDatabaseAsync(db);
-
-    return db;
+    var dbName = websiteContext.CurrentSite?.DatabaseName ?? "tours_gujjutours";
+    return dbProvider.GetDatabase(dbName);
 });
 
 // Repositories (strictly receive per-request IMongoDatabase)
 builder.Services.AddScoped<ITourRepository, TourRepository>();
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IEmailOutboxRepository, EmailOutboxRepository>();
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 builder.Services.AddScoped<IWebsiteConfigRepository, WebsiteConfigRepository>();
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IApiKeyRepository, ApiKeyRepository>();
+builder.Services.AddSingleton<IApiKeyRateLimiter, ApiKeyRateLimiter>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+builder.Services.AddScoped<IPackageRepository, PackageRepository>();
+builder.Services.AddScoped<IFlightRepository, FlightRepository>();
+builder.Services.AddScoped<ITransferRepository, TransferRepository>();
+builder.Services.AddScoped<IVisaRepository, VisaRepository>();
+builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+builder.Services.AddScoped<IBuildPackageRepository, BuildPackageRepository>();
 
-// Domain Services
+// Domain Services & Workflow
+builder.Services.AddScoped<IUserCodeGenerator, UserCodeGenerator>();
 builder.Services.AddScoped<ITourService, TourService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddSingleton<IRateLimiterService, RateLimiterService>();
+builder.Services.AddScoped<IEmailOutboxService, EmailOutboxService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddSingleton<IActionTokenService, ActionTokenService>();
+builder.Services.AddSingleton<IEmailTemplateRenderer, EmailTemplateRenderer>();
+builder.Services.AddSingleton<IEmailSender, DevFileEmailSender>();
+builder.Services.AddSingleton<IEmailSender, SmtpEmailSender>();
+builder.Services.AddSingleton<IEmailSender, SendGridEmailSender>();
+builder.Services.AddScoped<IBookingWorkflowService, BookingWorkflowService>();
+
+builder.Services.AddHttpClient("SendGrid", client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(15);
+});
+
+// Hosted background processors
+builder.Services.AddHostedService<EmailOutboxBackgroundService>();
+builder.Services.AddHostedService<BookingExpiryBackgroundService>();
 
 // Dynamic per-website JWT Authentication
 var httpContextAccessor = new HttpContextAccessor();
@@ -143,20 +171,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 return false;
             }
         };
-
-        options.Events = new JwtBearerEvents
-        {
-            OnTokenValidated = context =>
-            {
-                var websiteContext = context.HttpContext.RequestServices.GetRequiredService<IWebsiteContext>();
-                var tokenWebsiteId = context.Principal?.FindFirst("websiteId")?.Value;
-                if (!string.Equals(tokenWebsiteId, websiteContext.CurrentWebsiteId, StringComparison.OrdinalIgnoreCase))
-                {
-                    context.Fail("Token does not belong to this website tenant.");
-                }
-                return Task.CompletedTask;
-            }
-        };
     });
 
 builder.Services.AddAuthorization();
@@ -201,6 +215,7 @@ builder.Services.AddCors(options =>
             .SetIsOriginAllowed(origin =>
             {
                 if (string.IsNullOrWhiteSpace(origin)) return false;
+                if (isDev) return true;
 
                 try
                 {
@@ -249,11 +264,13 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseResponseCompression();
+app.UseStaticFiles();
 
 app.UseCors("Frontend");
 
 // WebsiteContextMiddleware MUST run before Authentication & Authorization
 app.UseMiddleware<WebsiteContextMiddleware>();
+app.UseMiddleware<ApiKeyValidationMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();

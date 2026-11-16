@@ -14,6 +14,7 @@ export type HomeSectionId =
   | 'destinations'
   | 'offers'
   | 'personalized'
+  | 'aboutUs'
   | 'moreForYou';
 
 export interface HomeSection {
@@ -34,8 +35,9 @@ export interface HomeSection {
  *   2. Featured Expeditions (max 5 cards, "See all" -> /featured-tours)
  *   3. Popular Destinations (max 6 cards, "See all" -> /destinations)
  *   4. Special Offers (1 promo card, "View more" -> /special-offers)
- *   5. Personalized Block (Countdown + Recently Viewed, hidden when empty)
- *   6. More for You (Collapsible accordion: Culinary, Culture, Reviews, Support)
+ *   5. Personalized Block (Countdown / E-Ticket + Recently Viewed)
+ *   6. About Us & Basic Information (Company story, trust stats, contact desk)
+ *   7. More for You (Collapsible accordion: Culinary, Culture, Reviews, Support)
  */
 export const DEFAULT_HOME_SECTIONS: HomeSection[] = [
   {
@@ -89,6 +91,16 @@ export const DEFAULT_HOME_SECTIONS: HomeSection[] = [
     category: 'personalized',
   },
   {
+    id: 'aboutUs',
+    title: 'Our Story & Trust Guarantees',
+    subtitle: 'Who we are, trust guarantees & official contact desk',
+    maxItems: 1,
+    viewMoreTarget: '/about',
+    collapsedByDefault: false,
+    visibleWhenEmpty: true,
+    category: 'core',
+  },
+  {
     id: 'moreForYou',
     title: 'Travel Guides & Local Lore',
     subtitle: 'Culinary trails, temple decorum, transit maps and audio stories',
@@ -137,9 +149,12 @@ export function resolveHomeSections(
     }
   }
 
-  // Ensure core personalized and moreForYou blocks are always included
+  // Ensure core personalized, aboutUs, and moreForYou blocks are always included
   if (!resolvedIds.includes('personalized')) {
     resolvedIds.push('personalized');
+  }
+  if (!resolvedIds.includes('aboutUs')) {
+    resolvedIds.push('aboutUs');
   }
   if (!resolvedIds.includes('moreForYou')) {
     resolvedIds.push('moreForYou');

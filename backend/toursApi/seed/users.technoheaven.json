@@ -1,0 +1,33 @@
+[
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a405" },
+    "userCode": "TH-10001",
+    "websiteId": "technoheaven",
+    "fullName": "B2B Partner",
+    "email": "partner@technoheaven.com",
+    "phoneCountryCode": "+971",
+    "phone": "501234567",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Customer",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  },
+  {
+    "_id": { "$oid": "6640dd2556c9464e8b61a406" },
+    "userCode": "TH-10002",
+    "websiteId": "technoheaven",
+    "fullName": "Technoheaven Admin",
+    "email": "admin@technoheaven.com",
+    "phoneCountryCode": "+971",
+    "phone": "501234568",
+    "passwordHash": "1151a4367d8a1d39dcf09690a23edbdb8462b61ab9f7bfe20ab481c76009bd97",
+    "role": "Admin",
+    "isEmailVerified": true,
+    "status": "active",
+    "createdAt": "2026-11-12T00:00:00Z",
+    "updatedAt": "2026-11-12T00:00:00Z"
+  }
+]
+

@@ -1,5 +1,3 @@
-// components/DynamicFontLoader.tsx
-//
 // Injects @font-face rules for whatever font the config API returned
 // (e.g. Poppins, loaded at runtime from CloudFront) and exposes it as
 // CSS variables so the rest of the site can use var(--font-heading) /

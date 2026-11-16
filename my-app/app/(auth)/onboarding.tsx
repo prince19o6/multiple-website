@@ -35,7 +35,7 @@ export default function OnboardingScreen() {
 
   const heroImage =
     currentSite?.heroImage ||
-    'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=1200&fit=crop';
+    'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=1200&fit=crop';
 
   return (
     <View style={styles.root}>
@@ -56,7 +56,7 @@ export default function OnboardingScreen() {
             <View style={styles.logoContainer}>
               <BrandLogo size={36} showTextFallback={true} forceDark={true} />
             </View>
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-explore-as-guest" accessibilityLabel="Explore as Guest"
               onPress={() => router.replace('/(tabs)')}
               style={styles.skipButton}
               activeOpacity={0.8}
@@ -79,7 +79,7 @@ export default function OnboardingScreen() {
             </Text>
 
             {/* Action Buttons */}
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-get-started" accessibilityLabel="Get Started"
               style={[styles.primaryBtn, { backgroundColor: colors.primary }]}
               onPress={() => router.push('/(auth)/register')}
               activeOpacity={0.85}
@@ -87,7 +87,7 @@ export default function OnboardingScreen() {
               <Text style={styles.primaryBtnText}>Get Started</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-i-already-have-an-account" accessibilityLabel="I already have an account"
               style={[styles.secondaryBtn, { borderColor: '#ffffff' }]}
               onPress={() => router.push('/(auth)/login')}
               activeOpacity={0.85}

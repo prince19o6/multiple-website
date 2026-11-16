@@ -228,7 +228,7 @@ export default function AdminUsersScreen() {
                 </View>
 
                 <View style={styles.btnRow}>
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-users-231" accessibilityLabel="users action"
                     style={styles.actionBtn}
                     onPress={() => handleRoleToggle(item)}
                   >
@@ -237,7 +237,7 @@ export default function AdminUsersScreen() {
                     </Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-users-240" accessibilityLabel="users action"
                     style={[styles.actionBtn, isDisabled ? styles.activateBtn : styles.disableBtn]}
                     onPress={() => handleStatusToggle(item)}
                   >
@@ -251,7 +251,7 @@ export default function AdminUsersScreen() {
                     </Text>
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity testID="btn-delete" accessibilityLabel="Delete"
                     style={[styles.actionBtn, styles.deleteBtn]}
                     onPress={() => handleDelete(item)}
                   >

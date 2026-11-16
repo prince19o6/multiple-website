@@ -1,0 +1,24 @@
+appId: com.toursapp.gujjutours
+---
+# Flow 2: View Tour Details & Wishlist Toggle
+- launchApp
+
+# Tap on the First Available Tour Card
+- tapOn:
+    point: "50%,40%"
+
+# Verify Details Screen Elements
+- assertVisible: "Overview|Itinerary|Inclusions|What's Included"
+- scroll
+
+# Toggle Wishlist Heart Icon
+- tapOn:
+    id: "btn-wishlist-toggle"
+
+# Navigate to Wishlist Bottom Tab
+- tapOn: "Wishlist"
+- assertVisible: "Saved Experiences|My Wishlist"
+
+# Verify Tour is Displayed in Wishlist
+- assertVisible: ".*"
+

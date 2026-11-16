@@ -1,0 +1,4682 @@
+[
+  {
+    "id": 1001,
+    "flightId": "fl_gujjutours_1001",
+    "flightNumericId": 1001,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-101",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:30",
+    "duration": "2h 15m",
+    "durationMinutes": 135,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3880,
+    "originalPrice": 4756,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-mumbai-flights-del-bom",
+    "slug": "delhi-to-mumbai-flights-del-bom-ab-101",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 339,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1002,
+    "flightId": "fl_gujjutours_1002",
+    "flightNumericId": 1002,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-102",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:55",
+    "duration": "2h 15m",
+    "durationMinutes": 135,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 4660,
+    "originalPrice": 5564,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-mumbai-flights-del-bom",
+    "slug": "delhi-to-mumbai-flights-del-bom-ga-102",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 512,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1003,
+    "flightId": "fl_gujjutours_1003",
+    "flightNumericId": 1003,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-103",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:35",
+    "duration": "2h 15m",
+    "durationMinutes": 135,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3930,
+    "originalPrice": 5043,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-mumbai-flights-del-bom",
+    "slug": "delhi-to-mumbai-flights-del-bom-sw-103",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 281,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1004,
+    "flightId": "fl_gujjutours_1004",
+    "flightNumericId": 1004,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-104",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:00",
+    "duration": "2h 15m",
+    "durationMinutes": 135,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 4920,
+    "originalPrice": 6424,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-mumbai-flights-del-bom",
+    "slug": "delhi-to-mumbai-flights-del-bom-oj-104",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 301,
+    "availableSeats": 11,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1005,
+    "flightId": "fl_gujjutours_1005",
+    "flightNumericId": 1005,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-105",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:25",
+    "duration": "2h 10m",
+    "durationMinutes": 130,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4700,
+    "originalPrice": 6210,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-delhi-flights-bom-del",
+    "slug": "mumbai-to-delhi-flights-bom-del-sw-105",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 385,
+    "availableSeats": 25,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1006,
+    "flightId": "fl_gujjutours_1006",
+    "flightNumericId": 1006,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-106",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:50",
+    "duration": "2h 10m",
+    "durationMinutes": 130,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 4610,
+    "originalPrice": 6080,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-delhi-flights-bom-del",
+    "slug": "mumbai-to-delhi-flights-bom-del-oj-106",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 365,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1007,
+    "flightId": "fl_gujjutours_1007",
+    "flightNumericId": 1007,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-107",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:30",
+    "duration": "2h 10m",
+    "durationMinutes": 130,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4280,
+    "originalPrice": 5053,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-delhi-flights-bom-del",
+    "slug": "mumbai-to-delhi-flights-bom-del-pa-107",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 328,
+    "availableSeats": 29,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1008,
+    "flightId": "fl_gujjutours_1008",
+    "flightNumericId": 1008,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-108",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:55",
+    "duration": "2h 10m",
+    "durationMinutes": 130,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3890,
+    "originalPrice": 5118,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-delhi-flights-bom-del",
+    "slug": "mumbai-to-delhi-flights-bom-del-ab-108",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 530,
+    "availableSeats": 24,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1009,
+    "flightId": "fl_gujjutours_1009",
+    "flightNumericId": 1009,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-109",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3260,
+    "originalPrice": 3870,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-goa-flights-bom-goi",
+    "slug": "mumbai-to-goa-flights-bom-goi-pa-109",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 426,
+    "availableSeats": 29,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1010,
+    "flightId": "fl_gujjutours_1010",
+    "flightNumericId": 1010,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-110",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3330,
+    "originalPrice": 4000,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-goa-flights-bom-goi",
+    "slug": "mumbai-to-goa-flights-bom-goi-ab-110",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 353,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1011,
+    "flightId": "fl_gujjutours_1011",
+    "flightNumericId": 1011,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-111",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3800,
+    "originalPrice": 5008,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-goa-flights-bom-goi",
+    "slug": "mumbai-to-goa-flights-bom-goi-ga-111",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 192,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1012,
+    "flightId": "fl_gujjutours_1012",
+    "flightNumericId": 1012,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-112",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3040,
+    "originalPrice": 3958,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "mumbai-to-goa-flights-bom-goi",
+    "slug": "mumbai-to-goa-flights-bom-goi-sw-112",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 166,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1013,
+    "flightId": "fl_gujjutours_1013",
+    "flightNumericId": 1013,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-113",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:35",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3410,
+    "originalPrice": 4461,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "goa-to-mumbai-flights-goi-bom",
+    "slug": "goa-to-mumbai-flights-goi-bom-ga-113",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 423,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1014,
+    "flightId": "fl_gujjutours_1014",
+    "flightNumericId": 1014,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-114",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:00",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3260,
+    "originalPrice": 4030,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "goa-to-mumbai-flights-goi-bom",
+    "slug": "goa-to-mumbai-flights-goi-bom-sw-114",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 347,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1015,
+    "flightId": "fl_gujjutours_1015",
+    "flightNumericId": 1015,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-115",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:40",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3700,
+    "originalPrice": 4468,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "goa-to-mumbai-flights-goi-bom",
+    "slug": "goa-to-mumbai-flights-goi-bom-oj-115",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 534,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1016,
+    "flightId": "fl_gujjutours_1016",
+    "flightNumericId": 1016,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-116",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "GOI",
+      "city": "Goa",
+      "name": "Goa Dabolim Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:05",
+    "duration": "1h 20m",
+    "durationMinutes": 80,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3500,
+    "originalPrice": 4201,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "goa-to-mumbai-flights-goi-bom",
+    "slug": "goa-to-mumbai-flights-goi-bom-pa-116",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.9,
+    "reviews": 562,
+    "availableSeats": 27,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1017,
+    "flightId": "fl_gujjutours_1017",
+    "flightNumericId": 1017,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-117",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:50",
+    "duration": "1h 35m",
+    "durationMinutes": 95,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3830,
+    "originalPrice": 4770,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-delhi-flights-amd-del",
+    "slug": "ahmedabad-to-delhi-flights-amd-del-oj-117",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 585,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1018,
+    "flightId": "fl_gujjutours_1018",
+    "flightNumericId": 1018,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-118",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:15",
+    "duration": "1h 35m",
+    "durationMinutes": 95,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3350,
+    "originalPrice": 4091,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-delhi-flights-amd-del",
+    "slug": "ahmedabad-to-delhi-flights-amd-del-pa-118",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 407,
+    "availableSeats": 16,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1019,
+    "flightId": "fl_gujjutours_1019",
+    "flightNumericId": 1019,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-119",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:55",
+    "duration": "1h 35m",
+    "durationMinutes": 95,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3690,
+    "originalPrice": 4779,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-delhi-flights-amd-del",
+    "slug": "ahmedabad-to-delhi-flights-amd-del-ab-119",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 308,
+    "availableSeats": 21,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1020,
+    "flightId": "fl_gujjutours_1020",
+    "flightNumericId": 1020,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-120",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:20",
+    "duration": "1h 35m",
+    "durationMinutes": 95,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3230,
+    "originalPrice": 4039,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-delhi-flights-amd-del",
+    "slug": "ahmedabad-to-delhi-flights-amd-del-ga-120",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 378,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1021,
+    "flightId": "fl_gujjutours_1021",
+    "flightNumericId": 1021,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-121",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:45",
+    "duration": "1h 30m",
+    "durationMinutes": 90,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4130,
+    "originalPrice": 4878,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-ahmedabad-flights-del-amd",
+    "slug": "delhi-to-ahmedabad-flights-del-amd-ab-121",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 327,
+    "availableSeats": 26,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1022,
+    "flightId": "fl_gujjutours_1022",
+    "flightNumericId": 1022,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-122",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:10",
+    "duration": "1h 30m",
+    "durationMinutes": 90,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3670,
+    "originalPrice": 4633,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-ahmedabad-flights-del-amd",
+    "slug": "delhi-to-ahmedabad-flights-del-amd-ga-122",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 320,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1023,
+    "flightId": "fl_gujjutours_1023",
+    "flightNumericId": 1023,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-123",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:50",
+    "duration": "1h 30m",
+    "durationMinutes": 90,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3320,
+    "originalPrice": 4347,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-ahmedabad-flights-del-amd",
+    "slug": "delhi-to-ahmedabad-flights-del-amd-sw-123",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 556,
+    "availableSeats": 21,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1024,
+    "flightId": "fl_gujjutours_1024",
+    "flightNumericId": 1024,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-124",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:15",
+    "duration": "1h 30m",
+    "durationMinutes": 90,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 4190,
+    "originalPrice": 5359,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-ahmedabad-flights-del-amd",
+    "slug": "delhi-to-ahmedabad-flights-del-amd-oj-124",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 518,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1025,
+    "flightId": "fl_gujjutours_1025",
+    "flightNumericId": 1025,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-125",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:00",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4530,
+    "originalPrice": 5388,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "surat-to-delhi-flights-stv-del",
+    "slug": "surat-to-delhi-flights-stv-del-sw-125",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 289,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1026,
+    "flightId": "fl_gujjutours_1026",
+    "flightNumericId": 1026,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-126",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:25",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3850,
+    "originalPrice": 4832,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "surat-to-delhi-flights-stv-del",
+    "slug": "surat-to-delhi-flights-stv-del-oj-126",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 213,
+    "availableSeats": 26,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1027,
+    "flightId": "fl_gujjutours_1027",
+    "flightNumericId": 1027,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-127",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:05",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3960,
+    "originalPrice": 5020,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "surat-to-delhi-flights-stv-del",
+    "slug": "surat-to-delhi-flights-stv-del-pa-127",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 410,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1028,
+    "flightId": "fl_gujjutours_1028",
+    "flightNumericId": 1028,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-128",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:30",
+    "duration": "1h 45m",
+    "durationMinutes": 105,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 4670,
+    "originalPrice": 5990,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "surat-to-delhi-flights-stv-del",
+    "slug": "surat-to-delhi-flights-stv-del-ab-128",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.4,
+    "reviews": 232,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1029,
+    "flightId": "fl_gujjutours_1029",
+    "flightNumericId": 1029,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-129",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:55",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4030,
+    "originalPrice": 4966,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-surat-flights-del-stv",
+    "slug": "delhi-to-surat-flights-del-stv-pa-129",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 484,
+    "availableSeats": 28,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1030,
+    "flightId": "fl_gujjutours_1030",
+    "flightNumericId": 1030,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-130",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:20",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3800,
+    "originalPrice": 4754,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-surat-flights-del-stv",
+    "slug": "delhi-to-surat-flights-del-stv-ab-130",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 247,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1031,
+    "flightId": "fl_gujjutours_1031",
+    "flightNumericId": 1031,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-131",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:00",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 3900,
+    "originalPrice": 4891,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-surat-flights-del-stv",
+    "slug": "delhi-to-surat-flights-del-stv-ga-131",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 502,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1032,
+    "flightId": "fl_gujjutours_1032",
+    "flightNumericId": 1032,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-132",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "STV",
+      "city": "Surat",
+      "name": "Surat International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:25",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 4550,
+    "originalPrice": 5563,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-surat-flights-del-stv",
+    "slug": "delhi-to-surat-flights-del-stv-sw-132",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 241,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1033,
+    "flightId": "fl_gujjutours_1033",
+    "flightNumericId": 1033,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-133",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:30",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 2640,
+    "originalPrice": 3498,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-mumbai-flights-amd-bom",
+    "slug": "ahmedabad-to-mumbai-flights-amd-bom-ga-133",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 394,
+    "availableSeats": 23,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1034,
+    "flightId": "fl_gujjutours_1034",
+    "flightNumericId": 1034,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-134",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:55",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3530,
+    "originalPrice": 4660,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-mumbai-flights-amd-bom",
+    "slug": "ahmedabad-to-mumbai-flights-amd-bom-sw-134",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 217,
+    "availableSeats": 27,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1035,
+    "flightId": "fl_gujjutours_1035",
+    "flightNumericId": 1035,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-135",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:35",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 2860,
+    "originalPrice": 3519,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-mumbai-flights-amd-bom",
+    "slug": "ahmedabad-to-mumbai-flights-amd-bom-oj-135",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 293,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1036,
+    "flightId": "fl_gujjutours_1036",
+    "flightNumericId": 1036,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-136",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:00",
+    "duration": "1h 15m",
+    "durationMinutes": 75,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3040,
+    "originalPrice": 3889,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "ahmedabad-to-mumbai-flights-amd-bom",
+    "slug": "ahmedabad-to-mumbai-flights-amd-bom-pa-136",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 483,
+    "availableSeats": 29,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1037,
+    "flightId": "fl_gujjutours_1037",
+    "flightNumericId": 1037,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-137",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "name": "Kempegowda International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:55",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4410,
+    "originalPrice": 5272,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bengaluru-to-mumbai-flights-blr-bom",
+    "slug": "bengaluru-to-mumbai-flights-blr-bom-oj-137",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 162,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1038,
+    "flightId": "fl_gujjutours_1038",
+    "flightNumericId": 1038,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-138",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "name": "Kempegowda International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "11:20",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 3390,
+    "originalPrice": 4063,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bengaluru-to-mumbai-flights-blr-bom",
+    "slug": "bengaluru-to-mumbai-flights-blr-bom-pa-138",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 444,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1039,
+    "flightId": "fl_gujjutours_1039",
+    "flightNumericId": 1039,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-139",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "name": "Kempegowda International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:00",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 4380,
+    "originalPrice": 5583,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bengaluru-to-mumbai-flights-blr-bom",
+    "slug": "bengaluru-to-mumbai-flights-blr-bom-ab-139",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 220,
+    "availableSeats": 8,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1040,
+    "flightId": "fl_gujjutours_1040",
+    "flightNumericId": 1040,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-140",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "name": "Kempegowda International Airport",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "19:25",
+    "duration": "1h 40m",
+    "durationMinutes": 100,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 3980,
+    "originalPrice": 5192,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "bengaluru-to-mumbai-flights-blr-bom",
+    "slug": "bengaluru-to-mumbai-flights-blr-bom-ga-140",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.9,
+    "reviews": 445,
+    "availableSeats": 15,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1041,
+    "flightId": "fl_gujjutours_1041",
+    "flightNumericId": 1041,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-141",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JAI",
+      "city": "Jaipur",
+      "name": "Jaipur International Airport",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "07:15",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 2740,
+    "originalPrice": 3290,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-jaipur-flights-del-jai",
+    "slug": "delhi-to-jaipur-flights-del-jai-ab-141",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 366,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1042,
+    "flightId": "fl_gujjutours_1042",
+    "flightNumericId": 1042,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-142",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JAI",
+      "city": "Jaipur",
+      "name": "Jaipur International Airport",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "10:40",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 2960,
+    "originalPrice": 3711,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-jaipur-flights-del-jai",
+    "slug": "delhi-to-jaipur-flights-del-jai-ga-142",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 505,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1043,
+    "flightId": "fl_gujjutours_1043",
+    "flightNumericId": 1043,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-143",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JAI",
+      "city": "Jaipur",
+      "name": "Jaipur International Airport",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "14:20",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 8500,
+    "originalPrice": 2576,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-jaipur-flights-del-jai",
+    "slug": "delhi-to-jaipur-flights-del-jai-sw-143",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 377,
+    "availableSeats": 20,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1044,
+    "flightId": "fl_gujjutours_1044",
+    "flightNumericId": 1044,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-144",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "JAI",
+      "city": "Jaipur",
+      "name": "Jaipur International Airport",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "18:45",
+    "duration": "1h 00m",
+    "durationMinutes": 60,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 2910,
+    "originalPrice": 3625,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "delhi-to-jaipur-flights-del-jai",
+    "slug": "delhi-to-jaipur-flights-del-jai-oj-144",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.6,
+    "reviews": 262,
+    "availableSeats": 16,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1045,
+    "flightId": "fl_gujjutours_1045",
+    "flightNumericId": 1045,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-145",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "CCU",
+      "city": "Kolkata",
+      "name": "Netaji Subhash Chandra Bose International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "08:40",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 5210,
+    "originalPrice": 6296,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kolkata-to-delhi-flights-ccu-del",
+    "slug": "kolkata-to-delhi-flights-ccu-del-sw-145",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.5,
+    "reviews": 208,
+    "availableSeats": 25,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1046,
+    "flightId": "fl_gujjutours_1046",
+    "flightNumericId": 1046,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-146",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "CCU",
+      "city": "Kolkata",
+      "name": "Netaji Subhash Chandra Bose International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:05",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 4880,
+    "originalPrice": 6036,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kolkata-to-delhi-flights-ccu-del",
+    "slug": "kolkata-to-delhi-flights-ccu-del-oj-146",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 560,
+    "availableSeats": 10,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1047,
+    "flightId": "fl_gujjutours_1047",
+    "flightNumericId": 1047,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-147",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "CCU",
+      "city": "Kolkata",
+      "name": "Netaji Subhash Chandra Bose International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "13:20",
+    "arrivalTime": "15:45",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 5650,
+    "originalPrice": 7055,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kolkata-to-delhi-flights-ccu-del",
+    "slug": "kolkata-to-delhi-flights-ccu-del-pa-147",
+    "isDomestic": true,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 537,
+    "availableSeats": 19,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1048,
+    "flightId": "fl_gujjutours_1048",
+    "flightNumericId": 1048,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-148",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "CCU",
+      "city": "Kolkata",
+      "name": "Netaji Subhash Chandra Bose International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "departureTime": "17:45",
+    "arrivalTime": "20:10",
+    "duration": "2h 25m",
+    "durationMinutes": 145,
+    "stops": "1 Stop via AMD",
+    "stopsCount": 1,
+    "cabinClass": "Economy",
+    "price": 4420,
+    "originalPrice": 5323,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "15 kg (1 piece)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Airbus A320neo",
+    "routeSlug": "kolkata-to-delhi-flights-ccu-del",
+    "slug": "kolkata-to-delhi-flights-ccu-del-ab-148",
+    "isDomestic": true,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 430,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1049,
+    "flightId": "fl_gujjutours_1049",
+    "flightNumericId": 1049,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-149",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:45",
+    "duration": "3h 30m",
+    "durationMinutes": 210,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 10970,
+    "originalPrice": 13474,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "ahmedabad-to-dubai-flights-amd-dxb",
+    "slug": "ahmedabad-to-dubai-flights-amd-dxb-pa-149",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 371,
+    "availableSeats": 14,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1050,
+    "flightId": "fl_gujjutours_1050",
+    "flightNumericId": 1050,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-150",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "13:10",
+    "duration": "3h 30m",
+    "durationMinutes": 210,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 12570,
+    "originalPrice": 16006,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "ahmedabad-to-dubai-flights-amd-dxb",
+    "slug": "ahmedabad-to-dubai-flights-amd-dxb-ab-150",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 250,
+    "availableSeats": 29,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1051,
+    "flightId": "fl_gujjutours_1051",
+    "flightNumericId": 1051,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-151",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:30",
+    "duration": "3h 15m",
+    "durationMinutes": 195,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 11480,
+    "originalPrice": 14934,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-ahmedabad-flights-dxb-amd",
+    "slug": "dubai-to-ahmedabad-flights-dxb-amd-ab-151",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 203,
+    "availableSeats": 22,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1052,
+    "flightId": "fl_gujjutours_1052",
+    "flightNumericId": 1052,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-152",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "AMD",
+      "city": "Ahmedabad",
+      "name": "Sardar Vallabhbhai Patel International",
+      "country": "India",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "12:55",
+    "duration": "3h 15m",
+    "durationMinutes": 195,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 11650,
+    "originalPrice": 15421,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "dubai-to-ahmedabad-flights-dxb-amd",
+    "slug": "dubai-to-ahmedabad-flights-dxb-amd-ga-152",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 322,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
+    ],
+    "alt": "Airport tarmac and illuminated control tower during golden sunset",
+    "photoCredit": {
+      "photographer": "Lukas Souza",
+      "profileUrl": "https://unsplash.com/@lukassouza",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1053,
+    "flightId": "fl_gujjutours_1053",
+    "flightNumericId": 1053,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Gulf Airway Regional",
+    "airlineCode": "GA",
+    "flightNumber": "GA-153",
+    "airlineLogo": "/seed-images/flights/airline-gulfairways.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "09:40",
+    "duration": "3h 25m",
+    "durationMinutes": 205,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 11020,
+    "originalPrice": 14559,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-dubai-flights-bom-dxb",
+    "slug": "mumbai-to-dubai-flights-bom-dxb-ga-153",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.7,
+    "reviews": 255,
+    "availableSeats": 9,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1054,
+    "flightId": "fl_gujjutours_1054",
+    "flightNumericId": 1054,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-154",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "DXB",
+      "city": "Dubai",
+      "name": "Dubai International Airport",
+      "country": "United Arab Emirates",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "13:05",
+    "duration": "3h 25m",
+    "durationMinutes": 205,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 11350,
+    "originalPrice": 13493,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-dubai-flights-bom-dxb",
+    "slug": "mumbai-to-dubai-flights-bom-dxb-sw-154",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.8,
+    "reviews": 156,
+    "availableSeats": 17,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1055,
+    "flightId": "fl_gujjutours_1055",
+    "flightNumericId": 1055,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "SkyWings Airlines",
+    "airlineCode": "SW",
+    "flightNumber": "SW-155",
+    "airlineLogo": "/seed-images/flights/airline-skywings.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "10:30",
+    "duration": "4h 15m",
+    "durationMinutes": 255,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 15010,
+    "originalPrice": 18082,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "delhi-to-bangkok-flights-del-bkk",
+    "slug": "delhi-to-bangkok-flights-del-bkk-sw-155",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 587,
+    "availableSeats": 27,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1056,
+    "flightId": "fl_gujjutours_1056",
+    "flightNumericId": 1056,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-156",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "BKK",
+      "city": "Bangkok",
+      "name": "Suvarnabhumi Airport",
+      "country": "Thailand",
+      "terminal": "T1"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "13:55",
+    "duration": "4h 15m",
+    "durationMinutes": 255,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 16680,
+    "originalPrice": 21690,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "delhi-to-bangkok-flights-del-bkk",
+    "slug": "delhi-to-bangkok-flights-del-bkk-oj-156",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.7,
+    "reviews": 337,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1057,
+    "flightId": "fl_gujjutours_1057",
+    "flightNumericId": 1057,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Orient Jet Airways",
+    "airlineCode": "OJ",
+    "flightNumber": "OJ-157",
+    "airlineLogo": "/seed-images/flights/airline-orientjet.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "11:25",
+    "duration": "5h 10m",
+    "durationMinutes": 310,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 18520,
+    "originalPrice": 22300,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-singapore-flights-bom-sin",
+    "slug": "mumbai-to-singapore-flights-bom-sin-oj-157",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.9,
+    "reviews": 575,
+    "availableSeats": 13,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1058,
+    "flightId": "fl_gujjutours_1058",
+    "flightNumericId": 1058,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-158",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "BOM",
+      "city": "Mumbai",
+      "name": "Chhatrapati Shivaji Maharaj International",
+      "country": "India",
+      "terminal": "T2"
+    },
+    "toAirport": {
+      "code": "SIN",
+      "city": "Singapore",
+      "name": "Singapore Changi Airport",
+      "country": "Singapore",
+      "terminal": "T3"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "14:50",
+    "duration": "5h 10m",
+    "durationMinutes": 310,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 15580,
+    "originalPrice": 18674,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "mumbai-to-singapore-flights-bom-sin",
+    "slug": "mumbai-to-singapore-flights-bom-sin-pa-158",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.6,
+    "reviews": 555,
+    "availableSeats": 7,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85"
+    ],
+    "alt": "Wide-body commercial passenger jet climbing into clear skies",
+    "photoCredit": {
+      "photographer": "Tim Gouw",
+      "profileUrl": "https://unsplash.com/@timgouw",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1059,
+    "flightId": "fl_gujjutours_1059",
+    "flightNumericId": 1059,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "Pacific Air Horizon",
+    "airlineCode": "PA",
+    "flightNumber": "PA-159",
+    "airlineLogo": "/seed-images/flights/airline-pacificair.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "06:15",
+    "arrivalTime": "15:10",
+    "duration": "8h 55m",
+    "durationMinutes": 535,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Economy",
+    "price": 40920,
+    "originalPrice": 49259,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": true,
+    "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "delhi-to-london-flights-del-lhr",
+    "slug": "delhi-to-london-flights-del-lhr-pa-159",
+    "isDomestic": false,
+    "featured": false,
+    "rating": 4.4,
+    "reviews": 214,
+    "availableSeats": 12,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85"
+    ],
+    "alt": "Commercial passenger airliner flying gracefully in bright blue sky",
+    "photoCredit": {
+      "photographer": "Bilal O.",
+      "profileUrl": "https://unsplash.com/@bilal_o",
+      "source": "Unsplash"
+    }
+  },
+  {
+    "id": 1060,
+    "flightId": "fl_gujjutours_1060",
+    "flightNumericId": 1060,
+    "websiteId": "gujjutours",
+    "website": "website1",
+    "airline": "AeroBharat Express",
+    "airlineCode": "AB",
+    "flightNumber": "AB-160",
+    "airlineLogo": "/seed-images/flights/airline-aerobharat.svg",
+    "fromAirport": {
+      "code": "DEL",
+      "city": "Delhi",
+      "name": "Indira Gandhi International Airport",
+      "country": "India",
+      "terminal": "T3"
+    },
+    "toAirport": {
+      "code": "LHR",
+      "city": "London",
+      "name": "London Heathrow Airport",
+      "country": "United Kingdom",
+      "terminal": "T4"
+    },
+    "departureTime": "09:40",
+    "arrivalTime": "18:35",
+    "duration": "8h 55m",
+    "durationMinutes": 535,
+    "stops": "Non-stop",
+    "stopsCount": 0,
+    "cabinClass": "Business",
+    "price": 38350,
+    "originalPrice": 49301,
+    "netPrice": null,
+    "currency": "INR",
+    "refundable": false,
+    "cancellationPolicy": "Non-refundable fare with date change permitted",
+    "baggage": {
+      "cabin": "7 kg (1 cabin bag + laptop bag)",
+      "checkIn": "25 kg (2 pieces)"
+    },
+    "meals": {
+      "included": true,
+      "pureVegGuaranteed": true,
+      "jainMealAvailable": true,
+      "description": "Complimentary hot gourmet Pure Veg meal with choice of hot/cold beverages"
+    },
+    "aircraft": "Boeing 787-9 Dreamliner",
+    "routeSlug": "delhi-to-london-flights-del-lhr",
+    "slug": "delhi-to-london-flights-del-lhr-ab-160",
+    "isDomestic": false,
+    "featured": true,
+    "rating": 4.5,
+    "reviews": 460,
+    "availableSeats": 6,
+    "status": "Active",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "coverImage": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "image": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "imageUrl": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+    "thumbnail": "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&q=85",
+    "gallery": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
+      "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85",
+      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85"
+    ],
+    "alt": "Airplane wing gliding above serene fluffy white clouds",
+    "photoCredit": {
+      "photographer": "Ross Parmly",
+      "profileUrl": "https://unsplash.com/@rparmly",
+      "source": "Unsplash"
+    }
+  }
+]

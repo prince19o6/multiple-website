@@ -89,27 +89,27 @@ export function DevBanner() {
   return (
     <aside
       aria-label="Development banner"
-      className="fixed bottom-3 right-3 z-50 font-sans text-xs shadow-xl transition-all"
+      className="fixed bottom-3 left-3 z-30 font-sans text-xs shadow-xl transition-all max-w-[calc(100vw-140px)] sm:max-w-sm pointer-events-auto"
     >
-      <div className="bg-slate-900/95 backdrop-blur-md text-white border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl max-w-sm">
+      <div className="bg-slate-900/95 backdrop-blur-md text-white border border-slate-700/80 rounded-xl overflow-hidden shadow-2xl">
         {/* Header Pill */}
         <div
           onClick={() => setExpanded(!expanded)}
           className="flex items-center gap-2.5 px-3 py-2 cursor-pointer hover:bg-slate-800/80 transition-colors select-none"
         >
           <span className={`w-2.5 h-2.5 rounded-full ${statusColor} shrink-0 animate-pulse`} />
-          <span className="font-semibold text-slate-200 uppercase tracking-wider">
+          <span className="font-semibold text-slate-200 uppercase tracking-wider text-[11px]">
             {health?.siteId || "..."}
           </span>
-          <span className="text-slate-400">|</span>
-          <span className="text-slate-300 truncate max-w-[130px]">
+          <span className="text-slate-500">|</span>
+          <span className="text-slate-300 truncate max-w-[90px] sm:max-w-[130px] text-[11px]">
             {health?.host || "localhost:3000"}
           </span>
 
           {/* Data Source Badge */}
           {isSeed ? (
             <span className="ml-auto px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/40 animate-pulse">
-              SEED FALLBACK
+              SEED
             </span>
           ) : (
             <span className="ml-auto px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">

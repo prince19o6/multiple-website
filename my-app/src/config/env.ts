@@ -47,6 +47,7 @@ export interface EnvConfig {
   siteId: string;
   siteHostname: string;
   apiUrl: string;
+  appKey: string;
   backendFallbackUrl?: string;
   configApiUrl: string;
   defaultLang: string;
@@ -58,6 +59,19 @@ export interface EnvConfig {
   mismatchError?: string | null;
   conflictingVariables: ConflictingVariable[];
 }
+
+/**
+ * Low-privilege public app keys per tenant for mobile clients.
+ * These keys are restricted to read-only endpoints (config:read, catalog:read).
+ */
+export const DEFAULT_APP_KEYS: Record<string, string> = {
+  gujjutours: 'gt_pub_app_gujjutours_2026_m8b',
+  website1: 'gt_pub_app_gujjutours_2026_m8b',
+  tripgoasia: 'tg_pub_app_tripgoasia_2026_y2r',
+  website2: 'tg_pub_app_tripgoasia_2026_y2r',
+  technoheaven: 'th_pub_app_technoheaven_2026_z5q',
+  website3: 'th_pub_app_technoheaven_2026_z5q',
+};
 
 /**
  * Registry of known brands matching backend WebsiteRegistry.cs and Web app.
@@ -75,8 +89,8 @@ export const KNOWN_SITES: Record<string, SiteBrandInfo> = {
     secondaryColor: '#1e40af',
     accentColor: '#3b82f6',
     icon: '✈️',
-    currency: '$',
-    currencyCode: 'USD',
+    currency: '₹',
+    currencyCode: 'INR',
     scheme: 'gujjutours',
     bundleId: 'com.toursapp.gujjutours',
   },
@@ -91,8 +105,8 @@ export const KNOWN_SITES: Record<string, SiteBrandInfo> = {
     secondaryColor: '#1e40af',
     accentColor: '#3b82f6',
     icon: '✈️',
-    currency: '$',
-    currencyCode: 'USD',
+    currency: '₹',
+    currencyCode: 'INR',
     scheme: 'gujjutours',
     bundleId: 'com.toursapp.gujjutours',
   },
@@ -107,8 +121,8 @@ export const KNOWN_SITES: Record<string, SiteBrandInfo> = {
     secondaryColor: '#1e40af',
     accentColor: '#3b82f6',
     icon: '✈️',
-    currency: '$',
-    currencyCode: 'USD',
+    currency: '₹',
+    currencyCode: 'INR',
     scheme: 'gujjutours',
     bundleId: 'com.toursapp.gujjutours',
   },
@@ -123,8 +137,8 @@ export const KNOWN_SITES: Record<string, SiteBrandInfo> = {
     secondaryColor: '#1e40af',
     accentColor: '#3b82f6',
     icon: '✈️',
-    currency: '$',
-    currencyCode: 'USD',
+    currency: '₹',
+    currencyCode: 'INR',
     scheme: 'gujjutours',
     bundleId: 'com.toursapp.gujjutours',
   },
@@ -375,6 +389,7 @@ export function getEnv(): EnvConfig {
   const rawSiteId = process.env.EXPO_PUBLIC_SITE_ID;
   const rawHostname = process.env.EXPO_PUBLIC_SITE_HOSTNAME;
   const rawApiUrl = process.env.EXPO_PUBLIC_API_URL;
+  const rawAppKey = process.env.EXPO_PUBLIC_APP_KEY;
   const rawBackendFallbackUrl = process.env.EXPO_PUBLIC_BACKEND_FALLBACK_URL;
   const rawConfigApiUrl = process.env.EXPO_PUBLIC_CONFIG_API_URL;
   const rawDefaultLang = process.env.EXPO_PUBLIC_DEFAULT_LANG;
@@ -491,6 +506,10 @@ export function getEnv(): EnvConfig {
 
   const siteId = canonicalSiteId;
   const siteHostname = normalizedHostname || expectedHostname;
+  const appKey =
+    (rawAppKey && rawAppKey.trim()) ||
+    DEFAULT_APP_KEYS[canonicalSiteId] ||
+    DEFAULT_APP_KEYS['gujjutours'];
 
   // Single unified base URL for ALL calls across the app
   const unifiedBaseUrl = resolveBackendUrl(
@@ -524,6 +543,7 @@ export function getEnv(): EnvConfig {
     siteId,
     siteHostname,
     apiUrl,
+    appKey,
     backendFallbackUrl,
     configApiUrl,
     defaultLang: normalizedLang,

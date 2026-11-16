@@ -28,13 +28,20 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
   const buttons = (config as any)?.buttons || {};
   const theme = config?.theme || {};
 
-  const siteName = config?.name || 'Us';
-  const defaultTitle = `Discover Your Next Adventure with ${siteName}`;
-  const defaultDescription = `Explore amazing destinations and unforgettable experiences with ${siteName}.`;
+  const siteName = (config as any)?.site?.name || config?.name || 'Us';
+  const siteTagline = (config as any)?.site?.tagline || (config as any)?.tagline || '';
+  const firstBanner = (config as any)?.banners?.[0];
+
+  const defaultTitle = firstBanner?.title || siteTagline || `Discover Your Next Adventure with ${siteName}`;
+  const defaultDescription =
+    firstBanner?.subtitle ||
+    config?.site?.fullName ||
+    `Explore amazing destinations and unforgettable experiences with ${siteName}.`;
 
   const title = hero.title || defaultTitle;
   const description = hero.description || defaultDescription;
-  const badgeText = hero.badgeText || (hero.showBadge ? 'EXPLORE THE WORLD' : '');
+  const badgeText = hero.badgeText || (hero.showBadge ? (firstBanner?.discount || 'EXPLORE WITH CONFIDENCE') : '');
+  const heroImage = hero.image || firstBanner?.imageUrl || firstBanner?.image;
   const btnRadius = getButtonRadius(buttons);
 
   const handleAction = (action?: string) => {
@@ -48,7 +55,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
     return (
       <View style={styles.luxuryHero}>
         <Image
-          source={{ uri: hero.image || PLACEHOLDER_IMAGE }}
+          source={{ uri: heroImage || PLACEHOLDER_IMAGE }}
           style={styles.luxuryBgImage}
           resizeMode="cover"
         />
@@ -66,7 +73,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
 
           {/* Quick Search bar */}
           {hero.showSearch && (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-search" accessibilityLabel="Search"
               activeOpacity={0.9}
               onPress={() => handleAction('explore')}
               style={styles.searchBar}
@@ -84,7 +91,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
           {/* Buttons */}
           <View style={styles.buttonRow}>
             {hero.primaryButton && (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-herosection-87" accessibilityLabel="herosection action"
                 activeOpacity={0.85}
                 style={[styles.luxuryPrimaryBtn, { backgroundColor: colors.primary }]}
                 onPress={() => handleAction(hero.primaryButton?.action)}
@@ -95,7 +102,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
               </TouchableOpacity>
             )}
             {hero.secondaryButton && (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-herosection-98" accessibilityLabel="herosection action"
                 activeOpacity={0.85}
                 style={styles.luxurySecondaryBtn}
                 onPress={() => handleAction(hero.secondaryButton?.action)}
@@ -126,7 +133,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
 
         {/* Buttons */}
         <View style={styles.buttonRow}>
-          <TouchableOpacity
+          <TouchableOpacity testID="btn-herosection-129" accessibilityLabel="herosection action"
             activeOpacity={0.85}
             style={[
               styles.primaryBtn,
@@ -146,7 +153,7 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
           </TouchableOpacity>
 
           {hero.secondaryButton && (
-            <TouchableOpacity
+            <TouchableOpacity testID="btn-herosection-149" accessibilityLabel="herosection action"
               activeOpacity={0.85}
               style={[styles.secondaryBtn, { borderRadius: btnRadius }]}
               onPress={() => handleAction(hero.secondaryButton?.action || 'explore')}
@@ -164,10 +171,10 @@ export default function HeroSection({ config, onNavigate }: SectionProps) {
         </View>
 
         {/* Hero image preview */}
-        {hero.image ? (
+        {heroImage ? (
           <View style={styles.heroImageWrapper}>
             <Image
-              source={{ uri: hero.image }}
+              source={{ uri: heroImage }}
               style={styles.heroImage}
               resizeMode="cover"
             />

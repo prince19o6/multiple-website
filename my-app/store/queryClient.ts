@@ -78,14 +78,18 @@ export const queryKeys = {
   tour: (siteId: string = ENV.siteId, tourId?: string | number, hostname: string = ENV.siteHostname) =>
     ['tour', toCanonicalSiteId(siteId), String(tourId ?? ''), hostname] as const,
 
+  /** Similar tours recommendations for a tour. */
+  similarTours: (siteId: string = ENV.siteId, tourId?: string | number, hostname: string = ENV.siteHostname) =>
+    ['tours', toCanonicalSiteId(siteId), 'similar', String(tourId ?? ''), hostname] as const,
+
   /** All destinations for a site. */
   destinations: (siteId: string = ENV.siteId, hostname: string = ENV.siteHostname) =>
     ['destinations', toCanonicalSiteId(siteId), hostname] as const,
 
-  /** Bookings (optionally filtered by email). */
-  bookings: (siteId: string = ENV.siteId, email?: string) =>
-    email
-      ? (['bookings', toCanonicalSiteId(siteId), email] as const)
+  /** Bookings (scoped to site and user/email). */
+  bookings: (siteId: string = ENV.siteId, userOrEmail?: string) =>
+    userOrEmail
+      ? (['bookings', toCanonicalSiteId(siteId), userOrEmail] as const)
       : (['bookings', toCanonicalSiteId(siteId)] as const),
 
   /** Single booking. */

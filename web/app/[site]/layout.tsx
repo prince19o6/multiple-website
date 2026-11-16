@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import type { Metadata } from "next";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -8,6 +9,8 @@ import { GoogleFontLoader } from "@/components/GoogleFontLoader";
 import { ThemeStyleInjector } from "@/components/ThemeStyleInjector";
 import { SiteConfigProvider } from "@/lib/SiteConfigContext";
 import { SiteProvider } from "@/lib/SiteContext";
+import { AuthProvider } from "@/lib/auth/AuthContext";
+import { ModuleProvider } from "@/lib/context/ModuleContext";
 import { fetchSiteConfig } from "@/lib/api";
 import { mergeWebsiteConfig, type MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
 import { getSiteById, type SiteDefinition } from "@/lib/siteRegistry";
@@ -29,13 +32,52 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {
-    title: `${siteDef.displayName} | Curated Travel Experiences`,
-    description: `Explore premium hand-crafted tours, safaris, and beach vacations with ${siteDef.displayName}.`,
-    icons: {
-      icon: "/favicon.ico",
-    },
-  };
+  try {
+    const config = await fetchSiteConfig(siteDef, ENV.defaultLang);
+    const siteName = config.site?.name || siteDef.displayName;
+    const title = config.seo?.defaultTitle || `${siteName} | Curated Travel Experiences`;
+    const description =
+      config.seo?.defaultDescription ||
+      `Explore premium hand-crafted tours, safaris, and beach vacations with ${siteName}.`;
+    const favicon = config.assets?.favicon || "/favicon.ico";
+    const ogImage = config.seo?.ogImage || config.assets?.ogImage || config.assets?.logoUrl;
+
+    return {
+      title: {
+        default: title,
+        template: config.seo?.titleTemplate || `%s | ${siteName}`,
+      },
+      description,
+      keywords: config.seo?.keywords || ["travel", "tours", "vacations"],
+      icons: {
+        icon: favicon,
+        shortcut: favicon,
+        apple: favicon,
+      },
+      openGraph: {
+        title,
+        description,
+        siteName,
+        images: ogImage ? [{ url: ogImage }] : [],
+        type: "website",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: ogImage ? [ogImage] : [],
+        creator: config.seo?.twitterHandle || undefined,
+      },
+    };
+  } catch {
+    return {
+      title: `${siteDef.displayName} | Curated Travel Experiences`,
+      description: `Explore premium hand-crafted tours, safaris, and beach vacations with ${siteDef.displayName}.`,
+      icons: {
+        icon: "/favicon.ico",
+      },
+    };
+  }
 }
 
 function ConfigErrorPanel({
@@ -133,15 +175,76 @@ export default async function SiteLayout({ children, params }: Props) {
     );
   }
 
+  // Server-read cookie isolated strictly per siteId
+  const cookieStore = await cookies();
+  const themeCookie = cookieStore.get(`theme_${siteDef.siteId}`)?.value;
+  const isDark = themeCookie ? themeCookie === "dark" : config.defaultMode === "dark";
+
+  // JSON-LD Structured Data Schema (Organization & WebSite)
+  const canonicalUrl = `https://${config.site?.canonicalHostname || siteDef.backendHostname}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${canonicalUrl}/#organization`,
+        name: config.site?.fullName || config.site?.name || siteDef.displayName,
+        url: canonicalUrl,
+        logo: config.assets?.logoUrl || config.assets?.logoLight,
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: config.content?.contact?.phone || "",
+          email: config.content?.contact?.email || "",
+          contactType: "customer service",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${canonicalUrl}/#website`,
+        url: canonicalUrl,
+        name: config.site?.name || siteDef.displayName,
+        publisher: {
+          "@id": `${canonicalUrl}/#organization`,
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${canonicalUrl}/en/tours?destination={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  };
+
   return (
     <SiteProvider site={siteDef}>
       <SiteConfigProvider config={config}>
-        <ThemeStyleInjector config={config} />
-        <DynamicFontLoader font={config.dynamic?.font ?? null} />
-        <GoogleFontLoader config={config} />
-        <Navigation config={config} />
-        <div className="flex-1">{children}</div>
-        <Footer config={config} />
+        <AuthProvider initialSiteId={siteDef.siteId}>
+          <ModuleProvider>
+            {/* Inject JSON-LD Structured Schema */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            {/* Synchronous inline script prevents flash of wrong theme (zero FOUC) */}
+            <script
+              id={`theme-init-${siteDef.siteId}`}
+              dangerouslySetInnerHTML={{
+                __html: `(function(){try{var c=document.cookie.match(/(?:^|;\\s*)theme_${siteDef.siteId}=([^;]+)/);var m=c?c[1]:'${config.defaultMode || "light"}';if(m==='dark'){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.classList.remove('dark');document.documentElement.style.colorScheme='light';}}catch(e){}})();`,
+              }}
+            />
+            <ThemeStyleInjector config={config} />
+            <DynamicFontLoader font={config.dynamic?.font ?? null} />
+            <GoogleFontLoader config={config} />
+            <div
+              className={`min-h-screen flex flex-col ${isDark ? "dark" : ""}`}
+              style={{ colorScheme: isDark ? "dark" : "light" }}
+            >
+              <Navigation config={config} />
+              <div className="flex-1">{children}</div>
+              <Footer config={config} />
+            </div>
+          </ModuleProvider>
+        </AuthProvider>
       </SiteConfigProvider>
     </SiteProvider>
   );

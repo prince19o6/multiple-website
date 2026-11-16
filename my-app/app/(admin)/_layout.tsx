@@ -38,14 +38,7 @@ export default function AdminLayout() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const tenantSiteId =
-    siteId === 'website2'
-      ? 'tripgoasia'
-      : siteId === 'website3'
-      ? 'technoheaven'
-      : siteId === 'website1'
-      ? 'gujjutours'
-      : siteId || 'gujjutours';
+  const tenantSiteId = siteId || 'gujjutours';
 
   useEffect(() => {
     (async () => {
@@ -90,7 +83,7 @@ export default function AdminLayout() {
           headerTitleStyle: { fontWeight: '700' },
           headerLeft: () => (
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginRight: 10 }}>
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-navigate" accessibilityLabel="Navigate"
                 onPress={() => router.replace('/(tabs)')}
                 style={{ flexDirection: 'row', alignItems: 'center' }}
               >
@@ -104,7 +97,7 @@ export default function AdminLayout() {
           ),
           headerRight: () =>
             isAdminLoggedIn && pathname !== '/(admin)/login' ? (
-              <TouchableOpacity
+              <TouchableOpacity testID="btn-log-out-outline" accessibilityLabel="log out outline"
                 onPress={logoutAdmin}
                 style={{ flexDirection: 'row', alignItems: 'center' }}
               >
@@ -122,8 +115,8 @@ export default function AdminLayout() {
           options={{
             title: 'Admin Authentication',
             headerLeft: () => (
-              <TouchableOpacity
-                onPress={() => router.replace('/(app)')}
+              <TouchableOpacity testID="btn-navigate" accessibilityLabel="Navigate"
+                onPress={() => router.replace('/(tabs)')}
                 style={{ flexDirection: 'row', alignItems: 'center', marginRight: 12 }}
               >
                 <Ionicons name="arrow-back" size={20} color="#94a3b8" />

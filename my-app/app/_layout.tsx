@@ -35,14 +35,16 @@ import {
 import { QueryClientProvider } from '@tanstack/react-query';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { queryClient } from '@/store/queryClient';
 import { ENV, getEnv } from '@/config/env';
 import { SiteProvider } from '@/store/SiteConfigContext';
-import { ThemeProvider } from '@/store/ThemeContext';
+import { ThemeProvider, useAppTheme } from '@/store/ThemeContext';
 import { AuthProvider } from '@/context/AuthContext';
 import { WishlistProvider } from '@/context/WishlistContext';
 import { BookingProvider } from '@/context/BookingContext';
 import { CurrencyProvider } from '@/context/CurrencyContext';
+import { ModuleProvider } from '@/store/ModuleContext';
 import EnvErrorScreen from '@/components/EnvErrorScreen';
 import DevBanner from '@/components/DevBanner';
 import OfflineBanner from '@/components/OfflineBanner';
@@ -166,7 +168,9 @@ function RootProviders({ children }: { children: React.ReactNode }) {
                                                                           <LanguageModal />
                                                                           <ConciergeChatModal />
                                                                           <AudioMiniPlayer />
-                                                                          {children}
+                                                                          <ModuleProvider>
+                                                                            {children}
+                                                                          </ModuleProvider>
                                                                         </ExpeditionSummaryProvider>
                                                                       </BargainProvider>
                                                                     </ForexRadarProvider>
@@ -202,6 +206,74 @@ function RootProviders({ children }: { children: React.ReactNode }) {
         </LanguageProvider>
       </ThemeProvider>
     </SiteProvider>
+  );
+}
+
+function ThemedNavigationShell() {
+  const { isDark, theme } = useAppTheme();
+
+  return (
+    <>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: theme.background },
+        }}
+      >
+        {/* Main Native Bottom Tabs */}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+        {/* Authentication Flow */}
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+
+        {/* Tour & Booking Deep Screens */}
+        <Stack.Screen name="tour/[id]" options={{ headerShown: false }} />
+        <Stack.Screen name="booking/[id]" options={{ headerShown: false }} />
+        <Stack.Screen name="category/[slug]" options={{ headerShown: false }} />
+        <Stack.Screen name="search-results" options={{ headerShown: false }} />
+        <Stack.Screen name="group-planning" options={{ headerShown: false }} />
+        <Stack.Screen name="travel-journal" options={{ headerShown: false }} />
+        <Stack.Screen name="airport-transfer" options={{ headerShown: false }} />
+        <Stack.Screen name="phrasebook" options={{ headerShown: false }} />
+        <Stack.Screen name="tax-refund" options={{ headerShown: false }} />
+        <Stack.Screen name="esim-roaming" options={{ headerShown: false }} />
+        <Stack.Screen name="insurance" options={{ headerShown: false }} />
+        <Stack.Screen name="visa-hub" options={{ headerShown: false }} />
+        <Stack.Screen name="eco-travel" options={{ headerShown: false }} />
+        <Stack.Screen name="culture-etiquette" options={{ headerShown: false }} />
+        <Stack.Screen name="power-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="baggage-calculator" options={{ headerShown: false }} />
+        <Stack.Screen name="transit-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="pharmacy-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="tipping-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="drive-safety" options={{ headerShown: false }} />
+        <Stack.Screen name="forex-radar" options={{ headerShown: false }} />
+        <Stack.Screen name="bargain-assistant" options={{ headerShown: false }} />
+        <Stack.Screen name="travel-wrapped" options={{ headerShown: false }} />
+        <Stack.Screen name="featured-tours" options={{ headerShown: false }} />
+        <Stack.Screen name="destinations" options={{ headerShown: false }} />
+        <Stack.Screen name="special-offers" options={{ headerShown: false }} />
+        <Stack.Screen name="day-cockpit" options={{ headerShown: false }} />
+        <Stack.Screen name="travel-vault" options={{ headerShown: false }} />
+        <Stack.Screen name="trip-budget" options={{ headerShown: false }} />
+        <Stack.Screen name="passport" options={{ headerShown: false }} />
+        <Stack.Screen name="weather-forecast" options={{ headerShown: false }} />
+        <Stack.Screen name="culinary-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="audio-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="map-explorer" options={{ headerShown: false }} />
+
+        {/* Admin Portal */}
+        <Stack.Screen name="(admin)" options={{ headerShown: false }} />
+
+        {/* Modals & Fallbacks */}
+        <Stack.Screen name="about" options={{ headerShown: false }} />
+        <Stack.Screen name="contact" options={{ headerShown: false }} />
+        <Stack.Screen name="site-switcher" options={{ presentation: 'modal', title: 'Switch Site' }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" options={{ title: 'Not Found' }} />
+      </Stack>
+    </>
   );
 }
 
@@ -247,56 +319,13 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <QueryClientProvider client={queryClient}>
-        <RootProviders>
-          <StatusBar style="auto" />
-          <Stack screenOptions={{ headerShown: false }}>
-            {/* Main Native Bottom Tabs */}
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-
-            {/* Authentication Flow */}
-            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-
-            {/* Tour & Booking Deep Screens */}
-            <Stack.Screen name="tour/[id]" options={{ headerShown: false }} />
-            <Stack.Screen name="booking/[id]" options={{ headerShown: false }} />
-            <Stack.Screen name="category/[slug]" options={{ headerShown: false }} />
-            <Stack.Screen name="search-results" options={{ headerShown: false }} />
-            <Stack.Screen name="group-planning" options={{ headerShown: false }} />
-            <Stack.Screen name="travel-journal" options={{ headerShown: false }} />
-            <Stack.Screen name="airport-transfer" options={{ headerShown: false }} />
-            <Stack.Screen name="phrasebook" options={{ headerShown: false }} />
-            <Stack.Screen name="tax-refund" options={{ headerShown: false }} />
-            <Stack.Screen name="esim-roaming" options={{ headerShown: false }} />
-            <Stack.Screen name="insurance" options={{ headerShown: false }} />
-            <Stack.Screen name="visa-hub" options={{ headerShown: false }} />
-            <Stack.Screen name="eco-travel" options={{ headerShown: false }} />
-            <Stack.Screen name="culture-etiquette" options={{ headerShown: false }} />
-            <Stack.Screen name="power-guide" options={{ headerShown: false }} />
-            <Stack.Screen name="baggage-calculator" options={{ headerShown: false }} />
-            <Stack.Screen name="transit-guide" options={{ headerShown: false }} />
-            <Stack.Screen name="pharmacy-guide" options={{ headerShown: false }} />
-            <Stack.Screen name="tipping-guide" options={{ headerShown: false }} />
-            <Stack.Screen name="drive-safety" options={{ headerShown: false }} />
-            <Stack.Screen name="forex-radar" options={{ headerShown: false }} />
-            <Stack.Screen name="bargain-assistant" options={{ headerShown: false }} />
-            <Stack.Screen name="travel-wrapped" options={{ headerShown: false }} />
-            <Stack.Screen name="featured-tours" options={{ headerShown: false }} />
-            <Stack.Screen name="destinations" options={{ headerShown: false }} />
-            <Stack.Screen name="special-offers" options={{ headerShown: false }} />
-
-            {/* Admin Portal */}
-            <Stack.Screen name="(admin)" options={{ headerShown: false }} />
-
-            {/* Modals & Fallbacks */}
-            <Stack.Screen name="about" options={{ headerShown: false }} />
-            <Stack.Screen name="contact" options={{ headerShown: false }} />
-            <Stack.Screen name="site-switcher" options={{ presentation: 'modal', title: 'Switch Site' }} />
-            <Stack.Screen name="index" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" options={{ title: 'Not Found' }} />
-          </Stack>
-        </RootProviders>
-      </QueryClientProvider>
+      <SafeAreaProvider>
+        <QueryClientProvider client={queryClient}>
+          <RootProviders>
+            <ThemedNavigationShell />
+          </RootProviders>
+        </QueryClientProvider>
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 }

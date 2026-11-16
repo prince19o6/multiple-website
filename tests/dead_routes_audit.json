@@ -1,0 +1,87 @@
+{
+  "totalScreens": 59,
+  "deadLinks": [
+    {
+      "from": "my-app/app/(admin)/login.tsx",
+      "target": "/(admin)"
+    },
+    {
+      "from": "my-app/app/(admin)/_layout.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/(auth)/login.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/(auth)/onboarding.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/(tabs)/explore.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/(tabs)/profile.tsx",
+      "target": "/(admin)"
+    },
+    {
+      "from": "my-app/app/+not-found.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/about.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/contact.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/index.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/search-results.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/app/site-switcher.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/components/common/AppHeader.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/components/DynamicRenderer.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/components/Footer.tsx",
+      "target": "/(admin)"
+    },
+    {
+      "from": "my-app/components/Navbar.tsx",
+      "target": "/(tabs)"
+    },
+    {
+      "from": "my-app/components/NavDrawer.tsx",
+      "target": "/(tabs)"
+    }
+  ],
+  "unreferencedScreens": [
+    "(admin)/index.tsx",
+    "(admin)/_layout.tsx",
+    "(auth)/onboarding.tsx",
+    "(auth)/reset-password.tsx",
+    "(auth)/_layout.tsx",
+    "(tabs)/index.tsx",
+    "(tabs)/_layout.tsx",
+    "category/[slug].tsx",
+    "index.tsx",
+    "map-explorer.tsx",
+    "not-allowed.tsx",
+    "search-results.tsx"
+  ]
+}
