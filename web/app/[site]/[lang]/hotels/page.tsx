@@ -6,9 +6,11 @@ import Image from "next/image";
 import { notFound, useSearchParams, useRouter } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import { useFeature } from "@/lib/features/useFeature";
 import DestinationAutocomplete from "@/components/search/DestinationAutocomplete";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface HotelRoomPlan {
   id: string;
@@ -80,7 +82,7 @@ export default function HotelsListingPage() {
   // Active tenant and theme
   const siteId = site.siteId || "gujjutours";
   const primaryColor = config.theme?.colors?.primary || "#2882c5";
-  const currencySymbol = config.site?.currency?.symbol || config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
+  const { formatPrice, currencySymbol } = useCurrency();
 
   // Search form query params
   const initialDestination = searchParams.get("destination") || searchParams.get("city") || "";
@@ -111,6 +113,7 @@ export default function HotelsListingPage() {
   const [cityCards, setCityCards] = useState<CityCard[]>([]);
   const [collections, setCollections] = useState<CuratedCollection[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [totalCount, setTotalCount] = useState<number>(0);
 
   // Fetch collections & city cards once
@@ -133,6 +136,7 @@ export default function HotelsListingPage() {
   // Fetch hotels matching filters
   const fetchHotels = useCallback(async () => {
     setLoading(true);
+    setError(null);
     try {
       const params = new URLSearchParams();
       params.set("site", siteId);
@@ -148,11 +152,15 @@ export default function HotelsListingPage() {
       const res = await fetch(`/api/hotels?${params.toString()}`);
       if (res.ok) {
         const json = await res.json();
-        setHotels(Array.isArray(json.data) ? json.data : []);
-        setTotalCount(json.total ?? json.count ?? 0);
+        const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+        setHotels(items);
+        setTotalCount(json.total ?? json.count ?? items.length);
+      } else {
+        throw new Error(`Failed to load hotels (${res.status})`);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error("Failed to fetch hotels", err);
+      setError(err?.message || "Failed to load hotels");
     } finally {
       setLoading(false);
     }
@@ -350,7 +358,7 @@ export default function HotelsListingPage() {
                   {city.cityName}
                 </h3>
                 <p className="text-[11px] text-slate-500 dark:text-neutral-400 mt-0.5">
-                  From {currencySymbol}{city.minPrice.toLocaleString()}
+                  From {formatPrice(city.minPrice, "INR")}
                 </p>
               </button>
             ))}
@@ -601,28 +609,16 @@ export default function HotelsListingPage() {
           {/* ─── 4B. HOTEL CARDS GRID / LIST ─── */}
           <div className="lg:col-span-3">
             {loading ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="animate-pulse bg-white dark:bg-neutral-900 rounded-2xl h-80 border border-slate-200 dark:border-neutral-800" />
-                ))}
-              </div>
+              <LoadingSkeleton variant="card" count={4} />
+            ) : error ? (
+              <ErrorState message={error} onRetry={() => fetchHotels()} />
             ) : hotels.length === 0 ? (
-              <div className="bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-2xl p-12 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 dark:bg-neutral-800 flex items-center justify-center text-3xl">
-                  🏨
-                </div>
-                <h3 className="text-lg font-bold">No hotels match your filters</h3>
-                <p className="text-xs text-slate-500 dark:text-neutral-400 max-w-sm mx-auto mt-1 mb-4">
-                  Try clearing your dietary, star rating or price filters to see more available accommodations.
-                </p>
-                <button
-                  type="button"
-                  onClick={handleClearFilters}
-                  className="px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold shadow hover:brightness-110"
-                >
-                  Clear All Filters
-                </button>
-              </div>
+              <EmptyState
+                title="No hotels match your filters"
+                message="Try clearing your dietary, star rating or price filters to see more available accommodations."
+                actionLabel="Clear All Filters"
+                onAction={handleClearFilters}
+              />
             ) : (
               <div className={viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 gap-6" : "space-y-4"}>
                 {hotels.map((hotel, idx) => {
@@ -717,7 +713,7 @@ export default function HotelsListingPage() {
                             </span>
                             <div className="flex items-baseline gap-1.5">
                               <span className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                                {currencySymbol}{hotel.pricePerNight.toLocaleString()}
+                                {formatPrice(hotel.pricePerNight, hotel.currency || "INR")}
                               </span>
                               <span className="text-[11px] text-slate-400">/ night</span>
                             </div>

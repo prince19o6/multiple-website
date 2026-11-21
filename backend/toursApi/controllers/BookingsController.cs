@@ -626,7 +626,7 @@ public class BookingsController : ControllerBase
     }
 
     // ─── 4c. Create Booking (Unified Real Booking Pipeline Across All 8 Modules) ──
-    [HttpPost]
+    [HttpPost, Authorize]
     public async Task<IActionResult> Create([FromBody] BookingCreateDto dto)
     {
         try
@@ -636,30 +636,6 @@ public class BookingsController : ControllerBase
                 ?? User?.FindFirst("sub")?.Value;
 
             var userRepo = _serviceProvider.GetRequiredService<IUserRepository>();
-
-            if (string.IsNullOrWhiteSpace(authUserId) && !string.IsNullOrWhiteSpace(dto.Email))
-            {
-                var existingUser = await userRepo.GetByEmailAsync(dto.Email.Trim().ToLowerInvariant());
-                if (existingUser != null)
-                {
-                    authUserId = existingUser.Id;
-                }
-                else
-                {
-                    var guestUser = new User
-                    {
-                        Email = dto.Email.Trim().ToLowerInvariant(),
-                        FullName = !string.IsNullOrWhiteSpace(dto.GuestName) ? dto.GuestName.Trim() : "Traveler",
-                        Phone = dto.Phone,
-                        WebsiteId = _websiteContext.CurrentWebsiteId ?? "gujjutours",
-                        Role = "Customer",
-                        IsEmailVerified = true,
-                        CreatedAt = DateTime.UtcNow
-                    };
-                    await userRepo.CreateAsync(guestUser);
-                    authUserId = guestUser.Id;
-                }
-            }
 
             if (string.IsNullOrWhiteSpace(authUserId))
             {

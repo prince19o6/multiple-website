@@ -163,157 +163,47 @@ export default function BookingDetailScreen() {
     }
   }, [booking, customReason, id, requestCancellation, selectedReason]);
 
-  if (loading) {
-    return (
-      <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <AppHeader showBackButton={true} title="Booking Pass" showLogo={true} logoSize="sm" />
-        <View style={styles.centerBox}>
-          <ActivityIndicator size="large" color={colors.primary} />
-          <Text style={[styles.loadingText, { color: colors.mutedText }]}>
-            Loading E-Ticket Voucher...
-          </Text>
-        </View>
-      </View>
-    );
-  }
-
-  if (fetchError || !booking) {
-    return (
-      <View style={[styles.root, { backgroundColor: colors.background }]}>
-        <AppHeader showBackButton={true} title="Booking Pass" showLogo={true} logoSize="sm" />
-        <View style={styles.centerBox}>
-          <Ionicons name="alert-circle-outline" size={54} color="#ef4444" />
-          <Text style={[styles.errorTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
-            Reservation Not Found
-          </Text>
-          <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
-            {fetchError || `Could not retrieve reservation details for reference #${id}.`}
-          </Text>
-          <TouchableOpacity testID="btn-view-my-bookings" accessibilityLabel="View My Bookings"
-            style={[styles.backBtn, { backgroundColor: colors.primary }]}
-            onPress={() => router.replace('/(tabs)/bookings')}
-          >
-            <Text style={styles.backBtnText}>View My Bookings</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
-  }
-
-  const normalizedStatus = (booking.status || 'pending').toLowerCase();
-  const isConfirmed = normalizedStatus === 'confirmed' || normalizedStatus === 'upcoming';
-  const isPending = normalizedStatus === 'pending';
-  const isRejected = normalizedStatus === 'rejected';
-  const isCancelled = normalizedStatus === 'cancelled';
-  const isExpired = normalizedStatus === 'expired';
-  const isCompleted = normalizedStatus === 'completed';
-  const hasCancelRequest = booking.cancellationRequest && booking.cancellationRequest.status === 'pending';
-  const bookingRef = booking.reference || (booking.id.length > 10 ? booking.id.slice(-8) : booking.id);
-  const qrDataUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(
-    `PASS:${bookingRef}|ID:${booking.id}|TOUR:${booking.tourId}|TRAVELERS:${booking.travelers}`
-  )}`;
-
-  const matchedTour = tours.find((t) => String(t.id) === String(booking.tourId));
-
-  const tourObj: Tour = matchedTour || {
-    id: booking.tourId,
-    name: booking.tourName,
-    slug: booking.tourSlug || String(booking.tourId),
-    description: `Confirmed reservation with ${siteName}.`,
-    fullDescription: `Confirmed reservation with ${siteName}. Day-by-day expedition details and mobile voucher are verified.`,
-    price: booking.totalPrice,
-    image: booking.tourImage || booking.snapshot?.coverImage || PLACEHOLDER_IMAGE,
-    gallery: [],
-    duration: booking.duration || '4 Days / 3 Nights',
-    durationDays: 4,
-    location: booking.location || booking.destination || siteName,
-    destination: booking.destination || booking.location || siteName,
-    difficulty: 'Easy',
-    groupSize: `${booking.travelers} travelers`,
-    bestTime: 'All Year',
-    language: 'English',
-    category: booking.snapshot?.category || 'Cultural',
-    rating: 5,
-    reviews: 5,
-    highlights: [],
-    itinerary: (booking.snapshot?.itinerarySummary || []).map((item) => ({
-      day: item.day,
-      title: item.title,
-      description: item.description,
-    })),
-    included: booking.snapshot?.includedSummary || [],
-    guestReviews: [],
-  };
-
-  // Snapshot fallback
-  const displayTitle =
-    booking.tourName &&
-    booking.tourName !== 'Curated Expedition' &&
-    booking.tourName !== 'Unknown Tour'
-      ? booking.tourName
-      : matchedTour?.name || 'Guided Tour Expedition';
-
-  const displayPrice =
-    booking.totalPrice > 0
-      ? booking.totalPrice
-      : booking.unitPrice
-      ? booking.unitPrice * Math.max(1, booking.travelers)
-      : matchedTour?.price
-      ? matchedTour.price * Math.max(1, booking.travelers)
-      : booking.totalPrice;
-
-  const tourCardConfig = (config as { tourCard?: { currency?: string } } | null)?.tourCard || {};
-  const displayCurrency =
-    booking.currency && booking.currency !== '$'
-      ? booking.currency
-      : tourCardConfig.currency || booking.currency || '$';
-
-  const isTourCatalogMissing = !matchedTour;
-
-  const handleShareVoucher = async () => {
-    if (!booking) return;
-    try {
-      try {
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-      } catch {
-        // Haptics fallback
-      }
-      const effectiveHost = hostname || 'www.gujjutours.com';
-      const verificationUrl = `https://${effectiveHost}/booking/${bookingRef}`;
-      const passenger = booking.guestName || 'Valued Guest';
-      const travelDate = booking.travelDate || booking.date || 'Scheduled Departure';
-      const travelerCount = booking.travelers || booking.adults || 1;
-
-      const travelerDetails = booking.travelersList && booking.travelersList.length > 0
-        ? booking.travelersList.map((t, idx) => `  ${idx + 1}. ${t.name} (${t.type}${t.age ? `, age ${t.age}` : ''})`).join('\n')
-        : `  1. ${passenger}`;
-
-      const message = `🎟️ OFFICIAL E-TICKET VOUCHER\n` +
-        `----------------------------------------\n` +
-        `Expedition: ${displayTitle}\n` +
-        `Booking Ref: #${bookingRef}\n` +
-        `Lead Passenger: ${passenger}\n` +
-        `Travelers (${travelerCount}):\n${travelerDetails}\n` +
-        `Departure Date: ${travelDate}\n` +
-        `Total Paid: ${displayCurrency}${displayPrice}\n` +
-        `Status: ${booking.status.toUpperCase()}\n\n` +
-        `Digital Pass & QR Verification:\n${verificationUrl}\n` +
-        `Provider: ${siteName || config?.name || 'ToursApp'}`;
-
-      await Share.share({
-        title: `E-Ticket Pass: ${displayTitle} (#${bookingRef})`,
-        message,
-        url: Platform.OS === 'ios' ? verificationUrl : undefined,
-      });
-    } catch (err) {
-      if (__DEV__) {
-        console.log('[BookingDetailScreen] Share cancelled or failed:', err);
-      }
-    }
-  };
-
-  // Weather context for destination weather
+  // Weather context for destination weather (unconditionally declared at top level)
   const { allDestinations, currentWeather } = useWeather();
+
+  const matchedTour = useMemo(() => {
+    if (!booking) return undefined;
+    return tours.find((t) => String(t.id) === String(booking.tourId));
+  }, [tours, booking]);
+
+  const tourObj: Tour = useMemo(() => {
+    if (matchedTour) return matchedTour;
+    return {
+      id: booking?.tourId || 1,
+      name: booking?.tourName || 'Tour Package',
+      slug: booking?.tourSlug || String(booking?.tourId || 1),
+      description: `Confirmed reservation with ${siteName}.`,
+      fullDescription: `Confirmed reservation with ${siteName}. Day-by-day expedition details and mobile voucher are verified.`,
+      price: booking?.totalPrice || 0,
+      image: booking?.tourImage || (booking?.snapshot as any)?.coverImage || PLACEHOLDER_IMAGE,
+      gallery: [],
+      duration: booking?.duration || '4 Days / 3 Nights',
+      durationDays: 4,
+      location: booking?.location || booking?.destination || siteName,
+      destination: booking?.destination || booking?.location || siteName,
+      difficulty: 'Easy',
+      groupSize: `${booking?.travelers || 1} travelers`,
+      bestTime: 'All Year',
+      language: 'English',
+      category: (booking?.snapshot as any)?.category || 'Cultural',
+      rating: 5,
+      reviews: 5,
+      highlights: [],
+      itinerary: ((booking?.snapshot as any)?.itinerarySummary || []).map((item: any) => ({
+        day: item.day,
+        title: item.title,
+        description: item.description,
+      })),
+      included: (booking?.snapshot as any)?.includedSummary || [],
+      guestReviews: [],
+    };
+  }, [matchedTour, booking, siteName]);
+
   const destWeather = useMemo(() => {
     const destName = booking?.destination || booking?.location || tourObj.destination || '';
     if (!destName) return currentWeather;
@@ -325,29 +215,13 @@ export default function BookingDetailScreen() {
     return match || currentWeather;
   }, [booking?.destination, booking?.location, tourObj.destination, allDestinations, currentWeather]);
 
-  // Meeting Point & Pickup Dispatch
-  const meetingPointLocation =
-    booking?.specialRequest && /pickup|hotel|lobby|station|terminal|gate/i.test(booking.specialRequest)
-      ? booking.specialRequest
-      : `${tourObj.destination || siteName} - Central Departure Gate / Hotel Lobby`;
-
-  const scheduledPickupTime = '08:30 AM (Check-in 15m prior to departure)';
-
-  const handleOpenMaps = () => {
-    try {
-      Haptics.selectionAsync();
-    } catch {}
-    const query = encodeURIComponent(`${tourObj.destination || booking?.location || siteName} tourist meeting point`);
-    Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${query}`);
-  };
-
   // Inclusions & Highlights
-  const ticketInclusions = useMemo(() => {
+  const ticketInclusions = useMemo<string[]>(() => {
     if (tourObj.included && tourObj.included.length > 0) {
       return tourObj.included;
     }
-    if (booking?.snapshot?.includedSummary && booking.snapshot.includedSummary.length > 0) {
-      return booking.snapshot.includedSummary;
+    if ((booking?.snapshot as any)?.includedSummary && (booking?.snapshot as any)?.includedSummary.length > 0) {
+      return (booking?.snapshot as any)?.includedSummary as string[];
     }
     return [
       'Chauffeur-Driven Air-Conditioned Vehicle',
@@ -357,7 +231,7 @@ export default function BookingDetailScreen() {
       'Hotel / Terminal Pickup & Return Transfers',
       'Comprehensive Traveler Emergency Insurance',
     ];
-  }, [tourObj.included, booking?.snapshot?.includedSummary]);
+  }, [tourObj.included, booking?.snapshot]);
 
   // Interactive Packing Checklist items
   const ticketPackingList = useMemo(
@@ -465,6 +339,139 @@ export default function BookingDetailScreen() {
       await storeSetObject(`packing_ticket_${bookingRefId}`, []).catch(() => {});
     }
   }, [booking?.id, booking?.reference, id]);
+
+  if (loading) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <AppHeader showBackButton={true} title="Booking Pass" showLogo={true} logoSize="sm" />
+        <View style={styles.centerBox}>
+          <ActivityIndicator size="large" color={colors.primary} />
+          <Text style={[styles.loadingText, { color: colors.mutedText }]}>
+            Loading E-Ticket Voucher...
+          </Text>
+        </View>
+      </View>
+    );
+  }
+
+  if (fetchError || !booking) {
+    return (
+      <View style={[styles.root, { backgroundColor: colors.background }]}>
+        <AppHeader showBackButton={true} title="Booking Pass" showLogo={true} logoSize="sm" />
+        <View style={styles.centerBox}>
+          <Ionicons name="alert-circle-outline" size={54} color="#ef4444" />
+          <Text style={[styles.errorTitle, { color: colors.heading, fontFamily: headingFontFamily }]}>
+            Reservation Not Found
+          </Text>
+          <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
+            {fetchError || `Could not retrieve reservation details for reference #${id}.`}
+          </Text>
+          <TouchableOpacity testID="btn-view-my-bookings" accessibilityLabel="View My Bookings"
+            style={[styles.backBtn, { backgroundColor: colors.primary }]}
+            onPress={() => router.replace('/(tabs)/bookings')}
+          >
+            <Text style={styles.backBtnText}>View My Bookings</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  const normalizedStatus = (booking.status || 'pending').toLowerCase();
+  const isConfirmed = normalizedStatus === 'confirmed' || normalizedStatus === 'upcoming';
+  const isPending = normalizedStatus === 'pending';
+  const isRejected = normalizedStatus === 'rejected';
+  const isCancelled = normalizedStatus === 'cancelled';
+  const isExpired = normalizedStatus === 'expired';
+  const isCompleted = normalizedStatus === 'completed';
+  const hasCancelRequest = booking.cancellationRequest && booking.cancellationRequest.status === 'pending';
+  const bookingRef = booking.reference || (booking.id.length > 10 ? booking.id.slice(-8) : booking.id);
+  const qrDataUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(
+    `PASS:${bookingRef}|ID:${booking.id}|TOUR:${booking.tourId}|TRAVELERS:${booking.travelers}`
+  )}`;
+
+  // Snapshot fallback
+  const displayTitle =
+    booking.tourName &&
+    booking.tourName !== 'Curated Expedition' &&
+    booking.tourName !== 'Unknown Tour'
+      ? booking.tourName
+      : matchedTour?.name || 'Guided Tour Expedition';
+
+  const displayPrice =
+    booking.totalPrice > 0
+      ? booking.totalPrice
+      : booking.unitPrice
+      ? booking.unitPrice * Math.max(1, booking.travelers)
+      : matchedTour?.price
+      ? matchedTour.price * Math.max(1, booking.travelers)
+      : booking.totalPrice;
+
+  const tourCardConfig = (config as { tourCard?: { currency?: string } } | null)?.tourCard || {};
+  const displayCurrency =
+    booking.currency && booking.currency !== '$'
+      ? booking.currency
+      : tourCardConfig.currency || booking.currency || '$';
+
+  const isTourCatalogMissing = !matchedTour;
+
+  const handleShareVoucher = async () => {
+    if (!booking) return;
+    try {
+      try {
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      } catch {
+        // Haptics fallback
+      }
+      const effectiveHost = hostname || 'www.gujjutours.com';
+      const verificationUrl = `https://${effectiveHost}/booking/${bookingRef}`;
+      const passenger = booking.guestName || 'Valued Guest';
+      const travelDate = booking.travelDate || booking.date || 'Scheduled Departure';
+      const travelerCount = booking.travelers || booking.adults || 1;
+
+      const travelerDetails = booking.travelersList && booking.travelersList.length > 0
+        ? booking.travelersList.map((t, idx) => `  ${idx + 1}. ${t.name} (${t.type}${t.age ? `, age ${t.age}` : ''})`).join('\n')
+        : `  1. ${passenger}`;
+
+      const message = `🎟️ OFFICIAL E-TICKET VOUCHER\n` +
+        `----------------------------------------\n` +
+        `Expedition: ${displayTitle}\n` +
+        `Booking Ref: #${bookingRef}\n` +
+        `Lead Passenger: ${passenger}\n` +
+        `Travelers (${travelerCount}):\n${travelerDetails}\n` +
+        `Departure Date: ${travelDate}\n` +
+        `Total Paid: ${displayCurrency}${displayPrice}\n` +
+        `Status: ${booking.status.toUpperCase()}\n\n` +
+        `Digital Pass & QR Verification:\n${verificationUrl}\n` +
+        `Provider: ${siteName || config?.name || 'ToursApp'}`;
+
+      await Share.share({
+        title: `E-Ticket Pass: ${displayTitle} (#${bookingRef})`,
+        message,
+        url: Platform.OS === 'ios' ? verificationUrl : undefined,
+      });
+    } catch (err) {
+      if (__DEV__) {
+        console.log('[BookingDetailScreen] Share cancelled or failed:', err);
+      }
+    }
+  };
+
+  // Meeting Point & Pickup Dispatch
+  const meetingPointLocation =
+    booking?.specialRequest && /pickup|hotel|lobby|station|terminal|gate/i.test(booking.specialRequest)
+      ? booking.specialRequest
+      : `${tourObj.destination || siteName} - Central Departure Gate / Hotel Lobby`;
+
+  const scheduledPickupTime = '08:30 AM (Check-in 15m prior to departure)';
+
+  const handleOpenMaps = () => {
+    try {
+      Haptics.selectionAsync();
+    } catch {}
+    const query = encodeURIComponent(`${tourObj.destination || booking?.location || siteName} tourist meeting point`);
+    Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${query}`);
+  };
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
@@ -1117,7 +1124,7 @@ export default function BookingDetailScreen() {
           {/* Inclusions List */}
           <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>WHAT IS INCLUDED</Text>
           <View style={styles.inclusionsList}>
-            {ticketInclusions.map((item, idx) => (
+            {ticketInclusions.map((item: string, idx: number) => (
               <View key={`inc_${idx}`} style={styles.inclusionItemRow}>
                 <Ionicons name="checkmark-circle" size={16} color="#10b981" style={{ marginRight: 8, marginTop: 1 }} />
                 <Text style={[styles.inclusionItemText, { color: colors.heading }]}>{item}</Text>

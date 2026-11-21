@@ -104,8 +104,8 @@ export const SITE_REGISTRY: Record<SiteId, SiteDefinition> = {
     ],
     stagingApiUrl: "https://stagingapi.technoheaven.com",
     defaultAccentColor: "#66cce2",
-    defaultCurrency: "USD",
-    defaultCurrencySymbol: "$",
+    defaultCurrency: "AED",
+    defaultCurrencySymbol: "AED ",
     apiUrlEnvVar: "TECHNOHEAVEN_API_URL",
     apiKeyEnvVar: "TECHNOHEAVEN_API_KEY",
   },
@@ -161,6 +161,14 @@ export function resolveSiteFromHost(hostHeader?: string | null): SiteDefinition 
       site.productionHostnames.some((h) => h.replace(/^www\./, "") === withoutWww)
     ) {
       return site;
+    }
+  }
+
+  // Fallback for generic localhost development driven by SITE_ID env
+  if (host === "localhost" || host === "127.0.0.1") {
+    const envSite = process.env.SITE_ID?.trim().toLowerCase();
+    if (envSite && (envSite in SITE_REGISTRY)) {
+      return SITE_REGISTRY[envSite as SiteId];
     }
   }
 

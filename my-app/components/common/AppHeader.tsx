@@ -41,6 +41,8 @@ import { getHeadingFontFamily } from '@/lib/sectionHelpers';
 import BrandLogo from './BrandLogo';
 import NavDrawer from '@/components/NavDrawer';
 
+const GUJJU_EMBLEM_IMAGE = require('@/assets/brand-emblem-gujjutours.png');
+
 export interface AppHeaderProps {
   /** Screen title text */
   title?: string;
@@ -132,8 +134,16 @@ export default function AppHeader({
 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // Site iconography from config
+  // Site iconography and brand monogram from config / tenant identity
   const siteIcon = (config as any)?.icon || (config as any)?.site?.icon || '✈️';
+  const brandInitial =
+    siteId === 'gujjutours' || siteName?.toLowerCase().includes('gujju')
+      ? 'G'
+      : siteId === 'tripgoasia' || siteName?.toLowerCase().includes('tripgo')
+        ? 'T'
+        : siteId === 'technoheaven' || siteName?.toLowerCase().includes('techno')
+          ? 'T'
+          : siteName?.trim().charAt(0).toUpperCase() || 'G';
 
   // Safe area top padding
   const headerTopPadding = Math.max(
@@ -159,17 +169,28 @@ export default function AppHeader({
 
   if (!displayTitle) {
     if (isTabExplore) {
-      displayTitle = 'Explore Tours';
+      displayTitle = 'Explore';
       displaySubtitle = `${siteName} Catalog`;
     } else if (isTabBookings) {
-      displayTitle = 'My Bookings';
+      displayTitle = 'Bookings';
       displaySubtitle = 'Reservations & Tickets';
     } else if (isTabWishlist) {
-      displayTitle = 'My Wishlist';
+      displayTitle = 'Wishlist';
       displaySubtitle = `${wishlistCount} Saved ${wishlistCount === 1 ? 'Experience' : 'Experiences'}`;
     } else if (isTabProfile) {
-      displayTitle = 'Profile & Settings';
+      displayTitle = 'Profile';
       displaySubtitle = 'Account & Preferences';
+    }
+  } else {
+    // Standardize tab/module names for header showcase (example: 2nd logo with booking/wishlist/profile/explore)
+    if (isTabExplore && displayTitle === 'Explore Tours') {
+      displayTitle = 'Explore';
+    } else if (isTabBookings && (displayTitle === 'My Bookings' || displayTitle === 'Bookings')) {
+      displayTitle = 'Bookings';
+    } else if (isTabWishlist && (displayTitle === 'My Wishlist' || displayTitle === 'Wishlists' || displayTitle === 'Wishlist')) {
+      displayTitle = 'Wishlist';
+    } else if (isTabProfile && (displayTitle === 'Account' || displayTitle === 'Profile & Settings' || displayTitle === 'Profile')) {
+      displayTitle = 'Profile';
     }
   }
 
@@ -242,16 +263,12 @@ export default function AppHeader({
             </TouchableOpacity>
           ) : (
             <View style={styles.tabTitleRow}>
-              <View
-                style={[
-                  styles.screenEmblemBadge,
-                  {
-                    backgroundColor: `${colors.primary}18`,
-                    borderColor: `${colors.primary}30`,
-                  },
-                ]}
-              >
-                <Text style={styles.screenEmblemEmoji}>{siteIcon}</Text>
+              <View style={styles.screenEmblemBadge}>
+                <Image
+                  source={GUJJU_EMBLEM_IMAGE}
+                  style={styles.screenEmblemImage}
+                  resizeMode="contain"
+                />
               </View>
               <View style={styles.titleColumn}>
                 <Text
@@ -289,7 +306,7 @@ export default function AppHeader({
               {/* 1. Search Icon */}
               <TouchableOpacity testID="btn-search"
                 style={styles.headerActionBtn}
-                onPress={() => router.push('/(tabs)/explore')}
+                onPress={() => router.push('/search-results' as any)}
                 activeOpacity={0.7}
                 accessibilityRole="button"
                 accessibilityLabel="Search"
@@ -354,7 +371,7 @@ export default function AppHeader({
               {/* Search button on secondary screens */}
               <TouchableOpacity testID="btn-search"
                 style={styles.headerActionBtn}
-                onPress={() => router.push('/(tabs)/explore')}
+                onPress={() => router.push('/search-results' as any)}
                 activeOpacity={0.7}
                 accessibilityRole="button"
                 accessibilityLabel="Search"
@@ -420,15 +437,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   screenEmblemBadge: {
-    width: 36,
-    height: 36,
-    borderRadius: 11,
-    borderWidth: 1,
+    width: 34,
+    height: 34,
+    borderRadius: 8,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  screenEmblemEmoji: {
-    fontSize: 18,
+  screenEmblemImage: {
+    width: 34,
+    height: 34,
+    borderRadius: 8,
   },
   backButton: {
     width: 38,

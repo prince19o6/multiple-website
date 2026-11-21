@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ToursApi.Models;
 
@@ -82,14 +83,23 @@ public class HotelRepository : IHotelRepository
 
             if (!string.IsNullOrWhiteSpace(filters.Destination))
             {
-                var dest = filters.Destination.Trim();
-                var regex = new BsonRegularExpression(dest, "i");
-                filter = filter & (
-                    builder.Regex(h => h.Destination.CityName, regex) |
-                    builder.Regex(h => h.Destination.Country, regex) |
-                    builder.Regex(h => h.Destination.Address, regex) |
-                    builder.Regex(h => h.Title, regex)
-                );
+                var tokens = filters.Destination.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                var tokenFilters = new List<FilterDefinition<Hotel>>();
+                foreach (var token in tokens)
+                {
+                    if (string.IsNullOrWhiteSpace(token)) continue;
+                    var regex = new BsonRegularExpression(Regex.Escape(token), "i");
+                    tokenFilters.Add(
+                        builder.Regex(h => h.Destination.CityName, regex) |
+                        builder.Regex(h => h.Destination.Country, regex) |
+                        builder.Regex(h => h.Destination.Address, regex) |
+                        builder.Regex(h => h.Title, regex)
+                    );
+                }
+                if (tokenFilters.Count > 0)
+                {
+                    filter = filter & builder.Or(tokenFilters);
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(filters.PropertyType) && !filters.PropertyType.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -177,11 +187,12 @@ public class HotelRepository : IHotelRepository
 
         if (!string.IsNullOrWhiteSpace(filters.Destination))
         {
-            var d = filters.Destination.Trim().ToLowerInvariant();
-            qSeed = qSeed.Where(h =>
+            var tokens = filters.Destination.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Select(t => t.ToLowerInvariant()).ToList();
+            qSeed = qSeed.Where(h => tokens.Any(d =>
                 (h.Destination != null && h.Destination.CityName != null && h.Destination.CityName.ToLower().Contains(d)) ||
                 (h.Destination != null && h.Destination.Country != null && h.Destination.Country.ToLower().Contains(d)) ||
-                (h.Title != null && h.Title.ToLower().Contains(d)));
+                (h.Title != null && h.Title.ToLower().Contains(d))));
         }
 
         if (filters.StarRating.HasValue && filters.StarRating > 0)
@@ -256,7 +267,48 @@ public class HotelRepository : IHotelRepository
         {
         }
 
-        return GetDiskCatalog().FirstOrDefault(h => h.Slug != null && h.Slug.ToLower() == cleanSlug);
+        var diskMatch = GetDiskCatalog().FirstOrDefault(h => h.Slug != null && h.Slug.ToLower() == cleanSlug);
+        if (diskMatch != null) return diskMatch;
+
+        var resilientItems = ToursApi.Services.ResilientDataGenerator.GetItemsForModule("hotels");
+        var resMatch = resilientItems.FirstOrDefault(i =>
+            string.Equals(i?["slug"]?.ToString(), cleanSlug, StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(i?["id"]?.ToString(), cleanSlug, StringComparison.OrdinalIgnoreCase));
+        if (resMatch != null)
+        {
+            var title = resMatch["title"]?.ToString() ?? "Luxury Hotel";
+            var city = resMatch["city"]?.ToString() ?? "Destination";
+            var country = resMatch["country"]?.ToString() ?? "Global";
+            double price = 18000;
+            if (resMatch["price"] != null)
+            {
+                if (double.TryParse(resMatch["price"]!.ToString(), out var p)) price = p;
+            }
+            var img = resMatch["imageUrl"]?.ToString() ?? "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85";
+            return new Hotel
+            {
+                Id = resMatch["id"]?.ToString() ?? cleanSlug,
+                Slug = resMatch["slug"]?.ToString() ?? cleanSlug,
+                Title = title,
+                WebsiteId = GetWebsiteId(),
+                PricePerNight = price,
+                Currency = GetWebsiteId() == "gujjutours" ? "INR" : "USD",
+                Rating = 4.8,
+                ReviewCount = 250,
+                CoverImage = img,
+                Images = new List<string> { img },
+                Destination = new HotelDestination
+                {
+                    CityName = city,
+                    Country = country,
+                    Address = $"{city}, {country}"
+                },
+                Description = $"{title} offers world-class luxury and hospitality in {city}.",
+                Status = "active"
+            };
+        }
+
+        return null;
     }
 
     public async Task<HotelCollectionsResponse> GetCollectionsAsync()

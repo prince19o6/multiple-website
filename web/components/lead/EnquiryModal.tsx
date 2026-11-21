@@ -2,10 +2,12 @@
 
 import React, { useState } from "react";
 
-interface EnquiryModalProps {
+export interface EnquiryModalProps {
   isOpen: boolean;
   onClose: () => void;
-  serviceName: string;
+  serviceName?: string;
+  serviceTitle?: string;
+  serviceType?: string;
   defaultDestination?: string;
   siteId?: string;
   currencySymbol?: string;
@@ -15,10 +17,13 @@ export default function EnquiryModal({
   isOpen,
   onClose,
   serviceName,
+  serviceTitle,
+  serviceType,
   defaultDestination = "",
   siteId = "gujjutours",
   currencySymbol = "₹",
 }: EnquiryModalProps) {
+  const activeServiceName = serviceName || serviceTitle || serviceType || "Travel Service";
   const safeDefaultDest = typeof defaultDestination === "object" && defaultDestination !== null
     ? ((defaultDestination as any).cityName || (defaultDestination as any).address || (defaultDestination as any).country || "")
     : String(defaultDestination || "");
@@ -50,14 +55,14 @@ export default function EnquiryModal({
         email: email.trim(),
         phone: phone.trim(),
         tourId: 0,
-        tourName: `${serviceName} Custom Enquiry: ${destination || "General"}`,
+        tourName: `${activeServiceName} Custom Enquiry: ${destination || "General"}`,
         travelDate: travelDate || new Date().toISOString().split("T")[0],
         startDate: travelDate || new Date().toISOString().split("T")[0],
         endDate: travelDate || new Date().toISOString().split("T")[0],
         travelers: passengers,
         adults: passengers,
         children: 0,
-        specialRequest: `Service: ${serviceName} | Destination: ${destination} | Details: ${notes}`,
+        specialRequest: `Service: ${activeServiceName} | Destination: ${destination} | Details: ${notes}`,
         status: "pending_quotation",
         paymentStatus: "unpaid",
         currency: currencySymbol,
@@ -91,11 +96,26 @@ export default function EnquiryModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+    >
       <div className="relative w-full max-w-lg bg-surface rounded-3xl p-6 sm:p-8 shadow-soft-xl border border-border text-foreground animate-fadeIn">
         <button
           type="button"
           onClick={onClose}
+          aria-label="Go Back"
+          className="absolute top-4 left-4 h-8 px-3 rounded-full bg-surface-2 text-foreground-muted hover:text-foreground flex items-center gap-1 text-xs font-bold transition-colors cursor-pointer"
+        >
+          ← Back
+        </button>
+
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
           className="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-2 text-foreground-muted hover:text-foreground flex items-center justify-center transition-colors cursor-pointer"
         >
           ✕
@@ -226,6 +246,14 @@ export default function EnquiryModal({
                 className="w-full py-3 rounded-xl bg-primary hover:bg-primary-dark text-primary-contrast font-bold text-sm tracking-wide shadow-soft-md hover:shadow-soft-lg transition-all disabled:opacity-50 mt-2 cursor-pointer"
               >
                 {isSubmitting ? "Submitting Request..." : "Request Free Quotation →"}
+              </button>
+
+              <button
+                type="button"
+                onClick={onClose}
+                className="w-full py-2.5 rounded-xl border border-border text-foreground font-semibold text-xs hover:bg-surface-2 transition-colors cursor-pointer mt-1"
+              >
+                Cancel &amp; Go Back
               </button>
             </form>
           </div>

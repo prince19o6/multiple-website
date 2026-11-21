@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import type { Metadata } from "next";
@@ -9,6 +10,7 @@ import { GoogleFontLoader } from "@/components/GoogleFontLoader";
 import { ThemeStyleInjector } from "@/components/ThemeStyleInjector";
 import { SiteConfigProvider } from "@/lib/SiteConfigContext";
 import { SiteProvider } from "@/lib/SiteContext";
+import { CurrencyProvider } from "@/lib/CurrencyContext";
 import { AuthProvider } from "@/lib/auth/AuthContext";
 import { ModuleProvider } from "@/lib/context/ModuleContext";
 import { fetchSiteConfig } from "@/lib/api";
@@ -218,33 +220,41 @@ export default async function SiteLayout({ children, params }: Props) {
   return (
     <SiteProvider site={siteDef}>
       <SiteConfigProvider config={config}>
-        <AuthProvider initialSiteId={siteDef.siteId}>
-          <ModuleProvider>
-            {/* Inject JSON-LD Structured Schema */}
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            {/* Synchronous inline script prevents flash of wrong theme (zero FOUC) */}
-            <script
-              id={`theme-init-${siteDef.siteId}`}
-              dangerouslySetInnerHTML={{
-                __html: `(function(){try{var c=document.cookie.match(/(?:^|;\\s*)theme_${siteDef.siteId}=([^;]+)/);var m=c?c[1]:'${config.defaultMode || "light"}';if(m==='dark'){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.classList.remove('dark');document.documentElement.style.colorScheme='light';}}catch(e){}})();`,
-              }}
-            />
-            <ThemeStyleInjector config={config} />
-            <DynamicFontLoader font={config.dynamic?.font ?? null} />
-            <GoogleFontLoader config={config} />
-            <div
-              className={`min-h-screen flex flex-col ${isDark ? "dark" : ""}`}
-              style={{ colorScheme: isDark ? "dark" : "light" }}
-            >
-              <Navigation config={config} />
-              <div className="flex-1">{children}</div>
-              <Footer config={config} />
-            </div>
-          </ModuleProvider>
-        </AuthProvider>
+        <CurrencyProvider
+          siteId={siteDef.siteId}
+          defaultCurrencyCode={config.site?.currency?.code || (config as any)?.currency?.code}
+        >
+          <AuthProvider initialSiteId={siteDef.siteId}>
+            <ModuleProvider>
+              {/* Inject JSON-LD Structured Schema */}
+              <Script
+                id={`json-ld-${siteDef.siteId}`}
+                type="application/ld+json"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+              />
+              {/* Synchronous inline script prevents flash of wrong theme (zero FOUC) */}
+              <Script
+                id={`theme-init-${siteDef.siteId}`}
+                strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `(function(){try{var c=document.cookie.match(/(?:^|;\\s*)theme_${siteDef.siteId}=([^;]+)/);var m=c?c[1]:'${config.defaultMode || "light"}';if(m==='dark'){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.classList.remove('dark');document.documentElement.style.colorScheme='light';}}catch(e){}})();`,
+                }}
+              />
+              <ThemeStyleInjector config={config} />
+              <DynamicFontLoader font={config.dynamic?.font ?? null} />
+              <GoogleFontLoader config={config} />
+              <div
+                className={`min-h-screen flex flex-col ${isDark ? "dark" : ""}`}
+                style={{ colorScheme: isDark ? "dark" : "light" }}
+              >
+                <Navigation config={config} />
+                <div className="flex-1">{children}</div>
+                <Footer config={config} />
+              </div>
+            </ModuleProvider>
+          </AuthProvider>
+        </CurrencyProvider>
       </SiteConfigProvider>
     </SiteProvider>
   );

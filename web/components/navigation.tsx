@@ -12,6 +12,8 @@ import {
 } from "@/lib/adminApi";
 import TopBar from "./navigation/TopBar";
 import AuthModal from "./auth/AuthModal";
+import GlobalSearchModal from "./search/GlobalSearchModal";
+import { useCurrency } from "@/lib/CurrencyContext";
 
 interface NavigationProps {
   config?: MergedWebsiteConfig | SiteConfig | any;
@@ -58,10 +60,11 @@ export default function Navigation({ config }: NavigationProps) {
   const [cartCount, setCartCount] = useState(0);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authModalTab, setAuthModalTab] = useState<"customer" | "register" | "admin">("customer");
+  const [searchModalOpen, setSearchModalOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
   const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState("INR");
+  const { currencyCode: selectedCurrency, setCurrency } = useCurrency();
   const [selectedLang, setSelectedLang] = useState("EN");
 
   const userMenuRef = useRef<HTMLDivElement>(null);
@@ -98,6 +101,18 @@ export default function Navigation({ config }: NavigationProps) {
       window.removeEventListener("tours_open_register", handleOpenRegister);
       window.removeEventListener("tours_open_login", handleOpenLogin);
     };
+  }, []);
+
+  // Quick keyboard shortcut (Cmd+K / Ctrl+K) for global search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchModalOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   // Sync user session and cart count
@@ -218,25 +233,9 @@ export default function Navigation({ config }: NavigationProps) {
     };
   }, [refreshUserAndCart]);
 
-  // Initialize currency from localStorage or default to INR
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedCurrency = localStorage.getItem("tours_currency");
-      if (savedCurrency) {
-        setSelectedCurrency(savedCurrency.toUpperCase());
-      }
-    }
-  }, []);
-
   const handleSelectCurrency = (currCode: string) => {
-    setSelectedCurrency(currCode);
+    setCurrency(currCode);
     setCurrencyMenuOpen(false);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("tours_currency", currCode);
-      window.dispatchEvent(
-        new CustomEvent("tours_currency_changed", { detail: { currency: currCode } })
-      );
-    }
   };
 
   // Click outside to close dropdowns
@@ -278,6 +277,7 @@ export default function Navigation({ config }: NavigationProps) {
       config?.logo;
 
   const siteName = config?.site?.name || config?.name || "Gujju Tours";
+  const siteId = config?.siteId || config?.site?.siteId || config?.site?.id || "gujjutours";
 
   // Dynamic languages from SiteConfig site.languages or fallback
   const siteLangs = config?.site?.languages;
@@ -363,8 +363,31 @@ export default function Navigation({ config }: NavigationProps) {
             )}
           </Link>
 
-          {/* Desktop Right Action Area: MICE | All Services ⌵ | [Banknote] INR ⌵ | 🛒 | [ Login ] */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+          {/* Desktop Right Action Area: Search | MICE | All Services ⌵ | [Banknote] INR ⌵ | 🛒 | [ Login ] */}
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7 shrink-0">
+            {/* Quick Search Button */}
+            <button
+              type="button"
+              onClick={() => setSearchModalOpen(true)}
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-border bg-surface-2/70 hover:bg-surface-2 text-foreground-muted hover:text-foreground text-xs font-semibold transition-all shadow-soft-sm cursor-pointer"
+              aria-label="Open Search"
+              title="Search catalogue"
+            >
+              <svg
+                className="w-4 h-4 text-foreground-muted"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>Search...</span>
+            </button>
+
             {/* 1. MICE Link */}
             <Link
               href="/en/contact-us?subject=MICE"
@@ -655,8 +678,30 @@ export default function Navigation({ config }: NavigationProps) {
             )}
           </div>
 
-          {/* Mobile Right Action Bar: Currency, Cart, Login/User Profile, Hamburger */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 lg:hidden shrink-0">
+          {/* Mobile Right Action Bar: Search, Currency, Cart, Login/User Profile, Hamburger */}
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden shrink-0">
+            {/* Mobile Search Icon */}
+            <button
+              type="button"
+              onClick={() => setSearchModalOpen(true)}
+              className="w-9 h-9 rounded-full flex items-center justify-center border border-border text-foreground hover:bg-surface-2 transition-colors cursor-pointer"
+              aria-label="Open Search"
+              title="Search"
+            >
+              <svg
+                className="w-4 h-4 text-foreground"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+
             {/* Mobile Currency Indicator */}
             <button
               type="button"
@@ -1062,6 +1107,14 @@ export default function Navigation({ config }: NavigationProps) {
           setCurrentUser(user);
           refreshUserAndCart();
         }}
+      />
+
+      {/* 5. Global Search Modal */}
+      <GlobalSearchModal
+        isOpen={searchModalOpen}
+        onClose={() => setSearchModalOpen(false)}
+        siteId={siteId}
+        primaryColor={primary}
       />
     </div>
   );

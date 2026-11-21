@@ -80,9 +80,10 @@ public class VisaRepository : IVisaRepository
             var builder = Builders<Visa>.Filter;
             var filter = builder.Eq(v => v.Status, "Active");
 
-            if (!string.IsNullOrWhiteSpace(filters.Country))
+            var searchKey = !string.IsNullOrWhiteSpace(filters.Search) ? filters.Search : filters.Country;
+            if (!string.IsNullOrWhiteSpace(searchKey))
             {
-                var cleanCountry = System.Text.RegularExpressions.Regex.Replace(filters.Country.Trim(), @"\s*\([^)]*\)", "").Trim();
+                var cleanCountry = System.Text.RegularExpressions.Regex.Replace(searchKey.Trim(), @"\s*\([^)]*\)", "").Trim();
                 var countryPattern = System.Text.RegularExpressions.Regex.Escape(cleanCountry);
                 var regex = new BsonRegularExpression(countryPattern, "i");
                 filter = filter & (
@@ -99,9 +100,10 @@ public class VisaRepository : IVisaRepository
                 filter = filter & builder.Eq(v => v.CountryCode, code);
             }
 
-            if (!string.IsNullOrWhiteSpace(filters.VisaType) && !filters.VisaType.Equals("all", StringComparison.OrdinalIgnoreCase))
+            var typeFilter = !string.IsNullOrWhiteSpace(filters.VisaType) ? filters.VisaType : filters.Category;
+            if (!string.IsNullOrWhiteSpace(typeFilter) && !typeFilter.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
-                var vType = filters.VisaType.Trim().ToLowerInvariant();
+                var vType = typeFilter.Trim().ToLowerInvariant();
                 filter = filter & builder.Eq(v => v.VisaType, vType);
             }
 

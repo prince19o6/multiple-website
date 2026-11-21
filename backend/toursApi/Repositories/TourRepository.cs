@@ -327,9 +327,7 @@ public class TourRepository : ITourRepository
             string.Equals(t.Slug, id, StringComparison.OrdinalIgnoreCase) ||
             (int.TryParse(id, out int nid) && t.TourNumericId == nid));
 
-        if (match != null) return match;
-
-        return ResilientDataGenerator.GetTourDetail(id, siteId);
+        return match;
     }
 
     public async Task<Tour?> GetBySlugAsync(string slug)
@@ -365,7 +363,42 @@ public class TourRepository : ITourRepository
         var match = catalog.FirstOrDefault(t => string.Equals(t.Slug, slug, StringComparison.OrdinalIgnoreCase));
         if (match != null) return match;
 
-        return ResilientDataGenerator.GetTourDetail(slug, siteId);
+        var resilientItems = ToursApi.Services.ResilientDataGenerator.GetItemsForModule("tours");
+        var resMatch = resilientItems.FirstOrDefault(i =>
+            string.Equals(i?["slug"]?.ToString(), slug, StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(i?["id"]?.ToString(), slug, StringComparison.OrdinalIgnoreCase));
+        if (resMatch != null)
+        {
+            var title = resMatch["title"]?.ToString() ?? "Signature Tour Experience";
+            var city = resMatch["city"]?.ToString() ?? "Destination";
+            var country = resMatch["country"]?.ToString() ?? "Global";
+            double price = 3500;
+            if (resMatch["price"] != null && double.TryParse(resMatch["price"]!.ToString(), out var p)) price = p;
+            var img = resMatch["imageUrl"]?.ToString() ?? "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85";
+
+            return new Tour
+            {
+                Id = resMatch["id"]?.ToString() ?? slug,
+                Slug = resMatch["slug"]?.ToString() ?? slug,
+                Name = title,
+                Title = title,
+                WebsiteId = siteId,
+                Destination = city,
+                Location = $"{city}, {country}",
+                Country = country,
+                Price = price,
+                Currency = siteId == "gujjutours" ? "INR" : "USD",
+                Rating = 4.9,
+                Reviews = 500,
+                Image = img,
+                Gallery = new List<string> { img },
+                Duration = resMatch["duration"]?.ToString() ?? "Full Day",
+                Description = $"{title} offers an exceptional guided journey through {city} with verified local experts.",
+                Highlights = new List<string> { "Guided Experience", "Hotel Pickup & Drop", "All Entry Tickets Included", "English Speaking Guide" }
+            };
+        }
+
+        return null;
     }
 
     public async Task<Tour?> GetByNumericIdAsync(int numericId)
@@ -400,10 +433,7 @@ public class TourRepository : ITourRepository
         }
 
         var catalog = GetDiskCatalog();
-        var match = catalog.FirstOrDefault(t => t.TourNumericId == numericId);
-        if (match != null) return match;
-
-        return ResilientDataGenerator.GetTourDetail(numericId.ToString(), siteId);
+        return catalog.FirstOrDefault(t => t.TourNumericId == numericId);
     }
 
     public async Task CreateAsync(Tour tour)
@@ -466,16 +496,25 @@ public class TourRepository : ITourRepository
 
             if (!string.IsNullOrWhiteSpace(q))
             {
-                var pattern = Regex.Escape(q);
-                var regex = new MongoDB.Bson.BsonRegularExpression(pattern, "i");
-
-                filter &= filterBuilder.Or(
-                    filterBuilder.Regex(t => t.Name, regex),
-                    filterBuilder.Regex(t => t.Description, regex),
-                    filterBuilder.Regex(t => t.Category, regex),
-                    filterBuilder.Regex(t => t.Destination, regex),
-                    filterBuilder.Regex(t => t.Location, regex)
-                );
+                var tokens = q.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                var tokenFilters = new List<FilterDefinition<Tour>>();
+                foreach (var token in tokens)
+                {
+                    if (string.IsNullOrWhiteSpace(token)) continue;
+                    var pattern = Regex.Escape(token);
+                    var regex = new MongoDB.Bson.BsonRegularExpression(pattern, "i");
+                    tokenFilters.Add(filterBuilder.Or(
+                        filterBuilder.Regex(t => t.Name, regex),
+                        filterBuilder.Regex(t => t.Description, regex),
+                        filterBuilder.Regex(t => t.Category, regex),
+                        filterBuilder.Regex(t => t.Destination, regex),
+                        filterBuilder.Regex(t => t.Location, regex)
+                    ));
+                }
+                if (tokenFilters.Count > 0)
+                {
+                    filter &= filterBuilder.Or(tokenFilters);
+                }
             }
 
             if (minPrice.HasValue)
@@ -525,14 +564,15 @@ public class TourRepository : ITourRepository
         var catalog = GetDiskCatalog().AsEnumerable();
         if (!string.IsNullOrWhiteSpace(q))
         {
-            var cleanQ = q.Trim().ToLowerInvariant();
-            catalog = catalog.Where(t =>
+            var tokens = q.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Select(t => t.ToLowerInvariant()).ToList();
+            catalog = catalog.Where(t => tokens.Any(cleanQ =>
                 (t.Name != null && t.Name.ToLowerInvariant().Contains(cleanQ)) ||
                 (t.Description != null && t.Description.ToLowerInvariant().Contains(cleanQ)) ||
                 (t.Category != null && t.Category.ToLowerInvariant().Contains(cleanQ)) ||
                 (t.Destination != null && t.Destination.ToLowerInvariant().Contains(cleanQ)) ||
                 (t.Location != null && t.Location.ToLowerInvariant().Contains(cleanQ))
-            );
+            ));
         }
 
         if (minPrice.HasValue) catalog = catalog.Where(t => t.Price >= minPrice.Value);

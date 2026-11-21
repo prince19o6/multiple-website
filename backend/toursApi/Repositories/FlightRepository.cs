@@ -320,6 +320,49 @@ public class FlightRepository : IFlightRepository
             .ToList();
     }
 
+    public async Task<List<FlightAirport>> GetAllAirportsAsync()
+    {
+        var airports = new Dictionary<string, FlightAirport>(StringComparer.OrdinalIgnoreCase);
+
+        try
+        {
+            var flights = await _flights.Find(Builders<Flight>.Filter.Empty).Limit(200).ToListAsync();
+            foreach (var f in flights)
+            {
+                if (f.FromAirport != null && !string.IsNullOrWhiteSpace(f.FromAirport.Code))
+                    airports[f.FromAirport.Code] = f.FromAirport;
+                if (f.ToAirport != null && !string.IsNullOrWhiteSpace(f.ToAirport.Code))
+                    airports[f.ToAirport.Code] = f.ToAirport;
+            }
+        }
+        catch { }
+
+        if (airports.Count == 0)
+        {
+            foreach (var f in GetDiskCatalog())
+            {
+                if (f.FromAirport != null && !string.IsNullOrWhiteSpace(f.FromAirport.Code))
+                    airports[f.FromAirport.Code] = f.FromAirport;
+                if (f.ToAirport != null && !string.IsNullOrWhiteSpace(f.ToAirport.Code))
+                    airports[f.ToAirport.Code] = f.ToAirport;
+            }
+        }
+
+        if (airports.Count == 0)
+        {
+            airports["DEL"] = new FlightAirport { Code = "DEL", City = "Delhi", Name = "Indira Gandhi International Airport", Country = "India", Terminal = "T3" };
+            airports["BOM"] = new FlightAirport { Code = "BOM", City = "Mumbai", Name = "Chhatrapati Shivaji Maharaj Intl", Country = "India", Terminal = "T2" };
+            airports["DXB"] = new FlightAirport { Code = "DXB", City = "Dubai", Name = "Dubai International Airport", Country = "UAE", Terminal = "T3" };
+            airports["AMD"] = new FlightAirport { Code = "AMD", City = "Ahmedabad", Name = "Sardar Vallabhbhai Patel Intl", Country = "India", Terminal = "T2" };
+            airports["STV"] = new FlightAirport { Code = "STV", City = "Surat", Name = "Surat International Airport", Country = "India", Terminal = "T1" };
+            airports["BKK"] = new FlightAirport { Code = "BKK", City = "Bangkok", Name = "Suvarnabhumi Airport", Country = "Thailand", Terminal = "Main" };
+            airports["SIN"] = new FlightAirport { Code = "SIN", City = "Singapore", Name = "Singapore Changi Airport", Country = "Singapore", Terminal = "T3" };
+            airports["LHR"] = new FlightAirport { Code = "LHR", City = "London", Name = "London Heathrow Airport", Country = "United Kingdom", Terminal = "T5" };
+        }
+
+        return airports.Values.OrderBy(a => a.City).ToList();
+    }
+
     public async Task CreateFlightAsync(Flight flight)
     {
         flight.CreatedAt = DateTime.UtcNow;

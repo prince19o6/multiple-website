@@ -1,18 +1,21 @@
 /**
  * app/search-results.tsx
  *
- * Full-featured Search Results screen for targeted query discovery.
+ * Full-featured Global Search Results screen for targeted query discovery across all verticals:
+ *   - Tours & Sightseeing
+ *   - Hotels & Luxury Stays
+ *   - Curated Holiday Packages
+ *
  * Features:
- *   - Safe-area-aware header with back button, real-time query input, and quick clear
- *   - Filter modal integration with active filter badge
- *   - Quick sort & filter chips under header
- *   - Automatic saving of queries to website-scoped recent searches
- *   - TanStack Query connected via useTours using canonical siteId and backend sorting
- *   - Result count status banner with quick reset
- *   - Loading state: SkeletonLoader
- *   - Error state with descriptive message and Retry button
- *   - Truly empty state with options to clear search or browse all tours
- *   - FlatList rendering brand-tailored tour cards with instant navigation
+ *   - Multi-tenant aware: Gujju Tours, TripGoAsia, Technoheaven
+ *   - Deep-linking & navigation aware: accepts `q`, `searchTerm`, `destination`, `service`, `type`, `category`
+ *   - Live vertical tabs: All Results, Tours, Hotels, Packages
+ *   - Real-time search query input with focus, auto-clearing, and instant debounced updates
+ *   - Unified item rendering: TourCard for tours, ModuleItemCard for hotels and packages
+ *   - Interactive filter modal with sorting & price filtering
+ *   - Automatic saving of queries to recent searches
+ *   - Pull-to-refresh invalidating all vertical queries
+ *   - Loading skeletons and rich empty states with 1-tap reset
  */
 
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
@@ -32,6 +35,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import { useQuery } from '@tanstack/react-query';
+
 import { useSite, useSiteConfig } from '@/store/SiteConfigContext';
 import { useColors } from '@/store/ThemeContext';
 import { useTours } from '@/hooks/useTours';
@@ -43,9 +48,12 @@ import EmptyState from '@/components/EmptyState';
 import TourCard from '@/components/TourCard';
 import AdventureTourCard from '@/components/AdventureTourCard';
 import LuxuryTourCard from '@/components/LuxuryTourCard';
+import { ModuleItemCard } from '@/components/cards/ModuleItemCard';
+import { MobileEnquirySheet } from '@/components/common/MobileEnquirySheet';
 import { resolveTourCardVariant } from '@/lib/tourCardResolver';
 import BrandLogo from '@/components/common/BrandLogo';
 import FilterModal from '@/components/FilterModal';
+import { fetchHotels, fetchPackages, type ModuleFeaturedItem } from '@/services/api';
 import type { Tour, TourFilterState, TourSearchParams, TourSortOption } from '@/types';
 import { tourHref } from '@/lib/navigation';
 
@@ -57,8 +65,34 @@ const SORT_LABELS: Record<TourSortOption, string> = {
   newest: 'Newest',
 };
 
+type SearchModuleTab = 'all' | 'tours' | 'hotels' | 'packages';
+
+interface UnifiedSearchItem {
+  id: string;
+  moduleType: 'tours' | 'hotels' | 'packages';
+  tourData?: Tour;
+  moduleData?: ModuleFeaturedItem;
+}
+
+const blurActiveElement = () => {
+  if (Platform.OS === 'web' && typeof document !== 'undefined') {
+    try {
+      (document.activeElement as HTMLElement)?.blur?.();
+    } catch {}
+  }
+};
+
 export default function SearchResultsScreen() {
-  const { q } = useLocalSearchParams<{ q?: string }>();
+  const params = useLocalSearchParams<{
+    q?: string;
+    searchTerm?: string;
+    search?: string;
+    destination?: string;
+    service?: string;
+    type?: string;
+    category?: string;
+  }>();
+
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const colors = useColors();
@@ -66,13 +100,41 @@ export default function SearchResultsScreen() {
   const { siteId } = useSite();
   const headingFontFamily = getHeadingFontFamily(config);
 
-  const [searchTerm, setSearchTerm] = useState(q || '');
+  // Initialize search input from any passed parameter
+  const initialQuery = useMemo(() => {
+    return (params.q || params.searchTerm || params.search || params.destination || '').trim();
+  }, [params.q, params.searchTerm, params.search, params.destination]);
+
+  // Determine initial module tab
+  const initialTab = useMemo<SearchModuleTab>(() => {
+    const raw = (params.service || params.type || '').toLowerCase();
+    if (raw.includes('hotel') || raw.includes('stay')) return 'hotels';
+    if (raw.includes('package') || raw.includes('holiday')) return 'packages';
+    if (raw.includes('tour') || raw.includes('activit') || raw.includes('attraction')) return 'tours';
+    return 'all';
+  }, [params.service, params.type]);
+
+  const [searchTerm, setSearchTerm] = useState(initialQuery);
+  const [debouncedTerm, setDebouncedTerm] = useState(initialQuery);
+  const [activeTab, setActiveTab] = useState<SearchModuleTab>(initialTab);
   const [refreshing, setRefreshing] = useState(false);
   const [filterModalVisible, setFilterModalVisible] = useState(false);
 
+  // Debounce search input by 280ms to avoid flooding backend requests while typing
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedTerm(searchTerm);
+    }, 280);
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  // Enquiry sheet for hotels/packages
+  const [enquiryVisible, setEnquiryVisible] = useState(false);
+  const [enquiryService, setEnquiryService] = useState('Travel Inquiry');
+
   const [filterState, setFilterState] = useState<TourFilterState>({
     sort: 'featured',
-    category: 'All',
+    category: params.category || 'All',
     minPrice: undefined,
     maxPrice: undefined,
     duration: undefined,
@@ -83,33 +145,91 @@ export default function SearchResultsScreen() {
 
   // Save search term on mount if present
   useEffect(() => {
-    if (q && q.trim()) {
-      addSearch(q.trim());
+    if (initialQuery) {
+      addSearch(initialQuery);
     }
-  }, [q, addSearch]);
+  }, [initialQuery, addSearch]);
 
+  // Sync tab if route params change
+  useEffect(() => {
+    if (initialTab && initialTab !== 'all') {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab]);
+
+  // Sync search input if param changes
+  useEffect(() => {
+    if (initialQuery && initialQuery !== searchTerm) {
+      setSearchTerm(initialQuery);
+    }
+  }, [initialQuery]);
+
+  // Query filters for tours
   const queryFilters = useMemo<TourSearchParams>(() => {
     return {
-      q: searchTerm.trim() || undefined,
+      q: debouncedTerm.trim() || undefined,
       sort: filterState.sort !== 'featured' ? filterState.sort : undefined,
       category: filterState.category !== 'All' ? filterState.category : undefined,
       minPrice: filterState.minPrice,
       maxPrice: filterState.maxPrice,
       difficulty: filterState.difficulty,
     };
-  }, [searchTerm, filterState]);
+  }, [debouncedTerm, filterState]);
 
-  const { tours, isLoading, isError, error, refetch } = useTours(siteId, queryFilters);
+  // 1. Tours data query
+  const { tours, isLoading: toursLoading, isError: toursError, error: tourErrorObj, refetch: refetchTours } = useTours(siteId, queryFilters);
 
+  // 2. Hotels data query
+  const {
+    data: hotelsRes,
+    isLoading: hotelsLoading,
+    refetch: refetchHotels,
+  } = useQuery({
+    queryKey: ['searchHotels', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchHotels(
+        {
+          destination: debouncedTerm.trim() || undefined,
+          search: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
+  // 3. Packages data query
+  const {
+    data: packagesRes,
+    isLoading: packagesLoading,
+    refetch: refetchPackages,
+  } = useQuery({
+    queryKey: ['searchPackages', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchPackages(
+        {
+          destination: debouncedTerm.trim() || undefined,
+          search: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
+  // Refresh handler across all verticals
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
-      await refetch();
+      await Promise.all([refetchTours(), refetchHotels(), refetchPackages()]);
     } finally {
       setRefreshing(false);
     }
-  }, [refetch]);
+  }, [refetchTours, refetchHotels, refetchPackages]);
 
+  // Active filter count calculation
   const activeFiltersCount = useMemo(() => {
     let count = 0;
     if (filterState.sort !== 'featured') count += 1;
@@ -133,9 +253,7 @@ export default function SearchResultsScreen() {
   const clearFilters = () => {
     try {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-    } catch {
-      // Haptics fallback
-    }
+    } catch {}
     setSearchTerm('');
     setFilterState({
       sort: 'featured',
@@ -147,10 +265,10 @@ export default function SearchResultsScreen() {
     });
   };
 
+  // Filtered Tours
   const filteredTours = useMemo(() => {
     let list = [...tours];
-
-    const term = searchTerm.trim().toLowerCase();
+    const term = debouncedTerm.trim().toLowerCase();
     if (term) {
       list = list.filter((t) => {
         const name = (t.name || '').toLowerCase();
@@ -183,23 +301,6 @@ export default function SearchResultsScreen() {
       list = list.filter((t) => t.price <= (filterState.maxPrice ?? Infinity));
     }
 
-    if (filterState.duration) {
-      const dur = filterState.duration;
-      list = list.filter((t) => {
-        const dStr = (t.duration || '').toLowerCase();
-        const numDays = parseInt(dStr, 10) || 1;
-        if (dur === '1-3') return numDays >= 1 && numDays <= 3;
-        if (dur === '4-7') return numDays >= 4 && numDays <= 7;
-        if (dur === '8+') return numDays >= 8;
-        return true;
-      });
-    }
-
-    if (filterState.difficulty) {
-      const targetDiff = filterState.difficulty.toLowerCase();
-      list = list.filter((t) => (t.difficulty || '').toLowerCase() === targetDiff);
-    }
-
     if (filterState.sort === 'price-low') {
       list.sort((a, b) => a.price - b.price);
     } else if (filterState.sort === 'price-high') {
@@ -209,9 +310,63 @@ export default function SearchResultsScreen() {
     }
 
     return list;
-  }, [tours, searchTerm, filterState]);
+  }, [tours, debouncedTerm, filterState]);
 
-  const renderTourCard = ({ item }: { item: Tour }) => {
+  // Filtered Hotels
+  const filteredHotels = useMemo(() => {
+    let list = hotelsRes?.data || [];
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((h) => {
+        const title = (h.title || '').toLowerCase();
+        const city = (h.city || '').toLowerCase();
+        const loc = (h.location || '').toLowerCase();
+        return title.includes(term) || city.includes(term) || loc.includes(term);
+      });
+    }
+    return list;
+  }, [hotelsRes, debouncedTerm]);
+
+  // Filtered Packages
+  const filteredPackages = useMemo(() => {
+    let list = packagesRes?.data || [];
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((p) => {
+        const title = (p.title || '').toLowerCase();
+        const city = (p.city || '').toLowerCase();
+        const loc = (p.location || '').toLowerCase();
+        return title.includes(term) || city.includes(term) || loc.includes(term);
+      });
+    }
+    return list;
+  }, [packagesRes, debouncedTerm]);
+
+  // Unified items list for FlatList
+  const unifiedItems = useMemo<UnifiedSearchItem[]>(() => {
+    if (activeTab === 'tours') {
+      return filteredTours.map((t) => ({ id: `tour_${t.id}`, moduleType: 'tours', tourData: t }));
+    }
+    if (activeTab === 'hotels') {
+      return filteredHotels.map((h) => ({ id: `hotel_${h.id}`, moduleType: 'hotels', moduleData: h }));
+    }
+    if (activeTab === 'packages') {
+      return filteredPackages.map((p) => ({ id: `pkg_${p.id}`, moduleType: 'packages', moduleData: p }));
+    }
+
+    // All active: Interleave matching items
+    const combined: UnifiedSearchItem[] = [];
+    filteredTours.forEach((t) => combined.push({ id: `tour_${t.id}`, moduleType: 'tours', tourData: t }));
+    filteredHotels.forEach((h) => combined.push({ id: `hotel_${h.id}`, moduleType: 'hotels', moduleData: h }));
+    filteredPackages.forEach((p) => combined.push({ id: `pkg_${p.id}`, moduleType: 'packages', moduleData: p }));
+    return combined;
+  }, [activeTab, filteredTours, filteredHotels, filteredPackages]);
+
+  // Check if primary loading is underway
+  const isLoading = toursLoading || hotelsLoading || packagesLoading;
+
+  // Render Tour Card
+  const renderTourCard = (item: Tour) => {
     const href = tourHref(item);
     const cardVariant = resolveTourCardVariant(config);
 
@@ -272,6 +427,79 @@ export default function SearchResultsScreen() {
     );
   };
 
+  // Render unified row item
+  const renderItem = ({ item }: { item: UnifiedSearchItem }) => {
+    if (item.moduleType === 'tours' && item.tourData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#3b82f615' }]}>
+                <Ionicons name="compass-outline" size={13} color="#2563eb" />
+                <Text style={[styles.moduleBadgeText, { color: '#2563eb' }]}>TOUR</Text>
+              </View>
+            </View>
+          )}
+          {renderTourCard(item.tourData)}
+        </View>
+      );
+    }
+
+    if (item.moduleType === 'hotels' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#10b98115' }]}>
+                <Ionicons name="business-outline" size={13} color="#059669" />
+                <Text style={[styles.moduleBadgeText, { color: '#059669' }]}>HOTEL</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="hotels"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                setEnquiryService(`Hotel Stay: ${item.moduleData?.title}`);
+                setEnquiryVisible(true);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
+    if (item.moduleType === 'packages' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#8b5cf615' }]}>
+                <Ionicons name="map-outline" size={13} color="#7c3aed" />
+                <Text style={[styles.moduleBadgeText, { color: '#7c3aed' }]}>PACKAGE</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="packages"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                setEnquiryService(`Holiday Package: ${item.moduleData?.title}`);
+                setEnquiryVisible(true);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
       {/* ─── Top Search Header ─── */}
@@ -288,9 +516,11 @@ export default function SearchResultsScreen() {
           },
         ]}
       >
-        <TouchableOpacity testID="btn-navigate"
+        <TouchableOpacity
+          testID="btn-navigate"
           style={styles.backBtn}
           onPress={() => {
+            blurActiveElement();
             if (router.canGoBack()) {
               router.back();
             } else {
@@ -313,17 +543,21 @@ export default function SearchResultsScreen() {
           <Ionicons name="search" size={18} color={colors.primary} />
           <TextInput
             style={[styles.input, { color: colors.text }]}
-            placeholder="Search destination, tour, adventure..."
+            placeholder="Search tours, hotels, packages, destinations..."
             placeholderTextColor={colors.mutedText}
             value={searchTerm}
             onChangeText={setSearchTerm}
-            onSubmitEditing={handleSearchSubmit}
+            onSubmitEditing={() => {
+              blurActiveElement();
+              handleSearchSubmit();
+            }}
             returnKeyType="search"
             autoCorrect={false}
             accessibilityLabel="Search query"
           />
           {searchTerm.length > 0 && (
-            <TouchableOpacity testID="btn-close"
+            <TouchableOpacity
+              testID="btn-close"
               onPress={() => setSearchTerm('')}
               activeOpacity={0.7}
               accessibilityRole="button"
@@ -335,7 +569,8 @@ export default function SearchResultsScreen() {
         </View>
 
         {/* Filter Trigger Button in Header */}
-        <TouchableOpacity testID="btn-filters"
+        <TouchableOpacity
+          testID="btn-filters"
           style={[
             styles.filterTrigger,
             {
@@ -344,11 +579,10 @@ export default function SearchResultsScreen() {
             },
           ]}
           onPress={() => {
+            blurActiveElement();
             try {
               Haptics.selectionAsync();
-            } catch {
-              // Haptics fallback
-            }
+            } catch {}
             setFilterModalVisible(true);
           }}
           accessibilityRole="button"
@@ -369,6 +603,62 @@ export default function SearchResultsScreen() {
         <BrandLogo size="sm" width={56} />
       </View>
 
+      {/* ─── Dynamic Module Tabs Strip ─── */}
+      <View style={[styles.moduleTabsStrip, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.moduleTabsScroll}>
+          {(
+            [
+              { id: 'all', label: 'All Results', icon: 'sparkles-outline', count: filteredTours.length + filteredHotels.length + filteredPackages.length },
+              { id: 'tours', label: 'Tours', icon: 'compass-outline', count: filteredTours.length },
+              { id: 'hotels', label: 'Hotels', icon: 'business-outline', count: filteredHotels.length },
+              { id: 'packages', label: 'Packages', icon: 'map-outline', count: filteredPackages.length },
+            ] as const
+          ).map((tab) => {
+            const isSelected = activeTab === tab.id;
+            return (
+              <TouchableOpacity
+                key={tab.id}
+                onPress={() => {
+                  setActiveTab(tab.id);
+                  try {
+                    Haptics.selectionAsync();
+                  } catch {}
+                }}
+                activeOpacity={0.8}
+                style={[
+                  styles.moduleTabChip,
+                  {
+                    backgroundColor: isSelected ? colors.primary : colors.background,
+                    borderColor: isSelected ? colors.primary : colors.border,
+                  },
+                ]}
+                accessibilityRole="tab"
+                accessibilityState={{ selected: isSelected }}
+                accessibilityLabel={`${tab.label} tab, ${tab.count} results`}
+              >
+                <Ionicons
+                  name={tab.icon as any}
+                  size={14}
+                  color={isSelected ? '#ffffff' : colors.mutedText}
+                  style={{ marginRight: 5 }}
+                />
+                <Text
+                  style={[
+                    styles.moduleTabText,
+                    {
+                      color: isSelected ? '#ffffff' : colors.heading,
+                      fontWeight: isSelected ? '700' : '600',
+                    },
+                  ]}
+                >
+                  {tab.label} ({tab.count})
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
+      </View>
+
       {/* ─── Quick Filter / Sort Pills ─── */}
       <View
         style={[
@@ -378,7 +668,8 @@ export default function SearchResultsScreen() {
       >
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.pillsScroll}>
           {/* Active Sort Selector Chip */}
-          <TouchableOpacity testID="btn-swap-vertical"
+          <TouchableOpacity
+            testID="btn-swap-vertical"
             style={[
               styles.pillChip,
               {
@@ -412,7 +703,8 @@ export default function SearchResultsScreen() {
 
           {/* Category Chip if set */}
           {filterState.category !== 'All' && (
-            <TouchableOpacity testID="btn-close"
+            <TouchableOpacity
+              testID="btn-close-category"
               style={[
                 styles.pillChip,
                 { backgroundColor: `${colors.primary}18`, borderColor: colors.primary },
@@ -430,7 +722,8 @@ export default function SearchResultsScreen() {
 
           {/* Price Range Chip if set */}
           {(filterState.minPrice !== undefined || filterState.maxPrice !== undefined) && (
-            <TouchableOpacity testID="btn-search-results-433"
+            <TouchableOpacity
+              testID="btn-price-filter"
               style={[
                 styles.pillChip,
                 { backgroundColor: `${colors.primary}18`, borderColor: colors.primary },
@@ -462,11 +755,17 @@ export default function SearchResultsScreen() {
           {isLoading
             ? 'Searching catalog…'
             : searchTerm.trim()
-            ? `Found ${filteredTours.length} ${filteredTours.length === 1 ? 'tour' : 'tours'} for "${searchTerm.trim()}"`
-            : `Showing all ${filteredTours.length} tours`}
+            ? `Found ${unifiedItems.length} ${unifiedItems.length === 1 ? 'item' : 'items'} for "${searchTerm.trim()}"`
+            : `Showing all ${unifiedItems.length} items`}
         </Text>
         {(searchTerm.trim().length > 0 || activeFiltersCount > 0) && (
-          <TouchableOpacity testID="btn-reset-all" onPress={clearFilters} activeOpacity={0.7} accessibilityRole="button" accessibilityLabel="Clear all search and filters">
+          <TouchableOpacity
+            testID="btn-reset-all"
+            onPress={clearFilters}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel="Clear all search and filters"
+          >
             <Text style={[styles.clearBtnText, { color: colors.primary }]}>Reset All</Text>
           </TouchableOpacity>
         )}
@@ -477,7 +776,7 @@ export default function SearchResultsScreen() {
         <View style={styles.loaderContainer}>
           <SkeletonLoader count={4} />
         </View>
-      ) : isError ? (
+      ) : toursError ? (
         <View style={styles.errorContainer}>
           <Ionicons name="cloud-offline-outline" size={48} color="#ef4444" />
           <Text
@@ -486,16 +785,17 @@ export default function SearchResultsScreen() {
               { color: colors.heading, fontFamily: headingFontFamily },
             ]}
           >
-            Unable to Load Tours
+            Unable to Load Results
           </Text>
           <Text style={[styles.errorDesc, { color: colors.mutedText }]}>
-            {error instanceof Error
-              ? error.message
-              : String(error || 'Could not connect to the catalog server. Please check your network.')}
+            {tourErrorObj instanceof Error
+              ? tourErrorObj.message
+              : String(tourErrorObj || 'Could not connect to the catalog server. Please check your network.')}
           </Text>
-          <TouchableOpacity testID="btn-retry"
+          <TouchableOpacity
+            testID="btn-retry"
             style={[styles.retryBtn, { backgroundColor: colors.primary }]}
-            onPress={() => refetch()}
+            onPress={onRefresh}
             activeOpacity={0.8}
             accessibilityRole="button"
             accessibilityLabel="Retry search"
@@ -503,16 +803,16 @@ export default function SearchResultsScreen() {
             <Text style={styles.retryBtnText}>Retry</Text>
           </TouchableOpacity>
         </View>
-      ) : filteredTours.length === 0 ? (
+      ) : unifiedItems.length === 0 ? (
         <View style={styles.emptyContainer}>
           <EmptyState
-            title="No tours match your search"
+            title="No results match your search"
             description={
               searchTerm.trim()
-                ? `We couldn't find any expeditions matching "${searchTerm}". Try different keywords or browse our full collection.`
-                : 'No tours match the selected filters.'
+                ? `We couldn't find any results matching "${searchTerm}". Try different keywords or switch categories.`
+                : 'No items match the selected filters.'
             }
-            actionLabel={searchTerm.trim() || activeFiltersCount > 0 ? 'Reset Search & Filters' : 'Browse All Tours'}
+            actionLabel={searchTerm.trim() || activeFiltersCount > 0 ? 'Reset Search & Filters' : 'Browse All Catalogue'}
             onAction={() => {
               if (searchTerm.trim() || activeFiltersCount > 0) {
                 clearFilters();
@@ -524,9 +824,9 @@ export default function SearchResultsScreen() {
         </View>
       ) : (
         <FlatList
-          data={filteredTours}
-          keyExtractor={(item, idx) => `sr_${item.id || item.slug || idx}_${idx}`}
-          renderItem={renderTourCard}
+          data={unifiedItems}
+          keyExtractor={(item) => item.id}
+          renderItem={renderItem}
           contentContainerStyle={[
             styles.listContent,
             { paddingBottom: Math.max(insets.bottom, 24) + SPACING.lg },
@@ -549,7 +849,14 @@ export default function SearchResultsScreen() {
         onClose={() => setFilterModalVisible(false)}
         onApply={handleApplyFilters}
         initialFilters={filterState}
-        totalResults={filteredTours.length}
+        totalResults={unifiedItems.length}
+      />
+
+      {/* ─── Mobile Enquiry Sheet ─── */}
+      <MobileEnquirySheet
+        visible={enquiryVisible}
+        serviceName={enquiryService}
+        onClose={() => setEnquiryVisible(false)}
       />
     </View>
   );
@@ -617,6 +924,25 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 9,
     fontWeight: '700',
+  },
+  moduleTabsStrip: {
+    borderBottomWidth: 1,
+    paddingVertical: 6,
+  },
+  moduleTabsScroll: {
+    paddingHorizontal: SPACING.md,
+    gap: 8,
+  },
+  moduleTabChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: RADIUS.full,
+    borderWidth: 1,
+  },
+  moduleTabText: {
+    fontSize: FONT_SIZE.xs,
   },
   quickBar: {
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -698,6 +1024,27 @@ const styles = StyleSheet.create({
   listContent: {
     padding: SPACING.md,
     gap: SPACING.md,
+  },
+  itemContainer: {
+    width: '100%',
+    marginBottom: SPACING.xs,
+  },
+  badgeRow: {
+    marginBottom: 6,
+  },
+  moduleBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: RADIUS.sm,
+    gap: 4,
+  },
+  moduleBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.5,
   },
   cardWrapper: {
     width: '100%',

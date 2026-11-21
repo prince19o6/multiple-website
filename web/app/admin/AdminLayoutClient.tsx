@@ -7,6 +7,8 @@ import type { SiteDefinition } from "@/lib/siteRegistry";
 import {
   getAdminToken,
   getAdminUser,
+  setAdminSite,
+  getAdminSite,
   clearAdminSession,
   onAdminSessionChange,
   ADMIN_SITE_NAMES,
@@ -32,6 +34,19 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
 
   const isLoginPage = pathname === "/admin/login";
 
+  const handleTenantSwitch = (newSite: AdminSiteId) => {
+    if (newSite === siteDef.siteId) return;
+    setAdminSite(newSite);
+    const token = getAdminToken(newSite);
+    const user = getAdminUser(newSite);
+    const roleLower = (user?.role || "").toLowerCase();
+    if (token && user && (roleLower === "admin" || roleLower === "superadmin")) {
+      window.location.reload();
+    } else {
+      router.push(`/admin/login?site=${newSite}&returnUrl=${encodeURIComponent(pathname)}`);
+    }
+  };
+
   useEffect(() => {
     const checkAuth = () => {
       if (isLoginPage) {
@@ -40,14 +55,21 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
         return;
       }
 
-      const token = getAdminToken(siteDef.siteId as AdminSiteId);
-      const user = getAdminUser(siteDef.siteId as AdminSiteId);
+      const activeSite = (getAdminSite() || siteDef.siteId) as AdminSiteId;
+      const token =
+        getAdminToken(siteDef.siteId as AdminSiteId) ||
+        getAdminToken(activeSite) ||
+        getAdminToken();
+      const user =
+        getAdminUser(siteDef.siteId as AdminSiteId) ||
+        getAdminUser(activeSite) ||
+        getAdminUser();
 
       if (!token || !user) {
         setIsLoading(false);
         setIsAuthorized(false);
         const returnUrl = encodeURIComponent(pathname);
-        router.replace(`/admin/login?returnUrl=${returnUrl}`);
+        router.replace(`/admin/login?site=${siteDef.siteId}&returnUrl=${returnUrl}`);
         return;
       }
 
@@ -229,9 +251,21 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
         <div className="p-3 border-t border-slate-800 shrink-0 space-y-2">
           {(sidebarOpen || mobileMenuOpen) && (
             <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/40">
-              <p className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider">Active Tenant</p>
-              <p className="text-sm font-bold text-white truncate">{siteDef.displayName}</p>
-              <p className="text-[11px] font-mono text-sky-400 truncate">{siteDef.backendHostname}</p>
+              <label htmlFor="sidebar-tenant-select" className="text-[10px] text-slate-400 uppercase font-semibold tracking-wider block mb-1">
+                Active Tenant
+              </label>
+              <select
+                id="sidebar-tenant-select"
+                value={siteDef.siteId}
+                onChange={(e) => handleTenantSwitch(e.target.value as AdminSiteId)}
+                aria-label="Switch active tenant website"
+                className="w-full text-xs font-bold bg-slate-900 border border-slate-700 text-white rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              >
+                <option value="gujjutours">Gujju Tours (₹ INR)</option>
+                <option value="tripgoasia">TripGo Asia ($ USD)</option>
+                <option value="technoheaven">Technoheaven ($ USD)</option>
+              </select>
+              <p className="text-[11px] font-mono text-sky-400 truncate mt-1">{siteDef.backendHostname}</p>
             </div>
           )}
           <button
@@ -261,10 +295,20 @@ export default function AdminLayoutClient({ siteDef, children }: Props) {
                 className="w-2.5 h-2.5 rounded-full animate-pulse"
                 style={{ backgroundColor: brandColor }}
               />
-              <span className="text-xs font-semibold uppercase tracking-wider text-foreground-muted hidden sm:inline">
+              <label htmlFor="header-tenant-select" className="text-xs font-semibold uppercase tracking-wider text-foreground-muted hidden sm:inline">
                 Tenant:
-              </span>
-              <span className="text-sm font-bold text-foreground">{siteDef.displayName}</span>
+              </label>
+              <select
+                id="header-tenant-select"
+                value={siteDef.siteId}
+                onChange={(e) => handleTenantSwitch(e.target.value as AdminSiteId)}
+                aria-label="Switch active tenant website"
+                className="text-xs font-bold bg-surface-2 border border-border text-foreground rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer shadow-sm"
+              >
+                <option value="gujjutours">Gujju Tours (₹ INR)</option>
+                <option value="tripgoasia">TripGo Asia ($ USD)</option>
+                <option value="technoheaven">Technoheaven ($ USD)</option>
+              </select>
             </div>
           </div>
 

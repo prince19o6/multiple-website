@@ -6,7 +6,9 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { getTours } from "@/lib/api/tours";
 
 interface ActivityItem {
   id: string;
@@ -59,7 +61,7 @@ export default function ToursPage() {
   const site = useSite();
 
   const siteId = site.siteId || "gujjutours";
-  const currencySymbol = config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
+  const { formatPrice } = useCurrency();
   const primaryColor = config.theme?.colors?.primary || "#2882c5";
 
   // URL state
@@ -96,25 +98,39 @@ export default function ToursPage() {
     setError(null);
 
     try {
-      const url = new URL("/api/tours", window.location.origin);
-      url.searchParams.set("site", siteId);
-      if (selectedCity && selectedCity !== "all") url.searchParams.set("destination", selectedCity);
-      if (selectedCategory && selectedCategory !== "all") url.searchParams.set("category", selectedCategory);
-      if (searchInput.trim()) url.searchParams.set("search", searchInput.trim());
-      if (pureVegOnly) url.searchParams.set("pureVeg", "true");
-      if (jainOnly) url.searchParams.set("jainAvailable", "true");
-      if (sortBy) url.searchParams.set("sort", sortBy);
-      url.searchParams.set("pageSize", "60");
+      const response = await getTours({
+        siteId,
+        category: selectedCategory !== "all" ? selectedCategory : undefined,
+        search: searchInput.trim() || (selectedCity !== "all" ? selectedCity : undefined),
+        sort: sortBy,
+        pageSize: 60,
+      });
 
-      const res = await fetch(url.toString(), { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
-
-      const json = await res.json();
-      const list: ActivityItem[] = Array.isArray(json?.data)
-        ? json.data
-        : Array.isArray(json)
-        ? json
-        : [];
+      const list: ActivityItem[] = (response.items || []).map((t: any) => ({
+        id: String(t.id || t.tourNumericId || t.slug),
+        tourNumericId: t.tourNumericId,
+        title: t.title || t.name,
+        name: t.name || t.title,
+        slug: t.slug,
+        category: t.category || "Sightseeing",
+        categorySlug: t.categorySlug || "city-tours",
+        destination: t.destination || t.city || "Destination",
+        location: t.location || `${t.city || ""}, ${t.country || ""}`,
+        city: t.city || t.destination || "",
+        country: t.country || "",
+        price: Number(t.price || 0),
+        originalPrice: t.originalPrice ? Number(t.originalPrice) : undefined,
+        currency: t.currency || (siteId === "gujjutours" ? "INR" : "USD"),
+        rating: Number(t.rating || 4.8),
+        reviews: Number(t.reviews || 42),
+        duration: t.duration || "Half Day",
+        image: t.image || t.images?.[0] || "/seed-images/activities/activity-city-tour.svg",
+        images: t.images || (t.image ? [t.image] : []),
+        highlights: t.highlights || [],
+        included: t.inclusions || t.included || [],
+        dietaryFeatures: t.dietaryFeatures,
+        featured: t.featured,
+      }));
 
       setActivities(list);
     } catch (err: any) {
@@ -122,7 +138,7 @@ export default function ToursPage() {
     } finally {
       setLoading(false);
     }
-  }, [siteId, selectedCity, selectedCategory, searchInput, pureVegOnly, jainOnly, sortBy]);
+  }, [siteId, selectedCity, selectedCategory, searchInput, sortBy]);
 
   useEffect(() => {
     loadActivities();
@@ -455,11 +471,11 @@ export default function ToursPage() {
                           <span className="text-[10px] uppercase font-bold text-gray-400 block">From</span>
                           <div className="flex items-baseline gap-1.5">
                             <span className="text-lg font-black text-gray-900 dark:text-white">
-                              {currencySymbol}{act.price.toLocaleString()}
+                              {formatPrice(act.price, act.currency || "INR")}
                             </span>
                             {act.originalPrice && (
                               <span className="text-xs text-gray-400 line-through">
-                                {currencySymbol}{act.originalPrice.toLocaleString()}
+                                {formatPrice(act.originalPrice, act.currency || "INR")}
                               </span>
                             )}
                           </div>

@@ -342,7 +342,7 @@ export function clearAdminSession(siteId?: AdminSiteId): void {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ siteId: s }),
-    }).catch(() => {});
+    }).catch(() => { });
   } catch {
     // Ignore background fetch error
   }
@@ -362,7 +362,7 @@ export function clearAdminSession(siteId?: AdminSiteId): void {
 }
 
 export function onAdminSessionChange(cb: () => void): () => void {
-  if (typeof window === "undefined") return () => {};
+  if (typeof window === "undefined") return () => { };
   window.addEventListener(SESSION_CHANGE_EVENT, cb);
   return () => window.removeEventListener(SESSION_CHANGE_EVENT, cb);
 }
@@ -401,10 +401,18 @@ async function adminRequest<T>(
 
   const url = endpoint.startsWith("http") ? endpoint : `${API_BASE}${endpoint.startsWith("/") ? "" : "/"}${endpoint}`;
 
-  const res = await fetch(url, {
-    ...options,
-    headers,
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      ...options,
+      headers,
+    });
+  } catch (netErr: unknown) {
+    const msg = netErr instanceof Error ? netErr.message : "Network error";
+    throw new Error(
+      `Network connection to API server failed (${url}): ${msg}. Please ensure backend is running on port 5000.`
+    );
+  }
 
   if (res.status === 401) {
     clearAdminSession(s);
@@ -424,12 +432,23 @@ async function adminRequest<T>(
   }
 
   if (!res.ok) {
-    const errorMsg =
+    let errorMsg =
       typeof json.error === "string"
         ? json.error
         : typeof json.message === "string"
           ? json.message
           : `Request failed with status ${res.status}`;
+
+    if (
+      errorMsg.includes("CompositeServerSelector") ||
+      errorMsg.includes("TimeoutException") ||
+      errorMsg.includes("selecting a server") ||
+      errorMsg.includes("HeartbeatException") ||
+      errorMsg.includes("ReplicaSet")
+    ) {
+      errorMsg = "Database server is temporarily unreachable or timed out. Operating in offline fallback mode.";
+    }
+
     throw new Error(errorMsg);
   }
 
@@ -543,12 +562,23 @@ export async function fetchAdminTours(
   const query = new URLSearchParams();
   if (params?.category && params.category !== "all") query.append("category", params.category);
   if (params?.page) query.append("page", params.page.toString());
+  query.append("pageSize", (params?.limit || 200).toString());
   query.append("limit", (params?.limit || 200).toString());
 
-  const res = await adminRequest<{ success: boolean; data: AdminTour[] }>(`/api/tours?${query.toString()}`, {}, siteId);
-  return (res.data || []).map((t) => ({
+  const res = await adminRequest<any>(`/api/tours?${query.toString()}`, {}, siteId);
+  const items = Array.isArray(res) ? res : (res.items || res.data || []);
+  return items.map((t: any) => ({
     ...t,
-    id: t.id || t._id || "",
+    id: t.id !== undefined ? String(t.id) : (t._id || ""),
+    name: t.name || t.title || "Tour Package",
+    title: t.title || t.name || "Tour Package",
+    category: t.category || "General",
+    description: t.description || "",
+    duration: t.duration || "1 Day",
+    price: typeof t.price === "number" ? t.price : (Number(t.price) || 0),
+    discountedPrice: t.discountedPrice ? Number(t.discountedPrice) : undefined,
+    image: t.image || (Array.isArray(t.images) && t.images[0]) || "",
+    destination: typeof t.destination === "string" ? t.destination : (t.destination?.cityName || t.location || ""),
   }));
 }
 
@@ -917,9 +947,18 @@ export interface AdminCatalogResult<T = any> {
   success: boolean;
   module: string;
   data: T[];
+  items?: T[];
   total: number;
   page: number;
   pageSize: number;
+}
+
+const DEDICATED_API_MODULES = new Set(["banners", "offers", "videos", "reviews", "faqs", "partners", "pages"]);
+
+function getModuleEndpoint(module: string, id?: string): string {
+  const mod = module.trim().toLowerCase();
+  const base = DEDICATED_API_MODULES.has(mod) ? `/api/${mod}` : `/api/admin/catalog/${encodeURIComponent(mod)}`;
+  return id ? `${base}/${encodeURIComponent(id)}` : base;
 }
 
 export async function fetchAdminCatalog(
@@ -927,17 +966,33 @@ export async function fetchAdminCatalog(
   params?: { search?: string; category?: string; page?: number; limit?: number },
   siteId?: AdminSiteId
 ): Promise<AdminCatalogResult> {
+  const mod = module.trim().toLowerCase();
   const query = new URLSearchParams();
   if (params?.search) query.append("search", params.search);
   if (params?.category && params.category !== "all") query.append("category", params.category);
   if (params?.page) query.append("page", params.page.toString());
   if (params?.limit) query.append("pageSize", params.limit.toString());
+  query.append("activeOnly", "false");
 
-  return await adminRequest<AdminCatalogResult>(
-    `/api/admin/catalog/${encodeURIComponent(module)}?${query.toString()}`,
+  const endpoint = getModuleEndpoint(mod);
+  const res = await adminRequest<any>(
+    `${endpoint}?${query.toString()}`,
     {},
     siteId
   );
+
+  const items = Array.isArray(res) ? res : (res.data || res.items || []);
+  const count = typeof res.count === "number" ? res.count : (res.total || items.length);
+
+  return {
+    success: true,
+    module: mod,
+    data: items,
+    items,
+    total: count,
+    page: params?.page || 1,
+    pageSize: params?.limit || items.length,
+  };
 }
 
 export async function fetchAdminCatalogItem<T = any>(
@@ -945,8 +1000,9 @@ export async function fetchAdminCatalogItem<T = any>(
   id: string,
   siteId?: AdminSiteId
 ): Promise<T> {
+  const endpoint = getModuleEndpoint(module, id);
   const res = await adminRequest<{ success: boolean; data: T }>(
-    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    endpoint,
     {},
     siteId
   );
@@ -958,8 +1014,9 @@ export async function createAdminCatalogItem<T = any>(
   item: any,
   siteId?: AdminSiteId
 ): Promise<T> {
+  const endpoint = getModuleEndpoint(module);
   const res = await adminRequest<{ success: boolean; data: T }>(
-    `/api/admin/catalog/${encodeURIComponent(module)}`,
+    endpoint,
     {
       method: "POST",
       body: JSON.stringify(item),
@@ -975,8 +1032,9 @@ export async function updateAdminCatalogItem<T = any>(
   item: any,
   siteId?: AdminSiteId
 ): Promise<T> {
+  const endpoint = getModuleEndpoint(module, id);
   const res = await adminRequest<{ success: boolean; data: T }>(
-    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    endpoint,
     {
       method: "PUT",
       body: JSON.stringify(item),
@@ -991,10 +1049,42 @@ export async function deleteAdminCatalogItem(
   id: string,
   siteId?: AdminSiteId
 ): Promise<void> {
+  const endpoint = getModuleEndpoint(module, id);
   await adminRequest(
-    `/api/admin/catalog/${encodeURIComponent(module)}/${encodeURIComponent(id)}`,
+    endpoint,
     {
       method: "DELETE",
+    },
+    siteId
+  );
+}
+
+export async function toggleAdminCatalogItem(
+  module: string,
+  id: string,
+  siteId?: AdminSiteId
+): Promise<any> {
+  const endpoint = getModuleEndpoint(module, id);
+  return await adminRequest(
+    `${endpoint}/toggle-active`,
+    {
+      method: "PUT",
+    },
+    siteId
+  );
+}
+
+export async function reorderAdminCatalog(
+  module: string,
+  orderedIds: string[],
+  siteId?: AdminSiteId
+): Promise<any> {
+  const endpoint = `${getModuleEndpoint(module)}/reorder`;
+  return await adminRequest(
+    endpoint,
+    {
+      method: "PUT",
+      body: JSON.stringify(orderedIds),
     },
     siteId
   );
@@ -1042,12 +1132,20 @@ export async function fetchAdminWebsiteConfig(
 ): Promise<any> {
   const s = siteId || getAdminSite();
   const host = hostname || getAdminHostname(s);
-  const res = await adminRequest<{ success: boolean; config: any }>(
-    `/api/admin/website-config/${encodeURIComponent(host)}`,
-    {},
-    s
-  );
-  return res.config;
+  try {
+    const res = await adminRequest<{ success: boolean; config: any }>(
+      `/api/admin/website-config/${encodeURIComponent(host)}`,
+      {},
+      s
+    );
+    return res.config;
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    if (msg.includes("404") || msg.includes("not found") || msg.includes("No dynamic config")) {
+      return null;
+    }
+    throw err;
+  }
 }
 
 export async function updateAdminWebsiteConfig(
@@ -1061,6 +1159,44 @@ export async function updateAdminWebsiteConfig(
     {
       method: "PUT",
       body: JSON.stringify(config),
+    },
+    s
+  );
+}
+
+export async function fetchAdminFeatures(
+  hostname?: string,
+  siteId?: AdminSiteId
+): Promise<any> {
+  const s = siteId || getAdminSite();
+  const host = hostname || getAdminHostname(s);
+  try {
+    const res = await adminRequest<any>(
+      `/api/admin/website-config/${encodeURIComponent(host)}/features`,
+      {},
+      s
+    );
+    return res;
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    if (msg.includes("404") || msg.includes("not found")) {
+      return null;
+    }
+    throw err;
+  }
+}
+
+export async function updateAdminFeatures(
+  hostname: string,
+  features: any,
+  siteId?: AdminSiteId
+): Promise<any> {
+  const s = siteId || getAdminSite();
+  return await adminRequest<any>(
+    `/api/admin/website-config/${encodeURIComponent(hostname)}/features`,
+    {
+      method: "PUT",
+      body: JSON.stringify(features),
     },
     s
   );

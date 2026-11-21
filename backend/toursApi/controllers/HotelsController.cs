@@ -23,7 +23,10 @@ public class HotelsController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetHotels(
         [FromQuery] string? destination,
+        [FromQuery] string? search,
+        [FromQuery] string? q,
         [FromQuery] string? propertyType,
+        [FromQuery] string? category,
         [FromQuery] string? collection,
         [FromQuery] int? starRating,
         [FromQuery] double? minPrice,
@@ -36,8 +39,8 @@ public class HotelsController : ControllerBase
     {
         var filterParams = new HotelFilterParams
         {
-            Destination = destination,
-            PropertyType = propertyType,
+            Destination = destination ?? search ?? q,
+            PropertyType = propertyType ?? category,
             Collection = collection,
             StarRating = starRating,
             MinPrice = minPrice,
@@ -52,6 +55,11 @@ public class HotelsController : ControllerBase
         var result = await _hotelRepository.GetHotelsAsync(filterParams);
         return Ok(new
         {
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
+            totalPages = result.TotalPages,
             success = true,
             data = result.Items,
             meta = new
@@ -61,6 +69,32 @@ public class HotelsController : ControllerBase
                 pageSize = result.PageSize,
                 totalPages = result.TotalPages
             }
+        });
+    }
+
+    /// <summary>
+    /// Top city cards with counts and curated thematic collections for the landing page.
+    /// </summary>
+    [HttpGet("collections")]
+    public async Task<IActionResult> GetCollections()
+    {
+        var collections = await _hotelRepository.GetCollectionsAsync();
+        return Ok(new { success = true, data = collections });
+    }
+
+    /// <summary>
+    /// Top destination cities for hotels.
+    /// </summary>
+    [HttpGet("destinations")]
+    public async Task<IActionResult> GetDestinations()
+    {
+        var collections = await _hotelRepository.GetCollectionsAsync();
+        return Ok(new
+        {
+            success = true,
+            data = collections.TopCities,
+            items = collections.TopCities,
+            total = collections.TopCities.Count
         });
     }
 
@@ -75,25 +109,17 @@ public class HotelsController : ControllerBase
     }
 
     /// <summary>
-    /// Top city cards with counts and curated thematic collections for the landing page.
+    /// Get single hotel by unique slug or ObjectId.
     /// </summary>
-    [HttpGet("collections")]
-    public async Task<IActionResult> GetCollections()
+    [HttpGet("{slugOrId}")]
+    public async Task<IActionResult> GetHotelBySlugOrId(string slugOrId)
     {
-        var collections = await _hotelRepository.GetCollectionsAsync();
-        return Ok(new { success = true, data = collections });
-    }
+        var hotel = await _hotelRepository.GetHotelByIdAsync(slugOrId)
+                    ?? await _hotelRepository.GetHotelBySlugAsync(slugOrId);
 
-    /// <summary>
-    /// Get single hotel by unique slug.
-    /// </summary>
-    [HttpGet("{slug}")]
-    public async Task<IActionResult> GetHotelBySlug(string slug)
-    {
-        var hotel = await _hotelRepository.GetHotelBySlugAsync(slug);
         if (hotel == null)
         {
-            return NotFound(new { success = false, error = $"Hotel '{slug}' not found." });
+            return NotFound(new { success = false, message = $"Hotel '{slugOrId}' not found." });
         }
 
         return Ok(new { success = true, data = hotel });
@@ -102,21 +128,22 @@ public class HotelsController : ControllerBase
     /// <summary>
     /// Check room availability and price breakdown for specific check-in / check-out dates.
     /// </summary>
-    [HttpGet("{slug}/availability")]
+    [HttpGet("{slugOrId}/availability")]
     public async Task<IActionResult> CheckAvailability(
-        string slug,
+        string slugOrId,
         [FromQuery] string? checkIn,
         [FromQuery] string? checkOut,
         [FromQuery] int adults = 2,
         [FromQuery] int rooms = 1)
     {
-        var hotel = await _hotelRepository.GetHotelBySlugAsync(slug);
+        var hotel = await _hotelRepository.GetHotelByIdAsync(slugOrId)
+                    ?? await _hotelRepository.GetHotelBySlugAsync(slugOrId);
+
         if (hotel == null)
         {
-            return NotFound(new { success = false, error = $"Hotel '{slug}' not found." });
+            return NotFound(new { success = false, message = $"Hotel '{slugOrId}' not found." });
         }
 
-        // Return real room options with calculated rates
         return Ok(new
         {
             success = true,
@@ -130,4 +157,3 @@ public class HotelsController : ControllerBase
         });
     }
 }
-

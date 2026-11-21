@@ -23,8 +23,8 @@
     "price": 390,
     "originalPrice": 500,
     "netPrice": 320,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -59,8 +59,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -103,8 +103,8 @@
     "price": 48,
     "originalPrice": 791,
     "netPrice": 525,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -139,8 +139,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -183,8 +183,8 @@
     "price": 560,
     "originalPrice": 677,
     "netPrice": 459,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -219,8 +219,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -263,8 +263,8 @@
     "price": 48,
     "originalPrice": 943,
     "netPrice": 648,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -300,8 +300,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -344,8 +344,8 @@
     "price": 490,
     "originalPrice": 607,
     "netPrice": 402,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -380,8 +380,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -424,8 +424,8 @@
     "price": 48,
     "originalPrice": 1195,
     "netPrice": 787,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -460,8 +460,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -504,8 +504,8 @@
     "price": 48,
     "originalPrice": 855,
     "netPrice": 599,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -540,8 +540,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -584,8 +584,8 @@
     "price": 48,
     "originalPrice": 1266,
     "netPrice": 869,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -621,8 +621,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -665,8 +665,8 @@
     "price": 230,
     "originalPrice": 265,
     "netPrice": 189,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -701,8 +701,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -745,8 +745,8 @@
     "price": 420,
     "originalPrice": 487,
     "netPrice": 344,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -781,8 +781,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -825,8 +825,8 @@
     "price": 360,
     "originalPrice": 438,
     "netPrice": 295,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -861,8 +861,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -905,8 +905,8 @@
     "price": 520,
     "originalPrice": 669,
     "netPrice": 426,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -942,8 +942,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -986,8 +986,8 @@
     "price": 220,
     "originalPrice": 279,
     "netPrice": 180,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1022,8 +1022,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -1066,8 +1066,8 @@
     "price": 400,
     "originalPrice": 495,
     "netPrice": 328,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1102,8 +1102,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -1146,8 +1146,8 @@
     "price": 330,
     "originalPrice": 409,
     "netPrice": 271,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1182,8 +1182,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -1226,8 +1226,8 @@
     "price": 490,
     "originalPrice": 623,
     "netPrice": 402,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1263,8 +1263,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -1307,8 +1307,8 @@
     "price": 280,
     "originalPrice": 328,
     "netPrice": 230,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1343,8 +1343,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -1387,8 +1387,8 @@
     "price": 500,
     "originalPrice": 602,
     "netPrice": 410,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1423,8 +1423,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -1467,8 +1467,8 @@
     "price": 450,
     "originalPrice": 584,
     "netPrice": 369,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1503,8 +1503,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -1547,8 +1547,8 @@
     "price": 600,
     "originalPrice": 742,
     "netPrice": 492,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1584,8 +1584,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -1628,8 +1628,8 @@
     "price": 280,
     "originalPrice": 325,
     "netPrice": 230,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1664,8 +1664,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -1708,8 +1708,8 @@
     "price": 550,
     "originalPrice": 701,
     "netPrice": 451,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1744,8 +1744,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -1788,8 +1788,8 @@
     "price": 450,
     "originalPrice": 529,
     "netPrice": 369,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1824,8 +1824,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -1868,8 +1868,8 @@
     "price": 48,
     "originalPrice": 811,
     "netPrice": 558,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1905,8 +1905,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -1949,8 +1949,8 @@
     "price": 48,
     "originalPrice": 981,
     "netPrice": 664,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -1985,8 +1985,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -2029,8 +2029,8 @@
     "price": 48,
     "originalPrice": 1705,
     "netPrice": 1197,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2065,8 +2065,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -2109,8 +2109,8 @@
     "price": 48,
     "originalPrice": 1501,
     "netPrice": 992,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2145,8 +2145,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -2189,8 +2189,8 @@
     "price": 21,
     "originalPrice": 2280,
     "netPrice": 1517,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2226,8 +2226,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -2270,8 +2270,8 @@
     "price": 48,
     "originalPrice": 906,
     "netPrice": 599,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2306,8 +2306,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -2350,8 +2350,8 @@
     "price": 48,
     "originalPrice": 1663,
     "netPrice": 1082,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2386,8 +2386,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -2430,8 +2430,8 @@
     "price": 48,
     "originalPrice": 1312,
     "netPrice": 894,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2466,8 +2466,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -2510,8 +2510,8 @@
     "price": 48,
     "originalPrice": 1926,
     "netPrice": 1238,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2547,8 +2547,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -2591,8 +2591,8 @@
     "price": 270,
     "originalPrice": 333,
     "netPrice": 221,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2627,8 +2627,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -2671,8 +2671,8 @@
     "price": 460,
     "originalPrice": 542,
     "netPrice": 377,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2707,8 +2707,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -2751,8 +2751,8 @@
     "price": 410,
     "originalPrice": 508,
     "netPrice": 336,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2787,8 +2787,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -2831,8 +2831,8 @@
     "price": 560,
     "originalPrice": 709,
     "netPrice": 459,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2868,8 +2868,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -2912,8 +2912,8 @@
     "price": 280,
     "originalPrice": 342,
     "netPrice": 230,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -2948,8 +2948,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -2992,8 +2992,8 @@
     "price": 550,
     "originalPrice": 695,
     "netPrice": 451,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3028,8 +3028,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -3072,8 +3072,8 @@
     "price": 440,
     "originalPrice": 560,
     "netPrice": 361,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3108,8 +3108,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -3152,8 +3152,8 @@
     "price": 48,
     "originalPrice": 778,
     "netPrice": 500,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3189,8 +3189,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -3233,8 +3233,8 @@
     "price": 220,
     "originalPrice": 272,
     "netPrice": 180,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3269,8 +3269,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -3313,8 +3313,8 @@
     "price": 380,
     "originalPrice": 456,
     "netPrice": 312,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3349,8 +3349,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -3393,8 +3393,8 @@
     "price": 330,
     "originalPrice": 423,
     "netPrice": 271,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3429,8 +3429,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -3473,8 +3473,8 @@
     "price": 500,
     "originalPrice": 610,
     "netPrice": 410,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3510,8 +3510,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -3554,8 +3554,8 @@
     "price": 300,
     "originalPrice": 367,
     "netPrice": 246,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3590,8 +3590,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -3634,8 +3634,8 @@
     "price": 560,
     "originalPrice": 661,
     "netPrice": 459,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3670,8 +3670,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -3714,8 +3714,8 @@
     "price": 460,
     "originalPrice": 568,
     "netPrice": 377,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3750,8 +3750,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -3794,8 +3794,8 @@
     "price": 48,
     "originalPrice": 854,
     "netPrice": 558,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3831,8 +3831,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -3875,8 +3875,8 @@
     "price": 170,
     "originalPrice": 197,
     "netPrice": 139,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3911,8 +3911,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -3955,8 +3955,8 @@
     "price": 310,
     "originalPrice": 371,
     "netPrice": 254,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -3991,8 +3991,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -4035,8 +4035,8 @@
     "price": 270,
     "originalPrice": 350,
     "netPrice": 221,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4071,8 +4071,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
@@ -4115,8 +4115,8 @@
     "price": 390,
     "originalPrice": 486,
     "netPrice": 320,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4152,8 +4152,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -4196,8 +4196,8 @@
     "price": 150,
     "originalPrice": 183,
     "netPrice": 123,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-tourist.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4232,8 +4232,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-tourist.svg",
+    "imageUrl": "/seed-images/visas/visa-tourist.svg",
     "thumbnail": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
@@ -4276,8 +4276,8 @@
     "price": 280,
     "originalPrice": 326,
     "netPrice": 230,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-longterm.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4312,8 +4312,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-longterm.svg",
+    "imageUrl": "/seed-images/visas/visa-longterm.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
@@ -4356,8 +4356,8 @@
     "price": 220,
     "originalPrice": 261,
     "netPrice": 180,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-express.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4392,8 +4392,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-express.svg",
+    "imageUrl": "/seed-images/visas/visa-express.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -4436,8 +4436,8 @@
     "price": 320,
     "originalPrice": 394,
     "netPrice": 262,
-    "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "currency": "AED",
+    "image": "/seed-images/visas/visa-business.svg",
     "documentsRequired": [
       "Valid Passport Copy with minimum 6 months validity from date of travel",
       "Recent Passport-Sized Photograph (white background, taken within 3 months)",
@@ -4473,8 +4473,8 @@
       "Government / Immigration Submission: Application processed with official authorities.",
       "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp."
     ],
-    "coverImage": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
+    "coverImage": "/seed-images/visas/visa-business.svg",
+    "imageUrl": "/seed-images/visas/visa-business.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",

@@ -87,6 +87,20 @@ public class AdminCatalogController : ControllerBase
         return string.IsNullOrWhiteSpace(clean) ? Guid.NewGuid().ToString("N")[..8] : clean;
     }
 
+    private static string SanitizeErrorMessage(Exception ex, string fallback)
+    {
+        var msg = ex?.Message ?? "";
+        if (msg.Contains("CompositeServerSelector", StringComparison.OrdinalIgnoreCase) ||
+            msg.Contains("TimeoutException", StringComparison.OrdinalIgnoreCase) ||
+            msg.Contains("selecting a server", StringComparison.OrdinalIgnoreCase) ||
+            msg.Contains("HeartbeatException", StringComparison.OrdinalIgnoreCase) ||
+            msg.Contains("ReplicaSet", StringComparison.OrdinalIgnoreCase))
+        {
+            return "Database connection timed out or is temporarily unreachable. Operating in resilient fallback mode.";
+        }
+        return string.IsNullOrWhiteSpace(msg) ? fallback : msg;
+    }
+
     // ─── 1. Query Catalog by Module ─────────────────────────────────────────────
     [HttpGet("{module}")]
     public async Task<IActionResult> GetModuleItems(
@@ -279,7 +293,7 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to load catalog items for module {Module}", module);
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to load catalog items for module {module}") });
         }
     }
 
@@ -314,7 +328,7 @@ public class AdminCatalogController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to load {module} item") });
         }
     }
 
@@ -429,7 +443,7 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to create catalog item in module {Module}", module);
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to create catalog item in module {module}") });
         }
     }
 
@@ -534,7 +548,7 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to update catalog item in module {Module}", module);
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to update catalog item in module {module}") });
         }
     }
 
@@ -569,7 +583,7 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to delete item {Id} from module {Module}", id, module);
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to delete item '{id}' from module '{module}'") });
         }
     }
 
@@ -622,7 +636,7 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Image upload failed");
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, "Image upload failed.") });
         }
     }
 
@@ -756,7 +770,85 @@ public class AdminCatalogController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to replace image for {Module} item {Id}", module, id);
-            return StatusCode(500, new { success = false, error = ex.Message });
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, "Failed to replace image.") });
+        }
+    }
+
+    // ─── 8. Toggle Active Status ────────────────────────────────────────────────
+    [HttpPut("{module}/{id}/toggle-active")]
+    public async Task<IActionResult> ToggleActive(string module, string id)
+    {
+        if (!ValidateTenantAccess(out var forbiddenResult)) return forbiddenResult!;
+        var mod = module.Trim().ToLowerInvariant();
+
+        try
+        {
+            switch (mod)
+            {
+                case "hotels" or "hotel":
+                    var hotel = await _hotelRepo.GetHotelByIdAsync(id) ?? await _hotelRepo.GetHotelBySlugAsync(id);
+                    if (hotel == null) return NotFound(new { success = false, error = "Hotel not found" });
+                    hotel.Status = hotel.Status?.ToLowerInvariant() == "active" ? "inactive" : "active";
+                    await _hotelRepo.UpdateHotelAsync(hotel.Id ?? id, hotel);
+                    return Ok(new { success = true, id, status = hotel.Status, message = $"Hotel status updated to {hotel.Status}" });
+
+                case "tours" or "tour":
+                    var tour = await _tourRepo.GetByIdAsync(id) ?? await _tourRepo.GetBySlugAsync(id);
+                    if (tour == null) return NotFound(new { success = false, error = "Tour not found" });
+                    tour.Status = tour.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _tourRepo.UpdateAsync(tour.Id ?? id, tour);
+                    return Ok(new { success = true, id, status = tour.Status, message = $"Tour status updated to {tour.Status}" });
+
+                case "packages" or "package":
+                    var pkg = await _packageRepo.GetPackageByIdAsync(id) ?? await _packageRepo.GetPackageBySlugAsync(id);
+                    if (pkg == null) return NotFound(new { success = false, error = "Package not found" });
+                    pkg.Status = pkg.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _packageRepo.UpdatePackageAsync(pkg.Id ?? id, pkg);
+                    return Ok(new { success = true, id, status = pkg.Status, message = $"Package status updated to {pkg.Status}" });
+
+                case "flights" or "flight":
+                    var flt = await _flightRepo.GetFlightByIdAsync(id) ?? await _flightRepo.GetFlightBySlugAsync(id);
+                    if (flt == null) return NotFound(new { success = false, error = "Flight not found" });
+                    flt.Status = flt.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _flightRepo.UpdateFlightAsync(flt.Id ?? id, flt);
+                    return Ok(new { success = true, id, status = flt.Status, message = $"Flight status updated to {flt.Status}" });
+
+                case "transfers" or "transfer":
+                    var trf = await _transferRepo.GetTransferByIdAsync(id) ?? await _transferRepo.GetTransferBySlugAsync(id);
+                    if (trf == null) return NotFound(new { success = false, error = "Transfer not found" });
+                    trf.Status = trf.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _transferRepo.UpdateTransferAsync(trf.Id ?? id, trf);
+                    return Ok(new { success = true, id, status = trf.Status, message = $"Transfer status updated to {trf.Status}" });
+
+                case "visas" or "visa":
+                    var visa = await _visaRepo.GetVisaByIdAsync(id) ?? await _visaRepo.GetVisaBySlugAsync(id);
+                    if (visa == null) return NotFound(new { success = false, error = "Visa not found" });
+                    visa.Status = visa.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _visaRepo.UpdateVisaAsync(visa.Id ?? id, visa);
+                    return Ok(new { success = true, id, status = visa.Status, message = $"Visa status updated to {visa.Status}" });
+
+                case "restaurants" or "restaurant":
+                    var rest = await _restaurantRepo.GetRestaurantByIdAsync(id) ?? await _restaurantRepo.GetRestaurantBySlugAsync(id);
+                    if (rest == null) return NotFound(new { success = false, error = "Restaurant not found" });
+                    rest.Status = rest.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _restaurantRepo.UpdateRestaurantAsync(rest.Id ?? id, rest);
+                    return Ok(new { success = true, id, status = rest.Status, message = $"Restaurant status updated to {rest.Status}" });
+
+                case "buildpackage" or "custom":
+                    var bp = await _buildPackageRepo.GetBuildPackageOptionByIdAsync(id) ?? await _buildPackageRepo.GetBuildPackageOptionBySlugAsync(id);
+                    if (bp == null) return NotFound(new { success = false, error = "Build package destination not found" });
+                    bp.Status = bp.Status?.ToLowerInvariant() == "active" ? "Inactive" : "Active";
+                    await _buildPackageRepo.UpdateBuildPackageOptionAsync(bp.Id ?? id, bp);
+                    return Ok(new { success = true, id, status = bp.Status, message = $"Build package option status updated to {bp.Status}" });
+
+                default:
+                    return BadRequest(new { success = false, error = $"Unknown module '{module}'." });
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed to toggle active status for {Module} item {Id}", module, id);
+            return StatusCode(500, new { success = false, error = SanitizeErrorMessage(ex, $"Failed to toggle status for item '{id}' in module '{module}'") });
         }
     }
 }

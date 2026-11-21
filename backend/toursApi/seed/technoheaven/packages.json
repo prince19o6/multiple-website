@@ -21,15 +21,14 @@
     "price": 2400,
     "originalPrice": 3311,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 680,
     "reviewCount": 680,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -157,8 +156,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -194,15 +193,14 @@
     "price": 2700,
     "originalPrice": 3517,
     "netPrice": 2214,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 715,
     "reviewCount": 715,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -363,8 +361,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -400,15 +398,14 @@
     "price": 2400,
     "originalPrice": 3170,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 576,
     "reviewCount": 576,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -536,8 +533,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -573,15 +570,14 @@
     "price": 3000,
     "originalPrice": 4113,
     "netPrice": 2460,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 485,
     "reviewCount": 485,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -737,8 +733,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -774,15 +770,14 @@
     "price": 2300,
     "originalPrice": 3132,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 369,
     "reviewCount": 369,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -910,8 +905,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -947,15 +942,14 @@
     "price": 2500,
     "originalPrice": 3240,
     "netPrice": 2050,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 548,
     "reviewCount": 548,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1111,8 +1105,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -1148,15 +1142,14 @@
     "price": 2500,
     "originalPrice": 3183,
     "netPrice": 2050,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 187,
     "reviewCount": 187,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1284,8 +1277,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1321,15 +1314,14 @@
     "price": 1700,
     "originalPrice": 2109,
     "netPrice": 1394,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 372,
     "reviewCount": 372,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1445,8 +1437,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -1482,15 +1474,14 @@
     "price": 2300,
     "originalPrice": 2971,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 690,
     "reviewCount": 690,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1632,8 +1623,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1669,15 +1660,14 @@
     "price": 1800,
     "originalPrice": 2291,
     "netPrice": 1476,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 123,
     "reviewCount": 123,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1793,8 +1783,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1830,15 +1820,14 @@
     "price": 2400,
     "originalPrice": 3059,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 826,
     "reviewCount": 826,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1980,8 +1969,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2017,15 +2006,14 @@
     "price": 1900,
     "originalPrice": 2321,
     "netPrice": 1558,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 661,
     "reviewCount": 661,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -2139,8 +2127,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2176,15 +2164,14 @@
     "price": 2300,
     "originalPrice": 3172,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 435,
     "reviewCount": 435,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2330,8 +2317,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -2367,15 +2354,14 @@
     "price": 1800,
     "originalPrice": 2472,
     "netPrice": 1476,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 503,
     "reviewCount": 503,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2491,8 +2477,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2528,15 +2514,14 @@
     "price": 2600,
     "originalPrice": 3104,
     "netPrice": 2132,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 555,
     "reviewCount": 555,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -2692,8 +2677,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -2729,15 +2714,14 @@
     "price": 2400,
     "originalPrice": 2877,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 701,
     "reviewCount": 701,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2868,8 +2852,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -2905,15 +2889,14 @@
     "price": 2900,
     "originalPrice": 3546,
     "netPrice": 2378,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 240,
     "reviewCount": 240,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3074,8 +3057,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -3111,15 +3094,14 @@
     "price": 2300,
     "originalPrice": 2989,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 215,
     "reviewCount": 215,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -3247,8 +3229,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -3284,15 +3266,14 @@
     "price": 2800,
     "originalPrice": 3346,
     "netPrice": 2296,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 109,
     "reviewCount": 109,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -3448,8 +3429,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -3485,15 +3466,14 @@
     "price": 2300,
     "originalPrice": 3166,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 601,
     "reviewCount": 601,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -3621,8 +3601,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -3658,15 +3638,14 @@
     "price": 2900,
     "originalPrice": 3427,
     "netPrice": 2378,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 633,
     "reviewCount": 633,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3827,8 +3806,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -3864,15 +3843,14 @@
     "price": 2300,
     "originalPrice": 2748,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 112,
     "reviewCount": 112,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4014,8 +3992,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4051,15 +4029,14 @@
     "price": 1800,
     "originalPrice": 2341,
     "netPrice": 1476,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 609,
     "reviewCount": 609,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4173,8 +4150,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4210,15 +4187,14 @@
     "price": 2300,
     "originalPrice": 2979,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 498,
     "reviewCount": 498,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4360,8 +4336,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -4397,15 +4373,14 @@
     "price": 2000,
     "originalPrice": 2524,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 627,
     "reviewCount": 627,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4519,8 +4494,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -4556,15 +4531,14 @@
     "price": 2300,
     "originalPrice": 2726,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 821,
     "reviewCount": 821,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4706,8 +4680,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -4743,15 +4717,14 @@
     "price": 2000,
     "originalPrice": 2628,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 238,
     "reviewCount": 238,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4867,8 +4840,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -4904,15 +4877,14 @@
     "price": 2400,
     "originalPrice": 3222,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 737,
     "reviewCount": 737,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5054,8 +5026,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5091,15 +5063,14 @@
     "price": 2000,
     "originalPrice": 2429,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 119,
     "reviewCount": 119,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -5230,8 +5201,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -5267,15 +5238,14 @@
     "price": 2800,
     "originalPrice": 3383,
     "netPrice": 2296,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 660,
     "reviewCount": 660,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5431,8 +5401,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5468,15 +5438,14 @@
     "price": 2200,
     "originalPrice": 2898,
     "netPrice": 1804,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 366,
     "reviewCount": 366,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5604,8 +5573,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -5641,15 +5610,14 @@
     "price": 3000,
     "originalPrice": 3629,
     "netPrice": 2460,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 442,
     "reviewCount": 442,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5805,8 +5773,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -5842,15 +5810,14 @@
     "price": 2400,
     "originalPrice": 2845,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 531,
     "reviewCount": 531,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5978,8 +5945,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6015,15 +5982,14 @@
     "price": 2600,
     "originalPrice": 3157,
     "netPrice": 2132,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 608,
     "reviewCount": 608,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6184,8 +6150,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -6221,15 +6187,14 @@
     "price": 2200,
     "originalPrice": 2650,
     "netPrice": 1804,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 245,
     "reviewCount": 245,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -6357,8 +6322,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6394,15 +6359,14 @@
     "price": 1700,
     "originalPrice": 2045,
     "netPrice": 1394,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 390,
     "reviewCount": 390,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6518,8 +6482,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -6555,15 +6519,14 @@
     "price": 2700,
     "originalPrice": 3513,
     "netPrice": 2214,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 550,
     "reviewCount": 550,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6709,8 +6672,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -6746,15 +6709,14 @@
     "price": 1800,
     "originalPrice": 2270,
     "netPrice": 1476,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 574,
     "reviewCount": 574,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6870,8 +6832,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -6907,15 +6869,14 @@
     "price": 2500,
     "originalPrice": 3432,
     "netPrice": 2050,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 146,
     "reviewCount": 146,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-family.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-family.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7061,8 +7022,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-family.svg",
+    "imageUrl": "/seed-images/packages/package-family.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -7098,15 +7059,14 @@
     "price": 2000,
     "originalPrice": 2712,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 568,
     "reviewCount": 568,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7222,8 +7182,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -7259,15 +7219,14 @@
     "price": 2400,
     "originalPrice": 2982,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 545,
     "reviewCount": 545,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7413,8 +7372,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -7450,15 +7409,14 @@
     "price": 1700,
     "originalPrice": 2180,
     "netPrice": 1394,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 688,
     "reviewCount": 688,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7574,8 +7532,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -7611,15 +7569,14 @@
     "price": 2800,
     "originalPrice": 3732,
     "netPrice": 2296,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 690,
     "reviewCount": 690,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -7775,8 +7732,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -7812,15 +7769,14 @@
     "price": 2400,
     "originalPrice": 3241,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 168,
     "reviewCount": 168,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -7948,8 +7904,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -7985,15 +7941,14 @@
     "price": 2900,
     "originalPrice": 3726,
     "netPrice": 2378,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 137,
     "reviewCount": 137,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -8149,8 +8104,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -8186,15 +8141,14 @@
     "price": 2000,
     "originalPrice": 2724,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 466,
     "reviewCount": 466,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -8325,8 +8279,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -8362,15 +8316,14 @@
     "price": 3100,
     "originalPrice": 3896,
     "netPrice": 2542,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 599,
     "reviewCount": 599,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -8526,8 +8479,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -8563,15 +8516,14 @@
     "price": 2300,
     "originalPrice": 2982,
     "netPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 537,
     "reviewCount": 537,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -8699,8 +8651,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -8736,15 +8688,14 @@
     "price": 2700,
     "originalPrice": 3656,
     "netPrice": 2214,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 626,
     "reviewCount": 626,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -8900,8 +8851,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -8937,15 +8888,14 @@
     "price": 2500,
     "originalPrice": 2964,
     "netPrice": 2050,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 216,
     "reviewCount": 216,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9087,8 +9037,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -9124,15 +9074,14 @@
     "price": 1800,
     "originalPrice": 2384,
     "netPrice": 1476,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 520,
     "reviewCount": 520,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9246,8 +9195,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -9283,15 +9232,14 @@
     "price": 2700,
     "originalPrice": 3453,
     "netPrice": 2214,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 479,
     "reviewCount": 479,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9433,8 +9381,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -9470,15 +9418,14 @@
     "price": 2200,
     "originalPrice": 2828,
     "netPrice": 1804,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 122,
     "reviewCount": 122,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9592,8 +9539,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -9629,15 +9576,14 @@
     "price": 2400,
     "originalPrice": 2887,
     "netPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 156,
     "reviewCount": 156,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9779,8 +9725,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -9816,15 +9762,14 @@
     "price": 2000,
     "originalPrice": 2383,
     "netPrice": 1640,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 512,
     "reviewCount": 512,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9938,8 +9883,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -9975,15 +9920,14 @@
     "price": 2500,
     "originalPrice": 3041,
     "netPrice": 2050,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 5,
     "reviews": 515,
     "reviewCount": 515,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -10125,8 +10069,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",

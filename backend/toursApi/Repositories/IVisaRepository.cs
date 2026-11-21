@@ -6,6 +6,8 @@ namespace ToursApi.Repositories;
 
 public class VisaFilterParams
 {
+    public string? Search { get; set; }
+    public string? Category { get; set; }
     public string? Country { get; set; }
     public string? CountryCode { get; set; }
     public string? VisaType { get; set; } // "tourist", "express", "business", "transit", "multiple-entry"

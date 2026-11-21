@@ -161,6 +161,10 @@ public class Hotel
     [JsonPropertyName("title")]
     public string Title { get; set; } = string.Empty;
 
+    [BsonElement("description")]
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
     [BsonElement("propertyType")]
     [JsonPropertyName("propertyType")]
     public string PropertyType { get; set; } = "Hotel"; // "Hotel", "Aparthotel", "Apartment", "Hostel", "Villa", "Resort", "Boutique"

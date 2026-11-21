@@ -68,13 +68,7 @@ public class WebsiteContextMiddleware
         {
             rawHostname = queryHost.ToString();
         }
-        else if (!string.IsNullOrWhiteSpace(context.Request.Host.Host)
-                 && !IsLocalHost(context.Request.Host.Host))
-        {
-            rawHostname = context.Request.Host.Host;
-        }
-
-        // If not found in headers or host, inspect route path segments:
+        // If not found in headers or query params, inspect route path segments:
         // E.g. /api/core/v1/config/{hostname} or /api/config/{hostname}
         if (string.IsNullOrWhiteSpace(rawHostname))
         {
@@ -95,6 +89,18 @@ public class WebsiteContextMiddleware
                     rawHostname = candidate;
                 }
             }
+        }
+        else if (!string.IsNullOrWhiteSpace(context.Request.Host.Host)
+                 && !IsLocalHost(context.Request.Host.Host))
+        {
+            rawHostname = context.Request.Host.Host;
+        }
+
+        if (string.IsNullOrWhiteSpace(rawHostname)
+            && !string.IsNullOrWhiteSpace(context.Request.Host.Host)
+            && !IsLocalHost(context.Request.Host.Host))
+        {
+            rawHostname = context.Request.Host.Host;
         }
 
         if (context.Request.Path.StartsWithSegments("/api"))
@@ -252,57 +258,55 @@ public class WebsiteContextMiddleware
 
                     if (pathStr.StartsWith("/api/hotels", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("hotels");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/hotels", "hotels");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/tours", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("tours");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/tours", "tours");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/packages", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("packages");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/packages", "packages");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/flights", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("flights");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/flights", "flights");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/transfers", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("transfers");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/transfers", "transfers");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/visas", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("visas");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/visas", "visas");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/restaurants", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("restaurants");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/restaurants", "restaurants");
+                        return;
+                    }
+
+                    if (pathStr.StartsWith("/api/activities", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/activities", "activities");
                         return;
                     }
 
                     if (pathStr.StartsWith("/api/buildpackage", StringComparison.OrdinalIgnoreCase))
                     {
-                        var items = ResilientDataGenerator.GetItemsForModule("buildpackage");
-                        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items });
+                        await HandleModuleFallbackAsync(context, pathStr, "/api/buildpackage", "buildpackage");
                         return;
                     }
 
@@ -362,5 +366,30 @@ public class WebsiteContextMiddleware
     private static bool IsLocalHost(string host) =>
         host.Equals("localhost", StringComparison.OrdinalIgnoreCase)
         || host.Equals("127.0.0.1")
-        || host.Equals("::1");
+        || host.Equals("::1")
+        || System.Net.IPAddress.TryParse(host, out _);
+
+    private static async Task HandleModuleFallbackAsync(HttpContext context, string pathStr, string modulePrefix, string moduleKey)
+    {
+        var slugOrId = pathStr.Length > modulePrefix.Length
+            ? pathStr.Substring(modulePrefix.Length).Trim('/')
+            : string.Empty;
+
+        var items = ResilientDataGenerator.GetItemsForModule(moduleKey);
+
+        if (!string.IsNullOrWhiteSpace(slugOrId))
+        {
+            var matched = items.FirstOrDefault(i =>
+                string.Equals(i?["slug"]?.ToString(), slugOrId, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(i?["id"]?.ToString(), slugOrId, StringComparison.OrdinalIgnoreCase));
+
+            if (matched != null)
+            {
+                await context.Response.WriteAsJsonAsync(new { success = true, data = matched });
+                return;
+            }
+        }
+
+        await context.Response.WriteAsJsonAsync(new { success = true, count = items.Count, total = items.Count, data = items, items = items });
+    }
 }

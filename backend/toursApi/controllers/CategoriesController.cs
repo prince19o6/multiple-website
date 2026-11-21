@@ -21,11 +21,27 @@ public class CategoriesController : ControllerBase
         if (string.IsNullOrWhiteSpace(module))
         {
             var all = await _categoryRepository.GetAllCategoriesAsync();
-            return Ok(new { success = true, data = all });
+            return Ok(new
+            {
+                success = true,
+                items = all,
+                total = all.Count,
+                page = 1,
+                pageSize = all.Count,
+                data = all
+            });
         }
 
         var categories = await _categoryRepository.GetCategoriesByModuleAsync(module);
-        return Ok(new { success = true, data = categories });
+        return Ok(new
+        {
+            success = true,
+            items = categories,
+            total = categories.Count,
+            page = 1,
+            pageSize = categories.Count,
+            data = categories
+        });
     }
 
     [HttpGet("{module}/{slug}")]

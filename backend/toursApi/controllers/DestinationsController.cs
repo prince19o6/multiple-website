@@ -86,7 +86,13 @@ namespace ToursApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(
+            [FromQuery] string? search,
+            [FromQuery] string? q,
+            [FromQuery] string? category,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 50,
+            [FromQuery] string? sort = null)
         {
             try
             {
@@ -242,7 +248,33 @@ namespace ToursApi.Controllers
                     // Fall back cleanly to repository destinations
                 }
 
-                return Ok(new { success = true, data = destinations, count = destinations.Count });
+                var filtered = destinations.AsEnumerable();
+                var searchKey = search ?? q;
+                if (!string.IsNullOrWhiteSpace(searchKey))
+                {
+                    filtered = filtered.Where(d =>
+                        (d.Name != null && d.Name.Contains(searchKey, StringComparison.OrdinalIgnoreCase)) ||
+                        (d.Country != null && d.Country.Contains(searchKey, StringComparison.OrdinalIgnoreCase)));
+                }
+
+                if (sort == "name_asc") filtered = filtered.OrderBy(d => d.Name);
+                else if (sort == "name_desc") filtered = filtered.OrderByDescending(d => d.Name);
+                else if (sort == "tours_desc") filtered = filtered.OrderByDescending(d => d.Tours);
+
+                var total = filtered.Count();
+                var paged = filtered.Skip(Math.Max(0, (page - 1) * pageSize)).Take(pageSize).ToList();
+
+                return Ok(new
+                {
+                    success = true,
+                    items = paged,
+                    total = total,
+                    page = page,
+                    pageSize = pageSize,
+                    data = paged,
+                    count = paged.Count,
+                    totalCount = total
+                });
             }
             catch (Exception ex)
             {

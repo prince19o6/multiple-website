@@ -405,15 +405,7 @@ export function getEnv(): EnvConfig {
   const normalizedLang = (rawDefaultLang ?? '').trim().toLowerCase() || 'en';
   const envSource = (rawEnvSource ?? '').trim() || '.env';
 
-  if (!rawHostname || !rawHostname.trim() || !normalizedHostname) {
-    missingVariables.push('EXPO_PUBLIC_SITE_HOSTNAME');
-  }
-
-  if (!rawSiteId || !rawSiteId.trim() || !normalizedSiteId) {
-    missingVariables.push('EXPO_PUBLIC_SITE_ID');
-  }
-
-  // Derive canonical site identity from normalized site ID
+  // Derive canonical site identity from normalized site ID or hostname
   let canonicalSiteId = normalizedSiteId;
   if (canonicalSiteId === 'website1') canonicalSiteId = 'gujjutours';
   if (canonicalSiteId === 'website2') canonicalSiteId = 'tripgoasia';
@@ -426,6 +418,13 @@ export function getEnv(): EnvConfig {
   const siteDef = KNOWN_SITES[canonicalSiteId] || KNOWN_SITES['gujjutours'];
   const expectedHostname = siteDef.hostname;
   const stagingDefault = DEFAULT_STAGE_APIS[canonicalSiteId] || 'https://stagingapi.gujjutours.com';
+
+  // If hostname is missing, auto-populate from known site definition
+  const resolvedHostname = normalizedHostname || expectedHostname;
+
+  if (!rawSiteId && !rawHostname) {
+    missingVariables.push('EXPO_PUBLIC_SITE_ID');
+  }
 
   // Explicit local backend flag ONLY (never infer or force LAN IP automatically)
   const isLocalBackend =
@@ -451,13 +450,8 @@ export function getEnv(): EnvConfig {
           normalizedHostname === 'holidayparadise.com' ||
           normalizedHostname === 'www.holidayparadise.com'));
 
-    if (!isHostValidForSite) {
-      conflictingVariables.push({
-        key: 'EXPO_PUBLIC_SITE_HOSTNAME',
-        value: rawHostname || '',
-        expected: expectedHostname,
-      });
-    }
+    // If hostname differs from siteId, auto-reconcile to the canonical tenant hostname
+    const effectiveHostname = isHostValidForSite ? normalizedHostname : expectedHostname;
 
     // Validate config API URL if provided and not pointing to local backend
     if (rawConfigApiUrl && rawConfigApiUrl.trim() && !isLocalBackend) {

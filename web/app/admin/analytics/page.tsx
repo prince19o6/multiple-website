@@ -35,10 +35,10 @@ export default function AdminAnalytics() {
   }, [loadAnalytics]);
 
   const activeSite = getAdminSite();
-  const currentBrand = ADMIN_SITE_NAMES[activeSite] || ADMIN_SITE_NAMES.website1;
+  const currentBrand = ADMIN_SITE_NAMES[activeSite] || ADMIN_SITE_NAMES.gujjutours;
 
   const maxRevenue = Math.max(
-    ...(data?.revenueOverTime.map((r) => r.revenue) || [1000]),
+    ...(data?.revenueOverTime?.map((r) => r.revenue) || [1000]),
     1000
   );
 

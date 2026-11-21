@@ -36,6 +36,7 @@ public interface IFlightRepository
     Task<Flight?> GetFlightByIdAsync(string id);
     Task<List<Flight>> GetFlightsByRouteAsync(string routeSlug);
     Task<List<string>> AutocompleteAirportsAsync(string query, int limit = 8);
+    Task<List<FlightAirport>> GetAllAirportsAsync();
     Task CreateFlightAsync(Flight flight);
     Task<bool> UpdateFlightAsync(string id, Flight flight);
     Task<bool> DeleteFlightAsync(string id);

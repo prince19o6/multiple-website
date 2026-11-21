@@ -21,6 +21,7 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from '@expo-google-fonts/inter';
+import { Ionicons } from '@expo/vector-icons';
 import {
   Poppins_400Regular,
   Poppins_600SemiBold,
@@ -87,12 +88,32 @@ LogBox.ignoreLogs([
   'There was an error during concurrent rendering',
   '"shadow*" style props are deprecated',
   '12000ms timeout exceeded',
+  'timed out after 12000ms',
+  'Fetching the font family',
+  'ERR_DOWNLOAD',
   'fontfaceobserver',
   'FontFaceObserver',
   'Cannot connect to Expo CLI',
 ]);
 
 if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+  // Prevent Chrome from blocking aria-hidden on route transitions when a descendant has focus
+  if (typeof Element !== 'undefined' && Element.prototype) {
+    if (Element.prototype.setAttribute) {
+      const originalSetAttribute = Element.prototype.setAttribute;
+      Element.prototype.setAttribute = function (name: string, value: string) {
+        if (name === 'aria-hidden' && (value === 'true' || value === '')) {
+          if (typeof document !== 'undefined' && document.activeElement && this.contains(document.activeElement)) {
+            try {
+              (document.activeElement as HTMLElement)?.blur?.();
+            } catch {}
+          }
+        }
+        return originalSetAttribute.call(this, name, value);
+      };
+    }
+  }
+
   const isRecoverable = (msg: unknown) => {
     if (typeof msg !== 'string') return false;
     return (
@@ -102,6 +123,9 @@ if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof window.addE
       msg.includes('did not match') ||
       msg.includes('"shadow*" style props are deprecated') ||
       msg.includes('12000ms timeout exceeded') ||
+      msg.includes('timed out after') ||
+      msg.includes('Fetching the font family') ||
+      msg.includes('ERR_DOWNLOAD') ||
       msg.includes('fontfaceobserver') ||
       msg.includes('FontFaceObserver')
     );
@@ -111,6 +135,19 @@ if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof window.addE
     'error',
     (event: ErrorEvent) => {
       const msg = event?.error?.message || event?.message || '';
+      if (isRecoverable(msg)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    },
+    true
+  );
+
+  window.addEventListener(
+    'unhandledrejection',
+    (event: PromiseRejectionEvent) => {
+      const reason = event?.reason;
+      const msg = reason?.message || String(reason || '');
       if (isRecoverable(msg)) {
         event.preventDefault();
         event.stopImmediatePropagation();
@@ -281,6 +318,7 @@ export default function RootLayout() {
   const [envState, setEnvState] = useState(ENV);
 
   const [fontsLoaded, fontError] = useFonts({
+    ...Ionicons.font,
     'Inter': Inter_400Regular,
     'Inter-Regular': Inter_400Regular,
     'Inter-Medium': Inter_500Medium,

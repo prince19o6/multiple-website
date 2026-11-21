@@ -25,11 +25,10 @@
     "rating": 4.8,
     "reviews": 691,
     "reviewCount": 691,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -160,8 +159,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -201,11 +200,10 @@
     "rating": 4.8,
     "reviews": 721,
     "reviewCount": 721,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -366,8 +364,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -407,11 +405,10 @@
     "rating": 4.7,
     "reviews": 428,
     "reviewCount": 428,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -539,8 +536,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -580,11 +577,10 @@
     "rating": 4.8,
     "reviews": 640,
     "reviewCount": 640,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -745,8 +741,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -786,11 +782,10 @@
     "rating": 4.6,
     "reviews": 286,
     "reviewCount": 286,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -918,8 +913,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -959,11 +954,10 @@
     "rating": 5,
     "reviews": 494,
     "reviewCount": 494,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1119,8 +1113,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -1160,11 +1154,10 @@
     "rating": 4.7,
     "reviews": 197,
     "reviewCount": 197,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -1292,8 +1285,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1333,11 +1326,10 @@
     "rating": 5,
     "reviews": 622,
     "reviewCount": 622,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1453,8 +1445,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -1494,11 +1486,10 @@
     "rating": 4.7,
     "reviews": 542,
     "reviewCount": 542,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1644,8 +1635,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1685,11 +1676,10 @@
     "rating": 4.7,
     "reviews": 298,
     "reviewCount": 298,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1805,8 +1795,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1846,11 +1836,10 @@
     "rating": 4.6,
     "reviews": 337,
     "reviewCount": 337,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -1996,8 +1985,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2037,11 +2026,10 @@
     "rating": 4.8,
     "reviews": 345,
     "reviewCount": 345,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2157,8 +2145,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2198,11 +2186,10 @@
     "rating": 4.6,
     "reviews": 610,
     "reviewCount": 610,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2348,8 +2335,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -2389,11 +2376,10 @@
     "rating": 4.7,
     "reviews": 524,
     "reviewCount": 524,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-spiritual.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-spiritual.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2509,8 +2495,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-spiritual.svg",
+    "imageUrl": "/seed-images/packages/package-spiritual.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2550,11 +2536,10 @@
     "rating": 4.6,
     "reviews": 682,
     "reviewCount": 682,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2715,8 +2700,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -2756,11 +2741,10 @@
     "rating": 4.7,
     "reviews": 300,
     "reviewCount": 300,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -2891,8 +2875,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -2932,11 +2916,10 @@
     "rating": 4.7,
     "reviews": 182,
     "reviewCount": 182,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3097,8 +3080,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -3138,11 +3121,10 @@
     "rating": 4.9,
     "reviews": 92,
     "reviewCount": 92,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3273,8 +3255,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -3314,11 +3296,10 @@
     "rating": 4.7,
     "reviews": 177,
     "reviewCount": 177,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3479,8 +3460,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -3520,11 +3501,10 @@
     "rating": 4.8,
     "reviews": 142,
     "reviewCount": 142,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -3652,8 +3632,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -3693,11 +3673,10 @@
     "rating": 4.7,
     "reviews": 729,
     "reviewCount": 729,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -3858,8 +3837,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -3899,11 +3878,10 @@
     "rating": 4.6,
     "reviews": 722,
     "reviewCount": 722,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4049,8 +4027,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4090,11 +4068,10 @@
     "rating": 5,
     "reviews": 113,
     "reviewCount": 113,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4210,8 +4187,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4251,11 +4228,10 @@
     "rating": 4.8,
     "reviews": 455,
     "reviewCount": 455,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4401,8 +4377,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -4442,11 +4418,10 @@
     "rating": 4.7,
     "reviews": 513,
     "reviewCount": 513,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4562,8 +4537,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -4603,11 +4578,10 @@
     "rating": 4.8,
     "reviews": 792,
     "reviewCount": 792,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -4753,8 +4727,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -4794,11 +4768,10 @@
     "rating": 4.9,
     "reviews": 695,
     "reviewCount": 695,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -4912,8 +4885,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -4953,11 +4926,10 @@
     "rating": 4.9,
     "reviews": 813,
     "reviewCount": 813,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-honeymoon.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-honeymoon.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -5103,8 +5075,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-honeymoon.svg",
+    "imageUrl": "/seed-images/packages/package-honeymoon.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5144,11 +5116,10 @@
     "rating": 4.9,
     "reviews": 630,
     "reviewCount": 630,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5276,8 +5247,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -5317,11 +5288,10 @@
     "rating": 4.9,
     "reviews": 388,
     "reviewCount": 388,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -5482,8 +5452,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5523,11 +5493,10 @@
     "rating": 4.7,
     "reviews": 137,
     "reviewCount": 137,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -5658,8 +5627,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -5699,11 +5668,10 @@
     "rating": 4.7,
     "reviews": 676,
     "reviewCount": 676,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -5859,8 +5827,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -5900,11 +5868,10 @@
     "rating": 4.8,
     "reviews": 787,
     "reviewCount": 787,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6035,8 +6002,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6076,11 +6043,10 @@
     "rating": 4.6,
     "reviews": 516,
     "reviewCount": 516,
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -6236,8 +6202,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -6277,11 +6243,10 @@
     "rating": 4.9,
     "reviews": 484,
     "reviewCount": 484,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6412,8 +6377,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6453,11 +6418,10 @@
     "rating": 5,
     "reviews": 102,
     "reviewCount": 102,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-dubai.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-dubai.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -6571,8 +6535,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-dubai.svg",
+    "imageUrl": "/seed-images/packages/package-dubai.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -6612,11 +6576,10 @@
     "rating": 4.6,
     "reviews": 175,
     "reviewCount": 175,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -6762,8 +6725,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -6803,11 +6766,10 @@
     "rating": 4.7,
     "reviews": 556,
     "reviewCount": 556,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -6921,8 +6883,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -6962,11 +6924,10 @@
     "rating": 4.8,
     "reviews": 355,
     "reviewCount": 355,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-family.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-family.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -7108,8 +7069,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-family.svg",
+    "imageUrl": "/seed-images/packages/package-family.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -7149,11 +7110,10 @@
     "rating": 4.9,
     "reviews": 415,
     "reviewCount": 415,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7269,8 +7229,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -7310,11 +7270,10 @@
     "rating": 4.9,
     "reviews": 757,
     "reviewCount": 757,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -7456,8 +7415,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -7497,11 +7456,10 @@
     "rating": 4.8,
     "reviews": 677,
     "reviewCount": 677,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-jain.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7617,8 +7575,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-jain.svg",
+    "imageUrl": "/seed-images/packages/package-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -7658,11 +7616,10 @@
     "rating": 4.9,
     "reviews": 191,
     "reviewCount": 191,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -7823,8 +7780,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -7864,11 +7821,10 @@
     "rating": 4.8,
     "reviews": 173,
     "reviewCount": 173,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -7996,8 +7952,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -8037,11 +7993,10 @@
     "rating": 5,
     "reviews": 370,
     "reviewCount": 370,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -8202,8 +8157,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -8243,11 +8198,10 @@
     "rating": 4.7,
     "reviews": 179,
     "reviewCount": 179,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -8378,8 +8332,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -8419,11 +8373,10 @@
     "rating": 4.8,
     "reviews": 606,
     "reviewCount": 606,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -8579,8 +8532,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -8620,11 +8573,10 @@
     "rating": 4.6,
     "reviews": 162,
     "reviewCount": 162,
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -8755,8 +8707,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -8796,11 +8748,10 @@
     "rating": 4.7,
     "reviews": 179,
     "reviewCount": 179,
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/packages/package-international.svg",
     "images": [
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/packages/package-international.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -8961,8 +8912,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-international.svg",
+    "imageUrl": "/seed-images/packages/package-international.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -9002,11 +8953,10 @@
     "rating": 4.6,
     "reviews": 572,
     "reviewCount": 572,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -9152,8 +9102,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -9193,11 +9143,10 @@
     "rating": 4.8,
     "reviews": 123,
     "reviewCount": 123,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -9313,8 +9262,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -9354,11 +9303,10 @@
     "rating": 4.9,
     "reviews": 432,
     "reviewCount": 432,
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9500,8 +9448,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -9541,11 +9489,10 @@
     "rating": 4.7,
     "reviews": 611,
     "reviewCount": 611,
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -9661,8 +9608,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -9702,11 +9649,10 @@
     "rating": 4.9,
     "reviews": 174,
     "reviewCount": 174,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-scenic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-scenic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -9848,8 +9794,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-scenic.svg",
+    "imageUrl": "/seed-images/packages/package-scenic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -9889,11 +9835,10 @@
     "rating": 4.6,
     "reviews": 668,
     "reviewCount": 668,
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": false,
@@ -10007,8 +9952,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -10048,11 +9993,10 @@
     "rating": 4.8,
     "reviews": 599,
     "reviewCount": 599,
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/packages/package-domestic.svg",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85"
+      "/seed-images/packages/package-domestic.svg",
+      "/seed-images/packages/package-international.svg"
     ],
     "dietaryFeatures": {
       "pureVeg": true,
@@ -10198,8 +10142,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/packages/package-domestic.svg",
+    "imageUrl": "/seed-images/packages/package-domestic.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",

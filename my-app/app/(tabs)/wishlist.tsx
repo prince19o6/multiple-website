@@ -248,7 +248,12 @@ export default function WishlistTabScreen() {
             </Text>
             <TouchableOpacity testID="btn-explore-available-tours"
               style={[styles.exploreButton, { backgroundColor: colors.primary }]}
-              onPress={() => router.push('/(tabs)/explore')}
+              onPress={() => {
+                if (Platform.OS === 'web' && typeof document !== 'undefined') {
+                  try { (document.activeElement as HTMLElement)?.blur?.(); } catch {}
+                }
+                router.push('/(tabs)/explore');
+              }}
               activeOpacity={0.88}
               accessibilityRole="button"
               accessibilityLabel="Explore tours"

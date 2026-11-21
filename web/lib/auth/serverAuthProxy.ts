@@ -271,6 +271,9 @@ export async function forwardAuthRequest(req: NextRequest, options: ProxyAuthOpt
     if (options.path.includes("logout")) {
       response.cookies.set(`auth_token_${siteId}`, "", { path: "/", maxAge: 0 });
       response.cookies.set(`auth_refresh_${siteId}`, "", { path: "/", maxAge: 0 });
+      response.cookies.set(`admin_token_${siteId}`, "", { path: "/", maxAge: 0 });
+      response.cookies.set(`admin_user_${siteId}`, "", { path: "/", maxAge: 0 });
+      response.cookies.set("admin_token", "", { path: "/", maxAge: 0 });
     }
 
     return response;

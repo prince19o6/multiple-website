@@ -13,7 +13,7 @@
     "badge": "Top Seller Asia",
     "overview": "Tailor every detail of your vacation to Bali Tropical Island Escape. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -296,8 +296,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 480,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -325,7 +325,7 @@
     "badge": "Beach Paradise",
     "overview": "Tailor every detail of your vacation to Phuket & Krabi Coastal Getaway. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -608,8 +608,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 420,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -637,7 +637,7 @@
     "badge": "Family Favorite",
     "overview": "Tailor every detail of your vacation to Singapore Urban Wonder. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -920,8 +920,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 580,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -949,7 +949,7 @@
     "badge": "Cultural Masterpiece",
     "overview": "Tailor every detail of your vacation to Tokyo & Kyoto Heritage. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1232,8 +1232,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 890,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -1261,7 +1261,7 @@
     "badge": "Southern Explorer",
     "overview": "Tailor every detail of your vacation to Sydney & Melbourne Highlights. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1544,8 +1544,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 980,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1573,7 +1573,7 @@
     "badge": "Luxury Desert",
     "overview": "Tailor every detail of your vacation to Dubai & Abu Dhabi Oasis. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -1856,8 +1856,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 540,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1885,7 +1885,7 @@
     "badge": "Best Value",
     "overview": "Tailor every detail of your vacation to Kuala Lumpur & Langkawi. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -2168,8 +2168,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 390,
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -2197,7 +2197,7 @@
     "badge": "Top Trending",
     "overview": "Tailor every detail of your vacation to Vietnam Golden Bridge & Heritage. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2480,8 +2480,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 460,
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -2509,7 +2509,7 @@
     "badge": "K-Trend Choice",
     "overview": "Tailor every detail of your vacation to Seoul & Jeju Island Magic. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -2792,8 +2792,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 780,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2821,7 +2821,7 @@
     "badge": "Ultimate Adventure",
     "overview": "Tailor every detail of your vacation to Auckland & Queenstown Adventure. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -3104,8 +3104,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 1150,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",

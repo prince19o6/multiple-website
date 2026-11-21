@@ -55,9 +55,6 @@ export default function LanguageSitePage() {
 
       {/* 13. Trust badges (No Booking Fees, Best Price Guarantee, 1000+ Happy Customers) */}
       <ModuleSection type="trustBadges" />
-
-      {/* 14. Footer Section */}
-      <ModuleSection type="footer" />
     </main>
   );
 }

@@ -108,12 +108,20 @@ public class CoreHomeController : ControllerBase
 
     private static string ResolveActualPhoto(string? raw, string module, int index)
     {
-        if (!string.IsNullOrWhiteSpace(raw) &&
-            raw.StartsWith("http", StringComparison.OrdinalIgnoreCase) &&
-            !raw.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) &&
-            !raw.Contains("/seed-images/"))
+        if (!string.IsNullOrWhiteSpace(raw))
         {
-            return raw;
+            if (raw.StartsWith("/seed-images/", StringComparison.OrdinalIgnoreCase) ||
+                raw.StartsWith("/assets/", StringComparison.OrdinalIgnoreCase))
+            {
+                return raw;
+            }
+
+            if (raw.StartsWith("http", StringComparison.OrdinalIgnoreCase) &&
+                !raw.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) &&
+                !raw.Contains("/seed-images/"))
+            {
+                return raw;
+            }
         }
 
         var pool = module.ToLowerInvariant() switch
@@ -273,9 +281,11 @@ public class CoreHomeController : ControllerBase
     }
 
     /// <summary>
+    /// GET /api/home?module={module}&site={site}
     /// GET /api/core/v1/home?module={module}&site={site}
     /// Returns unified home page structure driven strictly by the active module.
     /// </summary>
+    [HttpGet("api/home")]
     [HttpGet("api/core/v1/home")]
     public async Task<IActionResult> GetHome([FromQuery] string? module, [FromQuery] string? site)
     {
@@ -350,52 +360,335 @@ public class CoreHomeController : ControllerBase
         });
     }
 
-    private Task<object> BuildHomePayload(string siteName, string module)
+    private async Task<List<object>> FetchDynamicFeaturedFromDbAsync(string module, int limit = 6)
+    {
+        var items = new List<object>();
+        try
+        {
+            switch (module.ToLowerInvariant())
+            {
+                case "hotels":
+                    var hotels = await _database.GetCollection<Hotel>("hotels")
+                        .Find(h => h.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var h in hotels)
+                    {
+                        var img = h.Images?.FirstOrDefault() ?? ResolveActualPhoto(null, "hotels", 0);
+                        items.Add(new
+                        {
+                            id = h.Id ?? h.Slug,
+                            slug = h.Slug,
+                            title = h.Title,
+                            name = h.Title,
+                            rating = h.StarRating > 0 ? (double)h.StarRating : 4.8,
+                            reviewsCount = 42,
+                            price = h.Rooms?.FirstOrDefault()?.PricePerNight ?? 150.0,
+                            currency = h.Currency ?? "USD",
+                            image = img,
+                            location = h.Destination?.Address ?? h.Destination?.CityName ?? "City Center",
+                            badge = h.Featured ? "FEATURED STAY" : "POPULAR",
+                            amenities = h.Amenities ?? new List<string>()
+                        });
+                    }
+                    break;
+
+                case "tours":
+                    var tours = await _database.GetCollection<Tour>("tours")
+                        .Find(t => t.Status != "Inactive" && t.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var t in tours)
+                    {
+                        var img = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : (t.Gallery?.FirstOrDefault() ?? ResolveActualPhoto(null, "tours", 0));
+                        items.Add(new
+                        {
+                            id = t.Id ?? t.Slug,
+                            slug = t.Slug,
+                            title = t.Name,
+                            name = t.Name,
+                            rating = t.Rating > 0 ? t.Rating : 4.9,
+                            reviewsCount = t.Reviews > 0 ? t.Reviews : 85,
+                            price = t.Price,
+                            duration = t.Duration ?? "Half Day",
+                            image = img,
+                            location = t.Location ?? t.Destination ?? "Dubai",
+                            badge = t.Featured ? "TOP PICK" : "POPULAR",
+                            category = t.Category ?? "Adventure"
+                        });
+                    }
+                    break;
+
+                case "packages":
+                    var pkgs = await _database.GetCollection<Package>("packages")
+                        .Find(p => p.Status != "Inactive" && p.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var p in pkgs)
+                    {
+                        var img = !string.IsNullOrWhiteSpace(p.Image) ? p.Image : (p.Images?.FirstOrDefault() ?? ResolveActualPhoto(null, "packages", 0));
+                        items.Add(new
+                        {
+                            id = p.Id ?? p.Slug,
+                            slug = p.Slug,
+                            title = p.Title,
+                            name = p.Title,
+                            rating = p.Rating > 0 ? p.Rating : 4.9,
+                            reviewsCount = 50,
+                            price = p.Price,
+                            duration = p.Duration ?? "4 Nights / 5 Days",
+                            image = img,
+                            location = p.Destination ?? "Exotic Destination",
+                            badge = "CURATED COMBO"
+                        });
+                    }
+                    break;
+
+                case "flights":
+                    var flights = await _database.GetCollection<Flight>("flights")
+                        .Find(f => f.Status != "Inactive" && f.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var f in flights)
+                    {
+                        var origin = f.FromAirport?.City ?? f.FromAirport?.Code ?? "Origin";
+                        var destination = f.ToAirport?.City ?? f.ToAirport?.Code ?? "Destination";
+                        items.Add(new
+                        {
+                            id = f.Id ?? f.Slug,
+                            slug = f.Slug,
+                            title = $"{f.Airline} - {origin} to {destination}",
+                            airline = f.Airline,
+                            flightNumber = f.FlightNumber,
+                            origin = origin,
+                            destination = destination,
+                            departureTime = f.DepartureTime,
+                            arrivalTime = f.ArrivalTime,
+                            price = f.Price,
+                            currency = f.Currency,
+                            airlineLogo = f.AirlineLogo ?? ResolveActualPhoto(null, "flights", 0),
+                            badge = "DIRECT FLIGHT"
+                        });
+                    }
+                    break;
+
+                case "transfers":
+                    var transfers = await _database.GetCollection<Transfer>("transfers")
+                        .Find(t => t.Status != "Inactive" && t.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var t in transfers)
+                    {
+                        var img = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : ResolveActualPhoto(null, "transfers", 0);
+                        items.Add(new
+                        {
+                            id = t.Id ?? t.Slug,
+                            slug = t.Slug,
+                            title = t.Name,
+                            vehicleType = t.VehicleType,
+                            capacity = t.MaxPassengers,
+                            luggageCapacity = t.MaxLuggage,
+                            price = t.Price,
+                            currency = t.Currency,
+                            image = img,
+                            badge = "PRIVATE CHAUFFEUR"
+                        });
+                    }
+                    break;
+
+                case "visas":
+                    var visas = await _database.GetCollection<Visa>("visas")
+                        .Find(v => v.Status != "Inactive" && v.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var v in visas)
+                    {
+                        var img = !string.IsNullOrWhiteSpace(v.Image) ? v.Image : ResolveActualPhoto(null, "visas", 0);
+                        items.Add(new
+                        {
+                            id = v.Id ?? v.Slug,
+                            slug = v.Slug,
+                            title = $"{v.Country} {v.VisaType}",
+                            country = v.Country,
+                            visaType = v.VisaType,
+                            processingTime = v.ProcessingTime,
+                            price = v.Price,
+                            currency = v.Currency,
+                            image = img,
+                            badge = "FAST TRACK VISA"
+                        });
+                    }
+                    break;
+
+                case "restaurants":
+                    var restaurants = await _database.GetCollection<Restaurant>("restaurants")
+                        .Find(r => r.Status != "Inactive" && r.Status != "inactive")
+                        .Limit(limit)
+                        .ToListAsync();
+                    foreach (var r in restaurants)
+                    {
+                        var img = !string.IsNullOrWhiteSpace(r.Image) ? r.Image : ResolveActualPhoto(null, "restaurants", 0);
+                        items.Add(new
+                        {
+                            id = r.Id ?? r.Slug,
+                            slug = r.Slug,
+                            title = r.Name,
+                            cuisine = r.Cuisine,
+                            rating = r.Rating > 0 ? r.Rating : 4.8,
+                            priceRange = r.PriceRange,
+                            price = r.CostForTwo > 0 ? r.CostForTwo : 0,
+                            costForTwo = r.CostForTwo > 0 ? r.CostForTwo : 0,
+                            image = img,
+                            address = r.Address,
+                            city = r.City,
+                            reviewCount = r.Reviews > 0 ? r.Reviews : 100,
+                            pureVeg = r.IsPureVeg,
+                            jainAvailable = r.IsJainAvailable,
+                            halalCertified = r.IsHalalCertified,
+                            badge = r.IsPureVeg ? "PURE VEG & JAIN" : "GOURMET DINING"
+                        });
+                    }
+                    break;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to fetch dynamic featured items from DB for module {Module}", module);
+        }
+        return items;
+    }
+
+    private async Task<object> BuildHomePayload(string siteName, string module)
     {
         try
         {
             var meta = GetModuleMeta(siteName, module);
-            var categories = FetchCategoriesForModule(siteName, module);
-            var featured = FetchFeaturedForModule(siteName, module, 6);
-            var destinations = FetchDestinationsForModule(siteName, module);
-            var offers = GetOfferBanners(siteName, module);
-            var videos = GetVideoExperiences(siteName, module);
-            var packages = FetchCuratedPackages(siteName, module);
-            var reviews = GetReviews(siteName, module);
-            var faq = GetFaqAccordion(siteName, module);
 
+            // 1. Dynamic Hero Banners from MongoDB
+            var bannersCol = _database.GetCollection<Banner>("hero_banners");
+            var dbBanners = await bannersCol.Find(b => b.IsActive && (b.Module == module || b.Module == "home" || b.Module == "all"))
+                .SortBy(b => b.SortOrder)
+                .ToListAsync();
+
+            // 2. Dynamic Categories from MongoDB
+            var categoriesCol = _database.GetCollection<Category>("categories");
+            var dbCategories = await categoriesCol.Find(c => c.Enabled && (c.Module == module || c.Module == "all"))
+                .SortBy(c => c.Order)
+                .ToListAsync();
+
+            // 3. Dynamic Special Offers from MongoDB
+            var offersCol = _database.GetCollection<SpecialOffer>("special_offers");
+            var dbOffers = await offersCol.Find(o => o.IsActive && (o.Module == module || o.Module == "all"))
+                .SortBy(o => o.SortOrder)
+                .ToListAsync();
+
+            // 4. Dynamic Videos from MongoDB
+            var videosCol = _database.GetCollection<TravelVideo>("travel_videos");
+            var dbVideos = await videosCol.Find(v => v.IsActive && (v.Module == module || v.Module == "all"))
+                .SortBy(v => v.SortOrder)
+                .ToListAsync();
+
+            // 5. Dynamic Reviews from MongoDB
+            var reviewsCol = _database.GetCollection<Review>("reviews");
+            var dbReviews = await reviewsCol.Find(r => r.IsActive && (r.Module == module || r.Module == "all"))
+                .SortBy(r => r.SortOrder)
+                .ToListAsync();
+
+            // 6. Dynamic FAQs from MongoDB
+            var faqsCol = _database.GetCollection<FaqItem>("faqs");
+            var dbFaqs = await faqsCol.Find(f => f.IsActive)
+                .SortBy(f => f.SortOrder)
+                .ToListAsync();
+
+            // 7. Dynamic Partners from MongoDB
+            var partnersCol = _database.GetCollection<Partner>("partners");
+            var dbPartners = await partnersCol.Find(p => p.IsActive)
+                .SortBy(p => p.SortOrder)
+                .ToListAsync();
+
+            // 8. Dynamic Destinations from MongoDB
+            var destsCol = _database.GetCollection<Destination>("destinations");
+            var dbDestinations = await destsCol.Find(_ => true)
+                .SortBy(d => d.SortOrder)
+                .ToListAsync();
+
+            // 9. Dynamic Curated Packages from MongoDB
+            var packagesCol = _database.GetCollection<Package>("packages");
+            var dbPackages = await packagesCol.Find(p => p.Status != "Inactive" && p.Status != "inactive")
+                .Limit(8)
+                .ToListAsync();
+
+            // 10. Dynamic Featured Items from Active Module Collection in MongoDB
+            var featured = await FetchDynamicFeaturedFromDbAsync(module, 6);
             if (featured == null || featured.Count == 0)
             {
-                featured = ResilientDataGenerator.GetItemsForModule(module, 6, siteName);
+                var fallbackFeatured = FetchFeaturedForModule(siteName, module, 6);
+                if (fallbackFeatured != null && fallbackFeatured.Count > 0)
+                {
+                    featured = fallbackFeatured.Cast<object>().ToList();
+                }
+                else
+                {
+                    featured = ResilientDataGenerator.GetItemsForModule(module, 6, siteName).Cast<object>().ToList();
+                }
             }
-            if (categories == null || categories.Count == 0)
-            {
-                categories = ResilientDataGenerator.GetCategoriesForModule(module);
-            }
-            if (offers == null || offers.Count == 0)
-            {
-                offers = ResilientDataGenerator.GetBannersForModule(module);
-            }
-            if (destinations == null || destinations.Count == 0)
-            {
-                destinations = ResilientDataGenerator.GetDestinationsForModule(module);
-            }
-            if (packages == null || packages.Count == 0)
-            {
-                packages = ResilientDataGenerator.GetItemsForModule("packages", 6, siteName);
-            }
-            if (videos == null || videos.Count == 0)
-            {
-                videos = ResilientDataGenerator.GetVideosForModule(module);
-            }
-            if (reviews == null || reviews.Count == 0)
-            {
-                reviews = ResilientDataGenerator.GetReviewsForModule(module);
-            }
-            if (faq == null || faq.Count == 0)
-            {
-                faq = ResilientDataGenerator.GetFaqForModule(module);
-            }
+
+            // Categories fallback if DB collection has 0
+            object categoriesData = dbCategories.Count > 0
+                ? (object)dbCategories.Select(c => new
+                {
+                    id = c.Id ?? c.Slug,
+                    slug = c.Slug,
+                    name = c.Name.TryGetValue("en", out var n) ? n : c.Slug,
+                    icon = c.Icon,
+                    order = c.Order,
+                    module = c.Module
+                }).ToList()
+                : FetchCategoriesForModule(siteName, module);
+
+            // Banners / Offers
+            object bannersData = dbBanners.Count > 0
+                ? (object)dbBanners
+                : (dbOffers.Count > 0 ? (object)dbOffers : GetOfferBanners(siteName, module));
+
+            // Offers
+            object offersData = dbOffers.Count > 0
+                ? (object)dbOffers
+                : GetOfferBanners(siteName, module);
+
+            // Destinations
+            object destinationsData = dbDestinations.Count > 0
+                ? (object)dbDestinations
+                : FetchDestinationsForModule(siteName, module);
+
+            // Packages
+            object packagesData = dbPackages.Count > 0
+                ? (object)dbPackages
+                : FetchCuratedPackages(siteName, module);
+
+            // Videos
+            object videosData = dbVideos.Count > 0
+                ? (object)dbVideos
+                : GetVideoExperiences(siteName, module);
+
+            // Reviews
+            object reviewsData = dbReviews.Count > 0
+                ? (object)dbReviews
+                : GetReviews(siteName, module);
+
+            // FAQ
+            object faqData = dbFaqs.Count > 0
+                ? (object)dbFaqs
+                : GetFaqAccordion(siteName, module);
+
+            // Partners
+            object partnersData = dbPartners.Count > 0
+                ? (object)dbPartners
+                : SeedDataCatalog.GetPartners(siteName);
+
+            // 11. Website config for theme, stats, trust badges
+            var configCol = _database.GetCollection<WebsiteConfigDocument>("website_configs");
+            var siteDoc = await configCol.Find(c => true).FirstOrDefaultAsync();
 
             object result = new
             {
@@ -403,23 +696,26 @@ public class CoreHomeController : ControllerBase
                 websiteId = siteName,
                 module = module,
                 meta = meta,
-                banners = offers,
+                banners = bannersData,
+                heroBanners = dbBanners,
+                offers = offersData,
                 featured = featured,
-                destinations = destinations,
-                categories = categories,
-                packages = packages,
-                videos = videos,
-                reviews = reviews,
-                faq = faq
+                destinations = destinationsData,
+                categories = categoriesData,
+                packages = packagesData,
+                videos = videosData,
+                reviews = reviewsData,
+                faq = faqData,
+                partners = partnersData,
+                siteConfig = siteDoc != null ? siteDoc.Config.ToDictionary() : null
             };
 
-            return Task.FromResult(result);
+            return result;
         }
         catch (Exception ex)
         {
             _logger.LogWarning(ex, "Failed building dynamic home payload for module {Module}. Falling back to resilient generator.", module);
-            var fallback = ResilientDataGenerator.BuildSafeHomePayload(siteName, module);
-            return Task.FromResult(fallback);
+            return ResilientDataGenerator.BuildSafeHomePayload(siteName, module);
         }
     }
 

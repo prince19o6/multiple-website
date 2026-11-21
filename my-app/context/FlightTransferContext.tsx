@@ -77,14 +77,19 @@ export const FlightTransferProvider: React.FC<{ children: ReactNode }> = ({ chil
       try {
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {});
         setTransfer((prev) => (prev ? { ...prev, transferStatus: status } : prev));
+        // Immediately persist locally for instantaneous UX
         await storeSet(getTransferStatusKey(siteId), status);
-        await updateTransferStatus(
+        updateTransferStatus(
           {
             transferId: transfer?.transferId,
             status,
           },
           siteId
-        ).catch(() => {});
+        ).catch((err) => {
+          if (__DEV__) {
+            console.log('[FlightTransferContext] Status saved locally; backend sync note:', err?.message || err);
+          }
+        });
       } catch (err) {
         console.error('[FlightTransferContext] Error updating status:', err);
       }

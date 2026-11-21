@@ -24,7 +24,8 @@ function AdminLoginForm() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const currentSite = getAdminSite();
+    const siteParam = searchParams.get("site") as AdminSiteId;
+    const currentSite = siteParam && ADMIN_SITE_NAMES[siteParam] ? siteParam : getAdminSite();
     setSelectedSite(currentSite);
     updateDefaultEmail(currentSite);
 
@@ -35,7 +36,7 @@ function AdminLoginForm() {
     if (token && user && (roleLower === "admin" || roleLower === "superadmin")) {
       router.replace(returnUrl);
     }
-  }, [router, returnUrl]);
+  }, [router, returnUrl, searchParams]);
 
   const updateDefaultEmail = (site: AdminSiteId) => {
     if (site === "website1" || site === "gujjutours") setEmail("admin@gujjutours.com");

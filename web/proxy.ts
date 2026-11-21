@@ -3,6 +3,7 @@ import {
   resolveProductionSiteFromHost,
   resolveSiteFromHost,
   getSiteById,
+  isValidSiteId,
   normalizeHost,
   type SiteDefinition,
 } from "@/lib/siteRegistry";
@@ -36,7 +37,7 @@ function isPrivateOrLocalHost(host: string): boolean {
   return false;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // 1. Allow Next.js static assets, API handlers, error page, and public files
@@ -106,13 +107,29 @@ export function middleware(request: NextRequest) {
   // 4. Admin routes (/admin, /admin/**) guarded and scoped to active site
   if (pathname === "/admin" || pathname.startsWith("/admin/")) {
     const isLoginOrAuth = pathname === "/admin/login" || pathname === "/admin/unauthorized";
-    const adminToken = request.cookies.get(`admin_token_${site.siteId}`)?.value || request.cookies.get("admin_token")?.value;
+
+    // Priority for admin tenant resolution:
+    // 1. URL search param ?site= (e.g. /admin/login?site=tripgoasia)
+    // 2. Cookie admin_active_site
+    // 3. Current resolved site (from host / env)
+    const urlSiteParam = request.nextUrl.searchParams.get("site");
+    const activeCookieSiteId = urlSiteParam && isValidSiteId(urlSiteParam)
+      ? urlSiteParam
+      : request.cookies.get("admin_active_site")?.value;
+
+    const adminSite = (activeCookieSiteId && isValidSiteId(activeCookieSiteId) && getSiteById(activeCookieSiteId))
+      ? getSiteById(activeCookieSiteId)!
+      : site;
+
+    const adminToken =
+      request.cookies.get(`admin_token_${adminSite.siteId}`)?.value ||
+      request.cookies.get("admin_token")?.value;
 
     if (!adminToken && !isLoginOrAuth) {
       const returnUrl = encodeURIComponent(pathname + (request.nextUrl.search || ""));
-      const loginUrl = new URL(`/admin/login?returnUrl=${returnUrl}`, request.url);
+      const loginUrl = new URL(`/admin/login?returnUrl=${returnUrl}&site=${adminSite.siteId}`, request.url);
       const redirectRes = NextResponse.redirect(loginUrl);
-      redirectRes.cookies.set("admin_active_site", site.siteId, {
+      redirectRes.cookies.set("admin_active_site", adminSite.siteId, {
         path: "/",
         sameSite: "lax",
         maxAge: 86400,
@@ -126,10 +143,10 @@ export function middleware(request: NextRequest) {
     }
 
     const requestHeaders = new Headers(request.headers);
-    requestHeaders.set("x-site-id", site.siteId);
-    requestHeaders.set("x-site-hostname", normalizedHost);
-    requestHeaders.set("x-backend-hostname", site.backendHostname);
-    requestHeaders.set("x-site-source", resolutionSource);
+    requestHeaders.set("x-site-id", adminSite.siteId);
+    requestHeaders.set("x-site-hostname", adminSite.backendHostname);
+    requestHeaders.set("x-backend-hostname", adminSite.backendHostname);
+    requestHeaders.set("x-site-source", activeCookieSiteId ? "admin_active_cookie" : resolutionSource);
 
     const response = NextResponse.next({
       request: {
@@ -137,11 +154,11 @@ export function middleware(request: NextRequest) {
       },
     });
 
-    response.headers.set("x-site-id", site.siteId);
-    response.headers.set("x-site-hostname", normalizedHost);
-    response.headers.set("x-backend-hostname", site.backendHostname);
-    response.headers.set("x-site-source", resolutionSource);
-    response.cookies.set("admin_active_site", site.siteId, {
+    response.headers.set("x-site-id", adminSite.siteId);
+    response.headers.set("x-site-hostname", adminSite.backendHostname);
+    response.headers.set("x-backend-hostname", adminSite.backendHostname);
+    response.headers.set("x-site-source", activeCookieSiteId ? "admin_active_cookie" : resolutionSource);
+    response.cookies.set("admin_active_site", adminSite.siteId, {
       path: "/",
       sameSite: "lax",
       maxAge: 86400,
@@ -190,6 +207,8 @@ export function middleware(request: NextRequest) {
 
   return response;
 }
+
+export { proxy as middleware };
 
 export const config = {
   matcher: [

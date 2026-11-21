@@ -5,9 +5,6 @@ const nextConfig = {
   output: 'standalone',
   distDir: '.next',
   outputFileTracingRoot: path.join(__dirname, '../'),
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     unoptimized: true,
     remotePatterns: [

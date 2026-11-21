@@ -1,12 +1,41 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
+import { useSite } from "@/lib/SiteContext";
+import { api } from "@/lib/api/client";
 
 export default function AboutUsPage() {
   const config = useSiteConfig();
+  const site = useSite();
   const brandName = config.name || "Gujju Tours";
+
+  const [pageData, setPageData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    async function loadPage() {
+      try {
+        const res = await api.get<{ success: boolean; data: any }>(
+          `/api/pages/about-us`,
+          { siteId: site.siteId }
+        );
+        if (isMounted && res.success && res.data) {
+          setPageData(res.data);
+        }
+      } catch {
+        // Fallback to built-in layout
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+    loadPage();
+    return () => {
+      isMounted = false;
+    };
+  }, [site.siteId]);
 
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 py-12 font-sans">
@@ -27,13 +56,31 @@ export default function AboutUsPage() {
           <span className="px-3.5 py-1 rounded-full bg-primary-100 dark:bg-primary-950/80 border border-primary-200 dark:border-primary-800 text-primary-600 dark:text-primary-400 text-xs font-bold uppercase tracking-wider">
             Our Story &amp; Values
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black text-neutral-900 dark:text-white tracking-tight">
-            Crafting Unforgettable Journeys with {brandName}
-          </h1>
-          <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            From humble beginnings in Gujarat to becoming a premier international travel brand, {brandName} has brought joy, discovery, and effortless travel to hundreds of thousands of holidaymakers worldwide.
-          </p>
+          {loading ? (
+            <div className="space-y-3 animate-pulse">
+              <div className="h-10 bg-neutral-200 dark:bg-neutral-800 rounded-xl w-3/4 mx-auto" />
+              <div className="h-4 bg-neutral-200 dark:bg-neutral-800 rounded w-5/6 mx-auto" />
+            </div>
+          ) : (
+            <>
+              <h1 className="text-3xl sm:text-5xl font-black text-neutral-900 dark:text-white tracking-tight">
+                {pageData?.title || `Crafting Unforgettable Journeys with ${brandName}`}
+              </h1>
+              <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                {pageData?.metaDescription ||
+                  `From humble beginnings in Gujarat to becoming a premier international travel brand, ${brandName} has brought joy, discovery, and effortless travel to hundreds of thousands of holidaymakers worldwide.`}
+              </p>
+            </>
+          )}
         </div>
+
+        {/* Dynamic CMS Content if available */}
+        {pageData?.contentHtml && (
+          <div
+            className="p-8 rounded-3xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm leading-relaxed prose dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: pageData.contentHtml }}
+          />
+        )}
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

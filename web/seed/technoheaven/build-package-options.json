@@ -13,7 +13,7 @@
     "badge": "B2B Corporate VIP",
     "overview": "Tailor every detail of your vacation to Dubai VIP Executive & Marina Luxury. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -25,7 +25,7 @@
     "reviews": 591,
     "startingPrice": 2200,
     "netStartingPrice": 1804,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -296,8 +296,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2200,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -325,7 +325,7 @@
     "badge": "Executive Leisure",
     "overview": "Tailor every detail of your vacation to Abu Dhabi Grand Yas & Saadiyat Island. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -337,7 +337,7 @@
     "reviews": 189,
     "startingPrice": 1950,
     "netStartingPrice": 1599,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -608,8 +608,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 1950,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -637,7 +637,7 @@
     "badge": "Kingdom Vision",
     "overview": "Tailor every detail of your vacation to Riyadh & AlUla Heritage Circuit. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -649,7 +649,7 @@
     "reviews": 469,
     "startingPrice": 2800,
     "netStartingPrice": 2296,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -920,8 +920,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2800,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -949,7 +949,7 @@
     "badge": "Gulf Hospitality",
     "overview": "Tailor every detail of your vacation to Doha Corniche & Katara Prestige. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -961,7 +961,7 @@
     "reviews": 363,
     "startingPrice": 2100,
     "netStartingPrice": 1722,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -1232,8 +1232,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2100,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -1261,7 +1261,7 @@
     "badge": "European Flagship",
     "overview": "Tailor every detail of your vacation to London Mayfair & Westminster Diplomatic. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1271,9 +1271,9 @@
     "featured": false,
     "rating": 4.8,
     "reviews": 195,
-    "startingPrice": 390,
+    "startingPrice": 4920,
     "netStartingPrice": 3936,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -1544,8 +1544,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 390,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1573,7 +1573,7 @@
     "badge": "Swiss Splendor",
     "overview": "Tailor every detail of your vacation to Zurich & Lucerne Alpine Grandeur. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -1583,9 +1583,9 @@
     "featured": false,
     "rating": 4.9,
     "reviews": 526,
-    "startingPrice": 390,
+    "startingPrice": 5535,
     "netStartingPrice": 4428,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -1856,8 +1856,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 390,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1885,7 +1885,7 @@
     "badge": "MICE & Corporate",
     "overview": "Tailor every detail of your vacation to Singapore Sentosa & Marina Bay B2B. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -1897,7 +1897,7 @@
     "reviews": 533,
     "startingPrice": 2600,
     "netStartingPrice": 2132,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -2168,8 +2168,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2600,
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -2197,7 +2197,7 @@
     "badge": "East Meets West",
     "overview": "Tailor every detail of your vacation to Istanbul & Cappadocia Historic Marvels. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2209,7 +2209,7 @@
     "reviews": 559,
     "startingPrice": 2400,
     "netStartingPrice": 1968,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -2480,8 +2480,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2400,
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -2509,7 +2509,7 @@
     "badge": "Ancient Marvels",
     "overview": "Tailor every detail of your vacation to Cairo & Nile Royal Expedition. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -2521,7 +2521,7 @@
     "reviews": 175,
     "startingPrice": 2300,
     "netStartingPrice": 1886,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -2792,8 +2792,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 2300,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2821,7 +2821,7 @@
     "badge": "Heritage Triangle",
     "overview": "Tailor every detail of your vacation to Delhi, Agra & Jaipur B2B Royal Circuit. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -2833,7 +2833,7 @@
     "reviews": 522,
     "startingPrice": 1750,
     "netStartingPrice": 1435,
-    "currency": "USD",
+    "currency": "AED",
     "currencySymbol": "AED ",
     "durations": [
       {
@@ -3104,8 +3104,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 1750,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",

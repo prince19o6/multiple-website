@@ -37,7 +37,6 @@ import {
 } from '@/src/config/sites';
 import { ENV } from '@/src/config/env';
 import { normalizeTour, normalizeDestination, normalizeBooking } from '@/lib/normalize';
-import { getFallbackTour, getFallbackModuleHome } from '@/lib/fallbackModuleData';
 import type {
   Tour,
   DestinationItem,
@@ -423,12 +422,12 @@ async function buildHeaders(
 
 // ─── Offline Cache Helpers ────────────────────────────────────────────────────
 
-async function getCachedResponse<T>(cacheKey: string): Promise<T | null> {
-  return await storeGetObject<T>(`api_cache.${cacheKey}`);
+async function getCachedResponse<T>(cacheKey: string, siteId?: string): Promise<T | null> {
+  return await storeGetObject<T>(`api_cache.${cacheKey}`, siteId);
 }
 
-async function setCachedResponse(cacheKey: string, data: unknown): Promise<void> {
-  await storeSetObject(`api_cache.${cacheKey}`, data);
+async function setCachedResponse(cacheKey: string, data: unknown, siteId?: string): Promise<void> {
+  await storeSetObject(`api_cache.${cacheKey}`, data, siteId);
 }
 
 // ─── Core Request Engine ──────────────────────────────────────────────────────
@@ -494,7 +493,7 @@ export async function request<T>(
     : `${base}${endpoint.startsWith('/') ? '' : '/'}${endpoint}`;
 
   const isGet = !customInit.method || customInit.method.toUpperCase() === 'GET';
-  const cacheKey = `${ENV.siteId}_${endpoint.replace(/[^a-zA-Z0-9]/g, '_')}`;
+  const cleanCacheKey = endpoint.replace(/[^a-zA-Z0-9]/g, '_');
   const isToursCall = endpoint.includes('/api/tours');
 
   // Mixed Content Guard on Web
@@ -513,7 +512,7 @@ export async function request<T>(
   const netState = await NetInfo.fetch();
   if (netState.isConnected === false) {
     if (isGet && !skipCache) {
-      const cached = await getCachedResponse<T>(cacheKey);
+      const cached = await getCachedResponse<T>(cleanCacheKey, site.id);
       if (cached !== null) {
         if (__DEV__) {
           console.log(`[DEBUG] [Req #${reqId}] [CACHE] ${url} - Returned cached response (offline)`);
@@ -634,7 +633,7 @@ export async function request<T>(
 
       // Cache successful GET responses
       if (isGet && !skipCache) {
-        setCachedResponse(cacheKey, data).catch(() => {});
+        setCachedResponse(cleanCacheKey, data, site.id).catch(() => {});
       }
 
       return data;
@@ -678,6 +677,21 @@ export async function request<T>(
       // Exponential backoff delay
       const delay = Math.min(1000 * 2 ** attempt, 8_000);
       await new Promise((r) => setTimeout(r, delay));
+    }
+  }
+
+  // Attempt to serve from offline cache if network failed
+  if (isGet && !skipCache) {
+    try {
+      const cached = await getCachedResponse<T>(cleanCacheKey, site.id);
+      if (cached !== null) {
+        if (__DEV__) {
+          console.log(`[DEBUG] [Req #${reqId}] [FALLBACK_CACHE] ${url} - Serving cached response after network failure`);
+        }
+        return cached;
+      }
+    } catch {
+      // cache lookup failed
     }
   }
 
@@ -1048,8 +1062,9 @@ export async function fetchCategories(): Promise<ApiResponse<CategoryItem[]>> {
  */
 export async function fetchTour(id: string | number, overrideSiteId?: string): Promise<Tour> {
   const siteId = overrideSiteId || ENV.siteId;
+  const endpoint = `/api/tours/${id}`;
   try {
-    const json = await request<RawBackendEnvelope<unknown> | unknown>(`/api/tours/${id}`, { siteId });
+    const json = await request<RawBackendEnvelope<unknown> | unknown>(endpoint, { siteId });
     const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
     let itemToNormalize = raw;
     if (Array.isArray(raw)) {
@@ -1057,10 +1072,41 @@ export async function fetchTour(id: string | number, overrideSiteId?: string): P
     }
     const tour = normalizeTour(itemToNormalize, siteId);
     if (!tour || tour.id === 0 || !tour.name) {
-      return getFallbackTour(String(id), siteId);
+      throw new ApiError(`Tour "${id}" not found`, 'client', 404, endpoint);
     }
     return tour;
   } catch (primaryErr) {
+    if (primaryErr instanceof ApiError && primaryErr.status === 404) {
+      try {
+        const hotelEndpoint = `/api/hotels/${id}`;
+        const hotelJson = await request<RawBackendEnvelope<unknown> | unknown>(hotelEndpoint, { siteId });
+        const hotelRaw = (hotelJson as RawBackendEnvelope<unknown>)?.data ?? (hotelJson as RawBackendEnvelope<unknown>)?.result ?? hotelJson;
+        if (hotelRaw && typeof hotelRaw === 'object') {
+          const mappedTour = normalizeTour(hotelRaw, siteId);
+          if (mappedTour && mappedTour.name && mappedTour.id !== 0) {
+            return mappedTour;
+          }
+        }
+      } catch {
+        // hotel endpoint lookup fallback
+      }
+
+      try {
+        const actEndpoint = `/api/activities/${id}`;
+        const actJson = await request<RawBackendEnvelope<unknown> | unknown>(actEndpoint, { siteId });
+        const actRaw = (actJson as RawBackendEnvelope<unknown>)?.data ?? (actJson as RawBackendEnvelope<unknown>)?.result ?? actJson;
+        if (actRaw && typeof actRaw === 'object') {
+          const mappedTour = normalizeTour(actRaw, siteId);
+          if (mappedTour && mappedTour.name && mappedTour.id !== 0) {
+            return mappedTour;
+          }
+        }
+      } catch {
+        // activity endpoint lookup fallback
+      }
+
+      throw primaryErr;
+    }
     const fallbackBase = ENV.backendFallbackUrl;
     if (fallbackBase) {
       try {
@@ -1077,8 +1123,7 @@ export async function fetchTour(id: string | number, overrideSiteId?: string): P
         // fallback failed
       }
     }
-    // Resilient offline / catalog fallback: guarantees the user never gets "Tour Not Found"
-    return getFallbackTour(String(id), siteId);
+    throw primaryErr;
   }
 }
 
@@ -1087,8 +1132,9 @@ export async function fetchTour(id: string | number, overrideSiteId?: string): P
  */
 export async function fetchTourByNumber(tourNumber: string | number, overrideSiteId?: string): Promise<Tour> {
   const siteId = overrideSiteId || ENV.siteId;
+  const endpoint = `/api/tours/by-number/${tourNumber}`;
   try {
-    const json = await request<RawBackendEnvelope<unknown> | unknown>(`/api/tours/by-number/${tourNumber}`, { siteId });
+    const json = await request<RawBackendEnvelope<unknown> | unknown>(endpoint, { siteId });
     const raw = (json as RawBackendEnvelope<unknown>)?.data ?? (json as RawBackendEnvelope<unknown>)?.result ?? json;
     let itemToNormalize = raw;
     if (Array.isArray(raw)) {
@@ -1096,10 +1142,13 @@ export async function fetchTourByNumber(tourNumber: string | number, overrideSit
     }
     const tour = normalizeTour(itemToNormalize, siteId);
     if (!tour || tour.id === 0 || !tour.name) {
-      return getFallbackTour(String(tourNumber), siteId);
+      throw new ApiError(`Tour number "${tourNumber}" not found`, 'client', 404, endpoint);
     }
     return tour;
   } catch (primaryErr) {
+    if (primaryErr instanceof ApiError && primaryErr.status === 404) {
+      throw primaryErr;
+    }
     const fallbackBase = ENV.backendFallbackUrl;
     if (fallbackBase) {
       try {
@@ -1116,7 +1165,7 @@ export async function fetchTourByNumber(tourNumber: string | number, overrideSit
         // fallback failed
       }
     }
-    return getFallbackTour(String(tourNumber), siteId);
+    throw primaryErr;
   }
 }
 
@@ -2601,7 +2650,10 @@ export async function checkApiHealth(siteHostname?: string): Promise<ApiHealthRe
     const timer = setTimeout(() => controller.abort(), 6000);
     const res = await fetch(endpoint, {
       method: 'GET',
-      headers: { Accept: 'application/json' },
+      headers: {
+        Accept: 'application/json',
+        'X-Website-Hostname': targetHost,
+      },
       signal: controller.signal,
     });
     clearTimeout(timer);
@@ -3734,6 +3786,7 @@ export interface ModuleFeaturedItem {
   stars?: number;
   city?: string;
   country?: string;
+  location?: string;
   airline?: string;
   flightNumber?: string;
   fromCity?: string;
@@ -3814,10 +3867,364 @@ export async function fetchModuleHome(
     return await request<ModuleHomePayload>(endpoint, { siteId });
   } catch (err) {
     if (__DEV__) {
-      console.warn(`[fetchModuleHome] API request failed for module "${module}", using rich fallback data:`, err);
+      console.warn(`[fetchModuleHome] API request failed for module "${module}":`, err);
     }
-    return getFallbackModuleHome(module, siteId);
+    throw err;
   }
+}
+
+export interface HotelFilterOptions {
+  destination?: string;
+  search?: string;
+  q?: string;
+  propertyType?: string;
+  collection?: string;
+  starRating?: number;
+  minPrice?: number;
+  maxPrice?: number;
+  pureVeg?: boolean;
+  jain?: boolean;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchHotels(
+  filters?: HotelFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<ModuleFeaturedItem[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.destination) qParams.append('destination', filters.destination);
+  if (filters?.search || filters?.q) qParams.append('search', (filters.search || filters.q)!);
+  if (filters?.propertyType) qParams.append('propertyType', filters.propertyType);
+  if (filters?.starRating) qParams.append('starRating', String(filters.starRating));
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.pureVeg) qParams.append('pureVeg', 'true');
+  if (filters?.jain) qParams.append('jain', 'true');
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/hotels?${qs}` : '/api/hotels';
+
+  try {
+    const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+    const rawList = extractListFromEnvelope(json);
+    const normalized: ModuleFeaturedItem[] = rawList.map((item: any) => ({
+      id: String(item.id || item._id || item.slug),
+      slug: String(item.slug || item.id),
+      title: item.title || item.name || 'Hotel',
+      price: item.pricePerNight || item.price || 0,
+      rating: item.starRating || item.rating || 4.5,
+      reviewCount: item.reviewCount || 24,
+      imageUrl: item.coverImage || (Array.isArray(item.images) ? item.images[0] : undefined),
+      location: item.destination ? `${item.destination.cityName || ''}${item.destination.country ? `, ${item.destination.country}` : ''}` : item.city,
+      city: item.destination?.cityName || item.city,
+      country: item.destination?.country || item.country,
+      propertyType: item.propertyType,
+      isPureVeg: item.dietaryFeatures?.pureVeg || item.isPureVeg,
+      isJain: item.dietaryFeatures?.jainAvailable || item.isJain,
+      amenities: item.amenities || [],
+    }));
+    return { success: true, data: normalized, count: normalized.length };
+  } catch (err) {
+    if (__DEV__) {
+      console.warn('[fetchHotels] API request failed:', err);
+    }
+    throw err;
+  }
+}
+
+export interface PackageFilterOptions {
+  destination?: string;
+  search?: string;
+  q?: string;
+  category?: string;
+  durationDays?: number;
+  minPrice?: number;
+  maxPrice?: number;
+  pureVeg?: boolean;
+  jain?: boolean;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchPackages(
+  filters?: PackageFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<ModuleFeaturedItem[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.destination) qParams.append('destination', filters.destination);
+  if (filters?.search || filters?.q) qParams.append('search', (filters.search || filters.q)!);
+  if (filters?.category) qParams.append('category', filters.category);
+  if (filters?.durationDays) qParams.append('durationDays', String(filters.durationDays));
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.pureVeg) qParams.append('pureVeg', 'true');
+  if (filters?.jain) qParams.append('jain', 'true');
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/packages?${qs}` : '/api/packages';
+
+  try {
+    const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+    const rawList = extractListFromEnvelope(json);
+    const normalized: ModuleFeaturedItem[] = rawList.map((item: any) => ({
+      id: String(item.id || item._id || item.slug),
+      slug: String(item.slug || item.id),
+      title: item.title || item.name || 'Holiday Package',
+      price: item.startingPrice || item.price || 0,
+      rating: item.rating || 4.8,
+      reviewCount: item.reviewCount || 18,
+      imageUrl: item.coverImage || (Array.isArray(item.images) ? item.images[0] : undefined),
+      location: item.destination || item.city || item.country,
+      city: item.city || item.destination,
+      country: item.country,
+      duration: `${item.durationDays ? `${item.durationDays}D` : ''}${item.durationNights ? `/${item.durationNights}N` : ''}`,
+      days: item.durationDays,
+      nights: item.durationNights,
+      isPureVeg: item.dietaryFeatures?.pureVeg || item.isPureVeg,
+      isJain: item.dietaryFeatures?.jainAvailable || item.isJain,
+      highlights: item.highlights || [],
+    }));
+    return { success: true, data: normalized, count: normalized.length };
+  } catch (err) {
+    if (__DEV__) {
+      console.warn('[fetchPackages] API request failed:', err);
+    }
+    throw err;
+  }
+}
+
+export interface FlightFilterOptions {
+  from?: string;
+  to?: string;
+  date?: string;
+  airline?: string;
+  cabinClass?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchFlights(
+  filters?: FlightFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<any[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.from) qParams.append('from', filters.from);
+  if (filters?.to) qParams.append('to', filters.to);
+  if (filters?.date) qParams.append('date', filters.date);
+  if (filters?.airline) qParams.append('airline', filters.airline);
+  if (filters?.cabinClass) qParams.append('cabinClass', filters.cabinClass);
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/flights?${qs}` : '/api/flights';
+  const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+  const rawList = extractListFromEnvelope(json);
+  return { success: true, data: rawList, count: rawList.length };
+}
+
+export async function fetchFlightBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/flights/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export async function fetchFlightAirports(overrideSiteId?: string): Promise<any[]> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any[]> | any[]>('/api/flights/airports', { siteId });
+  return extractListFromEnvelope(json);
+}
+
+export interface TransferFilterOptions {
+  pickup?: string;
+  dropoff?: string;
+  vehicleType?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchTransfers(
+  filters?: TransferFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<any[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.pickup) qParams.append('pickup', filters.pickup);
+  if (filters?.dropoff) qParams.append('dropoff', filters.dropoff);
+  if (filters?.vehicleType) qParams.append('vehicleType', filters.vehicleType);
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/transfers?${qs}` : '/api/transfers';
+  const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+  const rawList = extractListFromEnvelope(json);
+  return { success: true, data: rawList, count: rawList.length };
+}
+
+export async function fetchTransferBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/transfers/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export interface VisaFilterOptions {
+  search?: string;
+  country?: string;
+  visaType?: string;
+  entryType?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchVisas(
+  filters?: VisaFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<any[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.search) qParams.append('search', filters.search);
+  if (filters?.country) qParams.append('country', filters.country);
+  if (filters?.visaType) qParams.append('visaType', filters.visaType);
+  if (filters?.entryType) qParams.append('entryType', filters.entryType);
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/visas?${qs}` : '/api/visas';
+  const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+  const rawList = extractListFromEnvelope(json);
+  return { success: true, data: rawList, count: rawList.length };
+}
+
+export async function fetchVisaByCountry(country: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/visas/${encodeURIComponent(country)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export interface RestaurantFilterOptions {
+  destination?: string;
+  search?: string;
+  cuisine?: string;
+  pureVeg?: boolean;
+  jain?: boolean;
+  minPrice?: number;
+  maxPrice?: number;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchRestaurants(
+  filters?: RestaurantFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<any[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.destination) qParams.append('destination', filters.destination);
+  if (filters?.search) qParams.append('search', filters.search);
+  if (filters?.cuisine) qParams.append('cuisine', filters.cuisine);
+  if (filters?.pureVeg) qParams.append('pureVeg', 'true');
+  if (filters?.jain) qParams.append('jain', 'true');
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/restaurants?${qs}` : '/api/restaurants';
+  const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+  const rawList = extractListFromEnvelope(json);
+  return { success: true, data: rawList, count: rawList.length };
+}
+
+export async function fetchRestaurantBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/restaurants/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export interface ActivityFilterOptions {
+  destination?: string;
+  search?: string;
+  category?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  sort?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export async function fetchActivities(
+  filters?: ActivityFilterOptions,
+  overrideSiteId?: string
+): Promise<ApiResponse<any[]>> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const qParams = new URLSearchParams();
+  if (filters?.destination) qParams.append('destination', filters.destination);
+  if (filters?.search) qParams.append('search', filters.search);
+  if (filters?.category) qParams.append('category', filters.category);
+  if (filters?.minPrice !== undefined) qParams.append('minPrice', String(filters.minPrice));
+  if (filters?.maxPrice !== undefined) qParams.append('maxPrice', String(filters.maxPrice));
+  if (filters?.sort) qParams.append('sort', filters.sort);
+  if (filters?.page) qParams.append('page', String(filters.page));
+  if (filters?.pageSize) qParams.append('pageSize', String(filters.pageSize));
+
+  const qs = qParams.toString();
+  const endpoint = qs ? `/api/activities?${qs}` : '/api/activities';
+  const json = await request<RawBackendEnvelope<unknown[]> | unknown[]>(endpoint, { siteId });
+  const rawList = extractListFromEnvelope(json);
+  return { success: true, data: rawList, count: rawList.length };
+}
+
+export async function fetchActivityBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/activities/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export async function fetchHotelBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/hotels/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
+}
+
+export async function fetchPackageBySlug(idOrSlug: string, overrideSiteId?: string): Promise<any> {
+  const siteId = overrideSiteId || ENV.siteId;
+  const json = await request<RawBackendEnvelope<any> | any>(`/api/packages/${encodeURIComponent(idOrSlug)}`, { siteId });
+  return (json as RawBackendEnvelope<any>)?.data ?? json;
 }
 
 

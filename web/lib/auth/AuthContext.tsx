@@ -40,6 +40,7 @@ export interface AuthContextType {
   isAuthenticated: boolean;
   loading: boolean;
   siteId: string;
+  getAccessToken: () => string | null;
   login: (input: LoginInput) => Promise<{ success: boolean; error?: string }>;
   register: (input: RegisterInput) => Promise<{ success: boolean; error?: string }>;
   logout: () => Promise<void>;
@@ -603,6 +604,7 @@ export function AuthProvider({
         isAuthenticated: !!user,
         loading,
         siteId,
+        getAccessToken,
         login,
         register,
         logout,

@@ -4,9 +4,10 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface TransferItem {
   id: number | string;
@@ -61,11 +62,10 @@ const VEHICLE_FILTERS = [
 export default function TransfersPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const config = useSiteConfig();
   const site = useSite();
 
   const siteId = site.siteId || "gujjutours";
-  const currencySymbol = config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
+  const { formatPrice } = useCurrency();
 
   // Query params
   const initialType = searchParams.get("type") || searchParams.get("transferType") || "all";
@@ -113,11 +113,8 @@ export default function TransfersPage() {
       const res = await fetch(`/api/transfers?${q.toString()}`);
       if (!res.ok) throw new Error(`HTTP error ${res.status}`);
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        setTransfers(json.data);
-      } else {
-        setTransfers([]);
-      }
+      const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+      setTransfers(items);
     } catch (err: any) {
       console.error("[TransfersPage] Error loading transfers:", err);
       setError(err.message || "Failed to load transfers");
@@ -207,11 +204,10 @@ export default function TransfersPage() {
                   <button
                     key={t.type}
                     onClick={() => setSelectedType(t.type)}
-                    className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all ${
-                      active
-                        ? "bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-sm"
-                        : "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200"
-                    }`}
+                    className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all ${active
+                      ? "bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-sm"
+                      : "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-200"
+                      }`}
                   >
                     <span>{t.icon}</span>
                     <span>{t.label}</span>
@@ -320,11 +316,10 @@ export default function TransfersPage() {
               <button
                 key={vf.type}
                 onClick={() => setSelectedVehicle(vf.type)}
-                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${
-                  active
-                    ? "bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 border-neutral-900 dark:border-white shadow-sm"
-                    : "bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-800 hover:border-neutral-400"
-                }`}
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${active
+                  ? "bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 border-neutral-900 dark:border-white shadow-sm"
+                  : "bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-800 hover:border-neutral-400"
+                  }`}
               >
                 {vf.label}
               </button>
@@ -377,44 +372,23 @@ export default function TransfersPage() {
       {/* ─── Vehicles Listing ─── */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         {loading ? (
-          <div className="space-y-4 animate-pulse">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-44 bg-neutral-200 dark:bg-neutral-800 rounded-2xl" />
-            ))}
-          </div>
+          <LoadingSkeleton variant="list" count={4} />
         ) : error ? (
-          <div className="p-8 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-red-200 dark:border-red-900/40">
-            <p className="text-red-500 text-sm font-semibold">{error}</p>
-            <button
-              onClick={() => fetchTransfers()}
-              className="mt-4 px-4 py-2 bg-neutral-900 text-white rounded-lg text-xs font-bold"
-            >
-              Retry
-            </button>
-          </div>
+          <ErrorState message={error} onRetry={() => fetchTransfers()} />
         ) : transfers.length === 0 ? (
-          <div className="py-16 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800">
-            <span className="text-4xl">🚗</span>
-            <h3 className="mt-3 text-lg font-bold text-neutral-800 dark:text-neutral-200">
-              No transfer vehicles match your criteria
-            </h3>
-            <p className="mt-1 text-xs text-neutral-500">
-              Try adjusting your passenger count or clearing vehicle filters.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedType("all");
-                setSelectedVehicle("all");
-                setSelectedCity("all");
-                setPickupInput("");
-                setDropoffInput("");
-                setPassengers(2);
-              }}
-              className="mt-4 px-4 py-2 bg-neutral-900 text-white rounded-lg text-xs font-bold"
-            >
-              Reset Filters
-            </button>
-          </div>
+          <EmptyState
+            title="No transfer vehicles match your criteria"
+            message="Try adjusting your passenger count or clearing vehicle filters."
+            actionLabel="Reset Filters"
+            onAction={() => {
+              setSelectedType("all");
+              setSelectedVehicle("all");
+              setSelectedCity("all");
+              setPickupInput("");
+              setDropoffInput("");
+              setPassengers(2);
+            }}
+          />
         ) : (
           <div className="space-y-4">
             {transfers.map((item, idx) => (
@@ -487,11 +461,11 @@ export default function TransfersPage() {
                   <div>
                     <div className="flex items-baseline gap-1.5">
                       <span className="text-xl sm:text-2xl font-black text-neutral-900 dark:text-white">
-                        {currencySymbol}{item.price.toLocaleString()}
+                        {formatPrice(item.price, item.currency || "INR")}
                       </span>
                       {item.originalPrice && (
                         <span className="text-xs text-neutral-400 line-through">
-                          {currencySymbol}{item.originalPrice.toLocaleString()}
+                          {formatPrice(item.originalPrice, item.currency || "INR")}
                         </span>
                       )}
                     </div>

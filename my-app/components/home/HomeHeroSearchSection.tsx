@@ -286,10 +286,12 @@ export function HomeHeroSearchSection({
         break;
       case 'hotels':
         router.push({
-          pathname: '/(tabs)/explore',
+          pathname: '/search-results',
           params: {
+            type: 'hotels',
             service: 'hotels',
             destination: hotelDestination.split(',')[0].trim(),
+            q: hotelDestination.split(',')[0].trim(),
             checkIn: hotelCheckIn,
             checkOut: hotelCheckOut,
             guests: String(hotelGuests),
@@ -299,20 +301,24 @@ export function HomeHeroSearchSection({
         break;
       case 'tours':
         router.push({
-          pathname: '/(tabs)/explore',
+          pathname: '/search-results',
           params: {
+            type: 'tours',
             service: 'tours',
             destination: tourDestination.split(',')[0].trim(),
+            q: tourDestination.split(',')[0].trim(),
             travelers: String(tourTravelers),
           },
         } as any);
         break;
       case 'packages':
         router.push({
-          pathname: '/(tabs)/explore',
+          pathname: '/search-results',
           params: {
+            type: 'packages',
             service: 'packages',
             destination: packageDestination.split(',')[0].trim(),
+            q: packageDestination.split(',')[0].trim(),
             duration: packageDuration,
           },
         } as any);

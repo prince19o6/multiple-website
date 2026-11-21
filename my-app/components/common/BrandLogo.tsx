@@ -23,6 +23,8 @@ import { getHeadingFontFamily } from '@/lib/sectionHelpers';
 import { CANONICAL_LOGOS, CANONICAL_DARK_LOGOS } from '@/lib/assetResolver';
 import { ENV } from '@/src/config/env';
 
+const GUJJU_EMBLEM_IMAGE = require('@/assets/brand-emblem-gujjutours.png');
+
 export interface BrandLogoProps {
   /** Size preset or numeric height */
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | number;
@@ -136,6 +138,14 @@ export default function BrandLogo({
 
   // Site emblem emoji & tagline from config
   const siteIcon = (config as any)?.icon || (config as any)?.site?.icon || '✈️';
+  const brandInitial =
+    siteId === 'gujjutours' || siteName?.toLowerCase().includes('gujju')
+      ? 'G'
+      : siteId === 'tripgoasia' || siteName?.toLowerCase().includes('tripgo')
+        ? 'T'
+        : siteId === 'technoheaven' || siteName?.toLowerCase().includes('techno')
+          ? 'T'
+          : siteName?.trim().charAt(0).toUpperCase() || 'G';
   const siteTagline =
     (config as any)?.tagline ||
     (config as any)?.seo?.defaultTitle ||
@@ -156,8 +166,12 @@ export default function BrandLogo({
         accessibilityRole="image"
         accessibilityLabel={`${siteName} brand`}
       >
-        <View style={[styles.emblemBadge, { backgroundColor: `${colors.primary}18`, borderColor: `${colors.primary}30` }]}>
-          <Text style={styles.emblemEmoji}>{siteIcon}</Text>
+        <View style={styles.emblemBadge}>
+          <Image
+            source={GUJJU_EMBLEM_IMAGE}
+            style={styles.emblemImage}
+            contentFit="contain"
+          />
         </View>
         <View style={styles.brandTextGroup}>
           <Text
@@ -245,13 +259,15 @@ const styles = StyleSheet.create({
   emblemBadge: {
     width: 34,
     height: 34,
-    borderRadius: 10,
-    borderWidth: 1,
+    borderRadius: 8,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  emblemEmoji: {
-    fontSize: 17,
+  emblemImage: {
+    width: 34,
+    height: 34,
+    borderRadius: 8,
   },
   brandTextGroup: {
     justifyContent: 'center',

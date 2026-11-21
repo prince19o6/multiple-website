@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -26,6 +27,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
 builder.Services.AddHttpContextAccessor();
+
+var keysFolder = Path.Combine(builder.Environment.ContentRootPath, "App_Data", "keys");
+Directory.CreateDirectory(keysFolder);
+builder.Services.AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(keysFolder));
 
 builder.Services
     .AddControllers()
@@ -98,10 +104,19 @@ builder.Services.AddScoped<IPackageRepository, PackageRepository>();
 builder.Services.AddScoped<IFlightRepository, FlightRepository>();
 builder.Services.AddScoped<ITransferRepository, TransferRepository>();
 builder.Services.AddScoped<IVisaRepository, VisaRepository>();
+builder.Services.AddScoped<IActivityRepository, ActivityRepository>();
 builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
 builder.Services.AddScoped<IBuildPackageRepository, BuildPackageRepository>();
+builder.Services.AddScoped<IBannerRepository, BannerRepository>();
+builder.Services.AddScoped<ISpecialOfferRepository, SpecialOfferRepository>();
+builder.Services.AddScoped<ITravelVideoRepository, TravelVideoRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IFaqRepository, FaqRepository>();
+builder.Services.AddScoped<IPartnerRepository, PartnerRepository>();
+builder.Services.AddScoped<IStaticPageRepository, StaticPageRepository>();
 
 // Domain Services & Workflow
+builder.Services.AddScoped<ITenantSeedService, TenantSeedService>();
 builder.Services.AddScoped<IUserCodeGenerator, UserCodeGenerator>();
 builder.Services.AddScoped<ITourService, TourService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
@@ -123,6 +138,7 @@ builder.Services.AddHttpClient("SendGrid", client =>
 });
 
 // Hosted background processors
+builder.Services.AddHostedService<TenantSeedHostedService>();
 builder.Services.AddHostedService<EmailOutboxBackgroundService>();
 builder.Services.AddHostedService<BookingExpiryBackgroundService>();
 
@@ -282,6 +298,13 @@ app.MapGet("/", () => Results.Ok(new
     status = "ToursApi is running",
     architecture = "Database-Per-Website",
     tenants = WebsiteRegistry.SitesById.Keys
+}));
+
+app.MapGet("/api/health", () => Results.Ok(new
+{
+    status = "healthy",
+    architecture = "Database-Per-Website",
+    timestamp = DateTime.UtcNow
 }));
 
 app.Run();

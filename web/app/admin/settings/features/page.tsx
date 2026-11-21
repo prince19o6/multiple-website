@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Image from "next/image";
-import { getAdminToken, type AdminSiteId } from "@/lib/adminApi";
+import { fetchAdminFeatures, updateAdminFeatures, type AdminSiteId } from "@/lib/adminApi";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
 import {
@@ -37,15 +37,8 @@ export default function AdminFeaturesPage() {
     setLoading(true);
     setFeedback(null);
     try {
-      const token = getAdminToken(siteId);
-      const res = await fetch(`/api/admin/website-config/${encodeURIComponent(hostname)}/features`, {
-        headers: {
-          Authorization: `Bearer ${token || ""}`,
-        },
-      });
-
-      if (res.ok) {
-        const data = await res.json();
+      const data = await fetchAdminFeatures(hostname, siteId);
+      if (data && data.features) {
         const loaded: FeatureItem[] = data.features || [];
         setFeatures(loaded);
         setInitialFeatures(loaded);
@@ -162,30 +155,17 @@ export default function AdminFeaturesPage() {
     setSaving(true);
     setFeedback(null);
     try {
-      const token = getAdminToken(siteId);
-      const res = await fetch(`/api/admin/website-config/${encodeURIComponent(hostname)}/features`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token || ""}`,
-        },
-        body: JSON.stringify(features),
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.error || "Failed to publish features.");
+      const data = await updateAdminFeatures(hostname, features, siteId);
+      if (data && data.features) {
+        setFeatures(data.features);
+        setInitialFeatures(data.features);
       }
-
-      const data = await res.json();
-      setFeatures(data.features);
-      setInitialFeatures(data.features);
-      setVersion(data.version || "1.0.1");
-      setLastUpdated(data.updatedAt || new Date().toISOString());
-      setLastUpdatedBy(data.updatedBy || "admin");
+      setVersion(data?.version || "1.0.1");
+      setLastUpdated(data?.updatedAt || new Date().toISOString());
+      setLastUpdatedBy(data?.updatedBy || "admin");
       setFeedback({
         type: "success",
-        message: `Successfully published features! Version bumped to v${data.version}.`,
+        message: `Successfully published features! Version bumped to v${data?.version || "1.0.1"}.`,
       });
     } catch (err: any) {
       setFeedback({

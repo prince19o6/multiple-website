@@ -23,29 +23,34 @@ public class RestaurantsController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetRestaurants(
         [FromQuery] string? query,
+        [FromQuery] string? search,
+        [FromQuery] string? q,
         [FromQuery] string? city,
         [FromQuery] string? cuisine,
+        [FromQuery] string? category,
         [FromQuery] bool? pureVeg,
         [FromQuery] bool? jain,
         [FromQuery] bool? halal,
         [FromQuery] string? priceRange,
         [FromQuery] double? minCost,
+        [FromQuery] double? minPrice,
         [FromQuery] double? maxCost,
+        [FromQuery] double? maxPrice,
         [FromQuery] string? sort,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 20)
     {
         var filterParams = new RestaurantFilterParams
         {
-            Query = query,
+            Query = search ?? q ?? query,
             City = city,
-            Cuisine = cuisine,
+            Cuisine = category ?? cuisine,
             PureVegOnly = pureVeg,
             JainOnly = jain,
             HalalOnly = halal,
             PriceRange = priceRange,
-            MinCost = minCost,
-            MaxCost = maxCost,
+            MinCost = minPrice ?? minCost,
+            MaxCost = maxPrice ?? maxCost,
             Sort = sort,
             Page = page,
             PageSize = pageSize
@@ -55,6 +60,10 @@ public class RestaurantsController : ControllerBase
         return Ok(new
         {
             success = true,
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
             data = result.Items,
             meta = new
             {

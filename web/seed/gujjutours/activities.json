@@ -25,11 +25,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
@@ -92,8 +91,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "description": "Explore the majestic Amber Fort, City Palace, Jal Mahal, and authentic Rajasthani dinner.",
-    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
     "alt": "Golden red desert sand dunes under dramatic sunset sky",
     "photoCredit": {
@@ -128,11 +127,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
@@ -195,8 +193,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "description": "Scenic Himalayan excursion to Kufri, Jakhoo Temple ropeway, and cedar pine trails.",
-    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
     "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
     "photoCredit": {
@@ -231,11 +229,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
@@ -298,8 +295,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "description": "UNESCO World Heritage Nilgiri mountain railway ride, tea gardens, and Doddabetta Peak.",
-    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
     "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
     "photoCredit": {
@@ -334,11 +331,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -401,8 +397,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "description": "Darshan at Somnath Jyotirlinga, Sound & Light Show, Bhalka Tirth, and coastal Triveni Sangam.",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -437,11 +433,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -504,8 +499,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "description": "Explore Gateway of India, Victoria Terminus, Colaba Causeway, and sunset on Marine Drive.",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -540,11 +535,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
@@ -606,8 +600,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
     "alt": "Camels trekking across rippling sand ridges at dusk",
     "photoCredit": {
@@ -642,11 +636,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -708,8 +701,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
     "photoCredit": {
@@ -744,11 +737,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -810,8 +802,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -846,11 +838,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
@@ -912,8 +903,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
     "alt": "Crystal clear turquoise ocean waves gently lapping shore",
     "photoCredit": {
@@ -948,11 +939,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1014,8 +1004,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1050,11 +1040,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -1116,8 +1105,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -1152,11 +1141,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1218,8 +1206,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1254,11 +1242,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1320,8 +1307,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1356,11 +1343,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1422,8 +1408,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1458,11 +1444,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1524,8 +1509,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1560,11 +1545,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1626,8 +1610,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1662,11 +1646,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1728,8 +1711,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1764,11 +1747,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/walking-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/walking-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1830,8 +1812,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/walking-tour.svg",
+    "imageUrl": "/seed-images/activities/walking-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1866,11 +1848,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1932,8 +1913,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1968,11 +1949,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2034,8 +2014,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2070,11 +2050,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2136,8 +2115,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2172,11 +2151,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2238,8 +2216,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2274,11 +2252,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -2340,8 +2317,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -2376,11 +2353,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2442,8 +2418,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2478,11 +2454,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -2544,8 +2519,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -2580,11 +2555,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2646,8 +2620,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2682,11 +2656,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
@@ -2748,8 +2721,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
     "alt": "Golden red desert sand dunes under dramatic sunset sky",
     "photoCredit": {
@@ -2784,11 +2757,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2850,8 +2822,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2886,11 +2858,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -2952,8 +2923,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -2988,11 +2959,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3054,8 +3024,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3090,11 +3060,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3156,8 +3125,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3192,11 +3161,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3258,8 +3226,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -3294,11 +3262,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
@@ -3360,8 +3327,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
     "alt": "Crystal clear turquoise ocean waves gently lapping shore",
     "photoCredit": {
@@ -3396,11 +3363,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3462,8 +3428,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3498,11 +3464,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3564,8 +3529,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3600,11 +3565,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3666,8 +3630,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -3702,11 +3666,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -3768,8 +3731,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -3804,11 +3767,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -3870,8 +3832,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -3906,11 +3868,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3972,8 +3933,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4008,11 +3969,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4074,8 +4034,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4110,11 +4070,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4176,8 +4135,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4212,11 +4171,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4278,8 +4236,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4314,11 +4272,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
@@ -4380,8 +4337,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
     "alt": "Camels trekking across rippling sand ridges at dusk",
     "photoCredit": {
@@ -4416,11 +4373,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4482,8 +4438,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4518,11 +4474,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -4584,8 +4539,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -4620,11 +4575,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4686,8 +4640,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4722,11 +4676,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -4788,8 +4741,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
     "photoCredit": {
@@ -4824,11 +4777,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -4890,8 +4842,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -4926,11 +4878,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
@@ -4992,8 +4943,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=85",
     "alt": "Snow-capped Himalayan mountains and towering cedar pine forests in Shimla",
     "photoCredit": {
@@ -5028,11 +4979,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -5094,8 +5044,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -5130,11 +5080,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -5196,8 +5145,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -5232,11 +5181,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5298,8 +5246,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5334,11 +5282,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5400,8 +5347,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5436,11 +5383,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5502,8 +5448,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5538,11 +5484,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -5604,8 +5549,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -5640,11 +5585,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -5706,8 +5650,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {

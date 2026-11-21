@@ -1,25 +1,31 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams, useParams, useRouter } from "next/navigation";
+import { useSearchParams, useParams, useRouter, notFound } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { getHotelBySlug } from "@/lib/api/hotels";
+import { LoadingSkeleton, ErrorState } from "@/components/common";
 import EnquiryModal from "@/components/lead/EnquiryModal";
 
 interface HotelRoomOption {
   id: string;
   name: string;
+  roomType?: string;
   bedConfiguration?: string;
   maxAdults?: number;
   maxChildren?: number;
+  capacityAdults?: number;
+  capacityChildren?: number;
   areaSqm?: number;
   pricePerNight: number;
   netPricePerNight?: number;
   freeBreakfast?: boolean;
   cancellationPolicy?: string;
   features?: string[];
+  amenities?: string[];
   images?: string[];
 }
 
@@ -33,6 +39,7 @@ interface HotelDetailEntity {
   id: string;
   slug: string;
   title: string;
+  name?: string;
   propertyType: string;
   destination: {
     cityName: string;
@@ -44,6 +51,8 @@ interface HotelDetailEntity {
   starRating: number;
   rating: number;
   reviewCount: number;
+  reviews?: number;
+  reviewsCount?: number;
   pricePerNight: number;
   compareAtPrice?: number;
   currency: string;
@@ -88,59 +97,130 @@ export default function HotelDetailPage() {
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
   const [enquiryOpen, setEnquiryOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    async function loadHotelDetail() {
-      setLoading(true);
-      setError(null);
+  const fetchHotel = useCallback(async () => {
+    if (!hotelSlug) return;
+    setLoading(true);
+    setError(null);
+    try {
+      let data: any = null;
       try {
+        data = await getHotelBySlug(hotelSlug, { siteId });
+      } catch {
+        // Direct call failed — query same-origin Next.js proxy
         const res = await fetch(`/api/hotels/${encodeURIComponent(hotelSlug)}?site=${encodeURIComponent(siteId)}`);
-        if (!res.ok) {
-          throw new Error("Hotel not found");
+        if (res.ok) {
+          const json = await res.json();
+          data = json?.data ?? json;
         }
-        const json = await res.json();
-        if (json.data) {
-          setHotel(json.data);
-          if (json.data.rooms && json.data.rooms.length > 0) {
-            setSelectedRoomId(json.data.rooms[0].id);
-          }
-        } else {
-          throw new Error("Hotel data unavailable");
-        }
-      } catch (err: any) {
-        setError(err.message || "Failed to load hotel");
-      } finally {
-        setLoading(false);
       }
-    }
 
-    if (hotelSlug) {
-      loadHotelDetail();
+      if (!data || (!data.title && !data.name && !data.id)) {
+        const localRes = await fetch(`/api/hotels/${encodeURIComponent(hotelSlug)}?site=${encodeURIComponent(siteId)}`);
+        if (localRes.ok) {
+          const localJson = await localRes.json();
+          data = localJson?.data ?? localJson;
+        }
+      }
+
+      if (data && (data.title || data.name || data.id)) {
+        const title = data.title || data.name || "Hotel";
+        const rooms: HotelRoomOption[] = (data.rooms || []).map((r: any, idx: number) => ({
+          id: (r as any).id || (r as any).roomType || `room-${idx}`,
+          name: r.name || r.roomType || "Deluxe Room",
+          roomType: r.roomType,
+          pricePerNight: r.pricePerNight || data.price || 5000,
+          bedConfiguration: (r as any).bedConfiguration || "1 King Bed or 2 Twin Beds",
+          maxAdults: r.capacityAdults ?? (r as any).maxAdults ?? 2,
+          maxChildren: r.capacityChildren ?? (r as any).maxChildren ?? 1,
+          areaSqm: (r as any).areaSqm ?? 32,
+          freeBreakfast: (r as any).freeBreakfast ?? true,
+          cancellationPolicy: (r as any).cancellationPolicy ?? "Free cancellation up to 48 hours prior to check-in",
+          features: r.amenities || (r as any).features || ["Air Conditioned", "Free High-Speed WiFi"],
+        }));
+
+        const rawImages = Array.isArray(data.images) && data.images.length > 0
+          ? data.images
+          : data.image
+          ? [data.image]
+          : [];
+
+        const normalizedHotel: HotelDetailEntity = {
+          id: data.id,
+          slug: data.slug || hotelSlug,
+          title,
+          name: title,
+          propertyType: (data as any).propertyType || "Luxury Hotel",
+          destination: {
+            cityName: data.destination?.cityName || "Destination",
+            country: data.destination?.country || "Country",
+            address: data.destination?.address || `${data.destination?.cityName || ""}, ${data.destination?.country || ""}`,
+            latitude: data.destination?.latitude,
+            longitude: data.destination?.longitude,
+          },
+          starRating: data.starRating || 4,
+          rating: data.rating || 4.5,
+          reviewCount: data.reviewsCount || data.reviews || 85,
+          reviewsCount: data.reviewsCount || data.reviews || 85,
+          pricePerNight: data.price || (rooms[0]?.pricePerNight ?? 5000),
+          compareAtPrice: (data as any).compareAtPrice,
+          currency: data.currency || (siteId === "gujjutours" ? "INR" : "USD"),
+          images: rawImages,
+          amenities: data.amenities || [],
+          dietaryFeatures: (data as any).dietaryFeatures || {
+            pureVeg: true,
+            jainAvailable: true,
+            halalCertified: false,
+          },
+          rooms: rooms.length > 0 ? rooms : [
+            {
+              id: "room-deluxe",
+              name: "Deluxe King Room",
+              bedConfiguration: "1 King Bed or 2 Twin Beds",
+              maxAdults: 2,
+              maxChildren: 1,
+              areaSqm: 32,
+              pricePerNight: data.price || 5000,
+              freeBreakfast: true,
+              cancellationPolicy: "Free cancellation up to 48 hours prior to check-in",
+              features: ["City Skyline View", "Ensuite Bathroom", "Free WiFi"],
+            }
+          ],
+          policies: (data as any).policies || {
+            checkInTime: "14:00",
+            checkOutTime: "11:00",
+            cancellation: "Free cancellation up to 48 hours before check-in",
+          },
+          featured: data.featured,
+        };
+
+        setHotel(normalizedHotel);
+        setSelectedRoomId(normalizedHotel.rooms[0]?.id || "");
+      } else {
+        setError("Hotel accommodation not found");
+      }
+    } catch (err: any) {
+      if (err?.digest?.includes("NEXT_NOT_FOUND") || err?.message === "NEXT_NOT_FOUND") {
+        throw err;
+      }
+      if (err?.status === 404 || err?.isNotFound) {
+        setError("Hotel accommodation not found");
+      } else {
+        setError(err?.message || "Failed to load hotel details");
+      }
+    } finally {
+      setLoading(false);
     }
   }, [hotelSlug, siteId]);
 
-  const selectedRoom = hotel?.rooms?.find((r) => r.id === selectedRoomId) || hotel?.rooms?.[0];
-
-  const roomPricePerNight = selectedRoom?.pricePerNight || hotel?.pricePerNight || 6000;
-  const totalPrice = roomPricePerNight * nights;
-  const taxes = Math.round(totalPrice * 0.12);
-  const grandTotal = totalPrice + taxes;
-
-  const images = hotel?.images && hotel.images.length > 0
-    ? hotel.images
-    : [
-        "/seed-images/hotels/hotel-1.svg",
-        "/seed-images/hotels/hotel-2.svg",
-        "/seed-images/hotels/hotel-3.svg",
-        "/seed-images/hotels/hotel-4.svg",
-      ];
+  useEffect(() => {
+    fetchHotel();
+  }, [fetchHotel]);
 
   if (loading) {
     return (
       <main className="min-h-screen bg-slate-50 dark:bg-neutral-950 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-6 animate-pulse">
-          <div className="h-6 w-48 bg-slate-200 dark:bg-neutral-800 rounded-md" />
-          <div className="h-10 w-96 bg-slate-200 dark:bg-neutral-800 rounded-md" />
-          <div className="h-96 w-full bg-slate-200 dark:bg-neutral-800 rounded-2xl" />
+        <div className="max-w-7xl mx-auto space-y-6">
+          <LoadingSkeleton variant="detail" count={1} />
         </div>
       </main>
     );
@@ -148,29 +228,26 @@ export default function HotelDetailPage() {
 
   if (error || !hotel) {
     return (
-      <main className="min-h-screen bg-slate-50 dark:bg-neutral-950 py-16 px-4 text-center">
-        <div className="max-w-md mx-auto bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-2xl p-8 shadow-sm">
-          <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-neutral-800 flex items-center justify-center text-3xl mx-auto mb-4">
-            🏨
-          </div>
-          <h1 className="text-xl font-bold">Accommodation Not Found</h1>
-          <p className="text-xs text-slate-500 dark:text-neutral-400 mt-2 mb-6">
-            The hotel details you requested could not be found or may have been updated.
-          </p>
-          <Link
-            href="/en/hotels"
-            className="px-5 py-2.5 rounded-xl text-white text-xs font-bold shadow hover:brightness-110"
-            style={{ backgroundColor: primaryColor }}
-          >
-            Browse All Hotels
-          </Link>
+      <main className="min-h-screen bg-slate-50 dark:bg-neutral-950 py-16 px-4">
+        <div className="max-w-md mx-auto">
+          <ErrorState message={error || "Hotel not found"} onRetry={fetchHotel} />
         </div>
       </main>
     );
   }
 
+  const selectedRoom = hotel.rooms.find((r) => r.id === selectedRoomId) || hotel.rooms[0];
+  const roomPricePerNight = selectedRoom?.pricePerNight || hotel.pricePerNight;
+  const totalPrice = roomPricePerNight * nights;
+  const taxes = Math.round(totalPrice * 0.12);
+  const grandTotal = totalPrice + taxes;
+
+  const images = hotel.images.length > 0
+    ? hotel.images
+    : ["https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"];
+
   const handleBookNow = () => {
-    const primaryImg = images[activeImageIndex] || images[0] || hotel.images?.[0] || "";
+    const primaryImg = images[activeImageIndex] || images[0] || "";
     const bookingParams = new URLSearchParams({
       service: "hotel",
       serviceType: "hotel",
@@ -340,7 +417,7 @@ export default function HotelDetailPage() {
                 Popular Property Amenities
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs font-semibold text-slate-700 dark:text-neutral-300">
-                {(hotel.amenities && hotel.amenities.length > 0
+                {(hotel.amenities.length > 0
                   ? hotel.amenities
                   : [
                       "Free High-Speed WiFi",
@@ -377,44 +454,7 @@ export default function HotelDetailPage() {
                 </div>
               </div>
 
-              {(hotel.rooms && hotel.rooms.length > 0 ? hotel.rooms : [
-                {
-                  id: "room-deluxe",
-                  name: "Deluxe King Room",
-                  bedConfiguration: "1 King Bed or 2 Twin Beds",
-                  maxAdults: 2,
-                  maxChildren: 1,
-                  areaSqm: 32,
-                  pricePerNight: hotel.pricePerNight,
-                  freeBreakfast: true,
-                  cancellationPolicy: "Free cancellation up to 48 hours prior to check-in",
-                  features: ["City Skyline View", "Ensuite Marble Bathroom", "Free WiFi", "Minibar"],
-                },
-                {
-                  id: "room-executive",
-                  name: "Executive Balcony Suite",
-                  bedConfiguration: "1 Extra-Large Double Bed",
-                  maxAdults: 3,
-                  maxChildren: 1,
-                  areaSqm: 48,
-                  pricePerNight: Math.round(hotel.pricePerNight * 1.35),
-                  freeBreakfast: true,
-                  cancellationPolicy: "Free cancellation up to 24 hours prior to check-in",
-                  features: ["Private Balcony", "Executive Lounge Access", "Nespresso Machine", "Bathtub"],
-                },
-                {
-                  id: "room-family",
-                  name: "Family Two-Bedroom Suite",
-                  bedConfiguration: "2 King Beds",
-                  maxAdults: 4,
-                  maxChildren: 2,
-                  areaSqm: 72,
-                  pricePerNight: Math.round(hotel.pricePerNight * 1.8),
-                  freeBreakfast: true,
-                  cancellationPolicy: "Flexible Cancellation",
-                  features: ["Connecting Rooms Guaranteed", "Separate Living Room", "Dining Table", "2 Ensuites"],
-                },
-              ]).map((room) => {
+              {hotel.rooms.map((room) => {
                 const isSelected = selectedRoomId === room.id;
                 return (
                   <div
@@ -449,53 +489,40 @@ export default function HotelDetailPage() {
                           {room.areaSqm && (
                             <span>📐 {room.areaSqm} m²</span>
                           )}
-                          <span>👥 Max {room.maxAdults ?? 2} Adults</span>
+                          <span>👥 Up to {room.maxAdults || 2} Adults</span>
+                          {room.freeBreakfast && (
+                            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+                              🥞 Breakfast Included
+                            </span>
+                          )}
                         </div>
 
-                        {/* Room Features */}
+                        <p className="text-xs text-slate-600 dark:text-neutral-400">
+                          {room.cancellationPolicy}
+                        </p>
+
                         {room.features && room.features.length > 0 && (
                           <div className="flex flex-wrap gap-1.5 pt-2">
                             {room.features.map((feat, i) => (
                               <span
                                 key={i}
-                                className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-neutral-300"
+                                className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-neutral-800 text-[11px] text-slate-600 dark:text-neutral-300 font-medium"
                               >
-                                ✓ {feat}
+                                {feat}
                               </span>
                             ))}
                           </div>
                         )}
-
-                        <div className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold pt-1">
-                          ✓ {room.cancellationPolicy || "Free cancellation up to 48 hours before check-in"}
-                        </div>
                       </div>
 
-                      {/* Pricing Column */}
-                      <div className="text-right sm:border-l sm:pl-6 border-slate-100 dark:border-neutral-800 shrink-0">
-                        <span className="text-[10px] uppercase font-bold text-slate-400 block">
-                          Price per night
-                        </span>
-                        <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                      <div className="text-right sm:border-l border-slate-100 dark:border-neutral-800 sm:pl-6 shrink-0">
+                        <div className="text-xs text-slate-400">per night</div>
+                        <div className="text-2xl font-black text-slate-900 dark:text-white">
                           {currencySymbol}{room.pricePerNight.toLocaleString()}
                         </div>
-                        <span className="text-[10px] text-slate-400 block mb-2">+ taxes &amp; fees</span>
-
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setSelectedRoomId(room.id);
-                          }}
-                          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                            isSelected
-                              ? "text-white shadow-xs"
-                              : "bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-200 hover:bg-slate-200"
-                          }`}
-                          style={isSelected ? { backgroundColor: primaryColor } : undefined}
-                        >
-                          {isSelected ? "Selected ✓" : "Choose Room"}
-                        </button>
+                        <div className="text-[11px] text-slate-500 dark:text-neutral-400">
+                          +12% taxes &amp; fees
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -503,107 +530,103 @@ export default function HotelDetailPage() {
               })}
             </div>
 
-            {/* Check-in Policies */}
-            <div className="bg-white dark:bg-neutral-900 p-6 rounded-2xl border border-slate-200 dark:border-neutral-800 shadow-xs">
-              <h2 className="text-base font-black uppercase tracking-wider mb-4">
-                Hotel Policies &amp; Guidelines
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600 dark:text-neutral-300">
-                <div className="p-3 bg-slate-50 dark:bg-neutral-800/60 rounded-xl">
-                  <div className="font-bold text-slate-900 dark:text-white mb-1">Check-in / Check-out</div>
-                  <p>Check-in from: {hotel.policies?.checkInTime || "14:00"}</p>
-                  <p>Check-out until: {hotel.policies?.checkOutTime || "11:00"}</p>
-                </div>
-                <div className="p-3 bg-slate-50 dark:bg-neutral-800/60 rounded-xl">
-                  <div className="font-bold text-slate-900 dark:text-white mb-1">Cancellation &amp; Refunds</div>
-                  <p>{hotel.policies?.cancellation || "Free cancellation up to 48 hours prior to check-in."}</p>
+            {/* Hotel Policies */}
+            {hotel.policies && (
+              <div className="bg-white dark:bg-neutral-900 p-6 rounded-2xl border border-slate-200 dark:border-neutral-800 shadow-xs">
+                <h2 className="text-base font-black uppercase tracking-wider mb-4">
+                  Check-in Policies &amp; Terms
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-neutral-800/60">
+                    <div className="font-bold text-slate-900 dark:text-white mb-1">Check-in Time</div>
+                    <div className="text-slate-600 dark:text-neutral-300">From {hotel.policies.checkInTime || "14:00"} onwards</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-neutral-800/60">
+                    <div className="font-bold text-slate-900 dark:text-white mb-1">Check-out Time</div>
+                    <div className="text-slate-600 dark:text-neutral-300">Until {hotel.policies.checkOutTime || "11:00"}</div>
+                  </div>
+                  {hotel.policies.cancellation && (
+                    <div className="sm:col-span-2 p-4 rounded-xl bg-slate-50 dark:bg-neutral-800/60">
+                      <div className="font-bold text-slate-900 dark:text-white mb-1">Cancellation Rule</div>
+                      <div className="text-slate-600 dark:text-neutral-300">{hotel.policies.cancellation}</div>
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* ─── Sticky Booking Summary Sidebar ─── */}
-          <div className="lg:col-span-4 sticky top-24 bg-white dark:bg-neutral-900 p-6 rounded-2xl border border-slate-200 dark:border-neutral-800 shadow-xl space-y-5">
-            <h3 className="text-base font-black uppercase tracking-wider border-b border-slate-100 dark:border-neutral-800 pb-3">
-              Reservation Summary
-            </h3>
-
-            <div>
-              <div className="text-[10px] uppercase font-bold text-slate-400">Selected Room</div>
-              <div className="text-sm font-bold mt-0.5">
-                {selectedRoom?.name || "Standard Room"}
+          <div className="lg:col-span-4 sticky top-24">
+            <div className="bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-3xl p-6 shadow-xl space-y-6">
+              <div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                  Selected Room
+                </div>
+                <div className="text-base font-black mt-1 text-slate-900 dark:text-white">
+                  {selectedRoom?.name || "Standard Room"}
+                </div>
+                <div className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">
+                  {currencySymbol}{roomPricePerNight.toLocaleString()} / night
+                </div>
               </div>
-              <div className="text-xs text-slate-500 dark:text-neutral-400 mt-0.5">
-                {currencySymbol}{roomPricePerNight.toLocaleString()} × {nights} nights
+
+              {/* Nights selector */}
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-slate-700 dark:text-neutral-300">
+                  Length of Stay
+                </label>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setNights(Math.max(1, nights - 1))}
+                    className="w-10 h-10 rounded-xl border border-slate-200 dark:border-neutral-700 font-bold hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors flex items-center justify-center text-base"
+                  >
+                    -
+                  </button>
+                  <div className="flex-1 py-2 text-center font-bold text-sm bg-slate-50 dark:bg-neutral-800 rounded-xl border border-slate-200 dark:border-neutral-700">
+                    {nights} {nights === 1 ? "Night" : "Nights"}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setNights(nights + 1)}
+                    className="w-10 h-10 rounded-xl border border-slate-200 dark:border-neutral-700 font-bold hover:bg-slate-100 dark:hover:bg-neutral-800 transition-colors flex items-center justify-center text-base"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              {/* Price Breakdown */}
+              <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-neutral-800 text-xs">
+                <div className="flex justify-between text-slate-600 dark:text-neutral-300">
+                  <span>Room Charge ({nights}N)</span>
+                  <span className="font-semibold">{currencySymbol}{totalPrice.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between text-slate-600 dark:text-neutral-300">
+                  <span>Taxes &amp; Service (12%)</span>
+                  <span className="font-semibold">{currencySymbol}{taxes.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between text-base font-black text-slate-900 dark:text-white pt-3 border-t border-slate-200 dark:border-neutral-700">
+                  <span>Total Amount</span>
+                  <span>{currencySymbol}{grandTotal.toLocaleString()}</span>
+                </div>
+              </div>
+
+              {/* Reserve Button */}
+              <button
+                type="button"
+                onClick={handleBookNow}
+                className="w-full py-3.5 rounded-2xl text-white font-black text-sm shadow-xl hover:brightness-110 active:scale-95 transition-all text-center block"
+                style={{ backgroundColor: primaryColor }}
+              >
+                Proceed to Checkout
+              </button>
+
+              <div className="text-[11px] text-center text-slate-400">
+                🔒 Instant Booking Confirmation • No Hidden Charges
               </div>
             </div>
-
-            {/* Nights Duration Stepper */}
-            <div className="flex items-center justify-between text-xs pt-3 border-t border-slate-100 dark:border-neutral-800">
-              <span className="font-bold text-slate-600 dark:text-neutral-300">Duration</span>
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  disabled={nights <= 1}
-                  onClick={() => setNights(Math.max(1, nights - 1))}
-                  className="w-7 h-7 rounded-lg border border-slate-200 dark:border-neutral-700 flex items-center justify-center font-bold disabled:opacity-30 hover:bg-slate-100 dark:hover:bg-neutral-800"
-                >
-                  -
-                </button>
-                <span className="font-bold px-2">{nights} Nights</span>
-                <button
-                  type="button"
-                  onClick={() => setNights(nights + 1)}
-                  className="w-7 h-7 rounded-lg border border-slate-200 dark:border-neutral-700 flex items-center justify-center font-bold hover:bg-slate-100 dark:hover:bg-neutral-800"
-                >
-                  +
-                </button>
-              </div>
-            </div>
-
-            {/* Price Calculations */}
-            <div className="space-y-2 text-xs pt-3 border-t border-slate-100 dark:border-neutral-800">
-              <div className="flex justify-between text-slate-500 dark:text-neutral-400">
-                <span>Room Charges</span>
-                <span className="font-semibold text-slate-900 dark:text-white">
-                  {currencySymbol}{totalPrice.toLocaleString()}
-                </span>
-              </div>
-              <div className="flex justify-between text-slate-500 dark:text-neutral-400">
-                <span>Estimated Taxes &amp; Fees</span>
-                <span className="font-semibold text-slate-900 dark:text-white">
-                  {currencySymbol}{taxes.toLocaleString()}
-                </span>
-              </div>
-              <div className="flex justify-between text-base font-black pt-3 border-t border-slate-100 dark:border-neutral-800">
-                <span>Grand Total</span>
-                <span className="text-xl font-black" style={{ color: primaryColor }}>
-                  {currencySymbol}{grandTotal.toLocaleString()}
-                </span>
-              </div>
-            </div>
-
-            <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl text-emerald-800 dark:text-emerald-300 text-xs font-semibold">
-              ✓ Instant confirmation &amp; zero credit card fees
-            </div>
-
-            <button
-              type="button"
-              onClick={handleBookNow}
-              className="w-full py-3.5 rounded-xl text-white font-bold text-xs uppercase tracking-wider shadow-md hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2"
-              style={{ backgroundColor: primaryColor }}
-            >
-              <span>Instant Reserve Room</span>
-              <span>→</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setEnquiryOpen(true)}
-              className="w-full py-2.5 rounded-xl border border-slate-200 dark:border-neutral-700 font-bold text-xs hover:bg-slate-50 dark:hover:bg-neutral-800 transition-colors"
-            >
-              Enquire or Custom Dates
-            </button>
           </div>
         </div>
       </div>
@@ -611,9 +634,8 @@ export default function HotelDetailPage() {
       <EnquiryModal
         isOpen={enquiryOpen}
         onClose={() => setEnquiryOpen(false)}
-        serviceName={`Hotel Booking: ${hotel.title}`}
-        defaultDestination={hotel.title}
-        currencySymbol={currencySymbol}
+        serviceTitle={hotel.title}
+        serviceType="hotel"
       />
     </main>
   );

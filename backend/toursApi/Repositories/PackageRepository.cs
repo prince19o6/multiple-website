@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ToursApi.Models;
 
@@ -82,15 +83,24 @@ public class PackageRepository : IPackageRepository
 
             if (!string.IsNullOrWhiteSpace(filters.Destination))
             {
-                var dest = filters.Destination.Trim();
-                var regex = new BsonRegularExpression(dest, "i");
-                filter = filter & (
-                    builder.Regex(p => p.Destination, regex) |
-                    builder.Regex(p => p.Country, regex) |
-                    builder.Regex(p => p.City, regex) |
-                    builder.Regex(p => p.CitiesCovered, regex) |
-                    builder.Regex(p => p.Title, regex)
-                );
+                var tokens = filters.Destination.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                var tokenFilters = new List<FilterDefinition<Package>>();
+                foreach (var token in tokens)
+                {
+                    if (string.IsNullOrWhiteSpace(token)) continue;
+                    var regex = new BsonRegularExpression(Regex.Escape(token), "i");
+                    tokenFilters.Add(
+                        builder.Regex(p => p.Destination, regex) |
+                        builder.Regex(p => p.Country, regex) |
+                        builder.Regex(p => p.City, regex) |
+                        builder.Regex(p => p.CitiesCovered, regex) |
+                        builder.Regex(p => p.Title, regex)
+                    );
+                }
+                if (tokenFilters.Count > 0)
+                {
+                    filter = filter & builder.Or(tokenFilters);
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(filters.Category) && !filters.Category.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -159,12 +169,13 @@ public class PackageRepository : IPackageRepository
 
         if (!string.IsNullOrWhiteSpace(filters.Destination))
         {
-            var dest = filters.Destination.Trim().ToLowerInvariant();
-            qSeed = qSeed.Where(p =>
+            var tokens = filters.Destination.Split(new[] { ',', '&', '/' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Select(t => t.ToLowerInvariant()).ToList();
+            qSeed = qSeed.Where(p => tokens.Any(dest =>
                 (p.Destination != null && p.Destination.ToLower().Contains(dest)) ||
                 (p.Country != null && p.Country.ToLower().Contains(dest)) ||
                 (p.City != null && p.City.ToLower().Contains(dest)) ||
-                (p.Title != null && p.Title.ToLower().Contains(dest)));
+                (p.Title != null && p.Title.ToLower().Contains(dest))));
         }
 
         if (filters.MinPrice.HasValue && filters.MinPrice > 0)

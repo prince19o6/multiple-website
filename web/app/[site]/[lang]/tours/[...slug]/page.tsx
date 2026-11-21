@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { getTourBySlug } from "@/lib/api/tours";
+import { LoadingSkeleton, ErrorState } from "@/components/common";
 import EnquiryModal from "@/components/lead/EnquiryModal";
 
 interface PackageOption {
@@ -49,119 +51,6 @@ interface TourDetail {
   };
 }
 
-const FALLBACK_TOUR: TourDetail = {
-  id: "dubai-desert-safari",
-  name: "Dubai Premium Red Dune Desert Safari & BBQ Dinner",
-  title: "Dubai Premium Red Dune Desert Safari & BBQ Dinner",
-  category: "Desert Safari",
-  categorySlug: "desert-safari",
-  destination: "Dubai",
-  city: "Dubai",
-  location: "Lahbab Red Dunes, Dubai, UAE",
-  duration: "6 - 7 Hours",
-  price: 2450,
-  originalPrice: 3800,
-  currency: "INR",
-  rating: 4.9,
-  reviewsCount: 384,
-  images: [
-    "/seed-images/activities/activity-desert-safari.svg",
-    "/seed-images/activities/activity-city-tour.svg",
-    "/seed-images/activities/activity-boat-tour.svg",
-  ],
-  highlights: [
-    "Thrilling 4x4 Dune Bashing in Lahbab Red Dunes",
-    "Sunset photo-stop across rolling desert sands",
-    "Camel ride, Sandboarding & Henna painting",
-    "Buffet BBQ dinner with dedicated Pure Veg & Jain food counters",
-    "Live entertainment: Belly dance, Tanoura & Fire show",
-    "Round-trip hotel pickup and drop-off included",
-  ],
-  overview:
-    "Experience the raw magic of the Arabian desert with our highest-rated safari. Venture deep into the legendary Lahbab dunes with an expert licensed desert safari driver. As dusk descends, arrive at our atmospheric Bedouin camp where refreshing Arabian coffee and dates await, followed by a lavish barbecue dinner and cultural performances under starlit skies.",
-  itinerary: [
-    {
-      time: "14:30 - 15:30",
-      title: "Hotel Pickup & Scenic Transfer",
-      desc: "Pickup from your hotel or residence in a fully air-conditioned 4x4 Land Cruiser. Journey toward the high red dunes of Lahbab.",
-    },
-    {
-      time: "16:00 - 17:00",
-      title: "Red Dune Bashing & Sandboarding",
-      desc: "An adrenaline-pumping 45-minute dune bashing adventure guided by master safari drivers. Stop at the highest dune peak for photos and try sandboarding.",
-    },
-    {
-      time: "17:30 - 18:30",
-      title: "Arrival at Bedouin Safari Camp",
-      desc: "Welcome with authentic Arabic Gahwa (coffee), dates, and falafel. Enjoy short camel rides, henna body art, and capture the desert twilight.",
-    },
-    {
-      time: "19:00 - 21:00",
-      title: "BBQ Feast & Live Stage Shows",
-      desc: "Sumptuous buffet barbecue dinner featuring grilled meats, vegetarian delicacies, and Jain food counter. Watch traditional Tanoura twirl, mesmerizing fire acrobatics, and live belly dance.",
-    },
-    {
-      time: "21:30",
-      title: "Drop-off at Hotel",
-      desc: "Safe and comfortable return transfer directly to your hotel or residence.",
-    },
-  ],
-  inclusions: [
-    "Hotel pickup and drop-off in 4x4 Cruiser",
-    "45 minutes dune bashing across Lahbab high dunes",
-    "Sandboarding experience",
-    "Short camel riding experience",
-    "Welcome tea, Arabic coffee and dates",
-    "Unlimited water, soft drinks and refreshments",
-    "Henna designing for ladies and children",
-    "International BBQ buffet dinner (Veg, Non-Veg, Jain counter)",
-    "Live Tanoura dance, Fire show, and Belly dancing performance",
-  ],
-  exclusions: [
-    "Quad bike / Dune buggy rental (optional add-on at camp)",
-    "Alcoholic beverages (available for purchase)",
-    "Souvenir photos and falcon photography",
-    "Personal expenses and gratuities",
-  ],
-  importantNotes: [
-    "Not recommended for pregnant travelers or guests with severe back conditions during dune bashing (gentle drive available on request).",
-    "Comfortable casual clothing and open shoes/sandals are recommended.",
-    "Jain meals and strictly vegetarian food are clearly labeled and catered at dedicated counters.",
-  ],
-  cancellationPolicy: "Free cancellation up to 24 hours prior to scheduled pickup time with 100% refund.",
-  packageOptions: [
-    {
-      id: "opt_1",
-      title: "Standard Admission Pass",
-      description: "Direct entry ticket with self-guided tour access.",
-      price: 2450,
-      hotelPickup: false,
-      mealsIncluded: false,
-    },
-    {
-      id: "opt_2",
-      title: "Admission with Hotel Transfers",
-      description: "Entry ticket plus door-to-door air-conditioned hotel transfers.",
-      price: 3450,
-      hotelPickup: true,
-      mealsIncluded: false,
-    },
-    {
-      id: "opt_3",
-      title: "VIP Fast-Track with Gourmet Dining",
-      description: "Priority VIP entry, dedicated guide & multi-course gourmet dining voucher.",
-      price: 4650,
-      hotelPickup: true,
-      mealsIncluded: true,
-    },
-  ],
-  dietaryFeatures: {
-    pureVeg: true,
-    jainAvailable: true,
-    halalCertified: true,
-  },
-};
-
 export default function TourDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -176,14 +65,15 @@ export default function TourDetailPage() {
   const currencySymbol = config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
   const primaryColor = config.theme?.colors?.primary || "#2882c5";
 
-  const [tour, setTour] = useState<TourDetail>(FALLBACK_TOUR);
-  const [selectedImage, setSelectedImage] = useState<string>(FALLBACK_TOUR.images[0]);
+  const [tour, setTour] = useState<TourDetail | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>("");
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number>(0);
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [adults, setAdults] = useState<number>(2);
   const [children, setChildren] = useState<number>(0);
   const [dietaryChoice, setDietaryChoice] = useState<string>("pureVeg");
-  const [activeTab, setActiveTab] = useState<"overview" | "options" | "itinerary" | "inclusions" | "policy">("overview");
   const [isEnquiryOpen, setIsEnquiryOpen] = useState<boolean>(false);
 
   // Set tomorrow as default date
@@ -193,74 +83,143 @@ export default function TourDetailPage() {
     setSelectedDate(tmrw.toISOString().split("T")[0]);
   }, []);
 
-  // Fetch tour details from API
-  useEffect(() => {
+  // Fetch tour details from backend API
+  const fetchTour = useCallback(async () => {
     if (!tourPath) return;
+    setLoading(true);
+    setError(null);
 
-    const fetchTour = async () => {
+    try {
+      const idOrSlug = slugArray[slugArray.length - 1] || tourPath;
+      let t: any = null;
       try {
-        const res = await fetch(`/api/tours/${tourPath}?site=${encodeURIComponent(siteId)}`);
+        t = await getTourBySlug(idOrSlug, { siteId });
+      } catch {
+        // Direct call failed — query same-origin Next.js proxy
+        const res = await fetch(`/api/tours/${encodeURIComponent(idOrSlug)}?site=${encodeURIComponent(siteId)}`);
         if (res.ok) {
           const json = await res.json();
-          const t = json?.data || json;
-          if (t && (t.name || t.title)) {
-            const rawImages = Array.isArray(t.images) && t.images.length > 0
-              ? t.images
-              : t.image
-              ? [t.image]
-              : FALLBACK_TOUR.images;
-
-            const opts: PackageOption[] = Array.isArray(t.packageOptions) && t.packageOptions.length > 0
-              ? t.packageOptions
-              : (FALLBACK_TOUR.packageOptions || []);
-
-            const destStr = typeof t.destination === "object" && t.destination !== null
-              ? (t.destination.cityName || t.destination.name || t.destination.address || "Dubai")
-              : String(t.destination || t.city || "Dubai");
-            const cityStr = typeof t.city === "object" && t.city !== null
-              ? (t.city.cityName || t.city.name || destStr)
-              : String(t.city || destStr);
-
-            setTour({
-              id: String(t.id || t.tourNumericId || tourPath),
-              tourNumericId: t.tourNumericId,
-              name: String(t.title || t.name),
-              title: String(t.title || t.name),
-              category: String(t.category || "Sightseeing"),
-              categorySlug: String(t.categorySlug || "city-tours"),
-              destination: destStr,
-              city: cityStr,
-              location: String(t.location || `${cityStr}, ${t.country || ""}`),
-              duration: String(t.duration || "Half Day"),
-              price: Number(t.price || 199),
-              originalPrice: t.originalPrice ? Number(t.originalPrice) : undefined,
-              currency: String(t.currency || currencySymbol),
-              rating: Number(t.rating || 4.8),
-              reviewsCount: Number(t.reviews || t.reviewCount || 120),
-              images: rawImages,
-              highlights: Array.isArray(t.highlights) && t.highlights.length > 0 ? t.highlights : FALLBACK_TOUR.highlights,
-              overview: String(t.overview || t.description || FALLBACK_TOUR.overview),
-              itinerary: Array.isArray(t.itinerary) && t.itinerary.length > 0 ? t.itinerary : FALLBACK_TOUR.itinerary,
-              inclusions: Array.isArray(t.included) && t.included.length > 0 ? t.included : FALLBACK_TOUR.inclusions,
-              exclusions: Array.isArray(t.excluded) && t.excluded.length > 0 ? t.excluded : FALLBACK_TOUR.exclusions,
-              importantNotes: Array.isArray(t.importantNotes) && t.importantNotes.length > 0 ? t.importantNotes : FALLBACK_TOUR.importantNotes,
-              cancellationPolicy: String(t.cancellationPolicy || FALLBACK_TOUR.cancellationPolicy),
-              packageOptions: opts,
-              dietaryFeatures: t.dietaryFeatures || FALLBACK_TOUR.dietaryFeatures,
-            });
-
-            if (rawImages[0]) {
-              setSelectedImage(rawImages[0]);
-            }
-          }
+          t = json?.data ?? json;
         }
-      } catch {
-        // Fallback remains active
       }
-    };
 
+      if (!t || (!t.name && !t.title)) {
+        const localRes = await fetch(`/api/tours/${encodeURIComponent(idOrSlug)}?site=${encodeURIComponent(siteId)}`);
+        if (localRes.ok) {
+          const localJson = await localRes.json();
+          t = localJson?.data ?? localJson;
+        }
+      }
+
+      if (t && (t.name || t.title)) {
+        const rawImages = Array.isArray(t.images) && t.images.length > 0
+          ? t.images
+          : t.image
+          ? [t.image]
+          : [];
+
+        const opts: PackageOption[] = Array.isArray((t as any).packageOptions) && (t as any).packageOptions.length > 0
+          ? (t as any).packageOptions
+          : [
+              {
+                id: "std",
+                title: "Standard Admission Pass",
+                description: "Direct entry pass with comprehensive inclusions",
+                price: t.price || 199,
+                hotelPickup: false,
+                mealsIncluded: false,
+              },
+            ];
+
+        const destStr = typeof t.destination === "object" && t.destination !== null
+          ? ((t.destination as any).cityName || (t.destination as any).name || (t.destination as any).address || "Destination")
+          : String(t.destination || (t as any).city || "Destination");
+        const cityStr = typeof (t as any).city === "object" && (t as any).city !== null
+          ? ((t as any).city.cityName || (t as any).city.name || destStr)
+          : String((t as any).city || destStr);
+
+        const tourDetail: TourDetail = {
+          id: String(t.id || (t as any).tourNumericId || tourPath),
+          tourNumericId: (t as any).tourNumericId,
+          name: String(t.title || t.name),
+          title: String(t.title || t.name),
+          category: String(t.category || "Sightseeing"),
+          categorySlug: String(t.categorySlug || "city-tours"),
+          destination: destStr,
+          city: cityStr,
+          location: String(t.location || `${cityStr}, ${t.country || ""}`),
+          duration: String(t.duration || "Half Day"),
+          price: Number(t.price || 199),
+          originalPrice: t.originalPrice ? Number(t.originalPrice) : undefined,
+          currency: String(t.currency || currencySymbol),
+          rating: Number(t.rating || 4.8),
+          reviewsCount: Number(t.reviews || (t as any).reviewCount || 120),
+          images: rawImages,
+          highlights: Array.isArray(t.highlights) && t.highlights.length > 0 ? t.highlights : [],
+          overview: String((t as any).overview || t.description || ""),
+          itinerary: Array.isArray(t.itinerary) && t.itinerary.length > 0
+            ? t.itinerary.map((it: any) => ({ title: it.title || "Day Highlight", desc: it.description || "" }))
+            : [],
+          inclusions: Array.isArray(t.inclusions) && t.inclusions.length > 0
+            ? t.inclusions
+            : Array.isArray(t.included)
+            ? t.included
+            : [],
+          exclusions: Array.isArray(t.exclusions) && t.exclusions.length > 0
+            ? t.exclusions
+            : Array.isArray(t.excluded)
+            ? t.excluded
+            : [],
+          importantNotes: Array.isArray((t as any).importantNotes) ? (t as any).importantNotes : [],
+          cancellationPolicy: String((t as any).cancellationPolicy || "Free cancellation up to 24 hours prior to activity start time with 100% refund."),
+          packageOptions: opts,
+          dietaryFeatures: (t as any).dietaryFeatures,
+        };
+
+        setTour(tourDetail);
+        if (rawImages[0]) {
+          setSelectedImage(rawImages[0]);
+        }
+      } else {
+        setError("Tour experience not found");
+      }
+    } catch (err: any) {
+      if (err?.digest?.includes("NEXT_NOT_FOUND") || err?.message === "NEXT_NOT_FOUND") {
+        throw err;
+      }
+      if (err?.status === 404 || err?.isNotFound) {
+        setError("Tour experience not found");
+      } else {
+        setError(err?.message || "Failed to load tour details");
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [tourPath, slugArray, siteId, currencySymbol]);
+
+  useEffect(() => {
     fetchTour();
-  }, [tourPath, siteId, currencySymbol]);
+  }, [fetchTour]);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 text-gray-900 dark:text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <LoadingSkeleton type="detail" />
+      </main>
+    );
+  }
+
+  if (error || !tour) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 text-gray-900 dark:text-gray-100 py-16 px-4">
+        <ErrorState
+          title="Tour Experience Not Found"
+          message={error || "The requested tour experience could not be loaded."}
+          onRetry={fetchTour}
+        />
+      </main>
+    );
+  }
 
   const activeOption = tour.packageOptions?.[selectedOptionIndex] || {
     id: "std",
@@ -273,7 +232,7 @@ export default function TourDetailPage() {
   const totalPrice = currentUnitPrice * adults + Math.round(currentUnitPrice * 0.7) * children;
   const tax = Math.round(totalPrice * 0.05);
   const grandTotal = totalPrice + tax;
-  const primaryImg = tour.images?.[0] || tour.images?.[selectedOptionIndex] || "";
+  const primaryImg = tour.images?.[0] || selectedImage || "";
 
   const handleBookNow = () => {
     const bookingParams = new URLSearchParams({
@@ -357,304 +316,215 @@ export default function TourDetailPage() {
             )}
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             {tour.title}
           </h1>
 
-          <div className="flex items-center gap-3 text-sm">
-            <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 font-black text-xs">
+          <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <div className="flex items-center gap-1 font-bold text-amber-500">
               <span>★</span>
               <span>{tour.rating}</span>
+              <span className="text-gray-400 font-normal">({tour.reviewsCount} reviews)</span>
             </div>
-            <span className="text-xs text-gray-500 dark:text-gray-400">
-              Based on {tour.reviewsCount} verified traveler reviews
+            <span>•</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+              ✓ Instant Digital Confirmation
             </span>
-            <span className="text-xs text-emerald-600 dark:text-emerald-400 font-bold hidden sm:inline">
-              ✓ Instant Confirmation Voucher
-            </span>
-            <span className="text-xs text-blue-600 dark:text-blue-400 font-bold hidden sm:inline">
-              ✓ Free Cancellation up to 24 hours
-            </span>
+            <span>•</span>
+            <span>Free Cancellation Up to 24 Hours</span>
           </div>
         </div>
 
-        {/* ─── Media Gallery ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
-          <div className="lg:col-span-2 h-[340px] sm:h-[440px] rounded-2xl overflow-hidden relative shadow-lg bg-neutral-900 border border-gray-200 dark:border-neutral-800">
-            <Image
-              src={selectedImage}
-              alt={tour.title}
-              fill
-              unoptimized
-              className="object-cover transition-all duration-300"
-            />
-            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-xs font-bold">
-              Top Rated in {tour.city}
-            </div>
+        {/* ─── Gallery Grid ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-neutral-800">
+          <div className="md:col-span-2 relative h-72 sm:h-96 md:h-[440px] bg-neutral-900 group">
+            {primaryImg ? (
+              <Image
+                src={primaryImg}
+                alt={tour.title}
+                fill
+                priority
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-neutral-500">
+                No Photo Available
+              </div>
+            )}
           </div>
 
-          <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 h-[100px] lg:h-[440px]">
-            {tour.images.slice(0, 3).map((img, idx) => (
-              <button
-                key={idx}
-                type="button"
-                onClick={() => setSelectedImage(img)}
-                className={`relative rounded-xl overflow-hidden h-full group border-2 transition-all ${
-                  selectedImage === img
-                    ? "border-primary ring-2 ring-primary/30"
-                    : "border-gray-200 dark:border-neutral-800 opacity-80 hover:opacity-100"
-                }`}
+          <div className="hidden md:flex flex-col gap-3 h-[440px]">
+            {tour.images.slice(1, 3).map((imgUrl, i) => (
+              <div
+                key={i}
+                onClick={() => setSelectedImage(imgUrl)}
+                className="relative flex-1 bg-neutral-900 overflow-hidden cursor-pointer group"
               >
                 <Image
-                  src={img}
-                  alt={`Thumbnail ${idx + 1}`}
+                  src={imgUrl}
+                  alt={`Tour Gallery ${i + 1}`}
                   fill
-                  unoptimized
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </button>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* ─── Main Content & Sticky Booking Box ─── */}
+        {/* ─── Main Content & Booking Panel ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left 2 Cols: Details, Options, Schedule */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Tab Navigation */}
-            <div className="flex border-b border-gray-200 dark:border-neutral-800 gap-6 text-sm font-bold overflow-x-auto scrollbar-hide">
-              {[
-                { id: "overview", label: "Overview & Highlights" },
-                { id: "options", label: "Tour Options (3)" },
-                { id: "itinerary", label: "Schedule / Itinerary" },
-                { id: "inclusions", label: "What's Included" },
-                { id: "policy", label: "Policies & Terms" },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
-                  className={`pb-3 border-b-2 whitespace-nowrap transition-colors ${
-                    activeTab === tab.id
-                      ? "border-primary text-primary"
-                      : "border-transparent text-gray-500 hover:text-gray-900 dark:hover:text-white"
-                  }`}
-                  style={activeTab === tab.id ? { borderColor: primaryColor, color: primaryColor } : undefined}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Tab: Overview */}
-            {activeTab === "overview" && (
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-lg font-bold mb-3">Key Highlights</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {tour.highlights.map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-2.5 p-3.5 rounded-xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-xs"
-                      >
-                        <span className="text-emerald-500 font-bold shrink-0">✓</span>
-                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 leading-relaxed">
-                          {h}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h2 className="text-lg font-bold mb-3">About This Experience</h2>
-                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                    {tour.overview}
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {/* Tab: Options */}
-            {activeTab === "options" && (
-              <div className="space-y-4">
-                <h2 className="text-lg font-bold mb-2">Available Package Options</h2>
-                <div className="space-y-3">
-                  {tour.packageOptions?.map((opt, idx) => {
-                    const isSelected = selectedOptionIndex === idx;
-                    return (
-                      <div
-                        key={opt.id}
-                        onClick={() => setSelectedOptionIndex(idx)}
-                        className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${
-                          isSelected
-                            ? "border-primary bg-primary/5 dark:bg-primary/10 shadow-sm"
-                            : "border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-gray-300"
-                        }`}
-                      >
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <div className="flex items-center gap-2">
-                              <input
-                                type="radio"
-                                name="packageOpt"
-                                checked={isSelected}
-                                onChange={() => setSelectedOptionIndex(idx)}
-                                className="w-4 h-4 text-primary accent-primary"
-                              />
-                              <h3 className="font-bold text-sm text-gray-900 dark:text-white">
-                                {opt.title}
-                              </h3>
-                            </div>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 pl-6">
-                              {opt.description}
-                            </p>
-                            <div className="flex gap-2 pl-6 mt-2">
-                              {opt.hotelPickup && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
-                                  🚗 Hotel Transfers Included
-                                </span>
-                              )}
-                              {opt.mealsIncluded && (
-                                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
-                                  🍽️ Meals Included
-                                </span>
-                              )}
-                            </div>
-                          </div>
-                          <div className="text-right shrink-0">
-                            <span className="text-base font-black text-gray-900 dark:text-white">
-                              {currencySymbol}{opt.price.toLocaleString()}
-                            </span>
-                            <span className="text-[10px] text-gray-400 block">per adult</span>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {/* Tab: Itinerary */}
-            {activeTab === "itinerary" && (
-              <div className="space-y-6">
-                <h2 className="text-lg font-bold mb-4">Tour Schedule &amp; Itinerary Stops</h2>
-                <div className="relative pl-6 border-l-2 border-primary/40 space-y-6 ml-2">
-                  {tour.itinerary.map((item, idx) => (
-                    <div key={idx} className="relative">
-                      <div
-                        className="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-4 border-white dark:border-neutral-950 shadow-xs"
-                        style={{ backgroundColor: primaryColor }}
-                      />
-                      {item.time && (
-                        <span className="text-[11px] font-bold block mb-1 text-primary">
-                          {item.time}
-                        </span>
-                      )}
-                      <h3 className="text-sm font-bold text-gray-900 dark:text-white">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 mt-1 leading-relaxed">
-                        {item.desc}
-                      </p>
+            {/* Highlights */}
+            {tour.highlights.length > 0 && (
+              <div className="bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-100 dark:border-neutral-800 space-y-4 shadow-xs">
+                <h2 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                  <span>✨</span>
+                  <span>Experience Highlights</span>
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                  {tour.highlights.map((item, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <span className="text-emerald-500 font-bold shrink-0 mt-0.5">✓</span>
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Tab: Inclusions */}
-            {activeTab === "inclusions" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="p-5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/40">
-                  <h3 className="text-sm font-bold text-emerald-800 dark:text-emerald-300 mb-3 flex items-center gap-2">
-                    <span>✓</span> What is Included
-                  </h3>
-                  <ul className="space-y-2 text-xs text-emerald-900 dark:text-emerald-200">
-                    {tour.inclusions.map((inc, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-emerald-600 font-bold">✓</span>
-                        <span>{inc}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Overview */}
+            {tour.overview && (
+              <div className="bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-100 dark:border-neutral-800 space-y-3 shadow-xs">
+                <h2 className="text-base font-bold text-gray-900 dark:text-white">
+                  About This Experience
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                  {tour.overview}
+                </p>
+              </div>
+            )}
 
-                <div className="p-5 rounded-2xl bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800/40">
-                  <h3 className="text-sm font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">
-                    <span>✕</span> What is Not Included
-                  </h3>
-                  <ul className="space-y-2 text-xs text-red-900 dark:text-red-200">
-                    {tour.exclusions.map((exc, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-red-500 font-bold">✕</span>
-                        <span>{exc}</span>
-                      </li>
-                    ))}
-                  </ul>
+            {/* Itinerary */}
+            {tour.itinerary.length > 0 && (
+              <div className="bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-100 dark:border-neutral-800 space-y-4 shadow-xs">
+                <h2 className="text-base font-bold text-gray-900 dark:text-white">
+                  Program Schedule
+                </h2>
+                <div className="space-y-4">
+                  {tour.itinerary.map((step, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <div
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-xs"
+                          style={{ backgroundColor: primaryColor }}
+                        >
+                          {idx + 1}
+                        </div>
+                        {idx !== tour.itinerary.length - 1 && (
+                          <div className="w-0.5 flex-1 bg-gray-200 dark:bg-neutral-800 my-1" />
+                        )}
+                      </div>
+                      <div className="space-y-1 pb-4">
+                        <h3 className="text-sm font-bold text-gray-900 dark:text-white">
+                          {step.title}
+                        </h3>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
 
-            {/* Tab: Policy */}
-            {activeTab === "policy" && (
-              <div className="space-y-6">
-                <div className="p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
-                  <h3 className="text-sm font-bold flex items-center gap-2">
-                    <span>🛡️</span> Cancellation &amp; Refund Policy
-                  </h3>
-                  <p className="text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-                    {tour.cancellationPolicy}
-                  </p>
-                </div>
+            {/* Inclusions & Exclusions */}
+            {(tour.inclusions.length > 0 || tour.exclusions.length > 0) && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {tour.inclusions.length > 0 && (
+                  <div className="bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-100 dark:border-neutral-800 space-y-3 shadow-xs">
+                    <h3 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-2">
+                      <span>✓</span> What&apos;s Included
+                    </h3>
+                    <ul className="space-y-2 text-xs text-gray-700 dark:text-gray-300">
+                      {tour.inclusions.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-emerald-500 font-bold shrink-0">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-                <div className="p-5 rounded-2xl bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-800 shadow-xs space-y-3">
-                  <h3 className="text-sm font-bold flex items-center gap-2">
-                    <span>⚠️</span> Important Traveler Guidelines
-                  </h3>
-                  <ul className="space-y-2 text-xs text-gray-600 dark:text-gray-300">
-                    {tour.importantNotes.map((note, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-amber-500 font-bold">•</span>
-                        <span>{note}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {tour.exclusions.length > 0 && (
+                  <div className="bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-100 dark:border-neutral-800 space-y-3 shadow-xs">
+                    <h3 className="text-sm font-bold text-rose-700 dark:text-rose-400 flex items-center gap-2">
+                      <span>✕</span> What&apos;s Not Included
+                    </h3>
+                    <ul className="space-y-2 text-xs text-gray-700 dark:text-gray-300">
+                      {tour.exclusions.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <span className="text-rose-500 font-bold shrink-0">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             )}
           </div>
 
-          {/* Right 1 Col: Sticky Booking Box */}
+          {/* ─── Sticky Booking Card ─── */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-white dark:bg-neutral-900 rounded-3xl p-6 border border-gray-200 dark:border-neutral-800 shadow-xl space-y-5">
-              <div className="flex items-baseline justify-between border-b border-gray-100 dark:border-neutral-800 pb-4">
-                <div>
-                  <span className="text-xs text-gray-400 block">Selected Option</span>
-                  <span className="text-sm font-bold text-gray-900 dark:text-white line-clamp-1">
-                    {activeOption.title}
+            <div className="sticky top-24 bg-white dark:bg-neutral-900 rounded-3xl border border-gray-200 dark:border-neutral-800 p-6 space-y-5 shadow-xl">
+              <div>
+                <span className="text-xs text-gray-500 font-semibold block mb-0.5">Starting from</span>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">
+                    {currencySymbol}{currentUnitPrice.toLocaleString()}
                   </span>
-                  <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-2xl font-black text-gray-900 dark:text-white">
-                      {currencySymbol}{currentUnitPrice.toLocaleString()}
-                    </span>
-                    {tour.originalPrice && (
-                      <span className="text-xs line-through text-gray-400">
-                        {currencySymbol}{tour.originalPrice.toLocaleString()}
-                      </span>
-                    )}
-                    <span className="text-xs text-gray-400">/ adult</span>
-                  </div>
+                  <span className="text-xs text-gray-500">/ person</span>
                 </div>
-                <span className="text-[10px] px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold">
-                  Guaranteed
-                </span>
               </div>
 
-              {/* Date Selection */}
+              {/* Package Options */}
+              {tour.packageOptions && tour.packageOptions.length > 0 && (
+                <div className="space-y-2">
+                  <label className="block text-xs font-bold text-gray-700 dark:text-gray-300">
+                    Select Package Option
+                  </label>
+                  <div className="space-y-2">
+                    {tour.packageOptions.map((opt, i) => (
+                      <div
+                        key={opt.id || i}
+                        onClick={() => setSelectedOptionIndex(i)}
+                        className={`p-3 rounded-2xl border text-xs cursor-pointer transition-all ${
+                          selectedOptionIndex === i
+                            ? "border-primary bg-primary/5 dark:bg-primary/10 ring-1 ring-primary"
+                            : "border-gray-200 dark:border-neutral-800 hover:border-gray-300"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between font-bold text-gray-900 dark:text-white">
+                          <span>{opt.title}</span>
+                          <span style={{ color: primaryColor }}>
+                            {currencySymbol}{opt.price}
+                          </span>
+                        </div>
+                        {opt.description && (
+                          <p className="text-[11px] text-gray-500 mt-1">{opt.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Date Selector */}
               <div>
                 <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5">
-                  Select Experience Date
+                  Travel Date
                 </label>
                 <input
                   type="date"
@@ -665,10 +535,10 @@ export default function TourDetailPage() {
                 />
               </div>
 
-              {/* Guest Counts */}
+              {/* Guests Count */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">
                     Adults (12+ yrs)
                   </label>
                   <div className="flex items-center border border-gray-200 dark:border-neutral-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-neutral-800">
@@ -692,7 +562,7 @@ export default function TourDetailPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">
                     Children (3-11 yrs)
                   </label>
                   <div className="flex items-center border border-gray-200 dark:border-neutral-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-neutral-800">

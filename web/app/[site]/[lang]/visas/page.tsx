@@ -4,9 +4,10 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface VisaItem {
   id: number | string;
@@ -62,11 +63,10 @@ const NATIONALITY_OPTIONS = [
 
 export default function VisasPage() {
   const searchParams = useSearchParams();
-  const config = useSiteConfig();
   const site = useSite();
 
   const siteId = site.siteId || "gujjutours";
-  const currencySymbol = config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
+  const { formatPrice } = useCurrency();
 
   // Query params
   const initialCountry = searchParams.get("country") || searchParams.get("destination") || "all";
@@ -140,11 +140,8 @@ export default function VisasPage() {
       const res = await fetch(`/api/visas?${params.toString()}`);
       if (!res.ok) throw new Error("Failed to load visa catalog");
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        setVisas(json.data);
-      } else {
-        setVisas([]);
-      }
+      const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+      setVisas(items);
     } catch (err: any) {
       console.error("[Visas Page Fetch Error]", err);
       setError(err.message || "Unable to load visas");
@@ -359,39 +356,19 @@ export default function VisasPage() {
 
         {/* Loading / Error / Empty States */}
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm animate-pulse h-64" />
-            ))}
-          </div>
+          <LoadingSkeleton variant="card" count={6} />
         ) : error ? (
-          <div className="bg-red-50 text-red-700 p-6 rounded-2xl border border-red-200 text-center">
-            <p className="font-semibold">Unable to load visas</p>
-            <p className="text-xs mt-1">{error}</p>
-            <button
-              onClick={fetchVisas}
-              className="mt-3 bg-red-600 text-white text-xs px-4 py-1.5 rounded-lg font-bold"
-            >
-              Try Again
-            </button>
-          </div>
+          <ErrorState message={error} onRetry={fetchVisas} />
         ) : visas.length === 0 ? (
-          <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center">
-            <span className="text-4xl">🛂</span>
-            <h3 className="mt-3 text-base font-bold text-slate-800">No visas found for this combination</h3>
-            <p className="text-xs text-slate-500 mt-1 max-w-md mx-auto">
-              Try changing the destination country or visa category filters above to view other international clearances.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCountry("all");
-                setSelectedType("all");
-              }}
-              className="mt-4 bg-blue-600 text-white text-xs px-4 py-2 rounded-xl font-bold hover:bg-blue-700"
-            >
-              Reset Filters
-            </button>
-          </div>
+          <EmptyState
+            title="No visas found for this combination"
+            message="Try changing the destination country or visa category filters above to view other international clearances."
+            actionLabel="Reset Filters"
+            onAction={() => {
+              setSelectedCountry("all");
+              setSelectedType("all");
+            }}
+          />
         ) : (
           /* Cards Grid */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -472,11 +449,11 @@ export default function VisasPage() {
                       <span className="block text-[10px] uppercase font-bold text-slate-400">All-Inclusive Fee</span>
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-lg font-black text-slate-900">
-                          {currencySymbol}{v.price.toLocaleString()}
+                          {formatPrice(v.price, v.currency || "INR")}
                         </span>
                         {v.originalPrice && v.originalPrice > v.price && (
                           <span className="text-xs text-slate-400 line-through">
-                            {currencySymbol}{v.originalPrice.toLocaleString()}
+                            {formatPrice(v.originalPrice, v.currency || "INR")}
                           </span>
                         )}
                       </div>

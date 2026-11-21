@@ -367,12 +367,15 @@ export function MobileSearchWidget({
 
     // 2. Hotels
     if (type === 'hotel' || featId === 'hotels') {
+      const cleanDest = (destination || 'Dubai').split(',')[0].trim();
       router.push({
-        pathname: '/(tabs)/explore',
+        pathname: '/search-results',
         params: {
+          type: 'hotels',
           service: 'hotels',
           category: 'hotel',
-          destination: destination || 'Dubai',
+          destination: cleanDest,
+          q: cleanDest,
           checkIn: checkInDate.iso,
           checkOut: checkOutDate.iso,
           adults: String(adults),
@@ -384,11 +387,14 @@ export function MobileSearchWidget({
 
     // 3. Tours / Attractions
     if (type === 'tour' || featId === 'tours' || featId === 'attractions' || featId === 'activities') {
+      const cleanDest = (destination || 'Dubai').split(',')[0].trim();
       router.push({
-        pathname: '/(tabs)/explore',
+        pathname: '/search-results',
         params: {
+          type: 'tours',
           service: 'tours',
-          destination: destination || 'Dubai',
+          destination: cleanDest,
+          q: cleanDest,
           date: tourDate.iso,
           adults: String(adults),
         },
@@ -398,11 +404,14 @@ export function MobileSearchWidget({
 
     // 4. Holidays / Packages
     if (type === 'holiday' || featId === 'holidays' || featId === 'packages') {
+      const cleanDest = (destination || 'Dubai').split(',')[0].trim();
       router.push({
-        pathname: '/(tabs)/explore',
+        pathname: '/search-results',
         params: {
+          type: 'packages',
           service: 'packages',
-          destination: destination || 'Dubai',
+          destination: cleanDest,
+          q: cleanDest,
           duration: packageDays,
           adults: String(adults),
         },
@@ -480,9 +489,10 @@ export function MobileSearchWidget({
 
     // Default route
     router.push({
-      pathname: '/(tabs)/explore',
+      pathname: '/search-results',
       params: {
-        destination: destination || 'Dubai',
+        destination: (destination || 'Dubai').split(',')[0].trim(),
+        q: (destination || 'Dubai').split(',')[0].trim(),
       },
     } as any);
   };

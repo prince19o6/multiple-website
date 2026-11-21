@@ -78,14 +78,22 @@ export default function Footer({ config, isSection }: FooterProps) {
     : "Sandhya Wad, Bilimora - Chikhli Rd, Gujarat 396321, India";
 
   const phone =
+    config?.websiteContact?.phone ||
     config?.content?.contact?.phone ||
     config?.contact?.phone ||
     defaultPhone;
+  const whatsapp =
+    config?.websiteContact?.whatsapp ||
+    config?.content?.contact?.whatsapp ||
+    config?.contact?.whatsapp ||
+    phone;
   const email =
+    config?.websiteContact?.email ||
     config?.content?.contact?.email ||
     config?.contact?.email ||
     defaultEmail;
   const address =
+    config?.websiteContact?.address ||
     config?.content?.contact?.address ||
     config?.contact?.address ||
     defaultAddress;
@@ -191,7 +199,16 @@ export default function Footer({ config, isSection }: FooterProps) {
 
   // Dynamic Social Links from Config
   const rawSocials: Array<{ platform: string; url: string }> =
-    config?.navigation?.web?.socialLinks || [];
+    (Array.isArray(config?.socialLinks) && config.socialLinks.length > 0 ? config.socialLinks : null) ||
+    (Array.isArray(config?.navigation?.web?.socialLinks) && config.navigation.web.socialLinks.length > 0 ? config.navigation.web.socialLinks : null) ||
+    (config?.social && typeof config.social === "object"
+      ? Object.entries(config.social)
+          .filter(([_, url]) => Boolean(url))
+          .map(([platform, url]) => ({
+            platform: platform.charAt(0).toUpperCase() + platform.slice(1),
+            url: String(url),
+          }))
+      : []);
 
   const socialLinks =
     rawSocials.length > 0
@@ -646,7 +663,7 @@ export default function Footer({ config, isSection }: FooterProps) {
       {/* ───────────────────────────────────────────────────────────
           6. FLOATING WHATSAPP SUPPORT CONCIERGE
       ─────────────────────────────────────────────────────────── */}
-      <FloatingWhatsApp config={config} phone={phone} siteName={siteName} />
+      <FloatingWhatsApp config={config} phone={whatsapp} siteName={siteName} />
     </footer>
   );
 }

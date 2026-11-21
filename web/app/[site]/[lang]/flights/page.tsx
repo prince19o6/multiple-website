@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface FlightAirport {
   code: string;
@@ -133,11 +134,8 @@ export default function FlightsPage() {
       const res = await fetch(`/api/flights?${q.toString()}`);
       if (!res.ok) throw new Error(`HTTP error ${res.status}`);
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        setFlights(json.data);
-      } else {
-        setFlights([]);
-      }
+      const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+      setFlights(items);
       if (json.popularRoutes && Array.isArray(json.popularRoutes)) {
         setPopularRoutes(json.popularRoutes);
       }
@@ -549,43 +547,22 @@ export default function FlightsPage() {
       {/* ─── Flights Result Listing ─── */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         {loading ? (
-          <div className="space-y-4 animate-pulse">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-44 bg-neutral-200 dark:bg-neutral-800 rounded-2xl" />
-            ))}
-          </div>
+          <LoadingSkeleton variant="list" count={4} />
         ) : error ? (
-          <div className="p-8 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-red-200 dark:border-red-900/40">
-            <p className="text-red-500 text-sm font-semibold">{error}</p>
-            <button
-              onClick={() => fetchFlights()}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg text-xs font-bold"
-            >
-              Retry Search
-            </button>
-          </div>
+          <ErrorState message={error} onRetry={() => fetchFlights()} />
         ) : flights.length === 0 ? (
-          <div className="py-16 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800">
-            <span className="text-4xl">🛫</span>
-            <h3 className="mt-3 text-lg font-bold text-neutral-800 dark:text-neutral-200">
-              No flights found for this route
-            </h3>
-            <p className="mt-1 text-xs text-neutral-500">
-              Try searching across popular hubs or clearing the direct-flight filter.
-            </p>
-            <button
-              onClick={() => {
-                setFromCode("DEL");
-                setToCode("BOM");
-                setNonStopOnly(false);
-                setPureVegOnly(false);
-                setSelectedAirline("all");
-              }}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg text-xs font-bold"
-            >
-              Show Top Domestic Flights
-            </button>
-          </div>
+          <EmptyState
+            title="No flights found for this route"
+            message="Try searching across popular hubs or clearing the direct-flight filter."
+            actionLabel="Show Top Domestic Flights"
+            onAction={() => {
+              setFromCode("DEL");
+              setToCode("BOM");
+              setNonStopOnly(false);
+              setPureVegOnly(false);
+              setSelectedAirline("all");
+            }}
+          />
         ) : (
           <div className="space-y-4">
             {flights.map((flight, idx) => {

@@ -117,10 +117,56 @@ export const DEFAULT_HOME_SECTIONS: HomeSection[] = [
  * website-specific baseline configs and dynamic backend website modules.
  */
 export function resolveHomeSections(
-  config?: MergedWebsiteConfig | null,
+  config?: (MergedWebsiteConfig & { homeSectionsLayout?: Array<{ id: string; enabled?: boolean; title?: string }> }) | null,
   websiteModules?: Array<{ serviceCode?: string; displayOrder?: number }> | null
 ): HomeSection[] {
-  // If baseline config provides custom homeSections order, adapt defaults
+  // 1. Support dynamic admin homeSectionsLayout CMS structure: [{ id, enabled, title }]
+  if (Array.isArray(config?.homeSectionsLayout) && config.homeSectionsLayout.length > 0) {
+    const layout = config.homeSectionsLayout;
+    const tokenMap: Record<string, HomeSectionId | null> = {
+      categories: 'categories',
+      activities: 'categories',
+      packages: 'categories',
+      featured: 'featuredTours',
+      featuredtours: 'featuredTours',
+      featuredTours: 'featuredTours',
+      destinations: 'destinations',
+      offers: 'offers',
+      special_offers: 'offers',
+      banners: 'offers',
+      personalized: 'personalized',
+      aboutus: 'aboutUs',
+      aboutUs: 'aboutUs',
+      moreforyou: 'moreForYou',
+      moreForYou: 'moreForYou',
+      reviews: 'moreForYou',
+      testimonials: 'moreForYou',
+      whychooseus: 'moreForYou',
+      faq: 'moreForYou',
+      faqs: 'moreForYou',
+    };
+
+    const resolved: HomeSection[] = [];
+    for (const item of layout) {
+      if (item.enabled === false) continue; // Respect admin disable toggle
+      const mappedId = tokenMap[item.id] || tokenMap[item.id?.toLowerCase()] || null;
+      if (mappedId && !resolved.some((s) => s.id === mappedId)) {
+        const base = DEFAULT_HOME_SECTIONS.find((s) => s.id === mappedId);
+        if (base) {
+          resolved.push({
+            ...base,
+            title: item.title || base.title,
+          });
+        }
+      }
+    }
+
+    if (resolved.length > 0) {
+      return resolved;
+    }
+  }
+
+  // 2. If baseline config provides custom homeSections order, adapt defaults
   const customOrder = config?.homeSections;
   if (!Array.isArray(customOrder) || customOrder.length === 0) {
     return DEFAULT_HOME_SECTIONS;

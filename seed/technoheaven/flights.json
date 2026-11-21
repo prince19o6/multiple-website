@@ -33,7 +33,7 @@
     "price": 210,
     "originalPrice": 253,
     "netPrice": 179,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -111,7 +111,7 @@
     "price": 220,
     "originalPrice": 275,
     "netPrice": 187,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -189,7 +189,7 @@
     "price": 220,
     "originalPrice": 265,
     "netPrice": 187,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -267,7 +267,7 @@
     "price": 210,
     "originalPrice": 262,
     "netPrice": 179,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -345,7 +345,7 @@
     "price": 170,
     "originalPrice": 209,
     "netPrice": 145,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -423,7 +423,7 @@
     "price": 210,
     "originalPrice": 253,
     "netPrice": 179,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -501,7 +501,7 @@
     "price": 180,
     "originalPrice": 229,
     "netPrice": 153,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -579,7 +579,7 @@
     "price": 180,
     "originalPrice": 216,
     "netPrice": 153,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -657,7 +657,7 @@
     "price": 410,
     "originalPrice": 538,
     "netPrice": 349,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -735,7 +735,7 @@
     "price": 440,
     "originalPrice": 565,
     "netPrice": 374,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -813,7 +813,7 @@
     "price": 350,
     "originalPrice": 421,
     "netPrice": 298,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -891,7 +891,7 @@
     "price": 330,
     "originalPrice": 404,
     "netPrice": 281,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -969,7 +969,7 @@
     "price": 390,
     "originalPrice": 485,
     "netPrice": 332,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1047,7 +1047,7 @@
     "price": 420,
     "originalPrice": 511,
     "netPrice": 357,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1125,7 +1125,7 @@
     "price": 370,
     "originalPrice": 442,
     "netPrice": 315,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1203,7 +1203,7 @@
     "price": 440,
     "originalPrice": 523,
     "netPrice": 374,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1281,7 +1281,7 @@
     "price": 560,
     "originalPrice": 697,
     "netPrice": 476,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1359,7 +1359,7 @@
     "price": 490,
     "originalPrice": 600,
     "netPrice": 417,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1437,7 +1437,7 @@
     "price": 520,
     "originalPrice": 640,
     "netPrice": 442,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1515,7 +1515,7 @@
     "price": 510,
     "originalPrice": 626,
     "netPrice": 434,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1593,7 +1593,7 @@
     "price": 580,
     "originalPrice": 771,
     "netPrice": 493,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1671,7 +1671,7 @@
     "price": 460,
     "originalPrice": 595,
     "netPrice": 391,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1749,7 +1749,7 @@
     "price": 480,
     "originalPrice": 587,
     "netPrice": 408,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1827,7 +1827,7 @@
     "price": 600,
     "originalPrice": 721,
     "netPrice": 510,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -1905,7 +1905,7 @@
     "price": 580,
     "originalPrice": 687,
     "netPrice": 493,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -1983,7 +1983,7 @@
     "price": 680,
     "originalPrice": 887,
     "netPrice": 578,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2061,7 +2061,7 @@
     "price": 730,
     "originalPrice": 961,
     "netPrice": 621,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2139,7 +2139,7 @@
     "price": 710,
     "originalPrice": 927,
     "netPrice": 604,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2217,7 +2217,7 @@
     "price": 740,
     "originalPrice": 959,
     "netPrice": 629,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2295,7 +2295,7 @@
     "price": 600,
     "originalPrice": 771,
     "netPrice": 510,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2373,7 +2373,7 @@
     "price": 710,
     "originalPrice": 846,
     "netPrice": 604,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2451,7 +2451,7 @@
     "price": 670,
     "originalPrice": 797,
     "netPrice": 570,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2529,7 +2529,7 @@
     "price": 410,
     "originalPrice": 532,
     "netPrice": 349,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2607,7 +2607,7 @@
     "price": 410,
     "originalPrice": 533,
     "netPrice": 349,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2685,7 +2685,7 @@
     "price": 420,
     "originalPrice": 557,
     "netPrice": 357,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2763,7 +2763,7 @@
     "price": 420,
     "originalPrice": 551,
     "netPrice": 357,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2841,7 +2841,7 @@
     "price": 330,
     "originalPrice": 408,
     "netPrice": 281,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -2919,7 +2919,7 @@
     "price": 280,
     "originalPrice": 362,
     "netPrice": 238,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -2997,7 +2997,7 @@
     "price": 340,
     "originalPrice": 426,
     "netPrice": 289,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3075,7 +3075,7 @@
     "price": 340,
     "originalPrice": 411,
     "netPrice": 289,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3153,7 +3153,7 @@
     "price": 330,
     "originalPrice": 390,
     "netPrice": 281,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3231,7 +3231,7 @@
     "price": 330,
     "originalPrice": 418,
     "netPrice": 281,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3309,7 +3309,7 @@
     "price": 390,
     "originalPrice": 513,
     "netPrice": 332,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3387,7 +3387,7 @@
     "price": 360,
     "originalPrice": 443,
     "netPrice": 306,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3465,7 +3465,7 @@
     "price": 320,
     "originalPrice": 421,
     "netPrice": 272,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3543,7 +3543,7 @@
     "price": 400,
     "originalPrice": 509,
     "netPrice": 340,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3621,7 +3621,7 @@
     "price": 370,
     "originalPrice": 460,
     "netPrice": 315,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3699,7 +3699,7 @@
     "price": 370,
     "originalPrice": 459,
     "netPrice": 315,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3777,7 +3777,7 @@
     "price": 610,
     "originalPrice": 745,
     "netPrice": 519,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -3855,7 +3855,7 @@
     "price": 790,
     "originalPrice": 974,
     "netPrice": 672,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -3933,7 +3933,7 @@
     "price": 740,
     "originalPrice": 896,
     "netPrice": 629,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -4011,7 +4011,7 @@
     "price": 700,
     "originalPrice": 836,
     "netPrice": 595,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -4089,7 +4089,7 @@
     "price": 145,
     "originalPrice": 2482,
     "netPrice": 1598,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -4167,7 +4167,7 @@
     "price": 145,
     "originalPrice": 2250,
     "netPrice": 1564,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {
@@ -4245,7 +4245,7 @@
     "price": 1200,
     "originalPrice": 1445,
     "netPrice": 1020,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": true,
     "cancellationPolicy": "Free cancellation up to 24 hours prior to departure",
     "baggage": {
@@ -4323,7 +4323,7 @@
     "price": 980,
     "originalPrice": 1266,
     "netPrice": 833,
-    "currency": "USD",
+    "currency": "AED",
     "refundable": false,
     "cancellationPolicy": "Non-refundable fare with date change permitted",
     "baggage": {

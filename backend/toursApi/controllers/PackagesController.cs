@@ -23,6 +23,8 @@ public class PackagesController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetPackages(
         [FromQuery] string? destination,
+        [FromQuery] string? search,
+        [FromQuery] string? q,
         [FromQuery] string? category,
         [FromQuery] int? durationDays,
         [FromQuery] double? minPrice,
@@ -35,7 +37,7 @@ public class PackagesController : ControllerBase
     {
         var filterParams = new PackageFilterParams
         {
-            Destination = destination,
+            Destination = destination ?? search ?? q,
             Category = category,
             DurationDays = durationDays,
             MinPrice = minPrice,
@@ -51,6 +53,10 @@ public class PackagesController : ControllerBase
         return Ok(new
         {
             success = true,
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
             data = result.Items,
             meta = new
             {

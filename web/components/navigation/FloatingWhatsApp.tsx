@@ -43,6 +43,10 @@ export default function FloatingWhatsApp({
 
   const rawPhone =
     propPhone ||
+    config?.websiteContact?.whatsapp ||
+    config?.content?.contact?.whatsapp ||
+    config?.contact?.whatsapp ||
+    config?.websiteContact?.phone ||
     config?.content?.contact?.phone ||
     config?.contact?.phone ||
     defaultNumber;

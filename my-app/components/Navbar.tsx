@@ -154,10 +154,10 @@ export default function Navbar({
             {/* Quick Explore / Search Shortcut */}
             <TouchableOpacity testID="btn-search"
               style={styles.iconButton}
-              onPress={() => router.push('/explore')}
+              onPress={() => router.push('/search-results' as any)}
               activeOpacity={0.7}
               accessibilityRole="button"
-              accessibilityLabel="Explore catalogue"
+              accessibilityLabel="Search catalogue"
             >
               <Ionicons name="search-outline" size={22} color={colors.heading} />
             </TouchableOpacity>

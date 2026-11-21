@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { getTransferBySlug } from "@/lib/api/transfers";
+import { LoadingSkeleton, ErrorState } from "@/components/common";
 import EnquiryModal from "@/components/lead/EnquiryModal";
 
 interface TransferDetail {
@@ -41,38 +43,6 @@ interface TransferDetail {
   reviews: number;
 }
 
-const FALLBACK_TRANSFER: TransferDetail = {
-  id: 1001,
-  transferNumericId: 1001,
-  title: "Jaipur: Comfort Executive Sedan - Jaipur Airport to City Hotels One-Way Transfer",
-  name: "Jaipur Airport to City Hotels Private Sedan Transfer",
-  slug: "jaipur-airport-sedan-transfer-1001",
-  transferType: "airport",
-  transferTypeLabel: "Airport Transfer",
-  vehicleType: "Sedan",
-  vehicleLabel: "Comfort Executive Sedan",
-  vehicleModel: "Toyota Etios / Suzuki Dzire or equivalent",
-  maxPassengers: 3,
-  maxLuggage: 2,
-  airConditioned: true,
-  pickupLocation: "Jaipur International Airport (Arrivals Gate)",
-  dropoffLocation: "Jaipur City Center & Verified Hotels",
-  city: "Jaipur",
-  country: "India",
-  durationMinutes: 45,
-  estimatedDuration: "45 Mins",
-  price: 1250,
-  originalPrice: 1550,
-  currency: "INR",
-  image: "/seed-images/transfers/transfer-sedan.svg",
-  freeCancellation: true,
-  meetAndGreet: true,
-  flightMonitoring: true,
-  tollIncluded: true,
-  rating: 4.8,
-  reviews: 140,
-};
-
 export default function TransferDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -89,7 +59,10 @@ export default function TransferDetailPage() {
     ? slugParam
     : "";
 
-  const [transfer, setTransfer] = useState<TransferDetail>(FALLBACK_TRANSFER);
+  const [transfer, setTransfer] = useState<TransferDetail | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   const [pickupDate, setPickupDate] = useState(() => {
     const d = new Date();
     d.setDate(d.getDate() + 3);
@@ -102,59 +75,119 @@ export default function TransferDetailPage() {
   const [passengers, setPassengers] = useState(2);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
 
-  useEffect(() => {
+  const fetchTransfer = useCallback(async () => {
     if (!transferPath) return;
+    setLoading(true);
+    setError(null);
 
-    const fetchTransfer = async () => {
+    try {
+      let t: any = null;
       try {
+        t = await getTransferBySlug(transferPath, { siteId });
+      } catch {
+        // Direct call failed — query same-origin Next.js proxy
         const res = await fetch(`/api/transfers/${encodeURIComponent(transferPath)}?site=${encodeURIComponent(siteId)}`);
         if (res.ok) {
           const json = await res.json();
-          const t = json?.data || json;
-          if (t && (t.title || t.vehicleModel)) {
-            setTransfer({
-              id: t.id || t.transferNumericId || transferPath,
-              transferNumericId: t.transferNumericId,
-              title: t.title || t.name,
-              name: t.name || t.title,
-              slug: t.slug || transferPath,
-              transferType: t.transferType || "airport",
-              transferTypeLabel: t.transferTypeLabel || "Airport Transfer",
-              vehicleType: t.vehicleType || "Sedan",
-              vehicleLabel: t.vehicleLabel || "Comfort Sedan",
-              vehicleModel: t.vehicleModel || "Toyota Etios or equivalent",
-              maxPassengers: Number(t.maxPassengers || 3),
-              maxLuggage: Number(t.maxLuggage || 2),
-              airConditioned: t.airConditioned !== false,
-              pickupLocation: t.pickupLocation || FALLBACK_TRANSFER.pickupLocation,
-              dropoffLocation: t.dropoffLocation || FALLBACK_TRANSFER.dropoffLocation,
-              city: t.city || "Jaipur",
-              country: t.country || "India",
-              durationMinutes: Number(t.durationMinutes || 45),
-              estimatedDuration: t.estimatedDuration || "45 Mins",
-              price: Number(t.price || 1250),
-              originalPrice: t.originalPrice ? Number(t.originalPrice) : undefined,
-              currency: t.currency || currencySymbol,
-              image: t.image || "/seed-images/transfers/transfer-sedan.svg",
-              freeCancellation: t.freeCancellation !== false,
-              meetAndGreet: t.meetAndGreet !== false,
-              flightMonitoring: t.flightMonitoring !== false,
-              tollIncluded: t.tollIncluded !== false,
-              rating: Number(t.rating || 4.8),
-              reviews: Number(t.reviews || 95),
-            });
-
-            setPickupAddress(t.pickupLocation || "");
-            setDropoffAddress(t.dropoffLocation || "");
-          }
+          t = json?.data ?? json;
         }
-      } catch (err) {
-        console.error("[TransferDetail] Error loading transfer:", err);
       }
-    };
 
+      if (!t || (!t.title && !t.pickupLocation && !t.vehicleModel && !t.id)) {
+        const localRes = await fetch(`/api/transfers/${encodeURIComponent(transferPath)}?site=${encodeURIComponent(siteId)}`);
+        if (localRes.ok) {
+          const localJson = await localRes.json();
+          t = localJson?.data ?? localJson;
+        }
+      }
+
+      if (t && (t.title || t.pickupLocation || t.vehicleModel || t.id)) {
+        const title = t.title || t.name || `${t.pickupLocation || "Pickup"} to ${t.dropoffLocation || "Dropoff"} Transfer`;
+        const vehicleType = t.vehicleType || "Sedan";
+        const vehicleModel = t.vehicleModel || (vehicleType === "SUV" ? "Toyota Innova Crysta" : vehicleType === "Luxury" ? "Mercedes E-Class / BMW 5" : "Toyota Etios / Dzire");
+        const vehicleLabel = t.vehicleLabel || `${vehicleType} Transfer`;
+        const maxPassengers = Number(t.maxPassengers || t.capacityPassengers || 3);
+        const maxLuggage = Number(t.maxLuggage || t.capacityLuggage || 2);
+        const pickup = t.pickupLocation || "City Airport";
+        const dropoff = t.dropoffLocation || "City Hotels";
+        const durationMins = Number(t.durationMinutes || t.estimatedMinutes || 45);
+
+        const img = t.image || (Array.isArray(t.images) && t.images[0]) || "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=1200&q=85";
+
+        setTransfer({
+          id: t.id || t.transferNumericId || transferPath,
+          transferNumericId: t.transferNumericId,
+          title,
+          name: title,
+          slug: t.slug || transferPath,
+          transferType: t.transferType || "airport",
+          transferTypeLabel: t.transferTypeLabel || "Airport & City Transfer",
+          vehicleType,
+          vehicleLabel,
+          vehicleModel,
+          maxPassengers,
+          maxLuggage,
+          airConditioned: t.airConditioned !== false,
+          pickupLocation: pickup,
+          dropoffLocation: dropoff,
+          city: t.city || pickup.split(",")[0] || "Destination",
+          country: t.country || (siteId === "gujjutours" ? "India" : "UAE"),
+          durationMinutes: durationMins,
+          estimatedDuration: t.estimatedDuration || `${durationMins} Mins`,
+          price: Number(t.price || 1250),
+          originalPrice: t.originalPrice ? Number(t.originalPrice) : undefined,
+          currency: t.currency || (siteId === "gujjutours" ? "INR" : "USD"),
+          image: img,
+          freeCancellation: t.freeCancellation !== false,
+          meetAndGreet: t.meetAndGreet !== false,
+          flightMonitoring: t.flightMonitoring !== false,
+          tollIncluded: t.tollIncluded !== false,
+          rating: Number(t.rating || 4.8),
+          reviews: Number(t.reviews || 95),
+        });
+
+        setPickupAddress(pickup);
+        setDropoffAddress(dropoff);
+      } else {
+        setError("Transfer service not found");
+      }
+    } catch (err: any) {
+      if (err?.digest?.includes("NEXT_NOT_FOUND") || err?.message === "NEXT_NOT_FOUND") {
+        throw err;
+      }
+      if (err?.status === 404 || err?.isNotFound) {
+        setError("Transfer service not found");
+      } else {
+        setError(err.message || "Failed to load transfer details");
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [transferPath, siteId]);
+
+  useEffect(() => {
     fetchTransfer();
-  }, [transferPath, siteId, currencySymbol]);
+  }, [fetchTransfer]);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-6">
+          <LoadingSkeleton variant="detail" count={1} />
+        </div>
+      </main>
+    );
+  }
+
+  if (error || !transfer) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 py-16 px-4">
+        <div className="max-w-md mx-auto">
+          <ErrorState message={error || "Transfer route not found"} onRetry={fetchTransfer} />
+        </div>
+      </main>
+    );
+  }
 
   const handleBookNow = () => {
     const baseFare = transfer.price;
@@ -218,185 +251,189 @@ export default function TransferDetailPage() {
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300">
               📍 {transfer.city}, {transfer.country}
             </span>
-            <span className="px-3 py-1 rounded-full text-xs font-bold text-amber-500 bg-amber-50 dark:bg-amber-950/40">
-              ★ {transfer.rating.toFixed(1)} ({transfer.reviews} verified reviews)
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 border border-amber-200/60">
+              ★ {transfer.rating} ({transfer.reviews} verified rides)
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white">
+          <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 dark:text-white mb-2 leading-tight">
             {transfer.title}
           </h1>
-          <p className="text-xs sm:text-sm text-neutral-500 mt-1">
-            Vehicle: <span className="font-semibold text-neutral-800 dark:text-neutral-200">{transfer.vehicleModel}</span> • Air Conditioned • Licensed Commercial Chauffeur
+
+          <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+            <span>⏱ Estimated Ride Time: {transfer.estimatedDuration}</span>
+            <span>•</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">✓ Flight Delay Guarantee</span>
           </p>
         </div>
 
-        {/* ─── Main Details & Booking Sidebar ─── */}
+        {/* ─── Main Content Layout ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column (2 Cols) */}
+          {/* Left Column: Vehicle & Route Details */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Vehicle Hero Graphic */}
-            <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-              <Image
-                src={transfer.image || "/seed-images/transfers/transfer-sedan.svg"}
-                alt={transfer.vehicleLabel}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 rounded-xl text-xs font-bold bg-black/75 text-white backdrop-blur-sm">
-                  👥 Max {transfer.maxPassengers} Passengers
-                </span>
-                <span className="px-3 py-1.5 rounded-xl text-xs font-bold bg-black/75 text-white backdrop-blur-sm">
-                  🧳 Max {transfer.maxLuggage} Luggage Bags
-                </span>
+            {/* Vehicle Hero Card */}
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-sm">
+              <div className="relative h-64 sm:h-80 w-full bg-neutral-100 dark:bg-neutral-800">
+                <Image
+                  src={transfer.image}
+                  alt={transfer.vehicleModel}
+                  fill
+                  priority
+                  className="object-cover"
+                />
+                <div className="absolute top-4 left-4 bg-neutral-900/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-xl">
+                  {transfer.vehicleType} Class
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h2 className="text-xl font-black text-neutral-900 dark:text-white mb-1">
+                  {transfer.vehicleModel}
+                </h2>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-6">
+                  {transfer.vehicleLabel} — Professional chauffeur, sanitized cabin, sanitized air conditioning.
+                </p>
+
+                {/* Key Specifications Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 border-y border-neutral-100 dark:border-neutral-800">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">👥</span>
+                    <div>
+                      <div className="text-xs text-neutral-400">Capacity</div>
+                      <div className="text-xs font-bold">Max {transfer.maxPassengers} Pax</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🧳</span>
+                    <div>
+                      <div className="text-xs text-neutral-400">Luggage</div>
+                      <div className="text-xs font-bold">Max {transfer.maxLuggage} Bags</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">❄️</span>
+                    <div>
+                      <div className="text-xs text-neutral-400">Climate</div>
+                      <div className="text-xs font-bold">Air Conditioned</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🛡️</span>
+                    <div>
+                      <div className="text-xs text-neutral-400">Cancellation</div>
+                      <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400">Free Cancel</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Inclusions & Guarantees */}
+            {/* Ride Inclusions */}
             <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-              <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
-                <span>🛡️</span>
-                <span>Included with Every Private Transfer</span>
+              <h3 className="text-base font-black text-neutral-900 dark:text-white mb-4">
+                What&apos;s Included In Your Fare
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-                <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200/80 dark:border-neutral-700">
-                  <span className="font-bold text-neutral-900 dark:text-white block">✈️ Flight Delay Protection</span>
-                  <p className="text-neutral-500 text-xs mt-1">
-                    Your chauffeur monitors your flight and waits up to 60 minutes after actual landing at no extra cost.
-                  </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>Meet &amp; Greet with Name Signboard at Arrival Hall</span>
                 </div>
-
-                <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200/80 dark:border-neutral-700">
-                  <span className="font-bold text-neutral-900 dark:text-white block">🤝 Free Meet &amp; Greet</span>
-                  <p className="text-neutral-500 text-xs mt-1">
-                    Your driver waits inside the arrivals hall holding a personalized name signboard to assist with bags.
-                  </p>
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>Complimentary 60 mins airport waiting time</span>
                 </div>
-
-                <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200/80 dark:border-neutral-700">
-                  <span className="font-bold text-neutral-900 dark:text-white block">💰 All Tolls &amp; Parking Included</span>
-                  <p className="text-neutral-500 text-xs mt-1">
-                    Highway expressways, state entry permits, and airport parking fees are 100% covered in the fare.
-                  </p>
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>All Highway Tolls, Parking Fees &amp; State Taxes</span>
                 </div>
-
-                <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200/80 dark:border-neutral-700">
-                  <span className="font-bold text-neutral-900 dark:text-white block">🔄 100% Free 24h Cancellation</span>
-                  <p className="text-neutral-500 text-xs mt-1">
-                    Full refund on cancellation up to 24 hours prior to scheduled pickup time.
-                  </p>
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>Flight tracking with automated delayed pickup</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Route Details */}
-            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-              <h3 className="font-bold text-base text-neutral-900 dark:text-white mb-3 flex items-center gap-2">
-                <span>📍</span>
-                <span>Transfer Route &amp; Pickup Instructions</span>
-              </h3>
-              <div className="space-y-3 text-xs sm:text-sm">
-                <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center shrink-0">
-                    A
-                  </span>
-                  <div>
-                    <span className="font-bold text-neutral-900 dark:text-white">Pickup Location:</span>
-                    <p className="text-neutral-500">{transfer.pickupLocation}</p>
-                  </div>
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>Luggage assistance by uniformed driver</span>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center shrink-0">
-                    B
-                  </span>
-                  <div>
-                    <span className="font-bold text-neutral-900 dark:text-white">Drop-off Destination:</span>
-                    <p className="text-neutral-500">{transfer.dropoffLocation}</p>
-                  </div>
-                </div>
-
-                <div className="pt-2 text-xs text-neutral-400">
-                  Estimated Travel Duration: <span className="font-semibold text-neutral-700 dark:text-neutral-300">{transfer.estimatedDuration}</span> (traffic dependent)
+                <div className="flex items-center gap-2 text-neutral-700 dark:text-neutral-300">
+                  <span className="text-emerald-500 font-bold">✓</span>
+                  <span>24/7 dedicated dispatch hotline support</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column (Sticky Booking Sidebar) */}
-          <div>
-            <div className="sticky top-20 bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-xl space-y-4">
-              <div className="border-b border-neutral-100 dark:border-neutral-800 pb-3">
-                <span className="text-xs text-neutral-400 uppercase tracking-wider block">
-                  All-Inclusive Total Fare
-                </span>
-                <div className="flex items-baseline gap-2 mt-1">
-                  <span className="text-3xl font-black text-neutral-900 dark:text-white">
+          {/* Right Column: Booking Configuration Panel */}
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-xl space-y-4 sticky top-6">
+              <div className="flex items-baseline justify-between border-b border-neutral-100 dark:border-neutral-800 pb-4">
+                <div>
+                  <span className="text-xs text-neutral-400">Total Price</span>
+                  <div className="text-2xl font-black text-neutral-900 dark:text-white">
                     {currencySymbol}{transfer.price.toLocaleString()}
-                  </span>
-                  {transfer.originalPrice && (
-                    <span className="text-sm text-neutral-400 line-through">
-                      {currencySymbol}{transfer.originalPrice.toLocaleString()}
-                    </span>
-                  )}
+                  </div>
                 </div>
-                <span className="text-[11px] text-neutral-400 block mt-0.5">Fixed vehicle price • No surge</span>
+                <span className="text-xs text-emerald-600 dark:text-emerald-400 font-bold">
+                  All-Inclusive Fare
+                </span>
               </div>
 
-              {/* Pickup Date & Time */}
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
-                    Pickup Date:
-                  </label>
-                  <input
-                    type="date"
-                    value={pickupDate}
-                    onChange={(e) => setPickupDate(e.target.value)}
-                    className="w-full px-2 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
-                    Pickup Time:
-                  </label>
-                  <input
-                    type="time"
-                    value={pickupTime}
-                    onChange={(e) => setPickupTime(e.target.value)}
-                    className="w-full px-2 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
-                  />
-                </div>
-              </div>
-
-              {/* Specific Pickup Address */}
+              {/* Pickup Address */}
               <div>
                 <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
-                  Specific Pickup Address / Terminal:
+                  Pickup Location / Airport:
                 </label>
                 <input
                   type="text"
                   value={pickupAddress}
                   onChange={(e) => setPickupAddress(e.target.value)}
-                  placeholder="Terminal, hotel name or street"
+                  placeholder="e.g. Airport Arrival Gate"
                   className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
                 />
               </div>
 
-              {/* Specific Dropoff Address */}
+              {/* Dropoff Address */}
               <div>
                 <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
-                  Specific Dropoff Address:
+                  Dropoff Location / Hotel Name:
                 </label>
                 <input
                   type="text"
                   value={dropoffAddress}
                   onChange={(e) => setDropoffAddress(e.target.value)}
-                  placeholder="Hotel name or address"
+                  placeholder="e.g. Hotel Grand Hyatt"
                   className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
                 />
+              </div>
+
+              {/* Date & Time Row */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="detail-pickup-date-input" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                    Pickup Date:
+                  </label>
+                  <input
+                    id="detail-pickup-date-input"
+                    type="date"
+                    value={pickupDate}
+                    onChange={(e) => setPickupDate(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="detail-pickup-time-input" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                    Pickup Time:
+                  </label>
+                  <input
+                    id="detail-pickup-time-input"
+                    type="time"
+                    value={pickupTime}
+                    onChange={(e) => setPickupTime(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-neutral-700"
+                  />
+                </div>
               </div>
 
               {/* Flight Number (Optional) */}
@@ -457,13 +494,10 @@ export default function TransferDetailPage() {
         <EnquiryModal
           isOpen={isEnquiryOpen}
           onClose={() => setIsEnquiryOpen(false)}
-          serviceName={transfer.title}
-          defaultDestination={`${transfer.city}: ${transfer.vehicleLabel}`}
-          siteId={siteId}
-          currencySymbol={currencySymbol}
+          serviceTitle={transfer.title}
+          serviceType="transfer"
         />
       )}
     </div>
   );
 }
-

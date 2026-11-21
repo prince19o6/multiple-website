@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface RestaurantItem {
   id: number | string;
@@ -98,11 +99,8 @@ export default function RestaurantsPage() {
       const res = await fetch(`/api/restaurants?${params.toString()}`);
       if (!res.ok) throw new Error("Failed to load restaurant venues");
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        setRestaurants(json.data);
-      } else {
-        setRestaurants([]);
-      }
+      const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+      setRestaurants(items);
     } catch (err: any) {
       console.error("[Restaurants Page Fetch Error]", err);
       setError(err.message || "Unable to load restaurants");
@@ -327,43 +325,23 @@ export default function RestaurantsPage() {
 
         {/* Loading / Error / Empty States */}
         {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <div key={n} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm animate-pulse h-72" />
-            ))}
-          </div>
+          <LoadingSkeleton variant="card" count={6} />
         ) : error ? (
-          <div className="bg-red-50 text-red-700 p-6 rounded-2xl border border-red-200 text-center">
-            <p className="font-semibold">Unable to load restaurants</p>
-            <p className="text-xs mt-1">{error}</p>
-            <button
-              onClick={fetchRestaurants}
-              className="mt-3 bg-red-600 text-white text-xs px-4 py-1.5 rounded-lg font-bold"
-            >
-              Try Again
-            </button>
-          </div>
+          <ErrorState message={error} onRetry={fetchRestaurants} />
         ) : restaurants.length === 0 ? (
-          <div className="bg-white rounded-2xl p-10 border border-slate-200 text-center">
-            <span className="text-4xl">🍲</span>
-            <h3 className="mt-3 text-base font-bold text-slate-800">No restaurants match your search</h3>
-            <p className="text-xs text-slate-500 mt-1 max-w-md mx-auto">
-              Try adjusting your dietary filters, cuisine category, or destination city to see other gourmet venues.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCity("all");
-                setSelectedCuisine("all");
-                setSearchQuery("");
-                setPureVegOnly(false);
-                setJainOnly(false);
-                setHalalOnly(false);
-              }}
-              className="mt-4 bg-amber-600 text-white text-xs px-4 py-2 rounded-xl font-bold hover:bg-amber-700"
-            >
-              Reset Filters
-            </button>
-          </div>
+          <EmptyState
+            title="No restaurants match your search"
+            message="Try adjusting your dietary filters, cuisine category, or destination city to see other gourmet venues."
+            actionLabel="Reset Filters"
+            onAction={() => {
+              setSelectedCity("all");
+              setSelectedCuisine("all");
+              setSearchQuery("");
+              setPureVegOnly(false);
+              setJainOnly(false);
+              setHalalOnly(false);
+            }}
+          />
         ) : (
           /* Cards Grid */
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

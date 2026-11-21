@@ -17,7 +17,7 @@
     "price": 150,
     "originalPrice": 188,
     "netPrice": 120,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 718,
     "reviewCount": 718,
@@ -25,11 +25,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
@@ -91,8 +90,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
     "alt": "Endless desert dunes with 4x4 tracks during golden hour",
     "photoCredit": {
@@ -119,7 +118,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 316,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 479,
     "reviewCount": 479,
@@ -127,11 +126,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -193,8 +191,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
     "photoCredit": {
@@ -221,7 +219,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 288,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 204,
     "reviewCount": 204,
@@ -229,11 +227,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
@@ -295,8 +292,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
     "alt": "Camels trekking across rippling sand ridges at dusk",
     "photoCredit": {
@@ -323,7 +320,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 304,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 159,
     "reviewCount": 159,
@@ -331,11 +328,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
@@ -397,8 +393,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
     "alt": "Golden red desert sand dunes under dramatic sunset sky",
     "photoCredit": {
@@ -425,7 +421,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 280,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 683,
     "reviewCount": 683,
@@ -433,11 +429,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
@@ -499,8 +494,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
     "alt": "Camels trekking across rippling sand ridges at dusk",
     "photoCredit": {
@@ -527,7 +522,7 @@
     "price": 185,
     "originalPrice": 231,
     "netPrice": 148,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 283,
     "reviewCount": 283,
@@ -535,11 +530,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
@@ -601,8 +595,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&q=85",
     "alt": "Golden red desert sand dunes under dramatic sunset sky",
     "photoCredit": {
@@ -629,7 +623,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 264,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 218,
     "reviewCount": 218,
@@ -637,11 +631,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "image": "/seed-images/activities/desert-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85"
+      "/seed-images/activities/desert-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
@@ -703,8 +696,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+    "coverImage": "/seed-images/activities/desert-safari.svg",
+    "imageUrl": "/seed-images/activities/desert-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=85",
     "alt": "Burj Khalifa and illuminated Downtown Dubai skyline",
     "photoCredit": {
@@ -731,7 +724,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 380,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 185,
     "reviewCount": 185,
@@ -739,11 +732,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -805,8 +797,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -833,7 +825,7 @@
     "price": 250,
     "originalPrice": 313,
     "netPrice": 200,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 525,
     "reviewCount": 525,
@@ -841,11 +833,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -907,8 +898,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -935,7 +926,7 @@
     "price": 225,
     "originalPrice": 281,
     "netPrice": 180,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 913,
     "reviewCount": 913,
@@ -943,11 +934,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1009,8 +999,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1037,7 +1027,7 @@
     "price": 115,
     "originalPrice": 144,
     "netPrice": 92,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 746,
     "reviewCount": 746,
@@ -1045,11 +1035,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -1111,8 +1100,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -1139,7 +1128,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 396,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 386,
     "reviewCount": 386,
@@ -1147,11 +1136,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1213,8 +1201,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1241,7 +1229,7 @@
     "price": 155,
     "originalPrice": 194,
     "netPrice": 124,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 334,
     "reviewCount": 334,
@@ -1249,11 +1237,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1315,8 +1302,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1343,7 +1330,7 @@
     "price": 140,
     "originalPrice": 175,
     "netPrice": 112,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 297,
     "reviewCount": 297,
@@ -1351,11 +1338,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -1417,8 +1403,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -1445,7 +1431,7 @@
     "price": 205,
     "originalPrice": 256,
     "netPrice": 164,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 303,
     "reviewCount": 303,
@@ -1453,11 +1439,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -1519,8 +1504,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -1547,7 +1532,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 236,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 750,
     "reviewCount": 750,
@@ -1555,11 +1540,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -1621,8 +1605,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -1649,7 +1633,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 288,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 499,
     "reviewCount": 499,
@@ -1657,11 +1641,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -1723,8 +1706,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -1751,7 +1734,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 220,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 712,
     "reviewCount": 712,
@@ -1759,11 +1742,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/walking-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/walking-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1825,8 +1807,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/walking-tour.svg",
+    "imageUrl": "/seed-images/activities/walking-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1853,7 +1835,7 @@
     "price": 125,
     "originalPrice": 156,
     "netPrice": 100,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 154,
     "reviewCount": 154,
@@ -1861,11 +1843,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/water-sports.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/water-sports.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -1927,8 +1908,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/water-sports.svg",
+    "imageUrl": "/seed-images/activities/water-sports.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -1955,7 +1936,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 216,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 96,
     "reviewCount": 96,
@@ -1963,11 +1944,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2029,8 +2009,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2057,7 +2037,7 @@
     "price": 105,
     "originalPrice": 131,
     "netPrice": 84,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 376,
     "reviewCount": 376,
@@ -2065,11 +2045,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -2131,8 +2110,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -2159,7 +2138,7 @@
     "price": 150,
     "originalPrice": 188,
     "netPrice": 120,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 305,
     "reviewCount": 305,
@@ -2167,11 +2146,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2233,8 +2211,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2261,7 +2239,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 344,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 285,
     "reviewCount": 285,
@@ -2269,11 +2247,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2335,8 +2312,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2363,7 +2340,7 @@
     "price": 180,
     "originalPrice": 225,
     "netPrice": 144,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 550,
     "reviewCount": 550,
@@ -2371,11 +2348,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2437,8 +2413,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2465,7 +2441,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 328,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 697,
     "reviewCount": 697,
@@ -2473,11 +2449,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -2539,8 +2514,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -2567,7 +2542,7 @@
     "price": 245,
     "originalPrice": 306,
     "netPrice": 196,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 889,
     "reviewCount": 889,
@@ -2575,11 +2550,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2641,8 +2615,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2669,7 +2643,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 328,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 80,
     "reviewCount": 80,
@@ -2677,11 +2651,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
@@ -2743,8 +2716,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=85",
     "alt": "Camels trekking across rippling sand ridges at dusk",
     "photoCredit": {
@@ -2771,7 +2744,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 284,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 547,
     "reviewCount": 547,
@@ -2779,11 +2752,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -2845,8 +2817,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -2873,7 +2845,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 212,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 223,
     "reviewCount": 223,
@@ -2881,11 +2853,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -2947,8 +2918,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -2975,7 +2946,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 388,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 567,
     "reviewCount": 567,
@@ -2983,11 +2954,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
@@ -3049,8 +3019,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
     "alt": "Crystal clear turquoise ocean waves gently lapping shore",
     "photoCredit": {
@@ -3077,7 +3047,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 304,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 689,
     "reviewCount": 689,
@@ -3085,11 +3055,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3151,8 +3120,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3179,7 +3148,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 324,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 266,
     "reviewCount": 266,
@@ -3187,11 +3156,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -3253,8 +3221,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -3281,7 +3249,7 @@
     "price": 240,
     "originalPrice": 300,
     "netPrice": 192,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 304,
     "reviewCount": 304,
@@ -3289,11 +3257,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
@@ -3355,8 +3322,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
     "alt": "Crystal clear turquoise ocean waves gently lapping shore",
     "photoCredit": {
@@ -3383,7 +3350,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 232,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 331,
     "reviewCount": 331,
@@ -3391,11 +3358,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
@@ -3457,8 +3423,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=85",
     "alt": "Crystal clear turquoise ocean waves gently lapping shore",
     "photoCredit": {
@@ -3485,7 +3451,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 384,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 330,
     "reviewCount": 330,
@@ -3493,11 +3459,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "image": "/seed-images/activities/boat-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85"
+      "/seed-images/activities/boat-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
@@ -3559,8 +3524,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/boat-tour.svg",
+    "imageUrl": "/seed-images/activities/boat-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=85",
     "alt": "Pristine tropical beach with golden sands and coconut palms in Goa",
     "photoCredit": {
@@ -3587,7 +3552,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 232,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 300,
     "reviewCount": 300,
@@ -3595,11 +3560,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3661,8 +3625,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -3689,7 +3653,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 284,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 631,
     "reviewCount": 631,
@@ -3697,11 +3661,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3763,8 +3726,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -3791,7 +3754,7 @@
     "price": 155,
     "originalPrice": 194,
     "netPrice": 124,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 401,
     "reviewCount": 401,
@@ -3799,11 +3762,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -3865,8 +3827,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -3893,7 +3855,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 224,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 328,
     "reviewCount": 328,
@@ -3901,11 +3863,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -3967,8 +3928,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -3995,7 +3956,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 228,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 886,
     "reviewCount": 886,
@@ -4003,11 +3964,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -4069,8 +4029,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -4097,7 +4057,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 400,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 266,
     "reviewCount": 266,
@@ -4105,11 +4065,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4171,8 +4130,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4199,7 +4158,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 244,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 577,
     "reviewCount": 577,
@@ -4207,11 +4166,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4273,8 +4231,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4301,7 +4259,7 @@
     "price": 120,
     "originalPrice": 150,
     "netPrice": 96,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 835,
     "reviewCount": 835,
@@ -4309,11 +4267,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "image": "/seed-images/activities/theme-park.svg",
     "images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+      "/seed-images/activities/theme-park.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
@@ -4375,8 +4332,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "coverImage": "/seed-images/activities/theme-park.svg",
+    "imageUrl": "/seed-images/activities/theme-park.svg",
     "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
     "alt": "Endless desert dunes with 4x4 tracks during golden hour",
     "photoCredit": {
@@ -4403,7 +4360,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 320,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 762,
     "reviewCount": 762,
@@ -4411,11 +4368,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -4477,8 +4433,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -4505,7 +4461,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 340,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 409,
     "reviewCount": 409,
@@ -4513,11 +4469,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -4579,8 +4534,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -4607,7 +4562,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 396,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 343,
     "reviewCount": 343,
@@ -4615,11 +4570,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -4681,8 +4635,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -4709,7 +4663,7 @@
     "price": 240,
     "originalPrice": 300,
     "netPrice": 192,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 195,
     "reviewCount": 195,
@@ -4717,11 +4671,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=85",
-      "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
@@ -4783,8 +4736,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&q=85",
     "alt": "Endless desert dunes with 4x4 tracks during golden hour",
     "photoCredit": {
@@ -4811,7 +4764,7 @@
     "price": 110,
     "originalPrice": 138,
     "netPrice": 88,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 875,
     "reviewCount": 875,
@@ -4819,11 +4772,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -4885,8 +4837,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -4913,7 +4865,7 @@
     "price": 155,
     "originalPrice": 194,
     "netPrice": 124,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 461,
     "reviewCount": 461,
@@ -4921,11 +4873,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "image": "/seed-images/activities/wildlife-safari.svg",
     "images": [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85"
+      "/seed-images/activities/wildlife-safari.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
@@ -4987,8 +4938,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
+    "coverImage": "/seed-images/activities/wildlife-safari.svg",
+    "imageUrl": "/seed-images/activities/wildlife-safari.svg",
     "thumbnail": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&q=85",
     "alt": "Rolling emerald green tea gardens and mist in Nilgiri Hills Ooty",
     "photoCredit": {
@@ -5015,7 +4966,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 316,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 672,
     "reviewCount": 672,
@@ -5023,11 +4974,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -5089,8 +5039,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -5117,7 +5067,7 @@
     "price": 45,
     "originalPrice": 56,
     "netPrice": 404,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 261,
     "reviewCount": 261,
@@ -5125,11 +5075,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
@@ -5191,8 +5140,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=85",
     "alt": "Gateway of India monument overlooking Mumbai harbor",
     "photoCredit": {
@@ -5219,7 +5168,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 240,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 510,
     "reviewCount": 510,
@@ -5227,11 +5176,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/cultural-experience.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/cultural-experience.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5293,8 +5241,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/cultural-experience.svg",
+    "imageUrl": "/seed-images/activities/cultural-experience.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5321,7 +5269,7 @@
     "price": 115,
     "originalPrice": 144,
     "netPrice": 92,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 418,
     "reviewCount": 418,
@@ -5329,11 +5277,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85",
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
@@ -5395,8 +5342,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=85",
     "alt": "Ancient seaside pilgrimage temple monument with stone carvings",
     "photoCredit": {
@@ -5423,7 +5370,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 284,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 310,
     "reviewCount": 310,
@@ -5431,11 +5378,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5497,8 +5443,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5525,7 +5471,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 364,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 622,
     "reviewCount": 622,
@@ -5533,11 +5479,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5599,8 +5544,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {
@@ -5627,7 +5572,7 @@
     "price": 95,
     "originalPrice": 119,
     "netPrice": 360,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 842,
     "reviewCount": 842,
@@ -5635,11 +5580,10 @@
     "durationDays": 1,
     "durationNights": 0,
     "groupSize": "Shared Tour (Max 15 Travelers)",
-    "image": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "image": "/seed-images/activities/city-tour.svg",
     "images": [
-      "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=1200&q=85"
+      "/seed-images/activities/city-tour.svg",
+      "/seed-images/activities/city-tour.svg"
     ],
     "gallery": [
       "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
@@ -5701,8 +5645,8 @@
     "isDemo": true,
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
-    "coverImage": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
+    "coverImage": "/seed-images/activities/city-tour.svg",
+    "imageUrl": "/seed-images/activities/city-tour.svg",
     "thumbnail": "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=400&q=85",
     "alt": "Historic Amber Fort ramparts in Jaipur Rajasthan",
     "photoCredit": {

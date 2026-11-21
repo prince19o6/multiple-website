@@ -25,10 +25,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -101,9 +99,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviews": 230,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -144,10 +142,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -221,9 +217,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviews": 291,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -264,10 +260,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -339,9 +333,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 210,
     "reviews": 352,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -382,10 +376,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -456,9 +448,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 120,
     "reviews": 413,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -499,10 +491,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -572,9 +562,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 180,
     "reviews": 474,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -615,10 +605,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -689,9 +677,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 220,
     "reviews": 535,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -732,10 +720,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -809,9 +795,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 190,
     "reviews": 596,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -852,10 +838,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -925,9 +909,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 230,
     "reviews": 657,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -968,10 +952,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1045,9 +1027,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 210,
     "reviews": 718,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1088,10 +1070,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1162,9 +1142,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviews": 779,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1205,10 +1185,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1282,9 +1260,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 840,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1325,10 +1303,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1398,9 +1374,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 160,
     "reviews": 901,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1441,10 +1417,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1514,9 +1488,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 962,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -1557,10 +1531,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1631,9 +1603,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 1023,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -1674,10 +1646,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1748,9 +1718,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviews": 1084,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1791,10 +1761,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1867,9 +1835,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 120,
     "reviews": 1145,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1910,10 +1878,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -1984,9 +1950,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 1206,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -2027,10 +1993,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2103,9 +2067,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 190,
     "reviews": 1267,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2146,10 +2110,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2221,9 +2183,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 1328,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -2264,10 +2226,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2339,9 +2299,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 240,
     "reviews": 1389,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2382,10 +2342,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2457,9 +2415,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 250,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -2500,10 +2458,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2577,9 +2533,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 110,
     "reviews": 311,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -2620,10 +2576,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2695,9 +2649,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 190,
     "reviews": 372,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -2738,10 +2692,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2812,9 +2764,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 433,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -2855,10 +2807,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -2931,9 +2881,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 240,
     "reviews": 494,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -2974,10 +2924,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3047,9 +2995,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 210,
     "reviews": 555,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -3090,10 +3038,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3164,9 +3110,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 170,
     "reviews": 616,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -3207,10 +3153,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3280,9 +3224,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviews": 677,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -3323,10 +3267,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3397,9 +3339,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 150,
     "reviews": 738,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -3440,10 +3382,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3514,9 +3454,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviews": 799,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -3557,10 +3497,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3630,9 +3568,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 210,
     "reviews": 860,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -3673,10 +3611,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3748,9 +3684,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 200,
     "reviews": 921,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -3791,10 +3727,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3865,9 +3799,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 240,
     "reviews": 982,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -3908,10 +3842,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -3985,9 +3917,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviews": 1043,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4028,10 +3960,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4104,9 +4034,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 1104,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -4147,10 +4077,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4221,9 +4149,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviews": 1165,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -4264,10 +4192,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4340,9 +4266,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviews": 1226,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -4383,10 +4309,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4457,9 +4381,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 190,
     "reviews": 1287,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4500,10 +4424,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4575,9 +4497,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 200,
     "reviews": 1348,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -4618,10 +4540,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4691,9 +4611,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 230,
     "reviews": 1409,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4734,10 +4654,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4807,9 +4725,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 140,
     "reviews": 270,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -4850,10 +4768,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -4927,9 +4843,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 170,
     "reviews": 331,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -4970,10 +4886,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5046,9 +4960,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 392,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5089,10 +5003,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5167,9 +5079,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 220,
     "reviews": 453,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -5210,10 +5122,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5286,9 +5196,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 150,
     "reviews": 514,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -5329,10 +5239,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5406,9 +5314,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 230,
     "reviews": 575,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -5449,10 +5357,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5523,9 +5429,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 636,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -5566,10 +5472,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5641,9 +5545,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 697,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -5684,10 +5588,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5757,9 +5659,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 758,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -5800,10 +5702,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5873,9 +5773,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 240,
     "reviews": 819,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -5916,10 +5816,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -5992,9 +5890,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviews": 880,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -6035,10 +5933,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6111,9 +6007,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 941,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -6154,10 +6050,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6227,9 +6121,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviews": 1002,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6270,10 +6164,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6345,9 +6237,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 170,
     "reviews": 1063,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -6388,10 +6280,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6463,9 +6353,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 120,
     "reviews": 1124,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -6506,10 +6396,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6579,9 +6467,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 170,
     "reviews": 1185,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -6622,10 +6510,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6698,9 +6584,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 190,
     "reviews": 1246,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -6741,10 +6627,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6819,9 +6703,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 1307,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -6862,10 +6746,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -6937,9 +6819,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviews": 1368,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -6980,10 +6862,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7057,9 +6937,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 200,
     "reviews": 1429,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -7100,10 +6980,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7176,9 +7054,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviews": 290,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -7219,10 +7097,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7292,9 +7168,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 351,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -7335,10 +7211,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7411,9 +7285,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 412,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -7454,10 +7328,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7530,9 +7402,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 240,
     "reviews": 473,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -7573,10 +7445,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7649,9 +7519,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 534,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -7692,10 +7562,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7766,9 +7634,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviews": 595,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -7809,10 +7677,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -7885,9 +7751,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 150,
     "reviews": 656,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -7928,10 +7794,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8001,9 +7865,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 150,
     "reviews": 717,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -8044,10 +7908,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-resort.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8119,9 +7981,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 130,
     "reviews": 778,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-resort.svg",
+    "image": "/seed-images/hotels/hotel-resort.svg",
+    "imageUrl": "/seed-images/hotels/hotel-resort.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -8162,10 +8024,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85"
+      "/seed-images/hotels/hotel-boutique.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8235,9 +8095,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 120,
     "reviews": 839,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-boutique.svg",
+    "image": "/seed-images/hotels/hotel-boutique.svg",
+    "imageUrl": "/seed-images/hotels/hotel-boutique.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -8278,10 +8138,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8352,9 +8210,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 120,
     "reviews": 900,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -8395,10 +8253,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85"
+      "/seed-images/hotels/hotel-luxury.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8469,9 +8325,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 110,
     "reviews": 961,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-luxury.svg",
+    "image": "/seed-images/hotels/hotel-luxury.svg",
+    "imageUrl": "/seed-images/hotels/hotel-luxury.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -8512,10 +8368,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
+      "/seed-images/hotels/hotel-apartment.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8585,9 +8439,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 200,
     "reviews": 1022,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-apartment.svg",
+    "image": "/seed-images/hotels/hotel-apartment.svg",
+    "imageUrl": "/seed-images/hotels/hotel-apartment.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -8628,10 +8482,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85"
+      "/seed-images/hotels/hotel-hostel.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8705,9 +8557,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviews": 1083,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-hostel.svg",
+    "image": "/seed-images/hotels/hotel-hostel.svg",
+    "imageUrl": "/seed-images/hotels/hotel-hostel.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -8748,10 +8600,8 @@
     "netPricePerNight": null,
     "currency": "USD",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85"
+      "/seed-images/hotels/hotel-villa.svg",
+      "/seed-images/hotels/hotel-luxury.svg"
     ],
     "amenities": [
       "Free High-Speed WiFi",
@@ -8821,9 +8671,9 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 220,
     "reviews": 1144,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/hotels/hotel-villa.svg",
+    "image": "/seed-images/hotels/hotel-villa.svg",
+    "imageUrl": "/seed-images/hotels/hotel-villa.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",

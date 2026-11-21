@@ -9,7 +9,7 @@ import {
   type CanonicalModule,
 } from "@/lib/context/ModuleContext";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
-import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import FooterSection from "./FooterSection";
 
 export type ModuleSectionType =
@@ -53,15 +53,11 @@ export function ModuleSection({
   } = useActiveModule();
 
   const config = useSiteConfig();
-  const site = useSite();
   const currentModule = propModule || contextModule;
   const currentModuleCode = activeModuleCode || currentModule;
   const primaryColor =
     config?.theme?.colors?.primary || config?.theme?.primary || "#2882c5";
-  const currencySymbol =
-    (config as any)?.site?.currency?.symbol ||
-    (config as any)?.currency?.symbol ||
-    (site?.siteId === "gujjutours" ? "₹" : "$");
+  const { currencySymbol } = useCurrency();
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const catScrollRef = useRef<HTMLDivElement>(null);
@@ -169,16 +165,25 @@ export function ModuleSection({
           className="flex items-center gap-2.5 sm:gap-3 overflow-x-auto scrollbar-hide py-1"
           style={{ scrollbarWidth: "none" }}
         >
-          {categoriesList.map((cat: any, idx: number) => (
-            <Link
-              key={cat.slug || idx}
-              href={`/en/${currentModule}?category=${encodeURIComponent(cat.slug)}`}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 text-xs sm:text-sm font-bold whitespace-nowrap hover:border-primary hover:text-primary dark:hover:border-primary transition-all shadow-xs hover:shadow-md shrink-0 group"
-            >
-              <span className="w-2 h-2 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:scale-125 transition-transform" style={{ backgroundColor: primaryColor }} />
-              <span>{cat.name || cat.title}</span>
-            </Link>
-          ))}
+          {categoriesList.map((cat: any, idx: number) => {
+            const catName =
+              typeof cat.name === "object" && cat.name !== null
+                ? cat.name.en || cat.name.gu || cat.name.ms || Object.values(cat.name)[0] || cat.slug || "Category"
+                : typeof cat.title === "object" && cat.title !== null
+                ? cat.title.en || Object.values(cat.title)[0] || cat.slug || "Category"
+                : cat.name || cat.title || cat.label || cat.slug || "Category";
+
+            return (
+              <Link
+                key={cat.slug || idx}
+                href={`/en/${currentModule}?category=${encodeURIComponent(cat.slug)}`}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-200 text-xs sm:text-sm font-bold whitespace-nowrap hover:border-primary hover:text-primary dark:hover:border-primary transition-all shadow-xs hover:shadow-md shrink-0 group"
+              >
+                <span className="w-2 h-2 rounded-full bg-neutral-300 dark:bg-neutral-700 group-hover:scale-125 transition-transform" style={{ backgroundColor: primaryColor }} />
+                <span>{catName}</span>
+              </Link>
+            );
+          })}
         </div>
       </section>
     );
@@ -319,16 +324,25 @@ export function ModuleSection({
                 {/* Price & Action */}
                 <div className="pt-3 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between">
                   <div>
-                    <div className="text-[11px] text-neutral-400">Starting from</div>
+                    <div className="text-[11px] font-medium text-neutral-500 dark:text-neutral-400">Starting from</div>
                     <div className="flex items-baseline gap-1.5">
-                      <span className="text-lg font-extrabold text-neutral-900 dark:text-white">
+                      <span className="text-lg font-extrabold text-neutral-900 dark:text-white leading-tight">
                         {currencySymbol}
-                        {Number(item.price).toLocaleString()}
+                        {(() => {
+                          const raw = item.costForTwo ?? item.price ?? item.netCost ?? item.pricePerPerson;
+                          const n = Number(raw);
+                          return (!isNaN(n) && n > 0) ? n.toLocaleString("en-IN") : null;
+                        })()}
+                        {(() => {
+                          const raw = item.costForTwo ?? item.price ?? item.netCost ?? item.pricePerPerson;
+                          const n = Number(raw);
+                          return (!isNaN(n) && n > 0) ? null : (item.priceRange || "—");
+                        })()}
                       </span>
-                      {item.originalPrice && (
+                      {item.originalPrice && (Number(item.originalPrice) > 0) && (
                         <span className="text-xs text-neutral-400 line-through">
                           {currencySymbol}
-                          {Number(item.originalPrice).toLocaleString()}
+                          {Number(item.originalPrice).toLocaleString("en-IN")}
                         </span>
                       )}
                     </div>
@@ -635,7 +649,7 @@ export function ModuleSection({
                 />
                 {p.category && (
                   <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-black/60 text-white backdrop-blur-md">
-                    {p.category}
+                    {typeof p.category === "object" && p.category !== null ? (p.category.en || p.category.gu || p.category.ms || Object.values(p.category)[0]) : p.category}
                   </span>
                 )}
               </div>
@@ -695,12 +709,12 @@ export function ModuleSection({
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs text-neutral-400">
                     <span className="font-bold text-amber-500">{"★".repeat(r.rating || 5)}</span>
-                    <span className="font-semibold text-neutral-500">{r.platform}</span>
+                    <span className="font-semibold text-neutral-500">{r.platform ?? r.source ?? (r.verified ? "Verified" : "")}</span>
                   </div>
                   <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    {isExpanded ? r.text : `${r.text.slice(0, 120)}...`}
+                    {(() => { const txt = r.comment ?? r.text ?? r.body ?? r.review ?? ""; return isExpanded ? txt : `${txt.slice(0, 120)}...`; })()}
                   </p>
-                  {r.text.length > 120 && (
+                  {((r.comment ?? r.text ?? r.body ?? r.review ?? "").length > 120) && (
                     <button
                       type="button"
                       onClick={() =>
@@ -716,9 +730,9 @@ export function ModuleSection({
                 <div className="pt-3 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs">
                   <div>
                     <div className="font-bold text-neutral-900 dark:text-white">{r.author}</div>
-                    <div className="text-neutral-400">{r.city}</div>
+                    <div className="text-neutral-400">{r.location ?? r.city ?? ""}</div>
                   </div>
-                  <span className="text-neutral-400 text-[11px]">{r.date}</span>
+                  <span className="text-neutral-400 text-[11px]">{r.date ?? r.tourName ?? r.createdAt?.slice(0, 10) ?? ""}</span>
                 </div>
               </div>
             );

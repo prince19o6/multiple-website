@@ -4,7 +4,7 @@ import { ENV } from "@/lib/env";
 
 export const dynamic = "force-dynamic";
 
-function resolveTargetHost(request: NextRequest, siteId: string) {
+function resolveTargetHost(_request: NextRequest, siteId: string) {
   if (siteId === "tripgoasia") return "www.tripgoasia.com";
   if (siteId === "technoheaven") return "stagingb2b.technoheaven.com";
   return "www.gujjutours.com";

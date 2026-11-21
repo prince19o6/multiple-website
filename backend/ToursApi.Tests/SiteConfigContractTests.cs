@@ -24,9 +24,9 @@ public class SiteConfigContractTests
     }
 
     [Theory]
-    [InlineData("gujjutours", "Gujju Tours", "USD", "$")]
+    [InlineData("gujjutours", "Gujju Tours", "INR", "₹")]
     [InlineData("tripgoasia", "TripGo Asia", "USD", "$")]
-    [InlineData("technoheaven", "Technoheaven", "USD", "$")]
+    [InlineData("technoheaven", "Technoheaven", "AED", "AED ")]
     public void WebsiteRegistry_HasValidCurrencyAndMetadataPerTenant(string siteId, string expectedName, string expectedCurrency, string expectedSymbol)
     {
         var site = WebsiteRegistry.Resolve(siteId);

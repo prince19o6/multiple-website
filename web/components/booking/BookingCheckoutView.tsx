@@ -7,6 +7,8 @@ import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useAuth } from "@/lib/auth/AuthContext";
 import type { Booking, BookingTraveler } from "@/lib/api";
 import Footer from "@/components/footer";
+import FlightBookingCheckout from "./FlightBookingCheckout";
+import CabBookingCheckout from "./CabBookingCheckout";
 
 const COUNTRY_CODES = [
   { code: "+91", country: "India", flag: "🇮🇳" },
@@ -131,16 +133,24 @@ function BookingCheckoutInner() {
     "tour"
   ).toLowerCase();
 
-  const service = useMemo(() => {
+  const service: string = useMemo(() => {
     if (rawService === "hotels" || rawService === "hotel") return "hotel";
     if (rawService === "restaurants" || rawService === "restaurant") return "restaurant";
     if (rawService === "flights" || rawService === "flight") return "flight";
-    if (rawService === "transfers" || rawService === "transfer") return "transfer";
+    if (rawService === "transfers" || rawService === "transfer" || rawService === "cab" || rawService === "cabs" || rawService === "car-rental") return "transfer";
     if (rawService === "visas" || rawService === "visa") return "visa";
     if (rawService === "packages" || rawService === "package" || rawService === "holidays") return "package";
     if (rawService === "buildpackage" || rawService === "build-package" || rawService === "custom") return "buildpackage";
     return "tour";
   }, [rawService]);
+
+  if (service === "flight") {
+    return <FlightBookingCheckout />;
+  }
+
+  if (service === "transfer") {
+    return <CabBookingCheckout />;
+  }
 
   const rawId = searchParams.get("id") || searchParams.get("serviceId") || searchParams.get("tourId") || searchParams.get("slug") || "101";
 
@@ -472,12 +482,6 @@ function BookingCheckoutInner() {
   const handleSubmitBooking = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
-
-    if (!user) {
-      const currentUrl = typeof window !== "undefined" ? window.location.pathname + window.location.search : "/booking";
-      router.push(`/${siteId}/en/login?returnUrl=${encodeURIComponent(currentUrl)}`);
-      return;
-    }
 
     if (!guestName.trim()) {
       setErrorMessage("Please enter the lead traveler's full name.");

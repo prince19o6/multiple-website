@@ -87,8 +87,8 @@ export default function LoginScreen() {
 
   const handleDemoFill = (role: 'user' | 'admin') => {
     if (role === 'admin') {
-      setEmail('admin@toursapp.com');
-      setPassword('Admin@123');
+      setEmail('admin@gujjutours.com');
+      setPassword('Admin@12345');
     } else {
       setEmail('traveler@example.com');
       setPassword('Traveler@123');

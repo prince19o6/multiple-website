@@ -4,9 +4,10 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { useCurrency } from "@/lib/CurrencyContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { LoadingSkeleton, ErrorState, EmptyState } from "@/components/common";
 
 interface HotelStay {
   hotelName: string;
@@ -67,11 +68,10 @@ const THEME_CATEGORIES = [
 
 export default function HolidaysPage() {
   const searchParams = useSearchParams();
-  const config = useSiteConfig();
   const site = useSite();
 
   const siteId = site.siteId || "gujjutours";
-  const currencySymbol = config.currencySymbol || (siteId === "gujjutours" ? "₹" : "$");
+  const { formatPrice } = useCurrency();
 
   // URL query params
   const destinationQuery = searchParams.get("destination") || searchParams.get("city") || "";
@@ -124,11 +124,8 @@ export default function HolidaysPage() {
       const res = await fetch(`/api/packages?${q.toString()}`);
       if (!res.ok) throw new Error(`HTTP error ${res.status}`);
       const json = await res.json();
-      if (json.success && Array.isArray(json.data)) {
-        setPackages(json.data);
-      } else {
-        setPackages([]);
-      }
+      const items = json?.items ?? json?.data ?? (Array.isArray(json) ? json : []);
+      setPackages(items);
     } catch (err: any) {
       console.error("[HolidaysPage] Failed to fetch:", err);
       setError(err.message || "Failed to load packages");
@@ -179,31 +176,28 @@ export default function HolidaysPage() {
           <div className="mt-6 flex flex-wrap gap-2">
             <button
               onClick={() => { setDomesticOnly(false); setSelectedTheme("all"); }}
-              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                !domesticOnly && selectedTheme !== "international-packages"
-                  ? "bg-white text-teal-900 shadow-md font-bold"
-                  : "bg-white/10 hover:bg-white/20 text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${!domesticOnly && selectedTheme !== "international-packages"
+                ? "bg-white text-teal-900 shadow-md font-bold"
+                : "bg-white/10 hover:bg-white/20 text-white"
+                }`}
             >
               All Packages
             </button>
             <button
               onClick={() => { setDomesticOnly(true); setSelectedTheme("domestic-holidays"); }}
-              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                domesticOnly || selectedTheme === "domestic-holidays"
-                  ? "bg-white text-teal-900 shadow-md font-bold"
-                  : "bg-white/10 hover:bg-white/20 text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${domesticOnly || selectedTheme === "domestic-holidays"
+                ? "bg-white text-teal-900 shadow-md font-bold"
+                : "bg-white/10 hover:bg-white/20 text-white"
+                }`}
             >
               🇮🇳 Domestic Holidays
             </button>
             <button
               onClick={() => { setDomesticOnly(false); setSelectedTheme("international-packages"); }}
-              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                selectedTheme === "international-packages"
-                  ? "bg-white text-teal-900 shadow-md font-bold"
-                  : "bg-white/10 hover:bg-white/20 text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${selectedTheme === "international-packages"
+                ? "bg-white text-teal-900 shadow-md font-bold"
+                : "bg-white/10 hover:bg-white/20 text-white"
+                }`}
             >
               🌍 International Holidays
             </button>
@@ -275,11 +269,10 @@ export default function HolidaysPage() {
                   if (cat.slug === "domestic-escapes") setDomesticOnly(true);
                   else if (cat.slug === "international") setDomesticOnly(false);
                 }}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all border ${
-                  active
-                    ? "bg-teal-600 text-white border-teal-600 shadow-sm"
-                    : "bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-800 hover:border-teal-400"
-                }`}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all border ${active
+                  ? "bg-teal-600 text-white border-teal-600 shadow-sm"
+                  : "bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-800 hover:border-teal-400"
+                  }`}
               >
                 <span>{cat.icon}</span>
                 <span>{cat.label}</span>
@@ -295,22 +288,20 @@ export default function HolidaysPage() {
         <div className="flex flex-wrap items-center gap-2">
           <button
             onClick={() => setPureVegOnly(!pureVegOnly)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${
-              pureVegOnly
-                ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border-emerald-500 shadow-sm"
-                : "bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-800"
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${pureVegOnly
+              ? "bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border-emerald-500 shadow-sm"
+              : "bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-800"
+              }`}
           >
             <span>🌱</span>
             <span>100% Pure Veg</span>
           </button>
           <button
             onClick={() => setJainOnly(!jainOnly)}
-            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${
-              jainOnly
-                ? "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 border-amber-500 shadow-sm"
-                : "bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-800"
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition-all ${jainOnly
+              ? "bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400 border-amber-500 shadow-sm"
+              : "bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-neutral-200 dark:border-neutral-800"
+              }`}
           >
             <span>🌿</span>
             <span>Jain Food Available</span>
@@ -339,45 +330,24 @@ export default function HolidaysPage() {
       {/* ─── Packages Grid ─── */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="h-96 bg-neutral-200 dark:bg-neutral-800 rounded-2xl" />
-            ))}
-          </div>
+          <LoadingSkeleton variant="card" count={6} />
         ) : error ? (
-          <div className="p-8 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-red-200 dark:border-red-900/40">
-            <p className="text-red-500 text-sm font-semibold">{error}</p>
-            <button
-              onClick={() => fetchPackages()}
-              className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg text-xs font-bold"
-            >
-              Retry
-            </button>
-          </div>
+          <ErrorState message={error} onRetry={() => fetchPackages()} />
         ) : packages.length === 0 ? (
-          <div className="py-16 text-center bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800">
-            <span className="text-4xl">🏝️</span>
-            <h3 className="mt-3 text-lg font-bold text-neutral-800 dark:text-neutral-200">
-              No holiday packages found
-            </h3>
-            <p className="mt-1 text-xs text-neutral-500">
-              Try adjusting your destination, theme, or dietary filter.
-            </p>
-            <button
-              onClick={() => {
-                setSelectedCity("all");
-                setSelectedTheme("all");
-                setSearchInput("");
-                setPureVegOnly(false);
-                setJainOnly(false);
-                setDomesticOnly(false);
-                setDurationRange("all");
-              }}
-              className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-lg text-xs font-bold"
-            >
-              Reset All Filters
-            </button>
-          </div>
+          <EmptyState
+            title="No holiday packages found"
+            message="Try adjusting your destination, theme, or dietary filter."
+            actionLabel="Reset All Filters"
+            onAction={() => {
+              setSelectedCity("all");
+              setSelectedTheme("all");
+              setSearchInput("");
+              setPureVegOnly(false);
+              setJainOnly(false);
+              setDomesticOnly(false);
+              setDurationRange("all");
+            }}
+          />
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {packages.map((pkg, idx) => {
@@ -480,11 +450,11 @@ export default function HolidaysPage() {
                       </p>
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-lg sm:text-xl font-extrabold text-teal-700 dark:text-teal-400">
-                          {currencySymbol}{currentPrice.toLocaleString()}
+                          {formatPrice(currentPrice, pkg.currency || "INR")}
                         </span>
                         {pkg.originalPrice && (
                           <span className="text-xs text-neutral-400 line-through">
-                            {currencySymbol}{pkg.originalPrice.toLocaleString()}
+                            {formatPrice(pkg.originalPrice, pkg.currency || "INR")}
                           </span>
                         )}
                       </div>

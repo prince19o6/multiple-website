@@ -54,6 +54,11 @@ public class FlightsController : ControllerBase
         var result = await _flightRepository.GetFlightsAsync(filterParams);
         return Ok(new
         {
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
+            totalPages = result.TotalPages,
             success = true,
             data = result.Items,
             meta = new
@@ -67,20 +72,78 @@ public class FlightsController : ControllerBase
     }
 
     /// <summary>
-    /// Get single flight by slug, numeric ID, or route ID.
+    /// Search flights with pax count and query parameters.
     /// </summary>
-    [HttpGet("{slugOrId}")]
-    public async Task<IActionResult> GetFlightBySlug(string slugOrId)
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchFlights(
+        [FromQuery] string? from,
+        [FromQuery] string? to,
+        [FromQuery] string? date,
+        [FromQuery] int? pax,
+        [FromQuery] string? cabinClass,
+        [FromQuery] string? airline,
+        [FromQuery] bool? nonStop,
+        [FromQuery] bool? pureVegMeals,
+        [FromQuery] double? minPrice,
+        [FromQuery] double? maxPrice,
+        [FromQuery] string? sort,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
     {
-        var flight = await _flightRepository.GetFlightBySlugAsync(slugOrId)
-                     ?? await _flightRepository.GetFlightByIdAsync(slugOrId);
-
-        if (flight == null)
+        var filterParams = new FlightFilterParams
         {
-            return NotFound(new { success = false, message = "Flight not found" });
-        }
+            From = from,
+            To = to,
+            Date = date,
+            CabinClass = cabinClass,
+            Airline = airline,
+            NonStopOnly = nonStop,
+            PureVegMealsOnly = pureVegMeals,
+            MinPrice = minPrice,
+            MaxPrice = maxPrice,
+            Sort = sort,
+            Page = page,
+            PageSize = pageSize
+        };
 
-        return Ok(new { success = true, data = flight });
+        var result = await _flightRepository.GetFlightsAsync(filterParams);
+        return Ok(new
+        {
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
+            totalPages = result.TotalPages,
+            pax = pax ?? 1,
+            success = true,
+            data = result.Items
+        });
+    }
+
+    /// <summary>
+    /// Get list of available airports for flight booking.
+    /// </summary>
+    [HttpGet("airports")]
+    public async Task<IActionResult> GetAirports()
+    {
+        var airports = await _flightRepository.GetAllAirportsAsync();
+        return Ok(new
+        {
+            success = true,
+            data = airports,
+            items = airports,
+            total = airports.Count
+        });
+    }
+
+    /// <summary>
+    /// Airport autocomplete search.
+    /// </summary>
+    [HttpGet("autocomplete")]
+    public async Task<IActionResult> Autocomplete([FromQuery] string q)
+    {
+        var results = await _flightRepository.AutocompleteAirportsAsync(q);
+        return Ok(new { success = true, data = results });
     }
 
     /// <summary>
@@ -94,13 +157,19 @@ public class FlightsController : ControllerBase
     }
 
     /// <summary>
-    /// Airport autocomplete search.
+    /// Get single flight by slug, numeric ID, or route ID.
     /// </summary>
-    [HttpGet("autocomplete")]
-    public async Task<IActionResult> Autocomplete([FromQuery] string q)
+    [HttpGet("{slugOrId}")]
+    public async Task<IActionResult> GetFlightBySlug(string slugOrId)
     {
-        var results = await _flightRepository.AutocompleteAirportsAsync(q);
-        return Ok(new { success = true, data = results });
+        var flight = await _flightRepository.GetFlightBySlugAsync(slugOrId)
+                     ?? await _flightRepository.GetFlightByIdAsync(slugOrId);
+
+        if (flight == null)
+        {
+            return NotFound(new { success = false, message = $"Flight '{slugOrId}' not found" });
+        }
+
+        return Ok(new { success = true, data = flight });
     }
 }
-

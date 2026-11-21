@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter, useSearchParams, notFound } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
 import { useAuth } from "@/lib/auth/AuthContext";
 import { getActualImageUrl } from "@/lib/imageUtils";
+import { getVisaBySlug, getVisasByCountry } from "@/lib/api/visas";
+import { LoadingSkeleton, ErrorState } from "@/components/common";
 import EnquiryModal from "@/components/lead/EnquiryModal";
 
 interface VisaFaqItem {
@@ -48,60 +50,12 @@ interface VisaDetail {
   submissionSteps?: string[];
 }
 
-const FALLBACK_VISA: VisaDetail = {
-  id: 1001,
-  visaNumericId: 1001,
-  country: "United Arab Emirates",
-  countryCode: "AE",
-  countrySlug: "united-arab-emirates",
-  flag: "🇦🇪",
-  continent: "Middle East",
-  title: "United Arab Emirates: 30-Day Single Entry Tourist eVisa",
-  name: "United Arab Emirates: 30-Day Single Entry Tourist eVisa",
-  slug: "united-arab-emirates-tourist-30-1001",
-  visaType: "tourist",
-  visaTypeLabel: "Tourist eVisa",
-  validity: "60 Days from Date of Issue",
-  stayDuration: "30 Days",
-  processingTime: "3-4 Working Days",
-  entryType: "Single Entry",
-  fastTrackAvailable: false,
-  price: 6730,
-  originalPrice: 8650,
-  currency: "INR",
-  image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-  documentsRequired: [
-    "Valid Passport Copy with minimum 6 months validity from date of travel",
-    "Recent Passport-Sized Photograph (white background, taken within 3 months)",
-    "Confirmed Round-Trip Flight Itinerary / Return Air Ticket",
-    "Confirmed Hotel Voucher or Proof of Accommodation",
-  ],
-  approvalRate: 99.4,
-  rating: 4.9,
-  reviews: 340,
-  overview:
-    "Comprehensive visa facilitation service for travel to United Arab Emirates. Our dedicated visa desk conducts a full pre-screening of your passport, travel itinerary, and documentation to guarantee swift approval with zero embassy delays.",
-  faqs: [
-    {
-      question: "How long does it take to process the United Arab Emirates eVisa?",
-      answer: "Standard processing takes 3-4 Working Days. Once approved by official immigration authorities, your eVisa is instantly dispatched via email and WhatsApp.",
-    },
-    {
-      question: "Can I extend my stay beyond 30 Days?",
-      answer: "Extensions depend on local immigration regulations. You can consult our visa desk prior to departure for country-specific extension policies.",
-    },
-    {
-      question: "What happens if there is an error in my uploaded documents?",
-      answer: "Our pre-screening verification desk immediately checks your documents within 2 hours of upload and flags any issues before official embassy submission.",
-    },
-  ],
-  submissionSteps: [
-    "Submit Application Online: Fill traveler details and securely upload passport copy and photograph.",
-    "Expert Pre-Screening: Our visa documentation specialist verifies every detail within 2 hours.",
-    "Government / Immigration Submission: Application processed with official authorities.",
-    "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp.",
-  ],
-};
+const DEFAULT_SUBMISSION_STEPS = [
+  "Submit Application Online: Fill traveler details and securely upload passport copy and photograph.",
+  "Expert Pre-Screening: Our visa documentation specialist verifies every detail within 2 hours.",
+  "Government / Immigration Submission: Application processed with official authorities.",
+  "Receive Approved eVisa: Approved visa PDF delivered directly to email and WhatsApp.",
+];
 
 export default function VisaDetailPage() {
   const params = useParams();
@@ -121,9 +75,10 @@ export default function VisaDetailPage() {
     ? slugParam
     : "";
 
-  const [visa, setVisa] = useState<VisaDetail>(FALLBACK_VISA);
+  const [visa, setVisa] = useState<VisaDetail | null>(null);
   const [siblingVisas, setSiblingVisas] = useState<VisaDetail[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [travelers, setTravelers] = useState(1);
   const [travelDate, setTravelDate] = useState(() => {
     return searchParams.get("travelDate") || (() => {
@@ -171,55 +126,115 @@ export default function VisaDetailPage() {
     }
   }, [user, applicantName, applicantEmail, applicantPhone]);
 
-  useEffect(() => {
+  const loadVisaData = useCallback(async () => {
     if (!visaPath) return;
-
-    let isMounted = true;
-    async function loadVisaData() {
-      setLoading(true);
+    setLoading(true);
+    setError(null);
+    try {
+      let v: any = null;
       try {
+        v = await getVisaBySlug(visaPath, { siteId });
+      } catch {
+        // Direct call failed — query same-origin Next.js proxy
         const res = await fetch(`/api/visas/${encodeURIComponent(visaPath)}?site=${encodeURIComponent(siteId)}`);
         if (res.ok) {
           const json = await res.json();
-          if (json.isCountry && Array.isArray(json.data) && json.data.length > 0) {
-            if (isMounted) {
-              setVisa(json.data[0]);
-              setSiblingVisas(json.data);
+          v = json?.data ?? json;
+        }
+      }
+
+      if (!v || (!v.title && !v.name && !v.id && !v.country)) {
+        const localRes = await fetch(`/api/visas/${encodeURIComponent(visaPath)}?site=${encodeURIComponent(siteId)}`);
+        if (localRes.ok) {
+          const localJson = await localRes.json();
+          v = localJson?.data ?? localJson;
+        }
+      }
+
+      if (v && (v.title || v.name || v.id || v.country)) {
+        const country = v.country || "Country";
+        const normalizedVisa: VisaDetail = {
+          id: v.id || v.visaNumericId || visaPath,
+          visaNumericId: v.visaNumericId,
+          country,
+          countryCode: v.countryCode || "INTL",
+          countrySlug: v.countrySlug || country.toLowerCase().replace(/\s+/g, "-"),
+          flag: v.flag || "✈️",
+          continent: v.continent || "Global",
+          title: v.title || v.name || `${country} Tourist eVisa`,
+          name: v.title || v.name || `${country} Tourist eVisa`,
+          slug: v.slug || visaPath,
+          visaType: v.visaType || "tourist",
+          visaTypeLabel: v.visaTypeLabel || "Tourist eVisa",
+          validity: v.validity || "60 Days",
+          stayDuration: v.stayDuration || "30 Days",
+          processingTime: v.processingTime || "3-4 Working Days",
+          entryType: v.entryType || "Single Entry",
+          fastTrackAvailable: v.fastTrackAvailable || false,
+          price: Number(v.price || 5000),
+          originalPrice: v.originalPrice ? Number(v.originalPrice) : undefined,
+          currency: v.currency || (siteId === "gujjutours" ? "INR" : "USD"),
+          image: v.image || "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
+          documentsRequired: Array.isArray(v.documentsRequired) && v.documentsRequired.length > 0 ? v.documentsRequired : [
+            "Valid Passport Copy with minimum 6 months validity",
+            "Recent Passport-Sized Photograph",
+            "Confirmed Round-Trip Flight Itinerary",
+          ],
+          approvalRate: Number(v.approvalRate || 99.2),
+          rating: Number(v.rating || 4.9),
+          reviews: Number(v.reviews || 120),
+          overview: v.overview || v.description || `Fast-track visa facilitation service for travel to ${country}.`,
+          faqs: v.faqs || [
+            {
+              question: `How long does it take to process the ${country} visa?`,
+              answer: `Standard processing takes ${v.processingTime || "3-4 Working Days"}. Once approved, your eVisa is dispatched via email and WhatsApp.`,
+            },
+            {
+              question: "What documents do I need to apply?",
+              answer: "A valid passport with at least 6 months validity from departure date, passport-sized photographs, and round-trip flight details.",
             }
-          } else if (json.data) {
-            if (isMounted) {
-              setVisa(json.data);
-              // Fetch siblings for the same country
-              if (json.data.countrySlug) {
-                fetch(`/api/visas?country=${encodeURIComponent(json.data.countrySlug)}&site=${encodeURIComponent(siteId)}`)
-                  .then((r) => r.json())
-                  .then((sJson) => {
-                    if (sJson.success && Array.isArray(sJson.data)) {
-                      setSiblingVisas(sJson.data);
-                    }
-                  })
-                  .catch(() => {});
-              }
+          ],
+          submissionSteps: v.submissionSteps || DEFAULT_SUBMISSION_STEPS,
+        };
+        setVisa(normalizedVisa);
+
+        // Fetch sibling visas for this country
+        if (normalizedVisa.countrySlug) {
+          try {
+            const siblings = await getVisasByCountry(normalizedVisa.countrySlug, { siteId });
+            if (Array.isArray(siblings) && siblings.length > 0) {
+              setSiblingVisas(siblings as any);
             }
+          } catch {
+            // Siblings optional
           }
         }
-      } catch (err) {
-        console.error("[Visa Detail Load Error]", err);
-      } finally {
-        if (isMounted) setLoading(false);
+      } else {
+        setError("Visa service details not found");
       }
+    } catch (err: any) {
+      if (err?.digest?.includes("NEXT_NOT_FOUND") || err?.message === "NEXT_NOT_FOUND") {
+        throw err;
+      }
+      if (err?.status === 404 || err?.isNotFound) {
+        setError("Visa service details not found");
+      } else {
+        setError(err.message || "Failed to load visa details");
+      }
+    } finally {
+      setLoading(false);
     }
-
-    loadVisaData();
-    return () => {
-      isMounted = false;
-    };
   }, [visaPath, siteId]);
 
-  const totalPrice = visa.price * travelers;
-  const totalOriginalPrice = visa.originalPrice ? visa.originalPrice * travelers : null;
+  useEffect(() => {
+    loadVisaData();
+  }, [loadVisaData]);
+
+  const totalPrice = (visa?.price || 0) * travelers;
+  const totalOriginalPrice = visa?.originalPrice ? visa.originalPrice * travelers : null;
 
   const handleApplyNow = () => {
+    if (!visa) return;
     const tax = Math.round(totalPrice * 0.05);
     const grandTotal = totalPrice + tax;
     const primaryImg = visa.image || "";
@@ -288,6 +303,7 @@ export default function VisaDetailPage() {
 
   const handleSubmitVisaApplication = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!visa) return;
     setAppError(null);
 
     if (!applicantName.trim()) {
@@ -402,11 +418,23 @@ export default function VisaDetailPage() {
     }
   };
 
-  if (loading && !visa) {
+  if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600" />
-      </div>
+      <main className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-6">
+          <LoadingSkeleton variant="detail" count={1} />
+        </div>
+      </main>
+    );
+  }
+
+  if (error || !visa) {
+    return (
+      <main className="min-h-screen bg-slate-50 py-16 px-4">
+        <div className="max-w-md mx-auto">
+          <ErrorState message={error || "Visa details not found"} onRetry={loadVisaData} />
+        </div>
+      </main>
     );
   }
 
@@ -644,7 +672,7 @@ export default function VisaDetailPage() {
               </div>
 
               <div className="space-y-4">
-                {(visa.submissionSteps || FALLBACK_VISA.submissionSteps!).map((step, idx) => (
+                {(visa.submissionSteps || DEFAULT_SUBMISSION_STEPS).map((step, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <div className="w-7 h-7 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0">
                       {idx + 1}

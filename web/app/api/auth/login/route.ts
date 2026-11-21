@@ -121,6 +121,12 @@ export async function POST(req: NextRequest) {
           sameSite: "lax",
           httpOnly: false,
         });
+        response.cookies.set("admin_token", resData.token, {
+          path: "/",
+          maxAge: 7 * 24 * 60 * 60,
+          sameSite: "lax",
+          httpOnly: false,
+        });
       }
 
       return response;
@@ -212,6 +218,12 @@ export async function POST(req: NextRequest) {
         httpOnly: false,
       });
       response.cookies.set("admin_active_site", siteId, {
+        path: "/",
+        maxAge: 7 * 24 * 60 * 60,
+        sameSite: "lax",
+        httpOnly: false,
+      });
+      response.cookies.set("admin_token", token, {
         path: "/",
         maxAge: 7 * 24 * 60 * 60,
         sameSite: "lax",

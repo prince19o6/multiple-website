@@ -22,6 +22,9 @@ public class VisasController : ControllerBase
     /// </summary>
     [HttpGet]
     public async Task<IActionResult> GetVisas(
+        [FromQuery] string? search,
+        [FromQuery] string? q,
+        [FromQuery] string? category,
         [FromQuery] string? country,
         [FromQuery] string? countryCode,
         [FromQuery] string? visaType,
@@ -34,9 +37,11 @@ public class VisasController : ControllerBase
     {
         var filterParams = new VisaFilterParams
         {
+            Search = search ?? q,
+            Category = category,
             Country = country,
             CountryCode = countryCode,
-            VisaType = visaType,
+            VisaType = visaType ?? category,
             Continent = continent,
             MinPrice = minPrice,
             MaxPrice = maxPrice,
@@ -49,6 +54,10 @@ public class VisasController : ControllerBase
         return Ok(new
         {
             success = true,
+            items = result.Items,
+            total = result.Total,
+            page = result.Page,
+            pageSize = result.PageSize,
             data = result.Items,
             meta = new
             {

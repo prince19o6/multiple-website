@@ -233,6 +233,17 @@ export function SiteProvider({ children }: SiteProviderProps) {
       const fontMap: Record<string, string> = {};
       for (const font of customFonts) {
         if (font.family && font.url) {
+          // If the font family is already bundled locally in the app (e.g. Poppins, Inter, Playfair Display),
+          // avoid redundant remote network fetches that trigger 12000ms CORS/timeout warnings on web.
+          const lowerFamily = font.family.toLowerCase();
+          if (
+            Platform.OS === 'web' &&
+            (lowerFamily.includes('poppins') ||
+             lowerFamily.includes('inter') ||
+             lowerFamily.includes('playfair'))
+          ) {
+            continue;
+          }
           fontMap[font.family] = font.url;
         }
       }

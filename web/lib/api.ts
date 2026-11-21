@@ -499,6 +499,12 @@ export async function fetchSiteConfig(
         // preserve original error
       }
     }
+
+    // Graceful offline resilience: Serve built-in validated configuration instead of crashing
+    const siteFallback = DEFAULT_CONFIGS_BY_SITE[site.siteId] || DEFAULT_CONFIGS_BY_SITE.gujjutours;
+    if (siteFallback) {
+      return siteFallback;
+    }
     throw primaryErr;
   }
 }
@@ -762,4 +768,177 @@ export async function checkApiHealth(
     dataSource,
     error: errorMsg || undefined,
   };
+}
+
+// ─── Dynamic Content & Catalog API Methods ──────────────────────────────────
+
+async function callBackend<T>(
+  site: SiteDefinition,
+  endpoint: string,
+  options: RequestOptions & { next?: { revalidate?: number | false; tags?: string[]; notFoundOn404?: boolean } } = {}
+): Promise<RequestResponse<T>> {
+  const url = `${ENV.apiUrl}${endpoint.startsWith("/") ? endpoint : `/${endpoint}`}`;
+  return requestWithRetry<T>(site, url, options as any);
+}
+
+export async function fetchBanners(
+  siteTarget?: SiteDefinition | SiteId | string,
+  module: string = "home"
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/banners?module=${encodeURIComponent(module)}`,
+      {
+        next: { revalidate: 30, tags: [`site:${site.siteId}:banners`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchSpecialOffers(
+  siteTarget?: SiteDefinition | SiteId | string,
+  module: string = "all"
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/offers?module=${encodeURIComponent(module)}`,
+      {
+        next: { revalidate: 30, tags: [`site:${site.siteId}:offers`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchTravelVideos(
+  siteTarget?: SiteDefinition | SiteId | string,
+  module: string = "all",
+  destination?: string
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const query = new URLSearchParams({ module });
+    if (destination) query.append("destination", destination);
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/videos?${query.toString()}`,
+      {
+        next: { revalidate: 60, tags: [`site:${site.siteId}:videos`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchReviews(
+  siteTarget?: SiteDefinition | SiteId | string,
+  module: string = "all",
+  targetId?: string
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const query = new URLSearchParams({ module });
+    if (targetId) query.append("targetId", targetId);
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/reviews?${query.toString()}`,
+      {
+        next: { revalidate: 30, tags: [`site:${site.siteId}:reviews`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchFaqs(
+  siteTarget?: SiteDefinition | SiteId | string,
+  category?: string
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const query = new URLSearchParams();
+    if (category && category !== "all") query.append("category", category);
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/faqs?${query.toString()}`,
+      {
+        next: { revalidate: 60, tags: [`site:${site.siteId}:faqs`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchPartners(
+  siteTarget?: SiteDefinition | SiteId | string,
+  category?: string
+): Promise<{ success: boolean; data: any[] }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const query = new URLSearchParams();
+    if (category && category !== "all") query.append("category", category);
+    const res = await callBackend<{ success: boolean; data: any[] }>(
+      site,
+      `/api/partners?${query.toString()}`,
+      {
+        next: { revalidate: 120, tags: [`site:${site.siteId}:partners`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: [] };
+  }
+}
+
+export async function fetchStaticPage(
+  siteTarget?: SiteDefinition | SiteId | string,
+  slug: string = "about-us"
+): Promise<{ success: boolean; data: any | null }> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const res = await callBackend<{ success: boolean; data: any }>(
+      site,
+      `/api/pages/${encodeURIComponent(slug)}`,
+      {
+        next: { revalidate: 60, tags: [`site:${site.siteId}:page:${slug}`], notFoundOn404: true },
+      }
+    );
+    return res.data;
+  } catch {
+    return { success: false, data: null };
+  }
+}
+
+export async function fetchHomePayload(
+  siteTarget?: SiteDefinition | SiteId | string,
+  module: string = "hotels"
+): Promise<any> {
+  const site = await resolveSite(siteTarget);
+  try {
+    const res = await callBackend<any>(
+      site,
+      `/api/core/v1/home?module=${encodeURIComponent(module)}&site=${encodeURIComponent(site.siteId)}`,
+      {
+        next: { revalidate: 30, tags: [`site:${site.siteId}:home:${module}`] },
+      }
+    );
+    return res.data;
+  } catch {
+    return null;
+  }
 }

@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import type { MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
+import { useCurrency } from "@/lib/CurrencyContext";
 
 interface CuratedPackagesSectionProps {
   config: MergedWebsiteConfig;
@@ -10,6 +11,7 @@ interface CuratedPackagesSectionProps {
 
 interface PackageItem {
   id: string;
+  slug?: string;
   title: string;
   duration: string;
   price: number;
@@ -140,7 +142,6 @@ function PackageSliderRow({
   subtitle,
   packages,
   categoryHref,
-  currencySymbol = "₹",
 }: {
   title: string;
   subtitle: string;
@@ -149,6 +150,7 @@ function PackageSliderRow({
   currencySymbol?: string;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { formatPrice } = useCurrency();
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -230,13 +232,13 @@ function PackageSliderRow({
                 <div>
                   <span className="text-[10px] text-foreground-subtle block">Starts from</span>
                   <span className="text-base font-black text-foreground">
-                    {currencySymbol}{pkg.price.toLocaleString()}
+                    {formatPrice(pkg.price, "INR")}
                   </span>
                   <span className="text-[10px] text-foreground-subtle"> / person</span>
                 </div>
 
                 <Link
-                  href={`/en/holidays/${pkg.id}`}
+                  href={`/en/holidays/${pkg.slug || pkg.id}`}
                   className="px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-dark text-primary-contrast text-xs font-bold transition-colors shadow-soft-sm"
                 >
                   Book

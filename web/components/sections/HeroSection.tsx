@@ -52,8 +52,12 @@ export default function HeroSection({ config }: HeroSectionProps) {
   const primaryColor = config?.theme?.colors?.primary || config?.theme?.primary || "#2882c5";
   const siteId = (config?.site?.id || config?.id || "gujjutours").toLowerCase();
   const siteName = config?.site?.name || "Travel Platform";
-  const tagline = moduleData?.meta?.title || config?.site?.tagline || "Your Gateway to Extraordinary Adventures";
-  const subtitle = moduleData?.meta?.subtitle || (
+
+  // Dynamic Content from MongoDB (Banners collection or Site Settings)
+  const activeHeroBanner = (moduleData as any)?.heroBanners?.[0] || (moduleData as any)?.banners?.[0];
+
+  const tagline = activeHeroBanner?.title || moduleData?.meta?.title || config?.site?.tagline || "Your Gateway to Extraordinary Adventures";
+  const subtitle = activeHeroBanner?.subtitle || moduleData?.meta?.subtitle || (
     siteId === "tripgoasia"
       ? "Discover verified attractions, seamless car rentals, airport transfers, and top-rated stays across Southeast Asia."
       : siteId === "technoheaven"
@@ -63,6 +67,9 @@ export default function HeroSection({ config }: HeroSectionProps) {
 
   // Dynamic tenant- and module-specific vibrant travel photography
   const heroBackground = React.useMemo(() => {
+    // 0. Dynamic live banner saved by admin in MongoDB
+    if (activeHeroBanner?.imageUrl) return activeHeroBanner.imageUrl;
+
     // 1. If tenant has custom banner in config
     const configuredBanner = config?.content?.banners?.[0]?.imageUrl;
     if (configuredBanner) return configuredBanner;
@@ -81,14 +88,15 @@ export default function HeroSection({ config }: HeroSectionProps) {
       return "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85";
     }
     return "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=85";
-  }, [config, siteId, activeModule]);
+  }, [activeHeroBanner, config, siteId, activeModule]);
 
   const heroBadge = React.useMemo(() => {
+    if (activeHeroBanner?.badge || activeHeroBanner?.tagline) return activeHeroBanner.badge || activeHeroBanner.tagline;
     if (moduleData?.meta?.badge) return moduleData.meta.badge;
     if (siteId === "tripgoasia") return "SOUTHEAST ASIA'S PREMIER TRAVEL PARTNER";
     if (siteId === "technoheaven") return "GLOBAL B2B TRAVEL TECHNOLOGY PORTAL";
     return "INDIA'S LEADING HOLIDAY & HOTEL PLANNER";
-  }, [siteId, moduleData]);
+  }, [activeHeroBanner, siteId, moduleData]);
 
   return (
     <div className="relative mb-12 sm:mb-16" data-section="hero">

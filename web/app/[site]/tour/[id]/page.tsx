@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 import { useState, useEffect, use } from "react";
+import { useParams, useRouter } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
+import { useCurrency } from "@/lib/CurrencyContext";
+import { useSite } from "@/lib/SiteContext";
+import { useAuth } from "@/lib/auth/AuthContext";
 import type { Tour } from "@/lib/type";
 import type { BookingTraveler } from "@/lib/api";
 import { getActualImageUrl } from "@/lib/imageUtils";
@@ -33,10 +37,16 @@ export default function TourDetailsPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = use(params);
+  const routeParams = useParams();
+  const site = (routeParams?.site as string) || "gujjutours";
+  const router = useRouter();
+  const siteDef = useSite();
+  const { user, isAuthenticated, getAccessToken } = useAuth();
   const config = useSiteConfig();
   const theme = config.theme || {};
   const primary = theme.primary || "#2563eb";
-  const currency = typeof config.currencySymbol === "string" ? config.currencySymbol : "$";
+  const { formatPrice, currencySymbol, convertPrice, currencyCode } = useCurrency();
+  const currency = currencySymbol;
 
   const [tour, setTour] = useState<Tour | null | undefined>(undefined);
   const [selectedImage, setSelectedImage] = useState<string>("");
@@ -106,7 +116,13 @@ export default function TourDetailsPage({
   useEffect(() => {
     let cancelled = false;
 
-    fetch(`/api/tours/${id}`, { cache: "no-store" })
+    fetch(`/api/tours/${id}?site=${site}`, {
+      cache: "no-store",
+      headers: {
+        "X-Website-Hostname": siteDef?.backendHostname || "",
+        "X-Website-Id": site,
+      },
+    })
       .then((res) => res.json())
       .then((json) => {
         if (cancelled) return;
@@ -121,7 +137,7 @@ export default function TourDetailsPage({
     return () => {
       cancelled = true;
     };
-  }, [id]);
+  }, [id, site, siteDef?.backendHostname]);
 
   // Synchronize individual travelers with Adults and Children counts
   useEffect(() => {
@@ -206,7 +222,8 @@ export default function TourDetailsPage({
     );
   }
 
-  const unitRate = tour.discountedPrice && tour.discountedPrice > 0 ? tour.discountedPrice : tour.price;
+  const rawUnit = tour.discountedPrice && tour.discountedPrice > 0 ? tour.discountedPrice : tour.price;
+  const unitRate = convertPrice(rawUnit, tour.currency || "INR");
   const childRate = Math.round(unitRate * 0.70);
   const totalTravelers = Math.max(1, formData.adults + formData.children);
   const subtotal = (formData.adults * unitRate) + (formData.children * childRate);
@@ -276,6 +293,12 @@ export default function TourDetailsPage({
     if (!cardData.nameOnCard) {
       setCardData({ ...cardData, nameOnCard: formData.name });
     }
+
+    if (!isAuthenticated) {
+      router.push(`/${site}/auth/login?redirect=/${site}/tour/${id}`);
+      return;
+    }
+
     setBookingStep(2);
   };
 
@@ -323,6 +346,8 @@ export default function TourDetailsPage({
         startDate: new Date(formData.startDate).toISOString(),
         endDate: new Date(formData.endDate).toISOString(),
         specialRequest: formData.specialRequests.trim() || undefined,
+        totalPrice,
+        currency: currencyCode,
         paymentMethod,
         paymentReference:
           paymentMethod === "card"
@@ -336,13 +361,21 @@ export default function TourDetailsPage({
         source: "web",
       };
 
+      const token = getAccessToken();
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+        "X-Idempotency-Key": idempotencyKey,
+        "X-Client-Source": "web",
+        "X-Website-Hostname": siteDef?.backendHostname || "",
+        "X-Website-Id": site,
+      };
+      if (token) {
+        headers["Authorization"] = `Bearer ${token}`;
+      }
+
       const response = await fetch("/api/bookings", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Idempotency-Key": idempotencyKey,
-          "X-Client-Source": "web",
-        },
+        headers,
         body: JSON.stringify(bookingPayload),
       });
 
@@ -530,7 +563,7 @@ export default function TourDetailsPage({
                 </div>
                 {tour.originalPrice && (
                   <span className="text-xs line-through text-slate-400 font-medium">
-                    {currency}{tour.originalPrice}
+                    {formatPrice(tour.originalPrice, tour.currency || "INR")}
                   </span>
                 )}
               </div>

@@ -104,7 +104,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 storeSetObject('auth.user', freshUser);
               }
             })
-            .catch(() => {});
+            .catch(async (err: any) => {
+              const status = err?.status ?? err?.statusCode;
+              if (status === 401 || err?.message?.includes('401') || err?.message?.includes('Unauthorized')) {
+                const refreshed = await apiRefreshSession();
+                if (!refreshed && !cancelled) {
+                  await clearAuthStorage();
+                  setToken(null);
+                  setUser(null);
+                }
+              }
+            });
         }
       } catch (err: unknown) {
         console.warn('[DEBUG] [AuthContext] Failed to restore auth session:', err);

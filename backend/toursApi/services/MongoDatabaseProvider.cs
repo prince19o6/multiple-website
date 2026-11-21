@@ -16,7 +16,8 @@ public class MongoDatabaseProvider : IMongoDatabaseProvider
     public MongoDatabaseProvider(IConfiguration configuration)
     {
         var connectionString = configuration["MongoDB:ConnectionString"]
-            ?? throw new InvalidOperationException("MongoDB:ConnectionString is not configured.");
+            ?? configuration.GetConnectionString("MongoDB")
+            ?? "mongodb://localhost:27017";
 
         MongoClientSettings settings;
         try
@@ -36,7 +37,7 @@ public class MongoDatabaseProvider : IMongoDatabaseProvider
         var tlsMode = configuration["MongoDB:TlsMode"] ?? "skip";
         var sslSettings = new SslSettings
         {
-            EnabledSslProtocols = SslProtocols.Tls12 | SslProtocols.Tls13,
+            EnabledSslProtocols = SslProtocols.Tls12,
             CheckCertificateRevocation = false,
         };
 

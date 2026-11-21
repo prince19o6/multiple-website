@@ -3,20 +3,29 @@
  *
  * Native Quotation Lead Sheet Modal.
  * Mirrors EnquiryModal of the web app, creating a pending_quotation booking.
+ * Features full dismissibility:
+ *  - Top-left dedicated Back Arrow button with haptic feedback
+ *  - Top-right Close (X) button
+ *  - Top Drag Handle
+ *  - Tap anywhere outside on the backdrop to dismiss
+ *  - Bottom "Cancel & Go Back" secondary button
+ *  - Android Hardware Back Button listener
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
   Modal,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   StyleSheet,
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  BackHandler,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -52,6 +61,24 @@ export function MobileEnquirySheet({
   const [submittedRef, setSubmittedRef] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  // Sync default destination when prop changes
+  useEffect(() => {
+    if (defaultDestination) {
+      setDestination(defaultDestination);
+    }
+  }, [defaultDestination]);
+
+  // Support Android hardware back button
+  useEffect(() => {
+    if (!visible) return;
+    const backAction = () => {
+      handleClose();
+      return true;
+    };
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+    return () => backHandler.remove();
+  }, [visible]);
+
   const resetForm = () => {
     setName('');
     setPhone('');
@@ -63,6 +90,11 @@ export function MobileEnquirySheet({
   };
 
   const handleClose = () => {
+    if (Platform.OS !== 'web') {
+      try {
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      } catch {}
+    }
     resetForm();
     onClose();
   };
@@ -117,9 +149,11 @@ export function MobileEnquirySheet({
       const json = await res.json().catch(() => null);
       const generatedRef = json?.data?.reference || json?.reference || ref;
       setSubmittedRef(generatedRef);
-      try {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-      } catch {}
+      if (Platform.OS !== 'web') {
+        try {
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        } catch {}
+      }
     } catch (err: any) {
       setErrorMessage(err?.message || 'Error submitting quote inquiry');
     } finally {
@@ -138,20 +172,50 @@ export function MobileEnquirySheet({
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.overlay}
       >
+        {/* Tapping outside on the darkened backdrop dismisses the sheet */}
+        <TouchableWithoutFeedback onPress={handleClose} accessibilityLabel="Dismiss">
+          <View style={styles.backdrop} />
+        </TouchableWithoutFeedback>
+
         <View style={[styles.sheet, { backgroundColor: colors.surface }]}>
+          {/* Top visual drag indicator */}
+          <View style={styles.dragHandleContainer}>
+            <View style={styles.dragHandle} />
+          </View>
+
+          {/* Header with Back, Title, and Close */}
           <View style={styles.sheetHeader}>
-            <View>
-              <Text style={[styles.title, { color: colors.heading }]}>
+            <TouchableOpacity
+              testID="btn-back"
+              accessibilityLabel="Back"
+              accessibilityRole="button"
+              onPress={handleClose}
+              style={[styles.navBtn, { backgroundColor: colors.border + '22' }]}
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            >
+              <Ionicons name="arrow-back" size={20} color={colors.heading} />
+            </TouchableOpacity>
+
+            <View style={styles.headerTextWrap}>
+              <Text numberOfLines={1} ellipsizeMode="tail" style={[styles.title, { color: colors.heading }]}>
                 {submittedRef ? 'Quotation Confirmed!' : `Get Quote: ${serviceName}`}
               </Text>
-              <Text style={[styles.sub, { color: colors.mutedText }]}>
+              <Text numberOfLines={1} ellipsizeMode="tail" style={[styles.sub, { color: colors.mutedText }]}>
                 {submittedRef
                   ? 'Our travel desk will contact you within 2 hours'
                   : 'Fast response with direct wholesaler rates'}
               </Text>
             </View>
-            <TouchableOpacity testID="btn-close" accessibilityLabel="Close" onPress={handleClose} style={styles.closeBtn}>
-              <Ionicons name="close" size={22} color={colors.heading} />
+
+            <TouchableOpacity
+              testID="btn-close"
+              accessibilityLabel="Close"
+              accessibilityRole="button"
+              onPress={handleClose}
+              style={[styles.navBtn, { backgroundColor: colors.border + '22' }]}
+              hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            >
+              <Ionicons name="close" size={20} color={colors.heading} />
             </TouchableOpacity>
           </View>
 
@@ -169,7 +233,10 @@ export function MobileEnquirySheet({
               <Text style={[styles.successMsg, { color: colors.mutedText }]}>
                 A dedicated destination specialist will review your request and send the customized itinerary and price quote via WhatsApp &amp; Email.
               </Text>
-              <TouchableOpacity testID="btn-done" accessibilityLabel="Done"
+              <TouchableOpacity
+                testID="btn-done"
+                accessibilityLabel="Done"
+                accessibilityRole="button"
                 style={[styles.confirmBtn, { backgroundColor: colors.primary }]}
                 onPress={handleClose}
               >
@@ -249,7 +316,11 @@ export function MobileEnquirySheet({
                 </View>
               )}
 
-              <TouchableOpacity testID="btn-submit" accessibilityLabel="Submit"
+              {/* Submit CTA Button */}
+              <TouchableOpacity
+                testID="btn-submit"
+                accessibilityLabel="Submit"
+                accessibilityRole="button"
                 style={[styles.submitBtn, { backgroundColor: colors.primary }]}
                 onPress={handleSubmit}
                 disabled={isSubmitting}
@@ -260,6 +331,19 @@ export function MobileEnquirySheet({
                 ) : (
                   <Text style={styles.submitBtnText}>Request Free Quotation 🚀</Text>
                 )}
+              </TouchableOpacity>
+
+              {/* Explicit Back / Cancel Button at bottom */}
+              <TouchableOpacity
+                testID="btn-cancel"
+                accessibilityLabel="Cancel and Go Back"
+                accessibilityRole="button"
+                style={[styles.cancelBtn, { borderColor: colors.border, backgroundColor: colors.background }]}
+                onPress={handleClose}
+                activeOpacity={0.7}
+              >
+                <Ionicons name="arrow-back" size={16} color={colors.heading} style={{ marginRight: 6 }} />
+                <Text style={[styles.cancelBtnText, { color: colors.heading }]}>Cancel &amp; Go Back</Text>
               </TouchableOpacity>
             </ScrollView>
           )}
@@ -275,28 +359,57 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'flex-end',
   },
+  backdrop: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
   sheet: {
     borderTopLeftRadius: RADIUS.xl + 4,
     borderTopRightRadius: RADIUS.xl + 4,
-    padding: SPACING.lg,
+    paddingHorizontal: SPACING.lg,
+    paddingTop: SPACING.xs,
+    paddingBottom: Platform.OS === 'ios' ? SPACING.xl : SPACING.lg,
     maxHeight: '90%',
+  },
+  dragHandleContainer: {
+    alignItems: 'center',
+    paddingVertical: 6,
+  },
+  dragHandle: {
+    width: 36,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: '#9ca3af',
+    opacity: 0.5,
   },
   sheetHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: SPACING.md,
+    paddingVertical: SPACING.xs + 2,
+    marginBottom: SPACING.xs,
+  },
+  navBtn: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerTextWrap: {
+    flex: 1,
+    paddingHorizontal: SPACING.xs,
   },
   title: {
-    fontSize: FONT_SIZE.md,
+    fontSize: FONT_SIZE.md - 1,
     fontWeight: '800',
   },
   sub: {
-    fontSize: FONT_SIZE.xs,
-    marginTop: 2,
-  },
-  closeBtn: {
-    padding: SPACING.xs,
+    fontSize: FONT_SIZE.xs - 1,
+    marginTop: 1,
   },
   formContent: {
     paddingBottom: SPACING.xl,
@@ -348,6 +461,19 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: FONT_SIZE.sm,
     fontWeight: '800',
+  },
+  cancelBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: SPACING.sm + 3,
+    borderRadius: RADIUS.lg,
+    borderWidth: 1,
+    marginTop: SPACING.xs + 4,
+  },
+  cancelBtnText: {
+    fontSize: FONT_SIZE.xs + 1,
+    fontWeight: '700',
   },
   successBox: {
     alignItems: 'center',

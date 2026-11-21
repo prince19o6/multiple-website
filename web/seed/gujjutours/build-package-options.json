@@ -13,7 +13,7 @@
     "badge": "Bestseller Builder",
     "overview": "Tailor every detail of your vacation to Dubai & Abu Dhabi. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -316,8 +316,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 42000,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -345,7 +345,7 @@
     "badge": "Honeymoon Favorite",
     "overview": "Tailor every detail of your vacation to Bali Island Paradise. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -628,8 +628,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 38000,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -657,7 +657,7 @@
     "badge": "Family Top Choice",
     "overview": "Tailor every detail of your vacation to Singapore Garden City. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -940,8 +940,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 48000,
-    "coverImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -969,7 +969,7 @@
     "badge": "Budget Friendly",
     "overview": "Tailor every detail of your vacation to Thailand (Bangkok & Phuket). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1252,8 +1252,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 32000,
-    "coverImage": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
@@ -1281,7 +1281,7 @@
     "badge": "Scenic Romance",
     "overview": "Tailor every detail of your vacation to Kashmir Paradise (Srinagar & Gulmarg). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1564,8 +1564,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 28000,
-    "coverImage": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
@@ -1593,7 +1593,7 @@
     "badge": "Nature & Ayurveda",
     "overview": "Tailor every detail of your vacation to Kerala Backwaters (Munnar & Alleppey). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -1876,8 +1876,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 26000,
-    "coverImage": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
@@ -1905,7 +1905,7 @@
     "badge": "Weekend Favorite",
     "overview": "Tailor every detail of your vacation to Goa Coastal Getaway (North & South). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -2188,8 +2188,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 22000,
-    "coverImage": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
@@ -2217,7 +2217,7 @@
     "badge": "Heritage & Culture",
     "overview": "Tailor every detail of your vacation to Rajasthan Royal Circuit (Jaipur & Udaipur). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2500,8 +2500,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 27000,
-    "coverImage": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
@@ -2529,7 +2529,7 @@
     "badge": "Trending International",
     "overview": "Tailor every detail of your vacation to Vietnam Wonders (Hanoi & Da Nang). Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
@@ -2812,8 +2812,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 39000,
-    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
@@ -2841,7 +2841,7 @@
     "badge": "Dream European",
     "overview": "Tailor every detail of your vacation to Switzerland & Paris Panorama. Select from curated durations, roundtrip flights, 3 to 5-star handpicked accommodations, priority sightseeing activities, private transfers, and hassle-free visa processing.",
     "heroImage": "/seed-images/buildpackage/build-destination.svg",
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "image": "/seed-images/buildpackage/build-destination.svg",
     "images": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
@@ -3124,8 +3124,8 @@
     "status": "Active",
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 115000,
-    "coverImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+    "coverImage": "/seed-images/buildpackage/build-destination.svg",
+    "imageUrl": "/seed-images/buildpackage/build-destination.svg",
     "thumbnail": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",

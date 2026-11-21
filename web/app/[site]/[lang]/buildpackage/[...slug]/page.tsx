@@ -160,7 +160,7 @@ export default function BuildPackageDetailPage() {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`/api/buildpackage/${encodeURIComponent(targetSlug)}`);
+        const res = await fetch(`/api/buildpackage/${encodeURIComponent(targetSlug)}?site=${encodeURIComponent(siteId)}`);
         if (!res.ok) throw new Error("Custom package template not found");
         const json = await res.json();
         if (mounted && json.success && json.data) {

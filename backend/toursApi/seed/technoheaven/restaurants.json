@@ -16,7 +16,7 @@
     "priceRange": "$$",
     "costForTwo": 100,
     "netCost": 82,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 265,
     "isNew": false,
@@ -33,11 +33,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -51,8 +50,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviewCount": 265,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -83,7 +82,7 @@
     "priceRange": "$$",
     "costForTwo": 110,
     "netCost": 90,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 772,
     "isNew": false,
@@ -100,11 +99,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -118,8 +116,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 110,
     "reviewCount": 772,
-    "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
@@ -150,7 +148,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 368,
     "isNew": false,
@@ -166,11 +164,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -184,8 +181,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 368,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -216,7 +213,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 780,
     "isNew": true,
@@ -232,11 +229,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -250,8 +246,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 780,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -282,7 +278,7 @@
     "priceRange": "$$",
     "costForTwo": 100,
     "netCost": 82,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 524,
     "isNew": false,
@@ -299,11 +295,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -317,8 +312,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviewCount": 524,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -349,7 +344,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 160,
     "isNew": false,
@@ -367,11 +362,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -385,8 +379,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 160,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -417,7 +411,7 @@
     "priceRange": "$$",
     "costForTwo": 100,
     "netCost": 82,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 143,
     "isNew": false,
@@ -434,11 +428,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -452,8 +445,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviewCount": 143,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -484,7 +477,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 666,
     "isNew": true,
@@ -502,11 +495,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -520,8 +512,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 666,
-    "coverImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
@@ -552,7 +544,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 270,
     "isNew": false,
@@ -569,11 +561,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -587,8 +578,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 270,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -619,7 +610,7 @@
     "priceRange": "$$",
     "costForTwo": 90,
     "netCost": 74,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 784,
     "isNew": false,
@@ -636,11 +627,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -654,8 +644,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 90,
     "reviewCount": 784,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -686,7 +676,7 @@
     "priceRange": "$$",
     "costForTwo": 100,
     "netCost": 82,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 700,
     "isNew": false,
@@ -702,11 +692,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-indian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-indian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Dum Pukht Biryani",
@@ -720,8 +709,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 100,
     "reviewCount": 700,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-indian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-indian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -752,7 +741,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 424,
     "isNew": true,
@@ -771,11 +760,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -790,8 +778,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 424,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -822,7 +810,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 436,
     "isNew": false,
@@ -840,11 +828,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -859,8 +846,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 436,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -891,7 +878,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 310,
     "isNew": false,
@@ -909,11 +896,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -928,8 +914,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 310,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -960,7 +946,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 745,
     "isNew": false,
@@ -978,11 +964,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -997,8 +982,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 745,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -1029,7 +1014,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 227,
     "isNew": true,
@@ -1048,11 +1033,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1067,8 +1051,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 227,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -1099,7 +1083,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 754,
     "isNew": false,
@@ -1117,11 +1101,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1136,8 +1119,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 754,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -1168,7 +1151,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 547,
     "isNew": false,
@@ -1186,11 +1169,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1205,8 +1187,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 547,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -1237,7 +1219,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 621,
     "isNew": false,
@@ -1256,11 +1238,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1275,8 +1256,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 621,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -1307,7 +1288,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 532,
     "isNew": true,
@@ -1326,11 +1307,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1345,8 +1325,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 532,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -1377,7 +1357,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 781,
     "isNew": false,
@@ -1396,11 +1376,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1415,8 +1394,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 781,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -1447,7 +1426,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 323,
     "isNew": false,
@@ -1466,11 +1445,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-gujarati-thali.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Undhiyu & Puri",
@@ -1485,8 +1463,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 323,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-gujarati-thali.svg",
+    "imageUrl": "/seed-images/restaurants/dining-gujarati-thali.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -1517,7 +1495,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 101,
     "isNew": false,
@@ -1536,11 +1514,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1554,8 +1531,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 101,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -1586,7 +1563,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 503,
     "isNew": true,
@@ -1605,11 +1582,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1623,8 +1599,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 503,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -1655,7 +1631,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 507,
     "isNew": false,
@@ -1674,11 +1650,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1692,8 +1667,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 507,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -1724,7 +1699,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 339,
     "isNew": false,
@@ -1743,11 +1718,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1761,8 +1735,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 339,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -1793,7 +1767,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 534,
     "isNew": false,
@@ -1812,11 +1786,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1830,8 +1803,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 534,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -1862,7 +1835,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 296,
     "isNew": true,
@@ -1881,11 +1854,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1899,8 +1871,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 296,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -1931,7 +1903,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 91,
     "isNew": false,
@@ -1950,11 +1922,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -1968,8 +1939,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 91,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -2000,7 +1971,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 671,
     "isNew": false,
@@ -2019,11 +1990,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -2037,8 +2007,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 671,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -2069,7 +2039,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 187,
     "isNew": false,
@@ -2088,11 +2058,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -2106,8 +2075,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 187,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -2138,7 +2107,7 @@
     "priceRange": "$$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 593,
     "isNew": true,
@@ -2157,11 +2126,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -2175,8 +2143,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 593,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -2207,7 +2175,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 144,
     "isNew": false,
@@ -2226,11 +2194,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-jain.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-jain.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Jain Paneer Lababdar",
@@ -2244,8 +2211,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 144,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-jain.svg",
+    "imageUrl": "/seed-images/restaurants/dining-jain.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -2276,7 +2243,7 @@
     "priceRange": "$$",
     "costForTwo": 80,
     "netCost": 66,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 337,
     "isNew": false,
@@ -2295,11 +2262,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2313,8 +2279,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviewCount": 337,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -2345,7 +2311,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 632,
     "isNew": false,
@@ -2363,11 +2329,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2381,8 +2346,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 632,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -2413,7 +2378,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 298,
     "isNew": true,
@@ -2431,11 +2396,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2449,8 +2413,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 298,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -2481,7 +2445,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 319,
     "isNew": false,
@@ -2499,11 +2463,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2517,8 +2480,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 319,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -2549,7 +2512,7 @@
     "priceRange": "$$",
     "costForTwo": 80,
     "netCost": 66,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 516,
     "isNew": false,
@@ -2567,11 +2530,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2585,8 +2547,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviewCount": 516,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -2617,7 +2579,7 @@
     "priceRange": "$$",
     "costForTwo": 80,
     "netCost": 66,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 441,
     "isNew": false,
@@ -2636,11 +2598,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2654,8 +2615,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviewCount": 441,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -2686,7 +2647,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 486,
     "isNew": true,
@@ -2705,11 +2666,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2723,8 +2683,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 486,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -2755,7 +2715,7 @@
     "priceRange": "$$",
     "costForTwo": 80,
     "netCost": 66,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 603,
     "isNew": false,
@@ -2774,11 +2734,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2792,8 +2751,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 80,
     "reviewCount": 603,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -2824,7 +2783,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 188,
     "isNew": false,
@@ -2842,11 +2801,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2860,8 +2818,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 188,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -2892,7 +2850,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 673,
     "isNew": false,
@@ -2911,11 +2869,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2929,8 +2886,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 673,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -2961,7 +2918,7 @@
     "priceRange": "$$",
     "costForTwo": 70,
     "netCost": 57,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 493,
     "isNew": true,
@@ -2979,11 +2936,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-pureveg.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-pureveg.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Paneer Makhani",
@@ -2997,8 +2953,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 70,
     "reviewCount": 493,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-pureveg.svg",
+    "imageUrl": "/seed-images/restaurants/dining-pureveg.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -3029,7 +2985,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 107,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 821,
     "isNew": false,
@@ -3046,11 +3002,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3064,8 +3019,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 821,
-    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
@@ -3096,7 +3051,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 115,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 742,
     "isNew": false,
@@ -3112,11 +3067,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3130,8 +3084,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 742,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -3162,7 +3116,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 115,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 430,
     "isNew": false,
@@ -3179,11 +3133,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3197,8 +3150,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 430,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -3229,7 +3182,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 115,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 353,
     "isNew": true,
@@ -3246,11 +3199,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3264,8 +3216,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 353,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -3296,7 +3248,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 115,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 498,
     "isNew": false,
@@ -3312,11 +3264,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3330,8 +3281,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 498,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -3362,7 +3313,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 107,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 754,
     "isNew": false,
@@ -3379,11 +3330,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3397,8 +3347,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 754,
-    "coverImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
@@ -3429,7 +3379,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 107,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 138,
     "isNew": false,
@@ -3446,11 +3396,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3464,8 +3413,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 138,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -3496,7 +3445,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 123,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 785,
     "isNew": true,
@@ -3512,11 +3461,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3530,8 +3478,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 785,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -3562,7 +3510,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 115,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 122,
     "isNew": false,
@@ -3579,11 +3527,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3597,8 +3544,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 122,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -3629,7 +3576,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 123,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 568,
     "isNew": false,
@@ -3645,11 +3592,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3663,8 +3609,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 568,
-    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
@@ -3695,7 +3641,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 123,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 389,
     "isNew": false,
@@ -3712,11 +3658,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-asian.svg",
     "images": [
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85"
+      "/seed-images/restaurants/dining-asian.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Truffle Edamame Dumplings",
@@ -3730,8 +3675,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 389,
-    "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-asian.svg",
+    "imageUrl": "/seed-images/restaurants/dining-asian.svg",
     "thumbnail": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
@@ -3762,7 +3707,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 148,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 206,
     "isNew": true,
@@ -3779,11 +3724,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -3797,8 +3741,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 206,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -3829,7 +3773,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 148,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 522,
     "isNew": false,
@@ -3847,11 +3791,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -3865,8 +3808,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 522,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -3897,7 +3840,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 139,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 413,
     "isNew": false,
@@ -3914,11 +3857,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -3932,8 +3874,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 413,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -3964,7 +3906,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 123,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 646,
     "isNew": false,
@@ -3980,11 +3922,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -3998,8 +3939,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 646,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -4030,7 +3971,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 148,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 837,
     "isNew": true,
@@ -4046,11 +3987,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4064,8 +4004,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 837,
-    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
@@ -4096,7 +4036,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 123,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 712,
     "isNew": false,
@@ -4113,11 +4053,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4131,8 +4070,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 712,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -4163,7 +4102,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 131,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 638,
     "isNew": false,
@@ -4179,11 +4118,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4197,8 +4135,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 638,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -4229,7 +4167,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 139,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 576,
     "isNew": false,
@@ -4246,11 +4184,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4264,8 +4201,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 576,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -4296,7 +4233,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 131,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 805,
     "isNew": true,
@@ -4314,11 +4251,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4332,8 +4268,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 805,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -4364,7 +4300,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 139,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 392,
     "isNew": false,
@@ -4382,11 +4318,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4400,8 +4335,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 392,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -4432,7 +4367,7 @@
     "priceRange": "$$$",
     "costForTwo": 65,
     "netCost": 148,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 696,
     "isNew": false,
@@ -4449,11 +4384,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-seafood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-seafood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Grilled Jumbo Prawns",
@@ -4467,8 +4401,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 696,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-seafood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-seafood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -4499,7 +4433,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 230,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 532,
     "isNew": false,
@@ -4516,11 +4450,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4534,8 +4467,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 532,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -4566,7 +4499,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 246,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 635,
     "isNew": true,
@@ -4583,11 +4516,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4601,8 +4533,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 635,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -4633,7 +4565,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 213,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 191,
     "isNew": false,
@@ -4650,11 +4582,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4668,8 +4599,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 191,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -4700,7 +4631,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 230,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 579,
     "isNew": false,
@@ -4717,11 +4648,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4735,8 +4665,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 579,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -4767,7 +4697,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 213,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.7,
     "reviews": 169,
     "isNew": false,
@@ -4785,11 +4715,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4803,8 +4732,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 169,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -4835,7 +4764,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 221,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 303,
     "isNew": true,
@@ -4852,11 +4781,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4870,8 +4798,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 303,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -4902,7 +4830,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 221,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 309,
     "isNew": false,
@@ -4919,11 +4847,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -4937,8 +4864,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 309,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -4969,7 +4896,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 254,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 93,
     "isNew": false,
@@ -4986,11 +4913,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -5004,8 +4930,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 93,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -5036,7 +4962,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 213,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 472,
     "isNew": false,
@@ -5054,11 +4980,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -5072,8 +4997,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 472,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -5104,7 +5029,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 230,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 687,
     "isNew": true,
@@ -5121,11 +5046,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -5139,8 +5063,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 687,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -5171,7 +5095,7 @@
     "priceRange": "$$$$",
     "costForTwo": 65,
     "netCost": 205,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 672,
     "isNew": false,
@@ -5188,11 +5112,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-finedine.svg",
     "images": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-finedine.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Sous-Vide Wild Mushrooms",
@@ -5206,8 +5129,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 65,
     "reviewCount": 672,
-    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-finedine.svg",
+    "imageUrl": "/seed-images/restaurants/dining-finedine.svg",
     "thumbnail": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
@@ -5238,7 +5161,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 224,
     "isNew": false,
@@ -5256,11 +5179,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5274,8 +5196,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 224,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -5306,7 +5228,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 811,
     "isNew": false,
@@ -5324,11 +5246,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5342,8 +5263,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 811,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -5374,7 +5295,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 555,
     "isNew": true,
@@ -5391,11 +5312,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5409,8 +5329,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 555,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -5441,7 +5361,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 742,
     "isNew": false,
@@ -5459,11 +5379,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5477,8 +5396,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 742,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -5509,7 +5428,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 641,
     "isNew": false,
@@ -5527,11 +5446,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5545,8 +5463,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 641,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -5577,7 +5495,7 @@
     "priceRange": "$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 490,
     "isNew": false,
@@ -5595,11 +5513,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5613,8 +5530,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 490,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -5645,7 +5562,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 237,
     "isNew": true,
@@ -5662,11 +5579,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5680,8 +5596,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 237,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -5712,7 +5628,7 @@
     "priceRange": "$",
     "costForTwo": 60,
     "netCost": 49,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 543,
     "isNew": false,
@@ -5729,11 +5645,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5747,8 +5662,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 60,
     "reviewCount": 543,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -5779,7 +5694,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 795,
     "isNew": false,
@@ -5796,11 +5711,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5814,8 +5728,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 795,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -5846,7 +5760,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.5,
     "reviews": 245,
     "isNew": false,
@@ -5864,11 +5778,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5882,8 +5795,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 245,
-    "coverImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
@@ -5914,7 +5827,7 @@
     "priceRange": "$",
     "costForTwo": 50,
     "netCost": 41,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 403,
     "isNew": true,
@@ -5932,11 +5845,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-cafe.svg",
     "images": [
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85"
+      "/seed-images/restaurants/dining-cafe.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Specialty Single-Origin Espresso",
@@ -5950,8 +5862,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 50,
     "reviewCount": 403,
-    "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-cafe.svg",
+    "imageUrl": "/seed-images/restaurants/dining-cafe.svg",
     "thumbnail": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
@@ -5982,7 +5894,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.3,
     "reviews": 170,
     "isNew": false,
@@ -6000,11 +5912,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6018,8 +5929,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 170,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -6050,7 +5961,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 218,
     "isNew": false,
@@ -6068,11 +5979,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6086,8 +5996,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 218,
-    "coverImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
@@ -6118,7 +6028,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 232,
     "isNew": false,
@@ -6137,11 +6047,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6155,8 +6064,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 232,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -6187,7 +6096,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.9,
     "reviews": 629,
     "isNew": true,
@@ -6205,11 +6114,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6223,8 +6131,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 629,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -6255,7 +6163,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.1,
     "reviews": 274,
     "isNew": false,
@@ -6273,11 +6181,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6291,8 +6198,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 274,
-    "coverImage": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
@@ -6323,7 +6230,7 @@
     "priceRange": "$",
     "costForTwo": 40,
     "netCost": 33,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 651,
     "isNew": false,
@@ -6341,11 +6248,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6359,8 +6265,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 40,
     "reviewCount": 651,
-    "coverImage": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
@@ -6391,7 +6297,7 @@
     "priceRange": "$",
     "costForTwo": 40,
     "netCost": 33,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 152,
     "isNew": false,
@@ -6409,11 +6315,10 @@
       "Live Music"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6427,8 +6332,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 40,
     "reviewCount": 152,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -6459,7 +6364,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.8,
     "reviews": 564,
     "isNew": true,
@@ -6477,11 +6382,10 @@
       "Air Conditioned"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85",
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6495,8 +6399,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 564,
-    "coverImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
@@ -6527,7 +6431,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.2,
     "reviews": 793,
     "isNew": false,
@@ -6546,11 +6450,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-      "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=85",
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6564,8 +6467,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 793,
-    "coverImage": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
@@ -6596,7 +6499,7 @@
     "priceRange": "$",
     "costForTwo": 30,
     "netCost": 25,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.4,
     "reviews": 274,
     "isNew": false,
@@ -6615,11 +6518,10 @@
       "Live Music"
     ],
     "timings": "12:00 PM - 11:00 PM (All Day Dining)",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6633,8 +6535,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 30,
     "reviewCount": 274,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
@@ -6665,7 +6567,7 @@
     "priceRange": "$",
     "costForTwo": 40,
     "netCost": 33,
-    "currency": "USD",
+    "currency": "AED",
     "rating": 4.6,
     "reviews": 240,
     "isNew": false,
@@ -6684,11 +6586,10 @@
       "Air Conditioned"
     ],
     "timings": "11:30 AM - 03:30 PM, 07:00 PM - 11:30 PM",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "image": "/seed-images/restaurants/dining-streetfood.svg",
     "images": [
-      "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-      "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85"
+      "/seed-images/restaurants/dining-streetfood.svg",
+      "/seed-images/restaurants/dining-indian.svg"
     ],
     "specialties": [
       "Butter Pav Bhaji",
@@ -6702,8 +6603,8 @@
     "createdAt": "2026-10-01T00:00:00.000Z",
     "price": 40,
     "reviewCount": 240,
-    "coverImage": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
-    "imageUrl": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",
+    "coverImage": "/seed-images/restaurants/dining-streetfood.svg",
+    "imageUrl": "/seed-images/restaurants/dining-streetfood.svg",
     "thumbnail": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=85",
     "gallery": [
       "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1200&q=85",

@@ -16,10 +16,12 @@ export default function TopBar({ config, isAdminLoggedIn }: TopBarProps) {
   const [selectedLang, setSelectedLang] = useState("EN");
 
   const phone =
+    config?.websiteContact?.phone ||
     config?.content?.contact?.phone ||
     config?.contact?.phone ||
     "+91 9875095616";
   const email =
+    config?.websiteContact?.email ||
     config?.content?.contact?.email ||
     config?.contact?.email ||
     "booking@gujjutours.com";

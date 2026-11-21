@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
+import { useSite } from "@/lib/SiteContext";
+import { api } from "@/lib/api/client";
 
 interface FAQItem {
   id: string;
@@ -72,13 +74,46 @@ const FAQS: FAQItem[] = [
 
 export default function FAQPage() {
   const config = useSiteConfig();
+  const site = useSite();
   const brandName = config.name || "Gujju Tours";
 
+  const [faqList, setFaqList] = useState<FAQItem[]>(FAQS);
+  const [loading, setLoading] = useState<boolean>(true);
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [expandedId, setExpandedId] = useState<string | null>("f1");
 
-  const filteredFaqs = FAQS.filter((faq) => {
+  useEffect(() => {
+    let isMounted = true;
+    async function loadDynamicFaqs() {
+      try {
+        const res = await api.get<{ success: boolean; data: any[] }>(
+          `/api/faqs`,
+          { siteId: site.siteId }
+        );
+        if (isMounted && res.success && Array.isArray(res.data) && res.data.length > 0) {
+          const mapped: FAQItem[] = res.data.map((item: any, idx: number) => ({
+            id: String(item.id || `faq_${idx}`),
+            category: item.category || "booking",
+            question: item.question || item.title || "",
+            answer: item.answer || item.description || "",
+          }));
+          setFaqList(mapped);
+          if (mapped[0]?.id) setExpandedId(mapped[0].id);
+        }
+      } catch {
+        // Keep fallback
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+    loadDynamicFaqs();
+    return () => {
+      isMounted = false;
+    };
+  }, [site.siteId]);
+
+  const filteredFaqs = faqList.filter((faq) => {
     const matchesCat = activeCategory === "all" || faq.category === activeCategory;
     const matchesSearch =
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -163,7 +198,19 @@ export default function FAQPage() {
 
         {/* FAQ Accordion List */}
         <div className="space-y-3">
-          {filteredFaqs.length === 0 ? (
+          {loading ? (
+            <div className="space-y-3">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 p-5 animate-pulse flex items-center justify-between"
+                >
+                  <div className="h-4 bg-neutral-200 dark:bg-neutral-800 rounded w-3/4" />
+                  <div className="h-4 w-4 bg-neutral-200 dark:bg-neutral-800 rounded" />
+                </div>
+              ))}
+            </div>
+          ) : filteredFaqs.length === 0 ? (
             <div className="text-center py-12 bg-white dark:bg-neutral-900 rounded-3xl border border-neutral-200 dark:border-neutral-800 p-8">
               <span className="text-3xl">🤔</span>
               <h3 className="text-sm font-bold text-neutral-900 dark:text-white mt-2">

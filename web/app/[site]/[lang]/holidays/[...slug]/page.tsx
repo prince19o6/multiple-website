@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, notFound } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useSite } from "@/lib/SiteContext";
+import { getPackageBySlug } from "@/lib/api/packages";
+import { LoadingSkeleton, ErrorState } from "@/components/common";
 import EnquiryModal from "@/components/lead/EnquiryModal";
 
 interface HotelStay {
@@ -62,128 +64,7 @@ interface PackageDetail {
   };
 }
 
-const FALLBACK_PACKAGE: PackageDetail = {
-  id: 1001,
-  title: "Kashmir Valley Paradise: Srinagar, Gulmarg & Pahalgam with Shikara Ride",
-  slug: "kashmir-valley-paradise-srinagar-gulmarg-pahalga-4n-1001",
-  category: "Scenic Escapes Across India & Beyond",
-  categorySlug: "scenic-escapes",
-  destination: "Srinagar",
-  city: "Srinagar",
-  country: "India",
-  citiesCovered: "Srinagar (2N), Gulmarg (1N), Pahalgam (1N)",
-  duration: "5 Days / 4 Nights",
-  durationDays: 5,
-  durationNights: 4,
-  startingPrice: 37400,
-  price: 37400,
-  originalPrice: 45500,
-  currency: "INR",
-  rating: 4.9,
-  reviews: 691,
-  image: "/seed-images/packages/package-scenic.svg",
-  images: [
-    "/seed-images/packages/package-scenic.svg",
-    "/seed-images/packages/package-family.svg",
-    "/seed-images/packages/package-honeymoon.svg",
-  ],
-  keyInclusions: [
-    "5★ Hotel Stays",
-    "Daily Pure Veg Meals",
-    "AC Private Cab Transfers",
-    "All Landmark Entry Passes",
-    "24/7 Concierge Support",
-  ],
-  hotelStays: [
-    {
-      hotelName: "Grand Srinagar Resort & Spa",
-      starRating: 5,
-      nights: 2,
-      city: "Srinagar",
-      roomType: "Deluxe Lake View Heritage Room",
-    },
-    {
-      hotelName: "Gulmarg Highland Peaks Hotel",
-      starRating: 5,
-      nights: 1,
-      city: "Gulmarg",
-      roomType: "Pine Valley Alpine Suite",
-    },
-    {
-      hotelName: "Pahalgam Valley View Luxury Cottage",
-      starRating: 5,
-      nights: 1,
-      city: "Pahalgam",
-      roomType: "Riverside Wooden Cottage",
-    },
-  ],
-  itinerary: [
-    {
-      day: 1,
-      title: "Arrival in Srinagar & Traditional Shikara Ride on Dal Lake",
-      description: "Arrive at Srinagar Airport. Receive a warm traditional welcome from our representative and transfer in private comfort to your luxury hotel. In the evening, enjoy a sunset Shikara ride across serene Dal Lake, visiting floating gardens.",
-      meals: ["Pure Veg Dinner"],
-      highlights: ["Airport Pickup", "Dal Lake Shikara Ride", "Floating Gardens"],
-    },
-    {
-      day: 2,
-      title: "Srinagar to Gulmarg Excursion & Gondola Cable Car Ride",
-      description: "After an early morning breakfast, drive towards Gulmarg through scenic pine-clad valleys. Ascend on the world-famous Gulmarg Gondola to Kongdoori and Apharwat Peak for breathtaking views of snow-draped Himalayan summits.",
-      meals: ["Breakfast", "Pure Veg Lunch", "Jain Dinner"],
-      highlights: ["Gulmarg Gondola", "Snow Viewpoint", "Highland Meadows"],
-    },
-    {
-      day: 3,
-      title: "Scenic Transfer to Pahalgam & Betaab Valley Discovery",
-      description: "Depart towards the enchanting valley of Pahalgam along the roaring Lidder River. En route, explore the saffron fields of Pampore and historic Awantipora ruins. In the afternoon, visit Betaab Valley and Aru Valley.",
-      meals: ["Breakfast", "Pure Veg Lunch", "Jain Dinner"],
-      highlights: ["Saffron Fields", "Awantipora Ruins", "Betaab Valley"],
-    },
-    {
-      day: 4,
-      title: "Pahalgam Pine Trails & Return to Srinagar Heritage Houseboat",
-      description: "Enjoy horse riding along Baisaran meadows (Mini Switzerland). Post lunch, journey back to Srinagar and check in to a deluxe carved cedar wood houseboat with dinner served under starlit skies.",
-      meals: ["Breakfast", "Pure Veg Lunch", "Jain Dinner"],
-      highlights: ["Baisaran Valley", "Cedar Wood Houseboat", "Sunset Over Waters"],
-    },
-    {
-      day: 5,
-      title: "Mughal Gardens Tour & Airport Departure",
-      description: "Visit the iconic Shalimar and Nishat Mughal Gardens before completing your final souvenir shopping for Kashmiri saffron, dry fruits, and pashmina shawls. Transfer to Srinagar Airport for your onward flight.",
-      meals: ["Breakfast"],
-      highlights: ["Shalimar Bagh", "Nishat Garden", "Airport Transfer"],
-    },
-  ],
-  inclusions: [
-    "Accommodation for 4 nights in 4★/5★ verified hotels and luxury houseboats",
-    "Daily 100% Pure Vegetarian breakfast & dinners (dedicated Jain catering)",
-    "Private air-conditioned vehicle for all airport transfers and sightseeing excursions",
-    "Complimentary Shikara ride voucher for Dal Lake",
-    "All driver allowances, toll taxes, state permits, and fuel surcharges",
-    "Dedicated 24/7 concierge support via WhatsApp and phone",
-  ],
-  exclusions: [
-    "Airfare and rail tickets (can be booked via flight module)",
-    "Gulmarg Gondola Phase 2 tickets and pony/horse ride charges",
-    "Personal laundry, room telephone calls, and mini-bar expenses",
-    "Travel and medical insurance (available as an optional add-on)",
-  ],
-  departureDates: [
-    "2026-11-15",
-    "2026-11-25",
-    "2026-12-05",
-    "2026-12-18",
-    "2026-12-28",
-    "2027-01-10",
-    "2027-01-24",
-  ],
-  dietaryFeatures: {
-    pureVeg: true,
-    jainAvailable: true,
-  },
-};
-
-export default function HolidayDetailPage() {
+export default function HolidayPackageDetailPage() {
   const params = useParams();
   const router = useRouter();
   const config = useSiteConfig();
@@ -196,11 +77,14 @@ export default function HolidayDetailPage() {
   const packagePath = Array.isArray(slugParam)
     ? slugParam[slugParam.length - 1]
     : typeof slugParam === "string"
-    ? slugParam
-    : "";
+      ? slugParam
+      : "";
 
-  const [pkg, setPkg] = useState<PackageDetail>(FALLBACK_PACKAGE);
-  const [selectedImage, setSelectedImage] = useState<string>(FALLBACK_PACKAGE.image);
+  const [pkg, setPkg] = useState<PackageDetail | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const [selectedImage, setSelectedImage] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [adults, setAdults] = useState<number>(2);
   const [children, setChildren] = useState<number>(0);
@@ -208,68 +92,220 @@ export default function HolidayDetailPage() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState<boolean>(false);
   const [dietaryChoice, setDietaryChoice] = useState<string>("pureVeg");
 
-  useEffect(() => {
+  const fetchPackage = useCallback(async () => {
     if (!packagePath) return;
+    setLoading(true);
+    setError(null);
 
-    const fetchPackage = async () => {
+    try {
+      let p: any = null;
       try {
+        p = await getPackageBySlug(packagePath, { siteId });
+      } catch {
+        // Direct API call failed — query same-origin Next.js proxy
         const res = await fetch(`/api/packages/${encodeURIComponent(packagePath)}?site=${encodeURIComponent(siteId)}`);
         if (res.ok) {
           const json = await res.json();
-          const p = json?.data || json;
-          if (p && (p.title || p.name)) {
-            const rawImages = Array.isArray(p.images) && p.images.length > 0
-              ? p.images
-              : p.image
-              ? [p.image]
-              : FALLBACK_PACKAGE.images;
-
-            setPkg({
-              id: p.id || p.packageNumericId || packagePath,
-              title: p.title || p.name,
-              slug: p.slug || packagePath,
-              category: p.category || "Scenic Escapes",
-              categorySlug: p.categorySlug || "scenic-escapes",
-              destination: p.destination || p.city || "Srinagar",
-              city: p.city || p.destination || "Srinagar",
-              country: p.country || "India",
-              citiesCovered: p.citiesCovered || `${p.city} (${p.durationNights || 4}N)`,
-              duration: p.duration || `${p.durationDays || 5} Days / ${p.durationNights || 4} Nights`,
-              durationDays: p.durationDays || 5,
-              durationNights: p.durationNights || 4,
-              startingPrice: Number(p.startingPrice || p.price || 37400),
-              price: Number(p.price || p.startingPrice || 37400),
-              originalPrice: p.originalPrice ? Number(p.originalPrice) : undefined,
-              currency: p.currency || currencySymbol,
-              rating: Number(p.rating || 4.8),
-              reviews: Number(p.reviews || p.reviewCount || 150),
-              image: rawImages[0] || "/seed-images/packages/package-scenic.svg",
-              images: rawImages,
-              keyInclusions: p.keyInclusions || FALLBACK_PACKAGE.keyInclusions,
-              hotelStays: p.hotelStays || FALLBACK_PACKAGE.hotelStays,
-              itinerary: p.itinerary || FALLBACK_PACKAGE.itinerary,
-              inclusions: p.inclusions || FALLBACK_PACKAGE.inclusions,
-              exclusions: p.exclusions || FALLBACK_PACKAGE.exclusions,
-              departureDates: p.departureDates || FALLBACK_PACKAGE.departureDates,
-              dietaryFeatures: p.dietaryFeatures || FALLBACK_PACKAGE.dietaryFeatures,
-            });
-
-            setSelectedImage(rawImages[0] || "/seed-images/packages/package-scenic.svg");
-            if (p.departureDates && p.departureDates.length > 0) {
-              setSelectedDate(p.departureDates[0]);
-            }
-          }
+          p = json?.data ?? json;
         }
-      } catch (err) {
-        console.error("[HolidayDetail] Failed to load package:", err);
       }
-    };
 
+      if (!p || (!p.title && !p.name && !p.id)) {
+        const localRes = await fetch(`/api/packages/${encodeURIComponent(packagePath)}?site=${encodeURIComponent(siteId)}`);
+        if (localRes.ok) {
+          const localJson = await localRes.json();
+          p = localJson?.data ?? localJson;
+        }
+      }
+
+      if (p && (p.title || p.name || p.id)) {
+        const rawImages = Array.isArray(p.images) && p.images.length > 0
+          ? p.images
+          : p.image
+            ? [p.image]
+            : ["https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85"];
+
+        const durationDays = p.durationDays || 5;
+        const durationNights = p.durationNights || Math.max(1, durationDays - 1);
+        const city = p.city || p.destination || "Destination";
+        const country = p.country || (siteId === "gujjutours" ? "India" : "Asia");
+
+        // Parse or normalize itinerary
+        const itinerary: ItineraryDay[] = Array.isArray(p.itinerary) && p.itinerary.length > 0
+          ? p.itinerary.map((it: any, idx: number) => ({
+            day: it.day || idx + 1,
+            title: it.title || `Day ${idx + 1}: Exploration`,
+            description: it.description || it.desc || "Full day sightseeing, transfers, and activities.",
+            meals: it.meals || it.mealsIncluded || ["Breakfast", "Dinner"],
+            highlights: it.highlights || it.activities || ["Guided Sightseeing", "Private AC Transfer"],
+          }))
+          : [
+            {
+              day: 1,
+              title: `Arrival in ${city} & Hotel Check-in`,
+              description: `Arrive at the destination airport or station. Private chauffeur transfer to your selected luxury hotel. Enjoy leisure evening.`,
+              meals: ["Dinner"],
+              highlights: ["Airport Meet & Greet", "Welcome Drink", "Overnight Stay"],
+            },
+            {
+              day: 2,
+              title: `${city} City Highlights & Heritage Tour`,
+              description: `Full day exploration covering primary architectural landmarks, scenic viewpoints, and local markets.`,
+              meals: ["Breakfast", "Dinner"],
+              highlights: ["Guided Monument Passes", "Private AC Cab"],
+            },
+            {
+              day: 3,
+              title: "Excursion & Scenic Leisure",
+              description: "Scenic day trip with photostops, experiential dining, and evening leisure strolls.",
+              meals: ["Breakfast", "Dinner"],
+              highlights: ["Scenic Drive", "Local Gourmet Experience"],
+            },
+            {
+              day: 4,
+              title: "Departure & Airport Drop",
+              description: "Post breakfast, check-out from hotel and transfer to airport for onward journey.",
+              meals: ["Breakfast"],
+              highlights: ["Private Transfer", "Trip Memories"],
+            },
+          ];
+
+        // Parse or normalize hotels
+        const hotelStays: HotelStay[] = Array.isArray(p.hotels) && p.hotels.length > 0
+          ? p.hotels.map((h: any) => ({
+            hotelName: h.hotelName || h.name || "Luxury Resort",
+            starRating: h.starRating || 4,
+            nights: h.nights || 2,
+            city: h.city || city,
+            roomType: h.roomType || "Deluxe Room",
+          }))
+          : [
+            {
+              hotelName: `${city} Heritage Palace & Spa`,
+              starRating: 5,
+              nights: durationNights,
+              city: city,
+              roomType: "Premium Deluxe Suite",
+            },
+          ];
+
+        const keyInclusions = Array.isArray(p.highlights) && p.highlights.length > 0
+          ? p.highlights
+          : p.keyInclusions || [
+            "5★ / 4★ Hotel Stays with Breakfast",
+            "Private AC Vehicle for all transfers",
+            "Sightseeing with Monument Entry Passes",
+            "24/7 Concierge Support",
+          ];
+
+        const inclusions = Array.isArray(p.inclusions) && p.inclusions.length > 0
+          ? p.inclusions
+          : [
+            "Daily breakfast and vegetarian dinner",
+            "Private sanitized AC car for all transfers and tours",
+            "Toll taxes, parking charges, driver allowances",
+            "Assistance upon arrival & departure",
+          ];
+
+        const exclusions = Array.isArray(p.exclusions) && p.exclusions.length > 0
+          ? p.exclusions
+          : [
+            "Airfare / Train tickets unless explicitly chosen",
+            "Personal expenses, laundry, tips",
+            "Optional activity charges not listed in inclusions",
+          ];
+
+        const departureDates = Array.isArray(p.departureDates) && p.departureDates.length > 0
+          ? p.departureDates
+          : [
+            new Date(Date.now() + 86400000 * 7).toISOString().split("T")[0],
+            new Date(Date.now() + 86400000 * 14).toISOString().split("T")[0],
+            new Date(Date.now() + 86400000 * 21).toISOString().split("T")[0],
+          ];
+
+        const normalizedPkg: PackageDetail = {
+          id: p.id || p.packageNumericId || packagePath,
+          title: p.title || p.name || `${city} Holiday Package`,
+          name: p.title || p.name || `${city} Holiday Package`,
+          slug: p.slug || packagePath,
+          category: p.category || "Holiday Getaways",
+          categorySlug: p.categorySlug || "holiday-getaways",
+          destination: city,
+          city: city,
+          country: country,
+          citiesCovered: p.citiesCovered || `${city} (${durationNights}N)`,
+          duration: p.duration || `${durationDays} Days / ${durationNights} Nights`,
+          durationDays,
+          durationNights,
+          startingPrice: Number(p.startingPrice || p.price || 25000),
+          price: Number(p.price || p.startingPrice || 25000),
+          originalPrice: p.originalPrice ? Number(p.originalPrice) : undefined,
+          currency: p.currency || (siteId === "gujjutours" ? "INR" : "USD"),
+          rating: Number(p.rating || 4.8),
+          reviews: Number(p.reviews || p.reviewsCount || 150),
+          image: rawImages[0],
+          images: rawImages,
+          keyInclusions,
+          hotelStays,
+          itinerary,
+          inclusions,
+          exclusions,
+          departureDates,
+          dietaryFeatures: {
+            pureVeg: p.pureVegAvailable ?? true,
+            jainAvailable: p.jainMealAvailable ?? true,
+            halalCertified: p.halalCertified ?? false,
+          },
+        };
+
+        setPkg(normalizedPkg);
+        setSelectedImage(rawImages[0]);
+        if (departureDates.length > 0) {
+          setSelectedDate(departureDates[0]);
+        }
+      } else {
+        setError("Package not found");
+      }
+    } catch (err: any) {
+      if (err?.digest?.includes("NEXT_NOT_FOUND") || err?.message === "NEXT_NOT_FOUND") {
+        throw err;
+      }
+      if (err?.status === 404 || err?.isNotFound) {
+        setError("Package not found");
+      } else {
+        setError(err?.message || "Failed to load holiday package");
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [packagePath, siteId]);
+
+  useEffect(() => {
     fetchPackage();
-  }, [packagePath, siteId, currencySymbol]);
+  }, [fetchPackage]);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-6">
+          <LoadingSkeleton variant="detail" count={1} />
+        </div>
+      </main>
+    );
+  }
+
+  if (error || !pkg) {
+    return (
+      <main className="min-h-screen bg-[#fafbfc] dark:bg-neutral-950 py-16 px-4">
+        <div className="max-w-md mx-auto">
+          <ErrorState message={error || "Holiday package not found"} onRetry={fetchPackage} />
+        </div>
+      </main>
+    );
+  }
 
   // Pricing calculation
-  const unitPrice = pkg.startingPrice || pkg.price || 37400;
+  const unitPrice = pkg.startingPrice || pkg.price || 25000;
   const childPrice = Math.round(unitPrice * 0.65);
   const totalPrice = unitPrice * adults + childPrice * children;
   const tax = Math.round(totalPrice * 0.05);
@@ -348,168 +384,147 @@ export default function HolidayDetailPage() {
               <span className="font-normal text-neutral-400">({pkg.reviews} verified guest reviews)</span>
             </div>
             <span>•</span>
-            <span className="text-emerald-700 dark:text-emerald-400 font-semibold">
-              🌱 Dedicated Pure Veg &amp; Jain Meals
-            </span>
+            <div className="text-emerald-600 dark:text-emerald-400 font-semibold">
+              ✓ Customizable Itinerary
+            </div>
             <span>•</span>
-            <span className="text-teal-700 dark:text-teal-400 font-semibold">
-              🔒 100% Refundable Booking Available
-            </span>
+            <div className="text-teal-600 dark:text-teal-400 font-semibold">
+              ✓ 100% Pure Veg &amp; Jain Friendly
+            </div>
           </div>
         </div>
 
         {/* ─── Gallery Section ─── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="md:col-span-2 relative h-72 sm:h-96 rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-800">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-8">
+          <div className="lg:col-span-3 relative h-80 sm:h-96 lg:h-[480px] rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 shadow-sm">
             <Image
-              src={selectedImage}
+              src={selectedImage || pkg.images[0]}
               alt={pkg.title}
               fill
-              className="object-cover"
               priority
+              className="object-cover transition-all duration-300"
             />
           </div>
-          <div className="flex md:flex-col gap-3 overflow-x-auto md:overflow-visible">
+
+          <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 h-full">
             {pkg.images.slice(0, 3).map((img, idx) => (
               <button
                 key={idx}
+                type="button"
                 onClick={() => setSelectedImage(img)}
-                className={`relative flex-1 min-w-[120px] h-28 rounded-xl overflow-hidden border-2 transition-all ${
-                  selectedImage === img
-                    ? "border-teal-500 shadow-md scale-[1.02]"
-                    : "border-transparent opacity-75 hover:opacity-100"
-                }`}
+                className={`relative h-24 sm:h-28 lg:h-[152px] rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${selectedImage === img
+                  ? "border-teal-600 shadow-md scale-[1.02]"
+                  : "border-transparent opacity-75 hover:opacity-100"
+                  }`}
               >
-                <Image src={img} alt={`View ${idx + 1}`} fill className="object-cover" />
+                <Image
+                  src={img}
+                  alt={`Thumbnail ${idx + 1}`}
+                  fill
+                  className="object-cover"
+                />
               </button>
             ))}
           </div>
         </div>
 
-        {/* ─── Main Content & Sidebar Layout ─── */}
+        {/* ─── Highlights Row ─── */}
+        {pkg.keyInclusions && pkg.keyInclusions.length > 0 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
+            {pkg.keyInclusions.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-3.5 flex items-center gap-2.5 shadow-sm"
+              >
+                <span className="text-emerald-600 dark:text-emerald-400 text-lg">✓</span>
+                <span className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 line-clamp-2">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* ─── Content Grid: Itinerary & Booking Card ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column (2 Cols) */}
+          {/* Left Column: Itinerary, Stays, Inclusions */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Key Inclusions Card */}
-            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-              <h2 className="text-lg font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
-                <span>🌟</span>
-                <span>Package Highlights &amp; Inclusions</span>
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {pkg.keyInclusions?.map((inc, i) => (
-                  <div key={i} className="flex items-center gap-2.5 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300">
-                    <span className="w-5 h-5 rounded-full bg-teal-50 dark:bg-teal-950/60 text-teal-600 flex items-center justify-center font-bold text-xs shrink-0">
-                      ✓
-                    </span>
-                    <span>{inc}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Hotel Accommodations */}
-            {pkg.hotelStays && pkg.hotelStays.length > 0 && (
-              <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-                <h2 className="text-lg font-bold text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
-                  <span>🏨</span>
-                  <span>Accommodations Included ({pkg.durationNights} Nights)</span>
-                </h2>
-                <div className="space-y-3">
-                  {pkg.hotelStays.map((h, i) => (
-                    <div
-                      key={i}
-                      className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200/80 dark:border-neutral-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-                    >
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-amber-500">
-                            {"★".repeat(h.starRating)} {h.starRating}★ Verified
-                          </span>
-                          <span className="text-xs text-neutral-400">•</span>
-                          <span className="text-xs font-semibold text-teal-700 dark:text-teal-400">
-                            {h.city} ({h.nights} {h.nights > 1 ? "Nights" : "Night"})
-                          </span>
-                        </div>
-                        <h4 className="font-bold text-sm sm:text-base text-neutral-900 dark:text-neutral-100 mt-1">
-                          {h.hotelName}
-                        </h4>
-                        {h.roomType && (
-                          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
-                            Room: {h.roomType}
-                          </p>
-                        )}
-                      </div>
-                      <span className="self-start sm:self-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800">
-                        Breakfast Included
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Day-by-Day Itinerary Accordion */}
-            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-neutral-900 dark:text-white flex items-center gap-2">
-                  <span>🗓️</span>
-                  <span>Day-by-Day Detailed Itinerary</span>
+            {/* Day-by-Day Itinerary */}
+            <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">
+                  Day-by-Day Detailed Itinerary
                 </h2>
                 <button
+                  type="button"
                   onClick={() => setExpandedDay(expandedDay === null ? 1 : null)}
-                  className="text-xs font-bold text-teal-600 hover:underline"
+                  className="text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline"
                 >
-                  {expandedDay === null ? "Expand First Day" : "Collapse All"}
+                  {expandedDay === null ? "Expand All" : "Collapse All"}
                 </button>
               </div>
 
               <div className="space-y-4">
                 {pkg.itinerary.map((day) => {
-                  const isOpen = expandedDay === day.day;
+                  const isOpen = expandedDay === day.day || expandedDay === null;
                   return (
                     <div
                       key={day.day}
-                      className="rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden"
+                      className="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden transition-all"
                     >
                       <button
-                        onClick={() => setExpandedDay(isOpen ? null : day.day)}
-                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-50 dark:bg-neutral-800/40 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                        type="button"
+                        onClick={() => setExpandedDay(isOpen && expandedDay !== null ? null : day.day)}
+                        className="w-full text-left p-4 bg-neutral-50 dark:bg-neutral-800/40 hover:bg-neutral-100 dark:hover:bg-neutral-800 flex items-center justify-between transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <span className="w-8 h-8 rounded-full bg-teal-600 text-white font-bold text-xs flex items-center justify-center shrink-0">
                             D{day.day}
                           </span>
-                          <div>
-                            <h4 className="font-bold text-sm sm:text-base text-neutral-900 dark:text-neutral-100">
-                              {day.title}
-                            </h4>
-                            {day.meals && day.meals.length > 0 && (
-                              <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-                                Meals: {day.meals.join(", ")}
-                              </p>
-                            )}
-                          </div>
+                          <span className="font-bold text-sm text-neutral-900 dark:text-white">
+                            {day.title}
+                          </span>
                         </div>
-                        <span className="text-lg text-neutral-400">{isOpen ? "−" : "+"}</span>
+                        <span className="text-neutral-400 font-bold text-sm">
+                          {isOpen ? "▲" : "▼"}
+                        </span>
                       </button>
 
                       {isOpen && (
-                        <div className="p-4 bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800 space-y-3">
-                          <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                        <div className="p-4 space-y-3 bg-white dark:bg-neutral-900 border-t border-neutral-100 dark:border-neutral-800">
+                          <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                             {day.description}
                           </p>
 
+                          {day.meals && day.meals.length > 0 && (
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="font-bold text-neutral-500">Meals:</span>
+                              <div className="flex flex-wrap gap-1.5">
+                                {day.meals.map((meal, mIdx) => (
+                                  <span
+                                    key={mIdx}
+                                    className="px-2 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 font-semibold text-[11px]"
+                                  >
+                                    🍽️ {meal}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
                           {day.highlights && day.highlights.length > 0 && (
-                            <div className="flex flex-wrap gap-1.5 pt-2">
-                              {day.highlights.map((h, i) => (
-                                <span
-                                  key={i}
-                                  className="px-2.5 py-1 rounded-md text-[11px] font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300"
-                                >
-                                  ✨ {h}
-                                </span>
-                              ))}
+                            <div className="flex items-center gap-2 text-xs">
+                              <span className="font-bold text-neutral-500">Highlights:</span>
+                              <div className="flex flex-wrap gap-1.5">
+                                {day.highlights.map((hl, hIdx) => (
+                                  <span
+                                    key={hIdx}
+                                    className="px-2 py-0.5 rounded-md bg-teal-50 dark:bg-teal-950/40 text-teal-800 dark:text-teal-300 font-medium text-[11px]"
+                                  >
+                                    ★ {hl}
+                                  </span>
+                                ))}
+                              </div>
                             </div>
                           )}
                         </div>
@@ -520,35 +535,65 @@ export default function HolidayDetailPage() {
               </div>
             </div>
 
+            {/* Hotel Stays */}
+            {pkg.hotelStays && pkg.hotelStays.length > 0 && (
+              <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white mb-4">
+                  Curated Hotel Stays Included
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {pkg.hotelStays.map((stay, idx) => (
+                    <div
+                      key={idx}
+                      className="p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-800/30"
+                    >
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-bold text-sm text-neutral-900 dark:text-white">
+                          {stay.hotelName}
+                        </span>
+                        <span className="text-amber-500 text-xs font-bold">
+                          {"★".repeat(stay.starRating)}
+                        </span>
+                      </div>
+                      <div className="text-xs text-neutral-500 dark:text-neutral-400">
+                        📍 {stay.city} • {stay.nights} Nights Stay
+                      </div>
+                      {stay.roomType && (
+                        <div className="text-xs text-teal-600 dark:text-teal-400 font-semibold mt-1">
+                          🛏️ {stay.roomType}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Inclusions */}
-              <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-                <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-3 flex items-center gap-2">
-                  <span>✅</span>
-                  <span>What&apos;s Included</span>
+              <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
+                <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-3 text-emerald-700 dark:text-emerald-400">
+                  ✓ What&apos;s Included
                 </h3>
-                <ul className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 space-y-2">
-                  {pkg.inclusions.map((inc, i) => (
-                    <li key={i} className="flex items-start gap-2">
+                <ul className="space-y-2 text-xs text-neutral-600 dark:text-neutral-300">
+                  {pkg.inclusions.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
                       <span className="text-emerald-600 font-bold shrink-0">✓</span>
-                      <span>{inc}</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Exclusions */}
-              <div className="bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-sm">
-                <h3 className="text-base font-bold text-red-600 dark:text-red-400 mb-3 flex items-center gap-2">
-                  <span>❌</span>
-                  <span>What&apos;s Excluded</span>
+              <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
+                <h3 className="text-base font-bold text-neutral-900 dark:text-white mb-3 text-rose-700 dark:text-rose-400">
+                  ✕ What&apos;s Excluded
                 </h3>
-                <ul className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 space-y-2">
-                  {pkg.exclusions.map((exc, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="text-red-500 font-bold shrink-0">✕</span>
-                      <span>{exc}</span>
+                <ul className="space-y-2 text-xs text-neutral-600 dark:text-neutral-300">
+                  {pkg.exclusions.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-rose-500 font-bold shrink-0">✕</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -556,145 +601,135 @@ export default function HolidayDetailPage() {
             </div>
           </div>
 
-          {/* Right Column (Sticky Booking Sidebar) */}
+          {/* Right Column: Sticky Booking Widget */}
           <div className="space-y-6">
-            <div className="sticky top-20 bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-800 shadow-lg space-y-5">
-              {/* Price Banner */}
-              <div className="border-b border-neutral-100 dark:border-neutral-800 pb-4">
-                <p className="text-xs text-neutral-400 uppercase tracking-wider">
-                  Twin Sharing Rate
-                </p>
-                <div className="flex items-baseline gap-2 mt-1">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-teal-700 dark:text-teal-400">
+            <div className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-xl space-y-4 sticky top-6">
+              <div className="flex items-baseline justify-between border-b border-neutral-100 dark:border-neutral-800 pb-4">
+                <div>
+                  <span className="text-xs text-neutral-400">Starting from</span>
+                  <div className="text-2xl font-black text-neutral-900 dark:text-white">
                     {currencySymbol}{unitPrice.toLocaleString()}
-                  </span>
-                  {pkg.originalPrice && (
-                    <span className="text-sm text-neutral-400 line-through">
-                      {currencySymbol}{pkg.originalPrice.toLocaleString()}
-                    </span>
-                  )}
-                  <span className="text-xs text-neutral-500">/ person</span>
+                  </div>
+                  <span className="text-[11px] text-neutral-500">per person on twin sharing</span>
                 </div>
+                {pkg.originalPrice && (
+                  <span className="text-xs text-neutral-400 line-through">
+                    {currencySymbol}{pkg.originalPrice.toLocaleString()}
+                  </span>
+                )}
               </div>
 
-              {/* Departure Date Selector */}
-              <div>
-                <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1.5">
-                  Select Departure Date:
-                </label>
-                <select
-                  value={selectedDate}
-                  onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-teal-500"
-                >
-                  {pkg.departureDates?.map((d) => (
-                    <option key={d} value={d}>
-                      📅 {new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              {/* Departure Dates Selector */}
+              {pkg.departureDates && pkg.departureDates.length > 0 && (
+                <div>
+                  <label htmlFor="departure-date-select" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                    Select Departure Date:
+                  </label>
+                  <select
+                    id="departure-date-select"
+                    value={selectedDate}
+                    onChange={(e) => setSelectedDate(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold focus:ring-2 focus:ring-teal-600"
+                  >
+                    {pkg.departureDates.map((date, idx) => (
+                      <option key={idx} value={date}>
+                        📅 {new Date(date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })} (Guaranteed Departure)
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               {/* Guest Counts */}
               <div className="grid grid-cols-2 gap-3">
-                {/* Adults */}
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700">
-                  <span className="block text-[11px] font-semibold text-neutral-500">Adults (12+ yrs)</span>
-                  <div className="flex items-center justify-between mt-2">
-                    <button
-                      onClick={() => setAdults(Math.max(1, adults - 1))}
-                      className="w-7 h-7 rounded-lg bg-white dark:bg-neutral-700 font-bold text-neutral-700 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-100"
-                    >
-                      −
-                    </button>
-                    <span className="font-bold text-sm">{adults}</span>
-                    <button
-                      onClick={() => setAdults(adults + 1)}
-                      className="w-7 h-7 rounded-lg bg-white dark:bg-neutral-700 font-bold text-neutral-700 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-100"
-                    >
-                      +
-                    </button>
-                  </div>
+                <div>
+                  <label htmlFor="adults-count-select" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                    Adults (12+ Yrs):
+                  </label>
+                  <select
+                    id="adults-count-select"
+                    value={adults}
+                    onChange={(e) => setAdults(Number(e.target.value))}
+                    className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold"
+                  >
+                    {[1, 2, 3, 4, 5, 6, 8, 10].map((n) => (
+                      <option key={n} value={n}>{n} Adults</option>
+                    ))}
+                  </select>
                 </div>
 
-                {/* Children */}
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700">
-                  <span className="block text-[11px] font-semibold text-neutral-500">Children (2-11 yrs)</span>
-                  <div className="flex items-center justify-between mt-2">
-                    <button
-                      onClick={() => setChildren(Math.max(0, children - 1))}
-                      className="w-7 h-7 rounded-lg bg-white dark:bg-neutral-700 font-bold text-neutral-700 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-100"
-                    >
-                      −
-                    </button>
-                    <span className="font-bold text-sm">{children}</span>
-                    <button
-                      onClick={() => setChildren(children + 1)}
-                      className="w-7 h-7 rounded-lg bg-white dark:bg-neutral-700 font-bold text-neutral-700 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-100"
-                    >
-                      +
-                    </button>
-                  </div>
+                <div>
+                  <label htmlFor="children-count-select" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                    Children (2-11 Yrs):
+                  </label>
+                  <select
+                    id="children-count-select"
+                    value={children}
+                    onChange={(e) => setChildren(Number(e.target.value))}
+                    className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold"
+                  >
+                    {[0, 1, 2, 3, 4].map((n) => (
+                      <option key={n} value={n}>{n} Children</option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
               {/* Dietary Preferences */}
               <div>
-                <label className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1.5">
-                  Meal Catering Preference:
+                <label htmlFor="dietary-preference-select" className="block text-xs font-bold text-neutral-700 dark:text-neutral-300 mb-1">
+                  Meal Plan / Dietary Preference:
                 </label>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <button
-                    type="button"
-                    onClick={() => setDietaryChoice("pureVeg")}
-                    className={`py-2 px-3 rounded-xl border text-center font-semibold transition-all ${
-                      dietaryChoice === "pureVeg"
-                        ? "bg-emerald-50 text-emerald-800 border-emerald-500 dark:bg-emerald-950/60 dark:text-emerald-300"
-                        : "border-neutral-200 text-neutral-600 dark:border-neutral-700"
-                    }`}
-                  >
-                    🌱 Pure Veg
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setDietaryChoice("jain")}
-                    className={`py-2 px-3 rounded-xl border text-center font-semibold transition-all ${
-                      dietaryChoice === "jain"
-                        ? "bg-amber-50 text-amber-800 border-amber-500 dark:bg-amber-950/60 dark:text-amber-300"
-                        : "border-neutral-200 text-neutral-600 dark:border-neutral-700"
-                    }`}
-                  >
-                    🌿 Jain Meals
-                  </button>
-                </div>
+                <select
+                  id="dietary-preference-select"
+                  value={dietaryChoice}
+                  onChange={(e) => setDietaryChoice(e.target.value)}
+                  className="w-full px-3 py-2 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-xs font-semibold"
+                >
+                  <option value="pureVeg">🌱 100% Pure Vegetarian Meals</option>
+                  <option value="jain">🌿 Jain Meals (No Root Vegetables)</option>
+                  <option value="standard">🍽️ Standard Multi-Cuisine Meals</option>
+                </select>
               </div>
 
-              {/* Total Calculation */}
-              <div className="pt-3 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between">
-                <div>
-                  <span className="text-xs text-neutral-500">Estimated Total:</span>
-                  <div className="text-xl sm:text-2xl font-black text-teal-700 dark:text-teal-400">
-                    {currencySymbol}{totalPrice.toLocaleString()}
+              {/* Price Calculation */}
+              <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800 space-y-2 text-xs">
+                <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
+                  <span>Adult Package ({adults} × {currencySymbol}{unitPrice.toLocaleString()})</span>
+                  <span className="font-semibold">{currencySymbol}{(adults * unitPrice).toLocaleString()}</span>
+                </div>
+                {children > 0 && (
+                  <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
+                    <span>Child Package ({children} × {currencySymbol}{childPrice.toLocaleString()})</span>
+                    <span className="font-semibold">{currencySymbol}{(children * childPrice).toLocaleString()}</span>
                   </div>
+                )}
+                <div className="flex justify-between text-neutral-600 dark:text-neutral-400">
+                  <span>Taxes &amp; Service Fee (5%)</span>
+                  <span className="font-semibold">{currencySymbol}{tax.toLocaleString()}</span>
                 </div>
-                <span className="text-[11px] text-neutral-400">All Taxes &amp; GST Included</span>
+                <div className="flex justify-between text-base font-black text-neutral-900 dark:text-white pt-2 border-t border-neutral-200 dark:border-neutral-800">
+                  <span>Total Amount</span>
+                  <span>{currencySymbol}{grandTotal.toLocaleString()}</span>
+                </div>
               </div>
 
-              {/* Book Button */}
+              {/* Booking CTAs */}
               <button
+                type="button"
                 onClick={handleBookNow}
-                className="w-full py-3.5 rounded-xl font-extrabold text-sm text-white bg-teal-600 hover:bg-teal-700 transition-all shadow-md active:scale-[0.99] flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-xl font-black text-sm text-white bg-teal-600 hover:bg-teal-700 shadow-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Proceed to Book Holiday</span>
+                <span>Book This Holiday</span>
                 <span>→</span>
               </button>
 
-              {/* Custom Quote / Enquiry */}
               <button
+                type="button"
                 onClick={() => setIsEnquiryOpen(true)}
-                className="w-full py-2.5 rounded-xl font-bold text-xs text-neutral-700 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all"
+                className="w-full py-2.5 rounded-xl font-bold text-xs text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-all cursor-pointer"
               >
-                💬 Need Custom Dates or Group Quote?
+                💬 Want Custom Dates or Flights?
               </button>
             </div>
           </div>
@@ -706,14 +741,8 @@ export default function HolidayDetailPage() {
         <EnquiryModal
           isOpen={isEnquiryOpen}
           onClose={() => setIsEnquiryOpen(false)}
-          serviceName={pkg.title}
-          defaultDestination={
-            typeof (pkg.destination as any) === "object" && pkg.destination !== null
-              ? ((pkg.destination as any).cityName || (pkg.destination as any).country || "Destination")
-              : (pkg.destination || "")
-          }
-          siteId={siteId}
-          currencySymbol={currencySymbol}
+          serviceTitle={pkg.title}
+          serviceType="package"
         />
       )}
     </div>

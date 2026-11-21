@@ -1,24 +1,31 @@
 {
   "expo": {
-    "name": "Multi Site",
-    "slug": "multi-site-app",
+    "name": "ToursApp",
+    "slug": "toursapp",
     "version": "1.0.0",
     "sdkVersion": "58.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "multisite",
+    "scheme": "toursapp",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.multisite",
+      "bundleIdentifier": "com.toursapp.multisite",
       "infoPlist": {
-        "NSCameraUsageDescription": "Allow camera access for uploading photos on the websites.",
-        "NSPhotoLibraryUsageDescription": "Allow photo access for uploading images on the websites.",
-        "NSLocationWhenInUseUsageDescription": "Allow location access for location-based features on the websites."
+        "NSCameraUsageDescription": "Allow camera access for uploading photos and scanning booking passes in the app.",
+        "NSPhotoLibraryUsageDescription": "Allow photo access for selecting traveler documentation in the app.",
+        "NSLocationWhenInUseUsageDescription": "Allow location access to show nearby tours and destination weather in the app."
       }
     },
     "android": {
-      "package": "com.yourcompany.multisite",
+      "package": "com.toursapp.multisite",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"

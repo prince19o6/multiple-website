@@ -77,8 +77,8 @@ public static class WebsiteRegistry
                 "https://b2b.gujjutours.com",
                 "https://travelexplorer.com"
             },
-            Currency = "USD",
-            CurrencySymbol = "$",
+            Currency = "INR",
+            CurrencySymbol = "₹",
             Scheme = "gujjutours",
             EmailFromAddress = "support@gujjutours.com",
             EmailFromName = "Gujju Tours Concierge",
@@ -207,8 +207,8 @@ public static class WebsiteRegistry
                 "https://holidayparadise.com",
                 "https://www.holidayparadise.com"
             },
-            Currency = "USD",
-            CurrencySymbol = "$",
+            Currency = "AED",
+            CurrencySymbol = "AED ",
             Scheme = "technoheaven",
             EmailFromAddress = "support@technoheaven.com",
             EmailFromName = "Technoheaven Luxury Desk",

@@ -1449,7 +1449,7 @@ export default function AdminBookings() {
                           </div>
                           {(item.reason || item.note) && (
                             <div className="text-xs bg-gray-50 p-2.5 rounded-lg border border-gray-200 text-gray-700 italic">
-                              "{item.reason || item.note}"
+                              &ldquo;{item.reason || item.note}&rdquo;
                             </div>
                           )}
                           <div className="text-[10px] text-gray-400">
@@ -1675,7 +1675,7 @@ export default function AdminBookings() {
             <div className="bg-gray-50 p-3.5 rounded-xl text-xs text-gray-700 space-y-1.5 border border-gray-200">
               <div className="font-bold text-gray-900">Customer Reason:</div>
               <p className="italic">
-                "{reviewModal.booking.cancellationRequest?.reason || "No reason provided"}"
+                &ldquo;{reviewModal.booking.cancellationRequest?.reason || "No reason provided"}&rdquo;
               </p>
               <div className="text-[10px] text-gray-400">
                 Requested on:{" "}

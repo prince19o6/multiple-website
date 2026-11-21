@@ -188,8 +188,13 @@ public class ApiKeyValidationMiddleware
                 return;
             }
 
-            // Write operations by mobile clients require user JWT Bearer authorization
-            if (isWriteMethod && !context.Request.Headers.ContainsKey("Authorization") && !path.StartsWith("/api/auth", StringComparison.OrdinalIgnoreCase))
+            // Write operations by mobile clients require user JWT Bearer authorization,
+            // with exceptions for public write endpoints (auth, airport transfers dispatch status, guest bookings)
+            var isPublicWrite = path.StartsWith("/api/auth", StringComparison.OrdinalIgnoreCase) ||
+                                path.StartsWith("/api/transfers", StringComparison.OrdinalIgnoreCase) ||
+                                path.StartsWith("/api/bookings", StringComparison.OrdinalIgnoreCase);
+
+            if (isWriteMethod && !context.Request.Headers.ContainsKey("Authorization") && !isPublicWrite)
             {
                 _logger.LogWarning("[ApiKeyMiddleware] Write operation to {Path} attempted with app key '{KeyPrefix}...' without user JWT", path, apiKey.KeyPrefix);
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;

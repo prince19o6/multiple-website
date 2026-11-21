@@ -390,4 +390,427 @@ public static class SeedDataCatalog
             return Website2Destinations();
         return Website1Destinations();
     }
+
+    public static List<Banner> GetBanners(string siteId)
+    {
+        var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
+        var isTripGo = siteId.Contains("tripgo") || siteId.Contains("website2");
+
+        if (isGujju)
+        {
+            return new List<Banner>
+            {
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Discover Dubai & Gujarat With Gujju Tours",
+                    Subtitle = "Customized holiday packages with 100% Pure Veg and Jain dining arrangements.",
+                    Tagline = "AUTHENTIC EXPERIENCES & FAMILY CARE",
+                    Badge = "SPECIAL SAVINGS",
+                    ImageUrl = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=85",
+                    CtaText = "Explore Dubai Packages",
+                    CtaLink = "/en/packages",
+                    SortOrder = 0,
+                    IsActive = true
+                },
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Royal Rann Utsav & White Desert Safaris",
+                    Subtitle = "Immerse in Kutch cultural nights, tent city luxury, and starlit desert camping.",
+                    Tagline = "WINTER CARNIVAL 2026",
+                    Badge = "LIMITED SLOTS",
+                    ImageUrl = "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1600&q=85",
+                    CtaText = "Book Kutch Tour",
+                    CtaLink = "/en/tours",
+                    SortOrder = 1,
+                    IsActive = true
+                },
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "hotels",
+                    Title = "Luxury Stays With Jain & Pure Veg Dining",
+                    Subtitle = "Verified 5-star properties and desert resorts tailored for Indian travelers.",
+                    Tagline = "HANDPICKED RESORTS",
+                    Badge = "EXCLUSIVE RATES",
+                    ImageUrl = "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&q=85",
+                    CtaText = "View Hotels",
+                    CtaLink = "/en/hotels",
+                    SortOrder = 0,
+                    IsActive = true
+                }
+            };
+        }
+
+        if (isTripGo)
+        {
+            return new List<Banner>
+            {
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Epic Southeast Asia Island Expeditions",
+                    Subtitle = "Explore pristine beaches of Bali, hidden coves of Krabi, and majestic Ha Long Bay.",
+                    Tagline = "UNFORGETTABLE ADVENTURES",
+                    Badge = "EARLY BIRD DEALS",
+                    ImageUrl = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&q=85",
+                    CtaText = "Discover Island Trips",
+                    CtaLink = "/en/tours",
+                    SortOrder = 0,
+                    IsActive = true
+                },
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Kyoto & Mount Fuji Cultural Odyssey",
+                    Subtitle = "Historic shrines, cherry blossoms, bullet train journeys, and authentic onsen stays.",
+                    Tagline = "JAPAN DISCOVERY",
+                    Badge = "FEATURED JOURNEY",
+                    ImageUrl = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=85",
+                    CtaText = "View Japan Packages",
+                    CtaLink = "/en/packages",
+                    SortOrder = 1,
+                    IsActive = true
+                }
+            };
+        }
+
+        // Technoheaven B2B
+        return new List<Banner>
+        {
+            new Banner
+            {
+                WebsiteId = siteId,
+                Module = "home",
+                Title = "Next-Gen Global Travel Distribution Platform",
+                Subtitle = "Real-time XML API feeds, contracted wholesale hotels, dynamic packaging, and instant booking confirmations.",
+                Tagline = "ENTERPRISE B2B TRAVEL TECH",
+                Badge = "GLOBAL DMC NETWORK",
+                ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=85",
+                CtaText = "Integrate API",
+                CtaLink = "/en/contact-us",
+                SortOrder = 0,
+                IsActive = true
+            },
+            new Banner
+            {
+                WebsiteId = siteId,
+                Module = "home",
+                Title = "Wholesale Rates Across 250,000+ Verified Stays",
+                Subtitle = "Direct supplier contracts, corporate credit facilities, and guaranteed 99.9% uptime SLA.",
+                Tagline = "DIRECT INVENTORY",
+                Badge = "B2B WHOLESALE",
+                ImageUrl = "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85",
+                CtaText = "Explore Inventory",
+                CtaLink = "/en/hotels",
+                SortOrder = 1,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<SpecialOffer> GetOffers(string siteId)
+    {
+        var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
+        var isTripGo = siteId.Contains("tripgo") || siteId.Contains("website2");
+
+        if (isGujju)
+        {
+            return new List<SpecialOffer>
+            {
+                new SpecialOffer
+                {
+                    WebsiteId = siteId,
+                    Code = "GUJJU15",
+                    Title = "Dubai Family Mega Saver",
+                    Description = "Get flat 15% discount on Dubai packages including Burj Khalifa & Desert Safari.",
+                    DiscountPercent = 15,
+                    Badge = "POPULAR",
+                    ImageUrl = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80",
+                    ExpiryDate = DateTime.UtcNow.AddMonths(3),
+                    SortOrder = 0,
+                    IsActive = true
+                },
+                new SpecialOffer
+                {
+                    WebsiteId = siteId,
+                    Code = "KUTCH20",
+                    Title = "Rann Utsav Tent City Early Booking",
+                    Description = "Save 20% on premium AC Swiss tents with Gujarati cultural dinner included.",
+                    DiscountPercent = 20,
+                    Badge = "LIMITED",
+                    ImageUrl = "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80",
+                    ExpiryDate = DateTime.UtcNow.AddMonths(2),
+                    SortOrder = 1,
+                    IsActive = true
+                }
+            };
+        }
+
+        if (isTripGo)
+        {
+            return new List<SpecialOffer>
+            {
+                new SpecialOffer
+                {
+                    WebsiteId = siteId,
+                    Code = "ASIAESCAPE",
+                    Title = "Bali & Thailand Island Hopping Pass",
+                    Description = "Save $120 on all combined beach resort and snorkeling tour packages.",
+                    DiscountPercent = 12,
+                    Badge = "BEST VALUE",
+                    ImageUrl = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80",
+                    ExpiryDate = DateTime.UtcNow.AddMonths(3),
+                    SortOrder = 0,
+                    IsActive = true
+                }
+            };
+        }
+
+        return new List<SpecialOffer>
+        {
+            new SpecialOffer
+            {
+                WebsiteId = siteId,
+                Code = "B2BVOLUME",
+                Title = "Corporate High-Volume API Credit",
+                Description = "Extra 5% override commission on monthly bookings exceeding 100,000 AED.",
+                DiscountPercent = 5,
+                Badge = "ENTERPRISE",
+                ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+                ExpiryDate = DateTime.UtcNow.AddMonths(6),
+                SortOrder = 0,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<TravelVideo> GetVideos(string siteId)
+    {
+        return new List<TravelVideo>
+        {
+            new TravelVideo
+            {
+                WebsiteId = siteId,
+                Title = "Sunset Over Dubai Marina & Desert Dunes",
+                Destination = "Dubai, UAE",
+                VideoUrl = "https://assets.mixkit.co/videos/preview/mixkit-dubai-city-skyline-at-dusk-42171-large.mp4",
+                ThumbnailUrl = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80",
+                TravelerName = "Hardik & Priya Patel",
+                ViewsCount = 14200,
+                SortOrder = 0,
+                IsActive = true
+            },
+            new TravelVideo
+            {
+                WebsiteId = siteId,
+                Title = "Crystal Waters of Nusa Penida & Secret Lagoon",
+                Destination = "Bali, Indonesia",
+                VideoUrl = "https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-rocky-coastline-with-azure-water-43615-large.mp4",
+                ThumbnailUrl = "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80",
+                TravelerName = "Sarah Jenkins",
+                ViewsCount = 28900,
+                SortOrder = 1,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<Review> GetReviews(string siteId)
+    {
+        var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
+        if (isGujju)
+        {
+            return new List<Review>
+            {
+                new Review
+                {
+                    WebsiteId = siteId,
+                    Author = "Bhavin & Family",
+                    Location = "Surat, Gujarat",
+                    Avatar = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80",
+                    Rating = 5.0,
+                    Comment = "Our Dubai 6-day family holiday was completely stress-free! Pure Jain food arranged at every meal, airport pickup on time, and Burj Khalifa tickets with zero wait. Gujju Tours is 100% recommended!",
+                    TourName = "Dubai 6D/5N Family Extravaganza",
+                    Verified = true,
+                    SortOrder = 0,
+                    IsActive = true
+                },
+                new Review
+                {
+                    WebsiteId = siteId,
+                    Author = "Dharmesh Shah",
+                    Location = "Ahmedabad, Gujarat",
+                    Avatar = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+                    Rating = 5.0,
+                    Comment = "The Kutch Rann Utsav tent booking was marvelous. Premium tent amenities, live music performances in the evening, and sunrise camel ride on the white desert.",
+                    TourName = "Rann Utsav Royal Experience",
+                    Verified = true,
+                    SortOrder = 1,
+                    IsActive = true
+                }
+            };
+        }
+
+        return new List<Review>
+        {
+            new Review
+            {
+                WebsiteId = siteId,
+                Author = "Michael Chen",
+                Location = "Singapore",
+                Avatar = "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+                Rating = 5.0,
+                Comment = "Seamless booking experience and incredible private guide throughout our Bali and Komodo dragon tour. Everything was transparent with zero hidden costs.",
+                TourName = "Bali & Komodo Island Expedition",
+                Verified = true,
+                SortOrder = 0,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<FaqItem> GetFaqs(string siteId)
+    {
+        return new List<FaqItem>
+        {
+            new FaqItem
+            {
+                WebsiteId = siteId,
+                Category = "booking",
+                Question = "How do I confirm my tour or hotel booking?",
+                Answer = "You can instantly reserve online through our portal or mobile app. Upon payment or enquiry approval, you will receive an instant digital booking confirmation voucher via email and WhatsApp.",
+                SortOrder = 0,
+                IsActive = true
+            },
+            new FaqItem
+            {
+                WebsiteId = siteId,
+                Category = "cancellation",
+                Question = "What is your cancellation and refund policy?",
+                Answer = "Most packages and activities offer free cancellation up to 48 hours prior to scheduled departure. Refunds are processed back to your original payment method within 3 to 5 business days.",
+                SortOrder = 1,
+                IsActive = true
+            },
+            new FaqItem
+            {
+                WebsiteId = siteId,
+                Category = "visa",
+                Question = "Do you assist with tourist visas and documentation?",
+                Answer = "Yes! Our in-house visa concierge team assists with document verification, express processing, and status tracking for UAE, Singapore, Thailand, Vietnam, and Schengen visas.",
+                SortOrder = 2,
+                IsActive = true
+            },
+            new FaqItem
+            {
+                WebsiteId = siteId,
+                Category = "general",
+                Question = "Are vegetarian and Jain meals available on tours?",
+                Answer = "Yes, absolutely! We specialize in catering to dietary preferences. Every tour itinerary and hotel stay can be tailored to ensure 100% Pure Vegetarian and Jain dining options.",
+                SortOrder = 3,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<Partner> GetPartners(string siteId)
+    {
+        return new List<Partner>
+        {
+            new Partner
+            {
+                WebsiteId = siteId,
+                Name = "Emirates Airlines",
+                Category = "airline",
+                LogoUrl = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&q=80",
+                WebsiteUrl = "https://www.emirates.com",
+                SortOrder = 0,
+                IsActive = true
+            },
+            new Partner
+            {
+                WebsiteId = siteId,
+                Name = "Singapore Airlines",
+                Category = "airline",
+                LogoUrl = "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=300&q=80",
+                WebsiteUrl = "https://www.singaporeair.com",
+                SortOrder = 1,
+                IsActive = true
+            },
+            new Partner
+            {
+                WebsiteId = siteId,
+                Name = "Marriott Bonvoy",
+                Category = "hotel",
+                LogoUrl = "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=300&q=80",
+                WebsiteUrl = "https://www.marriott.com",
+                SortOrder = 2,
+                IsActive = true
+            },
+            new Partner
+            {
+                WebsiteId = siteId,
+                Name = "IATA Certified Member",
+                Category = "association",
+                LogoUrl = "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=300&q=80",
+                SortOrder = 3,
+                IsActive = true
+            }
+        };
+    }
+
+    public static List<StaticPage> GetStaticPages(string siteId)
+    {
+        var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
+        var companyName = isGujju ? "Gujju Tours" : siteId.Contains("tripgo") ? "TripGo Asia" : "Technoheaven";
+
+        return new List<StaticPage>
+        {
+            new StaticPage
+            {
+                WebsiteId = siteId,
+                Slug = "about-us",
+                Title = $"About {companyName}",
+                ContentHtml = $"<p>{companyName} is a premier travel organization committed to delivering unforgettable journeys, world-class hospitality, and authentic local experiences across the globe.</p>",
+                MetaTitle = $"About Us | {companyName}",
+                MetaDescription = $"Learn more about {companyName}, our heritage, certified travel guides, and dedicated support.",
+                IsActive = true
+            },
+            new StaticPage
+            {
+                WebsiteId = siteId,
+                Slug = "contact-us",
+                Title = "Contact Our Travel Specialists",
+                ContentHtml = "<p>Our travel specialists and 24/7 concierge are available to assist with your bookings, customized itineraries, and emergencies.</p>",
+                MetaTitle = $"Contact Us | {companyName}",
+                MetaDescription = "Get in touch with our team via live chat, phone, or WhatsApp.",
+                IsActive = true
+            },
+            new StaticPage
+            {
+                WebsiteId = siteId,
+                Slug = "terms-and-conditions",
+                Title = "Terms and Conditions",
+                ContentHtml = "<p>By accessing our booking platform, you agree to our terms of service, payment schedules, and cancellation policies.</p>",
+                MetaTitle = $"Terms & Conditions | {companyName}",
+                MetaDescription = "Review our booking terms and user agreement.",
+                IsActive = true
+            },
+            new StaticPage
+            {
+                WebsiteId = siteId,
+                Slug = "privacy-policy",
+                Title = "Privacy Policy",
+                ContentHtml = "<p>Your privacy is important to us. We protect your personal data with 256-bit SSL encryption and do not share your information with unauthorized third parties.</p>",
+                MetaTitle = $"Privacy Policy | {companyName}",
+                MetaDescription = "How we collect, safeguard, and use your travel information.",
+                IsActive = true
+            }
+        };
+    }
 }

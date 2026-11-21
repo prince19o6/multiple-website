@@ -1,97 +1,61 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import { resolveSiteFromHost, getSiteById, normalizeHost } from "@/lib/siteRegistry";
-import { ENV } from "@/lib/env";
+import { getTenantHostname, getDefaultApiKey, getApiBaseUrl } from "@/lib/api/client";
+import { findSeedEntity } from "@/lib/api/seedFallback";
 
 export const dynamic = "force-dynamic";
-
-function loadSeedTransfers(site: string): any[] {
-  try {
-    const seedPath = path.join(process.cwd(), "seed", site, "transfers.json");
-    if (fs.existsSync(seedPath)) {
-      const content = fs.readFileSync(seedPath, "utf-8");
-      const list = JSON.parse(content);
-      return Array.isArray(list) ? list : [];
-    }
-  } catch (err: any) {
-    console.error("[Transfers Slug API] Error reading seed:", err.message);
-  }
-  return [];
-}
 
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ slug: string[] }> }
 ) {
+  const { slug } = await params;
+  const slugStr = slug.join("/");
+  const searchParams = request.nextUrl.searchParams;
+  const siteQuery = searchParams.get("site");
+  const siteHeader = request.headers.get("x-website-id") || request.headers.get("x-site-id");
+  const siteId = (siteQuery || siteHeader || process.env.NEXT_PUBLIC_SITE_ID || "gujjutours").toLowerCase();
+
   try {
-    const resolvedParams = await params;
-    const segments = resolvedParams?.slug || [];
-    if (segments.length === 0) {
-      return NextResponse.json({ success: false, error: "Not found" }, { status: 404 });
-    }
+    const apiUrl = getApiBaseUrl();
+    const hostname = getTenantHostname(siteId);
+    const apiKey = getDefaultApiKey(siteId);
 
-    const rawHost =
-      request.headers.get("x-forwarded-host") ||
-      request.headers.get("host") ||
-      "";
-    const host = normalizeHost(rawHost);
-
-    const searchParams = request.nextUrl.searchParams;
-    const siteQuery = searchParams.get("site");
-    const siteHeader = request.headers.get("x-site-id");
-    const siteDef =
-      resolveSiteFromHost(host) ||
-      getSiteById(siteQuery) ||
-      getSiteById(siteHeader) ||
-      (ENV.defaultSiteId ? getSiteById(ENV.defaultSiteId) : null);
-
-    const siteId = (siteDef?.siteId || siteQuery || process.env.SITE_ID || "gujjutours").toLowerCase();
-    const targetSlug = segments[segments.length - 1];
-
-    // 1. Backend attempt
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-    const hostname = siteDef?.backendHostname || (siteId === "tripgoasia" ? "www.tripgoasia.com" : siteId === "technoheaven" ? "stagingb2b.technoheaven.com" : "www.gujjutours.com");
-
-    try {
-      const res = await fetch(`${apiUrl}/api/transfers/${encodeURIComponent(targetSlug)}`, {
-        headers: { "X-Website-Hostname": hostname },
-        next: { revalidate: 30 },
-      });
-      if (res.ok) {
-        const json = await res.json();
-        if (json?.data) {
-          return NextResponse.json(json);
-        }
+    const backendUrl = new URL(`${apiUrl}/api/transfers/${slugStr}`);
+    searchParams.forEach((val, key) => {
+      if (key !== "site") {
+        backendUrl.searchParams.set(key, val);
       }
-    } catch {
-      // Backend unavailable, fallback
+    });
+
+    const res = await fetch(backendUrl.toString(), {
+      headers: {
+        "X-Website-Id": siteId,
+        "X-Website-Hostname": hostname,
+        "X-Api-Key": apiKey,
+      },
+      cache: "no-store",
+    });
+
+    if (res.ok) {
+      const data = await res.json().catch(() => null);
+      if (data && (data.data || data.id || data.title || data.vehicleName)) {
+        return NextResponse.json(data);
+      }
     }
-
-    // 2. Local seed fallback
-    let transfers = loadSeedTransfers(siteId);
-    if (transfers.length === 0 && siteId !== "gujjutours") {
-      transfers = loadSeedTransfers("gujjutours");
-    }
-
-    const single = transfers.find((t: any) =>
-      t.slug === targetSlug ||
-      String(t.id) === targetSlug ||
-      String(t.transferNumericId) === targetSlug ||
-      t.transferId === targetSlug
-    );
-
-    if (single) {
-      return NextResponse.json({ success: true, data: single });
-    }
-
-    return NextResponse.json({ success: false, error: "Transfer not found" }, { status: 404 });
-  } catch (err: any) {
-    console.error("[Transfers Slug API Error]", err);
-    return NextResponse.json(
-      { success: false, error: "Internal server error" },
-      { status: 500 }
-    );
+  } catch {
+    // Backend offline — fall back to disk seed
   }
-}
 
+  const seedItem = findSeedEntity(siteId, "transfers", slugStr);
+  if (seedItem) {
+    return NextResponse.json({
+      success: true,
+      data: seedItem,
+    });
+  }
+
+  return NextResponse.json(
+    { success: false, message: `Transfer '${slugStr}' not found` },
+    { status: 404 }
+  );
+}

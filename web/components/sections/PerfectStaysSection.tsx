@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import type { MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
+import { useCurrency } from "@/lib/CurrencyContext";
 
 interface PerfectStaysSectionProps {
   config: MergedWebsiteConfig;
@@ -16,7 +17,7 @@ export default function PerfectStaysSection({ config, hotels: propHotels }: Perf
   const [error, setError] = useState<string | null>(null);
 
   const siteId = config.site?.id || "gujjutours";
-  const currencySymbol = config.site?.currency?.symbol || "₹";
+  const { formatPrice } = useCurrency();
 
   const fetchHotels = async () => {
     setLoading(true);
@@ -185,7 +186,7 @@ export default function PerfectStaysSection({ config, hotels: propHotels }: Perf
                   <div>
                     <span className="text-[10px] text-foreground-muted block font-medium">Starts from</span>
                     <span className="text-base font-extrabold text-foreground">
-                      {currencySymbol}{price.toLocaleString()}
+                      {formatPrice(Number(price), stay.currency || "INR")}
                     </span>
                     <span className="text-[11px] text-foreground-muted"> / night</span>
                   </div>

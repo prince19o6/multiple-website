@@ -73,9 +73,9 @@ export async function POST(request: NextRequest) {
       const siteTag = `config:${body.siteId}`;
       const legacyTag = `site-config:${body.siteId}`;
 
-      revalidateTag(siteTag);
-      revalidateTag(legacyTag);
-      revalidateTag("config");
+      (revalidateTag as any)(siteTag, "max");
+      (revalidateTag as any)(legacyTag, "max");
+      (revalidateTag as any)("config", "max");
 
       revalidatedTags.push(siteTag, legacyTag, "config");
 
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
 
     // Revalidate by custom Tag
     if (body.tag) {
-      revalidateTag(body.tag);
+      (revalidateTag as any)(body.tag, "max");
       revalidatedTags.push(body.tag);
     }
 
@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
 
     if (revalidatedTags.length === 0 && revalidatedPaths.length === 0) {
       // Default: purge all config tags
-      revalidateTag("config");
+      (revalidateTag as any)("config", "max");
       revalidatedTags.push("config");
     }
 
@@ -122,4 +122,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

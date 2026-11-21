@@ -29,6 +29,14 @@ public class Tour
     [BsonElement("websiteId")]
     public string? WebsiteId { get; set; }
 
+    [BsonElement("tenantId")]
+    [JsonPropertyName("tenantId")]
+    public string TenantId
+    {
+        get => WebsiteId ?? Website;
+        set { WebsiteId = value; Website = value ?? "gujjutours"; }
+    }
+
     [BsonElement("name")]
     public string Name { get; set; } = string.Empty;
 
@@ -98,6 +106,14 @@ public class Tour
     [BsonElement("gallery")]
     public List<string> Gallery { get; set; } = new();
 
+    [BsonElement("images")]
+    [JsonPropertyName("images")]
+    public List<string> Images
+    {
+        get => Gallery.Count > 0 ? Gallery : (string.IsNullOrWhiteSpace(Image) ? new List<string>() : new List<string> { Image });
+        set { Gallery = value ?? new(); if (Gallery.Count > 0 && string.IsNullOrWhiteSpace(Image)) Image = Gallery[0]; }
+    }
+
     [BsonElement("groupSize")]
     public string GroupSize { get; set; } = "8-12 people";
 
@@ -113,8 +129,24 @@ public class Tour
     [BsonElement("included")]
     public List<string> Included { get; set; } = new();
 
+    [BsonElement("inclusions")]
+    [JsonPropertyName("inclusions")]
+    public List<string> Inclusions
+    {
+        get => Included;
+        set => Included = value ?? new();
+    }
+
     [BsonElement("excluded")]
     public List<string> Excluded { get; set; } = new();
+
+    [BsonElement("exclusions")]
+    [JsonPropertyName("exclusions")]
+    public List<string> Exclusions
+    {
+        get => Excluded;
+        set => Excluded = value ?? new();
+    }
 
     [BsonElement("availableDates")]
     public List<string> AvailableDates { get; set; } = new();
@@ -127,6 +159,14 @@ public class Tour
 
     [BsonElement("status")]
     public string Status { get; set; } = "Active";
+
+    [BsonElement("isActive")]
+    [JsonPropertyName("isActive")]
+    public bool IsActive
+    {
+        get => string.Equals(Status, "Active", StringComparison.OrdinalIgnoreCase);
+        set => Status = value ? "Active" : "Inactive";
+    }
 
     [BsonElement("itinerary")]
     public List<ItineraryDay> Itinerary { get; set; } = new();

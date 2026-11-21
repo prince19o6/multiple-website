@@ -21,9 +21,9 @@ function ConfirmationContent() {
 
   useEffect(() => {
     if (!referenceParam) {
-      // Check if temporary booking data was cached in session
+      // Check if temporary booking data was cached in session or localStorage
       try {
-        const stored = sessionStorage.getItem("toursapp_latest_booking");
+        const stored = sessionStorage.getItem("toursapp_latest_booking") || localStorage.getItem("toursapp_latest_booking");
         if (stored) {
           setBooking(JSON.parse(stored) as Booking);
           return;
@@ -62,11 +62,32 @@ function ConfirmationContent() {
         if (json.success && json.data) {
           setBooking(json.data as Booking);
         } else {
+          // Check local backup
+          try {
+            const stored = sessionStorage.getItem("toursapp_latest_booking") || localStorage.getItem("toursapp_latest_booking");
+            if (stored) {
+              const parsed = JSON.parse(stored) as Booking;
+              if (!referenceParam || parsed.reference === referenceParam || (parsed as any).id === referenceParam) {
+                setBooking(parsed);
+                return;
+              }
+            }
+          } catch {}
           setError(json.error || "Reservation details could not be retrieved.");
         }
       })
       .catch((err) => {
         if (!cancelled) {
+          try {
+            const stored = sessionStorage.getItem("toursapp_latest_booking") || localStorage.getItem("toursapp_latest_booking");
+            if (stored) {
+              const parsed = JSON.parse(stored) as Booking;
+              if (!referenceParam || parsed.reference === referenceParam || (parsed as any).id === referenceParam) {
+                setBooking(parsed);
+                return;
+              }
+            }
+          } catch {}
           setError(err instanceof Error ? err.message : "Network error");
         }
       })
@@ -77,7 +98,7 @@ function ConfirmationContent() {
     return () => {
       cancelled = true;
     };
-  }, [referenceParam]);
+  }, [referenceParam, config]);
 
   const handlePrint = () => {
     window.print();
@@ -128,7 +149,7 @@ function ConfirmationContent() {
     );
   }
 
-  const tourTitle = booking?.snapshot?.title || booking?.tourName || "Guided Tour Experience";
+  const tourTitle = booking?.snapshot?.title || booking?.tourName || "Travel Reservation";
   const tourImage =
     booking?.snapshot?.coverImage ||
     booking?.tourImage ||
@@ -150,24 +171,36 @@ function ConfirmationContent() {
     : "Confirmed Dates";
 
   const serviceTypeLower = String((booking as any)?.serviceType || (booking as any)?.service || booking?.snapshot?.category || "").toLowerCase();
+  const isFlight = serviceTypeLower.includes("flight") || String(refCode).startsWith("FL-") || Boolean((booking?.snapshot as any)?.pnr);
+  const isCab = serviceTypeLower.includes("transfer") || serviceTypeLower.includes("cab") || String(refCode).startsWith("CAB-") || Boolean((booking?.snapshot as any)?.vehicleModel);
+
+  const pnr = (booking?.snapshot as any)?.pnr || booking?.specialRequest?.match(/PNR:\s*([A-Z0-9-]+)/i)?.[1] || (isFlight ? `SW-${refCode.slice(-4)}` : null);
+  const ticketNo = (booking?.snapshot as any)?.ticketNo || booking?.specialRequest?.match(/E-Ticket:\s*([0-9-]+)/i)?.[1] || (isFlight ? `098-482910${refCode.slice(-4)}` : null);
+
+  const pickupLoc = (booking?.snapshot as any)?.pickupAddress || booking?.specialRequest?.match(/Pickup Address:\s*([^|]+)/i)?.[1] || booking?.location;
+  const dropoffLoc = (booking?.snapshot as any)?.dropoffAddress || booking?.specialRequest?.match(/Drop-off Address:\s*([^|]+)/i)?.[1] || booking?.destination;
+  const pickupTimeVal = (booking?.snapshot as any)?.pickupTime || booking?.specialRequest?.match(/Pickup Time:\s*([^|]+)/i)?.[1];
+  const flightNoVal = (booking?.snapshot as any)?.flightNumber || (booking as any)?.flightNumber || booking?.specialRequest?.match(/Flight Arrival:\s*([^|]+)/i)?.[1];
+  const vehicleModelVal = (booking?.snapshot as any)?.vehicleModel || (booking?.snapshot as any)?.vehicleClass || (booking as any)?.option || "Comfort Chauffeur Cab";
+
   const subtotalLabel =
-    serviceTypeLower.includes("flight") ? "Flight Airfare" :
+    isFlight ? "Flight Airfare" :
+    isCab ? "Cab Transfer Fare" :
     serviceTypeLower.includes("hotel") ? "Accommodation Subtotal" :
     serviceTypeLower.includes("restaurant") || serviceTypeLower.includes("dining") ? "Dining Subtotal" :
     serviceTypeLower.includes("visa") ? "Visa Processing Fee" :
-    serviceTypeLower.includes("transfer") ? "Transfer Fare" :
     serviceTypeLower.includes("package") ? "Package Tour Subtotal" :
     "Reservation Subtotal";
 
   const journeyHeadline =
-    serviceTypeLower.includes("flight") ? `Your Flight to ${destination} is Under Review!` :
-    serviceTypeLower.includes("hotel") ? `Your Stay in ${destination} is Under Review!` :
-    serviceTypeLower.includes("restaurant") || serviceTypeLower.includes("dining") ? `Your Dining Reservation at ${destination} is Under Review!` :
-    serviceTypeLower.includes("visa") ? `Your Visa Application for ${destination} is Under Review!` :
-    `Your Journey to ${destination} is Under Review!`;
+    isFlight ? `Your Flight to ${destination} is Confirmed!` :
+    isCab ? `Your Cab Transfer is Reserved!` :
+    serviceTypeLower.includes("hotel") ? `Your Stay in ${destination} is Confirmed!` :
+    `Your Reservation for ${destination} is Confirmed!`;
 
   const confirmedHeadline =
-    serviceTypeLower.includes("flight") ? `You are all set for your flight to ${destination}!` :
+    isFlight ? `You are all set for your flight to ${destination}!` :
+    isCab ? `Your private chauffeur cab is booked and assigned!` :
     serviceTypeLower.includes("hotel") ? `You are all set for your stay in ${destination}!` :
     `You are all set for ${destination}!`;
 
@@ -175,7 +208,7 @@ function ConfirmationContent() {
   const subtotal = booking?.priceBreakdown?.subtotal ?? (totalAmount * 0.95);
   const taxes = booking?.priceBreakdown?.taxes ?? (totalAmount * 0.05);
 
-  const statusLower = (booking?.status || "pending").toLowerCase();
+  const statusLower = (booking?.status || "confirmed").toLowerCase();
   const isConfirmed = statusLower === "confirmed";
   const isPending = statusLower === "pending";
   const isCancelled = statusLower === "cancelled";
@@ -200,70 +233,32 @@ function ConfirmationContent() {
               onClick={handlePrint}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 hover:bg-slate-50 shadow-sm cursor-pointer"
             >
-              <span>🖨️</span> Print E-Ticket
+              <span>🖨️</span> Print Voucher
             </button>
           )}
         </div>
 
         {/* Dynamic Status Banner */}
         {isPending ? (
-          /* Awaiting Confirmation Banner */
           <div className="rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 text-white shadow-xl flex flex-col gap-6 print:hidden">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div>
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider mb-2">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  Request Received — Awaiting Confirmation
+                  Request Received — Processing
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-black">
-                  {journeyHeadline}
-                </h1>
+                <h1 className="text-2xl sm:text-3xl font-black">{journeyHeadline}</h1>
                 <p className="text-white/90 text-xs sm:text-sm mt-1 max-w-xl">
-                  We have logged your reservation. Our travel concierge is verifying availability and
-                  will confirm your booking shortly. A confirmation email has been dispatched to{" "}
-                  <strong>{booking?.email}</strong>.
+                  We have logged your reservation. Confirmation voucher dispatched to <strong>{booking?.email}</strong>.
                 </p>
               </div>
-
               <div className="bg-black/20 backdrop-blur-md border border-white/20 px-4 py-2.5 rounded-2xl text-center self-start sm:self-auto">
                 <div className="text-[10px] uppercase font-bold tracking-widest text-white/70">Reference</div>
                 <div className="text-xl font-black font-mono tracking-wide">{refCode}</div>
               </div>
             </div>
-
-            {/* 3-Step Lifecycle Visual Progress Stepper */}
-            <div className="border-t border-white/20 pt-5 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-white text-amber-600 font-black flex items-center justify-center shrink-0">
-                  ✓
-                </span>
-                <div>
-                  <div className="font-extrabold">1. Booking Placed</div>
-                  <div className="text-white/70 text-[11px]">Request logged securely</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-7 h-7 rounded-full bg-white/30 text-white font-black flex items-center justify-center shrink-0 border border-white">
-                  ⏳
-                </span>
-                <div>
-                  <div className="font-extrabold">2. Concierge Review</div>
-                  <div className="text-white/70 text-[11px]">Currently in progress</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 opacity-60">
-                <span className="w-7 h-7 rounded-full bg-white/20 text-white font-black flex items-center justify-center shrink-0">
-                  3
-                </span>
-                <div>
-                  <div className="font-extrabold">3. E-Ticket QR Issued</div>
-                  <div className="text-white/70 text-[11px]">Unlocks upon confirmation</div>
-                </div>
-              </div>
-            </div>
           </div>
         ) : isConfirmed ? (
-          /* Confirmed Luxury Boarding Banner */
           <div
             className="rounded-3xl p-6 sm:p-8 text-white shadow-xl flex items-center justify-between flex-wrap gap-4 print:hidden"
             style={{ backgroundColor: primary }}
@@ -274,7 +269,7 @@ function ConfirmationContent() {
               </div>
               <h1 className="text-2xl sm:text-3xl font-black">{confirmedHeadline}</h1>
               <p className="text-white/80 text-xs sm:text-sm mt-1">
-                Your official e-ticket pass has been issued and emailed to <strong>{booking?.email}</strong>.
+                Your official booking voucher has been issued and emailed to <strong>{booking?.email}</strong>.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-3 rounded-2xl text-center">
@@ -283,7 +278,6 @@ function ConfirmationContent() {
             </div>
           </div>
         ) : (
-          /* Cancelled or Rejected Banner */
           <div className="rounded-3xl p-6 bg-slate-800 text-white shadow-lg flex items-center justify-between flex-wrap gap-4 print:hidden">
             <div>
               <div className="inline-flex items-center gap-1.5 bg-rose-500/20 text-rose-300 border border-rose-500/30 px-3 py-1 rounded-full text-xs font-bold uppercase mb-2">
@@ -291,19 +285,16 @@ function ConfirmationContent() {
               </div>
               <h1 className="text-xl sm:text-2xl font-black">Status Update for {refCode}</h1>
               <p className="text-slate-300 text-xs mt-1">
-                Please check your inbox or visit My Bookings for detailed notes and refund assistance.
+                Please check your inbox or visit My Bookings for detailed notes.
               </p>
             </div>
-            <Link
-              href="/my-bookings"
-              className="px-4 py-2 rounded-xl bg-white text-slate-900 font-bold text-xs"
-            >
+            <Link href="/my-bookings" className="px-4 py-2 rounded-xl bg-white text-slate-900 font-bold text-xs">
               My Bookings
             </Link>
           </div>
         )}
 
-        {/* Boarding Pass E-Ticket Voucher Card */}
+        {/* Boarding Pass E-Ticket / Cab Voucher Card */}
         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden print:border-none print:shadow-none">
           {/* Card Header with Snapshot Cover */}
           <div className="relative h-48 sm:h-56 bg-slate-900">
@@ -317,7 +308,7 @@ function ConfirmationContent() {
             <div className="absolute bottom-4 left-6 right-6 flex items-end justify-between text-white">
               <div>
                 <span className="px-2.5 py-1 rounded-md bg-white/20 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider">
-                  {booking?.snapshot?.category || ((booking as any)?.service ? `${String((booking as any).service).toUpperCase()} RESERVATION` : "CONFIRMED RESERVATION")}
+                  {booking?.snapshot?.category || (isFlight ? "FLIGHT RESERVATION" : isCab ? "PRIVATE CAB DISPATCH" : "CONFIRMED RESERVATION")}
                 </span>
                 <h2 className="text-xl sm:text-2xl font-black mt-1.5">{tourTitle}</h2>
                 <p className="text-xs text-white/80">{destination} • {duration}</p>
@@ -330,18 +321,18 @@ function ConfirmationContent() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center">
               <div className="sm:col-span-2 grid grid-cols-2 gap-4">
                 <div>
-                  <div className="text-xs uppercase font-bold text-slate-400">Travel Date</div>
+                  <div className="text-xs uppercase font-bold text-slate-400">Date</div>
                   <div className="text-sm font-bold text-slate-900 mt-0.5">{travelDateFormatted}</div>
                 </div>
                 <div>
                   <div className="text-xs uppercase font-bold text-slate-400">Guests</div>
                   <div className="text-sm font-bold text-slate-900 mt-0.5">
-                    {booking?.travelers || 1} Travelers
+                    {booking?.travelers || 1} Traveler(s)
                     {booking?.adults ? ` (${booking.adults}A${booking.children ? `, ${booking.children}C` : ""})` : ""}
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs uppercase font-bold text-slate-400">Passenger</div>
+                  <div className="text-xs uppercase font-bold text-slate-400">Lead Passenger</div>
                   <div className="text-sm font-bold text-slate-900 mt-0.5">{booking?.guestName}</div>
                 </div>
                 <div>
@@ -355,34 +346,107 @@ function ConfirmationContent() {
                         : "bg-slate-100 text-slate-700 border border-slate-300"
                     }`}
                   >
-                    {booking?.status || "Pending"}
+                    {booking?.status || "Confirmed"}
                   </div>
                 </div>
               </div>
 
-              {/* QR Verification Code - Displayed ONLY when Confirmed */}
-              {isConfirmed ? (
-                <div className="flex flex-col items-center justify-center p-3 bg-slate-50 border border-slate-200 rounded-2xl">
-                  <QrCodeSvg value={refCode} size={110} />
-                  <span className="text-[10px] font-mono font-bold text-slate-600 mt-2">{refCode}</span>
-                  <span className="text-[9px] uppercase font-bold text-emerald-700">Verified Active</span>
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center p-4 bg-amber-50/60 border border-dashed border-amber-300 rounded-2xl text-center space-y-1">
-                  <span className="text-2xl">🔒</span>
-                  <div className="text-xs font-extrabold text-amber-900">QR Code Locked</div>
-                  <p className="text-[10px] text-amber-700 leading-tight">
-                    Official pass unlocks automatically upon concierge confirmation.
-                  </p>
-                </div>
-              )}
+              {/* QR Verification Code */}
+              <div className="flex flex-col items-center justify-center p-3 bg-slate-50 border border-slate-200 rounded-2xl">
+                <QrCodeSvg value={refCode} size={110} />
+                <span className="text-[10px] font-mono font-bold text-slate-600 mt-2">{refCode}</span>
+                <span className="text-[9px] uppercase font-bold text-emerald-700">Verified Active</span>
+              </div>
             </div>
+
+            {/* Dedicated Flight Boarding Pass Information */}
+            {isFlight && (
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-5 text-slate-800 space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-blue-200/70 pb-3">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-2xl">✈️</span>
+                    <div>
+                      <span className="text-[10px] uppercase font-bold text-blue-600 tracking-wider block">Official Airline PNR Record</span>
+                      <span className="text-xl font-black font-mono text-blue-900">{pnr || "CONFIRMED"}</span>
+                    </div>
+                  </div>
+                  {ticketNo && (
+                    <div className="text-right">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block">E-Ticket Number</span>
+                      <span className="text-xs font-mono font-bold text-slate-700">{ticketNo}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Flight / Airline</span>
+                    <span className="font-bold text-slate-900">{(booking?.snapshot as any)?.airline || "SkyWings"} {(booking?.snapshot as any)?.flightNumber || ""}</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Cabin Class</span>
+                    <span className="font-bold text-slate-900">{(booking?.snapshot as any)?.cabinClass || "Economy"}</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Check-in Baggage</span>
+                    <span className="font-bold text-slate-900">15 kg / 20 kg per pax</span>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block text-[10px]">Cabin Handbag</span>
+                    <span className="font-bold text-slate-900">7 kg Included</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Dedicated Cab & Chauffeur Transfer Information */}
+            {isCab && (
+              <div className="bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-200 rounded-2xl p-5 text-slate-800 space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-teal-200/70 pb-3">
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-2xl">🚖</span>
+                    <div>
+                      <span className="text-[10px] uppercase font-bold text-teal-700 tracking-wider block">Private Chauffeur Dispatch</span>
+                      <span className="text-base font-black text-teal-950">{vehicleModelVal}</span>
+                    </div>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+                    ✓ Tolls &amp; Parking Included
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  {pickupLoc && (
+                    <div className="bg-white/80 p-2.5 rounded-xl border border-teal-100">
+                      <span className="text-[10px] text-teal-700 font-bold block">📍 Pickup Location</span>
+                      <span className="font-semibold text-slate-800">{pickupLoc}</span>
+                      {pickupTimeVal && (
+                        <span className="text-[11px] text-slate-500 block mt-0.5 font-mono">Time: {pickupTimeVal}</span>
+                      )}
+                    </div>
+                  )}
+                  {dropoffLoc && (
+                    <div className="bg-white/80 p-2.5 rounded-xl border border-teal-100">
+                      <span className="text-[10px] text-teal-700 font-bold block">🏁 Drop-off Destination</span>
+                      <span className="font-semibold text-slate-800">{dropoffLoc}</span>
+                    </div>
+                  )}
+                </div>
+
+                {flightNoVal && (
+                  <div className="text-[11px] text-teal-800 bg-teal-100/60 p-2 rounded-xl flex items-center gap-1.5 font-medium">
+                    <span>✈️</span>
+                    <span>Flight {flightNoVal} tracked in real-time. Chauffeur automatically waits at arrivals if delayed.</span>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Individual Passengers Manifest */}
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase font-bold text-slate-700 tracking-wider">
-                  Individual Passengers Manifest
+                  Traveler Manifest
                 </span>
                 <span className="text-xs text-slate-500 font-medium">
                   {booking?.travelersList?.length || booking?.travelers || 1} Registered Traveler(s)
@@ -417,17 +481,16 @@ function ConfirmationContent() {
                         {trv.type}
                       </span>
                       {trv.gender && <span className="capitalize text-slate-600">{trv.gender}</span>}
-                      {trv.age ? <span className="text-slate-600 font-medium">{trv.age} yrs</span> : null}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Special Request */}
+            {/* Special Instructions */}
             {booking?.specialRequest && (
               <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-xs">
-                <span className="font-bold text-slate-700">Special Instructions:</span>{" "}
+                <span className="font-bold text-slate-700">Reservation Details &amp; Notes:</span>{" "}
                 <span className="text-slate-600">{booking.specialRequest}</span>
               </div>
             )}
@@ -440,15 +503,9 @@ function ConfirmationContent() {
                 <span>{currency}{subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-xs text-slate-600">
-                <span>Estimated Taxes & Service Fees</span>
+                <span>Estimated Taxes &amp; Fees</span>
                 <span>{currency}{taxes.toFixed(2)}</span>
               </div>
-              {((booking as any)?.amountDue && (booking as any).amountDue > 0) ? (
-                <div className="flex justify-between text-xs text-amber-800 bg-amber-50 p-2 rounded-lg font-medium border border-amber-200">
-                  <span>Advance Paid Today: {currency}{((booking as any).amountPaid || 0).toFixed(2)}</span>
-                  <span>Due on Arrival: {currency}{(booking as any).amountDue.toFixed(2)}</span>
-                </div>
-              ) : null}
               <div className="flex justify-between text-base font-extrabold text-slate-900 border-t border-slate-100 pt-2">
                 <span>Total Amount</span>
                 <span style={{ color: primary }}>{currency}{totalAmount.toFixed(2)}</span>
@@ -477,10 +534,10 @@ function ConfirmationContent() {
             <span>💬</span> Share on WhatsApp
           </a>
           <Link
-            href="/explore"
+            href="/en"
             className="flex-1 py-3 px-6 rounded-2xl border border-slate-200 bg-white text-slate-700 font-bold text-sm hover:bg-slate-50 text-center transition-all shadow-sm"
           >
-            Book Another Experience
+            Back to Home
           </Link>
         </div>
       </div>

@@ -16,7 +16,7 @@
  * - Zero duplicated card code between Home and Explore.
  */
 
-import React, { useState, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -30,7 +30,7 @@ import {
   Platform,
   Dimensions,
 } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
@@ -442,6 +442,7 @@ function ModuleListingModal({
 // ─────────────────────────────────────────────────────────────────────────────
 export default function ExploreScreen() {
   const router = useRouter();
+  const params = useLocalSearchParams<{ service?: string; module?: string; destination?: string; q?: string }>();
   const colors = useColors();
   const queryClient = useQueryClient();
   const { siteId } = useSite();
@@ -458,6 +459,14 @@ export default function ExploreScreen() {
 
   const mainScrollRef = useRef<any>(null);
   const sectionPositions = useRef<Record<string, number>>({});
+
+  // Sync route params to active module
+  useEffect(() => {
+    const target = (params.service || params.module) as CanonicalModule | undefined;
+    if (target && enabledModules.some((m) => m.id === target)) {
+      handleScrollToModule(target);
+    }
+  }, [params.service, params.module, enabledModules]);
 
   const handleOpenEnquiry = (serviceName?: string) => {
     setEnquiryService(serviceName || 'Custom Travel Package');
@@ -491,6 +500,22 @@ export default function ExploreScreen() {
 
   return (
     <View style={[styles.root, { backgroundColor: colors.background }]}>
+      {/* ─── QUICK SEARCH BAR TRIGGER ─── */}
+      <View style={[styles.exploreSearchWrapper, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+        <TouchableOpacity
+          style={[styles.exploreSearchBar, { backgroundColor: colors.background, borderColor: colors.border }]}
+          onPress={() => router.push('/search-results' as any)}
+          activeOpacity={0.8}
+          accessibilityRole="button"
+          accessibilityLabel="Search catalogue"
+        >
+          <Ionicons name="search-outline" size={18} color={colors.primary} style={{ marginRight: 8 }} />
+          <Text style={[styles.exploreSearchPlaceholder, { color: colors.mutedText }]}>
+            Search tours, hotels, packages, destinations...
+          </Text>
+        </TouchableOpacity>
+      </View>
+
       {/* ─── STICKY MODULE SELECTOR STRIP AT TOP ─── */}
       <View style={[styles.stickyStrip, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
         <ScrollView
@@ -780,5 +805,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: SPACING.md,
     paddingTop: SPACING.sm,
     paddingBottom: SPACING.xl,
+  },
+  exploreSearchWrapper: {
+    paddingHorizontal: SPACING.md,
+    paddingVertical: SPACING.sm,
+    borderBottomWidth: 1,
+  },
+  exploreSearchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 42,
+    borderRadius: RADIUS.full,
+    borderWidth: 1,
+    paddingHorizontal: SPACING.md,
+  },
+  exploreSearchPlaceholder: {
+    fontSize: FONT_SIZE.sm,
+    flex: 1,
   },
 });

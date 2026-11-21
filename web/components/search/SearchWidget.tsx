@@ -7,6 +7,8 @@ import DateRangePicker from "./DateRangePicker";
 import OccupancySelector, { type OccupancyState } from "./OccupancySelector";
 import FiltersPanel, { type SearchFilterState } from "./FiltersPanel";
 import { useFeatures } from "@/lib/features/useFeature";
+import { getFlightAirports } from "@/lib/api/flights";
+import { getCountryVisaSummaries } from "@/lib/api/visas";
 
 interface SearchWidgetProps {
   activeModuleCode?: string;
@@ -89,8 +91,39 @@ export default function SearchWidget({
   const [tripType, setTripType] = useState<"oneWay" | "roundTrip" | "multiCity">("oneWay");
   const [cabinClass, setCabinClass] = useState("Economy");
   const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
+  const [airportList, setAirportList] = useState(AIRPORTS);
+  const [visaDestinations, setVisaDestinations] = useState(VISA_DESTINATIONS);
   const [fromAirport, setFromAirport] = useState(AIRPORTS[0]);
   const [toAirport, setToAirport] = useState(AIRPORTS[4]);
+
+  React.useEffect(() => {
+    async function loadDynamicSearchData() {
+      try {
+        const ap = await getFlightAirports({ siteId });
+        if (Array.isArray(ap) && ap.length > 0) {
+          const mapped = ap.map((a) => ({
+            code: a.code,
+            name: a.name || `${a.city} Airport`,
+            city: a.city,
+            country: a.country || "",
+          }));
+          setAirportList(mapped);
+          if (mapped[0]) setFromAirport(mapped[0]);
+          if (mapped[1]) setToAirport(mapped[1]);
+        }
+      } catch { }
+
+      try {
+        const vs = await getCountryVisaSummaries({ siteId });
+        if (Array.isArray(vs) && vs.length > 0) {
+          const mapped = vs.map((v) => v.country);
+          setVisaDestinations(mapped);
+          if (mapped[0]) setVisaDestination(mapped[0]);
+        }
+      } catch { }
+    }
+    loadDynamicSearchData();
+  }, [siteId]);
   const [departureDate, setDepartureDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [selectedAirline, setSelectedAirline] = useState("All Airlines");
@@ -304,11 +337,10 @@ export default function SearchWidget({
                 key={`${feat.id}-${idx}`}
                 type="button"
                 onClick={() => setSelectedVertical(featCode)}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-150 ${
-                  isSelected
-                    ? "shadow-sm text-white scale-[1.02]"
-                    : "bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-150 ${isSelected
+                  ? "shadow-sm text-white scale-[1.02]"
+                  : "bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white"
+                  }`}
                 style={
                   isSelected && accentColor
                     ? { backgroundColor: accentColor, color: "#ffffff" }
@@ -393,12 +425,12 @@ export default function SearchWidget({
                 <select
                   value={fromAirport.code}
                   onChange={(e) => {
-                    const found = AIRPORTS.find((a) => a.code === e.target.value);
+                    const found = airportList.find((a) => a.code === e.target.value);
                     if (found) setFromAirport(found);
                   }}
                   className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer truncate"
                 >
-                  {AIRPORTS.map((a) => (
+                  {airportList.map((a) => (
                     <option key={a.code} value={a.code} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
                       {a.code} - {a.city} ({a.name})
                     </option>
@@ -422,12 +454,12 @@ export default function SearchWidget({
                 <select
                   value={toAirport.code}
                   onChange={(e) => {
-                    const found = AIRPORTS.find((a) => a.code === e.target.value);
+                    const found = airportList.find((a) => a.code === e.target.value);
                     if (found) setToAirport(found);
                   }}
                   className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer truncate"
                 >
-                  {AIRPORTS.map((a) => (
+                  {airportList.map((a) => (
                     <option key={a.code} value={a.code} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
                       {a.code} - {a.city} ({a.name})
                     </option>
@@ -743,7 +775,7 @@ export default function SearchWidget({
                 onChange={(e) => setVisaDestination(e.target.value)}
                 className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
               >
-                {VISA_DESTINATIONS.map((d) => (
+                {visaDestinations.map((d) => (
                   <option key={d} value={d} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
                     {d}
                   </option>
@@ -900,17 +932,17 @@ export default function SearchWidget({
                   isHotel
                     ? "DESTINATION / HOTEL"
                     : isTour
-                    ? "DESTINATION / ACTIVITY"
-                    : "HOLIDAY DESTINATION"
+                      ? "DESTINATION / ACTIVITY"
+                      : "HOLIDAY DESTINATION"
                 }
                 placeholder={
                   isHotel
                     ? "City, Landmark or Hotel name"
                     : isTour
-                    ? "City or Activity name (e.g. Langkawi, Dubai)"
-                    : isPackage
-                    ? "Search holiday destination (e.g. Bali, Kashmir)"
-                    : "Destination"
+                      ? "City or Activity name (e.g. Langkawi, Dubai)"
+                      : isPackage
+                        ? "Search holiday destination (e.g. Bali, Kashmir)"
+                        : "Destination"
                 }
               />
 
@@ -922,8 +954,8 @@ export default function SearchWidget({
                   isHotel
                     ? "CHECK-IN — CHECK-OUT"
                     : isTour
-                    ? "TRAVEL DATE"
-                    : "TRAVEL DATES"
+                      ? "TRAVEL DATE"
+                      : "TRAVEL DATES"
                 }
                 isSingleDate={isTour}
                 onChange={(start, end) => {
@@ -973,10 +1005,10 @@ export default function SearchWidget({
                   {isHotel
                     ? "Search Hotels"
                     : isTour
-                    ? "Search Attractions"
-                    : isPackage
-                    ? "Search Packages"
-                    : "Search"}
+                      ? "Search Attractions"
+                      : isPackage
+                        ? "Search Packages"
+                        : "Search"}
                 </span>
               </button>
             </div>

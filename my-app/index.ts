@@ -26,7 +26,12 @@ if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof window.addE
       msg.includes('Hydration failed') ||
       msg.includes('did not match') ||
       msg.includes('"shadow*" style props are deprecated') ||
-      msg.includes('style props are deprecated')
+      msg.includes('style props are deprecated') ||
+      msg.includes('timed out after') ||
+      msg.includes('Fetching the font family') ||
+      msg.includes('ERR_DOWNLOAD') ||
+      msg.includes('fontfaceobserver') ||
+      msg.includes('FontFaceObserver')
     );
   };
 
