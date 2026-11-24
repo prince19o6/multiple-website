@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import type { MergedWebsiteConfig } from "@/lib/mergeWebsiteConfig";
 import ModuleBar from "../navigation/ModuleBar";
-
+import SearchTabs from "../search/SearchTabs";
 import SearchWidget from "../search/SearchWidget";
 import { useActiveModule, CanonicalModule } from "@/lib/context/ModuleContext";
 
@@ -47,7 +47,7 @@ const MODULE_HERO_PHOTOS: Record<string, Partial<Record<CanonicalModule, string>
 };
 
 export default function HeroSection({ config }: HeroSectionProps) {
-  const { activeModule, activeModuleCode, moduleData } = useActiveModule();
+  const { activeModule, activeModuleCode, moduleData, setActiveModule } = useActiveModule();
 
   const primaryColor = config?.theme?.colors?.primary || config?.theme?.primary || "#2882c5";
   const siteId = (config?.site?.id || config?.id || "gujjutours").toLowerCase();
@@ -154,18 +154,20 @@ export default function HeroSection({ config }: HeroSectionProps) {
         id="hero-search-section"
         className="relative z-30 max-w-[1200px] mx-auto px-3 sm:px-4 -mt-20 sm:-mt-28 lg:-mt-32"
       >
-        {/* Unified Service Switcher Tabs Bar */}
-        <ModuleBar
-          variant="hero"
+        {/* Modern Pill-Style Tabs with Gradient Fade Edges */}
+        <SearchTabs
+          activeTab={activeModule}
+          onTabChange={(tabId) => setActiveModule(tabId as CanonicalModule, true)}
           accentColor={primaryColor}
         />
 
         {/* Dynamic Search Widget (Morphs based on selected vertical) */}
         <SearchWidget
+          activeTab={activeModule}
+          activeModule={activeModule}
           activeModuleCode={activeModuleCode}
           siteId={siteId}
           accentColor={primaryColor}
-          hideQuickSwitcher={true}
         />
       </div>
     </div>

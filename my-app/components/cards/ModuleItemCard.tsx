@@ -71,10 +71,10 @@ export const ModuleItemCard = memo(function ModuleItemCard({
   const isSaved = propIsWishlisted !== undefined
     ? propIsWishlisted
     : Boolean(
-        (item.id && checkWishlist(item.id)) ||
-        (item.slug && checkWishlist(item.slug)) ||
-        (item.title && checkWishlist(item.title)) ||
-        (itemIdentifier && checkWishlist(itemIdentifier))
+        (item.id && checkWishlist(item.id, module)) ||
+        (item.slug && checkWishlist(item.slug, module)) ||
+        (item.title && checkWishlist(item.title, module)) ||
+        (itemIdentifier && checkWishlist(itemIdentifier, module))
       );
 
   const displaySaved = optimisticSaved !== null ? optimisticSaved : isSaved;

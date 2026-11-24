@@ -44,7 +44,7 @@ export interface WishlistContextType {
   wishlistIds: (number | string)[];
   wishlistItems: WishlistItem[];
   wishlistCount: number;
-  isWishlisted: (tourIdOrSlugOrTitle: number | string) => boolean;
+  isWishlisted: (tourIdOrSlugOrTitle: number | string, moduleName?: string) => boolean;
   toggleWishlist: (
     tourIdOrSlugOrTitle: number | string,
     itemData?: Partial<WishlistItem>,
@@ -55,7 +55,7 @@ export interface WishlistContextType {
     itemData?: Partial<WishlistItem>,
     module?: string
   ) => Promise<void>;
-  removeFromWishlist: (tourIdOrSlugOrTitle: number | string) => Promise<void>;
+  removeFromWishlist: (tourIdOrSlugOrTitle: number | string, moduleName?: string) => Promise<void>;
   clearWishlist: () => Promise<void>;
 }
 
@@ -115,12 +115,22 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         const storedIds = await storeGetObject<(number | string)[]>(storageKey, currentSiteId);
         let currentIds: (number | string)[] = Array.isArray(storedIds) ? storedIds : [];
 
-        // If items exist, ensure IDs are synced
+        // Deduplicate currentItems by unique ID/slug
+        const seenKeys = new Set<string>();
+        currentItems = currentItems.filter((item) => {
+          const key = String(item.id).trim().toLowerCase();
+          if (seenKeys.has(key)) return false;
+          seenKeys.add(key);
+          return true;
+        });
+
+        // Ensure IDs are strictly 1:1 with unique canonical items
         if (currentItems.length > 0) {
-          const itemIds = currentItems.map((i) => i.id);
-          currentIds = Array.from(new Set([...currentIds, ...itemIds]));
+          currentIds = Array.from(new Set(currentItems.map((i) => i.id)));
+          storeSetObject(storageKey, currentIds, currentSiteId).catch(() => {});
         } else if (currentIds.length > 0) {
-          // If only IDs exist, build initial items
+          // If only IDs exist, deduplicate them
+          currentIds = Array.from(new Set(currentIds.map((id) => id)));
           currentItems = currentIds.map((id) => ({
             id,
             slug: typeof id === 'string' ? id : undefined,
@@ -156,7 +166,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
               }
             });
             currentItems = mergedItems;
-            currentIds = Array.from(new Set([...currentIds, ...currentItems.map((i) => i.id)]));
+            currentIds = Array.from(new Set(currentItems.map((i) => i.id)));
 
             await storeSetObject(storageKeyItems, currentItems, currentSiteId);
             await storeSetObject(storageKey, currentIds, currentSiteId);
@@ -210,7 +220,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
   }, [currentSiteId, userIdentifier, storageKey, storageKeyItems]);
 
   const isWishlisted = useCallback(
-    (tourIdOrSlugOrTitle: number | string) => {
+    (tourIdOrSlugOrTitle: number | string, moduleName?: string) => {
       if (
         tourIdOrSlugOrTitle === undefined ||
         tourIdOrSlugOrTitle === null ||
@@ -220,17 +230,14 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
       }
       const queryStr = String(tourIdOrSlugOrTitle).trim().toLowerCase();
       const queryNum = Number(tourIdOrSlugOrTitle);
+      const modQuery = moduleName ? moduleName.trim().toLowerCase() : null;
 
-      // 1. Check in wishlistIds
-      const foundInIds = wishlistIds.some((id) => {
-        if (String(id).trim().toLowerCase() === queryStr) return true;
-        if (!isNaN(queryNum) && Number(id) === queryNum) return true;
-        return false;
-      });
-      if (foundInIds) return true;
-
-      // 2. Comprehensive check in wishlistItems (id, slug, title, or name)
-      return wishlistItems.some((item) => {
+      // 1. Comprehensive check in wishlistItems (id, slug, title, or name)
+      const foundInItems = wishlistItems.some((item) => {
+        if (modQuery) {
+          const itemMod = (item.module || 'tours').toLowerCase();
+          if (itemMod !== modQuery) return false;
+        }
         if (String(item.id).trim().toLowerCase() === queryStr) return true;
         if (item.slug && String(item.slug).trim().toLowerCase() === queryStr) return true;
         if (item.title && String(item.title).trim().toLowerCase() === queryStr) return true;
@@ -238,6 +245,18 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         if (!isNaN(queryNum) && Number(item.id) === queryNum) return true;
         return false;
       });
+      if (foundInItems) return true;
+
+      // 2. Check in wishlistIds (if no module specified or if module is 'tours')
+      if (!modQuery || modQuery === 'tours') {
+        return wishlistIds.some((id) => {
+          if (String(id).trim().toLowerCase() === queryStr) return true;
+          if (!isNaN(queryNum) && Number(id) === queryNum) return true;
+          return false;
+        });
+      }
+
+      return false;
     },
     [wishlistIds, wishlistItems]
   );
@@ -259,6 +278,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
       const queryStr = String(tourIdOrSlugOrTitle).trim();
       const queryNum = Number(tourIdOrSlugOrTitle);
       const primaryId = !isNaN(queryNum) && String(queryNum) === queryStr ? queryNum : queryStr;
+      const effectiveModule = moduleName || itemData?.module || 'tours';
 
       const newItem: WishlistItem = {
         id: itemData?.id ?? primaryId,
@@ -266,7 +286,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         title: itemData?.title || itemData?.name || String(primaryId),
         name: itemData?.name || itemData?.title || String(primaryId),
         description: itemData?.description || '',
-        category: itemData?.category || (moduleName ? moduleName.toUpperCase() : 'TOURS'),
+        category: itemData?.category || effectiveModule.toUpperCase(),
         price: itemData?.price || 0,
         originalPrice: itemData?.originalPrice,
         rating: itemData?.rating || 5.0,
@@ -278,26 +298,11 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         location: itemData?.location || itemData?.city || itemData?.country || '',
         city: itemData?.city,
         country: itemData?.country,
-        module: moduleName || itemData?.module || 'tours',
+        module: effectiveModule,
         badge: itemData?.badge,
         stars: itemData?.stars,
         addedAt: Date.now(),
       };
-
-      setWishlistIds((prevIds) => {
-        const nextIds = Array.from(
-          new Set([
-            ...prevIds,
-            primaryId,
-            ...(itemData?.id !== undefined ? [itemData.id] : []),
-            ...(itemData?.slug ? [itemData.slug] : []),
-          ])
-        );
-        storeSetObject(storageKey, nextIds, currentSiteId).catch((err) =>
-          console.warn('[WishlistContext] Failed to persist IDs:', err)
-        );
-        return nextIds;
-      });
 
       setWishlistItems((prevItems) => {
         const qStr = queryStr.toLowerCase();
@@ -306,8 +311,13 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         const itemTitleStr = (itemData?.title || itemData?.name)
           ? String(itemData.title || itemData.name).toLowerCase()
           : '';
+        const itemModStr = effectiveModule.toLowerCase();
 
         const filtered = prevItems.filter((i) => {
+          const prevMod = (i.module || 'tours').toLowerCase();
+          // Items in different modules must never overwrite each other
+          if (prevMod !== itemModStr) return true;
+
           const sid = String(i.id).toLowerCase();
           const sslug = i.slug ? String(i.slug).toLowerCase() : '';
           const stitle = i.title ? String(i.title).toLowerCase() : '';
@@ -321,9 +331,18 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
         });
 
         const nextItems = [...filtered, newItem];
+        // Keep wishlistIds strictly 1:1 with unique canonical item IDs
+        const nextIds = Array.from(new Set(nextItems.map((i) => i.id)));
+
+        setWishlistIds(nextIds);
+
         storeSetObject(storageKeyItems, nextItems, currentSiteId).catch((err) =>
           console.warn('[WishlistContext] Failed to persist Items:', err)
         );
+        storeSetObject(storageKey, nextIds, currentSiteId).catch((err) =>
+          console.warn('[WishlistContext] Failed to persist IDs:', err)
+        );
+
         return nextItems;
       });
     },
@@ -331,7 +350,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
   );
 
   const removeFromWishlist = useCallback(
-    async (tourIdOrSlugOrTitle: number | string) => {
+    async (tourIdOrSlugOrTitle: number | string, moduleName?: string) => {
       if (
         tourIdOrSlugOrTitle === undefined ||
         tourIdOrSlugOrTitle === null ||
@@ -341,10 +360,14 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
       }
       const queryStr = String(tourIdOrSlugOrTitle).trim().toLowerCase();
       const queryNum = Number(tourIdOrSlugOrTitle);
+      const modQuery = moduleName ? moduleName.trim().toLowerCase() : null;
 
       setWishlistItems((prevItems) => {
-        // Find matching item to also purge its associated ID and slug
         const matched = prevItems.find((item) => {
+          if (modQuery) {
+            const itemMod = (item.module || 'tours').toLowerCase();
+            if (itemMod !== modQuery) return false;
+          }
           if (String(item.id).trim().toLowerCase() === queryStr) return true;
           if (item.slug && String(item.slug).trim().toLowerCase() === queryStr) return true;
           if (item.title && String(item.title).trim().toLowerCase() === queryStr) return true;
@@ -360,6 +383,11 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
           : '';
 
         const nextItems = prevItems.filter((item) => {
+          if (modQuery) {
+            const itemMod = (item.module || 'tours').toLowerCase();
+            if (itemMod !== modQuery) return true;
+          }
+
           const sId = String(item.id).trim().toLowerCase();
           const sSlug = item.slug ? String(item.slug).trim().toLowerCase() : '';
           const sTitle = item.title ? String(item.title).trim().toLowerCase() : '';
@@ -378,29 +406,18 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
           return true;
         });
 
-        setWishlistIds((prevIds) => {
-          const nextIds = prevIds.filter((id) => {
-            const s = String(id).trim().toLowerCase();
-            if (
-              s === queryStr ||
-              s === matchedIdStr ||
-              (matchedSlugStr && s === matchedSlugStr) ||
-              (matchedTitleStr && s === matchedTitleStr)
-            ) {
-              return false;
-            }
-            if (!isNaN(queryNum) && Number(id) === queryNum) return false;
-            return true;
-          });
-          storeSetObject(storageKey, nextIds, currentSiteId).catch((err) =>
-            console.warn('[WishlistContext] Failed to persist removal IDs:', err)
-          );
-          return nextIds;
-        });
+        // Keep wishlistIds strictly 1:1 with unique canonical item IDs
+        const nextIds = Array.from(new Set(nextItems.map((i) => i.id)));
+
+        setWishlistIds(nextIds);
 
         storeSetObject(storageKeyItems, nextItems, currentSiteId).catch((err) =>
           console.warn('[WishlistContext] Failed to persist removal Items:', err)
         );
+        storeSetObject(storageKey, nextIds, currentSiteId).catch((err) =>
+          console.warn('[WishlistContext] Failed to persist removal IDs:', err)
+        );
+
         return nextItems;
       });
     },
@@ -413,10 +430,11 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
       itemData?: Partial<WishlistItem>,
       moduleName?: string
     ) => {
-      if (isWishlisted(tourIdOrSlugOrTitle)) {
-        await removeFromWishlist(tourIdOrSlugOrTitle);
+      const effectiveModule = moduleName || itemData?.module;
+      if (isWishlisted(tourIdOrSlugOrTitle, effectiveModule)) {
+        await removeFromWishlist(tourIdOrSlugOrTitle, effectiveModule);
       } else {
-        await addToWishlist(tourIdOrSlugOrTitle, itemData, moduleName);
+        await addToWishlist(tourIdOrSlugOrTitle, itemData, effectiveModule);
       }
     },
     [isWishlisted, removeFromWishlist, addToWishlist]
@@ -433,7 +451,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
     }
   }, [storageKey, storageKeyItems, currentSiteId]);
 
-  const totalCount = Math.max(wishlistIds.length, wishlistItems.length);
+  const totalCount = wishlistItems.length > 0 ? wishlistItems.length : wishlistIds.length;
 
   return (
     <WishlistContext.Provider

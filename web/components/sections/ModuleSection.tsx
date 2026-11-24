@@ -429,40 +429,263 @@ export function ModuleSection({
   // 4. OFFER BANNERS
   // ─────────────────────────────────────────────────────────────
   if (type === "offers") {
-    const banners = moduleData?.banners || [];
+    const fallbackBannersByModule: Record<string, any[]> = {
+      flights: [
+        {
+          id: "banner-flight-1",
+          title: "Surat & Mumbai to Dubai Direct Airfares",
+          subtitle: "Special group airfares with 30kg luggage allowance and confirmed 100% Pure Veg dining.",
+          tag: "Direct Flights",
+          buttonText: "Book Airfare",
+          buttonUrl: "/en/flights",
+          imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #0369a1 0%, #1e40af 60%, #312e81 100%)",
+        },
+        {
+          id: "banner-flight-2",
+          title: "Emirates & Air India Special Holiday Fares",
+          subtitle: "Save up to 15% on return tickets with flexible date change and zero hidden booking fees.",
+          tag: "Limited Offer",
+          buttonText: "View Flight Deals",
+          buttonUrl: "/en/flights",
+          imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #991b1b 0%, #881337 60%, #451a03 100%)",
+        },
+      ],
+      hotels: [
+        {
+          id: "banner-hotel-1",
+          title: "Book Now, Pay Later on Luxury Stays",
+          subtitle: "Reserve 4-star and 5-star verified hotels with zero upfront advance payment.",
+          tag: "Zero Down Payment",
+          buttonText: "Explore Stays",
+          buttonUrl: "/en/hotels",
+          imageUrl: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #0284c7 0%, #1d4ed8 60%, #312e81 100%)",
+        },
+        {
+          id: "banner-hotel-2",
+          title: "Complimentary Pure Veg Breakfast & Upgrades",
+          subtitle: "Exclusive member perks on top family hotels across Dubai & global destinations.",
+          tag: "Member Perk",
+          buttonText: "View Hotel Deals",
+          buttonUrl: "/en/hotels",
+          imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #047857 0%, #0f766e 60%, #0e7490 100%)",
+        },
+      ],
+      tours: [
+        {
+          id: "banner-tour-1",
+          title: "Red Dune Desert Safari & BBQ Dinner Combo",
+          subtitle: "4x4 Land Cruiser dune bashing, sandboarding, camel rides, and vegetarian BBQ buffet.",
+          tag: "Top Rated",
+          buttonText: "Book Safari Deal",
+          buttonUrl: "/en/tours",
+          imageUrl: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #b45309 0%, #c2410c 60%, #9f1239 100%)",
+        },
+        {
+          id: "banner-tour-2",
+          title: "Burj Khalifa 124th + Dubai Aquarium Combo",
+          subtitle: "Save up to 25% with the official fast-track combo pass. Instant mobile voucher.",
+          tag: "Super Saver",
+          buttonText: "Get Combo Pass",
+          buttonUrl: "/en/tours",
+          imageUrl: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #1d4ed8 0%, #0284c7 60%, #1e1b4b 100%)",
+        },
+      ],
+      packages: [
+        {
+          id: "banner-pkg-1",
+          title: "All-Inclusive Dubai Family Holidays with Jain Food",
+          subtitle: "5D/4N luxury package with 4-star stays, desert safari, Burj Khalifa, and private cabs.",
+          tag: "Family Special",
+          buttonText: "Explore Packages",
+          buttonUrl: "/en/packages",
+          imageUrl: "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #047857 0%, #0f766e 60%, #0891b2 100%)",
+        },
+        {
+          id: "banner-pkg-2",
+          title: "Bali Private Pool Villa 6D/5N Honeymoon Escape",
+          subtitle: "Includes floating breakfast, Nusa Penida speedboat tour, and daily dedicated chauffeur.",
+          tag: "Romantic Escape",
+          buttonText: "Discover Bali",
+          buttonUrl: "/en/packages",
+          imageUrl: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #6d28d9 0%, #7e22ce 60%, #312e81 100%)",
+        },
+      ],
+      transfers: [
+        {
+          id: "banner-trf-1",
+          title: "Airport Roundtrip Transfers: Flat 20% Off",
+          subtitle: "Book airport arrival pickup and return transfer together for guaranteed lowest fares.",
+          tag: "Airport Special",
+          buttonText: "Book Transfer",
+          buttonUrl: "/en/transfers",
+          imageUrl: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #262626 0%, #171717 60%, #0a0a0a 100%)",
+        },
+        {
+          id: "banner-trf-2",
+          title: "Dubai to Abu Dhabi Intercity Flat Rates",
+          subtitle: "Private luxury sedans and family SUVs with English-speaking chauffeurs and free waiting.",
+          tag: "Fixed Fares",
+          buttonText: "View Cab Routes",
+          buttonUrl: "/en/transfers",
+          imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #b45309 0%, #854d0e 60%, #1c1917 100%)",
+        },
+      ],
+      visas: [
+        {
+          id: "banner-visa-1",
+          title: "Express 24-Hour UAE Tourist Visa Guaranteed",
+          subtitle: "Rapid document pre-verification and fast-track immigration submission with 99.4% approval.",
+          tag: "Express Service",
+          buttonText: "Apply Visa",
+          buttonUrl: "/en/visas",
+          imageUrl: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #1e40af 0%, #0369a1 60%, #1e1b4b 100%)",
+        },
+        {
+          id: "banner-visa-2",
+          title: "Family Visa Combo - Free Travel Insurance",
+          subtitle: "Apply for 3 or more family tourist visas and receive free medical & baggage travel insurance.",
+          tag: "Family Offer",
+          buttonText: "Start Application",
+          buttonUrl: "/en/visas",
+          imageUrl: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #065f46 0%, #115e59 60%, #0f172a 100%)",
+        },
+      ],
+      restaurants: [
+        {
+          id: "banner-res-1",
+          title: "Unlimited Gujarati & Jain Thali Dining Pass",
+          subtitle: "Pre-book authentic 100% Pure Veg and Jain dining experiences in Dubai with guaranteed seating.",
+          tag: "Pure Veg & Jain",
+          buttonText: "View Menus",
+          buttonUrl: "/en/restaurants",
+          imageUrl: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #b45309 0%, #9a3412 60%, #881337 100%)",
+        },
+        {
+          id: "banner-res-2",
+          title: "Dubai Marina Pure Veg Dinner Cruise",
+          subtitle: "Enjoy a lavish vegetarian buffet and live entertainment while cruising past the illuminated skyline.",
+          tag: "Special Evening",
+          buttonText: "Book Dinner Cruise",
+          buttonUrl: "/en/restaurants",
+          imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
+          gradient: "linear-gradient(135deg, #3730a3 0%, #5b21b6 60%, #3b0764 100%)",
+        },
+      ],
+    };
+
+    const moduleKey = String(currentModule || "hotels").toLowerCase().trim();
+    const serverBanners = (Array.isArray(moduleData?.banners) && moduleData.banners.length > 0)
+      ? moduleData.banners
+      : (Array.isArray(moduleData?.offers) && moduleData.offers.length > 0)
+      ? moduleData.offers
+      : [];
+
+    const fallbackList = fallbackBannersByModule[moduleKey] || fallbackBannersByModule.hotels;
+    const banners = serverBanners.length > 0 ? serverBanners : fallbackList;
+
     return (
       <section className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 ${className}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {banners.map((b: any) => (
-            <div
-              key={b.id}
-              className={`relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r ${b.bgGradient} text-white shadow-md flex flex-col justify-between min-h-[180px]`}
-            >
-              <div className="space-y-2 relative z-10">
-                <span className="inline-block px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-white/20 backdrop-blur-md">
-                  {b.tag}
-                </span>
-                <h3 className="text-xl sm:text-2xl font-black leading-tight">
-                  {b.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-white/85 max-w-md">
-                  {b.subtitle}
-                </p>
-              </div>
+          {banners.map((b: any, idx: number) => {
+            const rawTitle = b.title || b.name || "Special Travel Offer";
+            const rawSubtitle =
+              b.subtitle ||
+              b.description ||
+              "Enjoy exclusive member rates, flexible cancellations, and guaranteed departures.";
+            const rawTag =
+              b.tag ||
+              b.badge ||
+              b.tagline ||
+              (b.code ? `CODE: ${b.code}` : "SPECIAL DEAL");
+            const rawBtnText = b.buttonText || b.ctaText || "Explore Deals";
+            const rawBtnUrl = b.buttonUrl || b.ctaLink || `/en/${currentModule}`;
+            const fallbackItem = fallbackList[idx % fallbackList.length] || fallbackList[0];
+            const rawImage =
+              b.imageUrl ||
+              b.image ||
+              b.bannerImage ||
+              fallbackItem.imageUrl;
+            const finalImage = getActualImageUrl(rawImage, {
+              title: rawTitle,
+              module: currentModuleCode,
+              id: b.id || `offer-${idx}`,
+            });
+            const inlineGradient =
+              b.gradient ||
+              fallbackItem.gradient ||
+              "linear-gradient(135deg, #0369a1 0%, #1e40af 60%, #312e81 100%)";
 
-              <div className="pt-4 relative z-10">
-                <Link
-                  href={b.buttonUrl || `/en/${currentModule}`}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-neutral-900 font-bold text-xs sm:text-sm hover:bg-neutral-100 transition-all shadow-md active:scale-95 min-h-[44px]"
-                >
-                  <span>{b.buttonText}</span>
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                    <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
-                  </svg>
-                </Link>
+            return (
+              <div
+                key={b.id || idx}
+                className="relative overflow-hidden rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col justify-between min-h-[200px] sm:min-h-[220px] group border border-neutral-200/20 dark:border-neutral-800"
+                style={{ background: inlineGradient }}
+              >
+                {/* Background Image with layered gradient overlays */}
+                {finalImage && (
+                  <div className="absolute inset-0 z-0">
+                    <Image
+                      src={finalImage}
+                      alt={rawTitle}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority={idx === 0}
+                    />
+                    {/* Dark gradient overlay to guarantee high-contrast readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-900/80 to-neutral-900/40" />
+                  </div>
+                )}
+
+                {/* Card Header Content */}
+                <div className="space-y-2.5 relative z-10">
+                  <span className="inline-block px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-white/20 text-white backdrop-blur-md border border-white/25 shadow-xs">
+                    {rawTag}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-black text-white leading-tight drop-shadow-sm max-w-xl">
+                    {rawTitle}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-200 line-clamp-2 max-w-md drop-shadow-xs">
+                    {rawSubtitle}
+                  </p>
+                </div>
+
+                {/* Call to Action Button */}
+                <div className="pt-4 relative z-10">
+                  <Link
+                    href={rawBtnUrl}
+                    className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-neutral-900 font-extrabold text-xs sm:text-sm hover:bg-neutral-100 hover:shadow-lg transition-all shadow-md active:scale-95 min-h-[44px] group/btn"
+                  >
+                    <span>{rawBtnText}</span>
+                    <svg
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="w-4 h-4 transition-transform group-hover/btn:translate-x-1"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     );

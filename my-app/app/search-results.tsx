@@ -53,7 +53,15 @@ import { MobileEnquirySheet } from '@/components/common/MobileEnquirySheet';
 import { resolveTourCardVariant } from '@/lib/tourCardResolver';
 import BrandLogo from '@/components/common/BrandLogo';
 import FilterModal from '@/components/FilterModal';
-import { fetchHotels, fetchPackages, type ModuleFeaturedItem } from '@/services/api';
+import {
+  fetchHotels,
+  fetchPackages,
+  fetchFlights,
+  fetchTransfers,
+  fetchVisas,
+  fetchRestaurants,
+  type ModuleFeaturedItem,
+} from '@/services/api';
 import type { Tour, TourFilterState, TourSearchParams, TourSortOption } from '@/types';
 import { tourHref } from '@/lib/navigation';
 
@@ -65,13 +73,56 @@ const SORT_LABELS: Record<TourSortOption, string> = {
   newest: 'Newest',
 };
 
-type SearchModuleTab = 'all' | 'tours' | 'hotels' | 'packages';
+type SearchModuleTab =
+  | 'all'
+  | 'tours'
+  | 'hotels'
+  | 'packages'
+  | 'flights'
+  | 'transfers'
+  | 'visas'
+  | 'restaurants';
 
 interface UnifiedSearchItem {
   id: string;
-  moduleType: 'tours' | 'hotels' | 'packages';
+  moduleType: 'tours' | 'hotels' | 'packages' | 'flights' | 'transfers' | 'visas' | 'restaurants';
   tourData?: Tour;
   moduleData?: ModuleFeaturedItem;
+}
+
+function mapRawToModuleFeaturedItem(raw: any, module: string): ModuleFeaturedItem {
+  return {
+    id: String(raw.id || raw._id || raw.slug || Math.random()),
+    slug: raw.slug || String(raw.id || ''),
+    title: raw.title || raw.name || raw.airline || (raw.country ? `${raw.country} Visa` : 'Curated Option'),
+    city: raw.city || raw.fromAirport?.city || raw.destination || raw.country || '',
+    country: raw.country || raw.toAirport?.country || '',
+    price: Number(raw.price || raw.startingPrice || raw.costForTwo || 0),
+    originalPrice: raw.originalPrice ? Number(raw.originalPrice) : undefined,
+    currency: raw.currency || 'INR',
+    imageUrl: raw.imageUrl || raw.airlineLogo || raw.image || '',
+    rating: typeof raw.rating === 'number' ? raw.rating : 4.8,
+    reviewCount: typeof raw.reviews === 'number' ? raw.reviews : 12,
+    badge: raw.badge || raw.cabinClass || raw.vehicleType || raw.vehicle || raw.visaType,
+    airline: raw.airline,
+    flightNumber: raw.flightNumber,
+    fromCity: raw.fromAirport?.city || raw.fromCity,
+    toCity: raw.toAirport?.city || raw.toCity,
+    departureTime: raw.departureTime,
+    arrivalTime: raw.arrivalTime,
+    duration: raw.duration,
+    stops: raw.stops,
+    vehicle: raw.vehicleType || raw.vehicle,
+    capacity: raw.capacity,
+    luggage: raw.luggage,
+    processingTime: raw.processingTime,
+    validity: raw.validity,
+    entryType: raw.entryType,
+    cuisine: raw.cuisine,
+    isPureVeg: Boolean(raw.isPureVeg || raw.meals?.pureVegGuaranteed),
+    isJainAvailable: Boolean(raw.isJainAvailable || raw.meals?.jainMealAvailable),
+    costForTwo: raw.costForTwo || raw.price,
+  };
 }
 
 const blurActiveElement = () => {
@@ -108,6 +159,10 @@ export default function SearchResultsScreen() {
   // Determine initial module tab
   const initialTab = useMemo<SearchModuleTab>(() => {
     const raw = (params.service || params.type || '').toLowerCase();
+    if (raw.includes('flight') || raw.includes('air')) return 'flights';
+    if (raw.includes('transfer') || raw.includes('cab') || raw.includes('taxi')) return 'transfers';
+    if (raw.includes('visa')) return 'visas';
+    if (raw.includes('restaurant') || raw.includes('dining') || raw.includes('food')) return 'restaurants';
     if (raw.includes('hotel') || raw.includes('stay')) return 'hotels';
     if (raw.includes('package') || raw.includes('holiday')) return 'packages';
     if (raw.includes('tour') || raw.includes('activit') || raw.includes('attraction')) return 'tours';
@@ -219,15 +274,111 @@ export default function SearchResultsScreen() {
     staleTime: 1000 * 60 * 3,
   });
 
+  // 4. Flights data query
+  const {
+    data: flightsRes,
+    isLoading: flightsLoading,
+    refetch: refetchFlights,
+  } = useQuery({
+    queryKey: ['searchFlights', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchFlights(
+        {
+          from: debouncedTerm.trim() || undefined,
+          to: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
+  // 5. Transfers data query
+  const {
+    data: transfersRes,
+    isLoading: transfersLoading,
+    refetch: refetchTransfers,
+  } = useQuery({
+    queryKey: ['searchTransfers', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchTransfers(
+        {
+          pickup: debouncedTerm.trim() || undefined,
+          dropoff: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
+  // 6. Visas data query
+  const {
+    data: visasRes,
+    isLoading: visasLoading,
+    refetch: refetchVisas,
+  } = useQuery({
+    queryKey: ['searchVisas', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchVisas(
+        {
+          search: debouncedTerm.trim() || undefined,
+          country: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
+  // 7. Restaurants data query
+  const {
+    data: restaurantsRes,
+    isLoading: restaurantsLoading,
+    refetch: refetchRestaurants,
+  } = useQuery({
+    queryKey: ['searchRestaurants', siteId, debouncedTerm],
+    queryFn: () =>
+      fetchRestaurants(
+        {
+          destination: debouncedTerm.trim() || undefined,
+          search: debouncedTerm.trim() || undefined,
+          minPrice: filterState.minPrice,
+          maxPrice: filterState.maxPrice,
+        },
+        siteId
+      ),
+    staleTime: 1000 * 60 * 3,
+  });
+
   // Refresh handler across all verticals
   const onRefresh = useCallback(async () => {
     setRefreshing(true);
     try {
-      await Promise.all([refetchTours(), refetchHotels(), refetchPackages()]);
+      await Promise.all([
+        refetchTours(),
+        refetchHotels(),
+        refetchPackages(),
+        refetchFlights(),
+        refetchTransfers(),
+        refetchVisas(),
+        refetchRestaurants(),
+      ]);
     } finally {
       setRefreshing(false);
     }
-  }, [refetchTours, refetchHotels, refetchPackages]);
+  }, [
+    refetchTours,
+    refetchHotels,
+    refetchPackages,
+    refetchFlights,
+    refetchTransfers,
+    refetchVisas,
+    refetchRestaurants,
+  ]);
 
   // Active filter count calculation
   const activeFiltersCount = useMemo(() => {
@@ -342,6 +493,72 @@ export default function SearchResultsScreen() {
     return list;
   }, [packagesRes, debouncedTerm]);
 
+  // Filtered Flights
+  const filteredFlights = useMemo(() => {
+    const rawList = Array.isArray(flightsRes?.data) ? flightsRes.data : [];
+    let list = rawList.map((item: any) => mapRawToModuleFeaturedItem(item, 'flights'));
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((f) => {
+        const title = (f.title || '').toLowerCase();
+        const airline = (f.airline || '').toLowerCase();
+        const city = (f.city || '').toLowerCase();
+        const from = (f.fromCity || '').toLowerCase();
+        const to = (f.toCity || '').toLowerCase();
+        return title.includes(term) || airline.includes(term) || city.includes(term) || from.includes(term) || to.includes(term);
+      });
+    }
+    return list;
+  }, [flightsRes, debouncedTerm]);
+
+  // Filtered Transfers
+  const filteredTransfers = useMemo(() => {
+    const rawList = Array.isArray(transfersRes?.data) ? transfersRes.data : [];
+    let list = rawList.map((item: any) => mapRawToModuleFeaturedItem(item, 'transfers'));
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((t) => {
+        const title = (t.title || '').toLowerCase();
+        const vehicle = (t.vehicle || '').toLowerCase();
+        const city = (t.city || '').toLowerCase();
+        return title.includes(term) || vehicle.includes(term) || city.includes(term);
+      });
+    }
+    return list;
+  }, [transfersRes, debouncedTerm]);
+
+  // Filtered Visas
+  const filteredVisas = useMemo(() => {
+    const rawList = Array.isArray(visasRes?.data) ? visasRes.data : [];
+    let list = rawList.map((item: any) => mapRawToModuleFeaturedItem(item, 'visas'));
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((v) => {
+        const title = (v.title || '').toLowerCase();
+        const country = (v.country || '').toLowerCase();
+        const city = (v.city || '').toLowerCase();
+        return title.includes(term) || country.includes(term) || city.includes(term);
+      });
+    }
+    return list;
+  }, [visasRes, debouncedTerm]);
+
+  // Filtered Restaurants
+  const filteredRestaurants = useMemo(() => {
+    const rawList = Array.isArray(restaurantsRes?.data) ? restaurantsRes.data : [];
+    let list = rawList.map((item: any) => mapRawToModuleFeaturedItem(item, 'restaurants'));
+    const term = debouncedTerm.trim().toLowerCase();
+    if (term) {
+      list = list.filter((r) => {
+        const title = (r.title || '').toLowerCase();
+        const cuisine = (r.cuisine || '').toLowerCase();
+        const city = (r.city || '').toLowerCase();
+        return title.includes(term) || cuisine.includes(term) || city.includes(term);
+      });
+    }
+    return list;
+  }, [restaurantsRes, debouncedTerm]);
+
   // Unified items list for FlatList
   const unifiedItems = useMemo<UnifiedSearchItem[]>(() => {
     if (activeTab === 'tours') {
@@ -353,17 +570,49 @@ export default function SearchResultsScreen() {
     if (activeTab === 'packages') {
       return filteredPackages.map((p) => ({ id: `pkg_${p.id}`, moduleType: 'packages', moduleData: p }));
     }
+    if (activeTab === 'flights') {
+      return filteredFlights.map((f) => ({ id: `flight_${f.id}`, moduleType: 'flights', moduleData: f }));
+    }
+    if (activeTab === 'transfers') {
+      return filteredTransfers.map((tr) => ({ id: `transfer_${tr.id}`, moduleType: 'transfers', moduleData: tr }));
+    }
+    if (activeTab === 'visas') {
+      return filteredVisas.map((v) => ({ id: `visa_${v.id}`, moduleType: 'visas', moduleData: v }));
+    }
+    if (activeTab === 'restaurants') {
+      return filteredRestaurants.map((r) => ({ id: `restaurant_${r.id}`, moduleType: 'restaurants', moduleData: r }));
+    }
 
-    // All active: Interleave matching items
+    // All active: Interleave matching items across all modules
     const combined: UnifiedSearchItem[] = [];
     filteredTours.forEach((t) => combined.push({ id: `tour_${t.id}`, moduleType: 'tours', tourData: t }));
     filteredHotels.forEach((h) => combined.push({ id: `hotel_${h.id}`, moduleType: 'hotels', moduleData: h }));
     filteredPackages.forEach((p) => combined.push({ id: `pkg_${p.id}`, moduleType: 'packages', moduleData: p }));
+    filteredFlights.forEach((f) => combined.push({ id: `flight_${f.id}`, moduleType: 'flights', moduleData: f }));
+    filteredTransfers.forEach((tr) => combined.push({ id: `transfer_${tr.id}`, moduleType: 'transfers', moduleData: tr }));
+    filteredVisas.forEach((v) => combined.push({ id: `visa_${v.id}`, moduleType: 'visas', moduleData: v }));
+    filteredRestaurants.forEach((r) => combined.push({ id: `restaurant_${r.id}`, moduleType: 'restaurants', moduleData: r }));
     return combined;
-  }, [activeTab, filteredTours, filteredHotels, filteredPackages]);
+  }, [
+    activeTab,
+    filteredTours,
+    filteredHotels,
+    filteredPackages,
+    filteredFlights,
+    filteredTransfers,
+    filteredVisas,
+    filteredRestaurants,
+  ]);
 
   // Check if primary loading is underway
-  const isLoading = toursLoading || hotelsLoading || packagesLoading;
+  const isLoading =
+    toursLoading ||
+    hotelsLoading ||
+    packagesLoading ||
+    flightsLoading ||
+    transfersLoading ||
+    visasLoading ||
+    restaurantsLoading;
 
   // Render Tour Card
   const renderTourCard = (item: Tour) => {
@@ -497,6 +746,119 @@ export default function SearchResultsScreen() {
       );
     }
 
+    if (item.moduleType === 'flights' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#0284c715' }]}>
+                <Ionicons name="airplane-outline" size={13} color="#0284c7" />
+                <Text style={[styles.moduleBadgeText, { color: '#0284c7' }]}>FLIGHT</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="flights"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                setEnquiryService(`Flight Booking: ${item.moduleData?.airline || ''} ${item.moduleData?.flightNumber || ''}`);
+                setEnquiryVisible(true);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
+    if (item.moduleType === 'transfers' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#d9770615' }]}>
+                <Ionicons name="car-sport-outline" size={13} color="#d97706" />
+                <Text style={[styles.moduleBadgeText, { color: '#d97706' }]}>TRANSFER</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="transfers"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                router.push({
+                  pathname: '/airport-transfer',
+                  params: {
+                    pickup: item.moduleData?.title || 'Airport',
+                    dropoff: item.moduleData?.city || 'Hotel',
+                  },
+                } as any);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
+    if (item.moduleType === 'visas' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#2563eb15' }]}>
+                <Ionicons name="card-outline" size={13} color="#2563eb" />
+                <Text style={[styles.moduleBadgeText, { color: '#2563eb' }]}>VISA</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="visas"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                router.push({
+                  pathname: '/visa-hub',
+                  params: {
+                    destination: item.moduleData?.country || item.moduleData?.title || 'UAE',
+                  },
+                } as any);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
+    if (item.moduleType === 'restaurants' && item.moduleData) {
+      return (
+        <View style={styles.itemContainer}>
+          {activeTab === 'all' && (
+            <View style={styles.badgeRow}>
+              <View style={[styles.moduleBadge, { backgroundColor: '#dc262615' }]}>
+                <Ionicons name="restaurant-outline" size={13} color="#dc2626" />
+                <Text style={[styles.moduleBadgeText, { color: '#dc2626' }]}>DINING</Text>
+              </View>
+            </View>
+          )}
+          <View style={styles.cardWrapper}>
+            <ModuleItemCard
+              module="restaurants"
+              item={item.moduleData}
+              width="100%"
+              onAction={() => {
+                setEnquiryService(`Restaurant Table Reservation: ${item.moduleData?.title}`);
+                setEnquiryVisible(true);
+              }}
+            />
+          </View>
+        </View>
+      );
+    }
+
     return null;
   };
 
@@ -608,10 +970,26 @@ export default function SearchResultsScreen() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.moduleTabsScroll}>
           {(
             [
-              { id: 'all', label: 'All Results', icon: 'sparkles-outline', count: filteredTours.length + filteredHotels.length + filteredPackages.length },
+              {
+                id: 'all',
+                label: 'All Results',
+                icon: 'sparkles-outline',
+                count:
+                  filteredTours.length +
+                  filteredHotels.length +
+                  filteredPackages.length +
+                  filteredFlights.length +
+                  filteredTransfers.length +
+                  filteredVisas.length +
+                  filteredRestaurants.length,
+              },
               { id: 'tours', label: 'Tours', icon: 'compass-outline', count: filteredTours.length },
               { id: 'hotels', label: 'Hotels', icon: 'business-outline', count: filteredHotels.length },
               { id: 'packages', label: 'Packages', icon: 'map-outline', count: filteredPackages.length },
+              { id: 'flights', label: 'Flights', icon: 'airplane-outline', count: filteredFlights.length },
+              { id: 'transfers', label: 'Transfers', icon: 'car-sport-outline', count: filteredTransfers.length },
+              { id: 'visas', label: 'Visas', icon: 'card-outline', count: filteredVisas.length },
+              { id: 'restaurants', label: 'Dining', icon: 'restaurant-outline', count: filteredRestaurants.length },
             ] as const
           ).map((tab) => {
             const isSelected = activeTab === tab.id;

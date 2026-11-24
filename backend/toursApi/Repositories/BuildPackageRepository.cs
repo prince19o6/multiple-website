@@ -38,44 +38,30 @@ public class BuildPackageRepository : IBuildPackageRepository
         return _diskCatalogCache.GetOrAdd(siteId, key =>
         {
             var fileName = "build-package-options.json";
-            var currentDir = Directory.GetCurrentDirectory();
-            var candidates = new[]
-            {
-                Path.Combine(currentDir, "seed", key, fileName),
-                Path.Combine(currentDir, "backend", "toursApi", "seed", key, fileName),
-                Path.Combine(currentDir, "..", "..", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "backend", "toursApi", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "web", "seed", key, fileName),
-                Path.Combine(currentDir, "seed", "gujjutours", fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", "gujjutours", fileName)
-            };
+            var filePath = ToursApi.Common.SeedPathHelper.FindSeedFile(key, fileName)
+                           ?? ToursApi.Common.SeedPathHelper.FindSeedFile("gujjutours", fileName);
 
-            foreach (var path in candidates)
+            if (filePath != null && File.Exists(filePath))
             {
-                if (File.Exists(path))
+                try
                 {
-                    try
+                    var json = File.ReadAllText(filePath);
+                    var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    var list = JsonSerializer.Deserialize<List<BuildPackageOption>>(json, opts);
+                    if (list != null && list.Count > 0)
                     {
-                        var json = File.ReadAllText(path);
-                        var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                        var list = JsonSerializer.Deserialize<List<BuildPackageOption>>(json, opts);
-                        if (list != null && list.Count > 0)
+                        foreach (var item in list)
                         {
-                            foreach (var item in list)
+                            if (string.IsNullOrWhiteSpace(item.Id))
                             {
-                                if (string.IsNullOrWhiteSpace(item.Id))
-                                {
-                                    item.Id = item.DestinationId ?? (item.DestinationNumericId > 0 ? item.DestinationNumericId.ToString() : Guid.NewGuid().ToString("N")[..8]);
-                                }
+                                item.Id = item.DestinationId ?? (item.DestinationNumericId > 0 ? item.DestinationNumericId.ToString() : Guid.NewGuid().ToString("N")[..8]);
                             }
-                            return list;
                         }
+                        return list;
                     }
-                    catch
-                    {
-                    }
+                }
+                catch
+                {
                 }
             }
 

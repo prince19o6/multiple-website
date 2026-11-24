@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -21,12 +21,17 @@ import { FlightStatusCard } from '../components/FlightStatusCard';
 import { ChauffeurPlacardModal } from '../components/ChauffeurPlacardModal';
 import { TerminalAmenity } from '../types';
 import { FeatureGuard } from '@/components/common/FeatureGuard';
+import { useAuth } from '@/context/AuthContext';
+import { useBooking } from '@/context/BookingContext';
 
 function AirportTransferContent() {
   const router = useRouter();
   const params = useLocalSearchParams<{ pickup?: string; dropoff?: string; time?: string; passengers?: string }>();
   const colors = useColors();
   const { siteId } = useSite();
+  const { user } = useAuth();
+  const { addBooking } = useBooking();
+  const [isReserving, setIsReserving] = useState(false);
   const {
     transfer,
     isLoading,
@@ -154,18 +159,73 @@ function AirportTransferContent() {
               <TouchableOpacity
                 testID="btn-confirm-transfer-booking"
                 accessibilityLabel="Confirm Airport Transfer Booking"
-                style={[styles.retryBtn, { backgroundColor: colors.primary, marginTop: 20 }]}
-                onPress={() => {
+                style={[styles.retryBtn, { backgroundColor: colors.primary, marginTop: 20 }, isReserving && { opacity: 0.7 }]}
+                disabled={isReserving}
+                onPress={async () => {
+                  if (!user) {
+                    Alert.alert(
+                      'Login Required',
+                      'Please log in to your account to confirm your airport transfer booking.',
+                      [
+                        { text: 'Cancel', style: 'cancel' },
+                        {
+                          text: 'Log In',
+                          onPress: () => router.push('/(tabs)/profile'),
+                        },
+                      ]
+                    );
+                    return;
+                  }
+
                   try {
-                    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-                  } catch {}
-                  Alert.alert(
-                    'Transfer Reserved!',
-                    `Your private chauffeur transfer from ${params.pickup} to ${params.dropoff || 'Destination'} is confirmed. Chauffeur details and live vehicle tracker will be active 2 hours prior to arrival.`
-                  );
+                    setIsReserving(true);
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium).catch(() => {});
+                    const created = await addBooking({
+                      website: siteId || 'gujjutours',
+                      websiteId: siteId || 'gujjutours',
+                      tourId: `transfer-${Date.now()}`,
+                      tourSlug: `transfer-${(params.pickup || 'airport').toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+                      tourName: `Private Airport Chauffeur: ${params.pickup} to ${params.dropoff || 'City Hotel'}`,
+                      destination: params.dropoff || params.pickup || 'City Hotel',
+                      service: 'transfers',
+                      serviceType: 'transfers',
+                      email: user.email,
+                      phone: user.phone || '+91 98765 43210',
+                      guestName: user.name || 'Traveler',
+                      travelers: parseInt(params.passengers || '2', 10) || 2,
+                      adults: parseInt(params.passengers || '2', 10) || 2,
+                      travelDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
+                      startDate: new Date(Date.now() + 86400000).toISOString().split('T')[0],
+                      totalPrice: 2400,
+                      amountPaid: 2400,
+                      currency: 'INR',
+                      specialRequest: `Airport Transfer: ${params.pickup} -> ${params.dropoff || 'Hotel'} at ${params.time || '10:00 AM'}`,
+                      userId: user.id,
+                    });
+
+                    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
+                    Alert.alert(
+                      'Transfer Reserved!',
+                      `Your private chauffeur transfer from ${params.pickup} to ${params.dropoff || 'Destination'} is confirmed (Ref: ${created.reference || created.id}). Chauffeur details and live vehicle tracker will be active 2 hours prior to arrival.`,
+                      [
+                        {
+                          text: 'View in My Bookings',
+                          onPress: () => router.push('/(tabs)/bookings'),
+                        },
+                      ]
+                    );
+                  } catch (err: any) {
+                    Alert.alert('Booking Error', err?.message || 'Failed to confirm transfer booking.');
+                  } finally {
+                    setIsReserving(false);
+                  }
                 }}
               >
-                <Text style={styles.retryBtnText}>Confirm Transfer Booking</Text>
+                {isReserving ? (
+                  <ActivityIndicator size="small" color="#ffffff" />
+                ) : (
+                  <Text style={styles.retryBtnText}>Confirm Transfer Booking</Text>
+                )}
               </TouchableOpacity>
             </View>
           </ScrollView>

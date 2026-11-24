@@ -188,46 +188,32 @@ public class RestaurantRepository : IRestaurantRepository
         return _diskCatalogCache.GetOrAdd(siteId, key =>
         {
             var fileName = "restaurants.json";
-            var currentDir = Directory.GetCurrentDirectory();
-            var candidates = new[]
-            {
-                Path.Combine(currentDir, "seed", key, fileName),
-                Path.Combine(currentDir, "backend", "toursApi", "seed", key, fileName),
-                Path.Combine(currentDir, "..", "..", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "backend", "toursApi", "seed", key, fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "web", "seed", key, fileName),
-                Path.Combine(currentDir, "seed", "gujjutours", fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", "gujjutours", fileName)
-            };
+            var filePath = ToursApi.Common.SeedPathHelper.FindSeedFile(key, fileName)
+                           ?? ToursApi.Common.SeedPathHelper.FindSeedFile("gujjutours", fileName);
 
-            foreach (var path in candidates)
+            if (filePath != null && File.Exists(filePath))
             {
-                if (File.Exists(path))
+                try
                 {
-                    try
+                    var json = File.ReadAllText(filePath);
+                    if (json.StartsWith("\uFEFF")) json = json.Substring(1);
+                    var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    var list = JsonSerializer.Deserialize<List<Restaurant>>(json, opts);
+                    if (list != null && list.Count > 0)
                     {
-                        var json = File.ReadAllText(path);
-                        if (json.StartsWith("\uFEFF")) json = json.Substring(1);
-                        var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                        var list = JsonSerializer.Deserialize<List<Restaurant>>(json, opts);
-                        if (list != null && list.Count > 0)
+                        // Ensure resilient items are present
+                        foreach (var resilient in ResilientRestaurants)
                         {
-                            // Ensure resilient items are present
-                            foreach (var resilient in ResilientRestaurants)
+                            if (!list.Any(r => string.Equals(r.Slug, resilient.Slug, StringComparison.OrdinalIgnoreCase)))
                             {
-                                if (!list.Any(r => string.Equals(r.Slug, resilient.Slug, StringComparison.OrdinalIgnoreCase)))
-                                {
-                                    list.Insert(0, resilient);
-                                }
+                                list.Insert(0, resilient);
                             }
-                            return list;
                         }
+                        return list;
                     }
-                    catch
-                    {
-                    }
+                }
+                catch
+                {
                 }
             }
 

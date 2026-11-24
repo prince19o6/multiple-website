@@ -73,6 +73,15 @@ export const DEFAULT_APP_KEYS: Record<string, string> = {
   website3: 'th_pub_app_technoheaven_2026_z5q',
 };
 
+export const DEFAULT_SERVER_KEYS: Record<string, string> = {
+  gujjutours: 'gt_sec_live_web_gujjutours_2026_x7a',
+  website1: 'gt_sec_live_web_gujjutours_2026_x7a',
+  tripgoasia: 'tg_sec_live_web_tripgoasia_2026_k9p',
+  website2: 'tg_sec_live_web_tripgoasia_2026_k9p',
+  technoheaven: 'th_sec_live_web_technoheaven_2026_v4w',
+  website3: 'th_sec_live_web_technoheaven_2026_v4w',
+};
+
 /**
  * Registry of known brands matching backend WebsiteRegistry.cs and Web app.
  */

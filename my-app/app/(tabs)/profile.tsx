@@ -90,7 +90,7 @@ export default function ProfileTabScreen() {
   const { selectSite } = useSelectedSite();
   const { user, isAuthenticated, logout, updateProfile, deleteAccount } = useAuth();
   const { bookings, upcomingCount } = useBooking();
-  const { wishlistIds } = useWishlist();
+  const { wishlistCount } = useWishlist();
   const {
     permissionStatus,
     preferences: notifPrefs,
@@ -123,6 +123,7 @@ export default function ProfileTabScreen() {
   const [editPhone, setEditPhone] = useState('');
   const [editAvatar, setEditAvatar] = useState('');
   const [savingProfile, setSavingProfile] = useState(false);
+  const [isSigningOut, setIsSigningOut] = useState(false);
 
   // Currency Switcher State
   const { currentCurrency } = useCurrency();
@@ -245,22 +246,71 @@ export default function ProfileTabScreen() {
     await selectSite(targetId);
   };
 
+  const performSignOut = async () => {
+    setIsSigningOut(true);
+    try {
+      await logout();
+      try {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      } catch {
+        // Haptics fallback
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Unable to sign out.';
+      if (Platform.OS === 'web' && typeof window !== 'undefined') {
+        window.alert(`Sign Out Error: ${msg}`);
+      } else {
+        Alert.alert('Sign Out Error', msg);
+      }
+    } finally {
+      setIsSigningOut(false);
+    }
+  };
+
   const handleSignOut = () => {
     try {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
     } catch {
       // Haptics fallback
     }
+
+    if (Platform.OS === 'web') {
+      const confirmed =
+        typeof window !== 'undefined'
+          ? window.confirm('Are you sure you want to log out of your account on this device?')
+          : true;
+      if (confirmed) {
+        performSignOut();
+      }
+      return;
+    }
+
     Alert.alert('Sign Out', 'Are you sure you want to log out of your account on this device?', [
       { text: 'Cancel', style: 'cancel' },
       {
         text: 'Sign Out',
         style: 'destructive',
-        onPress: async () => {
-          await logout();
-        },
+        onPress: performSignOut,
       },
     ]);
+  };
+
+  const performDeleteAccount = async () => {
+    try {
+      await deleteAccount('');
+      if (Platform.OS === 'web' && typeof window !== 'undefined') {
+        window.alert('Your account has been permanently removed.');
+      } else {
+        Alert.alert('Account Deleted', 'Your account has been permanently removed.');
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Unable to delete account.';
+      if (Platform.OS === 'web' && typeof window !== 'undefined') {
+        window.alert(`Error: ${msg}`);
+      } else {
+        Alert.alert('Error', msg);
+      }
+    }
   };
 
   const handleDeleteAccount = () => {
@@ -269,6 +319,20 @@ export default function ProfileTabScreen() {
     } catch {
       // Haptics fallback
     }
+
+    if (Platform.OS === 'web') {
+      const confirmed =
+        typeof window !== 'undefined'
+          ? window.confirm(
+              'Are you sure you want to permanently delete your account and personal data? This action is irreversible.'
+            )
+          : true;
+      if (confirmed) {
+        performDeleteAccount();
+      }
+      return;
+    }
+
     Alert.alert(
       'Delete Account',
       'Are you sure you want to permanently delete your account and personal data? This action is irreversible.',
@@ -277,15 +341,7 @@ export default function ProfileTabScreen() {
         {
           text: 'Permanently Delete',
           style: 'destructive',
-          onPress: async () => {
-            try {
-              await deleteAccount('');
-              Alert.alert('Account Deleted', 'Your account has been permanently removed.');
-            } catch (err: unknown) {
-              const msg = err instanceof Error ? err.message : 'Unable to delete account.';
-              Alert.alert('Error', msg);
-            }
-          },
+          onPress: performDeleteAccount,
         },
       ]
     );
@@ -497,7 +553,7 @@ export default function ProfileTabScreen() {
               <Ionicons name="heart" size={18} color="#ef4444" />
             </View>
             <Text style={[styles.statCount, { color: colors.heading, fontFamily: headingFontFamily }]}>
-              {wishlistIds.length}
+              {wishlistCount}
             </Text>
             <Text style={[styles.statLabel, { color: colors.mutedText }]}>Wishlist</Text>
           </TouchableOpacity>
@@ -1904,15 +1960,25 @@ export default function ProfileTabScreen() {
         {isAuthenticated && (
           <View style={{ gap: 12, marginTop: 4, marginBottom: 16 }}>
             <TouchableOpacity
-              style={[styles.logoutBtn, { borderColor: '#ef4444' }]}
+              style={[
+                styles.logoutBtn,
+                { borderColor: '#ef4444', opacity: isSigningOut ? 0.6 : 1 },
+              ]}
               onPress={handleSignOut}
+              disabled={isSigningOut}
               activeOpacity={0.8}
               accessibilityRole="button"
               accessibilityLabel="Sign out of account"
               testID="btn-sign-out"
             >
-              <Ionicons name="log-out-outline" size={20} color="#ef4444" style={{ marginRight: 8 }} />
-              <Text style={styles.logoutBtnText}>Sign Out</Text>
+              {isSigningOut ? (
+                <ActivityIndicator size="small" color="#ef4444" style={{ marginRight: 8 }} />
+              ) : (
+                <Ionicons name="log-out-outline" size={20} color="#ef4444" style={{ marginRight: 8 }} />
+              )}
+              <Text style={styles.logoutBtnText}>
+                {isSigningOut ? 'Signing Out...' : 'Sign Out'}
+              </Text>
             </TouchableOpacity>
 
             <TouchableOpacity

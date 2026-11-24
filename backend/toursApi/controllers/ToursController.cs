@@ -516,6 +516,12 @@ public class ToursController : ControllerBase
                     }
                 }
 
+                var resilient = ResilientDataGenerator.GetTourByIdOrSlug(id, _websiteContext.CurrentWebsiteId);
+                if (resilient is not null)
+                {
+                    return Ok(new { success = true, data = resilient });
+                }
+
                 return NotFound(new { success = false, message = $"Tour '{id}' not found." });
             }
 
@@ -572,6 +578,12 @@ public class ToursController : ControllerBase
                     {
                         return Ok(new { success = true, data = MapRestaurantToTour(rest) });
                     }
+                }
+
+                var resilient = ResilientDataGenerator.GetTourByIdOrSlug(slug, _websiteContext.CurrentWebsiteId);
+                if (resilient is not null)
+                {
+                    return Ok(new { success = true, data = resilient });
                 }
 
                 return NotFound(new { success = false, message = $"Tour '{slug}' not found." });

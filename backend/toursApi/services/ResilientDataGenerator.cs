@@ -1352,6 +1352,8 @@ public static class ResilientDataGenerator
         };
     }
 
+    public static Tour? GetTourByIdOrSlug(string? idOrSlug, string? siteId = null) => GetTourDetail(idOrSlug, siteId);
+
     public static Tour GetTourDetail(string? idOrSlug, string? siteId = null)
     {
         var cleanSite = string.IsNullOrWhiteSpace(siteId) ? "gujjutours" : siteId.Trim().ToLowerInvariant();

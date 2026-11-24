@@ -7,6 +7,7 @@ import React, {
   useEffect,
   useCallback,
   useMemo,
+  useRef,
 } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useSite } from "@/lib/SiteContext";
@@ -114,6 +115,7 @@ export interface ModuleHomeData {
     viewMoreUrl: string;
   };
   banners: any[];
+  offers?: any[];
   featured: any[];
   destinations: any[];
   categories: any[];
@@ -127,7 +129,7 @@ interface ModuleContextType {
   activeModule: CanonicalModule;
   activeModuleCode: string;
   activeModuleItem: ModuleItem;
-  setActiveModule: (module: CanonicalModule, syncUrl?: boolean) => void;
+  setActiveModule: (module: string | CanonicalModule, syncUrl?: boolean) => void;
   moduleData: ModuleHomeData | null;
   isLoading: boolean;
   isError: boolean;
@@ -187,10 +189,15 @@ export function ModuleProvider({ children }: { children: React.ReactNode }) {
   const site = useSite();
   const siteId = site?.siteId || "gujjutours";
 
+  const userSelectedRef = useRef<CanonicalModule | null>(null);
+
   // 1. Initial State from URL or localStorage
   const detectInitialModule = useCallback((): CanonicalModule => {
-    // Check URL query ?module=
-    const queryModule = searchParams?.get("module");
+    if (userSelectedRef.current) {
+      return userSelectedRef.current;
+    }
+    // Check URL query ?tab= or ?module=
+    const queryModule = searchParams?.get("tab") || searchParams?.get("module");
     if (queryModule) {
       return normalizeModuleString(queryModule);
     }
@@ -227,6 +234,7 @@ export function ModuleProvider({ children }: { children: React.ReactNode }) {
 
   // Sync state with URL when pathname/searchParams change
   useEffect(() => {
+    if (userSelectedRef.current) return;
     const detected = detectInitialModule();
     setActiveModuleState(detected);
   }, [detectInitialModule]);
@@ -288,7 +296,9 @@ export function ModuleProvider({ children }: { children: React.ReactNode }) {
 
   // Public setter with URL sync and localStorage persistence
   const setActiveModule = useCallback(
-    (mod: CanonicalModule, syncUrl = true) => {
+    (modInput: string | CanonicalModule, syncUrl = true) => {
+      const mod = normalizeModuleString(modInput);
+      userSelectedRef.current = mod;
       setActiveModuleState(mod);
 
       if (typeof window !== "undefined") {
@@ -310,10 +320,15 @@ export function ModuleProvider({ children }: { children: React.ReactNode }) {
           !MODULE_LIST.some((m) => !m.isExternal && cleanPath.includes(`/${m.id}`));
 
         if (isHomePage) {
-          // On home page: stay on home page and update ?module= query parameter
-          const currentUrl = new URL(window.location.href);
-          currentUrl.searchParams.set("module", mod);
-          window.history.pushState({}, "", currentUrl.toString());
+          // On home page: stay on home page and update ?tab= and ?module= query parameters
+          try {
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set("tab", mod);
+            currentUrl.searchParams.set("module", mod);
+            window.history.replaceState({}, "", currentUrl.toString());
+          } catch {
+            // ignore
+          }
         } else {
           // On other pages (e.g. details or other routes): navigate to that module's page
           const targetItem = MODULE_LIST.find((m) => m.canonical === mod);

@@ -69,32 +69,21 @@ public class TourRepository : ITourRepository
         return _diskCatalogCache.GetOrAdd(siteId, key =>
         {
             var fileName = $"tours.{key}.json";
-            var currentDir = Directory.GetCurrentDirectory();
-            var candidates = new[]
-            {
-                Path.Combine(currentDir, "seed", fileName),
-                Path.Combine(currentDir, "backend", "toursApi", "seed", fileName),
-                Path.Combine(currentDir, "..", "..", "seed", fileName),
-                Path.Combine(AppContext.BaseDirectory, "seed", fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "seed", fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "backend", "toursApi", "seed", fileName),
-                Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "web", "seed", fileName)
-            };
+            var filePath = ToursApi.Common.SeedPathHelper.FindSeedFile(key, fileName)
+                           ?? ToursApi.Common.SeedPathHelper.FindSeedFile(key, "activities.json")
+                           ?? ToursApi.Common.SeedPathHelper.FindSeedFile("gujjutours", "activities.json");
 
-            foreach (var path in candidates)
+            if (filePath != null && System.IO.File.Exists(filePath))
             {
-                if (System.IO.File.Exists(path))
+                try
                 {
-                    try
-                    {
-                        var json = System.IO.File.ReadAllText(path);
-                        var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                        var list = JsonSerializer.Deserialize<List<Tour>>(json, opts);
-                        if (list != null && list.Count > 0) return list;
-                    }
-                    catch
-                    {
-                    }
+                    var json = System.IO.File.ReadAllText(filePath);
+                    var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                    var list = JsonSerializer.Deserialize<List<Tour>>(json, opts);
+                    if (list != null && list.Count > 0) return list;
+                }
+                catch
+                {
                 }
             }
 

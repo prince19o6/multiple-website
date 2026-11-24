@@ -1,57 +1,75 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import DestinationAutocomplete from "./DestinationAutocomplete";
-import DateRangePicker from "./DateRangePicker";
-import OccupancySelector, { type OccupancyState } from "./OccupancySelector";
-import FiltersPanel, { type SearchFilterState } from "./FiltersPanel";
-import { useFeatures } from "@/lib/features/useFeature";
-import { getFlightAirports } from "@/lib/api/flights";
-import { getCountryVisaSummaries } from "@/lib/api/visas";
+import React, { useState, useEffect } from "react";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import AutocompleteField from "./AutocompleteField";
+import DateField from "./DateField";
+import DateRangeField from "./DateRangeField";
+import GuestsRoomsField, { type OccupancyState } from "./GuestsRoomsField";
+import PassengersField from "./PassengersField";
+import SelectField from "./SelectField";
+import MultiSelectChips from "./MultiSelectChips";
+import SearchButton from "./SearchButton";
+import CounterRow from "./CounterRow";
+import HotelSearchForm from "./HotelSearchForm";
 
-interface SearchWidgetProps {
+export interface SearchWidgetProps {
+  activeTab?: string;
+  activeModule?: string;
   activeModuleCode?: string;
   siteId?: string;
   accentColor?: string;
   hideQuickSwitcher?: boolean;
 }
 
-const AIRPORTS = [
-  { code: "STV", name: "Surat Gujarat Airport", city: "Surat", country: "India" },
-  { code: "BOM", name: "Chhatrapati Shivaji Maharaj Intl", city: "Mumbai", country: "India" },
-  { code: "DEL", name: "Indira Gandhi International Airport", city: "Delhi", country: "India" },
-  { code: "AMD", name: "Sardar Vallabhbhai Patel Intl", city: "Ahmedabad", country: "India" },
-  { code: "DXB", name: "Dubai International Airport", city: "Dubai", country: "UAE" },
-  { code: "BLR", name: "Kempegowda International Airport", city: "Bengaluru", country: "India" },
-  { code: "GOI", name: "Goa Dabolim Airport", city: "Goa", country: "India" },
-  { code: "BKK", name: "Suvarnabhumi Airport", city: "Bangkok", country: "Thailand" },
-  { code: "SIN", name: "Singapore Changi Airport", city: "Singapore", country: "Singapore" },
-  { code: "LHR", name: "London Heathrow Airport", city: "London", country: "United Kingdom" },
+const CABIN_OPTIONS = [
+  { label: "Economy", value: "Economy" },
+  { label: "Premium Economy", value: "Premium Economy" },
+  { label: "Business", value: "Business" },
+  { label: "First Class", value: "First Class" },
 ];
 
-const AIRLINES = [
-  "All Airlines",
-  "IndiGo",
-  "Air India",
-  "Emirates",
-  "SpiceJet",
-  "Akasa Air",
-  "Vistara",
-  "Etihad Airways",
-  "Flydubai",
+const DURATION_OPTIONS = [
+  { label: "3 - 5 Days", value: "3-5" },
+  { label: "5 - 7 Days", value: "5-7" },
+  { label: "7 - 10 Days", value: "7-10" },
+  { label: "10+ Days", value: "10+" },
 ];
 
-const NATIONALITIES = [
+const MEAL_PREFERENCE_OPTIONS = [
+  { label: "Any Meal Plan", value: "any" },
+  { label: "Pure Veg / Jain Friendly", value: "pure_veg_jain" },
+  { label: "Halal Certified", value: "halal" },
+  { label: "Breakfast Included", value: "breakfast_included" },
+];
+
+const TIME_SLOT_OPTIONS = [
+  { label: "Lunch: 12:00 PM", value: "12:00" },
+  { label: "Lunch: 12:30 PM", value: "12:30" },
+  { label: "Lunch: 01:00 PM", value: "13:00" },
+  { label: "Lunch: 01:30 PM", value: "13:30" },
+  { label: "Dinner: 07:00 PM", value: "19:00" },
+  { label: "Dinner: 07:30 PM", value: "19:30" },
+  { label: "Dinner: 08:00 PM", value: "20:00" },
+  { label: "Dinner: 08:30 PM", value: "20:30" },
+  { label: "Dinner: 09:00 PM", value: "21:00" },
+];
+
+const NATIONALITY_OPTIONS = [
   "India",
+  "United Arab Emirates",
   "United States",
   "United Kingdom",
   "Canada",
   "Australia",
-  "United Arab Emirates",
   "Singapore",
   "Germany",
   "France",
+  "Saudi Arabia",
+  "Qatar",
+  "Oman",
+  "Kuwait",
+  "Bahrain",
 ];
 
 const VISA_DESTINATIONS = [
@@ -66,963 +84,907 @@ const VISA_DESTINATIONS = [
   "Vietnam",
   "Egypt",
   "Turkey",
+  "Japan",
+  "Sri Lanka",
+  "Georgia",
+  "Azerbaijan",
+  "Oman",
 ];
 
+const DIET_CHIPS = ["All", "Pure Veg", "Jain", "Vegetarian", "Halal"];
+
 export default function SearchWidget({
+  activeTab,
+  activeModule,
   activeModuleCode = "HOTEL",
   siteId = "gujjutours",
   accentColor = "#2882c5",
-  hideQuickSwitcher = false,
 }: SearchWidgetProps) {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  // General state
-  const [destination, setDestination] = useState("");
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-  const [occupancy, setOccupancy] = useState<OccupancyState>({
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Resolve current active module code
+  const currentTab = (
+    activeTab ||
+    activeModule ||
+    searchParams.get("tab") ||
+    searchParams.get("module") ||
+    activeModuleCode ||
+    "hotels"
+  ).toLowerCase();
+
+  // Helper for multi-tenant prefix navigation
+  const getLocalizedUrl = (subRoute: string, params: URLSearchParams) => {
+    const segments = pathname.split("/").filter(Boolean);
+    let prefix = "/en";
+    if (segments.length >= 2 && ["en", "gu", "hi"].includes(segments[1])) {
+      prefix = `/${segments[0]}/${segments[1]}`;
+    } else if (segments.length >= 1 && ["en", "gu", "hi"].includes(segments[0])) {
+      prefix = `/${segments[0]}`;
+    }
+    const cleanRoute = subRoute.replace(/^\/(en|gu|hi)/, "").replace(/^\/+/, "");
+    const qStr = params.toString();
+    return `${prefix}/${cleanRoute}${qStr ? `?${qStr}` : ""}`;
+  };
+
+  // ─── 1. HOTELS STATE ───
+  const [hotelDestination, setHotelDestination] = useState("Dubai, United Arab Emirates");
+  const [hotelStartDate, setHotelStartDate] = useState("");
+  const [hotelEndDate, setHotelEndDate] = useState("");
+  const [hotelOccupancy, setHotelOccupancy] = useState<OccupancyState>({
+    rooms: 1,
+    adults: 2,
+    children: 0,
+    childAges: [],
+    pureVeg: false,
+  });
+
+  // ─── 2. TOURS STATE ───
+  const [tourDestination, setTourDestination] = useState("Dubai, Desert Safari, Burj Khalifa");
+  const [tourDate, setTourDate] = useState("");
+  const [tourTravelers, setTourTravelers] = useState<OccupancyState>({
     rooms: 1,
     adults: 2,
     children: 0,
     childAges: [],
   });
 
-  // Flight specific state
-  const [tripType, setTripType] = useState<"oneWay" | "roundTrip" | "multiCity">("oneWay");
-  const [cabinClass, setCabinClass] = useState("Economy");
-  const [directFlightsOnly, setDirectFlightsOnly] = useState(false);
-  const [airportList, setAirportList] = useState(AIRPORTS);
-  const [visaDestinations, setVisaDestinations] = useState(VISA_DESTINATIONS);
-  const [fromAirport, setFromAirport] = useState(AIRPORTS[0]);
-  const [toAirport, setToAirport] = useState(AIRPORTS[4]);
+  // ─── 3. PACKAGES STATE ───
+  const [packageDestinations, setPackageDestinations] = useState<string[]>([
+    "Dubai & Abu Dhabi",
+  ]);
+  const [packageDuration, setPackageDuration] = useState("5-7");
+  const [packageMeal, setPackageMeal] = useState("pure_veg_jain");
 
-  React.useEffect(() => {
-    async function loadDynamicSearchData() {
-      try {
-        const ap = await getFlightAirports({ siteId });
-        if (Array.isArray(ap) && ap.length > 0) {
-          const mapped = ap.map((a) => ({
-            code: a.code,
-            name: a.name || `${a.city} Airport`,
-            city: a.city,
-            country: a.country || "",
-          }));
-          setAirportList(mapped);
-          if (mapped[0]) setFromAirport(mapped[0]);
-          if (mapped[1]) setToAirport(mapped[1]);
-        }
-      } catch { }
+  // ─── 4. FLIGHTS STATE ───
+  const [flightTripType, setFlightTripType] = useState<"oneWay" | "roundTrip" | "multiCity">("oneWay");
+  const [flightCabin, setFlightCabin] = useState("Economy");
+  const [flightDirectOnly, setFlightDirectOnly] = useState(false);
+  const [flightFrom, setFlightFrom] = useState("Surat (STV)");
+  const [flightTo, setFlightTo] = useState("Dubai (DXB)");
+  const [flightDepartureDate, setFlightDepartureDate] = useState("");
+  const [flightReturnDate, setFlightReturnDate] = useState("");
+  const [flightAdults, setFlightAdults] = useState(1);
+  const [flightChildren, setFlightChildren] = useState(0);
+  const [flightInfants, setFlightInfants] = useState(0);
 
-      try {
-        const vs = await getCountryVisaSummaries({ siteId });
-        if (Array.isArray(vs) && vs.length > 0) {
-          const mapped = vs.map((v) => v.country);
-          setVisaDestinations(mapped);
-          if (mapped[0]) setVisaDestination(mapped[0]);
-        }
-      } catch { }
-    }
-    loadDynamicSearchData();
-  }, [siteId]);
-  const [departureDate, setDepartureDate] = useState("");
-  const [returnDate, setReturnDate] = useState("");
-  const [selectedAirline, setSelectedAirline] = useState("All Airlines");
-  const [passengerDropdownOpen, setPassengerDropdownOpen] = useState(false);
-  const [adultCount, setAdultCount] = useState(1);
-  const [childCount, setChildCount] = useState(0);
-  const [infantCount, setInfantCount] = useState(0);
+  // ─── 5. TRANSFERS STATE ───
+  const [transferPickup, setTransferPickup] = useState("Dubai International Airport (DXB)");
+  const [transferDropoff, setTransferDropoff] = useState("Downtown Dubai Hotel / Resort");
+  const [transferDate, setTransferDate] = useState("");
+  const [transferTime, setTransferTime] = useState("10:00");
+  const [transferPassengers, setTransferPassengers] = useState(2);
+  const [transferRoundTrip, setTransferRoundTrip] = useState(false);
+  const [transferReturnDate, setTransferReturnDate] = useState("");
+  const [transferReturnTime, setTransferReturnTime] = useState("18:00");
 
-  // Car Rental specific state (TripGo Asia)
-  const [carLocation, setCarLocation] = useState("");
+  // ─── 6. VISAS STATE ───
+  const [visaCitizen, setVisaCitizen] = useState("India");
+  const [visaDestination, setVisaDestination] = useState("United Arab Emirates (UAE)");
+
+  // ─── 7. RESTAURANTS STATE ───
+  const [restaurantCity, setRestaurantCity] = useState("Dubai, UAE");
+  const [restaurantDiet, setRestaurantDiet] = useState("Pure Veg");
+  const [restaurantDate, setRestaurantDate] = useState("");
+  const [restaurantTimeSlot, setRestaurantTimeSlot] = useState("19:30");
+  const [restaurantGuests, setRestaurantGuests] = useState(2);
+
+  // ─── 8. BUILD PACKAGE STATE ───
+  const [bpStartingCity, setBpStartingCity] = useState("Mumbai");
+  const [bpDestination, setBpDestination] = useState("Dubai");
+  const [bpDays, setBpDays] = useState("5-7");
+
+  // ─── 9. CAR RENTAL STATE (TripGo Asia) ───
+  const [carLocation, setCarLocation] = useState("Langkawi Airport (LGK)");
   const [carPickupDate, setCarPickupDate] = useState("");
   const [carReturnDate, setCarReturnDate] = useState("");
   const [carDriverAge, setCarDriverAge] = useState("25-70");
 
-  // Transfers specific state
-  const [transferPickup, setTransferPickup] = useState("");
-  const [transferDropoff, setTransferDropoff] = useState("");
-  const [transferDate, setTransferDate] = useState("");
-  const [transferTime, setTransferTime] = useState("10:00");
-  const [transferPassengers, setTransferPassengers] = useState(2);
+  // Reset errors when tab changes
+  useEffect(() => {
+    setErrors({});
+  }, [currentTab]);
 
-  // Visa specific state
-  const [visaNationality, setVisaNationality] = useState("India");
-  const [visaDestination, setVisaDestination] = useState("United Arab Emirates (UAE)");
-  const [visaType, setVisaType] = useState("Tourist Visa (30 Days)");
-
-  // Restaurant specific state
-  const [restaurantCity, setRestaurantCity] = useState("Dubai");
-  const [restaurantDate, setRestaurantDate] = useState("");
-  const [restaurantTime, setRestaurantTime] = useState("19:30");
-  const [restaurantGuests, setRestaurantGuests] = useState(2);
-
-  // Build Package specific state
-  const [bpFrom, setBpFrom] = useState("Mumbai");
-  const [bpDestination, setBpDestination] = useState("Dubai");
-  const [bpDays, setBpDays] = useState("5 Days / 4 Nights");
-
-  // Filters state
-  const [filtersOpen, setFiltersOpen] = useState(false);
-  const [filters, setFilters] = useState<SearchFilterState>({
-    starRatings: [],
-    categories: [],
-    nationality: "Indian",
-  });
-
+  // Airport Swap handler
   const handleSwapAirports = () => {
-    const temp = fromAirport;
-    setFromAirport(toAirport);
-    setToAirport(temp);
+    const temp = flightFrom;
+    setFlightFrom(flightTo);
+    setFlightTo(temp);
   };
 
-  const { searchFeatures } = useFeatures();
+  // ─── SUBMISSION HANDLERS ───
 
-  // Internal active vertical tab state synchronized with prop
-  const [selectedVertical, setSelectedVertical] = useState(activeModuleCode || "HOTEL");
-
-  React.useEffect(() => {
-    if (activeModuleCode) {
-      setSelectedVertical(activeModuleCode);
-    }
-  }, [activeModuleCode]);
-
-  const rawCode = (selectedVertical || activeModuleCode || "HOTEL").toUpperCase();
-  const code = rawCode.replace(/[-_\s]/g, "");
-  const isHotel = code === "HOTEL" || code === "HOTELS";
-  const isTour =
-    code === "TOUR" ||
-    code === "TOURS" ||
-    code === "ACTIVITY" ||
-    code === "ACTIVITIES" ||
-    code === "ATTRACTION" ||
-    code === "ATTRACTIONS" ||
-    code === "SIGHTSEEING";
-  const isPackage =
-    code === "PACKAGE" ||
-    code === "PACKAGES" ||
-    code === "HOLIDAY" ||
-    code === "HOLIDAYS";
-  const isFlight = code === "FLIGHT" || code === "FLIGHTS";
-  const isCarRental =
-    code === "CAR" ||
-    code === "CARRENTAL" ||
-    code === "CAR-RENTAL" ||
-    code === "RENTAL";
-  const isTransfer =
-    (code === "TRANSFER" || code === "TRANSFERS" || code === "AIRPORTTRANSFER" || code === "AIRPORT-TRANSFER") &&
-    !isCarRental;
-  const isVisa = code === "VISA" || code === "VISAS";
-  const isRestaurant = code === "RESTAURANT" || code === "RESTAURANTS";
-  const isBuildPackage =
-    code === "BUILDPACKAGE" ||
-    code === "BUILD-PACKAGE" ||
-    code === "BUILD_PACKAGE";
-
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearchHotels = (e: React.FormEvent) => {
     e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (!hotelDestination.trim()) newErrors.hotelDestination = "Destination is required";
 
-    if (isCarRental) {
-      const params = new URLSearchParams();
-      if (carLocation) params.set("location", carLocation);
-      if (carPickupDate) params.set("pickup", carPickupDate);
-      if (carReturnDate) params.set("return", carReturnDate);
-      if (carDriverAge) params.set("age", carDriverAge);
-      router.push(`/en/car-rental?${params.toString()}`);
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
-    if (isFlight) {
-      const params = new URLSearchParams({
-        tripType,
-        from: fromAirport.code,
-        to: toAirport.code,
-        departure: departureDate,
-        passengers: String(adultCount + childCount + infantCount),
-        cabin: cabinClass,
-        direct: String(directFlightsOnly),
-        airline: selectedAirline,
-      });
-      if (tripType === "roundTrip") {
-        params.set("return", returnDate);
-      }
-      router.push(`/en/flights?${params.toString()}`);
-      return;
-    }
-
-    if (isTransfer) {
-      const params = new URLSearchParams({
-        pickup: transferPickup,
-        dropoff: transferDropoff,
-        date: transferDate,
-        time: transferTime,
-        passengers: String(transferPassengers),
-      });
-      router.push(`/en/transfers?${params.toString()}`);
-      return;
-    }
-
-    if (isVisa) {
-      const params = new URLSearchParams({
-        nationality: visaNationality,
-        destination: visaDestination,
-        type: visaType,
-      });
-      router.push(`/en/visas?${params.toString()}`);
-      return;
-    }
-
-    if (isRestaurant) {
-      const params = new URLSearchParams({
-        city: restaurantCity,
-        date: restaurantDate,
-        time: restaurantTime,
-        guests: String(restaurantGuests),
-      });
-      router.push(`/en/restaurants?${params.toString()}`);
-      return;
-    }
-
-    if (isBuildPackage) {
-      const params = new URLSearchParams({
-        from: bpFrom,
-        destination: bpDestination,
-        days: bpDays,
-      });
-      router.push(`/en/buildpackage?${params.toString()}`);
-      return;
-    }
-
-    // Default Hotel / Tour / Package
+    setLoading(true);
     const params = new URLSearchParams();
-    if (destination.trim()) params.set("destination", destination.trim());
-    if (startDate) params.set("start", startDate);
-    if (endDate) params.set("end", endDate);
-    if (occupancy.rooms > 1) params.set("rooms", String(occupancy.rooms));
-    if (occupancy.adults > 0) params.set("adults", String(occupancy.adults));
-    if (occupancy.children > 0) {
-      params.set("children", String(occupancy.children));
-      params.set("childAges", occupancy.childAges.join(","));
+    if (hotelDestination.trim()) params.set("destination", hotelDestination.trim());
+    if (hotelStartDate) params.set("checkIn", hotelStartDate);
+    if (hotelEndDate) params.set("checkOut", hotelEndDate);
+    params.set("rooms", String(hotelOccupancy.rooms));
+    params.set("adults", String(hotelOccupancy.adults));
+    params.set("children", String(hotelOccupancy.children));
+    if (hotelOccupancy.childAges.length > 0) {
+      params.set("childAges", hotelOccupancy.childAges.join(","));
     }
-    if (filters.starRatings.length > 0) {
-      params.set("stars", filters.starRatings.join(","));
-    }
-    if (filters.categories.length > 0) {
-      params.set("categories", filters.categories.join(","));
+    if (hotelOccupancy.pureVeg) {
+      params.set("veg", "true");
     }
 
-    let targetRoute = "/en/hotels";
-    if (isTour) targetRoute = "/en/tours";
-    else if (isPackage) targetRoute = "/en/holidays";
-
-    router.push(`${targetRoute}?${params.toString()}`);
+    router.push(getLocalizedUrl("/hotels", params));
   };
+
+  const handleSearchTours = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (!tourDestination.trim()) newErrors.tourDestination = "Destination or tour name is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setLoading(true);
+    const params = new URLSearchParams();
+    params.set("destination", tourDestination.trim());
+    if (tourDate) params.set("date", tourDate);
+    params.set("travelers", String(tourTravelers.adults + tourTravelers.children));
+    params.set("adults", String(tourTravelers.adults));
+    params.set("children", String(tourTravelers.children));
+
+    router.push(getLocalizedUrl("/tours", params));
+  };
+
+  const handleSearchPackages = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (packageDestinations.length === 0) {
+      newErrors.packageDestinations = "Please select or type at least one destination";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setLoading(true);
+    const params = new URLSearchParams();
+    params.set("destinations", packageDestinations.join(","));
+    params.set("duration", packageDuration);
+    params.set("meal", packageMeal);
+
+    router.push(getLocalizedUrl("/packages", params));
+  };
+
+  const handleSearchFlights = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (!flightFrom.trim()) newErrors.flightFrom = "Departure airport is required";
+    if (!flightTo.trim()) newErrors.flightTo = "Arrival airport is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setLoading(true);
+    const params = new URLSearchParams({
+      tripType: flightTripType,
+      from: flightFrom,
+      to: flightTo,
+      cabin: flightCabin,
+      direct: String(flightDirectOnly),
+      adults: String(flightAdults),
+      children: String(flightChildren),
+      infants: String(flightInfants),
+      passengers: String(flightAdults + flightChildren + flightInfants),
+    });
+    if (flightDepartureDate) params.set("departure", flightDepartureDate);
+    if (flightTripType === "roundTrip" && flightReturnDate) {
+      params.set("return", flightReturnDate);
+    }
+
+    router.push(getLocalizedUrl("/flights", params));
+  };
+
+  const handleSearchTransfers = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (!transferPickup.trim()) newErrors.transferPickup = "Pick-up location is required";
+    if (!transferDropoff.trim()) newErrors.transferDropoff = "Drop-off destination is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setLoading(true);
+    const params = new URLSearchParams({
+      pickup: transferPickup,
+      dropoff: transferDropoff,
+      date: transferDate,
+      time: transferTime,
+      passengers: String(transferPassengers),
+      roundTrip: String(transferRoundTrip),
+    });
+    if (transferRoundTrip) {
+      if (transferReturnDate) params.set("returnDate", transferReturnDate);
+      if (transferReturnTime) params.set("returnTime", transferReturnTime);
+    }
+
+    router.push(getLocalizedUrl("/transfers", params));
+  };
+
+  const handleSearchVisas = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    const params = new URLSearchParams({
+      citizen: visaCitizen,
+      to: visaDestination,
+    });
+    router.push(getLocalizedUrl("/visas", params));
+  };
+
+  const handleSearchRestaurants = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+    if (!restaurantCity.trim()) newErrors.restaurantCity = "City or cuisine is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setLoading(true);
+    const params = new URLSearchParams({
+      city: restaurantCity,
+      diet: restaurantDiet,
+      date: restaurantDate,
+      time: restaurantTimeSlot,
+      guests: String(restaurantGuests),
+    });
+    router.push(getLocalizedUrl("/restaurants", params));
+  };
+
+  const handleSearchBuildPackage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    const params = new URLSearchParams({
+      from: bpStartingCity,
+      destination: bpDestination,
+      days: bpDays,
+    });
+    router.push(getLocalizedUrl("/buildpackage", params));
+  };
+
+  const handleSearchCars = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    const params = new URLSearchParams({
+      location: carLocation,
+      pickup: carPickupDate,
+      return: carReturnDate,
+      age: carDriverAge,
+    });
+    router.push(getLocalizedUrl("/car-rental", params));
+  };
+
+  const isHotels = currentTab === "hotels" || currentTab === "hotel";
+  const isTours = currentTab === "tours" || currentTab === "tour";
+  const isPackages = currentTab === "packages" || currentTab === "package";
+  const isFlights = currentTab === "flights" || currentTab === "flight";
+  const isTransfers = currentTab === "transfers" || currentTab === "transfer";
+  const isVisas = currentTab === "visas" || currentTab === "visa";
+  const isRestaurants = currentTab === "restaurants" || currentTab === "restaurant";
+  const isBuildPackage = currentTab === "buildpackage" || currentTab === "build-package";
+  const isCars = currentTab === "car-rental" || currentTab === "car" || currentTab === "rental";
 
   return (
-    <div className="bg-white dark:bg-neutral-900 p-3 sm:p-5 rounded-b-2xl shadow-2xl border border-white/20 dark:border-neutral-800 transition-all text-gray-900 dark:text-white">
-      {/* ─── ALL-FEATURE QUICK SWITCHER TABS ─── */}
-      {!hideQuickSwitcher && searchFeatures.length > 0 && (
-        <div
-          className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide pb-3 mb-4 border-b border-gray-100 dark:border-neutral-800"
-          style={{ scrollbarWidth: "none" }}
-        >
-          {searchFeatures.map((feat, idx) => {
-            const featCode = feat.id.toUpperCase();
-            const isSelected =
-              code === featCode ||
-              (code === "TOUR" && (featCode === "ATTRACTIONS" || featCode === "ACTIVITY" || featCode === "ACTIVITIES")) ||
-              (code === "PACKAGE" && (featCode === "HOLIDAYS" || featCode === "PACKAGES"));
-
-            return (
-              <button
-                key={`${feat.id}-${idx}`}
-                type="button"
-                onClick={() => setSelectedVertical(featCode)}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-150 ${isSelected
-                  ? "shadow-sm text-white scale-[1.02]"
-                  : "bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white"
-                  }`}
-                style={
-                  isSelected && accentColor
-                    ? { backgroundColor: accentColor, color: "#ffffff" }
-                    : undefined
-                }
-              >
-                <span>{feat.label?.en || feat.id}</span>
-              </button>
-            );
-          })}
-        </div>
+    <div className="bg-white dark:bg-neutral-900 p-3.5 sm:p-5 rounded-b-3xl shadow-2xl border border-neutral-100/90 dark:border-neutral-800 transition-all text-neutral-900 dark:text-white overflow-hidden w-full max-w-full">
+      {/* ─── 1. HOTELS MODULE (Modern Selection System) ─── */}
+      {isHotels && (
+        <HotelSearchForm
+          siteId={siteId}
+          accentColor={accentColor}
+        />
       )}
 
-      <form onSubmit={handleSearch}>
-        {/* ─── 1. FLIGHT DEDICATED SEARCH FORM ─── */}
-        {isFlight && (
-          <div className="space-y-4">
-            {/* Top Sub-Options: Radios + Cabin + Direct checkbox */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-gray-100 dark:border-neutral-800">
-              <div className="flex items-center gap-5">
-                <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
-                  <input
-                    type="radio"
-                    name="flightTripType"
-                    checked={tripType === "oneWay"}
-                    onChange={() => setTripType("oneWay")}
-                    className="w-4 h-4 text-primary accent-primary"
-                  />
-                  <span>One-Way</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
-                  <input
-                    type="radio"
-                    name="flightTripType"
-                    checked={tripType === "roundTrip"}
-                    onChange={() => setTripType("roundTrip")}
-                    className="w-4 h-4 text-primary accent-primary"
-                  />
-                  <span>Round Trip</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
-                  <input
-                    type="radio"
-                    name="flightTripType"
-                    checked={tripType === "multiCity"}
-                    onChange={() => setTripType("multiCity")}
-                    className="w-4 h-4 text-primary accent-primary"
-                  />
-                  <span>Multi City</span>
-                </label>
-              </div>
+      {/* ─── 2. TOURS MODULE ─── */}
+      {isTours && (
+        <form onSubmit={handleSearchTours} className="space-y-3">
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+            <AutocompleteField
+              label="DESTINATION OR SIGHTSEEING"
+              placeholder="City, attraction, or sightseeing name"
+              value={tourDestination}
+              onChange={setTourDestination}
+              type="tour"
+              siteId={siteId}
+              required
+              error={errors.tourDestination}
+            />
 
-              <div className="flex items-center gap-4">
-                <select
-                  value={cabinClass}
-                  onChange={(e) => setCabinClass(e.target.value)}
-                  className="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-xs font-semibold text-gray-800 dark:text-gray-200 outline-none cursor-pointer"
-                >
-                  <option value="Economy">Economy</option>
-                  <option value="Premium Economy">Premium Economy</option>
-                  <option value="Business">Business</option>
-                  <option value="First Class">First Class</option>
-                </select>
+            <DateField
+              label="TOUR DATE"
+              placeholder="Select tour date"
+              value={tourDate}
+              onChange={setTourDate}
+            />
 
-                <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-gray-600 dark:text-gray-400">
-                  <input
-                    type="checkbox"
-                    checked={directFlightsOnly}
-                    onChange={(e) => setDirectFlightsOnly(e.target.checked)}
-                    className="rounded text-primary focus:ring-primary w-4 h-4 accent-primary"
-                  />
-                  <span>Direct Flights Only</span>
-                </label>
-              </div>
-            </div>
+            <GuestsRoomsField
+              value={tourTravelers}
+              onChange={setTourTravelers}
+              label="TRAVELERS"
+              hideRooms={true}
+              hideVegToggle={true}
+            />
 
-            {/* Inputs Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-center">
-              {/* From Airport */}
-              <div className="relative p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Where from?</span>
-                <select
-                  value={fromAirport.code}
-                  onChange={(e) => {
-                    const found = airportList.find((a) => a.code === e.target.value);
-                    if (found) setFromAirport(found);
-                  }}
-                  className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer truncate"
-                >
-                  {airportList.map((a) => (
-                    <option key={a.code} value={a.code} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                      {a.code} - {a.city} ({a.name})
-                    </option>
-                  ))}
-                </select>
+            <SearchButton
+              title="Search Handcrafted Tours"
+              loading={loading}
+              accentColor={accentColor}
+            />
+          </div>
+        </form>
+      )}
 
-                {/* Swap Button */}
-                <button
-                  type="button"
-                  onClick={handleSwapAirports}
-                  title="Swap departure & destination"
-                  className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white dark:bg-neutral-700 border border-gray-200 dark:border-neutral-600 shadow-sm items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:scale-110 active:rotate-180 transition-all"
-                >
-                  ⇄
-                </button>
-              </div>
+      {/* ─── 3. PACKAGES MODULE ─── */}
+      {isPackages && (
+        <form onSubmit={handleSearchPackages} className="space-y-3">
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+            <MultiSelectChips
+              label="DREAM HOLIDAY DESTINATIONS"
+              selected={packageDestinations}
+              onChange={setPackageDestinations}
+              error={errors.packageDestinations}
+              className="lg:flex-[2]"
+            />
 
-              {/* To Airport */}
-              <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Flying to</span>
-                <select
-                  value={toAirport.code}
-                  onChange={(e) => {
-                    const found = airportList.find((a) => a.code === e.target.value);
-                    if (found) setToAirport(found);
-                  }}
-                  className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer truncate"
-                >
-                  {airportList.map((a) => (
-                    <option key={a.code} value={a.code} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                      {a.code} - {a.city} ({a.name})
-                    </option>
-                  ))}
-                </select>
-              </div>
+            <SelectField
+              label="DURATION"
+              value={packageDuration}
+              options={DURATION_OPTIONS}
+              onChange={setPackageDuration}
+              className="lg:flex-1"
+            />
 
-              {/* Departure & Return Dates */}
-              <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                  {tripType === "roundTrip" ? "Departure - Return" : "Travel Date"}
-                </span>
+            <SelectField
+              label="MEAL PREFERENCE"
+              value={packageMeal}
+              options={MEAL_PREFERENCE_OPTIONS}
+              onChange={setPackageMeal}
+              className="lg:flex-1"
+            />
+
+            <SearchButton
+              title="Search Holiday Packages"
+              loading={loading}
+              accentColor={accentColor}
+            />
+          </div>
+        </form>
+      )}
+
+      {/* ─── 4. FLIGHTS MODULE ─── */}
+      {isFlights && (
+        <form onSubmit={handleSearchFlights} className="space-y-4">
+          {/* Top Options Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-gray-100 dark:border-neutral-800">
+            <div className="flex items-center gap-5">
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
                 <input
-                  type="date"
-                  value={departureDate}
-                  onChange={(e) => setDepartureDate(e.target.value)}
-                  className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
+                  type="radio"
+                  name="flightTripType"
+                  checked={flightTripType === "oneWay"}
+                  onChange={() => setFlightTripType("oneWay")}
+                  className="w-4 h-4 text-primary accent-primary"
                 />
-                {tripType === "roundTrip" && (
-                  <input
-                    type="date"
-                    value={returnDate}
-                    onChange={(e) => setReturnDate(e.target.value)}
-                    className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer mt-1 pt-1 border-t border-gray-200 dark:border-neutral-700"
-                  />
-                )}
-              </div>
-
-              {/* Passengers Selector */}
-              <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 relative hover:border-primary transition-colors min-h-[58px]">
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Passengers</span>
-                <button
-                  type="button"
-                  onClick={() => setPassengerDropdownOpen(!passengerDropdownOpen)}
-                  className="w-full text-left font-bold text-sm text-gray-900 dark:text-white outline-none flex items-center justify-between"
-                >
-                  <span>{adultCount + childCount + infantCount} Passenger{(adultCount + childCount + infantCount) > 1 ? "s" : ""}</span>
-                  <span className="text-xs text-gray-400">▾</span>
-                </button>
-
-                {passengerDropdownOpen && (
-                  <div className="absolute right-0 top-full mt-2 w-64 bg-white dark:bg-neutral-800 p-4 rounded-xl shadow-2xl border border-gray-200 dark:border-neutral-700 z-50 text-gray-900 dark:text-white">
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-bold text-xs">Adults</div>
-                          <div className="text-[10px] text-gray-400">12+ years</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <button
-                            type="button"
-                            onClick={() => adultCount > 1 && setAdultCount(adultCount - 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            -
-                          </button>
-                          <span className="text-xs font-bold w-4 text-center">{adultCount}</span>
-                          <button
-                            type="button"
-                            onClick={() => setAdultCount(adultCount + 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-bold text-xs">Children</div>
-                          <div className="text-[10px] text-gray-400">2-12 years</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <button
-                            type="button"
-                            onClick={() => childCount > 0 && setChildCount(childCount - 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            -
-                          </button>
-                          <span className="text-xs font-bold w-4 text-center">{childCount}</span>
-                          <button
-                            type="button"
-                            onClick={() => setChildCount(childCount + 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-bold text-xs">Infants</div>
-                          <div className="text-[10px] text-gray-400">Under 2 years</div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <button
-                            type="button"
-                            onClick={() => infantCount > 0 && setInfantCount(infantCount - 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            -
-                          </button>
-                          <span className="text-xs font-bold w-4 text-center">{infantCount}</span>
-                          <button
-                            type="button"
-                            onClick={() => setInfantCount(infantCount + 1)}
-                            className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs"
-                          >
-                            +
-                          </button>
-                        </div>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={() => setPassengerDropdownOpen(false)}
-                        className="w-full py-1.5 bg-primary hover:opacity-90 text-white rounded-lg text-xs font-bold mt-2 shadow-sm transition-all"
-                        style={accentColor ? { backgroundColor: accentColor } : undefined}
-                      >
-                        Done
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full h-[58px] px-6 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 transition-all"
-                style={accentColor ? { backgroundColor: accentColor } : undefined}
-              >
-                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                  <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-                </svg>
-                <span>Search Flights</span>
-              </button>
+                <span>One-Way</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
+                <input
+                  type="radio"
+                  name="flightTripType"
+                  checked={flightTripType === "roundTrip"}
+                  onChange={() => setFlightTripType("roundTrip")}
+                  className="w-4 h-4 text-primary accent-primary"
+                />
+                <span>Round Trip</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-200">
+                <input
+                  type="radio"
+                  name="flightTripType"
+                  checked={flightTripType === "multiCity"}
+                  onChange={() => setFlightTripType("multiCity")}
+                  className="w-4 h-4 text-primary accent-primary"
+                />
+                <span>Multi City</span>
+              </label>
             </div>
 
-            {/* Preferred Airline row */}
-            <div className="flex items-center gap-3 pt-1">
-              <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Preferred Airline:</span>
+            <div className="flex items-center gap-4">
               <select
-                value={selectedAirline}
-                onChange={(e) => setSelectedAirline(e.target.value)}
+                value={flightCabin}
+                onChange={(e) => setFlightCabin(e.target.value)}
                 className="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-800 text-xs font-semibold text-gray-800 dark:text-gray-200 outline-none cursor-pointer"
               >
-                {AIRLINES.map((a) => (
-                  <option key={a} value={a} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                    {a}
+                {CABIN_OPTIONS.map((c) => (
+                  <option key={c.value} value={c.value}>
+                    {c.label}
                   </option>
                 ))}
               </select>
+
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-gray-600 dark:text-gray-400">
+                <input
+                  type="checkbox"
+                  checked={flightDirectOnly}
+                  onChange={(e) => setFlightDirectOnly(e.target.checked)}
+                  className="rounded text-primary focus:ring-primary w-4 h-4 accent-primary"
+                />
+                <span>Direct Flights Only</span>
+              </label>
             </div>
           </div>
-        )}
 
-        {/* ─── CAR RENTAL SEARCH FORM (TripGo Asia) ─── */}
-        {isCarRental && (
+          {/* Flight Inputs Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-center">
+            {/* From Airport */}
+            <div className="relative">
+              <AutocompleteField
+                label="WHERE FROM?"
+                placeholder="Airport or City"
+                value={flightFrom}
+                onChange={setFlightFrom}
+                type="airport"
+                siteId={siteId}
+                required
+                error={errors.flightFrom}
+              />
+              <button
+                type="button"
+                onClick={handleSwapAirports}
+                title="Swap departure and destination"
+                className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-white dark:bg-neutral-700 border border-gray-200 dark:border-neutral-600 shadow-sm items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-gray-100 hover:scale-110 active:rotate-180 transition-all"
+              >
+                ⇄
+              </button>
+            </div>
+
+            {/* To Airport */}
+            <AutocompleteField
+              label="FLYING TO"
+              placeholder="Airport or Destination"
+              value={flightTo}
+              onChange={setFlightTo}
+              type="airport"
+              siteId={siteId}
+              required
+              error={errors.flightTo}
+            />
+
+            {/* Departure / Return Date */}
+            {flightTripType === "roundTrip" ? (
+              <DateRangeField
+                startDate={flightDepartureDate}
+                endDate={flightReturnDate}
+                checkInLabel="DEPARTURE"
+                checkOutLabel="RETURN"
+                onChange={(start, end) => {
+                  setFlightDepartureDate(start);
+                  setFlightReturnDate(end);
+                }}
+              />
+            ) : (
+              <DateField
+                label="DEPARTURE DATE"
+                placeholder="Select date"
+                value={flightDepartureDate}
+                onChange={setFlightDepartureDate}
+              />
+            )}
+
+            {/* Passengers Selector */}
+            <PassengersField
+              adults={flightAdults}
+              children={flightChildren}
+              infants={flightInfants}
+              cabinClass={flightCabin}
+              onChange={(a, c, i) => {
+                setFlightAdults(a);
+                setFlightChildren(c);
+                setFlightInfants(i);
+              }}
+            />
+
+            {/* Search Flights CTA */}
+            <SearchButton
+              title="Search Flights"
+              loading={loading}
+              accentColor={accentColor}
+            />
+          </div>
+        </form>
+      )}
+
+      {/* ─── 5. TRANSFERS MODULE ─── */}
+      {isTransfers && (
+        <form onSubmit={handleSearchTransfers} className="space-y-3">
+          {/* Top Row: Locations (Pick-up & Drop-off) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <AutocompleteField
+              label="PICK-UP AIRPORT OR HOTEL"
+              placeholder="Airport, Hotel or Station"
+              value={transferPickup}
+              onChange={setTransferPickup}
+              type="all"
+              siteId={siteId}
+              required
+              error={errors.transferPickup}
+            />
+
+            <AutocompleteField
+              label="DROP-OFF DESTINATION"
+              placeholder="Destination Hotel or Address"
+              value={transferDropoff}
+              onChange={setTransferDropoff}
+              type="all"
+              siteId={siteId}
+              required
+              error={errors.transferDropoff}
+            />
+          </div>
+
+          {/* Bottom Row: Date, Time, Passengers & Search Action */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-center">
+            <DateField
+              label="TRANSFER DATE"
+              placeholder="Select date"
+              value={transferDate}
+              onChange={setTransferDate}
+            />
+
+            {/* Time Picker */}
+            <div className="flex items-center gap-2 p-2.5 bg-[#f8f9fa] dark:bg-neutral-800/80 rounded-xl border border-gray-200 dark:border-neutral-700 min-h-[58px]">
+              <div className="w-full">
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                  TIME
+                </span>
+                <input
+                  type="time"
+                  value={transferTime}
+                  onChange={(e) => setTransferTime(e.target.value)}
+                  className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer w-full"
+                />
+              </div>
+            </div>
+
+            {/* Passengers Counter */}
+            <div className="p-2.5 bg-[#f8f9fa] dark:bg-neutral-800/80 rounded-xl border border-gray-200 dark:border-neutral-700 min-h-[58px] flex items-center justify-between">
+              <div>
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                  PASSENGERS
+                </span>
+                <div className="text-xs font-bold text-gray-900 dark:text-white">
+                  {transferPassengers} Guests
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => transferPassengers > 1 && setTransferPassengers(transferPassengers - 1)}
+                  className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs font-bold"
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  onClick={() => transferPassengers < 15 && setTransferPassengers(transferPassengers + 1)}
+                  className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs font-bold"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <SearchButton
+              title="Search Transfers"
+              loading={loading}
+              accentColor={accentColor}
+              className="w-full"
+            />
+          </div>
+
+          {/* Round-Trip Checkbox & Return Fields */}
+          <div className="pt-2 border-t border-gray-100 dark:border-neutral-800 flex flex-wrap items-center gap-4">
+            <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-gray-700 dark:text-gray-300">
+              <input
+                type="checkbox"
+                checked={transferRoundTrip}
+                onChange={(e) => setTransferRoundTrip(e.target.checked)}
+                className="w-4 h-4 rounded text-primary focus:ring-primary accent-primary"
+              />
+              <span>Add Return Transfer (Round-Trip)</span>
+            </label>
+
+            {transferRoundTrip && (
+              <div className="flex items-center gap-3 animate-in fade-in">
+                <DateField
+                  label="RETURN DATE"
+                  placeholder="Select return date"
+                  value={transferReturnDate}
+                  onChange={setTransferReturnDate}
+                />
+                <div className="flex items-center gap-2 p-2 bg-[#f8f9fa] dark:bg-neutral-800/80 rounded-xl border border-gray-200 dark:border-neutral-700 min-h-[58px]">
+                  <div>
+                    <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                      RETURN TIME
+                    </span>
+                    <input
+                      type="time"
+                      value={transferReturnTime}
+                      onChange={(e) => setTransferReturnTime(e.target.value)}
+                      className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </form>
+      )}
+
+      {/* ─── 6. VISAS MODULE ─── */}
+      {isVisas && (
+        <form onSubmit={handleSearchVisas} className="space-y-3">
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Pick-up Location</span>
-              <input
-                type="text"
-                value={carLocation}
-                onChange={(e) => setCarLocation(e.target.value)}
-                placeholder="Airport, City or Station (e.g. Langkawi, KL)"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
+            <SelectField
+              label="CITIZEN OF"
+              value={visaCitizen}
+              options={NATIONALITY_OPTIONS}
+              onChange={setVisaCitizen}
+              searchable
+              className="lg:flex-1"
+            />
+
+            <SelectField
+              label="DESTINATION COUNTRY"
+              value={visaDestination}
+              options={VISA_DESTINATIONS}
+              onChange={setVisaDestination}
+              searchable
+              className="lg:flex-1"
+            />
+
+            <SearchButton
+              title="Check Visa Requirements"
+              loading={loading}
+              accentColor={accentColor}
+            />
+          </div>
+        </form>
+      )}
+
+      {/* ─── 7. RESTAURANTS MODULE ─── */}
+      {isRestaurants && (
+        <form onSubmit={handleSearchRestaurants} className="space-y-3">
+          {/* Diet Filter Chips */}
+          <div className="flex flex-wrap items-center gap-2 pb-1">
+            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 mr-1">
+              Diet Filter:
+            </span>
+            {DIET_CHIPS.map((chip) => {
+              const isSelected = restaurantDiet === chip;
+              return (
+                <button
+                  key={chip}
+                  type="button"
+                  onClick={() => setRestaurantDiet(chip)}
+                  className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${
+                    isSelected
+                      ? "bg-primary text-white shadow-sm"
+                      : "bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-neutral-700"
+                  }`}
+                  style={isSelected ? { backgroundColor: accentColor } : undefined}
+                >
+                  {chip === "Pure Veg" ? "🌱 Pure Veg" : chip === "Jain" ? "☸️ Jain" : chip}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-center">
+            <AutocompleteField
+              label="CITY OR CUISINE"
+              placeholder="City or Cuisine (e.g. Dubai, Indian, Italian)"
+              value={restaurantCity}
+              onChange={setRestaurantCity}
+              type="city"
+              siteId={siteId}
+              required
+              error={errors.restaurantCity}
+            />
+
+            <DateField
+              label="RESERVATION DATE"
+              placeholder="Select date"
+              value={restaurantDate}
+              onChange={setRestaurantDate}
+            />
+
+            <SelectField
+              label="TIME SLOT"
+              value={restaurantTimeSlot}
+              options={TIME_SLOT_OPTIONS}
+              onChange={setRestaurantTimeSlot}
+            />
+
+            {/* Guests Counter */}
+            <div className="p-2.5 bg-[#f8f9fa] dark:bg-neutral-800/80 rounded-xl border border-gray-200 dark:border-neutral-700 min-h-[58px] flex items-center justify-between">
+              <div>
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                  TABLE FOR
+                </span>
+                <div className="text-xs font-bold text-gray-900 dark:text-white">
+                  {restaurantGuests} Guests
+                </div>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => restaurantGuests > 1 && setRestaurantGuests(restaurantGuests - 1)}
+                  className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs font-bold"
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  onClick={() => restaurantGuests < 20 && setRestaurantGuests(restaurantGuests + 1)}
+                  className="w-6 h-6 rounded-full border border-gray-300 dark:border-neutral-600 flex items-center justify-center text-xs font-bold"
+                >
+                  +
+                </button>
+              </div>
             </div>
 
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Pick-up Date</span>
-              <input
-                type="date"
-                value={carPickupDate}
-                onChange={(e) => setCarPickupDate(e.target.value)}
-                className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              />
-            </div>
+            <SearchButton
+              title="Find Dining Tables"
+              loading={loading}
+              accentColor={accentColor}
+              className="w-full"
+            />
+          </div>
+        </form>
+      )}
 
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Return Date</span>
-              <input
-                type="date"
-                value={carReturnDate}
-                onChange={(e) => setCarReturnDate(e.target.value)}
-                className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              />
+      {/* ─── 8. BUILD PACKAGE MODULE ─── */}
+      {isBuildPackage && (
+        <form onSubmit={handleSearchBuildPackage} className="space-y-4">
+          <div className="p-4 rounded-xl bg-primary/5 dark:bg-neutral-800/50 border border-primary/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div className="text-xs font-black uppercase tracking-wider text-primary dark:text-sky-400 mb-1">
+                Custom Tour Itinerary Builder
+              </div>
+              <p className="text-xs text-gray-600 dark:text-gray-300">
+                Design your multi-city package with custom flights, stays, and activities.
+              </p>
             </div>
+            <SearchButton
+              title="Start Custom Package Builder"
+              loading={loading}
+              accentColor={accentColor}
+            />
+          </div>
 
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Driver Age</span>
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+            <AutocompleteField
+              label="STARTING POINT"
+              placeholder="City of departure (e.g. Mumbai, Delhi)"
+              value={bpStartingCity}
+              onChange={setBpStartingCity}
+              type="city"
+              siteId={siteId}
+            />
+
+            <AutocompleteField
+              label="PRIMARY DESTINATION"
+              placeholder="Where do you want to go? (e.g. Dubai, Bali)"
+              value={bpDestination}
+              onChange={setBpDestination}
+              type="city"
+              siteId={siteId}
+            />
+
+            <SelectField
+              label="TRIP DURATION"
+              value={bpDays}
+              options={DURATION_OPTIONS}
+              onChange={setBpDays}
+            />
+          </div>
+        </form>
+      )}
+
+      {/* ─── 9. CAR RENTAL MODULE (TripGo Asia) ─── */}
+      {isCars && (
+        <form onSubmit={handleSearchCars} className="space-y-3">
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+            <AutocompleteField
+              label="PICK-UP LOCATION"
+              placeholder="Airport, City or Station (e.g. Langkawi, KL)"
+              value={carLocation}
+              onChange={setCarLocation}
+              type="city"
+              siteId={siteId}
+            />
+
+            <DateRangeField
+              startDate={carPickupDate}
+              endDate={carReturnDate}
+              checkInLabel="PICK-UP DATE"
+              checkOutLabel="RETURN DATE"
+              onChange={(start, end) => {
+                setCarPickupDate(start);
+                setCarReturnDate(end);
+              }}
+            />
+
+            <div className="p-2.5 bg-[#f8f9fa] dark:bg-neutral-800/80 rounded-xl border border-gray-200 dark:border-neutral-700 min-h-[58px] min-w-[140px]">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                DRIVER AGE
+              </span>
               <select
                 value={carDriverAge}
                 onChange={(e) => setCarDriverAge(e.target.value)}
                 className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
               >
-                <option value="25-70" className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">25 - 70 years</option>
-                <option value="21-24" className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">21 - 24 years</option>
-                <option value="70+" className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">70+ years</option>
+                <option value="25-70" className="bg-white dark:bg-neutral-800">25 - 70 years</option>
+                <option value="21-24" className="bg-white dark:bg-neutral-800">21 - 24 years</option>
+                <option value="70+" className="bg-white dark:bg-neutral-800">70+ years</option>
               </select>
             </div>
 
-            <button
-              type="submit"
-              className="w-full lg:w-auto py-3 px-6 sm:px-8 rounded-xl text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[52px] sm:min-h-[58px] transition-all hover:opacity-95"
-              style={accentColor ? { backgroundColor: accentColor } : undefined}
-            >
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-              </svg>
-              <span>Search Cars</span>
-            </button>
-          </div>
-        )}
-
-        {/* ─── 2. TRANSFER SEARCH FORM ─── */}
-        {isTransfer && (
-          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Pickup Location</span>
-              <input
-                type="text"
-                value={transferPickup}
-                onChange={(e) => setTransferPickup(e.target.value)}
-                placeholder="Airport, Hotel or Station"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Dropoff Location</span>
-              <input
-                type="text"
-                value={transferDropoff}
-                onChange={(e) => setTransferDropoff(e.target.value)}
-                placeholder="Destination Hotel or Address"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Date &amp; Time</span>
-              <div className="flex items-center gap-2">
-                <input
-                  type="date"
-                  value={transferDate}
-                  onChange={(e) => setTransferDate(e.target.value)}
-                  className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-                />
-                <input
-                  type="time"
-                  value={transferTime}
-                  onChange={(e) => setTransferTime(e.target.value)}
-                  className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-                />
-              </div>
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Passengers</span>
-              <select
-                value={transferPassengers}
-                onChange={(e) => setTransferPassengers(Number(e.target.value))}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 10, 15].map((num) => (
-                  <option key={num} value={num} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                    {num} Passenger{num > 1 ? "s" : ""}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full lg:w-auto py-3 px-6 sm:px-8 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[52px] sm:min-h-[58px] transition-all"
-              style={accentColor ? { backgroundColor: accentColor } : undefined}
-            >
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-              </svg>
-              <span>Search Transfers</span>
-            </button>
-          </div>
-        )}
-
-        {/* ─── 3. VISA SEARCH FORM ─── */}
-        {isVisa && (
-          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Citizen Of</span>
-              <select
-                value={visaNationality}
-                onChange={(e) => setVisaNationality(e.target.value)}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                {NATIONALITIES.map((n) => (
-                  <option key={n} value={n} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                    {n}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Traveling To</span>
-              <select
-                value={visaDestination}
-                onChange={(e) => setVisaDestination(e.target.value)}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                {visaDestinations.map((d) => (
-                  <option key={d} value={d} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                    {d}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Visa Type</span>
-              <select
-                value={visaType}
-                onChange={(e) => setVisaType(e.target.value)}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                <option value="Tourist Visa (30 Days)" className="bg-white dark:bg-neutral-800">Tourist Visa (30 Days)</option>
-                <option value="Tourist Visa (60 Days)" className="bg-white dark:bg-neutral-800">Tourist Visa (60 Days)</option>
-                <option value="Business Visa" className="bg-white dark:bg-neutral-800">Business Visa</option>
-                <option value="Express Visa" className="bg-white dark:bg-neutral-800">Express Visa (24 Hours)</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full lg:w-auto py-3 px-6 sm:px-8 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[52px] sm:min-h-[58px] transition-all"
-              style={accentColor ? { backgroundColor: accentColor } : undefined}
-            >
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-              </svg>
-              <span>Find Visa Requirements</span>
-            </button>
-          </div>
-        )}
-
-        {/* ─── 4. RESTAURANT SEARCH FORM ─── */}
-        {isRestaurant && (
-          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">City / Cuisine</span>
-              <input
-                type="text"
-                value={restaurantCity}
-                onChange={(e) => setRestaurantCity(e.target.value)}
-                placeholder="City or Cuisine (e.g. Dubai, Italian)"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Reservation Date &amp; Time</span>
-              <div className="flex items-center gap-2">
-                <input
-                  type="date"
-                  value={restaurantDate}
-                  onChange={(e) => setRestaurantDate(e.target.value)}
-                  className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-                />
-                <input
-                  type="time"
-                  value={restaurantTime}
-                  onChange={(e) => setRestaurantTime(e.target.value)}
-                  className="bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-                />
-              </div>
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Table For</span>
-              <select
-                value={restaurantGuests}
-                onChange={(e) => setRestaurantGuests(Number(e.target.value))}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                {[1, 2, 3, 4, 5, 6, 8, 10, 12].map((num) => (
-                  <option key={num} value={num} className="bg-white dark:bg-neutral-800 text-gray-900 dark:text-white">
-                    {num} People
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full lg:w-auto py-3 px-6 sm:px-8 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[52px] sm:min-h-[58px] transition-all"
-              style={accentColor ? { backgroundColor: accentColor } : undefined}
-            >
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-              </svg>
-              <span>Find Restaurants</span>
-            </button>
-          </div>
-        )}
-
-        {/* ─── 5. BUILD PACKAGE SEARCH FORM ─── */}
-        {isBuildPackage && (
-          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Starting City</span>
-              <input
-                type="text"
-                value={bpFrom}
-                onChange={(e) => setBpFrom(e.target.value)}
-                placeholder="Where do you start from? (e.g. Mumbai)"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Destination</span>
-              <input
-                type="text"
-                value={bpDestination}
-                onChange={(e) => setBpDestination(e.target.value)}
-                placeholder="Where do you want to go? (e.g. Dubai)"
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none"
-              />
-            </div>
-
-            <div className="p-3 rounded-xl border border-gray-200 dark:border-neutral-700 bg-[#f8f9fa] dark:bg-neutral-800/80 flex-1 hover:border-primary transition-colors min-h-[58px]">
-              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Duration</span>
-              <select
-                value={bpDays}
-                onChange={(e) => setBpDays(e.target.value)}
-                className="w-full bg-transparent font-bold text-sm text-gray-900 dark:text-white outline-none cursor-pointer"
-              >
-                <option value="3 Days / 2 Nights" className="bg-white dark:bg-neutral-800">3 Days / 2 Nights</option>
-                <option value="5 Days / 4 Nights" className="bg-white dark:bg-neutral-800">5 Days / 4 Nights</option>
-                <option value="7 Days / 6 Nights" className="bg-white dark:bg-neutral-800">7 Days / 6 Nights</option>
-                <option value="10 Days / 9 Nights" className="bg-white dark:bg-neutral-800">10 Days / 9 Nights</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full lg:w-auto py-3 px-6 sm:px-8 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[52px] sm:min-h-[58px] transition-all"
-              style={accentColor ? { backgroundColor: accentColor } : undefined}
-            >
-              <span>✨ Build Custom Package</span>
-            </button>
-          </div>
-        )}
-
-        {/* ─── 6. HOTEL / TOUR / PACKAGE / GENERAL SEARCH FORM (Matching Screenshot) ─── */}
-        {!isFlight && !isTransfer && !isCarRental && !isVisa && !isRestaurant && !isBuildPackage && (
-          <div>
-            <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
-              {/* Destination Autocomplete */}
-              <DestinationAutocomplete
-                value={destination}
-                onChange={setDestination}
-                siteId={siteId}
-                label={
-                  isHotel
-                    ? "DESTINATION / HOTEL"
-                    : isTour
-                      ? "DESTINATION / ACTIVITY"
-                      : "HOLIDAY DESTINATION"
-                }
-                placeholder={
-                  isHotel
-                    ? "City, Landmark or Hotel name"
-                    : isTour
-                      ? "City or Activity name (e.g. Langkawi, Dubai)"
-                      : isPackage
-                        ? "Search holiday destination (e.g. Bali, Kashmir)"
-                        : "Destination"
-                }
-              />
-
-              {/* Date Range Picker */}
-              <DateRangePicker
-                startDate={startDate}
-                endDate={endDate}
-                label={
-                  isHotel
-                    ? "CHECK-IN — CHECK-OUT"
-                    : isTour
-                      ? "TRAVEL DATE"
-                      : "TRAVEL DATES"
-                }
-                isSingleDate={isTour}
-                onChange={(start, end) => {
-                  setStartDate(start);
-                  setEndDate(end);
-                }}
-              />
-
-              {/* Occupancy Selector */}
-              <OccupancySelector
-                value={occupancy}
-                onChange={setOccupancy}
-                label={
-                  isHotel
-                    ? "GUESTS & ROOMS"
-                    : "TRAVELERS"
-                }
-                hideRooms={isTour || isPackage}
-              />
-
-              {/* Filters Toggle Button */}
-              <button
-                type="button"
-                onClick={() => setFiltersOpen(!filtersOpen)}
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 dark:border-neutral-700 hover:border-gray-400 bg-white dark:bg-neutral-800 text-sm font-bold text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors shrink-0 min-h-[58px]"
-                aria-label="Toggle Filters"
-              >
-                <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-gray-500 dark:text-gray-400">
-                  <path fillRule="evenodd" d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 0 1 .628.74v2.288a2.25 2.25 0 0 1-.659 1.59l-4.682 4.683a2.25 2.25 0 0 0-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 0 1 8 18.25v-5.757a2.25 2.25 0 0 0-.659-1.591L2.659 6.22A2.25 2.25 0 0 1 2 4.629V2.34a.75.75 0 0 1 .628-.74Z" clipRule="evenodd" />
-                </svg>
-                <span>Filters</span>
-                {(filters.starRatings.length > 0 || filters.categories.length > 0) && (
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                )}
-              </button>
-
-              {/* Search Submit Button */}
-              <button
-                type="submit"
-                className="py-3 px-8 rounded-xl bg-primary hover:opacity-90 text-white font-bold text-sm tracking-wide shadow-md flex items-center justify-center gap-2 active:scale-98 shrink-0 min-h-[58px] transition-all"
-                style={accentColor ? { backgroundColor: accentColor } : undefined}
-              >
-                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                  <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-                </svg>
-                <span>
-                  {isHotel
-                    ? "Search Hotels"
-                    : isTour
-                      ? "Search Attractions"
-                      : isPackage
-                        ? "Search Packages"
-                        : "Search"}
-                </span>
-              </button>
-            </div>
-
-            {/* Expandable Filters Panel */}
-            <FiltersPanel
-              filters={filters}
-              onChange={setFilters}
-              isOpen={filtersOpen}
-              onClose={() => setFiltersOpen(false)}
+            <SearchButton
+              title="Search Cars"
+              loading={loading}
+              accentColor={accentColor}
             />
           </div>
-        )}
-      </form>
+        </form>
+      )}
     </div>
   );
 }

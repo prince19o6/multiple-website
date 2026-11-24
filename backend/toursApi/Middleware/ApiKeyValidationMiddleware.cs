@@ -173,16 +173,19 @@ public class ApiKeyValidationMiddleware
             var isAdminRoute = path.StartsWith("/api/admin", StringComparison.OrdinalIgnoreCase) ||
                                path.StartsWith("/api/core/v1/config", StringComparison.OrdinalIgnoreCase) && HttpMethods.IsPut(context.Request.Method);
 
-            // App keys cannot perform admin tasks
-            if (isAdminRoute)
+            // App keys cannot perform admin tasks unless accompanied by an authenticated Bearer JWT token
+            var hasBearerAuth = context.Request.Headers.TryGetValue("Authorization", out var authVal) &&
+                                authVal.ToString().Trim().StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase);
+
+            if (isAdminRoute && !hasBearerAuth)
             {
-                _logger.LogWarning("[ApiKeyMiddleware] App key '{KeyPrefix}...' denied access to admin endpoint {Path}", apiKey.KeyPrefix, path);
+                _logger.LogWarning("[ApiKeyMiddleware] App key '{KeyPrefix}...' denied access to admin endpoint {Path}: Admin Bearer JWT required", apiKey.KeyPrefix, path);
                 context.Response.StatusCode = StatusCodes.Status403Forbidden;
                 context.Response.ContentType = "application/json";
                 await context.Response.WriteAsJsonAsync(new
                 {
                     success = false,
-                    error = "App key has insufficient permissions for administrative operations.",
+                    error = "App key has insufficient permissions for administrative operations. Admin credentials (Bearer JWT) required.",
                     code = "INSUFFICIENT_SCOPE"
                 });
                 return;

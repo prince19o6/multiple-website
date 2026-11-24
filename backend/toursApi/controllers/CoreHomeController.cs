@@ -360,6 +360,205 @@ public class CoreHomeController : ControllerBase
         });
     }
 
+    /// <summary>
+    /// GET /api/core/v1/search/suggest?type=hotel|tour|airport|city|all&q=...
+    /// </summary>
+    [HttpGet("api/core/v1/search/suggest")]
+    public async Task<IActionResult> GetSearchSuggestions(
+        [FromQuery] string? type,
+        [FromQuery] string? q,
+        [FromQuery] string? site,
+        [FromQuery] int limit = 10)
+    {
+        var cleanQ = (q ?? "").Trim();
+        var targetType = (type ?? "all").Trim().ToLowerInvariant();
+        var results = new List<object>();
+
+        var airports = new[]
+        {
+            new { code = "STV", name = "Surat Gujarat Airport", city = "Surat", country = "India" },
+            new { code = "BOM", name = "Chhatrapati Shivaji Maharaj Intl", city = "Mumbai", country = "India" },
+            new { code = "DEL", name = "Indira Gandhi International Airport", city = "Delhi", country = "India" },
+            new { code = "AMD", name = "Sardar Vallabhbhai Patel Intl", city = "Ahmedabad", country = "India" },
+            new { code = "DXB", name = "Dubai International Airport", city = "Dubai", country = "UAE" },
+            new { code = "BLR", name = "Kempegowda International Airport", city = "Bengaluru", country = "India" },
+            new { code = "GOI", name = "Goa Dabolim Airport", city = "Goa", country = "India" },
+            new { code = "BKK", name = "Suvarnabhumi Airport", city = "Bangkok", country = "Thailand" },
+            new { code = "SIN", name = "Singapore Changi Airport", city = "Singapore", country = "Singapore" },
+            new { code = "LHR", name = "London Heathrow Airport", city = "London", country = "United Kingdom" },
+            new { code = "JFK", name = "John F Kennedy International", city = "New York", country = "United States" },
+            new { code = "CDG", name = "Charles de Gaulle Airport", city = "Paris", country = "France" },
+            new { code = "DPS", name = "Ngurah Rai International Airport", city = "Bali", country = "Indonesia" },
+            new { code = "KUL", name = "Kuala Lumpur International Airport", city = "Kuala Lumpur", country = "Malaysia" }
+        };
+
+        try
+        {
+            // 1. Airports
+            if (targetType == "airport" || targetType == "flight" || targetType == "all")
+            {
+                var matchedAirports = airports
+                    .Where(a => string.IsNullOrWhiteSpace(cleanQ) ||
+                                a.code.Contains(cleanQ, StringComparison.OrdinalIgnoreCase) ||
+                                a.name.Contains(cleanQ, StringComparison.OrdinalIgnoreCase) ||
+                                a.city.Contains(cleanQ, StringComparison.OrdinalIgnoreCase) ||
+                                a.country.Contains(cleanQ, StringComparison.OrdinalIgnoreCase))
+                    .Take(targetType == "airport" ? limit : Math.Min(limit, 5))
+                    .Select(a => new
+                    {
+                        id = a.code,
+                        name = $"{a.city} ({a.code})",
+                        type = "airport",
+                        code = a.code,
+                        city = a.city,
+                        country = a.country,
+                        subtitle = a.name,
+                        image = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=150&q=80"
+                    });
+                results.AddRange(matchedAirports);
+            }
+
+            // 2. Hotels
+            if ((targetType == "hotel" || targetType == "hotels" || targetType == "all") && results.Count < limit)
+            {
+                var filterBuilder = Builders<Hotel>.Filter;
+                var filter = filterBuilder.Ne(h => h.Status, "inactive");
+                if (!string.IsNullOrWhiteSpace(cleanQ))
+                {
+                    filter &= (filterBuilder.Regex(h => h.Title, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                               filterBuilder.Regex("destination.cityName", new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                               filterBuilder.Regex("destination.country", new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")));
+                }
+
+                var hotels = await _database.GetCollection<Hotel>("hotels")
+                    .Find(filter)
+                    .Limit(limit - results.Count)
+                    .ToListAsync();
+
+                foreach (var h in hotels)
+                {
+                    var city = h.Destination?.CityName ?? "Destination";
+                    var country = h.Destination?.Country ?? "";
+                    results.Add(new
+                    {
+                        id = h.Id ?? h.Slug,
+                        name = h.Title,
+                        type = "hotel",
+                        city = city,
+                        country = country,
+                        subtitle = string.IsNullOrWhiteSpace(country) ? city : $"{city}, {country}",
+                        image = h.Images?.FirstOrDefault() ?? "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=150&q=80",
+                        count = h.StarRating > 0 ? (int)h.StarRating : 4
+                    });
+                }
+            }
+
+            // 3. Tours / Sightseeing
+            if ((targetType == "tour" || targetType == "tours" || targetType == "activity" || targetType == "sightseeing" || targetType == "all") && results.Count < limit)
+            {
+                var filterBuilder = Builders<Tour>.Filter;
+                var filter = filterBuilder.Empty;
+                if (!string.IsNullOrWhiteSpace(cleanQ))
+                {
+                    filter = filterBuilder.Regex(t => t.Title, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                             filterBuilder.Regex(t => t.Name, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                             filterBuilder.Regex(t => t.Destination, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                             filterBuilder.Regex(t => t.Country, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i"));
+                }
+
+                var tours = await _database.GetCollection<Tour>("tours")
+                    .Find(filter)
+                    .Limit(limit - results.Count)
+                    .ToListAsync();
+
+                foreach (var t in tours)
+                {
+                    var tourTitle = !string.IsNullOrWhiteSpace(t.Title) ? t.Title : t.Name;
+                    var city = t.Destination ?? "";
+                    var country = t.Country ?? "";
+                    results.Add(new
+                    {
+                        id = t.Id ?? t.Slug,
+                        name = tourTitle,
+                        type = "tour",
+                        city = city,
+                        country = country,
+                        subtitle = string.IsNullOrWhiteSpace(country) ? city : $"{city}, {country}",
+                        image = t.Images?.FirstOrDefault() ?? "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=150&q=80",
+                        count = t.DurationDays > 0 ? t.DurationDays : 1
+                    });
+                }
+            }
+
+            // 4. Cities / Destinations
+            if ((targetType == "city" || targetType == "destination" || targetType == "all") && results.Count < limit)
+            {
+                var filterBuilder = Builders<Destination>.Filter;
+                var filter = filterBuilder.Empty;
+                if (!string.IsNullOrWhiteSpace(cleanQ))
+                {
+                    filter = filterBuilder.Regex(d => d.Name, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i")) |
+                             filterBuilder.Regex(d => d.Country, new MongoDB.Bson.BsonRegularExpression(cleanQ, "i"));
+                }
+
+                var destinations = await _database.GetCollection<Destination>("destinations")
+                    .Find(filter)
+                    .Limit(limit - results.Count)
+                    .ToListAsync();
+
+                foreach (var d in destinations)
+                {
+                    results.Add(new
+                    {
+                        id = d.Id ?? d.Name.ToLowerInvariant(),
+                        name = d.Name,
+                        type = "city",
+                        city = d.Name,
+                        country = d.Country ?? "",
+                        subtitle = string.IsNullOrWhiteSpace(d.Country) ? d.Name : $"{d.Name}, {d.Country}",
+                        image = !string.IsNullOrWhiteSpace(d.Image) ? d.Image : "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=150&q=80",
+                        count = d.Tours > 0 ? d.Tours : 10
+                    });
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to load database suggestions, returning local fallback.");
+        }
+
+        // Fallback default list if DB was empty or failed
+        if (results.Count == 0)
+        {
+            var fallback = new[]
+            {
+                new { id = "dubai", name = "Dubai", type = "city", subtitle = "United Arab Emirates", city = "Dubai", country = "United Arab Emirates", count = 4684, image = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=150&q=80" },
+                new { id = "goa", name = "Goa", type = "city", subtitle = "India", city = "Goa", country = "India", count = 2750, image = "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=150&q=80" },
+                new { id = "bangkok", name = "Bangkok", type = "city", subtitle = "Thailand", city = "Bangkok", country = "Thailand", count = 2663, image = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=150&q=80" },
+                new { id = "singapore", name = "Singapore", type = "city", subtitle = "Singapore", city = "Singapore", country = "Singapore", count = 709, image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=150&q=80" },
+                new { id = "jaipur", name = "Jaipur", type = "city", subtitle = "Rajasthan, India", city = "Jaipur", country = "India", count = 1117, image = "https://images.unsplash.com/photo-1603262110263-fb010d6e75dc?w=150&q=80" },
+                new { id = "kashmir", name = "Srinagar & Kashmir", type = "city", subtitle = "India", city = "Srinagar", country = "India", count = 420, image = "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=150&q=80" },
+            };
+
+            var filteredFallback = fallback
+                .Where(f => string.IsNullOrWhiteSpace(cleanQ) ||
+                            f.name.Contains(cleanQ, StringComparison.OrdinalIgnoreCase) ||
+                            f.country.Contains(cleanQ, StringComparison.OrdinalIgnoreCase))
+                .Take(limit);
+
+            results.AddRange(filteredFallback);
+        }
+
+        return Ok(new
+        {
+            success = true,
+            query = cleanQ,
+            type = targetType,
+            count = results.Count,
+            data = results
+        });
+    }
+
     private async Task<List<object>> FetchDynamicFeaturedFromDbAsync(string module, int limit = 6)
     {
         var items = new List<object>();

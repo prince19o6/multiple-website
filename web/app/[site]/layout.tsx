@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import { DynamicFontLoader } from "@/components/DynamicFontLoader";
 import { GoogleFontLoader } from "@/components/GoogleFontLoader";
 import { ThemeStyleInjector } from "@/components/ThemeStyleInjector";
+import { ThemeInitializer } from "@/components/theme/ThemeInitializer";
 import { SiteConfigProvider } from "@/lib/SiteConfigContext";
 import { SiteProvider } from "@/lib/SiteContext";
 import { CurrencyProvider } from "@/lib/CurrencyContext";
@@ -227,19 +228,15 @@ export default async function SiteLayout({ children, params }: Props) {
           <AuthProvider initialSiteId={siteDef.siteId}>
             <ModuleProvider>
               {/* Inject JSON-LD Structured Schema */}
-              <Script
-                id={`json-ld-${siteDef.siteId}`}
+              <script
                 type="application/ld+json"
-                strategy="afterInteractive"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                suppressHydrationWarning
               />
-              {/* Synchronous inline script prevents flash of wrong theme (zero FOUC) */}
-              <Script
-                id={`theme-init-${siteDef.siteId}`}
-                strategy="beforeInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `(function(){try{var c=document.cookie.match(/(?:^|;\\s*)theme_${siteDef.siteId}=([^;]+)/);var m=c?c[1]:'${config.defaultMode || "light"}';if(m==='dark'){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.classList.remove('dark');document.documentElement.style.colorScheme='light';}}catch(e){}})();`,
-                }}
+              {/* Client theme initializer ensures documentElement class matches active cookie with zero console warnings */}
+              <ThemeInitializer
+                siteId={siteDef.siteId}
+                defaultMode={config.defaultMode || "light"}
               />
               <ThemeStyleInjector config={config} />
               <DynamicFontLoader font={config.dynamic?.font ?? null} />

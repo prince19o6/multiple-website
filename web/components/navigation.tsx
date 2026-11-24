@@ -316,6 +316,23 @@ export default function Navigation({ config }: NavigationProps) {
     localStorage.removeItem("customer_email");
     localStorage.removeItem("user_info");
     localStorage.removeItem("adminLoggedIn");
+
+    const activeSite = siteId || "gujjutours";
+    localStorage.removeItem(`toursapp_token_${activeSite}`);
+    localStorage.removeItem(`toursapp_refresh_token_${activeSite}`);
+    localStorage.removeItem(`toursapp_user_${activeSite}`);
+    document.cookie = `toursapp_token_${activeSite}=; path=/; max-age=0; SameSite=Lax`;
+    document.cookie = `toursapp_refresh_token_${activeSite}=; path=/; max-age=0; SameSite=Lax`;
+
+    try {
+      fetch("/api/auth/logout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Website-Id": activeSite },
+        body: JSON.stringify({ siteId: activeSite }),
+      }).catch(() => {});
+    } catch {}
+
+    window.dispatchEvent(new CustomEvent("tours_auth_changed", { detail: { siteId: activeSite, user: null } }));
     window.dispatchEvent(new CustomEvent("tours_user_session_changed"));
     window.dispatchEvent(new CustomEvent("storage"));
     setCurrentUser(null);

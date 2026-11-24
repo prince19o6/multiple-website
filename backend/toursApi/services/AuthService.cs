@@ -210,7 +210,7 @@ public class AuthService : IAuthService
             return (false, $"Account temporarily locked due to multiple failed login attempts. Please try again in {remainingMins} minute(s).", null);
         }
 
-        var (passwordOk, needsRehash) = VerifyPasswordWithMigration(user, dto.Password);
+        var (passwordOk, needsRehash) = VerifyPasswordWithMigration(user, dto.Password ?? string.Empty);
         if (!passwordOk)
         {
             user.FailedLoginCount++;

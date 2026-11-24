@@ -851,6 +851,24 @@ const TourBookingModal = React.memo(function TourBookingModal({
   };
 
   const handleBookingSubmit = async () => {
+    if (!user) {
+      Alert.alert(
+        'Login Required',
+        'Please log in to your account to complete your booking. Guest checkout is not permitted.',
+        [
+          { text: 'Cancel', style: 'cancel' },
+          {
+            text: 'Log In',
+            onPress: () => {
+              onClose();
+              router.push('/(tabs)/profile');
+            },
+          },
+        ]
+      );
+      return;
+    }
+
     if (!name.trim() || !email.trim() || !phone.trim()) {
       Alert.alert('Missing Details', 'Please enter your name, email, and phone number.');
       return;

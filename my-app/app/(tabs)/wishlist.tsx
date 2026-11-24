@@ -107,21 +107,80 @@ export default function WishlistTabScreen() {
     return list;
   }, [wishlistItems, wishlistIds, tours]);
 
-  // Extract unique categories from saved tours
-  const categories = useMemo(() => {
-    const set = new Set<string>();
-    allSavedItems.forEach((t) => {
-      if (t.category) set.add(t.category);
+  // Module display mappings with clean icons
+  const MODULE_CONFIGS: Record<string, { label: string; icon: keyof typeof Ionicons.glyphMap }> = {
+    all: { label: 'All', icon: 'grid-outline' },
+    hotels: { label: 'Hotels', icon: 'business-outline' },
+    tours: { label: 'Tours', icon: 'compass-outline' },
+    packages: { label: 'Packages', icon: 'briefcase-outline' },
+    transfers: { label: 'Transfers', icon: 'car-outline' },
+    flights: { label: 'Flights', icon: 'airplane-outline' },
+    visas: { label: 'Visas', icon: 'document-text-outline' },
+    restaurants: { label: 'Restaurants', icon: 'restaurant-outline' },
+  };
+
+  // Extract unique module and category filters from saved items
+  const availableFilters = useMemo(() => {
+    const presentModules = new Set<string>();
+    const presentCategories = new Set<string>();
+
+    allSavedItems.forEach((item) => {
+      const mod = (item.module || 'tours').toLowerCase();
+      presentModules.add(mod);
+      if (item.category) {
+        presentCategories.add(item.category.toLowerCase());
+      }
     });
-    return Array.from(set);
+
+    const filters: { id: string; label: string; icon: keyof typeof Ionicons.glyphMap; count: number }[] = [
+      { id: 'all', label: 'All', icon: 'grid-outline', count: allSavedItems.length },
+    ];
+
+    // Priority 1: Canonical module filters present in saved items
+    const canonicalOrder = ['tours', 'hotels', 'packages', 'transfers', 'flights', 'visas', 'restaurants'];
+    canonicalOrder.forEach((modKey) => {
+      if (presentModules.has(modKey)) {
+        const count = allSavedItems.filter(
+          (t) => (t.module || 'tours').toLowerCase() === modKey
+        ).length;
+        filters.push({
+          id: modKey,
+          label: MODULE_CONFIGS[modKey]?.label || modKey.toUpperCase(),
+          icon: MODULE_CONFIGS[modKey]?.icon || 'bookmark-outline',
+          count,
+        });
+      }
+    });
+
+    // Priority 2: Additional unique categories
+    presentCategories.forEach((catKey) => {
+      if (!presentModules.has(catKey)) {
+        const count = allSavedItems.filter(
+          (t) => t.category?.toLowerCase() === catKey
+        ).length;
+        if (count > 0 && !filters.some((f) => f.id === catKey)) {
+          filters.push({
+            id: catKey,
+            label: catKey.charAt(0).toUpperCase() + catKey.slice(1),
+            icon: 'pricetag-outline',
+            count,
+          });
+        }
+      }
+    });
+
+    return filters;
   }, [allSavedItems]);
 
-  // Filtered by selected category chip
+  // Filtered by selected module/category chip
   const displayedItems = useMemo(() => {
     if (selectedCategory === 'all') return allSavedItems;
-    return allSavedItems.filter(
-      (t) => t.category?.toLowerCase() === selectedCategory.toLowerCase()
-    );
+    const target = selectedCategory.toLowerCase();
+    return allSavedItems.filter((t) => {
+      const mod = (t.module || 'tours').toLowerCase();
+      const cat = (t.category || '').toLowerCase();
+      return mod === target || cat === target;
+    });
   }, [allSavedItems, selectedCategory]);
 
   // Total estimated investment sum
@@ -268,7 +327,7 @@ export default function WishlistTabScreen() {
               <View style={styles.summaryTopRow}>
                 <View>
                   <Text style={[styles.summaryCountText, { color: colors.heading, fontFamily: headingFontFamily }]}>
-                    {allSavedItems.length} {allSavedItems.length === 1 ? 'Expedition' : 'Expeditions'} Bookmarked
+                    {allSavedItems.length} {allSavedItems.length === 1 ? 'Item' : 'Items'} Bookmarked
                   </Text>
                   <Text style={[styles.summarySubText, { color: colors.mutedText }]}>
                     Saved to your private travel wishlist
@@ -283,60 +342,45 @@ export default function WishlistTabScreen() {
                 </View>
               </View>
 
-              {/* Category Filter Chips (if more than 1 category) */}
-              {categories.length > 1 && (
+              {/* Module & Category Filter Chips */}
+              {availableFilters.length > 2 && (
                 <ScrollView
                   horizontal
                   showsHorizontalScrollIndicator={false}
                   contentContainerStyle={styles.chipsRow}
                 >
-                  <TouchableOpacity testID="btn-wishlist-215" accessibilityLabel="wishlist action"
-                    style={[
-                      styles.chip,
-                      {
-                        backgroundColor: selectedCategory === 'all' ? colors.primary : colors.background,
-                        borderColor: selectedCategory === 'all' ? colors.primary : colors.border,
-                      },
-                    ]}
-                    onPress={() => setSelectedCategory('all')}
-                    activeOpacity={0.8}
-                  >
-                    <Text
-                      style={[
-                        styles.chipText,
-                        { color: selectedCategory === 'all' ? '#ffffff' : colors.mutedText },
-                      ]}
-                    >
-                      All ({allSavedItems.length})
-                    </Text>
-                  </TouchableOpacity>
-
-                  {categories.map((cat) => {
-                    const isSelected = selectedCategory.toLowerCase() === cat.toLowerCase();
-                    const count = allSavedItems.filter(
-                      (t) => t.category?.toLowerCase() === cat.toLowerCase()
-                    ).length;
-
+                  {availableFilters.map((filter) => {
+                    const isSelected = selectedCategory.toLowerCase() === filter.id.toLowerCase();
                     return (
-                      <TouchableOpacity testID="btn-wishlist-243" accessibilityLabel="wishlist action"
-                        key={cat}
+                      <TouchableOpacity
+                        key={filter.id}
+                        testID={`btn-wishlist-filter-${filter.id}`}
+                        accessibilityLabel={`Filter by ${filter.label}`}
                         style={[
                           styles.chip,
                           {
                             backgroundColor: isSelected ? colors.primary : colors.background,
                             borderColor: isSelected ? colors.primary : colors.border,
+                            flexDirection: 'row',
+                            alignItems: 'center',
                           },
                         ]}
-                        onPress={() => setSelectedCategory(cat)}
+                        onPress={() => setSelectedCategory(filter.id)}
                         activeOpacity={0.8}
                       >
+                        <Ionicons
+                          name={filter.icon}
+                          size={13}
+                          color={isSelected ? '#ffffff' : colors.mutedText}
+                          style={{ marginRight: 4 }}
+                        />
                         <Text
                           style={[
                             styles.chipText,
                             { color: isSelected ? '#ffffff' : colors.mutedText },
                           ]}
                         >
-                          {cat} ({count})
+                          {filter.label} ({filter.count})
                         </Text>
                       </TouchableOpacity>
                     );
@@ -373,7 +417,8 @@ export default function WishlistTabScreen() {
                         stars: item.stars,
                       }}
                       isWishlisted={true}
-                      onToggleWishlist={() => removeFromWishlist(itemIdent)}
+                      onPress={navigateFn}
+                      onToggleWishlist={() => removeFromWishlist(itemIdent, item.module)}
                       width="100%"
                     />
                   </View>
@@ -395,7 +440,7 @@ export default function WishlistTabScreen() {
                       onBook={navigateFn}
                       onPress={navigateFn}
                       isWishlisted={true}
-                      onToggleWishlist={() => removeFromWishlist(itemIdent)}
+                      onToggleWishlist={() => removeFromWishlist(itemIdent, 'tours')}
                     />
                   </View>
                 );
@@ -417,7 +462,7 @@ export default function WishlistTabScreen() {
                       onPress={navigateFn}
                       headingFontFamily={headingFontFamily}
                       isWishlisted={true}
-                      onToggleWishlist={() => removeFromWishlist(itemIdent)}
+                      onToggleWishlist={() => removeFromWishlist(itemIdent, 'tours')}
                     />
                   </View>
                 );
@@ -437,7 +482,7 @@ export default function WishlistTabScreen() {
                     onBook={navigateFn}
                     onPress={navigateFn}
                     isWishlisted={true}
-                    onToggleWishlist={() => removeFromWishlist(itemIdent)}
+                    onToggleWishlist={() => removeFromWishlist(itemIdent, 'tours')}
                   />
                 </View>
               );

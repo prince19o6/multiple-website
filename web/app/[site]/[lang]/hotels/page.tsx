@@ -303,11 +303,10 @@ export default function HotelsListingPage() {
                   onClick={() => {
                     setSelectedCategory(pt.id);
                   }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 ${
-                    active
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 ${active
                       ? "bg-white text-slate-900 shadow font-bold scale-105"
                       : "bg-white/15 text-white hover:bg-white/25 backdrop-blur-sm"
-                  }`}
+                    }`}
                 >
                   {pt.label}
                 </button>
@@ -373,11 +372,10 @@ export default function HotelsListingPage() {
             <button
               type="button"
               onClick={() => setSelectedCollection("")}
-              className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap border transition-all ${
-                !selectedCollection
+              className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap border transition-all ${!selectedCollection
                   ? "bg-slate-900 text-white dark:bg-white dark:text-neutral-900 border-transparent shadow-sm"
                   : "bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-800 text-slate-600 dark:text-neutral-300 hover:border-slate-300"
-              }`}
+                }`}
             >
               All Collections
             </button>
@@ -388,16 +386,14 @@ export default function HotelsListingPage() {
                   key={col.id}
                   type="button"
                   onClick={() => setSelectedCollection(active ? "" : col.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap border transition-all ${
-                    active
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap border transition-all ${active
                       ? "bg-slate-900 text-white dark:bg-white dark:text-neutral-900 border-transparent shadow-sm"
                       : "bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-800 text-slate-600 dark:text-neutral-300 hover:border-slate-300"
-                  }`}
+                    }`}
                 >
                   <span>{col.title}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                    active ? "bg-white/20 text-white dark:bg-black/20 dark:text-black" : "bg-slate-100 dark:bg-neutral-800 text-slate-500"
-                  }`}>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${active ? "bg-white/20 text-white dark:bg-black/20 dark:text-black" : "bg-slate-100 dark:bg-neutral-800 text-slate-500"
+                    }`}>
                     {col.count}
                   </span>
                 </button>
@@ -591,7 +587,7 @@ export default function HotelsListingPage() {
               <div className="mb-4 pt-4 border-t border-slate-100 dark:border-neutral-800">
                 <div className="flex items-center justify-between text-xs font-black uppercase tracking-wider text-slate-500 dark:text-neutral-400 mb-2">
                   <span>Max Price</span>
-                  <span className="text-primary font-bold">{currencySymbol}{maxPrice.toLocaleString()}</span>
+                  <span className="text-primary font-bold" suppressHydrationWarning>{currencySymbol}{maxPrice.toLocaleString('en-IN')}</span>
                 </div>
                 <input
                   type="range"
@@ -628,14 +624,12 @@ export default function HotelsListingPage() {
                   return (
                     <article
                       key={`${hotel.id || hotel.slug}-${idx}`}
-                      className={`group bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col ${
-                        viewMode === "list" ? "sm:flex-row" : ""
-                      }`}
+                      className={`group bg-white dark:bg-neutral-900 border border-slate-200 dark:border-neutral-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col ${viewMode === "list" ? "sm:flex-row" : ""
+                        }`}
                     >
                       {/* Image Thumbnail */}
-                      <div className={`relative overflow-hidden bg-slate-100 dark:bg-neutral-800 ${
-                        viewMode === "list" ? "sm:w-72 sm:h-auto h-52 shrink-0" : "h-52 w-full"
-                      }`}>
+                      <div className={`relative overflow-hidden bg-slate-100 dark:bg-neutral-800 ${viewMode === "list" ? "sm:w-72 sm:h-auto h-52 shrink-0" : "h-52 w-full"
+                        }`}>
                         <Image
                           src={getActualImageUrl(hotel.images?.[0], {
                             title: hotel.title,

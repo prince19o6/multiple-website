@@ -258,6 +258,9 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   // Add booking
   const addBooking = useCallback(
     async (payload: CreateBookingPayload): Promise<Booking> => {
+      if (!user) {
+        throw new Error('Please log in to your account to complete your booking. Guest checkout is not permitted.');
+      }
       setIsLoading(true);
       try {
         const enrichedPayload: CreateBookingPayload = {
