@@ -17,6 +17,7 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useSelectedSite } from '@/hooks/useSelectedSite';
 import {
   fetchAdminUsers,
@@ -28,6 +29,7 @@ import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import type { User } from '@/types';
 
 export default function AdminUsersScreen() {
+  const router = useRouter();
   const { siteId } = useSelectedSite();
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
@@ -151,13 +153,25 @@ export default function AdminUsersScreen() {
     <View style={styles.root}>
       {/* Search Header */}
       <View style={styles.searchBar}>
-        <Ionicons name="search" size={16} color="#64748b" />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search by name, email, or role..."
-          value={search}
-          onChangeText={setSearch}
-        />
+        <TouchableOpacity
+          testID="btn-users-back-overview"
+          accessibilityLabel="Back to Admin Overview"
+          style={styles.backBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/(admin)'))}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="arrow-back" size={16} color="#0284c7" />
+          <Text style={styles.backBtnText}>Overview</Text>
+        </TouchableOpacity>
+        <View style={styles.searchInputWrap}>
+          <Ionicons name="search" size={16} color="#64748b" />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search by name, email, or role..."
+            value={search}
+            onChangeText={setSearch}
+          />
+        </View>
       </View>
 
       {loading ? (
@@ -283,15 +297,40 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     paddingHorizontal: SPACING.md,
     paddingVertical: SPACING.sm,
-    gap: 6,
+    gap: SPACING.sm,
     borderBottomWidth: 1,
     borderBottomColor: '#e2e8f0',
+  },
+  backBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#f0f9ff',
+    borderWidth: 1,
+    borderColor: '#bae6fd',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.md,
+  },
+  backBtnText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0284c7',
+  },
+  searchInputWrap: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f1f5f9',
+    borderRadius: RADIUS.md,
+    paddingHorizontal: SPACING.sm,
+    gap: 6,
   },
   searchInput: {
     flex: 1,
     fontSize: 13,
     color: '#0f172a',
-    paddingVertical: 4,
+    paddingVertical: 6,
   },
   listContent: {
     padding: SPACING.md,

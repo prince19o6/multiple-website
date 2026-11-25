@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -136,6 +137,8 @@ public class PackageRepository : IPackageRepository
                     .Limit(pageSize)
                     .ToListAsync();
 
+                UniqueImageRegistry.EnforceUniqueImages(items);
+
                 return new PackagePagedResult
                 {
                     Items = items,
@@ -184,10 +187,12 @@ public class PackageRepository : IPackageRepository
         var p = filters.Page < 1 ? 1 : filters.Page;
         var ps = filters.PageSize < 1 ? 12 : filters.PageSize;
         var list = qSeed.ToList();
+        var pagedItems = list.Skip((p - 1) * ps).Take(ps).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new PackagePagedResult
         {
-            Items = list.Skip((p - 1) * ps).Take(ps).ToList(),
+            Items = pagedItems,
             Total = list.Count,
             Page = p,
             PageSize = ps

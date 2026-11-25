@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Models;
 using ToursApi.Services;
@@ -25,118 +26,49 @@ public class CoreHomeController : ControllerBase
     private static readonly Dictionary<string, (DateTime ExpiresAt, JsonNode Data)> Cache = new();
     private static readonly object CacheLock = new();
 
-    private static readonly string[] HotelPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85",
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=85",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&q=85",
-        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=1200&q=85",
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=85"
-    };
+    private static readonly string[] HotelPhotos = UniqueImageRegistry.HotelPhotos;
+    private static readonly string[] TourPhotos = UniqueImageRegistry.TourPhotos;
+    private static readonly string[] PackagePhotos = UniqueImageRegistry.PackagePhotos;
+    private static readonly string[] FlightPhotos = UniqueImageRegistry.FlightPhotos;
+    private static readonly string[] TransferPhotos = UniqueImageRegistry.TransferPhotos;
+    private static readonly string[] VisaPhotos = UniqueImageRegistry.VisaPhotos;
+    private static readonly string[] RestaurantPhotos = UniqueImageRegistry.RestaurantPhotos;
+    private static readonly string[] BuildPackagePhotos = UniqueImageRegistry.BuildPackagePhotos;
 
-    private static readonly string[] TourPhotos = new[]
+    private static string ResolveActualPhoto(
+        string? raw,
+        string module,
+        int index,
+        UniqueImageTracker? tracker = null,
+        IEnumerable<string>? candidateUrls = null)
     {
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-        "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-        "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=1200&q=85",
-        "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=85",
-        "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&q=85",
-        "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1200&q=85",
-        "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=1200&q=85"
-    };
-
-    private static readonly string[] PackagePhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-        "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85",
-        "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&q=85",
-        "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=1200&q=85"
-    };
-
-    private static readonly string[] FlightPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
-        "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
-        "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
-        "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
-    };
-
-    private static readonly string[] TransferPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&q=85",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85",
-        "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=85",
-        "https://images.unsplash.com/photo-1559297434-fae8a1916a79?w=1200&q=85"
-    };
-
-    private static readonly string[] VisaPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&q=85",
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-        "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85"
-    };
-
-    private static readonly string[] RestaurantPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-        "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85",
-        "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=1200&q=85",
-        "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1200&q=85"
-    };
-
-    private static readonly string[] BuildPackagePhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=85"
-    };
-
-    private static string ResolveActualPhoto(string? raw, string module, int index)
-    {
+        string? preferred = null;
         if (!string.IsNullOrWhiteSpace(raw))
         {
             if (raw.StartsWith("/seed-images/", StringComparison.OrdinalIgnoreCase) ||
                 raw.StartsWith("/assets/", StringComparison.OrdinalIgnoreCase))
             {
-                return raw;
+                preferred = raw;
             }
-
-            if (raw.StartsWith("http", StringComparison.OrdinalIgnoreCase) &&
-                !raw.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) &&
-                !raw.Contains("/seed-images/"))
+            else if (raw.StartsWith("http", StringComparison.OrdinalIgnoreCase) &&
+                     !raw.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) &&
+                     !raw.Contains("/seed-images/"))
             {
-                return raw;
+                preferred = raw;
             }
         }
 
-        var pool = module.ToLowerInvariant() switch
+        if (tracker != null)
         {
-            "hotels" => HotelPhotos,
-            "tours" => TourPhotos,
-            "packages" => PackagePhotos,
-            "flights" => FlightPhotos,
-            "transfers" => TransferPhotos,
-            "visas" => VisaPhotos,
-            "restaurants" => RestaurantPhotos,
-            "buildpackage" => BuildPackagePhotos,
-            _ => HotelPhotos
-        };
+            return tracker.Claim(preferred, module, index, candidateUrls);
+        }
 
+        if (!string.IsNullOrWhiteSpace(preferred))
+        {
+            return preferred;
+        }
+
+        var pool = UniqueImageRegistry.GetPoolForModule(module);
         return pool[Math.Abs(index) % pool.Length];
     }
 
@@ -392,6 +324,9 @@ public class CoreHomeController : ControllerBase
             new { code = "KUL", name = "Kuala Lumpur International Airport", city = "Kuala Lumpur", country = "Malaysia" }
         };
 
+        var imageTracker = new UniqueImageTracker();
+        int imgIdx = 0;
+
         try
         {
             // 1. Airports
@@ -413,7 +348,7 @@ public class CoreHomeController : ControllerBase
                         city = a.city,
                         country = a.country,
                         subtitle = a.name,
-                        image = "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=150&q=80"
+                        image = imageTracker.Claim("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=80", "flight", imgIdx++)
                     });
                 results.AddRange(matchedAirports);
             }
@@ -447,7 +382,7 @@ public class CoreHomeController : ControllerBase
                         city = city,
                         country = country,
                         subtitle = string.IsNullOrWhiteSpace(country) ? city : $"{city}, {country}",
-                        image = h.Images?.FirstOrDefault() ?? "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=150&q=80",
+                        image = ResolveActualPhoto(h.Images?.FirstOrDefault(), "hotels", imgIdx++, imageTracker, h.Images),
                         count = h.StarRating > 0 ? (int)h.StarRating : 4
                     });
                 }
@@ -484,7 +419,7 @@ public class CoreHomeController : ControllerBase
                         city = city,
                         country = country,
                         subtitle = string.IsNullOrWhiteSpace(country) ? city : $"{city}, {country}",
-                        image = t.Images?.FirstOrDefault() ?? "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=150&q=80",
+                        image = ResolveActualPhoto(t.Images?.FirstOrDefault() ?? t.Image, "tours", imgIdx++, imageTracker, t.Images),
                         count = t.DurationDays > 0 ? t.DurationDays : 1
                     });
                 }
@@ -516,7 +451,7 @@ public class CoreHomeController : ControllerBase
                         city = d.Name,
                         country = d.Country ?? "",
                         subtitle = string.IsNullOrWhiteSpace(d.Country) ? d.Name : $"{d.Name}, {d.Country}",
-                        image = !string.IsNullOrWhiteSpace(d.Image) ? d.Image : "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=150&q=80",
+                        image = ResolveActualPhoto(d.Image, "destinations", imgIdx++, imageTracker),
                         count = d.Tours > 0 ? d.Tours : 10
                     });
                 }
@@ -532,12 +467,12 @@ public class CoreHomeController : ControllerBase
         {
             var fallback = new[]
             {
-                new { id = "dubai", name = "Dubai", type = "city", subtitle = "United Arab Emirates", city = "Dubai", country = "United Arab Emirates", count = 4684, image = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=150&q=80" },
-                new { id = "goa", name = "Goa", type = "city", subtitle = "India", city = "Goa", country = "India", count = 2750, image = "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=150&q=80" },
-                new { id = "bangkok", name = "Bangkok", type = "city", subtitle = "Thailand", city = "Bangkok", country = "Thailand", count = 2663, image = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=150&q=80" },
-                new { id = "singapore", name = "Singapore", type = "city", subtitle = "Singapore", city = "Singapore", country = "Singapore", count = 709, image = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=150&q=80" },
-                new { id = "jaipur", name = "Jaipur", type = "city", subtitle = "Rajasthan, India", city = "Jaipur", country = "India", count = 1117, image = "https://images.unsplash.com/photo-1603262110263-fb010d6e75dc?w=150&q=80" },
-                new { id = "kashmir", name = "Srinagar & Kashmir", type = "city", subtitle = "India", city = "Srinagar", country = "India", count = 420, image = "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=150&q=80" },
+                new { id = "dubai", name = "Dubai", type = "city", subtitle = "United Arab Emirates", city = "Dubai", country = "United Arab Emirates", count = 4684, image = imageTracker.Claim("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=80", "destinations", imgIdx++) },
+                new { id = "goa", name = "Goa", type = "city", subtitle = "India", city = "Goa", country = "India", count = 2750, image = imageTracker.Claim("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400&q=80", "destinations", imgIdx++) },
+                new { id = "bangkok", name = "Bangkok", type = "city", subtitle = "Thailand", city = "Bangkok", country = "Thailand", count = 2663, image = imageTracker.Claim("https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=80", "destinations", imgIdx++) },
+                new { id = "singapore", name = "Singapore", type = "city", subtitle = "Singapore", city = "Singapore", country = "Singapore", count = 709, image = imageTracker.Claim("https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&q=80", "destinations", imgIdx++) },
+                new { id = "jaipur", name = "Jaipur", type = "city", subtitle = "Rajasthan, India", city = "Jaipur", country = "India", count = 1117, image = imageTracker.Claim("https://images.unsplash.com/photo-1603262110263-fb010d6e75dc?w=400&q=80", "destinations", imgIdx++) },
+                new { id = "kashmir", name = "Srinagar & Kashmir", type = "city", subtitle = "India", city = "Srinagar", country = "India", count = 420, image = imageTracker.Claim("https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=400&q=80", "destinations", imgIdx++) },
             };
 
             var filteredFallback = fallback
@@ -559,9 +494,13 @@ public class CoreHomeController : ControllerBase
         });
     }
 
-    private async Task<List<object>> FetchDynamicFeaturedFromDbAsync(string module, int limit = 6)
+    private async Task<List<object>> FetchDynamicFeaturedFromDbAsync(
+        string module,
+        int limit = 6,
+        UniqueImageTracker? imageTracker = null)
     {
         var items = new List<object>();
+        var tracker = imageTracker ?? new UniqueImageTracker();
         try
         {
             switch (module.ToLowerInvariant())
@@ -571,9 +510,10 @@ public class CoreHomeController : ControllerBase
                         .Find(h => h.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var h in hotels)
+                    for (int idx = 0; idx < hotels.Count; idx++)
                     {
-                        var img = h.Images?.FirstOrDefault() ?? ResolveActualPhoto(null, "hotels", 0);
+                        var h = hotels[idx];
+                        var img = ResolveActualPhoto(h.Images?.FirstOrDefault(), "hotels", idx, tracker, h.Images);
                         items.Add(new
                         {
                             id = h.Id ?? h.Slug,
@@ -597,9 +537,11 @@ public class CoreHomeController : ControllerBase
                         .Find(t => t.Status != "Inactive" && t.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var t in tours)
+                    for (int idx = 0; idx < tours.Count; idx++)
                     {
-                        var img = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : (t.Gallery?.FirstOrDefault() ?? ResolveActualPhoto(null, "tours", 0));
+                        var t = tours[idx];
+                        var raw = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : t.Gallery?.FirstOrDefault();
+                        var img = ResolveActualPhoto(raw, "tours", idx, tracker, t.Gallery);
                         items.Add(new
                         {
                             id = t.Id ?? t.Slug,
@@ -623,9 +565,11 @@ public class CoreHomeController : ControllerBase
                         .Find(p => p.Status != "Inactive" && p.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var p in pkgs)
+                    for (int idx = 0; idx < pkgs.Count; idx++)
                     {
-                        var img = !string.IsNullOrWhiteSpace(p.Image) ? p.Image : (p.Images?.FirstOrDefault() ?? ResolveActualPhoto(null, "packages", 0));
+                        var p = pkgs[idx];
+                        var raw = !string.IsNullOrWhiteSpace(p.Image) ? p.Image : p.Images?.FirstOrDefault();
+                        var img = ResolveActualPhoto(raw, "packages", idx, tracker, p.Images);
                         items.Add(new
                         {
                             id = p.Id ?? p.Slug,
@@ -648,10 +592,12 @@ public class CoreHomeController : ControllerBase
                         .Find(f => f.Status != "Inactive" && f.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var f in flights)
+                    for (int idx = 0; idx < flights.Count; idx++)
                     {
+                        var f = flights[idx];
                         var origin = f.FromAirport?.City ?? f.FromAirport?.Code ?? "Origin";
                         var destination = f.ToAirport?.City ?? f.ToAirport?.Code ?? "Destination";
+                        var img = ResolveActualPhoto(f.AirlineLogo, "flights", idx, tracker);
                         items.Add(new
                         {
                             id = f.Id ?? f.Slug,
@@ -665,7 +611,8 @@ public class CoreHomeController : ControllerBase
                             arrivalTime = f.ArrivalTime,
                             price = f.Price,
                             currency = f.Currency,
-                            airlineLogo = f.AirlineLogo ?? ResolveActualPhoto(null, "flights", 0),
+                            airlineLogo = img,
+                            imageUrl = img,
                             badge = "DIRECT FLIGHT"
                         });
                     }
@@ -676,9 +623,10 @@ public class CoreHomeController : ControllerBase
                         .Find(t => t.Status != "Inactive" && t.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var t in transfers)
+                    for (int idx = 0; idx < transfers.Count; idx++)
                     {
-                        var img = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : ResolveActualPhoto(null, "transfers", 0);
+                        var t = transfers[idx];
+                        var img = ResolveActualPhoto(t.Image, "transfers", idx, tracker);
                         items.Add(new
                         {
                             id = t.Id ?? t.Slug,
@@ -700,9 +648,10 @@ public class CoreHomeController : ControllerBase
                         .Find(v => v.Status != "Inactive" && v.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var v in visas)
+                    for (int idx = 0; idx < visas.Count; idx++)
                     {
-                        var img = !string.IsNullOrWhiteSpace(v.Image) ? v.Image : ResolveActualPhoto(null, "visas", 0);
+                        var v = visas[idx];
+                        var img = ResolveActualPhoto(v.Image, "visas", idx, tracker);
                         items.Add(new
                         {
                             id = v.Id ?? v.Slug,
@@ -724,9 +673,10 @@ public class CoreHomeController : ControllerBase
                         .Find(r => r.Status != "Inactive" && r.Status != "inactive")
                         .Limit(limit)
                         .ToListAsync();
-                    foreach (var r in restaurants)
+                    for (int idx = 0; idx < restaurants.Count; idx++)
                     {
-                        var img = !string.IsNullOrWhiteSpace(r.Image) ? r.Image : ResolveActualPhoto(null, "restaurants", 0);
+                        var r = restaurants[idx];
+                        var img = ResolveActualPhoto(r.Image, "restaurants", idx, tracker, r.Images);
                         items.Add(new
                         {
                             id = r.Id ?? r.Slug,
@@ -817,18 +767,21 @@ public class CoreHomeController : ControllerBase
                 .Limit(8)
                 .ToListAsync();
 
+            // Enforce unique images across the entire home payload so no photo appears more than once
+            var imageTracker = new UniqueImageTracker();
+
             // 10. Dynamic Featured Items from Active Module Collection in MongoDB
-            var featured = await FetchDynamicFeaturedFromDbAsync(module, 6);
+            var featured = await FetchDynamicFeaturedFromDbAsync(module, 6, imageTracker);
             if (featured == null || featured.Count == 0)
             {
-                var fallbackFeatured = FetchFeaturedForModule(siteName, module, 6);
+                var fallbackFeatured = FetchFeaturedForModule(siteName, module, 6, imageTracker);
                 if (fallbackFeatured != null && fallbackFeatured.Count > 0)
                 {
                     featured = fallbackFeatured.Cast<object>().ToList();
                 }
                 else
                 {
-                    featured = ResilientDataGenerator.GetItemsForModule(module, 6, siteName).Cast<object>().ToList();
+                    featured = ResilientDataGenerator.GetItemsForModule(module, 6, siteName, imageTracker).Cast<object>().ToList();
                 }
             }
 
@@ -846,29 +799,35 @@ public class CoreHomeController : ControllerBase
                 : FetchCategoriesForModule(siteName, module);
 
             // Banners / Offers
+            if (dbBanners.Count > 0) UniqueImageRegistry.EnforceUniqueImages(dbBanners, imageTracker);
+            if (dbOffers.Count > 0) UniqueImageRegistry.EnforceUniqueImages(dbOffers, imageTracker);
+
             object bannersData = dbBanners.Count > 0
                 ? (object)dbBanners
-                : (dbOffers.Count > 0 ? (object)dbOffers : GetOfferBanners(siteName, module));
+                : (dbOffers.Count > 0 ? (object)dbOffers : GetOfferBanners(siteName, module, imageTracker));
 
             // Offers
             object offersData = dbOffers.Count > 0
                 ? (object)dbOffers
-                : GetOfferBanners(siteName, module);
+                : GetOfferBanners(siteName, module, imageTracker);
 
             // Destinations
+            if (dbDestinations.Count > 0) UniqueImageRegistry.EnforceUniqueImages(dbDestinations, imageTracker);
             object destinationsData = dbDestinations.Count > 0
                 ? (object)dbDestinations
-                : FetchDestinationsForModule(siteName, module);
+                : FetchDestinationsForModule(siteName, module, imageTracker);
 
             // Packages
+            if (dbPackages.Count > 0) UniqueImageRegistry.EnforceUniqueImages(dbPackages, imageTracker);
             object packagesData = dbPackages.Count > 0
                 ? (object)dbPackages
-                : FetchCuratedPackages(siteName, module);
+                : FetchCuratedPackages(siteName, module, imageTracker);
 
             // Videos
+            if (dbVideos.Count > 0) UniqueImageRegistry.EnforceUniqueImages(dbVideos, imageTracker);
             object videosData = dbVideos.Count > 0
                 ? (object)dbVideos
-                : GetVideoExperiences(siteName, module);
+                : GetVideoExperiences(siteName, module, imageTracker);
 
             // Reviews
             object reviewsData = dbReviews.Count > 0
@@ -1187,9 +1146,14 @@ public class CoreHomeController : ControllerBase
         return "India";
     }
 
-    private List<JsonObject> FetchFeaturedForModule(string siteName, string module, int limit = 6)
+    private List<JsonObject> FetchFeaturedForModule(
+        string siteName,
+        string module,
+        int limit = 6,
+        UniqueImageTracker? imageTracker = null)
     {
         var items = new List<JsonObject>();
+        var tracker = imageTracker ?? new UniqueImageTracker();
         var isGujju = siteName.Equals("gujjutours", StringComparison.OrdinalIgnoreCase) || siteName.Equals("website1", StringComparison.OrdinalIgnoreCase);
         var siteCurrency = isGujju ? "INR" : siteName.Equals("technoheaven", StringComparison.OrdinalIgnoreCase) ? "AED" : "USD";
 
@@ -1205,8 +1169,9 @@ public class CoreHomeController : ControllerBase
                     var cityName = ExtractCity(h);
                     var countryName = ExtractCountry(h);
                     var images = h?["images"]?.AsArray();
+                    var gallery = h?["gallery"]?.AsArray()?.Select(x => x?.ToString() ?? "").Where(x => !string.IsNullOrWhiteSpace(x));
                     var rawImg = images?.Count > 0 ? images[0]?.ToString() : null;
-                    var actualImg = ResolveActualPhoto(rawImg, "hotels", idx++);
+                    var actualImg = ResolveActualPhoto(rawImg, "hotels", idx++, tracker, gallery);
 
                     items.Add(new JsonObject
                     {
@@ -1240,8 +1205,9 @@ public class CoreHomeController : ControllerBase
                     var cityName = ExtractCity(t);
                     var countryName = ExtractCountry(t);
                     var images = t?["images"]?.AsArray();
+                    var gallery = t?["gallery"]?.AsArray()?.Select(x => x?.ToString() ?? "").Where(x => !string.IsNullOrWhiteSpace(x));
                     var rawImg = images?.Count > 0 ? images[0]?.ToString() : t?["image"]?.ToString();
-                    var actualImg = ResolveActualPhoto(rawImg, "tours", idx++);
+                    var actualImg = ResolveActualPhoto(rawImg, "tours", idx++, tracker, gallery);
                     var price = AsDouble(t?["price"], 3200);
 
                     items.Add(new JsonObject
@@ -1275,8 +1241,9 @@ public class CoreHomeController : ControllerBase
                     var cityName = ExtractCity(p);
                     var countryName = ExtractCountry(p);
                     var images = p?["images"]?.AsArray();
+                    var gallery = p?["gallery"]?.AsArray()?.Select(x => x?.ToString() ?? "").Where(x => !string.IsNullOrWhiteSpace(x));
                     var rawImg = images?.Count > 0 ? images[0]?.ToString() : p?["image"]?.ToString();
-                    var actualImg = ResolveActualPhoto(rawImg, "packages", idx++);
+                    var actualImg = ResolveActualPhoto(rawImg, "packages", idx++, tracker, gallery);
                     var price = AsDouble(p?["price"], AsDouble(p?["startingPrice"], 35000));
 
                     items.Add(new JsonObject
@@ -1313,7 +1280,7 @@ public class CoreHomeController : ControllerBase
                     var airline = f?["airline"]?.ToString() ?? "AeroBharat Express";
                     var flightNum = f?["flightNumber"]?.ToString() ?? "AB-101";
                     var duration = f?["duration"]?.ToString() ?? "2h 15m";
-                    var actualImg = ResolveActualPhoto(null, "flights", idx++);
+                    var actualImg = ResolveActualPhoto(null, "flights", idx++, tracker);
 
                     items.Add(new JsonObject
                     {
@@ -1374,7 +1341,7 @@ public class CoreHomeController : ControllerBase
                     var city = tr?["city"]?.ToString() ?? "Goa";
                     var country = tr?["country"]?.ToString() ?? "India";
                     var title = tr?["title"]?.ToString() ?? $"{city}: {vehicleLabel} Transfer";
-                    var actualImg = ResolveActualPhoto(null, "transfers", idx++);
+                    var actualImg = ResolveActualPhoto(tr?["image"]?.ToString(), "transfers", idx++, tracker);
 
                     items.Add(new JsonObject
                     {
@@ -1430,7 +1397,7 @@ public class CoreHomeController : ControllerBase
                     var slug = v?["slug"]?.ToString() ?? v?["id"]?.ToString() ?? "visa";
                     var country = v?["country"]?.ToString() ?? "United Arab Emirates";
                     var title = v?["title"]?.ToString() ?? $"{country} Tourist eVisa";
-                    var actualImg = ResolveActualPhoto(null, "visas", idx++);
+                    var actualImg = ResolveActualPhoto(v?["image"]?.ToString(), "visas", idx++, tracker);
 
                     items.Add(new JsonObject
                     {
@@ -1490,7 +1457,7 @@ public class CoreHomeController : ControllerBase
                     var title = r?["title"]?.ToString() ?? r?["name"]?.ToString() ?? "Saffron Clay Tandoor";
                     var cost = AsDouble(r?["costForTwo"], AsDouble(r?["averageCost"], 1710));
                     var rawImg = r?["image"]?.ToString() ?? r?["imageUrl"]?.ToString();
-                    var actualImg = ResolveActualPhoto(rawImg, "restaurants", idx++);
+                    var actualImg = ResolveActualPhoto(rawImg, "restaurants", idx++, tracker);
                     var itemCurr = r?["currency"]?.ToString();
                     if (string.IsNullOrWhiteSpace(itemCurr)) itemCurr = siteCurrency;
 
@@ -1527,7 +1494,7 @@ public class CoreHomeController : ControllerBase
                     var dest = b?["destinationName"]?.ToString() ?? b?["title"]?.ToString() ?? "Dubai & Abu Dhabi";
                     var country = b?["country"]?.ToString() ?? "United Arab Emirates";
                     var startPrice = AsDouble(b?["startingPrice"], AsDouble(b?["basePrice"], 42000));
-                    var actualImg = ResolveActualPhoto(null, "buildpackage", idx++);
+                    var actualImg = ResolveActualPhoto(b?["heroImage"]?.ToString() ?? b?["image"]?.ToString(), "buildpackage", idx++, tracker);
 
                     items.Add(new JsonObject
                     {
@@ -1567,18 +1534,22 @@ public class CoreHomeController : ControllerBase
 
         if (items.Count == 0)
         {
-            items = GenerateFallbackFeaturedForModule(siteName, module, limit);
+            items = GenerateFallbackFeaturedForModule(siteName, module, limit, tracker);
         }
 
         return items;
     }
 
-    private List<JsonObject> GenerateFallbackPackages(string siteName, string module)
+    private List<JsonObject> GenerateFallbackPackages(string siteName, string module, UniqueImageTracker? imageTracker = null)
     {
-        return GenerateFallbackFeaturedForModule(siteName, "packages", 6);
+        return GenerateFallbackFeaturedForModule(siteName, "packages", 6, imageTracker);
     }
 
-    private List<JsonObject> GenerateFallbackFeaturedForModule(string siteName, string module, int limit = 6)
+    private List<JsonObject> GenerateFallbackFeaturedForModule(
+        string siteName,
+        string module,
+        int limit = 6,
+        UniqueImageTracker? imageTracker = null)
     {
         var list = new List<JsonObject>();
 
@@ -2450,10 +2421,12 @@ public class CoreHomeController : ControllerBase
                 break;
         }
 
-        return list.Take(limit).ToList();
+        var sliced = list.Take(limit).ToList();
+        UniqueImageRegistry.EnforceUniqueJsonImages(sliced, module, imageTracker);
+        return sliced;
     }
 
-    private List<JsonObject> FetchDestinationsForModule(string siteName, string module)
+    private List<JsonObject> FetchDestinationsForModule(string siteName, string module, UniqueImageTracker? imageTracker = null)
     {
         var list = new List<JsonObject>();
 
@@ -2545,12 +2518,13 @@ public class CoreHomeController : ControllerBase
             });
         }
 
+        UniqueImageRegistry.EnforceUniqueJsonImages(list, "destinations", imageTracker);
         return list;
     }
 
-    private List<JsonObject> GetOfferBanners(string siteName, string module)
+    private List<JsonObject> GetOfferBanners(string siteName, string module, UniqueImageTracker? imageTracker = null)
     {
-        return module switch
+        var banners = module switch
         {
             "tours" => new List<JsonObject>
             {
@@ -2688,11 +2662,13 @@ public class CoreHomeController : ControllerBase
                 }
             }
         };
+        UniqueImageRegistry.EnforceUniqueJsonImages(banners, module, imageTracker);
+        return banners;
     }
 
-    private List<JsonObject> GetVideoExperiences(string siteName, string module)
+    private List<JsonObject> GetVideoExperiences(string siteName, string module, UniqueImageTracker? imageTracker = null)
     {
-        return module switch
+        var videos = module switch
         {
             "hotels" => new List<JsonObject>
             {
@@ -2845,9 +2821,11 @@ public class CoreHomeController : ControllerBase
                 }
             }
         };
+        UniqueImageRegistry.EnforceUniqueJsonImages(videos, "videos", imageTracker, "thumbnail");
+        return videos;
     }
 
-    private List<JsonObject> FetchCuratedPackages(string siteName, string module)
+    private List<JsonObject> FetchCuratedPackages(string siteName, string module, UniqueImageTracker? imageTracker = null)
     {
         var list = new List<JsonObject>();
 
@@ -3039,6 +3017,7 @@ public class CoreHomeController : ControllerBase
             }
         }
 
+        UniqueImageRegistry.EnforceUniqueJsonImages(list, "packages", imageTracker);
         return list;
     }
 

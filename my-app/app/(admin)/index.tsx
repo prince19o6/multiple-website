@@ -78,13 +78,26 @@ export default function AdminDashboardScreen() {
           <Text style={styles.siteHeaderLabel}>ACTIVE MULTI-TENANT BRAND</Text>
           <Text style={styles.siteHeaderTitle}>{currentSite?.label || siteId}</Text>
         </View>
-        <TouchableOpacity testID="btn-swap-horizontal" accessibilityLabel="swap horizontal"
-          style={styles.switchSiteBadge}
-          onPress={() => router.push('/site-switcher')}
-        >
-          <Ionicons name="swap-horizontal" size={14} color="#2563eb" />
-          <Text style={styles.switchSiteText}>Switch</Text>
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+          <TouchableOpacity
+            testID="btn-back-to-storefront"
+            accessibilityLabel="Back to Customer App"
+            style={styles.backToAppBadge}
+            onPress={() => router.replace('/(tabs)')}
+          >
+            <Ionicons name="arrow-back" size={14} color="#0284c7" />
+            <Text style={styles.backToAppText}>Back to App</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            testID="btn-swap-horizontal"
+            accessibilityLabel="swap horizontal"
+            style={styles.switchSiteBadge}
+            onPress={() => router.push('/site-switcher')}
+          >
+            <Ionicons name="swap-horizontal" size={14} color="#2563eb" />
+            <Text style={styles.switchSiteText}>Switch</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Error Banner */}
@@ -298,6 +311,22 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
     color: '#2563eb',
+  },
+  backToAppBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#f0f9ff',
+    borderWidth: 1,
+    borderColor: '#bae6fd',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: RADIUS.full,
+  },
+  backToAppText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0284c7',
   },
   errorBox: {
     flexDirection: 'row',

@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Models;
 
@@ -69,7 +70,11 @@ public class SpecialOfferRepository : ISpecialOfferRepository
                 .ThenByDescending(o => o.CreatedAt)
                 .ToListAsync();
 
-            if (list != null && list.Count > 0) return list;
+            if (list != null && list.Count > 0)
+            {
+                UniqueImageRegistry.EnforceUniqueImages(list);
+                return list;
+            }
         }
         catch
         {
@@ -85,7 +90,9 @@ public class SpecialOfferRepository : ISpecialOfferRepository
                                            string.Equals(o.Module, "all", StringComparison.OrdinalIgnoreCase));
         }
 
-        return fallback.OrderBy(o => o.SortOrder).ThenByDescending(o => o.CreatedAt).ToList();
+        var resultList = fallback.OrderBy(o => o.SortOrder).ThenByDescending(o => o.CreatedAt).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(resultList);
+        return resultList;
     }
 
     public async Task<SpecialOffer?> GetByIdAsync(string id)

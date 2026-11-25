@@ -8,12 +8,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, ScrollView, StyleSheet, ActivityIndicator, Alert, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useSelectedSite } from '@/hooks/useSelectedSite';
 import { getSiteEntry } from '@/constants/siteRegistry';
 import { RADIUS, SPACING, FONT_SIZE, SHADOW } from '@/constants/theme';
 import { fetchAdminAnalytics, type AdminAnalyticsData } from '@/services/api';
 
 export default function AdminAnalyticsScreen() {
+  const router = useRouter();
   const { siteId } = useSelectedSite();
   const currentSite = getSiteEntry(siteId);
 
@@ -48,6 +50,19 @@ export default function AdminAnalyticsScreen() {
 
   return (
     <ScrollView style={styles.root} contentContainerStyle={styles.content}>
+      <View style={styles.topNavRow}>
+        <TouchableOpacity
+          testID="btn-analytics-back-overview"
+          accessibilityLabel="Back to Admin Overview"
+          style={styles.backBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/(admin)'))}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="arrow-back" size={16} color="#0284c7" />
+          <Text style={styles.backBtnText}>Back to Overview</Text>
+        </TouchableOpacity>
+      </View>
+
       {/* Top Banner */}
       <View style={styles.banner}>
         <Text style={styles.bannerLabel}>REVENUE OVERVIEW ({currentSite?.label})</Text>
@@ -169,6 +184,27 @@ const styles = StyleSheet.create({
   content: {
     padding: SPACING.md,
     paddingBottom: SPACING.xxl,
+  },
+  topNavRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: SPACING.sm,
+  },
+  backBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#f0f9ff',
+    borderWidth: 1,
+    borderColor: '#bae6fd',
+    paddingVertical: 7,
+    paddingHorizontal: 12,
+    borderRadius: RADIUS.md,
+  },
+  backBtnText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0284c7',
   },
   banner: {
     backgroundColor: '#0f172a',

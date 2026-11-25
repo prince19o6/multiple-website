@@ -11,12 +11,13 @@ function resolveRequestSite(request: NextRequest) {
   const host = normalizeHost(rawHost);
 
   const siteQuery = request.nextUrl.searchParams.get("site");
-  const siteHeader = request.headers.get("x-site-id");
+  const siteHeader = request.headers.get("x-site-id") || request.headers.get("x-website-id");
   return (
-    resolveSiteFromHost(host) ||
     getSiteById(siteQuery) ||
     getSiteById(siteHeader) ||
-    (ENV.defaultSiteId ? getSiteById(ENV.defaultSiteId) : null)
+    resolveSiteFromHost(host) ||
+    (ENV.defaultSiteId ? getSiteById(ENV.defaultSiteId) : null) ||
+    getSiteById("gujjutours")
   );
 }
 

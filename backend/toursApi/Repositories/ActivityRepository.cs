@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -158,6 +159,7 @@ public class ActivityRepository : IActivityRepository
                 };
 
                 var items = await query.Skip((page - 1) * pageSize).Limit(pageSize).ToListAsync(cts.Token);
+                UniqueImageRegistry.EnforceUniqueImages(items);
                 SetDataSourceHeader("mongodb");
 
                 return new ActivityPagedResult
@@ -221,6 +223,7 @@ public class ActivityRepository : IActivityRepository
 
         var filteredList = queryable.ToList();
         var pagedItems = filteredList.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new ActivityPagedResult
         {

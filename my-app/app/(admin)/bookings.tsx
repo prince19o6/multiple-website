@@ -24,6 +24,7 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useSelectedSite } from '@/hooks/useSelectedSite';
 import {
   fetchBookings,
@@ -42,6 +43,7 @@ import type { Booking, InboxCountsDto, BookingEmailOutboxItem } from '@/types';
 type AdminTab = 'all' | 'pending' | 'cancellation_requests' | 'confirmed' | 'cancelled' | 'completed';
 
 export default function AdminBookingsScreen() {
+  const router = useRouter();
   const { siteId } = useSelectedSite();
   const effectiveSiteId = siteId || 'website1';
 
@@ -359,6 +361,16 @@ export default function AdminBookingsScreen() {
     <View style={styles.root}>
       {/* ─── Search Bar ─── */}
       <View style={styles.topBar}>
+        <TouchableOpacity
+          testID="btn-bookings-back-overview"
+          accessibilityLabel="Back to Admin Overview"
+          style={styles.backBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/(admin)'))}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="arrow-back" size={16} color="#0284c7" />
+          <Text style={styles.backBtnText}>Overview</Text>
+        </TouchableOpacity>
         <View style={styles.searchBox}>
           <Ionicons name="search" size={16} color="#64748b" />
           <TextInput
@@ -1003,12 +1015,32 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8fafc',
   },
   topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
     padding: SPACING.md,
+    gap: SPACING.sm,
     backgroundColor: '#ffffff',
     borderBottomWidth: 1,
     borderBottomColor: '#e2e8f0',
   },
+  backBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#f0f9ff',
+    borderWidth: 1,
+    borderColor: '#bae6fd',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.md,
+  },
+  backBtnText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0284c7',
+  },
   searchBox: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#f1f5f9',

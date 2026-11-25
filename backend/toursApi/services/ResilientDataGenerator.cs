@@ -5,79 +5,21 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Services;
 
 public static class ResilientDataGenerator
 {
-    public static readonly string[] HotelPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85",
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=85",
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=85",
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200&q=85"
-    };
-
-    public static readonly string[] TourPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&q=85",
-        "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1200&q=85",
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=85",
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85",
-        "https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?w=1200&q=85"
-    };
-
-    public static readonly string[] PackagePhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1546412414-e1885259563a?w=1200&q=85",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&q=85",
-        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=1200&q=85",
-        "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85"
-    };
-
-    public static readonly string[] FlightPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=85",
-        "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&q=85",
-        "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=85",
-        "https://images.unsplash.com/photo-1520437358207-323b43b50729?w=1200&q=85"
-    };
-
-    public static readonly string[] TransferPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200&q=85",
-        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=85",
-        "https://images.unsplash.com/photo-1563720223185-11003d516935?w=1200&q=85",
-        "https://images.unsplash.com/photo-1559297434-fae8a1916a79?w=1200&q=85"
-    };
-
-    public static readonly string[] VisaPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&q=85",
-        "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1200&q=85",
-        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=85",
-        "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=1200&q=85"
-    };
-
-    public static readonly string[] RestaurantPhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=1200&q=85",
-        "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=85",
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85"
-    };
-
-    public static readonly string[] BuildPackagePhotos = new[]
-    {
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=85",
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=85"
-    };
+    public static readonly string[] HotelPhotos = UniqueImageRegistry.HotelPhotos;
+    public static readonly string[] TourPhotos = UniqueImageRegistry.TourPhotos;
+    public static readonly string[] PackagePhotos = UniqueImageRegistry.PackagePhotos;
+    public static readonly string[] FlightPhotos = UniqueImageRegistry.FlightPhotos;
+    public static readonly string[] TransferPhotos = UniqueImageRegistry.TransferPhotos;
+    public static readonly string[] VisaPhotos = UniqueImageRegistry.VisaPhotos;
+    public static readonly string[] RestaurantPhotos = UniqueImageRegistry.RestaurantPhotos;
+    public static readonly string[] BuildPackagePhotos = UniqueImageRegistry.BuildPackagePhotos;
 
     public static string NormalizeModule(string? module)
     {
@@ -97,7 +39,11 @@ public static class ResilientDataGenerator
         };
     }
 
-    public static List<JsonObject> GetItemsForModule(string module, int limit = 6, string siteName = "gujjutours")
+    public static List<JsonObject> GetItemsForModule(
+        string module,
+        int limit = 6,
+        string siteName = "gujjutours",
+        UniqueImageTracker? imageTracker = null)
     {
         var norm = NormalizeModule(module);
         var list = new List<JsonObject>();
@@ -790,7 +736,8 @@ public static class ResilientDataGenerator
             }
         }
 
-        return list;
+        UniqueImageRegistry.EnforceUniqueJsonImages(list, norm, imageTracker);
+        return list.Take(limit).ToList();
     }
 
     public static object BuildSafeHomePayload(string siteName, string module)
@@ -901,11 +848,12 @@ public static class ResilientDataGenerator
             }
         };
 
+        var imageTracker = new UniqueImageTracker();
         var categories = GetCategoriesForModule(norm);
-        var featured = GetItemsForModule(norm, 6, siteName);
-        var destinations = GetDestinationsForModule(norm);
-        var banners = GetBannersForModule(norm);
-        var packages = GetItemsForModule("packages", 6, siteName)
+        var featured = GetItemsForModule(norm, 6, siteName, imageTracker);
+        var destinations = GetDestinationsForModule(norm, imageTracker);
+        var banners = GetBannersForModule(norm, imageTracker);
+        var packages = GetItemsForModule("packages", 6, siteName, imageTracker)
             .Select(p =>
             {
                 var copy = p.DeepClone().AsObject();
@@ -916,7 +864,7 @@ public static class ResilientDataGenerator
                 return copy;
             })
             .ToList();
-        var videos = GetVideosForModule(norm);
+        var videos = GetVideosForModule(norm, imageTracker);
         var reviews = GetReviewsForModule(norm);
         var faq = GetFaqForModule(norm);
 
@@ -1036,7 +984,7 @@ public static class ResilientDataGenerator
         return list;
     }
 
-    public static List<JsonObject> GetDestinationsForModule(string module)
+    public static List<JsonObject> GetDestinationsForModule(string module, UniqueImageTracker? imageTracker = null)
     {
         var norm = NormalizeModule(module);
         var unit = norm switch
@@ -1051,7 +999,7 @@ public static class ResilientDataGenerator
             _ => "options"
         };
 
-        return new List<JsonObject>
+        var dests = new List<JsonObject>
         {
             new JsonObject { ["name"] = "Dubai", ["city"] = "Dubai", ["country"] = "United Arab Emirates", ["itemCount"] = 124, ["count"] = 124, ["label"] = $"124 {unit}", ["imageUrl"] = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80", ["image"] = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" },
             new JsonObject { ["name"] = "Abu Dhabi", ["city"] = "Abu Dhabi", ["country"] = "United Arab Emirates", ["itemCount"] = 52, ["count"] = 52, ["label"] = $"52 {unit}", ["imageUrl"] = "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=80", ["image"] = "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&q=80" },
@@ -1060,12 +1008,14 @@ public static class ResilientDataGenerator
             new JsonObject { ["name"] = "Bangkok", ["city"] = "Bangkok", ["country"] = "Thailand", ["itemCount"] = 78, ["count"] = 78, ["label"] = $"78 {unit}", ["imageUrl"] = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80", ["image"] = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80" },
             new JsonObject { ["name"] = "London", ["city"] = "London", ["country"] = "United Kingdom", ["itemCount"] = 86, ["count"] = 86, ["label"] = $"86 {unit}", ["imageUrl"] = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80", ["image"] = "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80" }
         };
+        UniqueImageRegistry.EnforceUniqueJsonImages(dests, "destinations", imageTracker);
+        return dests;
     }
 
-    public static List<JsonObject> GetBannersForModule(string module)
+    public static List<JsonObject> GetBannersForModule(string module, UniqueImageTracker? imageTracker = null)
     {
         var norm = NormalizeModule(module);
-        return norm switch
+        var banners = norm switch
         {
             "restaurants" => new List<JsonObject>
             {
@@ -1257,11 +1207,13 @@ public static class ResilientDataGenerator
                 }
             }
         };
+        UniqueImageRegistry.EnforceUniqueJsonImages(banners, norm, imageTracker);
+        return banners;
     }
 
-    public static List<JsonObject> GetVideosForModule(string module)
+    public static List<JsonObject> GetVideosForModule(string module, UniqueImageTracker? imageTracker = null)
     {
-        return new List<JsonObject>
+        var videos = new List<JsonObject>
         {
             new JsonObject
             {
@@ -1282,6 +1234,8 @@ public static class ResilientDataGenerator
                 ["videoUrl"] = "https://assets.mixkit.co/videos/preview/mixkit-hotel-room-with-a-view-of-the-city-41712-large.mp4"
             }
         };
+        UniqueImageRegistry.EnforceUniqueJsonImages(videos, "videos", imageTracker, "thumbnail");
+        return videos;
     }
 
     public static List<JsonObject> GetReviewsForModule(string module)
@@ -1616,13 +1570,12 @@ public static class ResilientDataGenerator
             BestTime = "September to April",
             Language = "English, Hindi, Gujarati",
             Image = heroPhoto,
-            Gallery = new List<string>
-            {
+            Gallery = UniqueImageRegistry.BuildDistinctGallery(
+                new[] { HotelPhotos[0], TourPhotos[1], PackagePhotos[0] },
                 heroPhoto,
-                HotelPhotos[0],
-                TourPhotos[1],
-                PackagePhotos[0]
-            },
+                isHotel ? "hotels" : (isPackage ? "packages" : "tours"),
+                photoIdx,
+                4),
             Highlights = new List<string>
             {
                 "Top-rated curated itinerary with priority entrance access",
@@ -1944,16 +1897,9 @@ public static class ResilientDataGenerator
 
     private static void EnsureTourHasRichDefaults(Tour t)
     {
-        if (t.Gallery == null || t.Gallery.Count == 0)
-        {
-            t.Gallery = new List<string>
-            {
-                !string.IsNullOrWhiteSpace(t.Image) ? t.Image : TourPhotos[0],
-                TourPhotos[1],
-                TourPhotos[2],
-                HotelPhotos[0]
-            };
-        }
+        var hero = !string.IsNullOrWhiteSpace(t.Image) ? t.Image : TourPhotos[0];
+        t.Image = hero;
+        t.Gallery = UniqueImageRegistry.BuildDistinctGallery(t.Gallery, hero, "tours", t.TourNumericId, 4);
         if (t.Highlights == null || t.Highlights.Count == 0)
         {
             t.Highlights = new List<string>

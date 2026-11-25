@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Models;
 
@@ -56,11 +57,13 @@ public class TenantSeedService : ITenantSeedService
     public async Task<Dictionary<string, int>> SeedTenantDatabaseAsync(IMongoDatabase db, string siteId)
     {
         var counts = new Dictionary<string, int>();
+        var seedTracker = new UniqueImageTracker();
 
         // 1. Tours
         var toursCol = db.GetCollection<Tour>("tours");
         var diskTours = LoadEntitiesFromDisk<Tour>(siteId, $"tours.{siteId}.json");
         if (diskTours.Count == 0) diskTours = GetToursForSite(siteId);
+        UniqueImageRegistry.EnforceUniqueImages(diskTours, seedTracker);
         int toursInserted = 0;
         foreach (var tour in diskTours)
         {
@@ -79,6 +82,7 @@ public class TenantSeedService : ITenantSeedService
         // 2. Destinations
         var destsCol = db.GetCollection<Destination>("destinations");
         var diskDests = GetDestinationsForSite(siteId);
+        UniqueImageRegistry.EnforceUniqueImages(diskDests, seedTracker);
         int destsInserted = 0;
         foreach (var d in diskDests)
         {
@@ -96,6 +100,7 @@ public class TenantSeedService : ITenantSeedService
         // 3. Hotels
         var hotelsCol = db.GetCollection<Hotel>("hotels");
         var diskHotels = LoadEntitiesFromDisk<Hotel>(siteId, "hotels.json") ?? new List<Hotel>();
+        UniqueImageRegistry.EnforceUniqueImages(diskHotels, seedTracker);
         int hotelsInserted = 0;
         foreach (var h in diskHotels)
         {
@@ -113,6 +118,7 @@ public class TenantSeedService : ITenantSeedService
         // 4. Packages
         var packagesCol = db.GetCollection<Package>("packages");
         var diskPackages = LoadEntitiesFromDisk<Package>(siteId, "packages.json") ?? new List<Package>();
+        UniqueImageRegistry.EnforceUniqueImages(diskPackages, seedTracker);
         int packagesInserted = 0;
         foreach (var p in diskPackages)
         {
@@ -131,6 +137,7 @@ public class TenantSeedService : ITenantSeedService
         // 5. Flights
         var flightsCol = db.GetCollection<Flight>("flights");
         var diskFlights = LoadEntitiesFromDisk<Flight>(siteId, "flights.json") ?? new List<Flight>();
+        UniqueImageRegistry.EnforceUniqueImages(diskFlights, seedTracker);
         int flightsInserted = 0;
         foreach (var f in diskFlights)
         {
@@ -149,6 +156,7 @@ public class TenantSeedService : ITenantSeedService
         // 6. Transfers
         var transfersCol = db.GetCollection<Transfer>("transfers");
         var diskTransfers = LoadEntitiesFromDisk<Transfer>(siteId, "transfers.json") ?? new List<Transfer>();
+        UniqueImageRegistry.EnforceUniqueImages(diskTransfers, seedTracker);
         int transfersInserted = 0;
         foreach (var t in diskTransfers)
         {
@@ -167,6 +175,7 @@ public class TenantSeedService : ITenantSeedService
         // 7. Visas
         var visasCol = db.GetCollection<Visa>("visas");
         var diskVisas = LoadEntitiesFromDisk<Visa>(siteId, "visas.json") ?? new List<Visa>();
+        UniqueImageRegistry.EnforceUniqueImages(diskVisas, seedTracker);
         int visasInserted = 0;
         foreach (var v in diskVisas)
         {
@@ -184,6 +193,7 @@ public class TenantSeedService : ITenantSeedService
         // 8. Restaurants
         var restaurantsCol = db.GetCollection<Restaurant>("restaurants");
         var diskRestaurants = LoadEntitiesFromDisk<Restaurant>(siteId, "restaurants.json") ?? new List<Restaurant>();
+        UniqueImageRegistry.EnforceUniqueImages(diskRestaurants, seedTracker);
         int restaurantsInserted = 0;
         foreach (var r in diskRestaurants)
         {
@@ -201,6 +211,7 @@ public class TenantSeedService : ITenantSeedService
         // 9. Activities
         var activitiesCol = db.GetCollection<Activity>("activities");
         var diskActivities = LoadEntitiesFromDisk<Activity>(siteId, "activities.json") ?? new List<Activity>();
+        UniqueImageRegistry.EnforceUniqueImages(diskActivities, seedTracker);
         int activitiesInserted = 0;
         foreach (var a in diskActivities)
         {
@@ -237,6 +248,7 @@ public class TenantSeedService : ITenantSeedService
         // 11. Build Package Options
         var bpoCol = db.GetCollection<BuildPackageOption>("buildPackageOptions");
         var diskBpo = LoadEntitiesFromDisk<BuildPackageOption>(siteId, "build-package-options.json") ?? new List<BuildPackageOption>();
+        UniqueImageRegistry.EnforceUniqueImages(diskBpo, seedTracker);
         int bpoInserted = 0;
         foreach (var b in diskBpo)
         {
@@ -254,6 +266,7 @@ public class TenantSeedService : ITenantSeedService
         // 12. Banners
         var bannersCol = db.GetCollection<Banner>("hero_banners");
         var seedBanners = SeedDataCatalog.GetBanners(siteId);
+        UniqueImageRegistry.EnforceUniqueImages(seedBanners, seedTracker);
         int bannersInserted = 0;
         foreach (var banner in seedBanners)
         {
@@ -271,6 +284,7 @@ public class TenantSeedService : ITenantSeedService
         // 13. Special Offers
         var offersCol = db.GetCollection<SpecialOffer>("special_offers");
         var seedOffers = SeedDataCatalog.GetOffers(siteId);
+        UniqueImageRegistry.EnforceUniqueImages(seedOffers, seedTracker);
         int offersInserted = 0;
         foreach (var offer in seedOffers)
         {
@@ -288,6 +302,7 @@ public class TenantSeedService : ITenantSeedService
         // 14. Travel Videos
         var videosCol = db.GetCollection<TravelVideo>("travel_videos");
         var seedVideos = SeedDataCatalog.GetVideos(siteId);
+        UniqueImageRegistry.EnforceUniqueImages(seedVideos, seedTracker);
         int videosInserted = 0;
         foreach (var video in seedVideos)
         {

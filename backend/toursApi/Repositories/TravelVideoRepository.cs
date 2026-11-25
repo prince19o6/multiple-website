@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Models;
 
@@ -75,7 +76,11 @@ public class TravelVideoRepository : ITravelVideoRepository
                 .ThenByDescending(v => v.CreatedAt)
                 .ToListAsync();
 
-            if (list != null && list.Count > 0) return list;
+            if (list != null && list.Count > 0)
+            {
+                UniqueImageRegistry.EnforceUniqueImages(list);
+                return list;
+            }
         }
         catch
         {
@@ -97,7 +102,9 @@ public class TravelVideoRepository : ITravelVideoRepository
             fallback = fallback.Where(v => v.Destination != null && v.Destination.Contains(cleanDest, StringComparison.OrdinalIgnoreCase));
         }
 
-        return fallback.OrderBy(v => v.SortOrder).ThenByDescending(v => v.CreatedAt).ToList();
+        var resultList = fallback.OrderBy(v => v.SortOrder).ThenByDescending(v => v.CreatedAt).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(resultList);
+        return resultList;
     }
 
     public async Task<TravelVideo?> GetByIdAsync(string id)

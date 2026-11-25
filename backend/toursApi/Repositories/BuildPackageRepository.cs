@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -135,6 +136,8 @@ public class BuildPackageRepository : IBuildPackageRepository
                     .Limit(pageSize)
                     .ToListAsync();
 
+                UniqueImageRegistry.EnforceUniqueImages(items);
+
                 return new BuildPackagePagedResult
                 {
                     Items = items,
@@ -206,6 +209,7 @@ public class BuildPackageRepository : IBuildPackageRepository
         var fallbackList = qSeed.ToList();
         var fallbackTotal = fallbackList.Count;
         var pagedItems = fallbackList.Skip((fallbackPage - 1) * fallbackPageSize).Take(fallbackPageSize).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new BuildPackagePagedResult
         {

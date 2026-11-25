@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Models;
 
@@ -70,7 +71,11 @@ public class BannerRepository : IBannerRepository
                 .ThenByDescending(b => b.CreatedAt)
                 .ToListAsync();
 
-            if (list != null && list.Count > 0) return list;
+            if (list != null && list.Count > 0)
+            {
+                UniqueImageRegistry.EnforceUniqueImages(list);
+                return list;
+            }
         }
         catch
         {
@@ -87,7 +92,9 @@ public class BannerRepository : IBannerRepository
                                            string.Equals(b.Module, "all", StringComparison.OrdinalIgnoreCase));
         }
 
-        return fallback.OrderBy(b => b.SortOrder).ThenByDescending(b => b.CreatedAt).ToList();
+        var resultList = fallback.OrderBy(b => b.SortOrder).ThenByDescending(b => b.CreatedAt).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(resultList);
+        return resultList;
     }
 
     public async Task<Banner?> GetByIdAsync(string id)

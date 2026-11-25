@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Exceptions;
 using ToursApi.Models;
@@ -80,6 +81,7 @@ public class DestinationRepository : IDestinationRepository
                 .SortBy(d => d.SortOrder)
                 .ToListAsync();
 
+            UniqueImageRegistry.EnforceUniqueImages(list);
             SetDataSourceHeader("mongodb");
             return list;
         }
@@ -97,7 +99,9 @@ public class DestinationRepository : IDestinationRepository
             }
         }
 
-        return GetCatalogDestinations();
+        var fallbackDests = GetCatalogDestinations();
+        UniqueImageRegistry.EnforceUniqueImages(fallbackDests);
+        return fallbackDests;
     }
 
     public async Task<Destination?> GetByIdAsync(string id)

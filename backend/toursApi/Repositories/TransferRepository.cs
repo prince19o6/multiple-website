@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -122,6 +123,7 @@ public class TransferRepository : ITransferRepository
 
                 var skip = (filters.Page - 1) * filters.PageSize;
                 var items = await query.Skip(skip).Limit(filters.PageSize).ToListAsync();
+                UniqueImageRegistry.EnforceUniqueImages(items);
 
                 return new TransferPagedResult
                 {
@@ -172,10 +174,12 @@ public class TransferRepository : ITransferRepository
         var page = filters.Page < 1 ? 1 : filters.Page;
         var pageSize = filters.PageSize < 1 ? 20 : filters.PageSize;
         var list = qSeed.ToList();
+        var pagedItems = list.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new TransferPagedResult
         {
-            Items = list.Skip((page - 1) * pageSize).Take(pageSize).ToList(),
+            Items = pagedItems,
             Total = list.Count,
             Page = page,
             PageSize = pageSize

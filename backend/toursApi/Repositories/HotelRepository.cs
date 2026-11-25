@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -154,6 +155,8 @@ public class HotelRepository : IHotelRepository
                     .Limit(pageSize)
                     .ToListAsync();
 
+                UniqueImageRegistry.EnforceUniqueImages(items);
+
                 return new HotelPagedResult
                 {
                     Items = items,
@@ -215,10 +218,12 @@ public class HotelRepository : IHotelRepository
         var p = filters.Page < 1 ? 1 : filters.Page;
         var ps = filters.PageSize < 1 ? 20 : filters.PageSize;
         var list = qSeed.ToList();
+        var pagedItems = list.Skip((p - 1) * ps).Take(ps).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new HotelPagedResult
         {
-            Items = list.Skip((p - 1) * ps).Take(ps).ToList(),
+            Items = pagedItems,
             Total = list.Count,
             Page = p,
             PageSize = ps

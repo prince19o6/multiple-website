@@ -20,6 +20,7 @@ import {
   Image,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import { useSelectedSite } from '@/hooks/useSelectedSite';
 import {
   fetchTours,
@@ -32,6 +33,7 @@ import { PLACEHOLDER_IMAGE } from '@/lib/imageUtils';
 import type { Tour } from '@/types';
 
 export default function AdminToursScreen() {
+  const router = useRouter();
   const { siteId } = useSelectedSite();
   const [tours, setTours] = useState<Tour[]>([]);
   const [loading, setLoading] = useState(true);
@@ -208,6 +210,16 @@ export default function AdminToursScreen() {
     <View style={styles.root}>
       {/* Search & Actions Header */}
       <View style={styles.topBar}>
+        <TouchableOpacity
+          testID="btn-tours-back-overview"
+          accessibilityLabel="Back to Admin Overview"
+          style={styles.backBtn}
+          onPress={() => (router.canGoBack() ? router.back() : router.replace('/(admin)'))}
+          activeOpacity={0.7}
+        >
+          <Ionicons name="arrow-back" size={16} color="#0284c7" />
+          <Text style={styles.backBtnText}>Overview</Text>
+        </TouchableOpacity>
         <View style={styles.searchBox}>
           <Ionicons name="search" size={16} color="#64748b" />
           <TextInput
@@ -410,11 +422,28 @@ const styles = StyleSheet.create({
   },
   topBar: {
     flexDirection: 'row',
+    alignItems: 'center',
     padding: SPACING.md,
     gap: SPACING.sm,
     backgroundColor: '#ffffff',
     borderBottomWidth: 1,
     borderBottomColor: '#e2e8f0',
+  },
+  backBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#f0f9ff',
+    borderWidth: 1,
+    borderColor: '#bae6fd',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: RADIUS.md,
+  },
+  backBtnText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#0284c7',
   },
   searchBox: {
     flex: 1,

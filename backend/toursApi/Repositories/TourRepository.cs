@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using ToursApi.Common;
 using ToursApi.Configuration;
 using ToursApi.Exceptions;
 using ToursApi.Models;
@@ -150,6 +151,7 @@ public class TourRepository : ITourRepository
             }
 
             var list = await query.ToListAsync();
+            UniqueImageRegistry.EnforceUniqueImages(list);
             SetDataSourceHeader("mongodb");
             return list;
         }
@@ -203,7 +205,9 @@ public class TourRepository : ITourRepository
             catalog = catalog.Take(limit.Value);
         }
 
-        return catalog.ToList();
+        var resultList = catalog.ToList();
+        UniqueImageRegistry.EnforceUniqueImages(resultList);
+        return resultList;
     }
 
     public async Task<int> GetCountAsync(
@@ -533,6 +537,7 @@ public class TourRepository : ITourRepository
             };
 
             var results = await query.Limit(100).ToListAsync();
+            UniqueImageRegistry.EnforceUniqueImages(results);
             SetDataSourceHeader("mongodb");
             return results;
         }
@@ -580,7 +585,9 @@ public class TourRepository : ITourRepository
             _ => catalog.OrderBy(t => t.TourNumericId)
         };
 
-        return catalog.Take(100).ToList();
+        var searchList = catalog.Take(100).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(searchList);
+        return searchList;
     }
 
     public async Task<IEnumerable<Tour>> GetSimilarToursAsync(string tourIdOrSlug, int limit = 4)
@@ -663,6 +670,7 @@ public class TourRepository : ITourRepository
                     }
                 }
 
+                UniqueImageRegistry.EnforceUniqueImages(distinctSimilar);
                 SetDataSourceHeader("mongodb");
                 return distinctSimilar;
             }
@@ -691,7 +699,9 @@ public class TourRepository : ITourRepository
 
         if (fallbackBase == null)
         {
-            return catalog.Take(limit).ToList();
+            var fallback = catalog.Take(limit).ToList();
+            UniqueImageRegistry.EnforceUniqueImages(fallback);
+            return fallback;
         }
 
         var candidates = catalog
@@ -704,6 +714,7 @@ public class TourRepository : ITourRepository
             .Take(limit)
             .ToList();
 
+        UniqueImageRegistry.EnforceUniqueImages(candidates);
         return candidates;
     }
 

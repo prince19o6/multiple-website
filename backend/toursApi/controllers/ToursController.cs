@@ -286,6 +286,7 @@ public class ToursController : ControllerBase
         if (ex is MongoDatabaseUnavailableException or MongoException or TimeoutException)
         {
             var seedTours = ToursApi.Configuration.SeedDataCatalog.GetTours(_websiteContext.CurrentWebsiteId);
+            ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(seedTours);
             return Ok(new
             {
                 success = true,

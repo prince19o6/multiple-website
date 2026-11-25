@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo, Suspense } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { useSiteConfig } from "@/lib/SiteConfigContext";
 import { useAuth } from "@/lib/auth/AuthContext";
 import type { Booking } from "@/lib/api";
@@ -27,10 +27,14 @@ function formatDate(dateStr: string | Date | undefined): string {
 }
 
 function MyBookingsContent() {
+  const params = useParams();
   const searchParams = useSearchParams();
   const config = useSiteConfig();
-  const { user } = useAuth();
-  const siteId: string = String((config as any)?.siteId || "gujjutours");
+  const { user, loading: authLoading, getAccessToken } = useAuth();
+  const siteId: string = String(
+    (params?.site as string) || (config as any)?.siteId || config?.id || "gujjutours"
+  );
+  const lang: string = String((params?.lang as string) || "en");
   const currency = typeof config.currencySymbol === "string" ? config.currencySymbol : "$";
   const siteName = typeof config.name === "string" ? config.name : "Travel Platform";
 
@@ -89,23 +93,32 @@ function MyBookingsContent() {
         setShowLookupModal(true);
       }
 
-      // Check for user identity stored in cookies or localStorage
-      const storedUser =
-        localStorage.getItem("customer_user") ||
-        localStorage.getItem("user_info") ||
-        localStorage.getItem("admin_user");
-
-      if (storedUser) {
-        const parsed = JSON.parse(storedUser);
-        if (parsed?.email) {
-          setUserEmail(parsed.email);
-          setIsLoggedIn(true);
-        }
+      if (user?.email) {
+        setUserEmail(user.email);
+        setIsLoggedIn(true);
       } else {
-        const directEmail = localStorage.getItem("customer_email");
-        if (directEmail) {
-          setUserEmail(directEmail);
-          setIsLoggedIn(true);
+        // Check for user identity stored in localStorage
+        const storedUser =
+          localStorage.getItem(`auth_user_${siteId}`) ||
+          localStorage.getItem("customer_user") ||
+          localStorage.getItem("user_info") ||
+          localStorage.getItem("admin_user");
+
+        if (storedUser) {
+          const parsed = JSON.parse(storedUser);
+          if (parsed?.email) {
+            setUserEmail(parsed.email);
+            setIsLoggedIn(true);
+          }
+        } else {
+          const directEmail = localStorage.getItem("customer_email");
+          if (directEmail) {
+            setUserEmail(directEmail);
+            setIsLoggedIn(true);
+          } else if (!authLoading) {
+            setUserEmail(null);
+            setIsLoggedIn(false);
+          }
         }
       }
 
@@ -119,41 +132,50 @@ function MyBookingsContent() {
     } catch {
       // ignore parsing error
     }
-  }, [searchParams]);
+  }, [searchParams, siteId, user, authLoading]);
 
   // Fetch bookings list scoped strictly to current user/customer
   const loadBookings = useCallback(async () => {
+    if (authLoading) {
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
     try {
-      if (!userEmail && customerRefs.length === 0) {
+      const token =
+        getAccessToken() ||
+        (typeof window !== "undefined"
+          ? localStorage.getItem(`auth_token_${siteId}`) ||
+            localStorage.getItem("auth_token_gujjutours") ||
+            localStorage.getItem("auth_token_tripgoasia") ||
+            localStorage.getItem("auth_token_technoheaven") ||
+            localStorage.getItem("token")
+          : null);
+
+      const effectiveEmail = user?.email || userEmail;
+
+      if (!effectiveEmail && customerRefs.length === 0 && !token) {
         setBookings([]);
         setTotalCount(0);
         setLoading(false);
         return;
       }
 
-      const params = new URLSearchParams();
-      if (userEmail) {
-        params.append("email", userEmail);
-      } else if (customerRefs.length > 0) {
-        params.append("ids", customerRefs.join(","));
+      const reqParams = new URLSearchParams();
+      if (effectiveEmail) {
+        reqParams.append("email", effectiveEmail);
+      }
+      if (customerRefs.length > 0) {
+        reqParams.append("ids", customerRefs.join(","));
       }
 
-      if (activeTab !== "all") params.append("status", activeTab);
-      if (searchTerm.trim()) params.append("search", searchTerm.trim());
-      params.append("page", String(currentPage));
-      params.append("pageSize", String(pageSize));
-      params.append("site", siteId);
-
-      const token = typeof window !== "undefined"
-        ? localStorage.getItem(`auth_token_${siteId}`) ||
-          localStorage.getItem("auth_token_gujjutours") ||
-          localStorage.getItem("auth_token_tripgoasia") ||
-          localStorage.getItem("auth_token_technoheaven") ||
-          localStorage.getItem("token")
-        : null;
+      if (activeTab !== "all") reqParams.append("status", activeTab);
+      if (searchTerm.trim()) reqParams.append("search", searchTerm.trim());
+      reqParams.append("page", String(currentPage));
+      reqParams.append("pageSize", String(pageSize));
+      reqParams.append("site", siteId);
 
       const reqHeaders: Record<string, string> = {
         "X-Site-Id": siteId,
@@ -163,8 +185,9 @@ function MyBookingsContent() {
         reqHeaders["Authorization"] = `Bearer ${token}`;
       }
 
-      const res = await fetch(`/api/bookings?${params.toString()}`, {
+      const res = await fetch(`/api/bookings?${reqParams.toString()}`, {
         headers: reqHeaders,
+        cache: "no-store",
       });
       const json = await res.json();
 
@@ -185,7 +208,7 @@ function MyBookingsContent() {
     } finally {
       setLoading(false);
     }
-  }, [userEmail, customerRefs, activeTab, searchTerm, currentPage, pageSize]);
+  }, [authLoading, getAccessToken, user, userEmail, customerRefs, activeTab, searchTerm, currentPage, pageSize, siteId]);
 
   useEffect(() => {
     loadBookings();
@@ -203,9 +226,13 @@ function MyBookingsContent() {
     setLookupError(null);
 
     try {
-      const res = await fetch("/api/bookings/lookup", {
+      const res = await fetch(`/api/bookings/lookup?site=${encodeURIComponent(siteId)}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-Site-Id": siteId,
+          "X-Website-Id": siteId,
+        },
         body: JSON.stringify({ reference: lookupRef.trim(), email: lookupEmail.trim() }),
       });
 
@@ -249,9 +276,13 @@ function MyBookingsContent() {
 
     try {
       const targetId = cancelModalBooking.reference || cancelModalBooking.id;
-      const res = await fetch(`/api/bookings/${encodeURIComponent(targetId)}`, {
+      const res = await fetch(`/api/bookings/${encodeURIComponent(targetId)}?site=${encodeURIComponent(siteId)}`, {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "X-Site-Id": siteId,
+          "X-Website-Id": siteId,
+        },
         body: JSON.stringify({
           action: "request-cancellation",
           email: cancelModalBooking.email,
@@ -377,7 +408,7 @@ function MyBookingsContent() {
             </button>
 
             <Link
-              href="/explore"
+              href={`/${lang}/tours`}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-primary-contrast font-semibold text-xs shadow-soft-sm hover:shadow-soft-md transition-all cursor-pointer"
             >
               <span>+</span> Book a Tour
@@ -396,7 +427,7 @@ function MyBookingsContent() {
               </div>
             </div>
             <Link
-              href="/admin"
+              href={`/${lang}/login?redirect=${encodeURIComponent(`/${lang}/my-bookings`)}`}
               className="shrink-0 px-3.5 py-1.5 rounded-lg bg-primary hover:bg-primary-dark text-primary-contrast font-bold text-center transition-colors shadow-soft-sm"
             >
               Sign In
@@ -499,7 +530,7 @@ function MyBookingsContent() {
                 Find by Reference Code
               </button>
               <Link
-                href="/explore"
+                href={`/${lang}/tours`}
                 className="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-primary-contrast font-semibold text-xs shadow-soft-sm"
               >
                 Explore Destinations

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using ToursApi.Common;
 using ToursApi.Models;
 
 namespace ToursApi.Repositories;
@@ -140,6 +141,8 @@ public class VisaRepository : IVisaRepository
                     .Limit(pageSize)
                     .ToListAsync();
 
+                UniqueImageRegistry.EnforceUniqueImages(items);
+
                 return new VisaPagedResult
                 {
                     Items = items,
@@ -215,10 +218,12 @@ public class VisaRepository : IVisaRepository
         var p = filters.Page < 1 ? 1 : filters.Page;
         var ps = filters.PageSize < 1 ? 20 : filters.PageSize;
         var seedList = querySeed.ToList();
+        var pagedItems = seedList.Skip((p - 1) * ps).Take(ps).ToList();
+        UniqueImageRegistry.EnforceUniqueImages(pagedItems);
 
         return new VisaPagedResult
         {
-            Items = seedList.Skip((p - 1) * ps).Take(ps).ToList(),
+            Items = pagedItems,
             Total = seedList.Count,
             Page = p,
             PageSize = ps

@@ -45,7 +45,7 @@ public static class SeedDataCatalog
         new Destination { Website = "website3", Name = "Seychelles", Image = "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&h=500&fit=crop", Tours = 1, SortOrder = 5 },
         new Destination { Website = "website3", Name = "Fiji", Image = "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&h=500&fit=crop", Tours = 1, SortOrder = 6 },
         new Destination { Website = "website3", Name = "Riviera Maya, Mexico", Image = "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=600&h=500&fit=crop", Tours = 1, SortOrder = 7 },
-        new Destination { Website = "website3", Name = "Mykonos, Greece", Image = "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&h=500&fit=crop", Tours = 1, SortOrder = 8 },
+        new Destination { Website = "website3", Name = "Mykonos, Greece", Image = "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=600&h=500&fit=crop", Tours = 1, SortOrder = 8 },
         new Destination { Website = "website3", Name = "St. Barts & Anguilla", Image = "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=600&h=500&fit=crop", Tours = 1, SortOrder = 9 },
     };
 
@@ -374,21 +374,31 @@ public static class SeedDataCatalog
     public static List<Tour> GetTours(string? websiteId)
     {
         var raw = (websiteId ?? "").Trim().ToLowerInvariant();
+        List<Tour> tours;
         if (raw.Contains("website3") || raw.Contains("technoheaven") || raw.Contains("holidayparadise"))
-            return Website3Tours();
-        if (raw.Contains("website2") || raw.Contains("tripgoasia") || raw.Contains("adventureworld"))
-            return Website2Tours();
-        return Website1Tours();
+            tours = Website3Tours();
+        else if (raw.Contains("website2") || raw.Contains("tripgoasia") || raw.Contains("adventureworld"))
+            tours = Website2Tours();
+        else
+            tours = Website1Tours();
+
+        ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(tours);
+        return tours;
     }
 
     public static List<Destination> GetDestinations(string? websiteId)
     {
         var raw = (websiteId ?? "").Trim().ToLowerInvariant();
+        List<Destination> destinations;
         if (raw.Contains("website3") || raw.Contains("technoheaven") || raw.Contains("holidayparadise"))
-            return Website3Destinations();
-        if (raw.Contains("website2") || raw.Contains("tripgoasia") || raw.Contains("adventureworld"))
-            return Website2Destinations();
-        return Website1Destinations();
+            destinations = Website3Destinations();
+        else if (raw.Contains("website2") || raw.Contains("tripgoasia") || raw.Contains("adventureworld"))
+            destinations = Website2Destinations();
+        else
+            destinations = Website1Destinations();
+
+        ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(destinations);
+        return destinations;
     }
 
     public static List<Banner> GetBanners(string siteId)
@@ -396,9 +406,10 @@ public static class SeedDataCatalog
         var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
         var isTripGo = siteId.Contains("tripgo") || siteId.Contains("website2");
 
+        List<Banner> banners;
         if (isGujju)
         {
-            return new List<Banner>
+            banners = new List<Banner>
             {
                 new Banner
                 {
@@ -444,10 +455,9 @@ public static class SeedDataCatalog
                 }
             };
         }
-
-        if (isTripGo)
+        else if (isTripGo)
         {
-            return new List<Banner>
+            banners = new List<Banner>
             {
                 new Banner
                 {
@@ -479,39 +489,44 @@ public static class SeedDataCatalog
                 }
             };
         }
-
-        // Technoheaven B2B
-        return new List<Banner>
+        else
         {
-            new Banner
+            // Technoheaven B2B
+            banners = new List<Banner>
             {
-                WebsiteId = siteId,
-                Module = "home",
-                Title = "Next-Gen Global Travel Distribution Platform",
-                Subtitle = "Real-time XML API feeds, contracted wholesale hotels, dynamic packaging, and instant booking confirmations.",
-                Tagline = "ENTERPRISE B2B TRAVEL TECH",
-                Badge = "GLOBAL DMC NETWORK",
-                ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=85",
-                CtaText = "Integrate API",
-                CtaLink = "/en/contact-us",
-                SortOrder = 0,
-                IsActive = true
-            },
-            new Banner
-            {
-                WebsiteId = siteId,
-                Module = "home",
-                Title = "Wholesale Rates Across 250,000+ Verified Stays",
-                Subtitle = "Direct supplier contracts, corporate credit facilities, and guaranteed 99.9% uptime SLA.",
-                Tagline = "DIRECT INVENTORY",
-                Badge = "B2B WHOLESALE",
-                ImageUrl = "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85",
-                CtaText = "Explore Inventory",
-                CtaLink = "/en/hotels",
-                SortOrder = 1,
-                IsActive = true
-            }
-        };
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Next-Gen Global Travel Distribution Platform",
+                    Subtitle = "Real-time XML API feeds, contracted wholesale hotels, dynamic packaging, and instant booking confirmations.",
+                    Tagline = "ENTERPRISE B2B TRAVEL TECH",
+                    Badge = "GLOBAL DMC NETWORK",
+                    ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=85",
+                    CtaText = "Integrate API",
+                    CtaLink = "/en/contact-us",
+                    SortOrder = 0,
+                    IsActive = true
+                },
+                new Banner
+                {
+                    WebsiteId = siteId,
+                    Module = "home",
+                    Title = "Wholesale Rates Across 250,000+ Verified Stays",
+                    Subtitle = "Direct supplier contracts, corporate credit facilities, and guaranteed 99.9% uptime SLA.",
+                    Tagline = "DIRECT INVENTORY",
+                    Badge = "B2B WHOLESALE",
+                    ImageUrl = "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1600&q=85",
+                    CtaText = "Explore Inventory",
+                    CtaLink = "/en/hotels",
+                    SortOrder = 1,
+                    IsActive = true
+                }
+            };
+        }
+
+        ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(banners);
+        return banners;
     }
 
     public static List<SpecialOffer> GetOffers(string siteId)
@@ -519,9 +534,10 @@ public static class SeedDataCatalog
         var isGujju = siteId.Contains("gujju") || siteId.Contains("website1");
         var isTripGo = siteId.Contains("tripgo") || siteId.Contains("website2");
 
+        List<SpecialOffer> offers;
         if (isGujju)
         {
-            return new List<SpecialOffer>
+            offers = new List<SpecialOffer>
             {
                 new SpecialOffer
                 {
@@ -551,10 +567,9 @@ public static class SeedDataCatalog
                 }
             };
         }
-
-        if (isTripGo)
+        else if (isTripGo)
         {
-            return new List<SpecialOffer>
+            offers = new List<SpecialOffer>
             {
                 new SpecialOffer
                 {
@@ -571,28 +586,33 @@ public static class SeedDataCatalog
                 }
             };
         }
-
-        return new List<SpecialOffer>
+        else
         {
-            new SpecialOffer
+            offers = new List<SpecialOffer>
             {
-                WebsiteId = siteId,
-                Code = "B2BVOLUME",
-                Title = "Corporate High-Volume API Credit",
-                Description = "Extra 5% override commission on monthly bookings exceeding 100,000 AED.",
-                DiscountPercent = 5,
-                Badge = "ENTERPRISE",
-                ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
-                ExpiryDate = DateTime.UtcNow.AddMonths(6),
-                SortOrder = 0,
-                IsActive = true
-            }
-        };
+                new SpecialOffer
+                {
+                    WebsiteId = siteId,
+                    Code = "B2BVOLUME",
+                    Title = "Corporate High-Volume API Credit",
+                    Description = "Extra 5% override commission on monthly bookings exceeding 100,000 AED.",
+                    DiscountPercent = 5,
+                    Badge = "ENTERPRISE",
+                    ImageUrl = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+                    ExpiryDate = DateTime.UtcNow.AddMonths(6),
+                    SortOrder = 0,
+                    IsActive = true
+                }
+            };
+        }
+
+        ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(offers);
+        return offers;
     }
 
     public static List<TravelVideo> GetVideos(string siteId)
     {
-        return new List<TravelVideo>
+        var videos = new List<TravelVideo>
         {
             new TravelVideo
             {
@@ -619,6 +639,8 @@ public static class SeedDataCatalog
                 IsActive = true
             }
         };
+        ToursApi.Common.UniqueImageRegistry.EnforceUniqueImages(videos);
+        return videos;
     }
 
     public static List<Review> GetReviews(string siteId)
